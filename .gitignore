@@ -37,4 +37,5 @@ next-env.d.ts
 
 
 # local
-images
+images/venv
+images/sources
