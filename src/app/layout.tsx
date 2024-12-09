@@ -1,7 +1,7 @@
 import "./globals.css";
+import Script from "next/script";
 import type { Metadata } from "next";
 import LocalFontLoader from "next/font/local";
-import Script from "next/script";
 
 const Kurale = LocalFontLoader({ variable: "--font-Kurale", src: "../fonts/Kurale.ttf" });
 const Brittany = LocalFontLoader({ variable: "--font-Brittany", src: "../fonts/Brittany.otf" });
