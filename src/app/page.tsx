@@ -64,8 +64,8 @@ function HeroSection({ handleExploreClick }: { handleExploreClick: () => void })
       </AnimatePresence>
       <div className="relative w-full max-w-7xl mx-auto z-20">
         <div className="text-center backdrop-blur-md p-10 sm:p-16 md:p-24 lg:p-32 xl:p-44 rounded-3xl animated-nord-border shadow-black shadow-2xl">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-Brittany text-[#eceff4] mb-4 nord-text glitch" data-text="StoryWalls">
-            StoryWalls
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-Brittany text-[#eceff4] mb-4 nord-text glitch" data-text="picbook">
+            picbook
           </h1>
           <p className="pt-4 sm:pt-8 max-w-md mx-auto text-lg sm:text-xl md:text-2xl text-[#ffffff] md:mt-5 md:max-w-3xl">Dive into a world of captivating stories, where every wallpaper tells a unique, AI-crafted tale. </p>
           <div className="mt-6 sm:mt-10 flex justify-center">
@@ -241,14 +241,14 @@ export default function Home(): JSX.Element {
                 <a className="nord-text">Frequently Asked</a>
               </li>
               <li>
-                <a className="nord-text">About StoryWalls</a>
+                <a className="nord-text">About picbook</a>
               </li>
               <li>
                 <a className="nord-text">Contact Developer</a>
               </li>
             </ul>
           </div>
-          <a className="font-bold text-xl text-[#ffffff] nord-text">StoryWalls</a>
+          <a className="font-bold text-xl text-[#ffffff] nord-text">picbook</a>
         </div>
         <div className="navbar-end">
           <a className="font-bold text-[#ffffff] nord-text">Copyright (c)</a>
@@ -259,8 +259,8 @@ export default function Home(): JSX.Element {
       <footer className="text-[#eceff4] p-8">
         <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
           <div className="mb-4 sm:mb-0">
-            <h2 className="text-2xl font-bold text-[#ffffff] mb-2 nord-text">StoryWalls</h2>
-            <p className="text-sm">© 2024 StoryWalls. All rights reserved.</p>
+            <h2 className="text-2xl font-bold text-[#ffffff] mb-2 nord-text">picbook</h2>
+            <p className="text-sm">© 2024 picbook. All rights reserved.</p>
           </div>
         </div>
       </footer>

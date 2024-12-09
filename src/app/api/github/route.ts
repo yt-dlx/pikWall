@@ -5,7 +5,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 const owner = "yt-dlx";
 const branch = "images";
-const repo = "storywall";
+const repo = "picbook";
 const tempBuffers: { [key: string]: Buffer[] } = {};
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 

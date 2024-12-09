@@ -86,9 +86,9 @@ async function DELETE(owner, repo, releaseId) {
 }
 
 (async () => {
-  await POST("yt-dlx", "storywall", "Acrylic", "Gruvbox", "./public/images/done/Acrylic/Gruvbox/lite/Designer.png");
-  const rootStructure = await GET("yt-dlx", "storywall");
+  await POST("yt-dlx", "picbook", "Acrylic", "Gruvbox", "./public/images/done/Acrylic/Gruvbox/lite/Designer.png");
+  const rootStructure = await GET("yt-dlx", "picbook");
   console.log(JSON.stringify(rootStructure, null, 2));
-  await DELETE("yt-dlx", "storywall", releaseId);
-  await PUT("yt-dlx", "storywall", releaseId, "Updated Release Name");
+  await DELETE("yt-dlx", "picbook", releaseId);
+  await PUT("yt-dlx", "picbook", releaseId, "Updated Release Name");
 })();

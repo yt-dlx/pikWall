@@ -274,14 +274,14 @@ export default function UploadPage(): JSX.Element {
                   <a className="nord-text">Frequently Asked</a>
                 </li>
                 <li>
-                  <a className="nord-text">About StoryWalls</a>
+                  <a className="nord-text">About picbook</a>
                 </li>
                 <li>
                   <a className="nord-text">Contact Developer</a>
                 </li>
               </ul>
             </div>
-            <a className="font-bold text-xl text-[#ffffff] nord-text">StoryWalls</a>
+            <a className="font-bold text-xl text-[#ffffff] nord-text">picbook</a>
           </div>
           <div className="navbar-end">
             <a className="font-bold text-[#ffffff] nord-text">Copyright (c)</a>
@@ -297,8 +297,8 @@ export default function UploadPage(): JSX.Element {
         <footer className="text-[#eceff4] p-8">
           <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
             <div className="mb-4 sm:mb-0">
-              <h2 className="text-2xl font-bold text-[#ffffff] mb-2 nord-text">StoryWalls</h2>
-              <p className="text-sm">© 2024 StoryWalls. All rights reserved.</p>
+              <h2 className="text-2xl font-bold text-[#ffffff] mb-2 nord-text">picbook</h2>
+              <p className="text-sm">© 2024 picbook. All rights reserved.</p>
             </div>
           </div>
         </footer>
