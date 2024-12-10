@@ -1,6 +1,7 @@
 # ==================================================XXX==================================================
 """                               This Code Is Used To Extract Dominant Colors From The Upscaled Files In The Environment                                   """
 # ==================================================XXX==================================================
+import re
 import os
 import json
 from PIL import Image
@@ -29,7 +30,7 @@ def print_colors_in_terminal(hex_colors):
 def create_json_for_image(file_path):
     temp_file_path = create_temp_resized_image(file_path)
     try:
-        hex_colors = get_top_colors(temp_file_path, num_colors=50) 
+        hex_colors = get_top_colors(temp_file_path, num_colors=50)
     finally:
         os.remove(temp_file_path)
     file_metadata = get_image_metadata(file_path)
@@ -54,19 +55,22 @@ def create_json_for_image(file_path):
             image_data[f"more_{i}"] = color
     return image_data
 def process_images_in_folder(folder_path):
-    all_image_data = []
+    image_data_dict = {}
     for file_name in os.listdir(folder_path):
         file_path = os.path.join(folder_path, file_name)
         if os.path.isfile(file_path) and file_name.lower().endswith((".jpg", ".jpeg", ".png")):
             try:
                 image_data = create_json_for_image(file_path)
-                all_image_data.append(image_data)
+                base_name = re.sub(r'\s*\(\d+\)$', '', os.path.splitext(file_name)[0]).strip()
+                if base_name not in image_data_dict:
+                    image_data_dict[base_name] = []
+                image_data_dict[base_name].append(image_data)
                 console.print(f"[bold green]INFO:[/] Processed image: {file_name}")
             except Exception as e:
                 console.print(f"[bold red]ERROR:[/] Could not process {file_name}. {str(e)}")
-    output_json_path = "DATA_JSON.json"
+    output_json_path = "DataBook.json"
     with open(output_json_path, "w") as json_file:
-        json.dump(all_image_data, json_file, indent=4)
+        json.dump(image_data_dict, json_file, indent=4)
     console.print(f"[bold green]INFO:[/] All image data has been written to {output_json_path}")
 process_images_in_folder(os.path.join("sources", "base"))
 # ==================================================XXX==================================================
