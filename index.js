@@ -5,7 +5,7 @@ const commands = {
   "client:dev": { command: "yarn", args: ["dev"], cwd: "client" },
   "client:start": { command: "yarn", args: ["start"], cwd: "client" },
   "client:build": { command: "yarn", args: ["build"], cwd: "client" },
-  "server:build": { command: "python", args: ["index_0.py"], cwd: "server" }
+  "database:build": { command: "python", args: ["index_0.py"], cwd: "database" }
 };
 const command = process.argv[2];
 if (commands[command]) {
