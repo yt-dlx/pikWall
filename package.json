@@ -1,0 +1,17 @@
+{
+  "name": "picbook",
+  "version": "1.0.0",
+  "description": "picbook setup for server and client",
+  "main": "index.js",
+  "repository": "https://github.com/yt-dlx/picbook.git",
+  "author": "magneum-II <yt-dlx@proton.me>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "server:build": "node index.js server:build",
+    "client:make": "node index.js client:make",
+    "client:dev": "node index.js client:dev",
+    "client:start": "node index.js client:start",
+    "client:build": "node index.js client:build"
+  }
+}
