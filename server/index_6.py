@@ -31,13 +31,8 @@ def process_images(input_folder, output_folder, text, font_path):
     os.makedirs(output_folder, exist_ok=True)
     for filename in os.listdir(input_folder):
         input_path = os.path.join(input_folder, filename)
-        if os.path.isfile(input_path) and filename.lower().endswith(('.png', '.jpg', '.jpeg')):
+        if os.path.isfile(input_path) and filename.lower().endswith((".png", ".jpg", ".jpeg")):
             output_path = os.path.join(output_folder, filename)
             add_watermark_to_image(input_path, output_path, text, font_path)
-process_images(
-    text="picbook", 
-    input_folder=os.path.join("sources", "assets"), 
-    output_folder=os.path.join("sources", "label"), 
-    font_path=os.path.join("include", "Brittany.otf")
-    )
+process_images(text="picbook",  input_folder=os.path.join("sources", "assets"),  output_folder=os.path.join("sources", "label"),  font_path=os.path.join("include", "Brittany.otf"))
 # ==================================================XXX================================================== 

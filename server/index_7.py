@@ -61,7 +61,7 @@ def process_images_in_folder(folder_path):
         if os.path.isfile(file_path) and file_name.lower().endswith((".jpg", ".jpeg", ".png")):
             try:
                 image_data = create_json_for_image(file_path)
-                base_name = re.sub(r'\s*\(\d+\)$', '', os.path.splitext(file_name)[0]).strip()
+                base_name = re.sub(r"\s*\(\d+\)$", "", os.path.splitext(file_name)[0]).strip()
                 if base_name not in image_data_dict:
                     image_data_dict[base_name] = []
                 image_data_dict[base_name].append(image_data)

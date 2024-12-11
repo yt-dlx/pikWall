@@ -34,35 +34,6 @@ def get_venv_activate_path():
         return os.path.join("venv", "bin", "activate")
 def venv_exists():
     return os.path.exists("venv")
-def check_torch_cuda():
-    try:
-        import torch
-        cuda_info = {
-            "torch_available": torch.__version__,
-            "cuda_available": torch.cuda.is_available(),
-            "cuda_version": torch.version.cuda if torch.cuda.is_available() else None,
-            "cuda_device_count": torch.cuda.device_count() if torch.cuda.is_available() else 0,
-            "cudnn_version": torch.backends.cudnn.version() if torch.cuda.is_available() and torch.backends.cudnn.is_available() else None
-        }
-        cprint("Torch and CUDA Information:", "green")
-        cprint(f"- Torch Version: {cuda_info['torch_available']}", "green")
-        if cuda_info['cuda_available']:
-            cprint(f"- CUDA Available: Yes", "green")
-            cprint(f"- CUDA Devices: {cuda_info['cuda_device_count']}", "green")
-            cprint(f"- CUDA Version: {cuda_info['cuda_version']}", "green")
-            if cuda_info['cudnn_version']:
-                cprint(f"- cuDNN Version: {cuda_info['cudnn_version']}", "green")
-            else:
-                cprint(" - cuDNN: Not Available", "red")
-        else:
-            cprint(" - CUDA: Not Available", "red")
-        return cuda_info
-    except ImportError:
-        cprint("Torch is not installed. Maybe Re-Run 'setup.py' ?", "red")
-        return None
-    except Exception as e:
-        cprint(f"Error checking CUDA: {e}", "red")
-        return None
 def setup_virtual_environment():
     if not venv_exists():
         cprint("Creating virtual environment...", "green")
@@ -121,8 +92,6 @@ def main():
         except ImportError:
             cprint("Installing Triton...", "green")
             install_triton()
-        cprint("Checking CUDA and Torch...", "green")
-        cuda_info = check_torch_cuda()
         cprint("Evnironment Setup Complete!", "green")
     except Exception as e:
         cprint(f"Installation failed: {e}", "red")
