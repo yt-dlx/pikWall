@@ -74,7 +74,7 @@ def setup_virtual_environment():
     other_packages = [
         "loguru", "colorama", "tqdm", "pillow", "numpy", "wheel", "sentencepiece", "protobuf", 
         "fire", "accelerate", "diffusers", "safetensors", "mediapipe", "peft", "einops", 
-        "opencv-python", "controlnet_aux", "rich"
+        "opencv-python", "controlnet_aux", "rich", "colorthief"
     ]
     for package in other_packages:
         execute_command(f"{activate_command} && pip install {package}")
