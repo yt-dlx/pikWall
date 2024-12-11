@@ -1,9 +1,7 @@
 //  ==================================================XXX==================================================
 //  This Code Is Used To Download The Final Files From GitHub
 //  ==================================================XXX==================================================
-import fetch from "node-fetch";
-
-const getData = async () => {
+(async () => {
   const response = await fetch("https://api.github.com/repos/yt-dlx/wallpaper/git/trees/cron?recursive=1");
   if (response.ok) {
     const data = await response.json();
@@ -49,7 +47,5 @@ const getData = async () => {
     });
     console.log(database);
   } else console.log(`Failed to fetch repository contents. Status code: ${response.status}`);
-};
-
-getData();
+})();
 //  ==================================================XXX==================================================
