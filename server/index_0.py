@@ -87,11 +87,7 @@ def main():
     try:
         cprint("Setting up virtual environment...", "green")
         setup_virtual_environment()
-        try:
-            import triton
-        except ImportError:
-            cprint("Installing Triton...", "green")
-            install_triton()
+        install_triton()
         cprint("Evnironment Setup Complete!", "green")
     except Exception as e:
         cprint(f"Installation failed: {e}", "red")
