@@ -146,7 +146,7 @@ if __name__ == "__main__":
     @contrast >>> (Optional):Adjusts the contrast of the image. Limit: (-)100 - (+)100
     """
     inference(
-        input_path=os.path.join("sources", "n-images"),  
+        input_path=os.path.join("sources", "assets"),  
         double_upscale_4x_to_16x=False, 
         image_anime_style=True, 
         brightness=00, 

@@ -4,7 +4,7 @@
 import os
 import subprocess
 Amount = 20
-source_folder = os.path.join("sources", "n-images")
+source_folder = os.path.join("sources", "assets")
 destination_folder = os.path.join("sources", "noised")
 os.makedirs(destination_folder, exist_ok=True)
 for filename in os.listdir(source_folder):
