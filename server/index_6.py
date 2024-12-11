@@ -1,5 +1,5 @@
 # ==================================================XXX==================================================
-"""                               This Code Is Used To Add The Watermark To The Upscaled Files In The Environment                                   """
+"""                                     This Code Is Used To Add The Watermark To The Re-Scaled Files In The Environment                                        """
 # ==================================================XXX==================================================
 import os
 from PIL import Image, ImageDraw, ImageFont
