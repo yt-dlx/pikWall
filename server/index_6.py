@@ -1,76 +1,43 @@
 # ==================================================XXX==================================================
-"""                               This Code Is Used To Extract Dominant Colors From The Upscaled Files In The Environment                                   """
+"""                               This Code Is Used To Add The Watermark To The Upscaled Files In The Environment                                   """
 # ==================================================XXX==================================================
-import re
 import os
-import json
-from PIL import Image
-from rich.console import Console
-from colorthief import ColorThief
-console = Console()
-def create_temp_resized_image(file_path, size=(300, 300)):
-    with Image.open(file_path) as img:
-        img.thumbnail(size)
-        temp_path = "Tri.jpg"
-        img.save(temp_path, "JPEG")
-    return temp_path
-def get_top_colors(file_path, num_colors=50):
-    color_thief = ColorThief(file_path)
-    palette = color_thief.get_palette(color_count=num_colors, quality=1)
-    hex_colors = [f"#{r:02x}{g:02x}{b:02x}" for r, g, b in palette]
-    return hex_colors
-def get_image_metadata(file_path):
-    with Image.open(file_path) as img:
-        return {"format": img.format, "mode": img.mode, "width": img.width, "height": img.height}
-def print_colors_in_terminal(hex_colors):
-    console.print("[bold green]INFO:[/] [#ffffff]Displaying all extracted colors:")
-    for color in hex_colors:
-        console.print(f"[bold {color} on {color}]{color}[/] [#ffffff]", end=" ")
-    console.print("\n")
-def create_json_for_image(file_path):
-    temp_file_path = create_temp_resized_image(file_path)
-    try:
-        hex_colors = get_top_colors(temp_file_path, num_colors=50)
-    finally:
-        os.remove(temp_file_path)
-    file_metadata = get_image_metadata(file_path)
-    file_size_bytes = os.path.getsize(file_path)
-    file_size_megabytes = file_size_bytes / (1024 * 1024)
-    directory, original_name = os.path.split(file_path)
-    base, _ = os.path.splitext(original_name)
-    image_data = {
-        "original_file_name": original_name,
-        "format": file_metadata["format"],
-        "mode": file_metadata["mode"],
-        "file_size_bytes": file_size_bytes,
-        "file_size_megabytes": round(file_size_megabytes, 2),
-        "width": file_metadata["width"],
-        "height": file_metadata["height"],
-        "primary": hex_colors[0],
-        "secondary": hex_colors[1],
-        "tertiary": hex_colors[2],
-    }
-    for i, color in enumerate(hex_colors[3:], start=4):
-        if i <= 50:
-            image_data[f"more_{i}"] = color
-    return image_data
-def process_images_in_folder(folder_path):
-    image_data_dict = {}
-    for file_name in os.listdir(folder_path):
-        file_path = os.path.join(folder_path, file_name)
-        if os.path.isfile(file_path) and file_name.lower().endswith((".jpg", ".jpeg", ".png")):
-            try:
-                image_data = create_json_for_image(file_path)
-                base_name = re.sub(r'\s*\(\d+\)$', '', os.path.splitext(file_name)[0]).strip()
-                if base_name not in image_data_dict:
-                    image_data_dict[base_name] = []
-                image_data_dict[base_name].append(image_data)
-                console.print(f"[bold green]INFO:[/] Processed image: {file_name}")
-            except Exception as e:
-                console.print(f"[bold red]ERROR:[/] Could not process {file_name}. {str(e)}")
-    output_json_path = "DataBook.json"
-    with open(output_json_path, "w") as json_file:
-        json.dump(image_data_dict, json_file, indent=4)
-    console.print(f"[bold green]INFO:[/] All image data has been written to {output_json_path}")
-process_images_in_folder(os.path.join("sources", "base"))
-# ==================================================XXX==================================================
+from PIL import Image, ImageDraw, ImageFont
+def generate_watermark_grid(image_size, text, font, spacing_multiplier=1.5):
+    draw = ImageDraw.Draw(Image.new("RGBA", image_size, (255, 255, 255, 0)))
+    text_bbox = draw.textbbox((0, 0), text, font=font)
+    text_width = text_bbox[2] - text_bbox[0]
+    text_height = text_bbox[3] - text_bbox[1]
+    spacing = int(max(text_width, text_height) * spacing_multiplier)
+    positions = []
+    for y in range(0, image_size[1], text_height + spacing):
+        for x in range(0, image_size[0], text_width + spacing):
+            positions.append((x, y))
+    return positions
+def add_watermark_to_image(input_path, output_path, text, font_path, opacity=70):
+    image = Image.open(input_path).convert("RGBA")
+    watermark = Image.new("RGBA", image.size, (255, 255, 255, 0))
+    draw = ImageDraw.Draw(watermark)
+    font_size = int(image.size[0] / 70)
+    font = ImageFont.truetype(font_path, font_size)
+    spacing = int(image.size[0] / 30)
+    positions = generate_watermark_grid(image.size, text, font, spacing_multiplier=2)
+    for position in positions:
+        draw.text(position, text, font=font, fill=(255, 255, 255, opacity))
+    watermarked_image = Image.alpha_composite(image, watermark)
+    watermarked_image.convert("RGB").save(output_path, "PNG")
+    print(f"Watermarked image saved as {output_path}")
+def process_images(input_folder, output_folder, text, font_path):
+    os.makedirs(output_folder, exist_ok=True)
+    for filename in os.listdir(input_folder):
+        input_path = os.path.join(input_folder, filename)
+        if os.path.isfile(input_path) and filename.lower().endswith(('.png', '.jpg', '.jpeg')):
+            output_path = os.path.join(output_folder, filename)
+            add_watermark_to_image(input_path, output_path, text, font_path)
+process_images(
+    text="picbook", 
+    input_folder=os.path.join("sources", "assets"), 
+    output_folder=os.path.join("sources", "label"), 
+    font_path=os.path.join("include", "Brittany.otf")
+    )
+# ==================================================XXX================================================== 
