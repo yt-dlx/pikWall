@@ -1,7 +1,7 @@
 // src/app/page.tsx
 "use client";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, JSX } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface ImageData {
@@ -35,7 +35,7 @@ function HeroSection({ handleExploreClick }: { handleExploreClick: () => void })
         const shuffledImages = data.sort(() => Math.random() - 0.5);
         setImages(shuffledImages);
         setIsLoading(false);
-      } catch (err) {
+      } catch {
         setError("Failed to load images");
         setIsLoading(false);
       }
@@ -57,7 +57,12 @@ function HeroSection({ handleExploreClick }: { handleExploreClick: () => void })
       <AnimatePresence mode="sync">
         {[previousSlide, currentSlide].map((slideId) => (
           <motion.div key={slideId} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 1.5 }} className="absolute inset-0">
-            <Image fill src={images[slideId].urls?.[2].url! || images[slideId].urls?.[1].url!} alt={images[slideId].imageName} className="object-cover object-center w-full h-full" />
+            <Image
+              fill
+              alt={images[slideId].imageName}
+              className="object-cover object-center w-full h-full"
+              src={images[slideId].urls?.[2].url || images[slideId].urls?.[1].url || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReiKeTsm26jLOx1RQhXGkRSPWNj2tCeMKdUA&s"}
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent backdrop-blur-md" />
           </motion.div>
         ))}
@@ -67,9 +72,14 @@ function HeroSection({ handleExploreClick }: { handleExploreClick: () => void })
           <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-Brittany text-[#eceff4] mb-4 nord-text glitch" data-text="picbook">
             picbook
           </h1>
-          <p className="pt-4 sm:pt-8 max-w-md mx-auto text-lg sm:text-xl md:text-2xl text-[#ffffff] md:mt-5 md:max-w-3xl">Dive into a world of captivating stories, where every wallpaper tells a unique, AI-crafted tale. </p>
+          <p className="pt-4 sm:pt-8 max-w-md mx-auto text-lg sm:text-xl md:text-2xl text-[#ffffff] md:mt-5 md:max-w-3xl">
+            Dive into a world of captivating stories, where every wallpaper tells a unique, AI-crafted tale.{" "}
+          </p>
           <div className="mt-6 sm:mt-10 flex justify-center">
-            <button onClick={handleExploreClick} className="py-2 sm:py-3 px-4 sm:px-6 w-full sm:w-auto border-2 font-bold rounded-2xl text-[#eceff4] bg-[#eceff42a] hover:bg-[#eceff4] hover:text-[#2e3440] transition-colors duration-500 nord-border text-sm sm:text-base">
+            <button
+              onClick={handleExploreClick}
+              className="py-2 sm:py-3 px-4 sm:px-6 w-full sm:w-auto border-2 font-bold rounded-2xl text-[#eceff4] bg-[#eceff42a] hover:bg-[#eceff4] hover:text-[#2e3440] transition-colors duration-500 nord-border text-sm sm:text-base"
+            >
               Explore AI-Generated Story Wallpapers
             </button>
           </div>
@@ -108,13 +118,19 @@ function GallerySection({ groupIMG }: { groupIMG: GroupedImages }): JSX.Element 
                 key={index}
                 whileHover={{ scale: 1.02 }}
                 onClick={() => handleCategoryClick(artStyle)}
-                className={`relative h-24 sm:h-32 md:h-40 w-full rounded-lg overflow-hidden shadow shadow-black holographic cursor-pointer group ${activeCategory === artStyle ? "border border-[#5e6e72]" : ""}`}
+                className={`relative h-24 sm:h-32 md:h-40 w-full rounded-lg overflow-hidden shadow shadow-black holographic cursor-pointer group ${
+                  activeCategory === artStyle ? "border border-[#5e6e72]" : ""
+                }`}
               >
                 <Image
                   fill
                   alt={artStyle}
                   className={`object-cover object-center transition-transform duration-500 ${activeCategory === artStyle ? "scale-150" : "group-hover:scale-125"}`}
-                  src={Object.values(groupIMG[artStyle])[0][Object.keys(Object.values(groupIMG[artStyle])[0])[0]][0].urls?.[2]?.url! || Object.values(groupIMG[artStyle])[0][Object.keys(Object.values(groupIMG[artStyle])[0])[0]][0].urls?.[1]?.url!}
+                  src={
+                    Object.values(groupIMG[artStyle])[0][Object.keys(Object.values(groupIMG[artStyle])[0])[0]][0].urls?.[2]?.url ||
+                    Object.values(groupIMG[artStyle])[0][Object.keys(Object.values(groupIMG[artStyle])[0])[0]][0].urls?.[1]?.url ||
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReiKeTsm26jLOx1RQhXGkRSPWNj2tCeMKdUA&s"
+                  }
                 />
                 <div className={`absolute inset-0 ${activeCategory === artStyle ? "" : "bg-black/70"} group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center p-2`}>
                   <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#ffffff] nord-text text-center">{artStyle}</h3>
@@ -132,15 +148,23 @@ function GallerySection({ groupIMG }: { groupIMG: GroupedImages }): JSX.Element 
                   key={index}
                   whileHover={{ scale: 1.02 }}
                   onClick={() => handleSubcategoryClick(scenario)}
-                  className={`relative h-24 sm:h-32 md:h-40 w-full rounded-lg overflow-hidden shadow-lg shadow-black holographic cursor-pointer group ${activeSubcategory === scenario ? "border border-[#5e6e72]" : ""}`}
+                  className={`relative h-24 sm:h-32 md:h-40 w-full rounded-lg overflow-hidden shadow-lg shadow-black holographic cursor-pointer group ${
+                    activeSubcategory === scenario ? "border border-[#5e6e72]" : ""
+                  }`}
                 >
                   <Image
                     fill
                     alt={scenario}
                     className={`object-cover object-center transition-transform duration-500 ${activeSubcategory === scenario ? "scale-150" : "group-hover:scale-125"}`}
-                    src={Object.values(groupIMG[activeCategory][scenario])[0][0].urls?.[2]?.url! || Object.values(groupIMG[activeCategory][scenario])[0][0].urls?.[1]?.url!}
+                    src={
+                      Object.values(groupIMG[activeCategory][scenario])[0][0].urls?.[2]?.url ||
+                      Object.values(groupIMG[activeCategory][scenario])[0][0].urls?.[1]?.url ||
+                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReiKeTsm26jLOx1RQhXGkRSPWNj2tCeMKdUA&s"
+                    }
                   />
-                  <div className={`absolute inset-0 ${activeSubcategory === scenario ? "" : "bg-black/70"} group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center p-2`}>
+                  <div
+                    className={`absolute inset-0 ${activeSubcategory === scenario ? "" : "bg-black/70"} group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center p-2`}
+                  >
                     <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#ffffff] nord-text text-center">{scenario}</h3>
                   </div>
                 </motion.button>
@@ -155,7 +179,13 @@ function GallerySection({ groupIMG }: { groupIMG: GroupedImages }): JSX.Element 
               <h5 className="text-lg font-semibold text-[#eceff4] mb-4">{colorScheme}</h5>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                 {images.map((image, imageIndex) => (
-                  <motion.div key={imageIndex} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: imageIndex * 0.1 }} className="relative aspect-w-14 aspect-h-12 rounded-md overflow-hidden group shadow-lg shadow-black">
+                  <motion.div
+                    key={imageIndex}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: imageIndex * 0.1 }}
+                    className="relative aspect-w-14 aspect-h-12 rounded-md overflow-hidden group shadow-lg shadow-black"
+                  >
                     {image.urls && image.urls.length > 0 ? (
                       <Image src={getImageUrl(image, "1792x1024")} alt={image.imageName} fill className="object-cover transition-transform duration-500 group-hover:scale-125" />
                     ) : (
@@ -166,7 +196,13 @@ function GallerySection({ groupIMG }: { groupIMG: GroupedImages }): JSX.Element 
                       {image.urls && image.urls.length > 0 && (
                         <div className="flex flex-wrap gap-2">
                           {image.urls.map((url, i) => (
-                            <a key={i} href={url.url} target="_blank" rel="noopener noreferrer" className="px-2 py-1 bg-white/30 text-white text-xs rounded hover:bg-white/50 transition-colors duration-300 backdrop-blur-sm">
+                            <a
+                              key={i}
+                              href={url.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="px-2 py-1 bg-white/30 text-white text-xs rounded hover:bg-white/50 transition-colors duration-300 backdrop-blur-sm"
+                            >
                               {url.resolution}
                             </a>
                           ))}
@@ -200,7 +236,7 @@ export default function Home(): JSX.Element {
           return acc;
         }, {});
         setGroupedImages(grouped);
-      } catch (err) {
+      } catch {
         setError("Failed to load data. Please try again later.");
       } finally {
         setIsLoading(false);

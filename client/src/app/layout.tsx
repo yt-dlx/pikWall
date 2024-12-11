@@ -2,6 +2,7 @@ import "./globals.css";
 import Script from "next/script";
 import type { Metadata } from "next";
 import LocalFontLoader from "next/font/local";
+import { Providers } from "./providers";
 
 const Kurale = LocalFontLoader({ variable: "--font-Kurale", src: "../fonts/Kurale.ttf" });
 const Brittany = LocalFontLoader({ variable: "--font-Brittany", src: "../fonts/Brittany.otf" });
@@ -9,11 +10,13 @@ export const metadata: Metadata = { title: "Create Next App", description: "Gene
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className={`${Kurale.variable} ${Brittany.variable}`}>
-        {children}
-        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9464475307933754" crossOrigin="anonymous" />
-      </body>
-    </html>
+    <Providers>
+      <html lang="en">
+        <body className={`${Kurale.variable} ${Brittany.variable} antialiased`}>
+          <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9464475307933754" crossOrigin="anonymous" />
+          {children}
+        </body>
+      </html>
+    </Providers>
   );
 }
