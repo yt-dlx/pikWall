@@ -1,42 +1,16 @@
-const { exec } = require("child_process");
+const { spawn } = require("child_process");
 const os = require("os");
 const commands = {
-  "server:build": {
-    command: "python index_0.py",
-    cwd: "server"
-  },
-  "client:make": {
-    command: "yarn",
-    cwd: "client"
-  },
-  "client:dev": {
-    command: "yarn dev",
-    cwd: "client"
-  },
-  "client:start": {
-    command: "yarn start",
-    cwd: "client"
-  },
-  "client:build": {
-    command: "yarn build",
-    cwd: "client"
-  }
+  "client:make": { command: "yarn", cwd: "client" },
+  "client:dev": { command: "yarn", args: ["dev"], cwd: "client" },
+  "client:start": { command: "yarn", args: ["start"], cwd: "client" },
+  "client:build": { command: "yarn", args: ["build"], cwd: "client" },
+  "server:build": { command: "python", args: ["index_0.py"], cwd: "server" }
 };
 const command = process.argv[2];
 if (commands[command]) {
-  const { command: cmd, cwd } = commands[command];
-  const fullCommand = os.platform() === "win32" ? `cd ${cwd} && ${cmd}` : `cd ${cwd} && ${cmd}`;
-  exec(fullCommand, { shell: os.platform() === "win32" ? "cmd.exe" : "/bin/bash" }, (error, stdout, stderr) => {
-    if (error) {
-      console.error(`Error: ${error.message}`);
-      return;
-    }
-    if (stderr) {
-      console.error(`Stderr: ${stderr}`);
-      return;
-    }
-    console.log(`Stdout: ${stdout}`);
-  });
-} else {
-  console.error("Unknown command");
-}
+  const { command: cmd, args = [], cwd } = commands[command];
+  const child = spawn(cmd, args, { cwd, shell: os.platform() === "win32" ? "cmd.exe" : "/bin/bash" });
+  child.stdout.on("data", (data) => console.log(data.toString()));
+  child.stderr.on("data", (data) => console.error(data.toString()));
+} else console.error("Unknown command");
