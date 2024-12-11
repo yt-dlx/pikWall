@@ -1,6 +1,7 @@
 {
   "name": "picbook",
   "version": "1.0.0",
+  "type": "module",
   "description": "picbook setup for server and client",
   "main": "index.js",
   "repository": "https://github.com/yt-dlx/picbook.git",

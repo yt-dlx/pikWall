@@ -1,5 +1,5 @@
-const { spawn } = require("child_process");
-const os = require("os");
+import { spawn } from "child_process";
+import os from "os";
 const commands = {
   "client:make": { command: "yarn", cwd: "client" },
   "client:dev": { command: "yarn", args: ["dev"], cwd: "client" },
