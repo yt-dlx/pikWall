@@ -11,6 +11,7 @@ export default function Home() {
       if (!response.ok) throw new Error("Failed to fetch image");
       const base64Data = await response.text();
       setImageUrl(base64Data);
+      console.log(base64Data);
     };
     fetchBase64Image();
   }, []);

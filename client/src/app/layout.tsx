@@ -10,13 +10,13 @@ export const metadata: Metadata = { title: "Create Next App", description: "Gene
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <Providers>
-      <html lang="en">
-        <body className={`${Kurale.variable} ${Brittany.variable} antialiased`}>
+    <html lang="en">
+      <body className={`${Kurale.variable} ${Brittany.variable} antialiased`}>
+        <Providers>
           <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9464475307933754" crossOrigin="anonymous" />
           {children}
-        </body>
-      </html>
-    </Providers>
+        </Providers>
+      </body>
+    </html>
   );
 }
