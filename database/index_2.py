@@ -6,8 +6,8 @@ from PIL import Image, ImageEnhance
 output_dir = os.path.join("sources", "assets")
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
-for filename in os.listdir("chrome"):
-    input_path = os.path.join("chrome", filename)
+for filename in os.listdir("download"):
+    input_path = os.path.join("download", filename)
     if filename.lower().endswith(("png", "jpg", "jpeg")):
         with Image.open(input_path) as img:
             img_resized = img.resize((2048, 1152))
