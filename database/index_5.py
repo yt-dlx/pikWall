@@ -20,4 +20,4 @@ def upscale_and_rename_images_in_folder(source_folder, target_folder, target_siz
 source_folder = os.path.join("sources", "assets")
 target_folder = os.path.join("sources", "re-assets")
 upscale_and_rename_images_in_folder(source_folder, target_folder)
-# ==================================================XXX==================================================
+# ==================================================XXX==================================================   
