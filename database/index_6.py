@@ -14,7 +14,7 @@ def generate_watermark_grid(image_size, text, font, spacing_multiplier=1.5):
         for x in range(0, image_size[0], text_width + spacing):
             positions.append((x, y))
     return positions
-def add_watermark_to_image(input_path, output_path, text, font_path, opacity=70):
+def add_watermark_to_image(input_path, output_path, text, font_path, opacity=50):
     image = Image.open(input_path).convert("RGBA")
     watermark = Image.new("RGBA", image.size, (255, 255, 255, 0))
     draw = ImageDraw.Draw(watermark)
@@ -34,5 +34,5 @@ def process_images(input_folder, output_folder, text, font_path):
         if os.path.isfile(input_path) and filename.lower().endswith((".png", ".jpg", ".jpeg")):
             output_path = os.path.join(output_folder, filename)
             add_watermark_to_image(input_path, output_path, text, font_path)
-process_images(text="picbook",  input_folder=os.path.join("sources", "assets"),  output_folder=os.path.join("sources", "label"),  font_path=os.path.join("include", "Brittany.otf"))
+process_images(text="picbook",  input_folder=os.path.join("sources", "assets"),  output_folder=os.path.join("sources", "label"),  font_path=os.path.join("include", "Kurale.ttf"))
 # ==================================================XXX================================================== 
