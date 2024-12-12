@@ -65,7 +65,7 @@ def run_upscale_command(input_path, output_path, model_name):
     ]
     progress_pattern = re.compile(r"(\d+\.\d+)%")
     process = subprocess.Popen(upscaling_command, shell=True, bufsize=0, text=True, stderr=subprocess.STDOUT, universal_newlines=True, stdout=subprocess.PIPE)
-    with tqdm(total=100, desc="🔬 Upscaling Progress", unit="%") as pbar:
+    with tqdm(total=100, desc="INFO: 🔬 Upscaling Progress", unit="%") as pbar:
         last_percentage = 0
         while True:
             line = process.stdout.readline()
