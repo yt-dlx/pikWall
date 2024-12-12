@@ -11,12 +11,12 @@ export default {
     extend: {
       aspectRatio: {
         "h-9": "9",
-        "w-16": "16",
+        "w-16": "16"
       },
       fontFamily: {
         Kurale: ["var(--font-Kurale)"],
-        Brittany: ["var(--font-Brittany)"],
-      },
-    },
-  },
+        Brittany: ["var(--font-Brittany)"]
+      }
+    }
+  }
 } satisfies Config;
