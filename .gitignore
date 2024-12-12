@@ -15,5 +15,5 @@ yarn-error.log*
 .vercel
 *.tsbuildinfo
 next-env.d.ts
-database/venv
+database/python
 database/sources

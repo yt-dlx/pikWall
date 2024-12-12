@@ -29,11 +29,11 @@ def is_windows():
 
 def get_venv_activate_path():
     if is_windows():
-        return os.path.join("venv", "Scripts", "activate")
+        return os.path.join("python", "Scripts", "activate")
     else:
-        return os.path.join("venv", "bin", "activate")
+        return os.path.join("python", "bin", "activate")
 def venv_exists():
-    return os.path.exists("venv")
+    return os.path.exists("python")
 def setup_virtual_environment():
     if not venv_exists():
         cprint("Creating virtual environment...", "green")
