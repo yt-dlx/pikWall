@@ -62,7 +62,6 @@ def run_upscale_command(input_path, output_path, model_name):
         "-m", os.path.join("include", "real-esrgan", "models"),
         "-n", model_name, "-o", output_path, "-i", input_path,
         "-f", input_path.split(".")[-1], "-s", "4"
-        # "-x"
     ]
     progress_pattern = re.compile(r"(\d+\.\d+)%")
     process = subprocess.Popen(upscaling_command, shell=True, bufsize=0, text=True, stderr=subprocess.STDOUT, universal_newlines=True, stdout=subprocess.PIPE)
@@ -148,7 +147,7 @@ if __name__ == "__main__":
     inference(
         input_path=os.path.join("sources", "assets"),  
         double_upscale_4x_to_16x=False, 
-        image_anime_style=True, 
+        image_anime_style=False, 
         brightness=00, 
         saturation=00, 
         sharpness=50, 
