@@ -61,7 +61,7 @@ def run_upscale_command(input_path, output_path, model_name):
         os.path.join("include", "real-esrgan", "engine.exe"),
         "-m", os.path.join("include", "real-esrgan", "models"),
         "-n", model_name, "-o", output_path, "-i", input_path,
-        "-f", input_path.split(".")[-1], "-s", "4", "-x", "-t", "256"
+        "-f", input_path.split(".")[-1], "-s", "4", "-x"
     ]
     progress_pattern = re.compile(r"(\d+\.\d+)%")
     process = subprocess.Popen(upscaling_command, shell=True, bufsize=0, text=True, stderr=subprocess.STDOUT, universal_newlines=True, stdout=subprocess.PIPE)
