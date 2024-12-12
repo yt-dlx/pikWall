@@ -17,3 +17,4 @@ yarn-error.log*
 next-env.d.ts
 database/python
 database/sources
+database/download
