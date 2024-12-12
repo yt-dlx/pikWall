@@ -12,11 +12,11 @@ for filename in os.listdir("download"):
         with Image.open(input_path) as img:
             img_resized = img.resize((2048, 1152))
             enhancer_sharpness = ImageEnhance.Sharpness(img_resized)
-            img_sharp = enhancer_sharpness.enhance(1.5) 
+            img_sharp = enhancer_sharpness.enhance(2.5) 
             enhancer_saturation = ImageEnhance.Color(img_sharp)
-            img_saturated = enhancer_saturation.enhance(1.0)
+            img_saturated = enhancer_saturation.enhance(1.1)
             enhancer_contrast = ImageEnhance.Contrast(img_saturated)
-            img_contrasted = enhancer_contrast.enhance(1.0)
+            img_contrasted = enhancer_contrast.enhance(1.1)
             output_path = os.path.join(output_dir, filename)
             img_contrasted.save(output_path)
 # ==================================================XXX==================================================
