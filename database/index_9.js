@@ -2,7 +2,7 @@
 //  This Code Is Used To Download The Final Files From GitHub
 //  ==================================================XXX==================================================
 (async () => {
-  const response = await fetch("https://api.github.com/repos/yt-dlx/wallpaper/git/trees/cron?recursive=1");
+  const response = await fetch("https://api.github.com/repos/yt-dlx/picbook/git/trees/cron?recursive=1");
   if (response.ok) {
     const data = await response.json();
     const files = data.tree;

@@ -77,7 +77,7 @@
 import { join } from "path";
 import { readFileSync, readdirSync } from "fs";
 const owner = "yt-dlx";
-const repo = "wallpaper";
+const repo = "picbook";
 const branch = "picness";
 const filesDir = "./sources/label";
 const commitMessage = "Add multiple files";
