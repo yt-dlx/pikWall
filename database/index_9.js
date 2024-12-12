@@ -34,13 +34,13 @@
         files: {
           json: json.map((name) => ({
             fileName: name,
-            downloadLink: decodeURIComponent(`https://github.com/yt-dlx/wallpaper/raw/images/${name}`),
-            previewLink: decodeURIComponent(`https://raw.githubusercontent.com/yt-dlx/wallpaper/images/${name}`)
+            downloadLink: decodeURIComponent(`https://github.com/yt-dlx/wallpaper/raw/picness/${name}`),
+            previewLink: decodeURIComponent(`https://raw.githubusercontent.com/yt-dlx/wallpaper/picness/${name}`)
           })),
           jpg: jpg.map((name) => ({
             fileName: name,
-            downloadLink: decodeURIComponent(`https://github.com/yt-dlx/wallpaper/raw/images/${name}`),
-            previewLink: decodeURIComponent(`https://raw.githubusercontent.com/yt-dlx/wallpaper/images/${name}`)
+            downloadLink: decodeURIComponent(`https://github.com/yt-dlx/wallpaper/raw/picness/${name}`),
+            previewLink: decodeURIComponent(`https://raw.githubusercontent.com/yt-dlx/wallpaper/picness/${name}`)
           }))
         }
       };
