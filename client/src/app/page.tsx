@@ -305,19 +305,26 @@
 // }
 
 "use client";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
-export default function Home() {
-  return (
-    <div>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="https://raw.githubusercontent.com/yt-dlx/picbook/picness/picbook.jpg?token=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"
-        style={{ width: "600px", height: "400px", objectFit: "cover" }}
-        alt="Preview Image"
-      />
-    </div>
-  );
+export default function PreviewImage() {
+  const [base64Image, setBase64Image] = useState("");
+
+  useEffect(() => {
+    const fetchBase64Image = async () => {
+      try {
+        const response = await fetch("/api/proxy?filename=picbook.jpg&source=preview");
+        if (!response.ok) throw new Error("Failed to fetch image");
+        const base64Data = await response.text();
+        setBase64Image(base64Data);
+        console.log(base64Data);
+      } catch (error) {
+        console.error("Error fetching the image:", error);
+      }
+    };
+    fetchBase64Image();
+  }, []);
+
+  return <div>{base64Image ? <Image src={base64Image} alt="Preview" width={500} height={500} /> : <p>Loading...</p>}</div>;
 }
-
-// https://raw.githubusercontent.com/yt-dlx/picbook/picness/pixelhue%20(1a285a)%20(38d4f3)%20(3f6dcb).jpg?raw=true?token=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
-// https://raw.githubusercontent.com/yt-dlx/picbook/picness/pixelhue%20(1a285a)%20(38d4f3)%20(3f6dcb).jpg?token=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
