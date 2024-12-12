@@ -40,8 +40,6 @@ def create_json_for_image(file_path):
     assets, _ = os.path.splitext(original_name)
     image_data = {
         "original_file_name": original_name,
-        "previewLink": f"https://github.com/yt-dlx/wallpaper/raw/picness/{original_name}",
-        "downloadLink": f"https://raw.githubusercontent.com/yt-dlx/wallpaper/picness/{original_name}",
         "format": file_metadata["format"],
         "mode": file_metadata["mode"],
         "file_size_bytes": file_size_bytes,
