@@ -305,19 +305,19 @@
 // }
 
 "use client";
-import Image from "next/image";
 
-export default function PreviewPage() {
+export default function Home() {
   return (
     <div>
-      <h1>Image Preview</h1>
-      <Image
-        src="https://github.com/yt-dlx/wallpaper/raw/picness/pixelhue (1a285a) (38d4f3) (3f6dcb).jpg?token=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"
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="https://raw.githubusercontent.com/yt-dlx/picbook/picness/picbook.jpg?token=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"
+        style={{ width: "600px", height: "400px", objectFit: "cover" }}
         alt="Preview Image"
-        height={400}
-        width={600}
-        priority
       />
     </div>
   );
 }
+
+// https://raw.githubusercontent.com/yt-dlx/picbook/picness/pixelhue%20(1a285a)%20(38d4f3)%20(3f6dcb).jpg?raw=true?token=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
+// https://raw.githubusercontent.com/yt-dlx/picbook/picness/pixelhue%20(1a285a)%20(38d4f3)%20(3f6dcb).jpg?token=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
