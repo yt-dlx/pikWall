@@ -1,0 +1,21 @@
+{
+  "name": "picbook",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "picbook setup for database and client",
+  "main": "index.js",
+  "repository": "https://github.com/yt-dlx/picbook.git",
+  "author": "magneum-II <yt-dlx@proton.me>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "database:build": "node index.js database:build",
+    "client:make": "node index.js client:make",
+    "client:dev": "node index.js client:dev",
+    "client:start": "node index.js client:start",
+    "client:build": "node index.js client:build"
+  },
+  "dependencies": {
+    "@octokit/rest": "^21.0.2"
+  }
+}
