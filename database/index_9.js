@@ -1,6 +1,7 @@
 //  ==================================================XXX==================================================
 //  This Code Is Used To Upload The Final High-Res Files To GitHub
 //  ==================================================XXX==================================================
+import { join } from "path";
 import dotenv from "dotenv";
 dotenv.config({ path: ".env" });
 import { readFileSync, readdirSync } from "fs";
