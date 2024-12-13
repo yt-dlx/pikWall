@@ -5,8 +5,8 @@ def encode_base64(input_string):
 file_path = "DataBook.json"
 with open(file_path, "r") as file:
     data = json.load(file)
-base_download_url = "https://github.com/yt-dlx/picbook/blob/picness/"
-base_preview_url = "https://raw.githubusercontent.com/yt-dlx/picbook/picness/"
+base_download_url = "https://github.com/yt-dlx/picbook/blob/high-res/"
+base_preview_url = "https://raw.githubusercontent.com/yt-dlx/picbook/low-res/"
 for story in data.values():
     for image in story.get("images", []):
         image_name = image["original_file_name"]
