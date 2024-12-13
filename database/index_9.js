@@ -1,10 +1,9 @@
 //  ==================================================XXX==================================================
 //  This Code Is Used To Upload The Final High-Res Files To GitHub
 //  ==================================================XXX==================================================
-import { join } from "path";
 import dotenv from "dotenv";
+dotenv.config({ path: ".env" });
 import { readFileSync, readdirSync } from "fs";
-dotenv.config({ path: join(__dirname, ".env") });
 const owner = "yt-dlx";
 const repo = "picbook";
 const branch = "highRes";
