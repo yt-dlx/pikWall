@@ -14,5 +14,8 @@
     "client:dev": "node index.js client:dev",
     "client:start": "node index.js client:start",
     "client:build": "node index.js client:build"
+  },
+  "dependencies": {
+    "@octokit/rest": "^21.0.2"
   }
 }
