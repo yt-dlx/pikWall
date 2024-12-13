@@ -1,5 +1,5 @@
 //  ==================================================XXX==================================================
-//  This Code Is Used To Upload The Final Low-Res Files To GitHub
+//  This Code Is Used To Upload The Final High-Res Files To GitHub
 //  ==================================================XXX==================================================
 import { join } from "path";
 import { readFileSync, readdirSync } from "fs";
