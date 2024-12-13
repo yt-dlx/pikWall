@@ -105,7 +105,7 @@ const PicBookPage: React.FC = () => {
                 >
                   <div className="h-52 bg-[#45475a] flex items-center justify-center relative">
                     {card.images[0]?.previewLink ? (
-                      <Image src={card.images[0].downloadLink} alt={card.title} layout="fill" objectFit="cover" unoptimized className="rounded-t-lg" />
+                      <Image src={card.images[0].previewLink} alt={card.title} layout="fill" objectFit="cover" unoptimized className="rounded-t-lg" />
                     ) : (
                       <span className="text-[#7f849c] text-6xl">📷</span>
                     )}
