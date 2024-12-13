@@ -15,6 +15,7 @@ yarn-error.log*
 .vercel
 *.tsbuildinfo
 next-env.d.ts
+temporary
 node_modules
 database/python
 database/sources
