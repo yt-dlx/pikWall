@@ -139,9 +139,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     if ("content" in data && "encoding" in data && data.content) fileContentBuffer = Buffer.from(data.content, "base64");
     else if ("download_url" in data && data.download_url) {
       const fileResponse = await fetch(data.download_url);
-      if (!fileResponse.ok) {
-        throw new Error(`Failed to fetch the file from download URL: ${fileName}`);
-      }
+      if (!fileResponse.ok) throw new Error(`Failed to fetch the file from download URL: ${fileName}`);
       const arrayBuffer = await fileResponse.arrayBuffer();
       fileContentBuffer = Buffer.from(arrayBuffer);
     } else throw new Error(`File content is unavailable for file: ${fileName}`);
