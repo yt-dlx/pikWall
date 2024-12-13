@@ -34,5 +34,5 @@ def process_images(input_folder, output_folder, text, font_path):
         if os.path.isfile(input_path) and filename.lower().endswith((".png", ".jpg", ".jpeg")):
             output_path = os.path.join(output_folder, filename)
             add_watermark_to_image(input_path, output_path, text, font_path)
-process_images(text="picbook",  input_folder=os.path.join("sources", "assets"),  output_folder=os.path.join("sources", "label"),  font_path=os.path.join("include", "Kurale.ttf"))
+process_images(text="picbook",  input_folder=os.path.join("sources", "highRes"),  output_folder=os.path.join("sources", "label"),  font_path=os.path.join("include", "Kurale.ttf"))
 # ==================================================XXX================================================== 

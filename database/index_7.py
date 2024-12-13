@@ -37,7 +37,7 @@ def create_json_for_image(file_path):
     file_size_bytes = os.path.getsize(file_path)
     file_size_megabytes = file_size_bytes / (1024 * 1024)
     directory, original_name = os.path.split(file_path)
-    assets, _ = os.path.splitext(original_name)
+    highRes, _ = os.path.splitext(original_name)
     image_data = {
         "original_file_name": original_name,
         "format": file_metadata["format"],
@@ -77,5 +77,5 @@ def process_images_in_folder(folder_path):
     with open(output_json_path, "w") as json_file:
         json.dump(parent_data, json_file, indent=4)
     console.print(f"[bold green]INFO:[/] All image data has been written to {output_json_path}")
-process_images_in_folder(os.path.join("sources", "assets"))
+process_images_in_folder(os.path.join("sources", "highRes"))
 # ==================================================XXX==================================================

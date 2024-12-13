@@ -17,7 +17,7 @@ def upscale_and_rename_images_in_folder(source_folder, target_folder, target_siz
                 img_resized = img.resize(target_size, Image.LANCZOS)
                 img_resized.save(output_path)
                 print(f"Resized and saved: {new_filename}")
-source_folder = os.path.join("sources", "assets")
-target_folder = os.path.join("sources", "re-assets")
+source_folder = os.path.join("sources", "highRes")
+target_folder = os.path.join("sources", "re-highRes")
 upscale_and_rename_images_in_folder(source_folder, target_folder)
 # ==================================================XXX==================================================   
