@@ -55,22 +55,27 @@ def create_json_for_image(file_path):
             image_data[f"more_{i}"] = color
     return image_data
 def process_images_in_folder(folder_path):
-    image_data_dict = {}
+    parent_data = {}
     for file_name in os.listdir(folder_path):
         file_path = os.path.join(folder_path, file_name)
         if os.path.isfile(file_path) and file_name.lower().endswith((".jpg", ".jpeg", ".png")):
             try:
                 image_data = create_json_for_image(file_path)
                 base_name = re.sub(r"\s*\(\d+\)$", "", os.path.splitext(file_name)[0]).strip()
-                if base_name not in image_data_dict:
-                    image_data_dict[base_name] = []
-                image_data_dict[base_name].append(image_data)
+                if base_name not in parent_data:
+                    parent_data[base_name] = {
+                        "story_title": base_name,
+                        "story_prompt": "",
+                        "story_moral": "",
+                        "images": []
+                    }
+                parent_data[base_name]["images"].append(image_data)
                 console.print(f"[bold green]INFO:[/] Processed image: {file_name}")
             except Exception as e:
                 console.print(f"[bold red]ERROR:[/] Could not process {file_name}. {str(e)}")
     output_json_path = "DataBook.json"
     with open(output_json_path, "w") as json_file:
-        json.dump(image_data_dict, json_file, indent=4)
+        json.dump(parent_data, json_file, indent=4)
     console.print(f"[bold green]INFO:[/] All image data has been written to {output_json_path}")
 process_images_in_folder(os.path.join("sources", "assets"))
 # ==================================================XXX==================================================
