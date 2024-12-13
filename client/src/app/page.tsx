@@ -7,7 +7,7 @@ export default function Home() {
   const [imageUrl, setImageUrl] = useState<string>("");
   useEffect(() => {
     const fetchBase64Image = async () => {
-      const response = await fetch("/api/proxy?filename=picbook.jpg&source=preview");
+      const response = await fetch(`/api/proxy?filename=${encodeURIComponent("City Of Dreams (1).jpg")}&source=preview`);
       if (!response.ok) throw new Error("Failed to fetch image");
       const base64Data = await response.text();
       setImageUrl(base64Data);
@@ -17,7 +17,7 @@ export default function Home() {
   }, []);
 
   const handleDownload = async (filename: string) => {
-    const response = await fetch(`/api/proxy?filename=${filename}`);
+    const response = await fetch(`/api/proxy?filename=${encodeURIComponent(filename)}`);
     if (!response.ok) throw new Error("Failed to set download link");
     const blob = await response.blob();
     const url = URL.createObjectURL(blob);
@@ -35,12 +35,14 @@ export default function Home() {
       {imageUrl ? (
         <>
           <Image src={imageUrl} alt="Preview" width={500} height={500} unoptimized />
-          <button onClick={() => handleDownload("picbook.jpg")} style={{ marginTop: "10px" }}>
+          <button onClick={() => handleDownload("City Of Dreams (1).jpg")} style={{ marginTop: "10px" }}>
             Download
           </button>
         </>
       ) : (
-        <p>Loading...</p>
+        <div style={{ width: 500, height: 500, display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "#f0f0f0" }}>
+          <h1>Loading...</h1>
+        </div>
       )}
     </div>
   );
