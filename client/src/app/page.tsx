@@ -85,7 +85,7 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
       style={{ willChange: "transform, opacity" }}
       onClick={() => setSelectedCard(cardIdx)}
     >
-      <div className="relative w-full h-96 overflow-hidden flex">
+      <div className="relative w-full  h-80 overflow-hidden flex">
         {card.images.slice(0, 4).map((image, imgIdx) => {
           const isHovered = hoveredImage[cardIdx] === imgIdx;
           const isActive = !isHovered && autoImageIndex[cardIdx] === imgIdx;
