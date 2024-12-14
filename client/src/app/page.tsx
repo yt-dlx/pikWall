@@ -1,8 +1,9 @@
+// src/app/page.tsx
 "use client";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Galaxy from "@/components/galaxy";
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 
 type ImageMetadata = {
   original_file_name: string;
