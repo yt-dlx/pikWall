@@ -3,10 +3,10 @@
 import Image from "next/image";
 import Galaxy from "@/components/galaxy";
 import "react-toastify/dist/ReactToastify.css";
-import { FiBook, FiCamera } from "react-icons/fi";
 import { ToastContainer, toast } from "react-toastify";
 import React, { useState, useEffect, memo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FiBook, FiInfo, FiCamera, FiX, FiBookOpen, FiAlertCircle } from "react-icons/fi";
 import { FaBookOpen, FaFeatherAlt, FaArrowDown, FaScroll, FaRegCompass, FaRegHeart } from "react-icons/fa";
 // ====================================================================
 type ImageMetadata = {
@@ -70,6 +70,10 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
       style={{ willChange: "transform, opacity" }}
       className="bg-[#313244]/80 rounded-lg shadow-md overflow-hidden cursor-pointer relative group hover:shadow-xl flex flex-col"
     >
+      <div className="absolute top-2 left-2 z-10 flex items-center space-x-2 bg-[#3b4252]/80 text-[#cdd6f4] px-2 py-1 rounded-lg shadow-md text-md border">
+        <FiInfo className="text-[#88c0d0]" />
+        <span>Hover Or Click Image To Download</span>
+      </div>
       <div className="relative w-full h-60 overflow-hidden flex">
         {card.images.slice(0, 4).map((image, imgIdx) => {
           const isHovered = hoveredImage[cardIdx] === imgIdx;
@@ -238,6 +242,7 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
               ) : (
                 <div className="flex items-center justify-center h-full w-full bg-[#313244] text-[#7f849c] absolute inset-0">
                   <FiCamera className="text-4xl" />
+                  <p className="text-sm mt-2">No Image</p>
                 </div>
               )}
             </motion.div>
@@ -251,15 +256,25 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
           exit={{ opacity: 0 }}
         >
           <div>
-            <h4 className="text-3xl font-semibold mb-4 nordic-gradient-text capitalize">{card.title}</h4>
+            <h4 className="text-3xl font-semibold mb-4 nordic-gradient-text capitalize flex items-center gap-2">
+              <FiBookOpen className="text-[#89b4fa]" />
+              {card.title}
+            </h4>
             <p className="text-lg leading-relaxed mb-6 text-[#a6adc8] capitalize">{card.description}</p>
           </div>
           <div>
-            <h5 className="text-xl font-semibold mb-2 text-[#89b4fa]">Moral of the Story</h5>
+            <h5 className="text-xl font-semibold mb-2 text-[#89b4fa] flex items-center gap-2">
+              <FiAlertCircle />
+              Moral of the Story
+            </h5>
             <p className="text-lg text-[#cdd6f4] capitalize">{card.story_moral}</p>
           </div>
-          <button onClick={onClose} className="mt-6 px-4 py-2 bg-[#89b4fa] text-[#1e1e2e] rounded-full shadow-md font-semibold hover:bg-[#74c7ec] transition self-start">
-            Close
+          <button
+            onClick={onClose}
+            className="mt-6 px-4 py-2 bg-[#89b4fa] text-[#1e1e2e] w-full rounded-full shadow-md font-semibold hover:bg-[#74c7ec] transition self-start flex items-center justify-center gap-2"
+          >
+            <FiX />
+            Close Selected Story
           </button>
         </motion.div>
       </motion.div>
