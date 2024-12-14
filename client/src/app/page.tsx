@@ -243,30 +243,23 @@ const PicBookPage: React.FC = () => {
             transition={{ duration: 1 }}
           >
             <FaBookOpen className="inline-block mr-2" />
-            <FaImages className="inline-block mr-2" />
             Stories Behind Pictures
+            <FaImages className="ml-2 inline-block" />
           </motion.h1>
           <motion.p className="text-lg md:text-2xl max-w-2xl mx-auto mb-8 text-[#a6adc8]" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 1 }}>
             Dive into tales inspired by unique images and discover the art of visual storytelling.
           </motion.p>
-          <motion.a
-            href="#explore"
-            className="px-6 py-3 bg-[#89b4fa] text-[#1e1e2e] rounded-full shadow-md font-semibold hover:bg-[#74c7ec] flex items-center space-x-2"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 1 }}
-          >
-            <span>Start Exploring</span>
-            <FaArrowRight />
+          <motion.a href="#explore" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.4, duration: 1 }} className="inline-block">
+            <Image src="/logo.png" alt="Explore" width={200} height={200} className="cursor-pointer hover:scale-105 transition-transform duration-300 -hue-rotate-180" />
           </motion.a>
         </section>
         <section className="py-12 rounded-xl mx-4 md:mx-8 lg:mx-12 shadow-lg" id="explore">
           <motion.h3
             className="text-3xl font-semibold text-center text-[#cdd6f4] mb-8 flex items-center justify-center"
-            variants={sectionHeadingVariants}
-            initial="hidden"
-            whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
+            variants={sectionHeadingVariants}
+            whileInView="visible"
+            initial="hidden"
           >
             <FaBookOpen className="inline-block mr-2" />
             Explore Our Collection
