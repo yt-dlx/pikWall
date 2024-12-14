@@ -19,5 +19,5 @@ def rescale_images(source_dir, target_dir, width, height):
         except Exception as e:
             print(f"Failed to process {file_path}: {e}")
 if __name__ == "__main__":
-    rescale_images(os.path.join("sources", "highRes"), os.path.join("sources", "lowRes"), 1920, 1080)
+    rescale_images(os.path.join("sources", "highRes"), os.path.join("sources", "lowRes"), 1280 , 720)
 # ==================================================XXX==================================================
