@@ -1,9 +1,10 @@
 import daisyui from "daisyui";
 import type { Config } from "tailwindcss";
+import aspectRatio from "@tailwindcss/aspect-ratio";
 
 export default {
   darkMode: "class",
-  plugins: [daisyui],
-  theme: { extend: { ontFamily: { Kurale: ["var(--font-Kurale)"], Brittany: ["var(--font-Brittany)"] } } },
-  content: ["./src/pages/**/*.{js,ts,jsx,tsx,mdx}", "./src/components/**/*.{js,ts,jsx,tsx,mdx}", "./src/app/**/*.{js,ts,jsx,tsx,mdx}"]
+  plugins: [daisyui, aspectRatio],
+  content: ["./src/pages/**/*.{js,ts,jsx,tsx,mdx}", "./src/components/**/*.{js,ts,jsx,tsx,mdx}", "./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
+  theme: { extend: { aspectRatio: { "h-9": "9", "w-16": "16" }, fontFamily: { Kurale: ["var(--font-Kurale)"], Brittany: ["var(--font-Brittany)"] } } }
 } satisfies Config;
