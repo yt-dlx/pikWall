@@ -77,9 +77,9 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
           return (
             <motion.div
               key={imgIdx}
-              className="absolute top-0 h-full shadow-black shadow-2xl rounded-lg border-dotted hover:border-2 hover:blur-none blur-[1px]"
+              className={`absolute top-0 h-full rounded-lg overflow-hidden transition-all duration-300 ${isHovered ? "border-4 border-dotted border-white" : "border-transparent blur-[1px]"}`}
               style={{ left: `${imgIdx * 25}%`, zIndex: 4 - imgIdx, willChange: "width, left" }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
+              transition={{ duration: 0.2, ease: "easeInOut" }}
               initial={{ width: "25%" }}
               animate={{
                 width: isHovered || isActive ? "70%" : "25%",
@@ -89,7 +89,9 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
               onMouseEnter={() => handleMouseEnter(cardIdx, imgIdx)}
             >
               {image.previewLink ? (
-                <Image src={image.previewLink} alt={`Preview ${imgIdx + 1}`} fill className="object-cover rounded-lg" unoptimized />
+                <div className="w-full h-full overflow-hidden rounded-lg transition-transform transform hover:scale-150 duration-300">
+                  <Image src={image.previewLink} alt={`Preview ${imgIdx + 1}`} fill className="object-cover" unoptimized />
+                </div>
               ) : (
                 <div className="flex items-center justify-center w-full h-full">
                   <FiCamera className="text-[#7f849c] text-6xl" />
