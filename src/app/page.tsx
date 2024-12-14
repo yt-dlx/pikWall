@@ -198,39 +198,26 @@ type ModalProps = {
 };
 const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
   return (
-    <motion.div
-      exit={{ opacity: 0, scale: 0.9 }}
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      className="fixed top-0 left-0 w-full h-full bg-black/40 backdrop-blur-sm flex justify-center items-center z-[9999] p-4"
-    >
+    <motion.div className="fixed top-0 left-0 w-full h-full bg-black/80 backdrop-blur-md flex justify-center items-center z-[9999]">
       <motion.div
-        className="bg-[#1e1e2e]/60 backdrop-blur-2xl rounded-2xl shadow-2xl shadow-black p-2 md:p-8 w-full sm:w-11/12 md:w-2/3 lg:w-3/4 max-h-[95vh] overflow-y-auto flex flex-col lg:flex-row relative"
-        transition={{ duration: 0.6 }}
-        variants={fadeVariants}
-        animate="visible"
-        initial="hidden"
-        exit="exit"
+        className="bg-[#1e1e2e]/60 backdrop-blur-2xl rounded-2xl shadow-2xl shadow-black border-4 border-double p-2 md:p-6 w-full sm:w-11/12 md:w-2/3 lg:w-3/4 max-h-[95vh] overflow-y-auto flex flex-col lg:flex-row relative"
+        transition={{ duration: 0.02, ease: "easeOut" }}
+        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 30 }}
+        exit={{ opacity: 0, y: 30 }}
       >
-        <div className="w-full lg:w-1/2 grid grid-cols-2 gap-4 p-4 rounded-lg relative">
+        <div className="w-full lg:w-1/2 grid grid-cols-2 gap-2 p-4 rounded-lg relative">
           {card.images.slice(0, 4).map((image, idx) => (
             <motion.div
               key={idx}
-              className="relative w-full h-0 pb-[100%] overflow-hidden rounded-lg"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={fadeVariants}
-              whileInView="visible"
-              initial="hidden"
-              exit="exit"
+              className="relative w-full h-0 pb-[56.25%] overflow-hidden rounded-lg"
+              transition={{ duration: 0.02, ease: "easeOut" }}
+              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              exit={{ opacity: 0, scale: 0.9 }}
             >
               {image.previewLink ? (
-                <Image
-                  fill
-                  unoptimized
-                  src={image.previewLink}
-                  alt={`Image ${idx + 1} - ${card.title}`}
-                  className="object-cover rounded-lg transition-transform transform hover:scale-110 duration-300"
-                />
+                <Image fill unoptimized src={image.previewLink} alt={`Image ${idx + 1} - ${card.title}`} className="object-cover rounded transition-transform transform hover:scale-125 duration-300" />
               ) : (
                 <div className="flex items-center justify-center h-full w-full bg-[#313244] text-[#7f849c] absolute inset-0">
                   <FiCamera className="text-4xl" />
@@ -241,14 +228,13 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
         </div>
         <motion.div
           className="w-full lg:w-1/2 lg:pl-6 flex flex-col justify-between p-4 md:p-0"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={fadeVariants}
-          whileInView="visible"
-          initial="hidden"
-          exit="exit"
+          transition={{ duration: 0.02, ease: "easeOut" }}
+          animate={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
+          exit={{ opacity: 0 }}
         >
           <div>
-            <h4 className="text-3xl font-semibold mb-4 text-[#cdd6f4]">{card.title}</h4>
+            <h4 className="text-3xl font-semibold mb-4 nordic-gradient-text">{card.title}</h4>
             <p className="text-lg leading-relaxed mb-6 text-[#a6adc8]">{card.description}</p>
           </div>
           <div>
