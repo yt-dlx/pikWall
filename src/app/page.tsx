@@ -77,8 +77,14 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
           return (
             <motion.div
               key={imgIdx}
-              className={`absolute top-0 h-full rounded-lg overflow-hidden transition-all duration-300 ${isHovered ? "border-4 border-dotted border-white" : "border-transparent blur-[1px]"}`}
-              style={{ left: `${imgIdx * 25}%`, zIndex: 4 - imgIdx, willChange: "width, left" }}
+              className={`absolute top-0 h-full rounded-lg overflow-hidden transition-all duration-300 ${
+                isHovered ? "border-[4px] border-dotted border-transparent bg-gradient-to-br from-[#88c0d0] via-[#81a1c1] to-[#5e81ac]" : "border-transparent blur-[1px]"
+              }`}
+              style={{
+                left: `${imgIdx * 25}%`,
+                zIndex: 4 - imgIdx,
+                willChange: "width, left"
+              }}
               transition={{ duration: 0.2, ease: "easeInOut" }}
               initial={{ width: "25%" }}
               animate={{
@@ -105,11 +111,14 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
         <div className="space-y-2 flex-grow">
           <h4 className="text-2xl font-semibold text-[#cdd6f4] flex items-center space-x-2">
             <FaScroll />
-            <span className="nordic-gradient-text">{card.title}</span>
+            <span className="nordic-gradient-text capitalize">{card.title}</span>
           </h4>
           <p className="text-[#a6adc8] flex items-center space-x-2">
             <FaFeatherAlt />
-            <span className="truncate overflow-hidden whitespace-nowrap w-72 text-xl">{card.description}</span>
+            <span className="truncate overflow-hidden whitespace-nowrap w-80 text-lg capitalize">
+              <span className="nordic-gradient-text">Story and Prompt: </span>
+              {card.description}
+            </span>
           </p>
         </div>
       </div>
@@ -219,7 +228,13 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
               exit={{ opacity: 0, scale: 0.9 }}
             >
               {image.previewLink ? (
-                <Image fill unoptimized src={image.previewLink} alt={`Image ${idx + 1} - ${card.title}`} className="object-cover rounded transition-transform transform hover:scale-125 duration-300" />
+                <Image
+                  fill
+                  unoptimized
+                  src={image.previewLink}
+                  alt={`Image ${idx + 1} - ${card.title}`}
+                  className="object-cover rounded transition-transform transform hover:scale-125 duration-300 animate-pulse hover:animate-none"
+                />
               ) : (
                 <div className="flex items-center justify-center h-full w-full bg-[#313244] text-[#7f849c] absolute inset-0">
                   <FiCamera className="text-4xl" />
@@ -236,12 +251,12 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
           exit={{ opacity: 0 }}
         >
           <div>
-            <h4 className="text-3xl font-semibold mb-4 nordic-gradient-text">{card.title}</h4>
-            <p className="text-lg leading-relaxed mb-6 text-[#a6adc8]">{card.description}</p>
+            <h4 className="text-3xl font-semibold mb-4 nordic-gradient-text capitalize">{card.title}</h4>
+            <p className="text-lg leading-relaxed mb-6 text-[#a6adc8] capitalize">{card.description}</p>
           </div>
           <div>
             <h5 className="text-xl font-semibold mb-2 text-[#89b4fa]">Moral of the Story</h5>
-            <p className="text-lg italic text-[#cdd6f4]">{card.story_moral}</p>
+            <p className="text-lg text-[#cdd6f4] capitalize">{card.story_moral}</p>
           </div>
           <button onClick={onClose} className="mt-6 px-4 py-2 bg-[#89b4fa] text-[#1e1e2e] rounded-full shadow-md font-semibold hover:bg-[#74c7ec] transition self-start">
             Close
@@ -344,7 +359,7 @@ const ExploreSection: React.FC = () => {
           return { ...newIndex, [cardIdx]: nextIndex };
         }, {})
       );
-    }, 3000);
+    }, 4000);
     return () => clearInterval(interval);
   }, [cards]);
   const handleMouseLeave = (cardIdx: number) => setHoveredImage((prev) => ({ ...prev, [cardIdx]: null }));
