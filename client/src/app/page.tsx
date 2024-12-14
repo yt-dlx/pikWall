@@ -85,7 +85,7 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
       style={{ willChange: "transform, opacity" }}
       onClick={() => setSelectedCard(cardIdx)}
     >
-      <div className="relative w-full  h-80 overflow-hidden flex">
+      <div className="relative w-full h-80 overflow-hidden flex">
         {card.images.slice(0, 4).map((image, imgIdx) => {
           const isHovered = hoveredImage[cardIdx] === imgIdx;
           const isActive = !isHovered && autoImageIndex[cardIdx] === imgIdx;
@@ -108,7 +108,7 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
               onMouseLeave={() => handleMouseLeave(cardIdx)}
             >
               {image.previewLink ? (
-                <Image src={image.previewLink} alt={`Preview ${imgIdx + 1}`} fill className="object-cover rounded-lg" />
+                <Image src={image.previewLink} alt={`Preview ${imgIdx + 1}`} fill className="object-cover rounded-lg" unoptimized />
               ) : (
                 <div className="flex items-center justify-center w-full h-full">
                   <FiCamera className="text-[#7f849c] text-6xl" />{" "}
@@ -119,7 +119,7 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
         })}
       </div>
       <div className="p-4 flex">
-        <div className="space-y-2">
+        <div className="space-y-2 flex-grow">
           <h4 className="text-2xl font-semibold text-[#cdd6f4] flex items-center space-x-2">
             <FaScroll />
             <span>{card.title}</span>
@@ -130,7 +130,10 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
           </p>
         </div>
         <button
-          onClick={() => setSelectedCard(cardIdx)}
+          onClick={(e) => {
+            e.stopPropagation();
+            setSelectedCard(cardIdx);
+          }}
           className="px-4 py-2 bg-[#89b4fa] text-[#1e1e2e] rounded-lg shadow-md font-semibold hover:bg-[#74c7ec] flex items-center space-x-2 self-center"
         >
           <span>Explore Story</span>
@@ -317,29 +320,32 @@ const PicBookPage: React.FC = () => {
       <AnimatePresence>
         {selectedCard !== null && (
           <motion.div
+            exit={{ opacity: 0, scale: 0.9 }}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            className="fixed top-0 left-0 w-full h-full bg-black/40 backdrop-blur-sm flex justify-center items-center z-50 p-4"
+            className="fixed top-0 left-0 w-full h-full bg-black/40 backdrop-blur-sm flex justify-center items-center z-[9999] p-4"
           >
-            <div className="bg-[#1e1e2e]/60 backdrop-blur-2xl rounded-2xl shadow-2xl shadow-black p-2 md:p-8 w-full sm:w-11/12 md:w-2/3 lg:w-3/4 max-h-[100vh] overflow-y-auto flex flex-col lg:flex-row">
-              <div className="lg:w-1/2 grid grid-cols-2 gap-4 p-4 rounded-lg">
+            <div className="bg-[#1e1e2e]/60 backdrop-blur-2xl rounded-2xl shadow-2xl shadow-black p-2 md:p-8 w-full sm:w-11/12 md:w-2/3 lg:w-3/4 max-h-[95vh] overflow-y-auto flex flex-col lg:flex-row relative">
+              <div className="w-full lg:w-1/2 grid grid-cols-2 gap-4 p-4 rounded-lg relative">
                 {cards[selectedCard]?.images.slice(0, 4).map((image, idx) => (
-                  <div key={idx} className="aspect-square rounded-lg relative overflow-hidden">
+                  <div key={idx} className="relative w-full h-0 pb-[100%] overflow-hidden rounded-lg">
                     {image.previewLink ? (
                       <Image
                         fill
                         src={image.previewLink}
                         alt={`Image ${idx + 1} - ${cards[selectedCard].title}`}
-                        className="object-cover rounded-lg transition-transform transform hover:scale-125 duration-300"
+                        className="object-cover rounded-lg transition-transform transform hover:scale-110 duration-300"
+                        unoptimized
                       />
                     ) : (
-                      <span className="text-[#7f849c] text-6xl flex items-center justify-center h-full">📷</span>
+                      <div className="flex items-center justify-center h-full w-full bg-[#313244] text-[#7f849c] absolute inset-0">
+                        <FiCamera className="text-4xl" />
+                      </div>
                     )}
                   </div>
                 ))}
               </div>
-              <div className="lg:w-1/2 lg:pl-6 flex flex-col justify-between p-4 md:p-0">
+              <div className="w-full lg:w-1/2 lg:pl-6 flex flex-col justify-between p-4 md:p-0">
                 <div>
                   <h4 className="text-3xl font-semibold mb-4 text-[#cdd6f4]">{cards[selectedCard].title}</h4>
                   <p className="text-lg leading-relaxed mb-6 text-[#a6adc8]">{cards[selectedCard].description}</p>

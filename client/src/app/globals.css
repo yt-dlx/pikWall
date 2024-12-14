@@ -1,4 +1,4 @@
-/*  src/app/globals.css */
+/* src/app/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,4 +15,27 @@
 main {
   z-index: 10;
   position: relative;
+}
+
+*::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+*::-webkit-scrollbar-track {
+  background: #000011 !important;
+  border-radius: 4px !important;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #89b4fa !important;
+  border-radius: 4px !important;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #74c7ec !important;
+}
+
+* {
+  scrollbar-color: #89b4fa #000011 !important;
+  scrollbar-width: thin !important;
 }
