@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "picbook",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@octokit/rest": "^21.0.2",
-    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tanstack/react-query": "^5.62.7",
     "@tanstack/react-query-devtools": "^5.62.7",
     "@types/three": "^0.170.0",
@@ -24,8 +23,6 @@
     "react-toastify": "^10.0.6",
     "sharp": "^0.33.5",
     "simple-git": "^3.27.0",
-    "tailwind-scrollbar": "^3.1.0",
-    "tailwind-scrollbar-hide": "^1.1.7",
     "three": "^0.171.0"
   },
   "devDependencies": {
