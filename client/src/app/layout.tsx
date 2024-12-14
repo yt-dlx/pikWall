@@ -11,7 +11,7 @@ export const metadata: Metadata = { title: "Create Next App", description: "Gene
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${Kurale.variable} ${Brittany.variable} antialiased`}>
+      <body className={`${Kurale.variable} ${Brittany.variable} antialiased font-Kurale`}>
         <Providers>
           <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9464475307933754" crossOrigin="anonymous" />
           {children}

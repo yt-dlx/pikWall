@@ -63,8 +63,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#042a46",
         more_48: "#091c44",
         more_49: "#1c1426",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9DaXR5IE9mIERyZWFtcyAoMSkuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvQ2l0eSBPZiBEcmVhbXMgKDEpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9DaXR5IE9mIERyZWFtcyAoMSkuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9DaXR5IE9mIERyZWFtcyAoMSkuanBn"
       },
       {
         original_file_name: "City Of Dreams (2).jpg",
@@ -123,8 +123,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#446ca4",
         more_48: "#1b3c4c",
         more_49: "#241c2f",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9DaXR5IE9mIERyZWFtcyAoMikuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvQ2l0eSBPZiBEcmVhbXMgKDIpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9DaXR5IE9mIERyZWFtcyAoMikuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9DaXR5IE9mIERyZWFtcyAoMikuanBn"
       },
       {
         original_file_name: "City Of Dreams (3).jpg",
@@ -183,8 +183,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#648cdc",
         more_48: "#101445",
         more_49: "#2c145c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9DaXR5IE9mIERyZWFtcyAoMykuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvQ2l0eSBPZiBEcmVhbXMgKDMpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9DaXR5IE9mIERyZWFtcyAoMykuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9DaXR5IE9mIERyZWFtcyAoMykuanBn"
       },
       {
         original_file_name: "City Of Dreams (4).jpg",
@@ -243,8 +243,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#080c45",
         more_48: "#060c36",
         more_49: "#04043c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9DaXR5IE9mIERyZWFtcyAoNCkuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvQ2l0eSBPZiBEcmVhbXMgKDQpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9DaXR5IE9mIERyZWFtcyAoNCkuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9DaXR5IE9mIERyZWFtcyAoNCkuanBn"
       }
     ]
   },
@@ -311,8 +311,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#143561",
         more_48: "#54340c",
         more_49: "#0c3562",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9NaWRuaWdodCBDcm93ICgxKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvTWlkbmlnaHQgQ3JvdyAoMSkuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9NaWRuaWdodCBDcm93ICgxKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9NaWRuaWdodCBDcm93ICgxKS5qcGc="
       },
       {
         original_file_name: "Midnight Crow (2).jpg",
@@ -371,8 +371,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#081c54",
         more_48: "#242c54",
         more_49: "#1c4474",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9NaWRuaWdodCBDcm93ICgyKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvTWlkbmlnaHQgQ3JvdyAoMikuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9NaWRuaWdodCBDcm93ICgyKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9NaWRuaWdodCBDcm93ICgyKS5qcGc="
       },
       {
         original_file_name: "Midnight Crow (3).jpg",
@@ -431,8 +431,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#4c2c14",
         more_48: "#0c143c",
         more_49: "#040c3c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9NaWRuaWdodCBDcm93ICgzKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvTWlkbmlnaHQgQ3JvdyAoMykuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9NaWRuaWdodCBDcm93ICgzKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9NaWRuaWdodCBDcm93ICgzKS5qcGc="
       },
       {
         original_file_name: "Midnight Crow (4).jpg",
@@ -491,8 +491,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#0b305c",
         more_48: "#2a4c68",
         more_49: "#143c74",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9NaWRuaWdodCBDcm93ICg0KS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvTWlkbmlnaHQgQ3JvdyAoNCkuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9NaWRuaWdodCBDcm93ICg0KS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9NaWRuaWdodCBDcm93ICg0KS5qcGc="
       }
     ]
   },
@@ -559,8 +559,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#0b4682",
         more_48: "#051c54",
         more_49: "#072456",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9NaWRuaWdodCBNZWFkb3dzICgxKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvTWlkbmlnaHQgTWVhZG93cyAoMSkuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9NaWRuaWdodCBNZWFkb3dzICgxKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9NaWRuaWdodCBNZWFkb3dzICgxKS5qcGc="
       },
       {
         original_file_name: "Midnight Meadows (2).jpg",
@@ -619,8 +619,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#26393c",
         more_48: "#143432",
         more_49: "#2a3414",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9NaWRuaWdodCBNZWFkb3dzICgyKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvTWlkbmlnaHQgTWVhZG93cyAoMikuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9NaWRuaWdodCBNZWFkb3dzICgyKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9NaWRuaWdodCBNZWFkb3dzICgyKS5qcGc="
       },
       {
         original_file_name: "Midnight Meadows (3).jpg",
@@ -679,8 +679,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#246ca6",
         more_48: "#041445",
         more_49: "#0c1c44",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9NaWRuaWdodCBNZWFkb3dzICgzKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvTWlkbmlnaHQgTWVhZG93cyAoMykuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9NaWRuaWdodCBNZWFkb3dzICgzKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9NaWRuaWdodCBNZWFkb3dzICgzKS5qcGc="
       },
       {
         original_file_name: "Midnight Meadows (4).jpg",
@@ -739,8 +739,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#143c74",
         more_48: "#082458",
         more_49: "#144474",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9NaWRuaWdodCBNZWFkb3dzICg0KS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvTWlkbmlnaHQgTWVhZG93cyAoNCkuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9NaWRuaWdodCBNZWFkb3dzICg0KS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9NaWRuaWdodCBNZWFkb3dzICg0KS5qcGc="
       }
     ]
   },
@@ -807,8 +807,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#245cac",
         more_48: "#14245f",
         more_49: "#04145c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9OaWdodCBPZiBUaGUgVGVjaG5vbWFuY2VyICgxKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvTmlnaHQgT2YgVGhlIFRlY2hub21hbmNlciAoMSkuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9OaWdodCBPZiBUaGUgVGVjaG5vbWFuY2VyICgxKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9OaWdodCBPZiBUaGUgVGVjaG5vbWFuY2VyICgxKS5qcGc="
       },
       {
         original_file_name: "Night Of The Technomancer (2).jpg",
@@ -867,8 +867,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#092476",
         more_48: "#172458",
         more_49: "#041458",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9OaWdodCBPZiBUaGUgVGVjaG5vbWFuY2VyICgyKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvTmlnaHQgT2YgVGhlIFRlY2hub21hbmNlciAoMikuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9OaWdodCBPZiBUaGUgVGVjaG5vbWFuY2VyICgyKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9OaWdodCBPZiBUaGUgVGVjaG5vbWFuY2VyICgyKS5qcGc="
       },
       {
         original_file_name: "Night Of The Technomancer (3).jpg",
@@ -927,8 +927,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#0c2e5c",
         more_48: "#8494dc",
         more_49: "#1c2c5c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9OaWdodCBPZiBUaGUgVGVjaG5vbWFuY2VyICgzKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvTmlnaHQgT2YgVGhlIFRlY2hub21hbmNlciAoMykuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9OaWdodCBPZiBUaGUgVGVjaG5vbWFuY2VyICgzKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9OaWdodCBPZiBUaGUgVGVjaG5vbWFuY2VyICgzKS5qcGc="
       },
       {
         original_file_name: "Night Of The Technomancer (4).jpg",
@@ -987,8 +987,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#1c447e",
         more_48: "#1c2c7c",
         more_49: "#1c4c74",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9OaWdodCBPZiBUaGUgVGVjaG5vbWFuY2VyICg0KS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvTmlnaHQgT2YgVGhlIFRlY2hub21hbmNlciAoNCkuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9OaWdodCBPZiBUaGUgVGVjaG5vbWFuY2VyICg0KS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9OaWdodCBPZiBUaGUgVGVjaG5vbWFuY2VyICg0KS5qcGc="
       }
     ]
   },
@@ -1055,8 +1055,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#042c3f",
         more_48: "#4c4c44",
         more_49: "#1a2c2c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9TdGFybGVzcyBOaWdodCAoMSkuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvU3Rhcmxlc3MgTmlnaHQgKDEpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9TdGFybGVzcyBOaWdodCAoMSkuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9TdGFybGVzcyBOaWdodCAoMSkuanBn"
       },
       {
         original_file_name: "Starless Night (2).jpg",
@@ -1115,8 +1115,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#122c3b",
         more_48: "#0c3474",
         more_49: "#141c4c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9TdGFybGVzcyBOaWdodCAoMikuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvU3Rhcmxlc3MgTmlnaHQgKDIpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9TdGFybGVzcyBOaWdodCAoMikuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9TdGFybGVzcyBOaWdodCAoMikuanBn"
       },
       {
         original_file_name: "Starless Night (3).jpg",
@@ -1175,8 +1175,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#251424",
         more_48: "#293c43",
         more_49: "#0e1c4e",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9TdGFybGVzcyBOaWdodCAoMykuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvU3Rhcmxlc3MgTmlnaHQgKDMpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9TdGFybGVzcyBOaWdodCAoMykuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9TdGFybGVzcyBOaWdodCAoMykuanBn"
       },
       {
         original_file_name: "Starless Night (4).jpg",
@@ -1235,8 +1235,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#251f20",
         more_48: "#24243e",
         more_49: "#241c38",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9TdGFybGVzcyBOaWdodCAoNCkuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvU3Rhcmxlc3MgTmlnaHQgKDQpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9TdGFybGVzcyBOaWdodCAoNCkuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9TdGFybGVzcyBOaWdodCAoNCkuanBn"
       }
     ]
   },
@@ -1303,8 +1303,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#243c74",
         more_48: "#1f2c56",
         more_49: "#141454",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgQXVyb3JhIEN5YmVyIEdyb3ZlICgxKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIEF1cm9yYSBDeWJlciBHcm92ZSAoMSkuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgQXVyb3JhIEN5YmVyIEdyb3ZlICgxKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgQXVyb3JhIEN5YmVyIEdyb3ZlICgxKS5qcGc="
       },
       {
         original_file_name: "The Aurora Cyber Grove (2).jpg",
@@ -1363,8 +1363,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#083c74",
         more_48: "#3e1c04",
         more_49: "#041c44",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgQXVyb3JhIEN5YmVyIEdyb3ZlICgyKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIEF1cm9yYSBDeWJlciBHcm92ZSAoMikuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgQXVyb3JhIEN5YmVyIEdyb3ZlICgyKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgQXVyb3JhIEN5YmVyIEdyb3ZlICgyKS5qcGc="
       },
       {
         original_file_name: "The Aurora Cyber Grove (3).jpg",
@@ -1423,8 +1423,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#304475",
         more_48: "#042c74",
         more_49: "#081c54",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgQXVyb3JhIEN5YmVyIEdyb3ZlICgzKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIEF1cm9yYSBDeWJlciBHcm92ZSAoMykuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgQXVyb3JhIEN5YmVyIEdyb3ZlICgzKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgQXVyb3JhIEN5YmVyIEdyb3ZlICgzKS5qcGc="
       },
       {
         original_file_name: "The Aurora Cyber Grove (4).jpg",
@@ -1483,8 +1483,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#341814",
         more_48: "#213466",
         more_49: "#1c2c6c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgQXVyb3JhIEN5YmVyIEdyb3ZlICg0KS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIEF1cm9yYSBDeWJlciBHcm92ZSAoNCkuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgQXVyb3JhIEN5YmVyIEdyb3ZlICg0KS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgQXVyb3JhIEN5YmVyIEdyb3ZlICg0KS5qcGc="
       }
     ]
   },
@@ -1551,8 +1551,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#1c3474",
         more_48: "#98748c",
         more_49: "#1c64ac",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF3biBDZWxlc3RpYWwgT2JzZXJ2YXRvcnkgKDEpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERhd24gQ2VsZXN0aWFsIE9ic2VydmF0b3J5ICgxKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF3biBDZWxlc3RpYWwgT2JzZXJ2YXRvcnkgKDEpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF3biBDZWxlc3RpYWwgT2JzZXJ2YXRvcnkgKDEpLmpwZw=="
       },
       {
         original_file_name: "The Dawn Celestial Observatory (2).jpg",
@@ -1611,8 +1611,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#070504",
         more_48: "#582c24",
         more_49: "#84745c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF3biBDZWxlc3RpYWwgT2JzZXJ2YXRvcnkgKDIpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERhd24gQ2VsZXN0aWFsIE9ic2VydmF0b3J5ICgyKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF3biBDZWxlc3RpYWwgT2JzZXJ2YXRvcnkgKDIpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF3biBDZWxlc3RpYWwgT2JzZXJ2YXRvcnkgKDIpLmpwZw=="
       },
       {
         original_file_name: "The Dawn Celestial Observatory (3).jpg",
@@ -1671,8 +1671,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#4c4494",
         more_48: "#8c7474",
         more_49: "#100704",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF3biBDZWxlc3RpYWwgT2JzZXJ2YXRvcnkgKDMpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERhd24gQ2VsZXN0aWFsIE9ic2VydmF0b3J5ICgzKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF3biBDZWxlc3RpYWwgT2JzZXJ2YXRvcnkgKDMpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF3biBDZWxlc3RpYWwgT2JzZXJ2YXRvcnkgKDMpLmpwZw=="
       },
       {
         original_file_name: "The Dawn Celestial Observatory (4).jpg",
@@ -1731,8 +1731,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#21341c",
         more_48: "#547ca4",
         more_49: "#080f04",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF3biBDZWxlc3RpYWwgT2JzZXJ2YXRvcnkgKDQpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERhd24gQ2VsZXN0aWFsIE9ic2VydmF0b3J5ICg0KS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF3biBDZWxlc3RpYWwgT2JzZXJ2YXRvcnkgKDQpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF3biBDZWxlc3RpYWwgT2JzZXJ2YXRvcnkgKDQpLmpwZw=="
       }
     ]
   },
@@ -1799,8 +1799,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#3a446d",
         more_48: "#1c1817",
         more_49: "#1c3c6c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF3biBNaXN0IEN5YmVyIFBsYWluICgxKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERhd24gTWlzdCBDeWJlciBQbGFpbiAoMSkuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF3biBNaXN0IEN5YmVyIFBsYWluICgxKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF3biBNaXN0IEN5YmVyIFBsYWluICgxKS5qcGc="
       },
       {
         original_file_name: "The Dawn Mist Cyber Plain (2).jpg",
@@ -1859,8 +1859,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#0c4ca4",
         more_48: "#794c4e",
         more_49: "#a46c3c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF3biBNaXN0IEN5YmVyIFBsYWluICgyKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERhd24gTWlzdCBDeWJlciBQbGFpbiAoMikuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF3biBNaXN0IEN5YmVyIFBsYWluICgyKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF3biBNaXN0IEN5YmVyIFBsYWluICgyKS5qcGc="
       },
       {
         original_file_name: "The Dawn Mist Cyber Plain (3).jpg",
@@ -1919,8 +1919,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#845440",
         more_48: "#403c5f",
         more_49: "#3c7cbc",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF3biBNaXN0IEN5YmVyIFBsYWluICgzKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERhd24gTWlzdCBDeWJlciBQbGFpbiAoMykuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF3biBNaXN0IEN5YmVyIFBsYWluICgzKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF3biBNaXN0IEN5YmVyIFBsYWluICgzKS5qcGc="
       },
       {
         original_file_name: "The Dawn Mist Cyber Plain (4).jpg",
@@ -1979,8 +1979,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#7caaed",
         more_48: "#8c3434",
         more_49: "#343c94",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF3biBNaXN0IEN5YmVyIFBsYWluICg0KS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERhd24gTWlzdCBDeWJlciBQbGFpbiAoNCkuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF3biBNaXN0IEN5YmVyIFBsYWluICg0KS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF3biBNaXN0IEN5YmVyIFBsYWluICg0KS5qcGc="
       }
     ]
   },
@@ -2047,8 +2047,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#143668",
         more_48: "#4c4c1c",
         more_49: "#212c64",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF3biBSYWRpYW5jZSBTa3l3YXkgKDEpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERhd24gUmFkaWFuY2UgU2t5d2F5ICgxKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF3biBSYWRpYW5jZSBTa3l3YXkgKDEpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF3biBSYWRpYW5jZSBTa3l3YXkgKDEpLmpwZw=="
       },
       {
         original_file_name: "The Dawn Radiance Skyway (2).jpg",
@@ -2107,8 +2107,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#24271c",
         more_48: "#3d6cae",
         more_49: "#1a1424",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF3biBSYWRpYW5jZSBTa3l3YXkgKDIpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERhd24gUmFkaWFuY2UgU2t5d2F5ICgyKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF3biBSYWRpYW5jZSBTa3l3YXkgKDIpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF3biBSYWRpYW5jZSBTa3l3YXkgKDIpLmpwZw=="
       },
       {
         original_file_name: "The Dawn Radiance Skyway (3).jpg",
@@ -2167,8 +2167,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#243c76",
         more_48: "#2a2454",
         more_49: "#161421",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF3biBSYWRpYW5jZSBTa3l3YXkgKDMpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERhd24gUmFkaWFuY2UgU2t5d2F5ICgzKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF3biBSYWRpYW5jZSBTa3l3YXkgKDMpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF3biBSYWRpYW5jZSBTa3l3YXkgKDMpLmpwZw=="
       },
       {
         original_file_name: "The Dawn Radiance Skyway (4).jpg",
@@ -2227,8 +2227,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#181423",
         more_48: "#742c04",
         more_49: "#242c74",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF3biBSYWRpYW5jZSBTa3l3YXkgKDQpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERhd24gUmFkaWFuY2UgU2t5d2F5ICg0KS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF3biBSYWRpYW5jZSBTa3l3YXkgKDQpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF3biBSYWRpYW5jZSBTa3l3YXkgKDQpLmpwZw=="
       }
     ]
   },
@@ -2295,8 +2295,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#150407",
         more_48: "#8c5c6e",
         more_49: "#040a13",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF3biBSYWRpYW50IFNvbGFyIEZhcm0gKDEpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERhd24gUmFkaWFudCBTb2xhciBGYXJtICgxKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF3biBSYWRpYW50IFNvbGFyIEZhcm0gKDEpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF3biBSYWRpYW50IFNvbGFyIEZhcm0gKDEpLmpwZw=="
       },
       {
         original_file_name: "The Dawn Radiant Solar Farm (2).jpg",
@@ -2355,8 +2355,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#041716",
         more_48: "#14449c",
         more_49: "#5c2434",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF3biBSYWRpYW50IFNvbGFyIEZhcm0gKDIpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERhd24gUmFkaWFudCBTb2xhciBGYXJtICgyKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF3biBSYWRpYW50IFNvbGFyIEZhcm0gKDIpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF3biBSYWRpYW50IFNvbGFyIEZhcm0gKDIpLmpwZw=="
       },
       {
         original_file_name: "The Dawn Radiant Solar Farm (3).jpg",
@@ -2415,8 +2415,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#275394",
         more_48: "#2c70ac",
         more_49: "#546444",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF3biBSYWRpYW50IFNvbGFyIEZhcm0gKDMpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERhd24gUmFkaWFudCBTb2xhciBGYXJtICgzKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF3biBSYWRpYW50IFNvbGFyIEZhcm0gKDMpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF3biBSYWRpYW50IFNvbGFyIEZhcm0gKDMpLmpwZw=="
       },
       {
         original_file_name: "The Dawn Radiant Solar Farm (4).jpg",
@@ -2475,8 +2475,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#345ca4",
         more_48: "#232c26",
         more_49: "#14246c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF3biBSYWRpYW50IFNvbGFyIEZhcm0gKDQpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERhd24gUmFkaWFudCBTb2xhciBGYXJtICg0KS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF3biBSYWRpYW50IFNvbGFyIEZhcm0gKDQpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF3biBSYWRpYW50IFNvbGFyIEZhcm0gKDQpLmpwZw=="
       }
     ]
   },
@@ -2543,8 +2543,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#448aac",
         more_48: "#1c5c80",
         more_49: "#2c7c84",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF3biBUcmFucXVpbCBMYWtlIFNhbmN0dWFyeSAoMSkuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERhd24gVHJhbnF1aWwgTGFrZSBTYW5jdHVhcnkgKDEpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF3biBUcmFucXVpbCBMYWtlIFNhbmN0dWFyeSAoMSkuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF3biBUcmFucXVpbCBMYWtlIFNhbmN0dWFyeSAoMSkuanBn"
       },
       {
         original_file_name: "The Dawn Tranquil Lake Sanctuary (2).jpg",
@@ -2603,8 +2603,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#6cac9c",
         more_48: "#98e0f8",
         more_49: "#2c4484",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF3biBUcmFucXVpbCBMYWtlIFNhbmN0dWFyeSAoMikuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERhd24gVHJhbnF1aWwgTGFrZSBTYW5jdHVhcnkgKDIpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF3biBUcmFucXVpbCBMYWtlIFNhbmN0dWFyeSAoMikuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF3biBUcmFucXVpbCBMYWtlIFNhbmN0dWFyeSAoMikuanBn"
       },
       {
         original_file_name: "The Dawn Tranquil Lake Sanctuary (3).jpg",
@@ -2663,8 +2663,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#2c5c7c",
         more_48: "#141c3c",
         more_49: "#481808",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF3biBUcmFucXVpbCBMYWtlIFNhbmN0dWFyeSAoMykuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERhd24gVHJhbnF1aWwgTGFrZSBTYW5jdHVhcnkgKDMpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF3biBUcmFucXVpbCBMYWtlIFNhbmN0dWFyeSAoMykuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF3biBUcmFucXVpbCBMYWtlIFNhbmN0dWFyeSAoMykuanBn"
       },
       {
         original_file_name: "The Dawn Tranquil Lake Sanctuary (4).jpg",
@@ -2723,8 +2723,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#4c241c",
         more_48: "#24244c",
         more_49: "#2c7484",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF3biBUcmFucXVpbCBMYWtlIFNhbmN0dWFyeSAoNCkuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERhd24gVHJhbnF1aWwgTGFrZSBTYW5jdHVhcnkgKDQpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF3biBUcmFucXVpbCBMYWtlIFNhbmN0dWFyeSAoNCkuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF3biBUcmFucXVpbCBMYWtlIFNhbmN0dWFyeSAoNCkuanBn"
       }
     ]
   },
@@ -2791,8 +2791,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#0e244c",
         more_48: "#25344d",
         more_49: "#1c2c4c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF5bGlnaHQgR3VhcmRpYW4gKDEpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERheWxpZ2h0IEd1YXJkaWFuICgxKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF5bGlnaHQgR3VhcmRpYW4gKDEpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF5bGlnaHQgR3VhcmRpYW4gKDEpLmpwZw=="
       },
       {
         original_file_name: "The Daylight Guardian (2).jpg",
@@ -2851,8 +2851,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#a67c41",
         more_48: "#1d1c2d",
         more_49: "#9cdc2c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF5bGlnaHQgR3VhcmRpYW4gKDIpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERheWxpZ2h0IEd1YXJkaWFuICgyKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF5bGlnaHQgR3VhcmRpYW4gKDIpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF5bGlnaHQgR3VhcmRpYW4gKDIpLmpwZw=="
       },
       {
         original_file_name: "The Daylight Guardian (3).jpg",
@@ -2911,8 +2911,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#244a74",
         more_48: "#161425",
         more_49: "#1c0a1c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF5bGlnaHQgR3VhcmRpYW4gKDMpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERheWxpZ2h0IEd1YXJkaWFuICgzKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF5bGlnaHQgR3VhcmRpYW4gKDMpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF5bGlnaHQgR3VhcmRpYW4gKDMpLmpwZw=="
       },
       {
         original_file_name: "The Daylight Guardian (4).jpg",
@@ -2971,8 +2971,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#2d1b1b",
         more_48: "#4c1c14",
         more_49: "#2c446c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGF5bGlnaHQgR3VhcmRpYW4gKDQpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERheWxpZ2h0IEd1YXJkaWFuICg0KS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGF5bGlnaHQgR3VhcmRpYW4gKDQpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGF5bGlnaHQgR3VhcmRpYW4gKDQpLmpwZw=="
       }
     ]
   },
@@ -3039,8 +3039,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#544484",
         more_48: "#886c94",
         more_49: "#701c24",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGVzZXJ0IEJsb29tICgxKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERlc2VydCBCbG9vbSAoMSkuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGVzZXJ0IEJsb29tICgxKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGVzZXJ0IEJsb29tICgxKS5qcGc="
       },
       {
         original_file_name: "The Desert Bloom (2).jpg",
@@ -3099,8 +3099,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#ecf1b3",
         more_48: "#bc4c14",
         more_49: "#e4e9ae",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGVzZXJ0IEJsb29tICgyKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERlc2VydCBCbG9vbSAoMikuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGVzZXJ0IEJsb29tICgyKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGVzZXJ0IEJsb29tICgyKS5qcGc="
       },
       {
         original_file_name: "The Desert Bloom (3).jpg",
@@ -3159,8 +3159,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#4c5c80",
         more_48: "#361c29",
         more_49: "#f9e4a4",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGVzZXJ0IEJsb29tICgzKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERlc2VydCBCbG9vbSAoMykuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGVzZXJ0IEJsb29tICgzKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGVzZXJ0IEJsb29tICgzKS5qcGc="
       },
       {
         original_file_name: "The Desert Bloom (4).jpg",
@@ -3219,8 +3219,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#7c3c2d",
         more_48: "#9e5440",
         more_49: "#9c441c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRGVzZXJ0IEJsb29tICg0KS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIERlc2VydCBCbG9vbSAoNCkuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRGVzZXJ0IEJsb29tICg0KS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRGVzZXJ0IEJsb29tICg0KS5qcGc="
       }
     ]
   },
@@ -3287,8 +3287,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#21347c",
         more_48: "#761c32",
         more_49: "#060424",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRHVzayBIb3Jpem9uIEZsb2F0aW5nIE1ldHJvcG9saXMgKDEpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIER1c2sgSG9yaXpvbiBGbG9hdGluZyBNZXRyb3BvbGlzICgxKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRHVzayBIb3Jpem9uIEZsb2F0aW5nIE1ldHJvcG9saXMgKDEpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRHVzayBIb3Jpem9uIEZsb2F0aW5nIE1ldHJvcG9saXMgKDEpLmpwZw=="
       },
       {
         original_file_name: "The Dusk Horizon Floating Metropolis (2).jpg",
@@ -3347,8 +3347,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#1c64a4",
         more_48: "#0c3c76",
         more_49: "#385469",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRHVzayBIb3Jpem9uIEZsb2F0aW5nIE1ldHJvcG9saXMgKDIpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIER1c2sgSG9yaXpvbiBGbG9hdGluZyBNZXRyb3BvbGlzICgyKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRHVzayBIb3Jpem9uIEZsb2F0aW5nIE1ldHJvcG9saXMgKDIpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRHVzayBIb3Jpem9uIEZsb2F0aW5nIE1ldHJvcG9saXMgKDIpLmpwZw=="
       },
       {
         original_file_name: "The Dusk Horizon Floating Metropolis (3).jpg",
@@ -3407,8 +3407,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#2c448c",
         more_48: "#040c34",
         more_49: "#144476",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRHVzayBIb3Jpem9uIEZsb2F0aW5nIE1ldHJvcG9saXMgKDMpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIER1c2sgSG9yaXpvbiBGbG9hdGluZyBNZXRyb3BvbGlzICgzKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRHVzayBIb3Jpem9uIEZsb2F0aW5nIE1ldHJvcG9saXMgKDMpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRHVzayBIb3Jpem9uIEZsb2F0aW5nIE1ldHJvcG9saXMgKDMpLmpwZw=="
       },
       {
         original_file_name: "The Dusk Horizon Floating Metropolis (4).jpg",
@@ -3467,8 +3467,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#f4cc7c",
         more_48: "#3c3424",
         more_49: "#4d2c4c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRHVzayBIb3Jpem9uIEZsb2F0aW5nIE1ldHJvcG9saXMgKDQpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIER1c2sgSG9yaXpvbiBGbG9hdGluZyBNZXRyb3BvbGlzICg0KS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRHVzayBIb3Jpem9uIEZsb2F0aW5nIE1ldHJvcG9saXMgKDQpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRHVzayBIb3Jpem9uIEZsb2F0aW5nIE1ldHJvcG9saXMgKDQpLmpwZw=="
       }
     ]
   },
@@ -3535,8 +3535,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#141c56",
         more_48: "#1c2c74",
         more_49: "#140c44",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRHVzayBPdmVyIE5lb24gTWV0cm9wb2xpcyAoMSkuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIER1c2sgT3ZlciBOZW9uIE1ldHJvcG9saXMgKDEpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRHVzayBPdmVyIE5lb24gTWV0cm9wb2xpcyAoMSkuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRHVzayBPdmVyIE5lb24gTWV0cm9wb2xpcyAoMSkuanBn"
       },
       {
         original_file_name: "The Dusk Over Neon Metropolis (2).jpg",
@@ -3595,8 +3595,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#0a2467",
         more_48: "#143cb4",
         more_49: "#29347e",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRHVzayBPdmVyIE5lb24gTWV0cm9wb2xpcyAoMikuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIER1c2sgT3ZlciBOZW9uIE1ldHJvcG9saXMgKDIpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRHVzayBPdmVyIE5lb24gTWV0cm9wb2xpcyAoMikuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRHVzayBPdmVyIE5lb24gTWV0cm9wb2xpcyAoMikuanBn"
       },
       {
         original_file_name: "The Dusk Over Neon Metropolis (3).jpg",
@@ -3655,8 +3655,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#041d3e",
         more_48: "#7c3ca4",
         more_49: "#1b1b4e",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRHVzayBPdmVyIE5lb24gTWV0cm9wb2xpcyAoMykuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIER1c2sgT3ZlciBOZW9uIE1ldHJvcG9saXMgKDMpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRHVzayBPdmVyIE5lb24gTWV0cm9wb2xpcyAoMykuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRHVzayBPdmVyIE5lb24gTWV0cm9wb2xpcyAoMykuanBn"
       },
       {
         original_file_name: "The Dusk Over Neon Metropolis (4).jpg",
@@ -3715,8 +3715,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#162d2c",
         more_48: "#04041d",
         more_49: "#042e3d",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRHVzayBPdmVyIE5lb24gTWV0cm9wb2xpcyAoNCkuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIER1c2sgT3ZlciBOZW9uIE1ldHJvcG9saXMgKDQpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRHVzayBPdmVyIE5lb24gTWV0cm9wb2xpcyAoNCkuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRHVzayBPdmVyIE5lb24gTWV0cm9wb2xpcyAoNCkuanBn"
       }
     ]
   },
@@ -3783,8 +3783,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#6c74a4",
         more_48: "#322c54",
         more_49: "#2c4c74",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRHVzayBXYWxrICgxKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIER1c2sgV2FsayAoMSkuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRHVzayBXYWxrICgxKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRHVzayBXYWxrICgxKS5qcGc="
       },
       {
         original_file_name: "The Dusk Walk (2).jpg",
@@ -3843,8 +3843,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#212b54",
         more_48: "#2c68a8",
         more_49: "#041c58",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRHVzayBXYWxrICgyKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIER1c2sgV2FsayAoMikuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRHVzayBXYWxrICgyKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRHVzayBXYWxrICgyKS5qcGc="
       },
       {
         original_file_name: "The Dusk Walk (3).jpg",
@@ -3903,8 +3903,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#182c54",
         more_48: "#0c2454",
         more_49: "#148cac",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRHVzayBXYWxrICgzKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIER1c2sgV2FsayAoMykuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRHVzayBXYWxrICgzKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRHVzayBXYWxrICgzKS5qcGc="
       },
       {
         original_file_name: "The Dusk Walk (4).jpg",
@@ -3963,8 +3963,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#1e244c",
         more_48: "#152c14",
         more_49: "#0c143c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRHVzayBXYWxrICg0KS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIER1c2sgV2FsayAoNCkuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRHVzayBXYWxrICg0KS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRHVzayBXYWxrICg0KS5qcGc="
       }
     ]
   },
@@ -4031,8 +4031,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#4c7484",
         more_48: "#40343c",
         more_49: "#402c34",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRmxpY2tlcmluZyBMaWdodCAoMSkuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIEZsaWNrZXJpbmcgTGlnaHQgKDEpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRmxpY2tlcmluZyBMaWdodCAoMSkuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRmxpY2tlcmluZyBMaWdodCAoMSkuanBn"
       },
       {
         original_file_name: "The Flickering Light (2).jpg",
@@ -4091,8 +4091,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#346488",
         more_48: "#3c6486",
         more_49: "#262c1c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRmxpY2tlcmluZyBMaWdodCAoMikuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIEZsaWNrZXJpbmcgTGlnaHQgKDIpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRmxpY2tlcmluZyBMaWdodCAoMikuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRmxpY2tlcmluZyBMaWdodCAoMikuanBn"
       },
       {
         original_file_name: "The Flickering Light (3).jpg",
@@ -4151,8 +4151,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#0c3437",
         more_48: "#20352c",
         more_49: "#0c3424",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRmxpY2tlcmluZyBMaWdodCAoMykuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIEZsaWNrZXJpbmcgTGlnaHQgKDMpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRmxpY2tlcmluZyBMaWdodCAoMykuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRmxpY2tlcmluZyBMaWdodCAoMykuanBn"
       },
       {
         original_file_name: "The Flickering Light (4).jpg",
@@ -4211,8 +4211,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#6c442c",
         more_48: "#34543c",
         more_49: "#181c3c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgRmxpY2tlcmluZyBMaWdodCAoNCkuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIEZsaWNrZXJpbmcgTGlnaHQgKDQpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgRmxpY2tlcmluZyBMaWdodCAoNCkuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgRmxpY2tlcmluZyBMaWdodCAoNCkuanBn"
       }
     ]
   },
@@ -4279,8 +4279,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#343ca4",
         more_48: "#5c1404",
         more_49: "#411416",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgR2hvc3QgT2YgVG9tb3Jyb3cgKDEpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIEdob3N0IE9mIFRvbW9ycm93ICgxKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgR2hvc3QgT2YgVG9tb3Jyb3cgKDEpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgR2hvc3QgT2YgVG9tb3Jyb3cgKDEpLmpwZw=="
       },
       {
         original_file_name: "The Ghost Of Tomorrow (2).jpg",
@@ -4339,8 +4339,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#441c15",
         more_48: "#541404",
         more_49: "#480c04",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgR2hvc3QgT2YgVG9tb3Jyb3cgKDIpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIEdob3N0IE9mIFRvbW9ycm93ICgyKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgR2hvc3QgT2YgVG9tb3Jyb3cgKDIpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgR2hvc3QgT2YgVG9tb3Jyb3cgKDIpLmpwZw=="
       },
       {
         original_file_name: "The Ghost Of Tomorrow (3).jpg",
@@ -4399,8 +4399,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#1e0c14",
         more_48: "#d4dc6c",
         more_49: "#581c04",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgR2hvc3QgT2YgVG9tb3Jyb3cgKDMpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIEdob3N0IE9mIFRvbW9ycm93ICgzKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgR2hvc3QgT2YgVG9tb3Jyb3cgKDMpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgR2hvc3QgT2YgVG9tb3Jyb3cgKDMpLmpwZw=="
       },
       {
         original_file_name: "The Ghost Of Tomorrow (4).jpg",
@@ -4459,8 +4459,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#3f2a14",
         more_48: "#642c04",
         more_49: "#3c1404",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgR2hvc3QgT2YgVG9tb3Jyb3cgKDQpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIEdob3N0IE9mIFRvbW9ycm93ICg0KS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgR2hvc3QgT2YgVG9tb3Jyb3cgKDQpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgR2hvc3QgT2YgVG9tb3Jyb3cgKDQpLmpwZw=="
       }
     ]
   },
@@ -4527,8 +4527,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#547494",
         more_48: "#04144e",
         more_49: "#040c3d",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTGFzdCBMaWdodCAoMSkuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIExhc3QgTGlnaHQgKDEpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTGFzdCBMaWdodCAoMSkuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTGFzdCBMaWdodCAoMSkuanBn"
       },
       {
         original_file_name: "The Last Light (2).jpg",
@@ -4587,8 +4587,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#0c1c4c",
         more_48: "#142c6c",
         more_49: "#1c2c1c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTGFzdCBMaWdodCAoMikuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIExhc3QgTGlnaHQgKDIpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTGFzdCBMaWdodCAoMikuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTGFzdCBMaWdodCAoMikuanBn"
       },
       {
         original_file_name: "The Last Light (3).jpg",
@@ -4647,8 +4647,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#18643c",
         more_48: "#6c94dc",
         more_49: "#061444",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTGFzdCBMaWdodCAoMykuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIExhc3QgTGlnaHQgKDMpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTGFzdCBMaWdodCAoMykuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTGFzdCBMaWdodCAoMykuanBn"
       },
       {
         original_file_name: "The Last Light (4).jpg",
@@ -4707,8 +4707,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#2c2c0e",
         more_48: "#04347c",
         more_49: "#041c56",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTGFzdCBMaWdodCAoNCkuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIExhc3QgTGlnaHQgKDQpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTGFzdCBMaWdodCAoNCkuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTGFzdCBMaWdodCAoNCkuanBn"
       }
     ]
   },
@@ -4775,8 +4775,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#181a34",
         more_48: "#460c1c",
         more_49: "#451426",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTGFzdCBTdW5zZXQgKDEpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIExhc3QgU3Vuc2V0ICgxKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTGFzdCBTdW5zZXQgKDEpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTGFzdCBTdW5zZXQgKDEpLmpwZw=="
       },
       {
         original_file_name: "The Last Sunset (2).jpg",
@@ -4835,8 +4835,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#544424",
         more_48: "#8c1c2c",
         more_49: "#2c2c24",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTGFzdCBTdW5zZXQgKDIpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIExhc3QgU3Vuc2V0ICgyKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTGFzdCBTdW5zZXQgKDIpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTGFzdCBTdW5zZXQgKDIpLmpwZw=="
       },
       {
         original_file_name: "The Last Sunset (3).jpg",
@@ -4895,8 +4895,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#681222",
         more_48: "#8e8cbc",
         more_49: "#74643c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTGFzdCBTdW5zZXQgKDMpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIExhc3QgU3Vuc2V0ICgzKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTGFzdCBTdW5zZXQgKDMpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTGFzdCBTdW5zZXQgKDMpLmpwZw=="
       },
       {
         original_file_name: "The Last Sunset (4).jpg",
@@ -4955,8 +4955,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#1d241a",
         more_48: "#4c4494",
         more_49: "#44341c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTGFzdCBTdW5zZXQgKDQpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIExhc3QgU3Vuc2V0ICg0KS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTGFzdCBTdW5zZXQgKDQpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTGFzdCBTdW5zZXQgKDQpLmpwZw=="
       }
     ]
   },
@@ -5023,8 +5023,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#182c74",
         more_48: "#242464",
         more_49: "#041c54",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgR2xpbW1lcmluZyBGam9yZCAoMSkuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IEdsaW1tZXJpbmcgRmpvcmQgKDEpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgR2xpbW1lcmluZyBGam9yZCAoMSkuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgR2xpbW1lcmluZyBGam9yZCAoMSkuanBn"
       },
       {
         original_file_name: "The Midnight Glimmering Fjord (2).jpg",
@@ -5083,8 +5083,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#1e3464",
         more_48: "#5e9ce4",
         more_49: "#062c64",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgR2xpbW1lcmluZyBGam9yZCAoMikuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IEdsaW1tZXJpbmcgRmpvcmQgKDIpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgR2xpbW1lcmluZyBGam9yZCAoMikuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgR2xpbW1lcmluZyBGam9yZCAoMikuanBn"
       },
       {
         original_file_name: "The Midnight Glimmering Fjord (3).jpg",
@@ -5143,8 +5143,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#0e0804",
         more_48: "#063474",
         more_49: "#541424",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgR2xpbW1lcmluZyBGam9yZCAoMykuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IEdsaW1tZXJpbmcgRmpvcmQgKDMpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgR2xpbW1lcmluZyBGam9yZCAoMykuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgR2xpbW1lcmluZyBGam9yZCAoMykuanBn"
       },
       {
         original_file_name: "The Midnight Glimmering Fjord (4).jpg",
@@ -5203,8 +5203,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#183c88",
         more_48: "#062c6c",
         more_49: "#14245c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgR2xpbW1lcmluZyBGam9yZCAoNCkuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IEdsaW1tZXJpbmcgRmpvcmQgKDQpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgR2xpbW1lcmluZyBGam9yZCAoNCkuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgR2xpbW1lcmluZyBGam9yZCAoNCkuanBn"
       }
     ]
   },
@@ -5271,8 +5271,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#08143c",
         more_48: "#1c2464",
         more_49: "#101c4d",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgSW5kdXN0cmlhbCBTcHJhd2wgKDEpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IEluZHVzdHJpYWwgU3ByYXdsICgxKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgSW5kdXN0cmlhbCBTcHJhd2wgKDEpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgSW5kdXN0cmlhbCBTcHJhd2wgKDEpLmpwZw=="
       },
       {
         original_file_name: "The Midnight Industrial Sprawl (2).jpg",
@@ -5331,8 +5331,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#070415",
         more_48: "#08132c",
         more_49: "#1a1c44",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgSW5kdXN0cmlhbCBTcHJhd2wgKDIpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IEluZHVzdHJpYWwgU3ByYXdsICgyKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgSW5kdXN0cmlhbCBTcHJhd2wgKDIpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgSW5kdXN0cmlhbCBTcHJhd2wgKDIpLmpwZw=="
       },
       {
         original_file_name: "The Midnight Industrial Sprawl (3).jpg",
@@ -5391,8 +5391,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#042c64",
         more_48: "#370c15",
         more_49: "#041444",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgSW5kdXN0cmlhbCBTcHJhd2wgKDMpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IEluZHVzdHJpYWwgU3ByYXdsICgzKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgSW5kdXN0cmlhbCBTcHJhd2wgKDMpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgSW5kdXN0cmlhbCBTcHJhd2wgKDMpLmpwZw=="
       },
       {
         original_file_name: "The Midnight Industrial Sprawl (4).jpg",
@@ -5451,8 +5451,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#071c4f",
         more_48: "#15244c",
         more_49: "#140c1e",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgSW5kdXN0cmlhbCBTcHJhd2wgKDQpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IEluZHVzdHJpYWwgU3ByYXdsICg0KS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgSW5kdXN0cmlhbCBTcHJhd2wgKDQpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgSW5kdXN0cmlhbCBTcHJhd2wgKDQpLmpwZw=="
       }
     ]
   },
@@ -5519,8 +5519,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#1c1321",
         more_48: "#261623",
         more_49: "#04145c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBQbGF6YSAoMSkuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IFF1YW50dW0gUGxhemEgKDEpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBQbGF6YSAoMSkuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBQbGF6YSAoMSkuanBn"
       },
       {
         original_file_name: "The Midnight Quantum Plaza (2).jpg",
@@ -5579,8 +5579,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#041838",
         more_48: "#10041c",
         more_49: "#1a0436",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBQbGF6YSAoMikuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IFF1YW50dW0gUGxhemEgKDIpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBQbGF6YSAoMikuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBQbGF6YSAoMikuanBn"
       },
       {
         original_file_name: "The Midnight Quantum Plaza (3).jpg",
@@ -5639,8 +5639,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#200a48",
         more_48: "#10041e",
         more_49: "#241447",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBQbGF6YSAoMykuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IFF1YW50dW0gUGxhemEgKDMpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBQbGF6YSAoMykuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBQbGF6YSAoMykuanBn"
       },
       {
         original_file_name: "The Midnight Quantum Plaza (4).jpg",
@@ -5699,8 +5699,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#0e0c3e",
         more_48: "#041a4e",
         more_49: "#05043f",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBQbGF6YSAoNCkuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IFF1YW50dW0gUGxhemEgKDQpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBQbGF6YSAoNCkuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBQbGF6YSAoNCkuanBn"
       }
     ]
   },
@@ -5767,8 +5767,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#132c3b",
         more_48: "#0b355d",
         more_49: "#543c14",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBUb3dlciAoMSkuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IFF1YW50dW0gVG93ZXIgKDEpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBUb3dlciAoMSkuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBUb3dlciAoMSkuanBn"
       },
       {
         original_file_name: "The Midnight Quantum Tower (2).jpg",
@@ -5827,8 +5827,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#607c9c",
         more_48: "#142c3b",
         more_49: "#181c2c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBUb3dlciAoMikuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IFF1YW50dW0gVG93ZXIgKDIpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBUb3dlciAoMikuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBUb3dlciAoMikuanBn"
       },
       {
         original_file_name: "The Midnight Quantum Tower (3).jpg",
@@ -5887,8 +5887,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#241c22",
         more_48: "#1e2c22",
         more_49: "#444434",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBUb3dlciAoMykuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IFF1YW50dW0gVG93ZXIgKDMpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBUb3dlciAoMykuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBUb3dlciAoMykuanBn"
       },
       {
         original_file_name: "The Midnight Quantum Tower (4).jpg",
@@ -5947,8 +5947,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#1c0c11",
         more_48: "#141c14",
         more_49: "#090404",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBUb3dlciAoNCkuanBnP3Jhdz10cnVl",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IFF1YW50dW0gVG93ZXIgKDQpLmpwZw=="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBUb3dlciAoNCkuanBnP3Jhdz10cnVl",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgUXVhbnR1bSBUb3dlciAoNCkuanBn"
       }
     ]
   },
@@ -6015,8 +6015,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#401510",
         more_48: "#4e443c",
         more_49: "#4c2414",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgUmFkaWFudCBUb3dlcnMgKDEpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IFJhZGlhbnQgVG93ZXJzICgxKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgUmFkaWFudCBUb3dlcnMgKDEpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgUmFkaWFudCBUb3dlcnMgKDEpLmpwZw=="
       },
       {
         original_file_name: "The Midnight Radiant Towers (2).jpg",
@@ -6075,8 +6075,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#041737",
         more_48: "#541c24",
         more_49: "#482c18",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgUmFkaWFudCBUb3dlcnMgKDIpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IFJhZGlhbnQgVG93ZXJzICgyKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgUmFkaWFudCBUb3dlcnMgKDIpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgUmFkaWFudCBUb3dlcnMgKDIpLmpwZw=="
       },
       {
         original_file_name: "The Midnight Radiant Towers (3).jpg",
@@ -6135,8 +6135,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#04243f",
         more_48: "#19242c",
         more_49: "#1a2524",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgUmFkaWFudCBUb3dlcnMgKDMpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IFJhZGlhbnQgVG93ZXJzICgzKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgUmFkaWFudCBUb3dlcnMgKDMpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgUmFkaWFudCBUb3dlcnMgKDMpLmpwZw=="
       },
       {
         original_file_name: "The Midnight Radiant Towers (4).jpg",
@@ -6195,8 +6195,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#04247c",
         more_48: "#0c1c5c",
         more_49: "#1c245c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgUmFkaWFudCBUb3dlcnMgKDQpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IFJhZGlhbnQgVG93ZXJzICg0KS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgUmFkaWFudCBUb3dlcnMgKDQpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgUmFkaWFudCBUb3dlcnMgKDQpLmpwZw=="
       }
     ]
   },
@@ -6263,8 +6263,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#242441",
         more_48: "#0c3474",
         more_49: "#44443c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgUmVmbGVjdGlvbiBDeWJlciBMYWtlICgxKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IFJlZmxlY3Rpb24gQ3liZXIgTGFrZSAoMSkuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgUmVmbGVjdGlvbiBDeWJlciBMYWtlICgxKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgUmVmbGVjdGlvbiBDeWJlciBMYWtlICgxKS5qcGc="
       },
       {
         original_file_name: "The Midnight Reflection Cyber Lake (2).jpg",
@@ -6323,8 +6323,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#142c74",
         more_48: "#0c1c5c",
         more_49: "#11245f",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgUmVmbGVjdGlvbiBDeWJlciBMYWtlICgyKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IFJlZmxlY3Rpb24gQ3liZXIgTGFrZSAoMikuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgUmVmbGVjdGlvbiBDeWJlciBMYWtlICgyKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgUmVmbGVjdGlvbiBDeWJlciBMYWtlICgyKS5qcGc="
       },
       {
         original_file_name: "The Midnight Reflection Cyber Lake (3).jpg",
@@ -6383,8 +6383,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#09041f",
         more_48: "#0d2c2c",
         more_49: "#1b2c34",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgUmVmbGVjdGlvbiBDeWJlciBMYWtlICgzKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IFJlZmxlY3Rpb24gQ3liZXIgTGFrZSAoMykuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgUmVmbGVjdGlvbiBDeWJlciBMYWtlICgzKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgUmVmbGVjdGlvbiBDeWJlciBMYWtlICgzKS5qcGc="
       },
       {
         original_file_name: "The Midnight Reflection Cyber Lake (4).jpg",
@@ -6443,8 +6443,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#0a1c60",
         more_48: "#13143d",
         more_49: "#060c3c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTWlkbmlnaHQgUmVmbGVjdGlvbiBDeWJlciBMYWtlICg0KS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1pZG5pZ2h0IFJlZmxlY3Rpb24gQ3liZXIgTGFrZSAoNCkuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTWlkbmlnaHQgUmVmbGVjdGlvbiBDeWJlciBMYWtlICg0KS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTWlkbmlnaHQgUmVmbGVjdGlvbiBDeWJlciBMYWtlICg0KS5qcGc="
       }
     ]
   },
@@ -6511,8 +6511,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#a4acc4",
         more_48: "#24446c",
         more_49: "#4c2c1e",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTW9ybmluZyBTZXJlbml0eSBNZWFkb3cgKDEpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1vcm5pbmcgU2VyZW5pdHkgTWVhZG93ICgxKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTW9ybmluZyBTZXJlbml0eSBNZWFkb3cgKDEpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTW9ybmluZyBTZXJlbml0eSBNZWFkb3cgKDEpLmpwZw=="
       },
       {
         original_file_name: "The Morning Serenity Meadow (2).jpg",
@@ -6571,8 +6571,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#4c748c",
         more_48: "#b4b4dc",
         more_49: "#1c443c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTW9ybmluZyBTZXJlbml0eSBNZWFkb3cgKDIpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1vcm5pbmcgU2VyZW5pdHkgTWVhZG93ICgyKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTW9ybmluZyBTZXJlbml0eSBNZWFkb3cgKDIpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTW9ybmluZyBTZXJlbml0eSBNZWFkb3cgKDIpLmpwZw=="
       },
       {
         original_file_name: "The Morning Serenity Meadow (3).jpg",
@@ -6631,8 +6631,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#fcdc8c",
         more_48: "#a4bcd4",
         more_49: "#541c04",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTW9ybmluZyBTZXJlbml0eSBNZWFkb3cgKDMpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1vcm5pbmcgU2VyZW5pdHkgTWVhZG93ICgzKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTW9ybmluZyBTZXJlbml0eSBNZWFkb3cgKDMpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTW9ybmluZyBTZXJlbml0eSBNZWFkb3cgKDMpLmpwZw=="
       },
       {
         original_file_name: "The Morning Serenity Meadow (4).jpg",
@@ -6691,8 +6691,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#141c44",
         more_48: "#54341c",
         more_49: "#1c544c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTW9ybmluZyBTZXJlbml0eSBNZWFkb3cgKDQpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE1vcm5pbmcgU2VyZW5pdHkgTWVhZG93ICg0KS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTW9ybmluZyBTZXJlbml0eSBNZWFkb3cgKDQpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTW9ybmluZyBTZXJlbml0eSBNZWFkb3cgKDQpLmpwZw=="
       }
     ]
   },
@@ -6759,8 +6759,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#294458",
         more_48: "#261c4e",
         more_49: "#120a3c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTmVvbiBWZWlsICgxKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE5lb24gVmVpbCAoMSkuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTmVvbiBWZWlsICgxKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTmVvbiBWZWlsICgxKS5qcGc="
       },
       {
         original_file_name: "The Neon Veil (2).jpg",
@@ -6819,8 +6819,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#0c0415",
         more_48: "#042c41",
         more_49: "#242c14",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTmVvbiBWZWlsICgyKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE5lb24gVmVpbCAoMikuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTmVvbiBWZWlsICgyKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTmVvbiBWZWlsICgyKS5qcGc="
       },
       {
         original_file_name: "The Neon Veil (3).jpg",
@@ -6879,8 +6879,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#18233c",
         more_48: "#293454",
         more_49: "#3474a4",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTmVvbiBWZWlsICgzKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE5lb24gVmVpbCAoMykuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTmVvbiBWZWlsICgzKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTmVvbiBWZWlsICgzKS5qcGc="
       },
       {
         original_file_name: "The Neon Veil (4).jpg",
@@ -6939,8 +6939,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#242c24",
         more_48: "#1c1c45",
         more_49: "#042c3a",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgTmVvbiBWZWlsICg0KS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIE5lb24gVmVpbCAoNCkuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgTmVvbiBWZWlsICg0KS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgTmVvbiBWZWlsICg0KS5qcGc="
       }
     ]
   },
@@ -7007,8 +7007,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#04253c",
         more_48: "#101c3c",
         more_49: "#1c1c0c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgU2lsZW50IEhvcml6b24gKDEpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIFNpbGVudCBIb3Jpem9uICgxKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgU2lsZW50IEhvcml6b24gKDEpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgU2lsZW50IEhvcml6b24gKDEpLmpwZw=="
       },
       {
         original_file_name: "The Silent Horizon (2).jpg",
@@ -7067,8 +7067,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#5c3c30",
         more_48: "#3c2c25",
         more_49: "#4c2c2c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgU2lsZW50IEhvcml6b24gKDIpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIFNpbGVudCBIb3Jpem9uICgyKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgU2lsZW50IEhvcml6b24gKDIpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgU2lsZW50IEhvcml6b24gKDIpLmpwZw=="
       },
       {
         original_file_name: "The Silent Horizon (3).jpg",
@@ -7127,8 +7127,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#54480c",
         more_48: "#453c0c",
         more_49: "#442414",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgU2lsZW50IEhvcml6b24gKDMpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIFNpbGVudCBIb3Jpem9uICgzKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgU2lsZW50IEhvcml6b24gKDMpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgU2lsZW50IEhvcml6b24gKDMpLmpwZw=="
       },
       {
         original_file_name: "The Silent Horizon (4).jpg",
@@ -7187,8 +7187,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#1c3c2d",
         more_48: "#441c0c",
         more_49: "#14341c",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgU2lsZW50IEhvcml6b24gKDQpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIFNpbGVudCBIb3Jpem9uICg0KS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgU2lsZW50IEhvcml6b24gKDQpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgU2lsZW50IEhvcml6b24gKDQpLmpwZw=="
       }
     ]
   },
@@ -7255,8 +7255,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#449cd4",
         more_48: "#0a3569",
         more_49: "#3c3c18",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgVHdpbGlnaHQgQ3liZXIgTmV4dXMgKDEpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIFR3aWxpZ2h0IEN5YmVyIE5leHVzICgxKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgVHdpbGlnaHQgQ3liZXIgTmV4dXMgKDEpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgVHdpbGlnaHQgQ3liZXIgTmV4dXMgKDEpLmpwZw=="
       },
       {
         original_file_name: "The Twilight Cyber Nexus (2).jpg",
@@ -7315,8 +7315,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#547164",
         more_48: "#2c6ca4",
         more_49: "#101450",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgVHdpbGlnaHQgQ3liZXIgTmV4dXMgKDIpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIFR3aWxpZ2h0IEN5YmVyIE5leHVzICgyKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgVHdpbGlnaHQgQ3liZXIgTmV4dXMgKDIpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgVHdpbGlnaHQgQ3liZXIgTmV4dXMgKDIpLmpwZw=="
       },
       {
         original_file_name: "The Twilight Cyber Nexus (3).jpg",
@@ -7375,8 +7375,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#04244f",
         more_48: "#042144",
         more_49: "#0c144d",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgVHdpbGlnaHQgQ3liZXIgTmV4dXMgKDMpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIFR3aWxpZ2h0IEN5YmVyIE5leHVzICgzKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgVHdpbGlnaHQgQ3liZXIgTmV4dXMgKDMpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgVHdpbGlnaHQgQ3liZXIgTmV4dXMgKDMpLmpwZw=="
       },
       {
         original_file_name: "The Twilight Cyber Nexus (4).jpg",
@@ -7435,8 +7435,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#070424",
         more_48: "#34041c",
         more_49: "#101c54",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgVHdpbGlnaHQgQ3liZXIgTmV4dXMgKDQpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIFR3aWxpZ2h0IEN5YmVyIE5leHVzICg0KS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgVHdpbGlnaHQgQ3liZXIgTmV4dXMgKDQpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgVHdpbGlnaHQgQ3liZXIgTmV4dXMgKDQpLmpwZw=="
       }
     ]
   },
@@ -7503,8 +7503,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#682410",
         more_48: "#2c2c6c",
         more_49: "#1c1c56",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgVHdpbGlnaHQgRWNobyBVcmJhbiBGb3Jlc3QgKDEpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIFR3aWxpZ2h0IEVjaG8gVXJiYW4gRm9yZXN0ICgxKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgVHdpbGlnaHQgRWNobyBVcmJhbiBGb3Jlc3QgKDEpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgVHdpbGlnaHQgRWNobyBVcmJhbiBGb3Jlc3QgKDEpLmpwZw=="
       },
       {
         original_file_name: "The Twilight Echo Urban Forest (2).jpg",
@@ -7563,8 +7563,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#061350",
         more_48: "#1e2c70",
         more_49: "#0b3428",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgVHdpbGlnaHQgRWNobyBVcmJhbiBGb3Jlc3QgKDIpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIFR3aWxpZ2h0IEVjaG8gVXJiYW4gRm9yZXN0ICgyKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgVHdpbGlnaHQgRWNobyBVcmJhbiBGb3Jlc3QgKDIpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgVHdpbGlnaHQgRWNobyBVcmJhbiBGb3Jlc3QgKDIpLmpwZw=="
       },
       {
         original_file_name: "The Twilight Echo Urban Forest (3).jpg",
@@ -7623,8 +7623,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#314c63",
         more_48: "#041455",
         more_49: "#0c2474",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgVHdpbGlnaHQgRWNobyBVcmJhbiBGb3Jlc3QgKDMpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIFR3aWxpZ2h0IEVjaG8gVXJiYW4gRm9yZXN0ICgzKS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgVHdpbGlnaHQgRWNobyBVcmJhbiBGb3Jlc3QgKDMpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgVHdpbGlnaHQgRWNobyBVcmJhbiBGb3Jlc3QgKDMpLmpwZw=="
       },
       {
         original_file_name: "The Twilight Echo Urban Forest (4).jpg",
@@ -7683,8 +7683,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#081c54",
         more_48: "#143474",
         more_49: "#250c18",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9UaGUgVHdpbGlnaHQgRWNobyBVcmJhbiBGb3Jlc3QgKDQpLmpwZz9yYXc9dHJ1ZQ==",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvVGhlIFR3aWxpZ2h0IEVjaG8gVXJiYW4gRm9yZXN0ICg0KS5qcGc="
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9UaGUgVHdpbGlnaHQgRWNobyBVcmJhbiBGb3Jlc3QgKDQpLmpwZz9yYXc9dHJ1ZQ==",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9UaGUgVHdpbGlnaHQgRWNobyBVcmJhbiBGb3Jlc3QgKDQpLmpwZw=="
       }
     ]
   },
@@ -7751,8 +7751,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#060b35",
         more_48: "#042c74",
         more_49: "#041454",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9XaGlzcGVyaW5nIFRyZWVzICgxKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvV2hpc3BlcmluZyBUcmVlcyAoMSkuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9XaGlzcGVyaW5nIFRyZWVzICgxKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9XaGlzcGVyaW5nIFRyZWVzICgxKS5qcGc="
       },
       {
         original_file_name: "Whispering Trees (2).jpg",
@@ -7811,8 +7811,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#102c6c",
         more_48: "#0c2c42",
         more_49: "#042c44",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9XaGlzcGVyaW5nIFRyZWVzICgyKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvV2hpc3BlcmluZyBUcmVlcyAoMikuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9XaGlzcGVyaW5nIFRyZWVzICgyKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9XaGlzcGVyaW5nIFRyZWVzICgyKS5qcGc="
       },
       {
         original_file_name: "Whispering Trees (3).jpg",
@@ -7871,8 +7871,8 @@ const database: Record<string, StoryEntry> = {
         more_47: "#1c4477",
         more_48: "#2c64a4",
         more_49: "#0c1c54",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9XaGlzcGVyaW5nIFRyZWVzICgzKS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvV2hpc3BlcmluZyBUcmVlcyAoMykuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9XaGlzcGVyaW5nIFRyZWVzICgzKS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9XaGlzcGVyaW5nIFRyZWVzICgzKS5qcGc="
       },
       {
         original_file_name: "Whispering Trees (4).jpg",
@@ -7931,11 +7931,10 @@ const database: Record<string, StoryEntry> = {
         more_47: "#246ca8",
         more_48: "#041c54",
         more_49: "#1c2457",
-        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvcGljbmVzcy9XaGlzcGVyaW5nIFRyZWVzICg0KS5qcGc/cmF3PXRydWU=",
-        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL3BpY25lc3MvV2hpc3BlcmluZyBUcmVlcyAoNCkuanBn"
+        downloadLink: "aHR0cHM6Ly9naXRodWIuY29tL3l0LWRseC9waWNib29rL2Jsb2IvaGlnaFJlcy9XaGlzcGVyaW5nIFRyZWVzICg0KS5qcGc/cmF3PXRydWU=",
+        previewLink: "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3l0LWRseC9waWNib29rL2xvd1Jlcy9XaGlzcGVyaW5nIFRyZWVzICg0KS5qcGc="
       }
     ]
   }
 };
-
 export default database;
