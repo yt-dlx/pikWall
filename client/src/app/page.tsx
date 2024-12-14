@@ -45,13 +45,10 @@ type CardProps = {
   handleMouseLeave: (cardIdx: number) => void;
   setSelectedCard: React.Dispatch<React.SetStateAction<number | null>>;
 };
-// ====================================================================
 const fadeVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeInOut" } },
-  exit: { opacity: 0, y: -20, transition: { duration: 0.6, ease: "easeInOut" } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeInOut" } }
 };
-// ====================================================================
 const shuffleArray = <T,>(arr: T[]): T[] => {
   const array = [...arr];
   for (let i = array.length - 1; i > 0; i--) {
@@ -64,12 +61,11 @@ const shuffleArray = <T,>(arr: T[]): T[] => {
 const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnter, handleMouseLeave, setSelectedCard }: CardProps) => {
   return (
     <motion.div
-      exit="exit"
       key={cardIdx}
       initial="hidden"
       whileInView="visible"
       variants={fadeVariants}
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
       onClick={() => setSelectedCard(cardIdx)}
       style={{ willChange: "transform, opacity" }}
       className="bg-[#313244]/80 rounded-lg shadow-md overflow-hidden cursor-pointer relative group hover:shadow-xl flex flex-col"
@@ -124,11 +120,10 @@ const Header: React.FC = () => {
   return (
     <motion.header
       className="fixed top-0 left-0 w-full bg-[#1e1e2e]/40 backdrop-blur-md shadow-md z-20"
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={fadeVariants}
       whileInView="visible"
       initial="hidden"
-      exit="exit"
     >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <h1 className="text-2xl font-bold text-[#cdd6f4] flex items-center">
@@ -138,12 +133,11 @@ const Header: React.FC = () => {
         <nav className="flex space-x-4">
           <motion.a
             className="text-[#cdd6f4] hover:text-[#89b4fa] flex items-center space-x-1"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             variants={fadeVariants}
             whileInView="visible"
             initial="hidden"
             href="#explore"
-            exit="exit"
           >
             <FaRegCompass />
             <span>Explore</span>
@@ -151,11 +145,10 @@ const Header: React.FC = () => {
           <motion.a
             href="#favorites"
             className="text-[#cdd6f4] hover:text-[#89b4fa] flex items-center space-x-1"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             variants={fadeVariants}
             whileInView="visible"
             initial="hidden"
-            exit="exit"
           >
             <FaRegHeart />
             <span>Favorites</span>
@@ -170,28 +163,20 @@ const Footer: React.FC = () => {
   return (
     <motion.footer
       className="fixed bottom-0 left-0 w-full bg-[#1e1e2e]/60 backdrop-blur-md shadow-md py-4 z-20"
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={fadeVariants}
       whileInView="visible"
       initial="hidden"
-      exit="exit"
     >
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-        <motion.div
-          className="text-[#cdd6f4] flex items-center space-x-2 font-semibold"
-          viewport={{ once: false, amount: 0.2 }}
-          variants={fadeVariants}
-          whileInView="visible"
-          initial="hidden"
-          exit="exit"
-        >
+        <motion.div className="text-[#cdd6f4] flex items-center space-x-2 font-semibold" variants={fadeVariants} whileInView="visible" initial="hidden" viewport={{ once: true, amount: 0.2 }}>
           <FaBookOpen />
           <span>picBook</span>
         </motion.div>
-        <motion.p className="text-[#a6adc8] text-center" variants={fadeVariants} initial="hidden" whileInView="visible" exit="exit" viewport={{ once: false, amount: 0.2 }}>
+        <motion.p className="text-[#a6adc8] text-center" variants={fadeVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
           Crafted with imagination and stories. All rights reserved.
         </motion.p>
-        <motion.div className="flex space-x-4 text-[#a6adc8]" variants={fadeVariants} initial="hidden" whileInView="visible" exit="exit" viewport={{ once: false, amount: 0.2 }}>
+        <motion.div className="flex space-x-4 text-[#a6adc8]" variants={fadeVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
           <a href="#top" className="hover:text-[#89b4fa]">
             <FaRegCompass />
           </a>
@@ -232,7 +217,7 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
             <motion.div
               key={idx}
               className="relative w-full h-0 pb-[100%] overflow-hidden rounded-lg"
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               variants={fadeVariants}
               whileInView="visible"
               initial="hidden"
@@ -256,7 +241,7 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
         </div>
         <motion.div
           className="w-full lg:w-1/2 lg:pl-6 flex flex-col justify-between p-4 md:p-0"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           variants={fadeVariants}
           whileInView="visible"
           initial="hidden"
@@ -284,47 +269,27 @@ const HeroSection: React.FC = () => {
     <section className="relative h-[80vh] flex flex-col items-center justify-center text-[#cdd6f4] px-4 text-center">
       <motion.h1
         className="text-6xl md:text-8xl font-bold leading-tight mb-4 flex flex-wrap items-center justify-center nordic-gradient-text"
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
         variants={fadeVariants}
         whileInView="visible"
         initial="hidden"
-        exit="exit"
       >
         <span>Stories Behind Pictures</span>
       </motion.h1>
       <motion.p
         className="text-lg md:text-2xl max-w-2xl mx-auto mb-8 text-[#a6adc8]"
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{ delay: 0.2, duration: 1 }}
         variants={fadeVariants}
         whileInView="visible"
         initial="hidden"
-        exit="exit"
       >
         Dive into tales inspired by unique images and discover the art of visual storytelling.
       </motion.p>
-      <motion.a
-        exit="exit"
-        href="#explore"
-        initial="hidden"
-        whileInView="visible"
-        variants={fadeVariants}
-        className="inline-block"
-        viewport={{ once: false, amount: 0.2 }}
-        transition={{ delay: 0.4, duration: 1 }}
-      >
+      <motion.a href="#explore" initial="hidden" whileInView="visible" variants={fadeVariants} className="inline-block" viewport={{ once: true, amount: 0.2 }} transition={{ delay: 0.4, duration: 1 }}>
         <Image src="/logo.png" alt="Explore" width={400} height={400} className="cursor-pointer -mt-16 hover:scale-105 transition-transform duration-300 -hue-rotate-180" />
       </motion.a>
-      <motion.a
-        exit="exit"
-        initial="hidden"
-        href="#explore"
-        className="mt-6"
-        whileInView="visible"
-        variants={fadeVariants}
-        viewport={{ once: false, amount: 0.2 }}
-        transition={{ delay: 0.5, duration: 1 }}
-      >
+      <motion.a href="#explore" className="mt-6" whileInView="visible" variants={fadeVariants} initial="hidden" viewport={{ once: true, amount: 0.2 }} transition={{ delay: 0.5, duration: 1 }}>
         <FaArrowDown className="text-[#89b4fa] text-4xl animate-bounce cursor-pointer hover:text-[#74c7ec]" aria-label="Scroll Down" />
       </motion.a>
     </section>
@@ -332,11 +297,11 @@ const HeroSection: React.FC = () => {
 };
 // ====================================================================
 const ExploreSection: React.FC = () => {
-  const [cards, setCards] = useState<CardData[]>([]);
-  const [selectedCard, setSelectedCard] = useState<null | number>(null);
-  const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [cards, setCards] = useState<CardData[]>([]);
+  const [error, setError] = useState<string | null>(null);
   const [isDesktopView, setIsDesktopView] = useState(false);
+  const [selectedCard, setSelectedCard] = useState<null | number>(null);
   const [autoImageIndex, setAutoImageIndex] = useState<Record<number, number>>({});
   const [hoveredImage, setHoveredImage] = useState<Record<number, number | null>>({});
   useEffect(() => {
@@ -361,10 +326,9 @@ const ExploreSection: React.FC = () => {
     };
     fetchData();
   }, []);
-
   useEffect(() => {
     const checkScreenSize = () => {
-      const isDesktop = window.innerWidth >= 1024;
+      const isDesktop = window.innerWidth >= 720;
       setIsDesktopView(isDesktop);
       if (!isDesktop) {
         toast.info("PicBook is best experienced on desktop. Please use a larger screen.", {
@@ -401,11 +365,10 @@ const ExploreSection: React.FC = () => {
     return (
       <motion.div
         className="min-h-screen absolute inset-0 flex flex-col justify-center items-center text-center p-4 z-50"
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
         variants={fadeVariants}
         whileInView="visible"
         initial="hidden"
-        exit="exit"
       >
         <FaBookOpen className="text-6xl text-[#89b4fa] mb-4 animate-pulse" />
         <motion.h1 className="text-3xl font-bold text-[#cdd6f4] mb-4 nordic-gradient-text" variants={fadeVariants}>
@@ -427,33 +390,31 @@ const ExploreSection: React.FC = () => {
       <ToastContainer />
       <motion.h3
         className="text-3xl font-semibold text-center text-[#cdd6f4] mb-8 flex items-center justify-center"
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
         variants={fadeVariants}
         whileInView="visible"
         initial="hidden"
-        exit="exit"
       >
         <FaBookOpen className="inline-block mr-2" />
         Explore Our Collection
       </motion.h3>
       {loading && (
-        <motion.p className="text-center text-[#a6adc8]" variants={fadeVariants} initial="hidden" whileInView="visible" exit="exit" viewport={{ once: false, amount: 0.2 }}>
+        <motion.p className="text-center text-[#a6adc8]" variants={fadeVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
           Loading...
         </motion.p>
       )}
       {error && (
-        <motion.p className="text-center text-red-500" variants={fadeVariants} initial="hidden" whileInView="visible" exit="exit" viewport={{ once: false, amount: 0.2 }}>
+        <motion.p className="text-center text-red-500" variants={fadeVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
           {error}
         </motion.p>
       )}
       {!loading && !error && (
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 border-white/20 shadow-white border-8 border-double p-2 rounded-2xl"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           variants={fadeVariants}
           whileInView="visible"
           initial="hidden"
-          exit="exit"
         >
           {cards.map((card, cardIdx) => (
             <Card
@@ -480,7 +441,7 @@ const PicBookPage: React.FC = () => {
     <>
       <Header />
       <Galaxy isModalOpen={selectedCard !== null} />
-      <motion.main className="relative z-10 pt-20 pb-24" variants={fadeVariants} initial="hidden" whileInView="visible" exit="exit" viewport={{ once: false, amount: 0.2 }}>
+      <motion.main className="relative z-10 pt-20 pb-24" variants={fadeVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
         <HeroSection />
         <ExploreSection />
       </motion.main>
