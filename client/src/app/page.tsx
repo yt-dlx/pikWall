@@ -110,30 +110,18 @@ const PicBookPage: React.FC = () => {
                 <motion.div
                   key={index}
                   whileHover={{ scale: 1.05 }}
-                  className="bg-[#313244]/80 rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition relative group"
                   onClick={() => setSelectedCard(index)}
+                  className="bg-[#313244]/80 rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition relative group"
                 >
-                  {/* Stacked Images with Hover Effect */}
                   <div className="relative w-full h-52 overflow-hidden flex">
                     {card.images.slice(0, 4).map((image, idx) => (
                       <motion.div
                         key={idx}
-                        className="absolute top-0 h-full"
-                        style={{
-                          left: `${idx * 25}%`,
-                          zIndex: 4 - idx
-                        }}
-                        initial={{
-                          width: "25%"
-                        }}
-                        whileHover={{
-                          width: "70%",
-                          left: idx === card.images.slice(0, 4).length - 1 ? "30%" : `${idx === 0 ? 0 : idx * 7.5}%`
-                        }}
-                        transition={{
-                          duration: 0.4,
-                          ease: "easeInOut"
-                        }}
+                        className="absolute top-0 h-full shadow-black shadow-xl rounded-lg border-dashed hover:border hover:blur-none blur-[1px]"
+                        initial={{ width: "25%" }}
+                        style={{ left: `${idx * 25}%`, zIndex: 4 - idx }}
+                        transition={{ duration: 0.4, ease: "easeInOut" }}
+                        whileHover={{ width: "70%", left: idx === card.images.slice(0, 4).length - 1 ? "30%" : `${idx === 0 ? 0 : idx * 7.5}%` }}
                       >
                         {image.previewLink ? (
                           <Image src={image.previewLink} alt={`Preview ${idx + 1}`} layout="fill" objectFit="cover" className="rounded-lg" />
@@ -147,7 +135,7 @@ const PicBookPage: React.FC = () => {
                     <h4 className="text-2xl font-semibold mb-2 text-[#cdd6f4]">{card.title}</h4>
                     <p className="text-[#a6adc8] truncate">{card.description}</p>
                     <button onClick={() => setSelectedCard(index)} className="mt-4 px-4 py-2 bg-[#89b4fa] text-[#1e1e2e] rounded-lg shadow-md font-semibold hover:bg-[#74c7ec] transition">
-                      Open Book
+                      Download or Read Story Based On The Image
                     </button>
                   </div>
                 </motion.div>
