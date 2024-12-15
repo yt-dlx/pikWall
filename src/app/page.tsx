@@ -63,7 +63,7 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
     >
       <div className="absolute top-2 left-2 z-10 flex items-center space-x-2 bg-[#3b4252]/80 text-[#cdd6f4] px-2 py-1 rounded-lg shadow-md text-xs border">
         <FiInfo className="text-[#88c0d0] text-xs" />
-        <span className="text-xs">Hover/Click Image</span>
+        <span className="text-xs">Hover/Click To Download</span>
       </div>
       <div className="relative w-full h-60 overflow-hidden flex">
         {card.images.slice(0, 4).map((image, imgIdx) => {
@@ -228,7 +228,7 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
               )}
               <div className="absolute top-2 left-2 z-10 flex items-center space-x-2 bg-[#3b4252]/80 text-[#cdd6f4] px-2 py-1 rounded-lg shadow-md text-xs border">
                 <FiInfo className="text-[#88c0d0] text-xs" />
-                <span className="text-xs">Click to view details</span>
+                <span className="text-xs">view details</span>
               </div>
             </motion.div>
           ))}
@@ -435,7 +435,7 @@ const ExploreSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
           return { ...newIndex, [cardIdx]: nextIndex };
         }, {})
       );
-    }, 2000);
+    }, 4000);
     return () => clearInterval(interval);
   }, [cards]);
   useEffect(() => {
