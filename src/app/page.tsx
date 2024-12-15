@@ -8,7 +8,6 @@ import React, { useState, useEffect, memo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiBook, FiInfo, FiCamera, FiX, FiBookOpen, FiAlertCircle, FiMenu } from "react-icons/fi";
 import { FaBookOpen, FaFeatherAlt, FaArrowDown, FaScroll, FaRegCompass, FaRegHeart } from "react-icons/fa";
-
 // ====================================================================
 type ImageMetadata = {
   original_file_name: string;
