@@ -66,7 +66,7 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
         <FiInfo className="text-[#88c0d0] text-xs" />
         <span className="text-xs">Hover/Click Image</span>
       </div>
-      <div className="relative w-full h-32 sm:h-40 md:h-48 overflow-hidden flex">
+      <div className="relative w-full h-60 overflow-hidden flex">
         {card.images.slice(0, 4).map((image, imgIdx) => {
           const isHovered = hoveredImage[cardIdx] === imgIdx;
           const isActive = !isHovered && autoImageIndex[cardIdx] === imgIdx;
@@ -90,7 +90,7 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
               onMouseEnter={() => handleMouseEnter(cardIdx, imgIdx)}
             >
               {image.previewLink ? (
-                <div className="w-full h-full overflow-hidden rounded-lg transition-transform transform hover:scale-105 duration-300">
+                <div className="w-full h-full overflow-hidden rounded-lg transition-transform transform hover:scale-125 duration-300">
                   <Image src={image.previewLink} alt={`Preview ${imgIdx + 1}`} fill className="object-cover" unoptimized sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                 </div>
               ) : (
