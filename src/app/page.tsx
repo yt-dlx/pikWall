@@ -6,8 +6,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import React, { useState, useEffect, memo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiBook, FiInfo, FiCamera, FiX, FiBookOpen, FiAlertCircle, FiDownload } from "react-icons/fi";
 import { FaBookOpen, FaFeatherAlt, FaArrowDown, FaScroll, FaRegCompass, FaRegHeart } from "react-icons/fa";
+import { FiBook, FiInfo, FiCamera, FiX, FiBookOpen, FiAlertCircle, FiDownload, FiClipboard } from "react-icons/fi";
 // ====================================================================
 type ImageMetadata = {
   original_file_name: string;
@@ -188,12 +188,14 @@ type ModalProps = {
 };
 const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [hoveredColor, setHoveredColor] = useState<string | null>(null);
   const handleImageClick = (index: number) => setSelectedImage(index);
   const closeImageDetails = () => setSelectedImage(null);
+  const handleCopyToClipboard = (color: string) => navigator.clipboard.writeText(color);
   return (
     <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex justify-center items-center z-50 p-4">
       <motion.div
-        className="bg-[#1e1e2e]/60 backdrop-blur-2xl rounded-2xl shadow-2xl shadow-black border-4 border-double border-[#89b4fa] p-4 sm:p-6 md:p-8 w-full max-h-[80vh] overflow-y-auto flex flex-col lg:flex-row relative"
+        className="bg-[#1e1e2e]/60 backdrop-blur-2xl rounded-2xl shadow-2xl shadow-black border-4 border-double border-[#89b4fa] p-4 sm:p-6 md:p-8 w-full max-h-[70vh] overflow-y-auto flex flex-col lg:flex-row relative"
         transition={{ duration: 0.3, ease: "easeOut" }}
         animate={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 30 }}
@@ -211,7 +213,13 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
               onClick={() => handleImageClick(idx)}
             >
               {image.previewLink ? (
-                <Image fill unoptimized src={image.previewLink} alt={`Image ${idx + 1} - ${card.title}`} className="object-cover rounded transition-transform transform hover:scale-125 duration-500" />
+                <Image
+                  fill
+                  unoptimized
+                  src={image.previewLink}
+                  alt={`Image ${idx + 1} - ${card.title}`}
+                  className="object-cover rounded transition-transform transform hover:scale-125 duration-500 shadow-black shadow-2xl"
+                />
               ) : (
                 <div className="flex flex-col items-center justify-center h-full w-full bg-[#313244] text-[#7f849c] absolute inset-0">
                   <FiBookOpen className="text-3xl sm:text-5xl" />
@@ -240,84 +248,115 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
           </div>
           {selectedImage !== null && (
             <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex justify-center items-center z-50 p-4">
-              <motion.div
-                className="bg-[#1e1e2e]/60 backdrop-blur-2xl rounded-2xl shadow-2xl shadow-black border-4 border-double border-[#89b4fa] p-4 sm:p-6 md:p-8 w-full max-h-[80vh] overflow-y-auto flex flex-col lg:flex-row relative"
-                transition={{ duration: 0.3, ease: "easeOut" }}
-                animate={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: 30 }}
-                exit={{ opacity: 0, y: 30 }}
+              <div
+                className="bg-gradient-to-b from-[color:var(--tw-gradient-from)] via-[color:var(--tw-gradient-via)] to-[color:var(--tw-gradient-to)] p-[4px] rounded-2xl w-full"
+                style={
+                  {
+                    "--tw-gradient-from": card.images[selectedImage].primary,
+                    "--tw-gradient-via": card.images[selectedImage].secondary,
+                    "--tw-gradient-to": card.images[selectedImage].tertiary
+                  } as Record<string, string>
+                }
               >
-                <div className="w-full lg:w-1/2 flex justify-center items-center p-2 sm:p-4 rounded-lg relative group">
-                  <div className="relative w-full h-auto max-h-[60vh] rounded-lg overflow-hidden shadow-lg border border-[#89b4fa]/30">
-                    {card.images[selectedImage].previewLink ? (
-                      <>
-                        <Image
-                          src={card.images[selectedImage].previewLink}
-                          alt={`Image ${selectedImage + 1} - ${card.title}`}
-                          width={800}
-                          height={450}
-                          className="w-full h-full object-cover transition-all duration-500 group-hover:blur-sm"
-                        />
-                        <a
-                          href={card.images[selectedImage].downloadLink}
-                          download
-                          className="absolute inset-0 flex justify-center items-center bg-black/50 text-[#cdd6f4] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                          title="Download Image"
-                          aria-label="Download Image"
-                        >
-                          <FiDownload className="text-4xl hover:text-[#89b4fa] transition-all" />
-                        </a>
-                      </>
-                    ) : (
-                      <div className="flex flex-col items-center justify-center h-full w-full bg-[#313244] text-[#7f849c]">
-                        <FiBookOpen className="text-5xl" />
-                        <p className="text-base mt-2">No Image</p>
-                      </div>
-                    )}
-                  </div>
-                </div>
-                <div className="w-full lg:w-1/2 lg:pl-6 flex flex-col justify-between p-4 sm:p-6">
-                  <div>
-                    <h4 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-2 sm:mb-4 nordic-gradient-text capitalize flex items-center gap-2">
-                      <FiBookOpen className="text-[#89b4fa] text-lg sm:text-xl" />
-                      {`Image Details - ${card.title}`}
-                    </h4>
-                    <div className="text-[#a6adc8] text-xs sm:text-sm md:text-base">
-                      <p>
-                        <span className="font-medium">Original Name:</span> {card.images[selectedImage].original_file_name}
-                      </p>
-                      <p>
-                        <span className="font-medium">Format:</span> {card.images[selectedImage].format}
-                      </p>
-                      <p>
-                        <span className="font-medium">Mode:</span> {card.images[selectedImage].mode}
-                      </p>
-                      <p>
-                        <span className="font-medium">Size:</span> {card.images[selectedImage].file_size_megabytes.toFixed(2)} MB ({card.images[selectedImage].file_size_bytes} bytes)
-                      </p>
-                      <p>
-                        <span className="font-medium">Resolution:</span> {card.images[selectedImage].width} x {card.images[selectedImage].height}
-                      </p>
-                      <p>
-                        <span className="font-medium">Primary Color:</span> {card.images[selectedImage].primary}
-                      </p>
-                      <p>
-                        <span className="font-medium">Secondary Color:</span> {card.images[selectedImage].secondary}
-                      </p>
-                      <p>
-                        <span className="font-medium">Tertiary Color:</span> {card.images[selectedImage].tertiary}
-                      </p>
+                <motion.div
+                  className="bg-[#1e1e2e] backdrop-blur-2xl rounded-2xl shadow-2xl shadow-black p-2 sm:p-4 md:p-6 w-full max-h-[70vh] overflow-y-auto flex flex-col lg:flex-row"
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  exit={{ opacity: 0, y: 30 }}
+                >
+                  <div className="w-full lg:w-1/2 flex justify-center items-center p-2 sm:p-4 relative group">
+                    <div className="relative w-full h-auto max-h-[60vh] rounded-lg overflow-hidden shadow-lg group">
+                      {card.images[selectedImage].previewLink ? (
+                        <>
+                          <Image
+                            src={card.images[selectedImage].previewLink}
+                            alt={`Image ${selectedImage + 1} - ${card.title}`}
+                            width={800}
+                            height={450}
+                            className="w-full h-full object-cover transition-transform transform duration-500 group-hover:scale-[1.5] group-hover:saturate-50 shadow-black shadow-2xl border-2 border-black rounded-lg"
+                          />
+                          <a
+                            download
+                            title="Download Image"
+                            aria-label="Download Image"
+                            href={card.images[selectedImage].downloadLink}
+                            className="absolute inset-0 flex justify-center items-center bg-black/50 text-[#cdd6f4] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                          >
+                            <FiDownload className="text-8xl hover:text-[#89b4fa] transition-all" />
+                          </a>
+                        </>
+                      ) : (
+                        <div className="flex flex-col items-center justify-center h-full w-full bg-[#313244] text-[#7f849c]">
+                          <FiBookOpen className="text-5xl" />
+                          <p className="text-base mt-2">No Image</p>
+                        </div>
+                      )}
                     </div>
                   </div>
-                  <button
-                    onClick={closeImageDetails}
-                    className="mt-4 px-4 sm:px-6 py-2 sm:py-3 bg-[#89b4fa] text-[#1e1e2e] w-full rounded-full shadow-md font-semibold hover:bg-[#74c7ec] transition flex items-center justify-center gap-2 text-sm sm:text-base"
-                  >
-                    <FiX />
-                    Close Details
-                  </button>
-                </div>
-              </motion.div>
+                  <div className="w-full lg:w-1/2 lg:pl-6 flex flex-col justify-between p-4 sm:p-6">
+                    <div>
+                      <h4 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-2 sm:mb-4 nordic-gradient-text capitalize flex items-center gap-2">
+                        <FiBookOpen className="text-[#89b4fa] text-lg sm:text-xl" />
+                        {`${card.title}`}
+                      </h4>
+                      <ul className="text-[#a6adc8] text-xs sm:text-sm md:text-base list-disc list-inside">
+                        <li>
+                          <span className="font-medium nordic-gradient-text">Original Name:</span> {card.images[selectedImage].original_file_name}
+                        </li>
+                        <li>
+                          <span className="font-medium nordic-gradient-text">Format:</span> {card.images[selectedImage].format}
+                        </li>
+                        <li>
+                          <span className="font-medium nordic-gradient-text">Mode:</span> {card.images[selectedImage].mode}
+                        </li>
+                        <li>
+                          <span className="font-medium nordic-gradient-text">Size:</span> {card.images[selectedImage].file_size_megabytes.toFixed(2)} MB ({card.images[selectedImage].file_size_bytes}{" "}
+                          bytes)
+                        </li>
+                        <li>
+                          <span className="font-medium nordic-gradient-text">Resolution:</span> {card.images[selectedImage].width} x {card.images[selectedImage].height}
+                        </li>
+                        <li>
+                          <span className="font-medium nordic-gradient-text">Primary Color:</span> {card.images[selectedImage].primary}
+                        </li>
+                        <li>
+                          <span className="font-medium nordic-gradient-text">Secondary Color:</span> {card.images[selectedImage].secondary}
+                        </li>
+                        <li>
+                          <span className="font-medium nordic-gradient-text">Tertiary Color:</span> {card.images[selectedImage].tertiary}
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="flex flex-wrap justify-center gap-2 mt-4 max-h-[120px] overflow-y-auto">
+                      {Object.keys(card.images[selectedImage])
+                        .filter((key) => key.startsWith("more_"))
+                        .map((colorKey) => (
+                          <div
+                            key={colorKey}
+                            className="relative w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white cursor-pointer flex items-center justify-center"
+                            style={{ backgroundColor: card.images[selectedImage][colorKey] as string }}
+                            onMouseEnter={() => setHoveredColor(card.images[selectedImage][colorKey] as string)}
+                            onMouseLeave={() => setHoveredColor(null)}
+                            onClick={() => handleCopyToClipboard(card.images[selectedImage][colorKey] as string)}
+                          >
+                            {hoveredColor === card.images[selectedImage][colorKey] && (
+                              <div className="absolute top-full mt-1 px-2 py-1 bg-[#1e1e2e] text-white text-xs rounded shadow-md z-10">{card.images[selectedImage][colorKey]}</div>
+                            )}
+                            <FiClipboard className="text-white text-xs sm:text-sm" />
+                          </div>
+                        ))}
+                    </div>
+                    <button
+                      onClick={closeImageDetails}
+                      className="mt-4 px-4 sm:px-6 py-2 sm:py-3 bg-[#89b4fa] text-[#1e1e2e] w-full rounded-full shadow-md font-semibold hover:bg-[#74c7ec] transition flex items-center justify-center gap-2 text-sm sm:text-base"
+                    >
+                      <FiX />
+                      Close Details
+                    </button>
+                  </div>
+                </motion.div>
+              </div>
             </div>
           )}
           <button
@@ -335,7 +374,7 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
 // ====================================================================
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative min-h-[80vh] flex flex-col items-center justify-center text-[#cdd6f4] px-4 text-center overflow-hidden">
+    <section className="relative min-h-[70vh] flex flex-col items-center justify-center text-[#cdd6f4] px-4 text-center overflow-hidden">
       <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold leading-tight mb-4 flex flex-wrap items-center justify-center nordic-gradient-text text-center">
         <span>Stories Behind Pictures</span>
       </h1>
@@ -407,7 +446,6 @@ const ExploreSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
   }, [searchQuery, cards]);
   const handleMouseLeave = (cardIdx: number) => setHoveredImage((prev) => ({ ...prev, [cardIdx]: null }));
   const handleMouseEnter = (cardIdx: number, imgIdx: number) => setHoveredImage((prev) => ({ ...prev, [cardIdx]: imgIdx }));
-
   return (
     <>
       <ToastContainer />
