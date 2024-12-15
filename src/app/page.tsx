@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import React, { useState, useEffect, memo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiBook, FiInfo, FiCamera, FiX, FiBookOpen, FiAlertCircle, FiMenu } from "react-icons/fi";
+import { FiBook, FiInfo, FiCamera, FiX, FiBookOpen, FiAlertCircle } from "react-icons/fi";
 import { FaBookOpen, FaFeatherAlt, FaArrowDown, FaScroll, FaRegCompass, FaRegHeart } from "react-icons/fa";
 // ====================================================================
 type ImageMetadata = {
@@ -123,42 +123,35 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
 });
 Card.displayName = "Card";
 // ====================================================================
-const Header: React.FC = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+const Header: React.FC<{ onSearch: (query: string) => void }> = ({ onSearch }) => {
+  const [searchQuery, setSearchQuery] = useState("");
+  const handleSearch = () => onSearch(searchQuery);
   return (
     <header className="fixed top-0 left-0 w-full bg-[#1e1e2e]/40 backdrop-blur-md shadow-md z-20">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 className="text-xl md:text-2xl font-bold text-[#cdd6f4] flex items-center">
-          <FiBook className="inline-block mr-2" />
-          picBook
-        </h1>
-        <button className="md:hidden text-[#cdd6f4] text-2xl" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          <FiMenu />
-        </button>
-        <nav className="hidden md:flex space-x-4">
-          <a className="text-[#cdd6f4] hover:text-[#89b4fa] flex items-center space-x-1" href="#explore">
-            <FaRegCompass />
-            <span>Explore</span>
-          </a>
-          <a href="#favorites" className="text-[#cdd6f4] hover:text-[#89b4fa] flex items-center space-x-1">
-            <FaRegHeart />
-            <span>Favorites</span>
-          </a>
-        </nav>
-        {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 w-full bg-[#1e1e2e]/90 backdrop-blur-md">
-            <nav className="flex flex-col items-center py-4 space-y-4">
-              <a href="#explore" className="text-[#cdd6f4] hover:text-[#89b4fa] flex items-center space-x-1" onClick={() => setIsMobileMenuOpen(false)}>
-                <FaRegCompass />
-                <span>Explore</span>
-              </a>
-              <a href="#favorites" className="text-[#cdd6f4] hover:text-[#89b4fa] flex items-center space-x-1" onClick={() => setIsMobileMenuOpen(false)}>
-                <FaRegHeart />
-                <span>Favorites</span>
-              </a>
-            </nav>
+      <div className="container mx-auto px-4 py-4 flex flex-wrap items-center justify-between">
+        <div className="mb-4 w-full flex justify-center md:justify-end">
+          <div className="flex items-center bg-[#3b4252] text-[#cdd6f4] px-4 py-2 rounded-lg w-full">
+            <input
+              type="text"
+              placeholder="Search Your Favourites..."
+              className="bg-transparent outline-none text-sm md:text-base placeholder-[#a6adc8] flex-grow"
+              value={searchQuery}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                onSearch(e.target.value);
+              }}
+            />
+            <button onClick={handleSearch} className="ml-4 text-[#cdd6f4] hover:text-[#89b4fa] text-lg" aria-label="Search">
+              <FaRegCompass />
+            </button>
           </div>
-        )}
+        </div>
+        <div className="flex items-center space-x-6">
+          <h1 className="text-xl md:text-2xl font-bold text-[#cdd6f4] flex items-center nordic-gradient-text">
+            <FiBook className="inline-block mr-2" />
+            picBook<span className="ml-2 text-xs animate-bounce">by Shovit</span>
+          </h1>
+        </div>
       </div>
     </header>
   );
@@ -197,7 +190,7 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
   return (
     <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex justify-center items-center z-50 p-4">
       <motion.div
-        className="bg-[#1e1e2e]/60 backdrop-blur-2xl rounded-2xl shadow-2xl shadow-black border-4 border-double border-[#89b4fa] p-4 sm:p-6 md:p-8 w-full max-h-[80vh] overflow-y-auto flex flex-col lg:flex-row relative"
+        className="bg-[#1e1e2e]/60 backdrop-blur-2xl rounded-2xl shadow-2xl shadow-black border-4 border-double border-[#89b4fa] p-4 sm:p-6 md:p-8 w-full max-h-[70vh] overflow-y-auto flex flex-col lg:flex-row relative"
         transition={{ duration: 0.3, ease: "easeOut" }}
         animate={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 30 }}
@@ -207,14 +200,14 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
           {card.images.slice(0, 6).map((image, idx) => (
             <motion.div
               key={idx}
-              className="relative w-full h-0 pb-[100%] overflow-hidden rounded-lg"
+              className="relative w-full h-0 pb-[56.25%] overflow-hidden rounded-lg shadow-black shadow-2xl border-2 border-[#89b4fa]/20 hover:border-[#89b4fa] hover:border-dashed"
               transition={{ duration: 0.3, ease: "easeOut" }}
               animate={{ opacity: 1, scale: 1 }}
               initial={{ opacity: 0, scale: 0.9 }}
               exit={{ opacity: 0, scale: 0.9 }}
             >
               {image.previewLink ? (
-                <Image fill unoptimized src={image.previewLink} alt={`Image ${idx + 1} - ${card.title}`} className="object-cover rounded transition-transform transform hover:scale-110 duration-300" />
+                <Image fill unoptimized src={image.previewLink} alt={`Image ${idx + 1} - ${card.title}`} className="object-cover rounded transition-transform transform hover:scale-125 duration-500" />
               ) : (
                 <div className="flex flex-col items-center justify-center h-full w-full bg-[#313244] text-[#7f849c] absolute inset-0">
                   <FiCamera className="text-3xl sm:text-5xl" />
@@ -269,9 +262,10 @@ const HeroSection: React.FC = () => {
   );
 };
 // ====================================================================
-const ExploreSection: React.FC = () => {
+const ExploreSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
   const [loading, setLoading] = useState(true);
   const [cards, setCards] = useState<CardData[]>([]);
+  const [filteredCards, setFilteredCards] = useState<CardData[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [selectedCard, setSelectedCard] = useState<null | number>(null);
   const [autoImageIndex, setAutoImageIndex] = useState<Record<number, number>>({});
@@ -294,6 +288,7 @@ const ExploreSection: React.FC = () => {
         });
         transformedCards = shuffleArray(transformedCards);
         setCards(transformedCards);
+        setFilteredCards(transformedCards);
         setLoading(false);
         setAutoImageIndex(transformedCards.reduce((acc, _, idx) => ({ ...acc, [idx]: 0 }), {}));
         setHoveredImage(transformedCards.reduce((acc, _, idx) => ({ ...acc, [idx]: null }), {}));
@@ -316,8 +311,15 @@ const ExploreSection: React.FC = () => {
     }, 2000);
     return () => clearInterval(interval);
   }, [cards]);
+  useEffect(() => {
+    const lowercasedQuery = searchQuery.toLowerCase();
+    setFilteredCards(
+      cards.filter((card) => card.title.toLowerCase().includes(lowercasedQuery) || card.description.toLowerCase().includes(lowercasedQuery) || card.story_moral.toLowerCase().includes(lowercasedQuery))
+    );
+  }, [searchQuery, cards]);
   const handleMouseLeave = (cardIdx: number) => setHoveredImage((prev) => ({ ...prev, [cardIdx]: null }));
   const handleMouseEnter = (cardIdx: number, imgIdx: number) => setHoveredImage((prev) => ({ ...prev, [cardIdx]: imgIdx }));
+
   return (
     <>
       <ToastContainer />
@@ -329,7 +331,7 @@ const ExploreSection: React.FC = () => {
       {error && <p className="text-center text-red-500">{error}</p>}
       {!loading && !error && (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 border-white/20 shadow-white border-4 sm:border-8 border-double p-2 rounded-2xl mx-auto">
-          {cards.map((card, cardIdx) => (
+          {filteredCards.map((card, cardIdx) => (
             <Card
               card={card}
               key={cardIdx}
@@ -343,23 +345,24 @@ const ExploreSection: React.FC = () => {
           ))}
         </div>
       )}
-      <AnimatePresence>{selectedCard !== null && <Modal card={cards[selectedCard]} onClose={() => setSelectedCard(null)} />}</AnimatePresence>
+      <AnimatePresence>{selectedCard !== null && <Modal card={filteredCards[selectedCard]} onClose={() => setSelectedCard(null)} />}</AnimatePresence>
     </>
   );
 };
 // ====================================================================
 const PicBookPage: React.FC = () => {
-  const [selectedCard] = useState<null | number>(null);
+  const [searchQuery, setSearchQuery] = useState("");
   return (
     <>
-      <Header />
-      <Galaxy isModalOpen={selectedCard !== null} />
+      <Header onSearch={setSearchQuery} />
+      <Galaxy isModalOpen={false} />
       <main className="relative z-10 pt-16 sm:pt-20 pb-20 sm:pb-24">
         <HeroSection />
-        <ExploreSection />
+        <ExploreSection searchQuery={searchQuery} />
       </main>
       <Footer />
     </>
   );
 };
+
 export default PicBookPage;
