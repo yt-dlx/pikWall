@@ -140,7 +140,7 @@ const Header: React.FC<{ onSearch: (query: string) => void }> = ({ onSearch }) =
   const [searchQuery, setSearchQuery] = useState("");
   const handleSearch = () => onSearch(searchQuery);
   return (
-    <header className="fixed top-0 left-0 w-full  bg-black/50 backdrop-blur-md shadow-black shadow-2xl border-b-4 border-double border-black z-20">
+    <header className="fixed top-0 left-0 w-full  bg-black/50 backdrop-blur-md shadow-black shadow-2xl border-b-4 border-black z-20">
       <div className="container mx-auto px-4 py-4 flex flex-wrap items-center justify-between">
         <div className="flex items-center space-x-4 md:space-x-6 w-full md:w-auto mb-4 md:mb-0">
           <h1 className="text-xl md:text-2xl font-bold text-[#cdd6f4] flex items-center nordic-gradient-text">
@@ -205,7 +205,7 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
   const handleCopyToClipboard = (color: string) => navigator.clipboard.writeText(color);
   if (selectedImage !== null) {
     return (
-      <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex justify-center items-center z-50 p-4">
+      <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex justify-center items-center z-50">
         <div
           className="bg-gradient-to-b from-[color:var(--tw-gradient-from)] via-[color:var(--tw-gradient-via)] to-[color:var(--tw-gradient-to)] p-[4px] rounded-2xl w-full"
           style={
@@ -232,7 +232,7 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
                       alt={`Image ${selectedImage + 1} - ${card.title}`}
                       width={800}
                       height={450}
-                      className="w-full h-full object-cover transition-transform transform duration-500 group-hover:scale-[1.5] group-hover:saturate-50 shadow-black shadow-2xl border-2 border-black rounded-lg"
+                      className="w-full h-full object-cover transition-transform transform duration-500 group-hover:scale-[1.5] group-hover:saturate-50 shadow-black shadow-xl border-2 border-black rounded-lg"
                     />
                     <a
                       download
@@ -320,9 +320,9 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
     );
   }
   return (
-    <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex justify-center items-center z-50 p-4">
+    <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex justify-center items-center z-50">
       <motion.div
-        className="bg-[#1e1e2e]/60 backdrop-blur-2xl rounded-2xl shadow-2xl shadow-black border-4 border-double border-[#89b4fa] p-4 sm:p-6 md:p-8 w-full max-h-[60vh] sm:max-h-[70vh] md:max-h-[80vh] overflow-y-auto flex flex-col lg:flex-row relative"
+        className="bg-[#1e1e2e]/60 backdrop-blur-2xl rounded-2xl shadow-xl shadow-black border-2 border-[#89b4fa] p-4 sm:p-6 md:p-8 w-full max-h-[60vh] sm:max-h-[70vh] md:max-h-[80vh] overflow-y-auto flex flex-col lg:flex-row relative"
         transition={{ duration: 0.3, ease: "easeOut" }}
         animate={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 30 }}
@@ -345,7 +345,7 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
                   unoptimized
                   src={image.previewLink}
                   alt={`Image ${idx + 1} - ${card.title}`}
-                  className="object-cover rounded transition-transform transform hover:scale-125 duration-500 shadow-black shadow-2xl animate-pulse"
+                  className="object-cover rounded transition-transform transform hover:scale-125 duration-500 shadow-black shadow-xl animate-pulse"
                 />
               ) : (
                 <div className="flex flex-col items-center justify-center h-full w-full bg-[#313244] text-[#7f849c] absolute inset-0">
@@ -478,7 +478,7 @@ const ExploreSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
       {loading && <p className="text-center text-[#a6adc8]">Loading...</p>}
       {error && <p className="text-center text-red-500">{error}</p>}
       {!loading && !error && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 border-white/20 shadow-white border-4 sm:border-8 border-double p-2 rounded-2xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 border-white/20 shadow-white border-2 sm:border-8 p-2 rounded-2xl mx-auto">
           {filteredCards.map((card, cardIdx) => (
             <Card
               card={card}
