@@ -1,3 +1,8 @@
-import type { NextConfig } from "next";
-const nextConfig: NextConfig = { images: { remotePatterns: [{ protocol: "https", hostname: "**" }] } };
-export default nextConfig;
+import withPWAInit from "@ducanh2912/next-pwa";
+const withPWA = withPWAInit({
+  dest: "public"
+});
+export default withPWA({
+  reactStrictMode: true,
+  images: { remotePatterns: [{ protocol: "https", hostname: "**" }] }
+});
