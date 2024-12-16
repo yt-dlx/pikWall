@@ -11,7 +11,7 @@ const Galaxy: React.FC<GalaxyProps> = ({ isModalOpen }) => {
     const container = canvasRef.current;
     if (!container) return;
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x000011);
+    scene.background = new THREE.Color(0x181b21);
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     camera.position.z = 50;
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -78,7 +78,7 @@ const Galaxy: React.FC<GalaxyProps> = ({ isModalOpen }) => {
       const trailPositionArray = new Float32Array(trailLength * 3);
       const trailColorArray = new Float32Array(trailLength * 3);
       const headColor = new THREE.Color("#89b4fa");
-      const tailColor = new THREE.Color("#000000");
+      const tailColor = new THREE.Color("#181b21");
       for (let j = 0; j < trailLength; j++) {
         const t = j / (trailLength - 1);
         const r = THREE.MathUtils.lerp(headColor.r, tailColor.r, t);
