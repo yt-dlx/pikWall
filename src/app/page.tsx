@@ -57,7 +57,7 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
     <div
       key={cardIdx}
       onClick={() => setSelectedCard(cardIdx)}
-      className="bg-[#313244]/80 rounded-lg shadow-md overflow-hidden cursor-pointer relative group hover:shadow-xl flex flex-col w-full min-h-[280px] sm:min-h-[320px] transition-shadow duration-300 ease-in-out"
+      className="bg-[#313244]/80 rounded-lg overflow-hidden cursor-pointer relative group hover:shadow-xl flex flex-col w-full min-h-[280px] sm:min-h-[320px] transition-shadow duration-300 ease-in-out shadow-black shadow  -lg"
     >
       <div className="absolute top-2 left-2 z-10 flex items-center space-x-2 bg-[#3b4252]/80 text-[#cdd6f4] px-2 py-1 rounded-lg shadow-md text-xs border">
         <FiInfo className="text-[#88c0d0] text-xs" />
@@ -88,7 +88,7 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
               style={{ ...gradientStyle, zIndex: 4 - imgIdx, willChange: "width, left" }}
               className={`absolute top-0 h-full rounded-lg overflow-hidden transition-all ${isHovered ? "" : "sm:blur-[1px]"}`}
             >
-              <div className={`w-full h-full bg-[#313244] rounded-lg overflow-hidden ${isHovered || isActive ? "" : "filter saturate-[0.3]"}`}>
+              <div className={`w-full h-full bg-[#313244] rounded-lg overflow-hidden ${isHovered || isActive ? "" : "filter saturate-[0.2]"}`}>
                 {image.previewLink ? (
                   <motion.div initial={{ scale: 1 }} animate={{ scale: isHovered || isActive ? 1.2 : 1, transition: { duration: 0.2, ease: "easeInOut" } }} className="w-full h-full">
                     <Image src={image.previewLink} alt={`Preview ${imgIdx + 1}`} fill className="object-cover" unoptimized sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
@@ -103,16 +103,16 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
           );
         })}
       </div>
-      <div className="p-4 sm:p-6 flex flex-grow">
+      <div className="p-2 flex flex-grow">
         <div className="space-y-2 flex flex-col justify-between w-full">
           <div>
-            <h4 className="text-xl sm:text-2xl font-semibold text-[#cdd6f4] flex items-center space-x-2">
+            <h4 className="text-xl font-semibold text-[#cdd6f4] flex items-center space-x-2">
               <FaScroll className="text-sm sm:text-base" />
               <span className="nordic-gradient-text capitalize truncate block w-full">{card.title}</span>
             </h4>
             <p className="text-[#a6adc8] flex items-center space-x-2 text-base sm:text-lg mt-1">
               <FaFeatherAlt className="text-xs sm:text-base" />
-              <span className="truncate overflow-hidden whitespace-nowrap w-full capitalize">
+              <span className="text-xs truncate overflow-hidden whitespace-nowrap w-full capitalize">
                 <span className="nordic-gradient-text">Environment: </span>
                 {card.description}
               </span>
@@ -129,7 +129,7 @@ const Header: React.FC<{ onSearch: (query: string) => void }> = ({ onSearch }) =
   const [searchQuery, setSearchQuery] = useState("");
   const handleSearch = () => onSearch(searchQuery);
   return (
-    <header className="fixed top-0 left-0 w-full  bg-black/50 backdrop-blur-md shadow-black shadow-2xl border-b-4 border-black z-20">
+    <header className="fixed top-0 left-0 w-full  bg-[#0b0d0f]/60 backdrop-blur-md shadow-[#0b0d0f] shadow-2xl border-b-4 border-[#0b0d0f] z-20">
       <div className="container mx-auto px-4 py-4 flex flex-wrap items-center justify-between">
         <div className="flex items-center space-x-4 md:space-x-6 w-full md:w-auto mb-4 md:mb-0">
           <h1 className="text-xl md:text-2xl font-bold text-[#cdd6f4] flex items-center nordic-gradient-text">
@@ -159,7 +159,7 @@ const Header: React.FC<{ onSearch: (query: string) => void }> = ({ onSearch }) =
 // ====================================================================
 const Footer: React.FC = () => {
   return (
-    <footer className="relative w-full bg-black/50 backdrop-blur-md shadow-md py-2 sm:py-4 z-20">
+    <footer className="relative w-full bg-[#0b0d0f]/60 backdrop-blur-md shadow-md py-2 sm:py-4 z-20">
       <div className="container mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-y-0">
         <div className="text-[#cdd6f4] flex items-center space-x-2 font-semibold text-sm sm:text-base">
           <FaBookOpen />
@@ -194,7 +194,7 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
   const handleCopyToClipboard = (color: string) => navigator.clipboard.writeText(color);
   if (selectedImage !== null) {
     return (
-      <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex justify-center items-center z-50">
+      <div className="fixed inset-0 bg-[#0b0d0f]/80 backdrop-blur-md flex justify-center items-center z-50">
         <div
           className="bg-gradient-to-b from-[color:var(--tw-gradient-from)] via-[color:var(--tw-gradient-via)] to-[color:var(--tw-gradient-to)] p-[4px] rounded-2xl w-full"
           style={
@@ -221,14 +221,14 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
                       alt={`Image ${selectedImage + 1} - ${card.title}`}
                       width={800}
                       height={450}
-                      className="w-full h-full object-cover transition-transform transform duration-500 group-hover:scale-[1.5] group-hover:saturate-50 shadow-black shadow-xl border-2 border-black rounded-lg"
+                      className="w-full h-full object-cover transition-transform transform duration-500 group-hover:scale-[1.5] group-hover:saturate-50 shadow-[#0b0d0f] shadow-xl border-2 border-[#0b0d0f] rounded-lg"
                     />
                     <a
                       download
                       title="Download Image"
                       aria-label="Download Image"
                       href={card.images[selectedImage].downloadLink}
-                      className="absolute inset-0 flex justify-center items-center bg-black/50 text-[#cdd6f4] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                      className="absolute inset-0 flex justify-center items-center bg-[#0b0d0f]/60 text-[#cdd6f4] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                     >
                       <FiDownload className="text-8xl hover:text-[#89b4fa] transition-all" />
                     </a>
@@ -309,19 +309,19 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
     );
   }
   return (
-    <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex justify-center items-center z-50">
+    <div className="fixed inset-0 bg-[#0b0d0f]/80 backdrop-blur-md flex justify-center items-center z-50">
       <motion.div
-        className="bg-[#1e1e2e]/60 backdrop-blur-2xl rounded-2xl shadow-xl shadow-black border-2 border-[#89b4fa] p-4 sm:p-6 md:p-8 w-full max-h-[60vh] sm:max-h-[70vh] md:max-h-[80vh] overflow-y-auto flex flex-col lg:flex-row relative"
+        className="bg-[#1e1e2e]/60 backdrop-blur-2xl rounded-2xl shadow-xl shadow-[#0b0d0f] border-2 border-[#89b4fa] p-4 sm:p-6 md:p-8 w-full max-h-[60vh] sm:max-h-[70vh] md:max-h-[80vh] overflow-y-auto flex flex-col lg:flex-row relative"
         transition={{ duration: 0.3, ease: "easeOut" }}
         animate={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 30 }}
         exit={{ opacity: 0, y: 30 }}
       >
-        <div className="w-full lg:w-1/2 grid grid-cols-2 gap-2 sm:gap-4 p-2 sm:p-4 rounded-lg relative">
+        <div className="w-full lg:w-1/2 grid grid-cols-2 sm:gap-4 gap-2 p-2 sm:p-4 rounded-lg relative">
           {card.images.slice(0, 6).map((image, idx) => (
             <motion.div
               key={idx}
-              className="relative w-full h-0 pb-[56.25%] overflow-hidden rounded-lg shadow-black shadow-2xl border-2 border-[#89b4fa]/20 hover:border-[#89b4fa] hover:border-dashed cursor-pointer"
+              className="relative w-full h-0 pb-[56.25%] overflow-hidden rounded-lg shadow-[#0b0d0f] shadow-2xl border-2 border-[#89b4fa]/20 hover:border-[#89b4fa] hover:border-dashed cursor-pointer"
               transition={{ duration: 0.3, ease: "easeOut" }}
               animate={{ opacity: 1, scale: 1 }}
               initial={{ opacity: 0, scale: 0.9 }}
@@ -334,7 +334,7 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
                   unoptimized
                   src={image.previewLink}
                   alt={`Image ${idx + 1} - ${card.title}`}
-                  className="object-cover rounded transition-transform transform hover:scale-125 duration-500 shadow-black shadow-xl animate-pulse"
+                  className="object-cover rounded transition-transform transform hover:scale-125 duration-500 shadow-[#0b0d0f] shadow-xl animate-pulse"
                 />
               ) : (
                 <div className="flex flex-col items-center justify-center h-full w-full bg-[#313244] text-[#7f849c] absolute inset-0">
@@ -460,14 +460,14 @@ const ExploreSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
   return (
     <>
       <ToastContainer />
-      <h3 className="text-2xl sm:text-3xl font-semibold text-center text-[#cdd6f4] mb-6 sm:mb-8 flex items-center justify-center">
+      <h3 className="text-2xl sm:text-5xl font-semibold text-center text-[#cdd6f4] mb-6 sm:mb-8 flex items-center justify-center nordic-gradient-text">
         <FaBookOpen className="inline-block mr-2" />
         Explore Our Collection
       </h3>
       {loading && <p className="text-center text-[#a6adc8]">Loading...</p>}
       {error && <p className="text-center text-red-500">{error}</p>}
       {!loading && !error && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 border-white/20 shadow-white border-2 sm:border-8 p-2 rounded-2xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4 border-[#89b4fa]/20 border-double shadow-white border-2 sm:border-8 p-2 rounded-2xl mx-auto">
           {filteredCards.map((card, cardIdx) => (
             <Card
               card={card}
