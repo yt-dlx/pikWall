@@ -24,16 +24,16 @@ type ImageMetadata = {
   downloadLink: string;
   previewLink: string;
 };
-type StoryEntry = {
-  story_title: string;
-  story_prompt: string;
-  story_moral: string;
+type EnvironmentEntry = {
+  environment_title: string;
+  environment_prompt: string;
+  environment_moral: string;
   images: ImageMetadata[];
 };
 type CardData = {
   title: string;
   description: string;
-  story_moral: string;
+  environment_moral: string;
   images: ImageMetadata[];
 };
 type CardProps = {
@@ -111,7 +111,7 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
             <p className="text-[#a6adc8] flex items-center space-x-2 text-base sm:text-lg mt-1">
               <FaFeatherAlt className="text-xs sm:text-base" />
               <span className="truncate overflow-hidden whitespace-nowrap w-full capitalize">
-                <span className="nordic-gradient-text">Story: </span>
+                <span className="nordic-gradient-text">Environment: </span>
                 {card.description}
               </span>
             </p>
@@ -242,9 +242,9 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
             <p className="text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6 text-[#a6adc8] capitalize">{card.description}</p>
             <h5 className="text-base sm:text-lg md:text-xl font-semibold mb-1 sm:mb-2 text-[#89b4fa] flex items-center gap-2">
               <FiAlertCircle className="text-lg sm:text-xl" />
-              Moral of the Story
+              Moral of the Environment
             </h5>
-            <p className="text-sm sm:text-base md:text-lg text-[#cdd6f4] capitalize">{card.story_moral}</p>
+            <p className="text-sm sm:text-base md:text-lg text-[#cdd6f4] capitalize">{card.environment_moral}</p>
           </div>
           {selectedImage !== null && (
             <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex justify-center items-center z-50 p-4">
@@ -364,7 +364,7 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
             className="mt-4 sm:mt-6 px-4 sm:px-6 py-2 sm:py-3 bg-[#89b4fa] text-[#1e1e2e] w-full rounded-full shadow-md font-semibold hover:bg-[#74c7ec] transition flex items-center justify-center gap-2 text-sm sm:text-base"
           >
             <FiX />
-            Close Selected Story
+            Close Selected Environment
           </button>
         </div>
       </motion.div>
@@ -378,7 +378,7 @@ const HeroSection: React.FC = () => {
       <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold leading-tight mb-4 flex flex-wrap items-center justify-center nordic-gradient-text text-center">
         <span>Stories Behind Pictures</span>
       </h1>
-      <p className="text-base sm:text-lg md:text-2xl max-w-2xl mx-auto mb-8 text-[#a6adc8] px-4">Dive into tales inspired by unique images and discover the art of visual storytelling.</p>
+      <p className="text-base sm:text-lg md:text-2xl max-w-2xl mx-auto mb-8 text-[#a6adc8] px-4">Dive into tales inspired by unique images and discover the art of visual environmenttelling.</p>
       <div className="w-full flex justify-center -mt-8 sm:-mt-16">
         <Image src="/logo.png" alt="Explore" width={300} height={300} className="cursor-pointer hover:scale-105 transition-transform duration-300 -hue-rotate-180 max-w-full" />
       </div>
@@ -402,7 +402,7 @@ const ExploreSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
       try {
         const response = await fetch("/api/images");
         if (!response.ok) throw new Error("Failed to fetch data");
-        const data: Record<string, StoryEntry> = await response.json();
+        const data: Record<string, EnvironmentEntry> = await response.json();
         let transformedCards = Object.values(data).map((entry) => {
           const shuffledImages = shuffleArray(
             entry.images.map((image) => ({
@@ -411,7 +411,7 @@ const ExploreSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
               previewLink: atob(image.previewLink)
             }))
           );
-          return { title: entry.story_title, description: entry.story_prompt, story_moral: entry.story_moral, images: shuffledImages };
+          return { title: entry.environment_title, description: entry.environment_prompt, environment_moral: entry.environment_moral, images: shuffledImages };
         });
         transformedCards = shuffleArray(transformedCards);
         setCards(transformedCards);
@@ -441,7 +441,9 @@ const ExploreSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
   useEffect(() => {
     const lowercasedQuery = searchQuery.toLowerCase();
     setFilteredCards(
-      cards.filter((card) => card.title.toLowerCase().includes(lowercasedQuery) || card.description.toLowerCase().includes(lowercasedQuery) || card.story_moral.toLowerCase().includes(lowercasedQuery))
+      cards.filter(
+        (card) => card.title.toLowerCase().includes(lowercasedQuery) || card.description.toLowerCase().includes(lowercasedQuery) || card.environment_moral.toLowerCase().includes(lowercasedQuery)
+      )
     );
   }, [searchQuery, cards]);
   const handleMouseLeave = (cardIdx: number) => setHoveredImage((prev) => ({ ...prev, [cardIdx]: null }));

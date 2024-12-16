@@ -13,11 +13,11 @@ type ImageMetadata = {
   downloadLink: string;
   previewLink: string;
 };
-type StoryEntry = {
-  story_title: string;
-  story_prompt: string;
-  story_moral: string;
+type EnvironmentEntry = {
+  environment_title: string;
+  environment_prompt: string;
+  environment_moral: string;
   images: ImageMetadata[];
 };
 
-export type { StoryEntry };
+export type { EnvironmentEntry };
