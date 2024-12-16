@@ -4,7 +4,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "City Of Dreams",
     environment_prompt:
       "a vibrant city hums with endless activity beneath a brilliant blue sky. towering skyscrapers gleam, their windows reflecting boundless ambition. as the day progresses, the city evolves; neon lights replace the sunlight, illuminating a new kind of energy. alleyways buzz with whispers of plans and desires, while crowded clubs echo with fleeting laughter. above it all, a rooftop garden thrives in silence, untouched by the chaos below. in the balance of daylight and nightlife, the city pulses with possibility.",
-    environment_moral: "dreams thrive in both light and shadow.",
     images: [
       {
         original_file_name: "City Of Dreams (1).jpg",
@@ -252,7 +251,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "Midnight Crow",
     environment_prompt:
       "the city slumbers under a silver moon. perched atop a spired cathedral, a crow preens its feathers, its jet-black form stark against the glowing night sky. below, silent streets stretch endlessly, bathed in the soft glow of forgotten lampposts. the crow takes flight, gliding gracefully over the quiet cityscape. its sharp eyes catch fleeting movements\u00e2\u20ac\u201da fox slipping into shadows, a moth dancing near a flame. the crow circles once more before vanishing into the star-specked void. ",
-    environment_moral: "observers find life where others see emptiness.",
     images: [
       {
         original_file_name: "Midnight Crow (1).jpg",
@@ -500,7 +498,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "Midnight Meadows",
     environment_prompt:
       "under a moonlit sky, a meadow stretches endlessly, bathed in silver light. wildflowers sway gently, whispering secrets to the cool night breeze. a lone wanderer pauses, absorbing the serenity of the starlit expanse. the rustle of leaves and the distant call of an owl harmonize with the wanderer\u00e2\u20ac\u2122s thoughts. each step on the dewy grass unveils a quiet symphony of nature\u00e2\u20ac\u2122s heartbeat. the wanderer gazes at the heavens, feeling a profound connection to the infinite. as dawn begins to edge the horizon, they walk on, carrying the meadow\u00e2\u20ac\u2122s peace within.",
-    environment_moral: "tranquility nurtures clarity.",
     images: [
       {
         original_file_name: "Midnight Meadows (1).jpg",
@@ -748,7 +745,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "Night Of The Technomancer",
     environment_prompt:
       "the cyberpunk skyline flickers with electricity as a storm brews. lightning arcs across the horizon, illuminating a forgotten tower coated in moss. inside, mechanical spiders scuttle through broken wires, their luminescent bodies mending ancient circuits. the tower hums to life, its core pulsing faintly as forgotten systems awaken. outside, the storm fades, leaving the city bathed in the glow of its artificial moon. the tower stands renewed, its purpose reclaimed.",
-    environment_moral: "renewal arises when forgotten connections are restored.",
     images: [
       {
         original_file_name: "Night Of The Technomancer (1).jpg",
@@ -996,7 +992,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "Starless Night",
     environment_prompt:
       "on a moonless night, the ocean churns restlessly under a black sky. bioluminescent waves crash against a rocky shore, their glow illuminating the rugged coastline. a lone jellyfish drifts near the surface, its tentacles pulsing with radiant light. beneath the waves, shadows dance in the eerie glow, hinting at unseen wonders. the jellyfish moves with purpose, its light a solitary guide through the darkness.",
-    environment_moral: "in the absence of stars, even the smallest light can inspire awe.",
     images: [
       {
         original_file_name: "Starless Night (1).jpg",
@@ -1244,7 +1239,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Aurora Cyber Grove",
     environment_prompt:
       "at dawn, the aurora cyber grove awakens under the first light of morning. gigantic trees integrated with luminous fiber optics illuminate the landscape with soft glows. dewdrops on leaves refract the light, creating a mesmerizing display of colors. automated drones flit between branches, tending to the bio-tech flora that thrives in this harmonious blend of nature and technology. a serene river winds through the grove, its waters enhanced with bioluminescent particles that shimmer in the growing light. the air is crisp, filled with the gentle hum of machinery and the rustling of leaves, embodying the perfect balance of innovation and tranquility.",
-    environment_moral: "harmony between nature and technology fosters sustainable beauty.",
     images: [
       {
         original_file_name: "The Aurora Cyber Grove (1).jpg",
@@ -1492,7 +1486,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Dawn Celestial Observatory",
     environment_prompt:
       "at dawn, the celestial observatory awakens beneath a sky painted with the first light of day. advanced telescopes and holographic displays are meticulously aligned to capture the celestial phenomena of the morning sky. the observatory\u00e2\u20ac\u2122s sleek, reflective surfaces glimmer as the sun rises, enhancing its architectural elegance. autonomous maintenance bots ensure each instrument operates flawlessly, maintaining the observatory\u00e2\u20ac\u2122s pristine condition. surrounding the structure, lush gardens and tranquil ponds reflect the morning hues, creating a peaceful environment for astronomical study. the harmonious blend of science and nature under the dawn\u00e2\u20ac\u2122s light exemplifies the pursuit of knowledge amidst serene beauty.",
-    environment_moral: "the pursuit of knowledge thrives in harmony with natural beauty.",
     images: [
       {
         original_file_name: "The Dawn Celestial Observatory (1).jpg",
@@ -1740,7 +1733,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Dawn Mist Cyber Plain",
     environment_prompt:
       "at dawn, the cyber plains are enveloped in a serene mist that glows with embedded nanolights. rolling hills covered in smart grass sway gently in the morning breeze, their blades shimmering with light-responsive fibers. autonomous drones patrol the expansive landscape, maintaining the seamless integration of technology and nature. reflective pools scattered across the plains capture the soft light of sunrise, creating a mosaic of colors on the ground. the horizon is painted with pastel hues, blending the natural beauty of the plains with the futuristic elements that enhance its tranquility. the harmonious blend of technology and nature creates a peaceful and captivating morning landscape.",
-    environment_moral: "tranquility emerges from the seamless blend of technology and nature.",
     images: [
       {
         original_file_name: "The Dawn Mist Cyber Plain (1).jpg",
@@ -1988,7 +1980,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Dawn Radiance Skyway",
     environment_prompt:
       "in the early morning, the radiance skyway stretches across the horizon, connecting the city with its surrounding landscapes. the first sunlight bathes the skyway in a golden hue, highlighting its elegant arches and transparent surfaces. autonomous trams glide smoothly along the elevated path, offering panoramic views of the awakening city and the lush countryside beyond. smart lighting systems adjust to the rising sun, enhancing visibility and aesthetic appeal. below, green parks and flowing rivers create a picturesque backdrop, while drones monitor the infrastructure, ensuring safety and efficiency. the radiance skyway embodies the seamless integration of transportation, technology, and natural beauty as day begins.",
-    environment_moral: "seamless integration of technology enhances connectivity and beauty.",
     images: [
       {
         original_file_name: "The Dawn Radiance Skyway (1).jpg",
@@ -2236,7 +2227,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Dawn Radiant Solar Farm",
     environment_prompt:
       "at dawn, the radiant solar farm stretches beneath the awakening sky, its vast arrays of solar panels gleaming in the first light. rows of solar arrays capture the morning sun, powering the surrounding eco-friendly infrastructure. automated maintenance bots traverse the fields, ensuring optimal efficiency and performance. the horizon is painted with pastel colors as the sun rises, reflecting off the sleek surfaces of the panels. nearby, smart greenhouses begin to glow as artificial lights dim, transitioning to natural illumination. the harmonious integration of renewable energy and sustainable agriculture showcases a future where technology and nature work together to create a thriving, eco-conscious landscape.",
-    environment_moral: "renewable energy harmonizes with the beauty of a new day.",
     images: [
       {
         original_file_name: "The Dawn Radiant Solar Farm (1).jpg",
@@ -2484,7 +2474,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Dawn Tranquil Lake Sanctuary",
     environment_prompt:
       "at dawn, tranquil lake sanctuary reflects the soft hues of the rising sun, creating a serene and peaceful environment. the lake\u00e2\u20ac\u2122s glassy surface mirrors the pastel sky, enhancing the natural beauty of the landscape. surrounding the water, lush vegetation and blooming flowers add vibrant colors to the tranquil scene. automated water purifiers maintain the pristine condition of the lake, ensuring a harmonious balance between nature and technology. mist rises gently from the water, adding a mystical quality to the morning light. the sanctuary embodies a perfect blend of untouched nature and sustainable innovation, offering a peaceful retreat under the glow of dawn.",
-    environment_moral: "peace emerges from the harmonious blend of nature and technology.",
     images: [
       {
         original_file_name: "The Dawn Tranquil Lake Sanctuary (1).jpg",
@@ -2732,7 +2721,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Daylight Guardian",
     environment_prompt:
       "amid the sunlit ruins of a futuristic city, ivy crawls up metallic structures, weaving nature into forgotten technology. a solar-powered drone, long abandoned, buzzes softly, its once-vivid paint faded to pastel. it hovers above the ruins, scanning for movement, unaware of its solitude. beneath it, wildflowers bloom between shattered tiles, vibrant and unyielding. the drone circles once more, its sensors dim, yet it continues its unending watch.",
-    environment_moral: "purpose endures, even when forgotten by the world.",
     images: [
       {
         original_file_name: "The Daylight Guardian (1).jpg",
@@ -2980,7 +2968,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Desert Bloom",
     environment_prompt:
       "the desert slumbers under a blazing sun, its surface cracked and desolate. as dusk falls, the temperature cools, and hidden life emerges. a single cactus unfurls a brilliant flower, its vibrant petals glowing softly in the fading light. nearby, a lizard basks in the warmth of the remaining daylight before retreating into the sand. the desert transforms, teeming with life that flourishes in the brief reprieve of dusk.",
-    environment_moral: "beauty often hides in the harshest of places.",
     images: [
       {
         original_file_name: "The Desert Bloom (1).jpg",
@@ -3228,7 +3215,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Dusk Horizon Floating Metropolis",
     environment_prompt:
       "at dusk, the floating metropolis glistens against the vibrant horizon. modular buildings with reflective surfaces float gracefully on the water, their structures illuminated by soft, ambient lighting. the setting sun casts a spectrum of colors across the sky, reflecting off the city\u00e2\u20ac\u2122s sleek design. autonomous vessels navigate between the floating structures, their lights creating shimmering trails on the water\u00e2\u20ac\u2122s surface. elevated walkways and transparent bridges connect the metropolis, offering panoramic views of the twilight sky and surrounding waters. the harmonious blend of advanced architecture and natural beauty creates a breathtaking scene, embodying the future of sustainable urban living at dusk.",
-    environment_moral: "sustainable architecture harmonizes with the natural beauty of the horizon.",
     images: [
       {
         original_file_name: "The Dusk Horizon Floating Metropolis (1).jpg",
@@ -3476,7 +3462,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Dusk Over Neon Metropolis",
     environment_prompt:
       "as dusk falls, the neon metropolis transforms into a dazzling spectacle of lights and shadows. towering skyscrapers adorned with vibrant led displays reflect the fading sunlight, creating a kaleidoscope of colors across the skyline. elevated highways buzz with autonomous vehicles, their trails of light weaving through the city. rooftop gardens glow with bioluminescent plants, offering pockets of serenity amidst the urban hustle. holographic advertisements flicker to life, adding layers of digital artistry to the vibrant landscape. the transition from day to night highlights the dynamic energy and futuristic charm of the bustling metropolis.",
-    environment_moral: "transition brings out the hidden brilliance of a city.",
     images: [
       {
         original_file_name: "The Dusk Over Neon Metropolis (1).jpg",
@@ -3724,7 +3709,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Dusk Walk",
     environment_prompt:
       "the forest comes alive as dusk settles over the land. shadows deepen, creating a patchwork of light and dark along the wooded path. a family of deer steps cautiously from the thicket, ears twitching as the wind carries distant rustles. fireflies emerge, their bioluminescence weaving tiny constellations through the undergrowth. the stream babbles softly nearby, an eternal companion to the unfolding night. the world breathes in unison, a tapestry woven by unseen hands.",
-    environment_moral: "connection thrives in the quiet unity of the natural world.",
     images: [
       {
         original_file_name: "The Dusk Walk (1).jpg",
@@ -3972,7 +3956,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Flickering Light",
     environment_prompt:
       "in an abandoned lighthouse, a single lantern sways from the rafters, casting shadows over peeling walls. the sea rages outside, waves crashing against jagged rocks, sending sprays into the cold air. inside, the beacon flickers weakly, its light barely cutting through the storm. a seagull perches on a broken railing, staring into the vast, churning abyss. the storm crescendos, and as it fades, the lantern steadies. the sea quiets, leaving the lighthouse to its solitary vigil.",
-    environment_moral: "persistence outlasts even the fiercest storms.",
     images: [
       {
         original_file_name: "The Flickering Light (1).jpg",
@@ -4220,7 +4203,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Ghost Of Tomorrow",
     environment_prompt:
       "in the heart of a glassy canyon, wind carves echoes of songs long forgotten. the canyon walls shimmer as the sun rises, casting fractured rainbows across the valley floor. a single shard of ancient machinery juts from the earth, its purpose obscured by time. as daylight intensifies, shadows play tricks on the mind, creating forms that seem to move, whispering of what once was.",
-    environment_moral: "memories linger even when their meaning fades.",
     images: [
       {
         original_file_name: "The Ghost Of Tomorrow (1).jpg",
@@ -4468,7 +4450,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Last Light",
     environment_prompt:
       "on a distant planet, a lone mountain glows faintly in the twilight. bioluminescent moss carpets its cliffs, lighting the path for nocturnal creatures. as the sky darkens, twin moons rise, casting a gentle silver light. tiny, glowing insects flit through the air, weaving intricate patterns that mimic constellations. the mountain stands as a beacon, unyielding against the silence of the void, its light guiding all who approach.",
-    environment_moral: "even in isolation, light leads the way.",
     images: [
       {
         original_file_name: "The Last Light (1).jpg",
@@ -4716,7 +4697,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Last Sunset",
     environment_prompt:
       "in a dystopian wasteland, the sun dips into a crimson horizon for the final time. people gather silently atop a barren cliff, their faces etched with loss and longing. as the glowing orb fades, shadows stretch across the ruins of a broken world. a child holds a withered flower, its fragile beauty a symbol of hope. the air cools, and silence reigns as darkness claims the sky. the crowd disperses, carrying with them the promise of tomorrow amidst the ashes of today. the world breathes, waiting for a rebirth that may never come.",
-    environment_moral: "endings hold the seeds of new beginnings.",
     images: [
       {
         original_file_name: "The Last Sunset (1).jpg",
@@ -4964,7 +4944,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Midnight Glimmering Fjord",
     environment_prompt:
       "under the midnight moon, glimmering fjord mirrors the celestial spectacle above. the calm waters reflect the twinkling stars and the luminous aurora borealis, creating a stunning display of light. snow-capped mountains rise majestically along the fjord\u00e2\u20ac\u2122s edges, their peaks illuminated by subtle led accents. autonomous ice shapers maintain the pristine beauty of the frozen landscape, ensuring the clarity and brilliance of the ice remain undisturbed. bioluminescent algae in the water emit a gentle glow, enhancing the ethereal atmosphere. the tranquil and magical scene embodies the untouched grandeur of nature, amplified by the subtle integration of sustainable technology under the cover of midnight.",
-    environment_moral: "nature's grandeur is amplified by gentle technological harmony.",
     images: [
       {
         original_file_name: "The Midnight Glimmering Fjord (1).jpg",
@@ -5212,7 +5191,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Midnight Industrial Sprawl",
     environment_prompt:
       "under the cloak of midnight, the dystopian industrial sprawl reveals its imposing presence. massive factories with towering smokestacks emit a faint, steady glow from the machinery within. the landscape is dominated by concrete structures and sprawling complexes, interconnected by a maze of pipes and conveyor belts. dim streetlights cast long shadows on the deserted roads, while the distant sounds of clanging metal and mechanical hums echo through the night. the oppressive atmosphere is heightened by the absence of natural light, emphasizing the relentless pursuit of production and the stark reality of a society driven by industrial might.",
-    environment_moral: "unchecked ambition can overshadow humanity.",
     images: [
       {
         original_file_name: "The Midnight Industrial Sprawl (1).jpg",
@@ -5460,7 +5438,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Midnight Quantum Plaza",
     environment_prompt:
       "under the cover of midnight, quantum plaza pulses with futuristic energy. holographic sculptures float above the plaza, casting intricate patterns on the sleek, metallic surfaces below. neon lights reflect off glass structures, creating a mesmerizing interplay of colors and shadows. autonomous robots navigate the space, maintaining the plaza\u00e2\u20ac\u2122s pristine condition and enhancing its technological marvels. interactive digital installations engage the surroundings, projecting dynamic visuals that dance across the night sky. the air is filled with the soft hum of advanced machinery, blending seamlessly with the ambient light, creating an atmosphere of innovation and awe.",
-    environment_moral: "innovation thrives in the quiet moments of the night.",
     images: [
       {
         original_file_name: "The Midnight Quantum Plaza (1).jpg",
@@ -5708,7 +5685,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Midnight Quantum Tower",
     environment_prompt:
       "under the midnight sky, the quantum tower pierces the heavens with its luminous presence. the tower\u00e2\u20ac\u2122s sleek design features dynamic led panels that shift colors, creating a mesmerizing light show against the dark backdrop. reflective surfaces capture and amplify the tower\u00e2\u20ac\u2122s glow, casting intricate patterns on the surrounding landscape. autonomous drones hover around the structure, maintaining its technological marvels and ensuring the seamless operation of its advanced systems. the quantum tower stands as a beacon of innovation and architectural brilliance, transforming the night into a radiant spectacle that highlights the fusion of technology and aesthetic elegance.",
-    environment_moral: "innovation and elegance illuminate the night with brilliance.",
     images: [
       {
         original_file_name: "The Midnight Quantum Tower (1).jpg",
@@ -5956,7 +5932,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Midnight Radiant Towers",
     environment_prompt:
       "under the midnight sky, radiant towers pierce the heavens with their sleek, illuminated spires. each tower is adorned with dynamic led patterns that change color and intensity, creating a mesmerizing skyline against the dark backdrop. transparent skywalks connect the towers, allowing autonomous drones to navigate effortlessly between them. reflective surfaces capture and amplify the tower lights, casting intricate shadows on the surrounding landscape. below, the city hums with energy as holographic advertisements and virtual displays light up the night. the radiant towers stand as symbols of futuristic architecture and technological prowess, transforming the night into a vibrant and captivating urban spectacle.",
-    environment_moral: "architectural brilliance transforms the night into a vibrant spectacle.",
     images: [
       {
         original_file_name: "The Midnight Radiant Towers (1).jpg",
@@ -6204,7 +6179,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Midnight Reflection Cyber Lake",
     environment_prompt:
       "under the midnight sky, cyber lake becomes a mirror of shimmering lights and dark waters. the lake's surface reflects the vibrant colors of surrounding holographic installations and illuminated pathways, creating a stunning visual symphony. autonomous boats glide silently across the water, leaving trails of soft luminescence in their wake. bioluminescent plants along the shore emit a gentle glow, enhancing the magical ambiance. interactive light displays respond to movement, casting dynamic patterns that dance on the lake\u00e2\u20ac\u2122s surface. the quiet serenity of cyber lake at midnight offers a peaceful escape, where technology and nature blend seamlessly to create a captivating nocturnal landscape.",
-    environment_moral: "reflection and innovation create captivating moments of peace.",
     images: [
       {
         original_file_name: "The Midnight Reflection Cyber Lake (1).jpg",
@@ -6452,7 +6426,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Morning Serenity Meadow",
     environment_prompt:
       "in the early morning light, serenity meadow awakens with a soft glow. dew-kissed wildflowers blanket the rolling hills, their vibrant colors enhanced by the golden sunbeams. a crystal-clear stream winds through the meadow, its waters reflecting the pastel hues of the dawn sky. tall grasses sway gently in the breeze, creating a soothing rustle that harmonizes with the natural sounds of the morning. mist rises from the water's surface, adding a mystical quality to the tranquil landscape. the serene atmosphere invites peace and reflection, embodying the untouched beauty of nature in its purest form.",
-    environment_moral: "tranquility blossoms in the embrace of nature\u00e2\u20ac\u2122s morning light.",
     images: [
       {
         original_file_name: "The Morning Serenity Meadow (1).jpg",
@@ -6700,7 +6673,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Neon Veil",
     environment_prompt:
       "the city hums with neon energy. glowing signs pulse, casting vivid hues over sleek metallic buildings. in an alley, a stray cat slinks through the urban maze, its luminous eyes reflecting the swirling colors of the cyberpunk night. above, automated drones weave through the sky, their hum blending with distant mechanical rhythms. the cat pauses near a discarded hologram projector, its flicker revealing fleeting moments of forgotten hienvironment. the feline watches, unbothered, before vanishing into the night\u00e2\u20ac\u2122s labyrinth.",
-    environment_moral: "even amidst artificial chaos, life adapts and thrives.",
     images: [
       {
         original_file_name: "The Neon Veil (1).jpg",
@@ -6948,7 +6920,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Silent Horizon",
     environment_prompt:
       "at dusk, the countryside transforms into a masterpiece of gentle hues. rolling hills melt into soft purples, and distant mountains glow under the last touch of sunlight. a solitary figure stands by an ancient oak, gazing at the tranquil horizon. the wind carries scents of earth and wildflowers, blending with the songs of crickets. time seems to pause, allowing the figure to bask in the fleeting beauty of the day\u00e2\u20ac\u2122s end. as twilight deepens, stars begin to appear, and the world surrenders to the night.",
-    environment_moral: "beauty lies in fleeting moments of stillness.",
     images: [
       {
         original_file_name: "The Silent Horizon (1).jpg",
@@ -7196,7 +7167,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Twilight Cyber Nexus",
     environment_prompt:
       "as dusk settles over the cyber nexus, the cityscape transforms into a blend of natural twilight and artificial illumination. skyscrapers with sleek, reflective surfaces catch the last rays of the sun while their interiors glow with vibrant led lights. elevated highways buzz with autonomous vehicles, weaving through the urban sprawl. parks and green spaces are illuminated with bioluminescent flora, providing a serene contrast to the high-tech environment. the merging of day and night creates a unique ambiance where technology and nature coexist, offering a futuristic yet harmonious setting that invites exploration and wonder.",
-    environment_moral: "balance between technology and nature creates harmony.",
     images: [
       {
         original_file_name: "The Twilight Cyber Nexus (1).jpg",
@@ -7444,7 +7414,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Twilight Echo Urban Forest",
     environment_prompt:
       "as twilight approaches, the urban forest transforms into a luminous sanctuary within the city. towering trees equipped with smart lighting systems illuminate the pathways with soft, ambient glows. interactive holographic displays provide information about the flora and fauna, engaging visitors in the natural beauty around them. autonomous caretakers tend to the plants, ensuring a healthy and vibrant ecosystem. reflective ponds mirror the colorful hues of the setting sun, creating a serene atmosphere. the blend of advanced technology and lush greenery offers a peaceful retreat, where city dwellers can connect with nature and unwind amidst the glowing twilight of the urban forest.",
-    environment_moral: "integrating technology with nature creates peaceful urban sanctuaries.",
     images: [
       {
         original_file_name: "The Twilight Echo Urban Forest (1).jpg",
@@ -7692,7 +7661,6 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "Whispering Trees",
     environment_prompt:
       "at dusk, the forest whispers its secrets. wind swirls through ancient branches, carrying scents of pine and damp earth. squirrels scurry to their nests while bats take flight, weaving erratic paths through the deepening twilight. the air hums with the life of unseen creatures, their calls blending into an eerie harmony. above, the first stars appear, reflected in a still, moonlit pond. the forest embraces the night, thriving in its quiet transformation.",
-    environment_moral: "the world speaks to those who listen closely.",
     images: [
       {
         original_file_name: "Whispering Trees (1).jpg",

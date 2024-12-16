@@ -6,8 +6,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import React, { useState, useEffect, memo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FiBook, FiInfo, FiCamera, FiX, FiBookOpen, FiDownload, FiClipboard } from "react-icons/fi";
 import { FaBookOpen, FaFeatherAlt, FaArrowDown, FaScroll, FaRegCompass, FaRegHeart } from "react-icons/fa";
-import { FiBook, FiInfo, FiCamera, FiX, FiBookOpen, FiAlertCircle, FiDownload, FiClipboard } from "react-icons/fi";
 // ====================================================================
 type ImageMetadata = {
   original_file_name: string;
@@ -27,13 +27,11 @@ type ImageMetadata = {
 type EnvironmentEntry = {
   environment_title: string;
   environment_prompt: string;
-  environment_moral: string;
   images: ImageMetadata[];
 };
 type CardData = {
   title: string;
   description: string;
-  environment_moral: string;
   images: ImageMetadata[];
 };
 type CardProps = {
@@ -69,34 +67,49 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
         {card.images.slice(0, 4).map((image, imgIdx) => {
           const isHovered = hoveredImage[cardIdx] === imgIdx;
           const isActive = !isHovered && autoImageIndex[cardIdx] === imgIdx;
+          const gradientStyle = isHovered
+            ? {
+                background: `linear-gradient(135deg, ${image.primary}, ${image.secondary}, ${image.tertiary})`,
+                borderRadius: "10px",
+                padding: "2px"
+              }
+            : {};
           return (
             <motion.div
               key={imgIdx}
-              className={`absolute top-0 h-full rounded-lg overflow-hidden transition-all duration-300 ${
-                isHovered ? "border-[2px] sm:border-[4px] border-dotted border-transparent bg-gradient-to-br from-[#88c0d0] via-[#81a1c1] to-[#5e81ac]" : "border-transparent blur-[1px]"
-              }`}
+              transition={{ duration: 0.2, ease: "easeInOut" }}
               style={{
-                left: `${imgIdx * 25}%`,
+                ...gradientStyle,
                 zIndex: 4 - imgIdx,
+                left: `${imgIdx * 25}%`,
                 willChange: "width, left"
               }}
-              transition={{ duration: 0.2, ease: "easeInOut" }}
+              className={`absolute top-0 h-full rounded-lg overflow-hidden transition-all duration-300 ${isHovered ? "" : "sm:blur-[1px]"}`}
               animate={{
-                width: isHovered || isActive ? "70%" : "25%",
+                width: isHovered || isActive ? "80%" : "25%",
                 left: isHovered || isActive ? (imgIdx === card.images.slice(0, 4).length - 1 ? "30%" : imgIdx === 0 ? "0%" : `${imgIdx * 7.5}%`) : `${imgIdx * 25}%`
               }}
               onMouseLeave={() => handleMouseLeave(cardIdx)}
               onMouseEnter={() => handleMouseEnter(cardIdx, imgIdx)}
             >
-              {image.previewLink ? (
-                <div className="w-full h-full overflow-hidden rounded-lg transition-transform transform hover:scale-125 duration-300">
-                  <Image src={image.previewLink} alt={`Preview ${imgIdx + 1}`} fill className="object-cover" unoptimized sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
-                </div>
-              ) : (
-                <div className="flex items-center justify-center w-full h-full bg-[#313244]">
-                  <FiCamera className="text-[#7f849c] text-4xl" />
-                </div>
-              )}
+              <div className={`w-full h-full bg-[#313244] rounded-lg overflow-hidden ${isHovered || isActive ? "" : "filter saturate-[0.3]"}`}>
+                {image.previewLink ? (
+                  <motion.div
+                    initial={{ scale: 1 }}
+                    animate={{
+                      scale: isHovered || isActive ? 1.5 : 1,
+                      transition: { duration: 0.3, ease: "easeInOut" }
+                    }}
+                    className="w-full h-full"
+                  >
+                    <Image src={image.previewLink} alt={`Preview ${imgIdx + 1}`} fill className="object-cover" unoptimized sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                  </motion.div>
+                ) : (
+                  <div className="flex items-center justify-center w-full h-full bg-[#313244]">
+                    <FiCamera className="text-[#7f849c] text-4xl" />
+                  </div>
+                )}
+              </div>
             </motion.div>
           );
         })}
@@ -127,30 +140,28 @@ const Header: React.FC<{ onSearch: (query: string) => void }> = ({ onSearch }) =
   const [searchQuery, setSearchQuery] = useState("");
   const handleSearch = () => onSearch(searchQuery);
   return (
-    <header className="fixed top-0 left-0 w-full bg-[#1e1e2e]/40 backdrop-blur-md shadow-md z-20">
+    <header className="fixed top-0 left-0 w-full  bg-black/50 backdrop-blur-md shadow-black shadow-2xl border-b-4 border-double border-black z-20">
       <div className="container mx-auto px-4 py-4 flex flex-wrap items-center justify-between">
-        <div className="mb-4 w-full flex justify-center md:justify-end">
-          <div className="flex items-center bg-[#3b4252] text-[#cdd6f4] px-4 py-2 rounded-lg w-full">
-            <input
-              type="text"
-              placeholder="Search Your Favourites..."
-              className="bg-transparent outline-none text-sm md:text-base placeholder-[#a6adc8] flex-grow"
-              value={searchQuery}
-              onChange={(e) => {
-                setSearchQuery(e.target.value);
-                onSearch(e.target.value);
-              }}
-            />
-            <button onClick={handleSearch} className="ml-4 text-[#cdd6f4] hover:text-[#89b4fa] text-lg" aria-label="Search">
-              <FaRegCompass />
-            </button>
-          </div>
-        </div>
-        <div className="flex items-center space-x-6">
+        <div className="flex items-center space-x-4 md:space-x-6 w-full md:w-auto mb-4 md:mb-0">
           <h1 className="text-xl md:text-2xl font-bold text-[#cdd6f4] flex items-center nordic-gradient-text">
             <FiBook className="inline-block mr-2" />
-            picBook<span className="ml-2 text-xs animate-bounce">by Shovit</span>
+            picBook<span className="ml-2 text-xs animate-bounce hidden sm:inline">by Shovit</span>
           </h1>
+        </div>
+        <div className="flex items-center bg-[#3b4252] text-[#cdd6f4] px-4 py-2 rounded-lg w-full md:w-auto max-w-lg">
+          <input
+            type="text"
+            placeholder="Search Your Favourites..."
+            className="bg-transparent outline-none text-sm md:text-base placeholder-[#a6adc8] flex-grow"
+            value={searchQuery}
+            onChange={(e) => {
+              setSearchQuery(e.target.value);
+              onSearch(e.target.value);
+            }}
+          />
+          <button onClick={handleSearch} className="ml-4 text-[#cdd6f4] hover:text-[#89b4fa] text-lg" aria-label="Search">
+            <FaRegCompass />
+          </button>
         </div>
       </div>
     </header>
@@ -159,7 +170,7 @@ const Header: React.FC<{ onSearch: (query: string) => void }> = ({ onSearch }) =
 // ====================================================================
 const Footer: React.FC = () => {
   return (
-    <footer className="fixed bottom-0 left-0 w-full bg-[#1e1e2e]/60 backdrop-blur-md shadow-md py-2 sm:py-4 z-20">
+    <footer className="relative w-full bg-black/50 backdrop-blur-md shadow-md py-2 sm:py-4 z-20">
       <div className="container mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-y-0">
         <div className="text-[#cdd6f4] flex items-center space-x-2 font-semibold text-sm sm:text-base">
           <FaBookOpen />
@@ -355,12 +366,7 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
               <FiBookOpen className="text-[#89b4fa] text-lg sm:text-xl" />
               {card.title}
             </h4>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6 text-[#a6adc8] capitalize">{card.description}</p>
-            <h5 className="text-base sm:text-lg md:text-xl font-semibold mb-1 sm:mb-2 text-[#89b4fa] flex items-center gap-2">
-              <FiAlertCircle className="text-lg sm:text-xl" />
-              Moral of the Environment
-            </h5>
-            <p className="text-sm sm:text-base md:text-lg text-[#cdd6f4] capitalize">{card.environment_moral}</p>
+            <p className="text-sm leading-relaxed mb-4 sm:mb-6 text-[#a6adc8] capitalize">{card.description}</p>
           </div>
           <button
             onClick={onClose}
@@ -377,7 +383,7 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
 // ====================================================================
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative min-h-[70vh] flex flex-col items-center justify-center text-[#cdd6f4] px-4 text-center overflow-hidden">
+    <section className="relative h-screen flex flex-col items-center justify-center text-[#cdd6f4] px-4 text-center overflow-hidden">
       <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold leading-tight mb-4 flex flex-wrap items-center justify-center nordic-gradient-text text-center">
         <span>Stories Behind Pictures</span>
       </h1>
@@ -395,9 +401,10 @@ const HeroSection: React.FC = () => {
 const ExploreSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
   const [loading, setLoading] = useState(true);
   const [cards, setCards] = useState<CardData[]>([]);
-  const [filteredCards, setFilteredCards] = useState<CardData[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const [filteredCards, setFilteredCards] = useState<CardData[]>([]);
   const [selectedCard, setSelectedCard] = useState<null | number>(null);
+  const [pausedCards, setPausedCards] = useState<Record<number, boolean>>({});
   const [autoImageIndex, setAutoImageIndex] = useState<Record<number, number>>({});
   const [hoveredImage, setHoveredImage] = useState<Record<number, number | null>>({});
   useEffect(() => {
@@ -406,22 +413,23 @@ const ExploreSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
         const response = await fetch("/api/images");
         if (!response.ok) throw new Error("Failed to fetch data");
         const data: Record<string, EnvironmentEntry> = await response.json();
-        let transformedCards = Object.values(data).map((entry) => {
-          const shuffledImages = shuffleArray(
+        const transformedCards = Object.values(data).map((entry) => ({
+          title: entry.environment_title,
+          description: entry.environment_prompt,
+          images: shuffleArray(
             entry.images.map((image) => ({
               ...image,
               downloadLink: atob(image.downloadLink),
               previewLink: atob(image.previewLink)
             }))
-          );
-          return { title: entry.environment_title, description: entry.environment_prompt, environment_moral: entry.environment_moral, images: shuffledImages };
-        });
-        transformedCards = shuffleArray(transformedCards);
-        setCards(transformedCards);
+          )
+        }));
+        setCards(shuffleArray(transformedCards));
         setFilteredCards(transformedCards);
-        setLoading(false);
         setAutoImageIndex(transformedCards.reduce((acc, _, idx) => ({ ...acc, [idx]: 0 }), {}));
         setHoveredImage(transformedCards.reduce((acc, _, idx) => ({ ...acc, [idx]: null }), {}));
+        setPausedCards(transformedCards.reduce((acc, _, idx) => ({ ...acc, [idx]: false }), {}));
+        setLoading(false);
       } catch (err) {
         setError((err as Error).message);
         setLoading(false);
@@ -433,24 +441,33 @@ const ExploreSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
     const interval = setInterval(() => {
       setAutoImageIndex((prevIndex) =>
         Object.keys(prevIndex).reduce((newIndex, cardIdx) => {
-          const card = cards[parseInt(cardIdx)];
-          const nextIndex = (prevIndex[parseInt(cardIdx)] + 1) % (card?.images.length || 1);
-          return { ...newIndex, [cardIdx]: nextIndex };
+          const idx = parseInt(cardIdx);
+          if (pausedCards[idx]) return { ...newIndex, [idx]: prevIndex[idx] };
+          const card = cards[idx];
+          const nextIndex = (prevIndex[idx] + 1) % (card?.images.length || 1);
+          return { ...newIndex, [idx]: nextIndex };
         }, {})
       );
-    }, 4000);
+    }, 2000);
     return () => clearInterval(interval);
-  }, [cards]);
+  }, [cards, pausedCards]);
+  const handleMouseEnter = (cardIdx: number, imgIdx: number) => {
+    setPausedCards((prev) => ({ ...prev, [cardIdx]: true }));
+    setHoveredImage((prev) => ({ ...prev, [cardIdx]: imgIdx }));
+  };
+  const handleMouseLeave = (cardIdx: number) => {
+    setPausedCards((prev) => ({ ...prev, [cardIdx]: false }));
+    setAutoImageIndex((prev) => {
+      const lastHoveredImage = hoveredImage[cardIdx];
+      if (lastHoveredImage !== null) return { ...prev, [cardIdx]: lastHoveredImage };
+      return prev;
+    });
+    setHoveredImage((prev) => ({ ...prev, [cardIdx]: null }));
+  };
   useEffect(() => {
     const lowercasedQuery = searchQuery.toLowerCase();
-    setFilteredCards(
-      cards.filter(
-        (card) => card.title.toLowerCase().includes(lowercasedQuery) || card.description.toLowerCase().includes(lowercasedQuery) || card.environment_moral.toLowerCase().includes(lowercasedQuery)
-      )
-    );
+    setFilteredCards(cards.filter((card) => card.title.toLowerCase().includes(lowercasedQuery) || card.description.toLowerCase().includes(lowercasedQuery)));
   }, [searchQuery, cards]);
-  const handleMouseLeave = (cardIdx: number) => setHoveredImage((prev) => ({ ...prev, [cardIdx]: null }));
-  const handleMouseEnter = (cardIdx: number, imgIdx: number) => setHoveredImage((prev) => ({ ...prev, [cardIdx]: imgIdx }));
   return (
     <>
       <ToastContainer />
