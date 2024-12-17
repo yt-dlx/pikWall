@@ -25,6 +25,7 @@
     "react-toastify": "^10.0.6",
     "sharp": "^0.33.5",
     "simple-git": "^3.27.0",
+    "tailwindcss-displaymodes": "^1.0.8",
     "three": "^0.171.0"
   },
   "devDependencies": {

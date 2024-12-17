@@ -1,4 +1,5 @@
 declare module "tailwind-scrollbar-hide";
+declare module "tailwindcss-displaymodes";
 declare module "three/examples/jsm/loaders/GLTFLoader" {
   import { Loader } from "three";
   export class GLTFLoader extends Loader {
