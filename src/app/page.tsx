@@ -222,7 +222,7 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
     );
   }
   return (
-    <div className="fixed inset-0 bg-[#0b0d0f]/80 backdrop-blur-md flex justify-center items-center z-50">
+    <div className="fixed top-0 inset-0 bg-[#0b0d0f]/80 flex justify-center items-center z-50">
       <motion.div
         className="bg-[#1e1e2e]/60 backdrop-blur-2xl rounded-2xl shadow-xl shadow-[#0b0d0f] border-2 border-[#89b4fa] p-4 sm:p-6 md:p-8 w-full max-h-[60vh] sm:max-h-[70vh] md:max-h-[80vh] overflow-y-auto flex flex-col lg:flex-row relative"
         transition={{ duration: 0.3, ease: "easeOut" }}
