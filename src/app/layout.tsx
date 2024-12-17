@@ -1,12 +1,14 @@
 // src/app/layout.tsx
 import "./globals.css";
 import Script from "next/script";
-import type { Metadata } from "next";
 import { Providers } from "./providers";
 import LocalFontLoader from "next/font/local";
+import type { Metadata, Viewport } from "next";
 
 const Kurale = LocalFontLoader({ variable: "--font-Kurale", src: "../fonts/Kurale.ttf" });
 const Brittany = LocalFontLoader({ variable: "--font-Brittany", src: "../fonts/Brittany.otf" });
+
+export const viewport: Viewport = { maximumScale: 1, userScalable: false };
 const defaultUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000";
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
