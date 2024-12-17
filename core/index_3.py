@@ -147,7 +147,7 @@ if __name__ == "__main__":
     inference(
         input_path=os.path.join("sources", "base"),  
         double_upscale_4x_to_16x=False, 
-        image_anime_style=False, 
+        image_anime_style=True, 
         brightness=00, 
         saturation=00, 
         sharpness=50, 
