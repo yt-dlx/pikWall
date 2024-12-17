@@ -3,7 +3,6 @@
 # ==================================================XXX==================================================
 import re
 import os
-import json
 from PIL import Image
 from rich.console import Console
 from colorthief import ColorThief
@@ -22,12 +21,7 @@ def get_top_colors(file_path, num_colors=50):
 def get_image_metadata(file_path):
     with Image.open(file_path) as img:
         return {"format": img.format, "mode": img.mode, "width": img.width, "height": img.height}
-def print_colors_in_terminal(hex_colors):
-    console.print("[bold green]INFO:[/] [#ffffff]Displaying all extracted colors:")
-    for color in hex_colors:
-        console.print(f"[bold {color} on {color}]{color}[/] [#ffffff]", end=" ")
-    console.print("\n")
-def create_json_for_image(file_path):
+def create_image_data(file_path):
     temp_file_path = create_temp_resized_image(file_path)
     try:
         hex_colors = get_top_colors(temp_file_path, num_colors=50)
@@ -37,7 +31,6 @@ def create_json_for_image(file_path):
     file_size_bytes = os.path.getsize(file_path)
     file_size_megabytes = file_size_bytes / (1024 * 1024)
     directory, original_name = os.path.split(file_path)
-    base, _ = os.path.splitext(original_name)
     image_data = {
         "original_file_name": original_name,
         "format": file_metadata["format"],
@@ -60,22 +53,25 @@ def process_images_in_folder(folder_path):
         file_path = os.path.join(folder_path, file_name)
         if os.path.isfile(file_path) and file_name.lower().endswith((".jpg", ".jpeg", ".png")):
             try:
-                image_data = create_json_for_image(file_path)
+                image_data = create_image_data(file_path)
                 base_name = re.sub(r"\s*\(\d+\)$", "", os.path.splitext(file_name)[0]).strip()
                 if base_name not in parent_data:
                     parent_data[base_name] = {
-                        "story_title": base_name,
-                        "story_prompt": "",
-                        "story_moral": "",
-                        "images": []
+                        base_name: {
+                            "environment_title": base_name,
+                            "environment_prompt": "",
+                            "images": []
+                        }
                     }
-                parent_data[base_name]["images"].append(image_data)
+                parent_data[base_name][base_name]["images"].append(image_data)
                 console.print(f"[bold green]INFO:[/] Processed image: {file_name}")
             except Exception as e:
                 console.print(f"[bold red]ERROR:[/] Could not process {file_name}. {str(e)}")
-    output_json_path = "DataBook.json"
-    with open(output_json_path, "w") as json_file:
-        json.dump(parent_data, json_file, indent=4)
-    console.print(f"[bold green]INFO:[/] All image data has been written to {output_json_path}")
+    output_ts_path = "database.ts"
+    with open(output_ts_path, "w") as ts_file:
+        ts_file.write("export const database: unknown[] = ")
+        ts_file.write(str(list(parent_data.values())).replace("'", "\"").replace("True", "true").replace("False", "false"))
+        ts_file.write(";\n")
+    console.print(f"[bold green]INFO:[/] All image data has been written to {output_ts_path}")
 process_images_in_folder(os.path.join("sources", "base"))
 # ==================================================XXX==================================================

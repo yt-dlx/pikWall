@@ -350,7 +350,7 @@ const ExploreSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
       {loading && <p className="text-center text-[#a6adc8]">Loading...</p>}
       {error && <p className="text-center text-red-500">{error}</p>}
       {!loading && !error && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4 border-[#89b4fa]/20 border-double shadow-white border-2 p-2 rounded-2xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 border-[#89b4fa]/20 border-double shadow-white border-2 p-2 rounded-2xl mx-auto">
           {filteredCards.map((card, cardIdx) => (
             <Card
               card={card}
