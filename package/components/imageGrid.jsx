@@ -12,14 +12,7 @@ const ImageGrid = ({ images, router }) => {
         numColumns={columns}
         initialNumToRender={1000}
         contentContainerStyle={styles.listContainerStyle}
-        renderItem={({ item, index }) => (
-          <ImageCard
-            router={router}
-            item={item}
-            columns={columns}
-            index={index}
-          />
-        )}
+        renderItem={({ item, index }) => <ImageCard router={router} item={item} columns={columns} index={index} />}
         estimatedItemSize={200}
       />
     </View>
@@ -28,10 +21,10 @@ const ImageGrid = ({ images, router }) => {
 const styles = StyleSheet.create({
   container: {
     minHeight: 3,
-    width: wp(100),
+    width: wp(100)
   },
   listContainerStyle: {
-    paddingHorizontal: wp(4),
-  },
+    paddingHorizontal: wp(4)
+  }
 });
 export default ImageGrid;

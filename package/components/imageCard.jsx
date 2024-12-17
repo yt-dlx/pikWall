@@ -14,35 +14,25 @@ const ImageCard = ({ item, index, columns, router }) => {
   };
 
   return (
-    <Pressable
-      onPress={() =>
-        router.push({ pathname: "home/image", params: { ...item } })
-      }
-      style={[styles.imageWrapper, !isLastInRow() && styles.spacing]}
-    >
-      <Image
-        style={[styles.image, getImageHeight()]}
-        source={item?.webformatURL}
-        contentFit="cover"
-        transition={100}
-      />
+    <Pressable onPress={() => router.push({ pathname: "home/image", params: { ...item } })} style={[styles.imageWrapper, !isLastInRow() && styles.spacing]}>
+      <Image style={[styles.image, getImageHeight()]} source={item?.webformatURL} contentFit="cover" transition={100} />
     </Pressable>
   );
 };
 const styles = StyleSheet.create({
   image: {
     height: 300,
-    width: "100%",
+    width: "100%"
   },
   imageWrapper: {
     backgroundColor: theme.colors.grayBG,
     borderRadius: theme.radius.xl,
     borderCurve: "continuous",
     overflow: "hidden",
-    marginBottom: wp(2),
+    marginBottom: wp(2)
   },
   spacing: {
-    marginRight: wp(2),
-  },
+    marginRight: wp(2)
+  }
 });
 export default ImageCard;

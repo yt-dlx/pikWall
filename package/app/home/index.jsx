@@ -1,12 +1,4 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  Pressable,
-  ScrollView,
-  TextInput,
-  ActivityIndicator,
-} from "react-native";
+import { View, Text, StyleSheet, Pressable, ScrollView, TextInput, ActivityIndicator } from "react-native";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Feather, FontAwesome6, Ionicons } from "@expo/vector-icons";
@@ -41,7 +33,7 @@ const HomeScreen = () => {
     page = 1;
     let params = {
       page,
-      ...filters,
+      ...filters
     };
     if (cat) {
       params.category = cat;
@@ -95,7 +87,7 @@ const HomeScreen = () => {
       setImages([]);
       let params = {
         page,
-        ...filters,
+        ...filters
       };
       if (activeCategory) {
         params.category = activeCategory;
@@ -113,7 +105,7 @@ const HomeScreen = () => {
       setFilters(null);
       setImages([]);
       let params = {
-        page,
+        page
       };
       if (activeCategory) {
         params.category = activeCategory;
@@ -133,7 +125,7 @@ const HomeScreen = () => {
     setImages([]);
     let params = {
       page,
-      ...filterz,
+      ...filterz
     };
     if (activeCategory) {
       params.category = activeCategory;
@@ -155,7 +147,7 @@ const HomeScreen = () => {
         ++page;
         let params = {
           page,
-          ...filters,
+          ...filters
         };
         if (activeCategory) {
           params.category = activeCategory;
@@ -173,7 +165,7 @@ const HomeScreen = () => {
   const handleScrollUp = () => {
     scrollRef?.current?.scrollTo({
       y: 0,
-      animated: true,
+      animated: true
     });
   };
 
@@ -185,27 +177,14 @@ const HomeScreen = () => {
           <Text style={styles.title}>Walpee</Text>
         </Pressable>
         <Pressable onPress={openFiltersModal}>
-          <FontAwesome6
-            name="bars-staggered"
-            size={22}
-            colors={theme.colors.neutral(0.7)}
-          />
+          <FontAwesome6 name="bars-staggered" size={22} colors={theme.colors.neutral(0.7)} />
         </Pressable>
       </View>
-      <ScrollView
-        onScroll={handleScroll}
-        scrollEventThrottle={5}
-        ref={scrollRef}
-        contentContainerStyle={{ gap: 15 }}
-      >
+      <ScrollView onScroll={handleScroll} scrollEventThrottle={5} ref={scrollRef} contentContainerStyle={{ gap: 15 }}>
         {/* Search Bar */}
         <View style={styles.searchBar}>
           <View style={styles.searchIcon}>
-            <Feather
-              name="search"
-              size={24}
-              color={theme.colors.neutral(0.4)}
-            />
+            <Feather name="search" size={24} color={theme.colors.neutral(0.4)} />
           </View>
           <TextInput
             placeholder="Search for photos..."
@@ -225,29 +204,18 @@ const HomeScreen = () => {
               }}
               style={styles.closeIcon}
             >
-              <Ionicons
-                name="close"
-                size={24}
-                color={theme.colors.neutral(0.6)}
-              />
+              <Ionicons name="close" size={24} color={theme.colors.neutral(0.6)} />
             </Pressable>
           )}
         </View>
         {/* Categories */}
         <View style={styles.categories}>
-          <Categories
-            activeCategory={activeCategory}
-            handleChangeCategory={handleChangeCategory}
-          />
+          <Categories activeCategory={activeCategory} handleChangeCategory={handleChangeCategory} />
         </View>
         {/* Applied Filter */}
         {filters && (
           <View>
-            <ScrollView
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              contentContainerStyle={styles.filters}
-            >
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.filters}>
               {Object.keys(filters).map((key, index) => {
                 return (
                   <View key={key} style={styles.filterItem}>
@@ -258,18 +226,14 @@ const HomeScreen = () => {
                           width: 30,
                           borderRadius: theme.radius.xs,
                           borderCurve: "continuous",
-                          backgroundColor: filters[key],
+                          backgroundColor: filters[key]
                         }}
                       />
                     ) : (
                       <Text style={styles.filterItemText}>{filters[key]}</Text>
                     )}
                     <Pressable onPress={() => clearFilter(key)}>
-                      <Ionicons
-                        name="close"
-                        size={16}
-                        color={theme.colors.neutral(0.9)}
-                      />
+                      <Ionicons name="close" size={16} color={theme.colors.neutral(0.9)} />
                     </Pressable>
                   </View>
                 );
@@ -278,43 +242,32 @@ const HomeScreen = () => {
           </View>
         )}
         {/* Images Masonry Grid */}
-        <View>
-          {images.length > 0 && <ImageGrid images={images} router={router} />}
-        </View>
+        <View>{images.length > 0 && <ImageGrid images={images} router={router} />}</View>
         {/* Loading */}
-        <View
-          style={{ marginBottom: 70, marginTop: images.length > 0 ? 10 : 70 }}
-        >
+        <View style={{ marginBottom: 70, marginTop: images.length > 0 ? 10 : 70 }}>
           <ActivityIndicator size={"large"} />
         </View>
       </ScrollView>
       {/* Filters Modal */}
-      <FiltersModal
-        filters={filters}
-        setFilters={setFilters}
-        onClose={closeFiltersModal}
-        onApply={applyFilters}
-        onReset={resetFilters}
-        modalRef={modalRef}
-      />
+      <FiltersModal filters={filters} setFilters={setFilters} onClose={closeFiltersModal} onApply={applyFilters} onReset={resetFilters} modalRef={modalRef} />
     </View>
   );
 };
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    gap: 15,
+    gap: 15
   },
   header: {
     marginHorizontal: wp(4),
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "center",
+    alignItems: "center"
   },
   title: {
     fontSize: hp(4),
     fontWeight: theme.fontWeight.semibold,
-    color: theme.colors.neutral(0.9),
+    color: theme.colors.neutral(0.9)
   },
   searchBar: {
     marginHorizontal: wp(4),
@@ -326,25 +279,25 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colors.white,
     padding: 6,
     paddingLeft: 10,
-    borderRadius: theme.radius.lg,
+    borderRadius: theme.radius.lg
   },
   searchIcon: {
-    padding: 8,
+    padding: 8
   },
   searchInput: {
     flex: 1,
     borderRadius: theme.radius.sm,
     paddingVertical: 10,
-    fontSize: hp(1.8),
+    fontSize: hp(1.8)
   },
   closeIcon: {
     backgroundColor: theme.colors.neutral(0.1),
     padding: 8,
-    borderRadius: theme.radius.sm,
+    borderRadius: theme.radius.sm
   },
   filters: {
     paddingHorizontal: wp(4),
-    gap: 10,
+    gap: 10
   },
   filterItem: {
     backgroundColor: theme.colors.grayBG,
@@ -354,11 +307,11 @@ const styles = StyleSheet.create({
     borderRadius: theme.radius.xs,
     borderCurve: "continuous",
     gap: 10,
-    paddingHorizontal: 10,
+    paddingHorizontal: 10
   },
   filterItemText: {
-    fontSize: hp(1.5),
-  },
+    fontSize: hp(1.5)
+  }
 });
 
 export default HomeScreen;

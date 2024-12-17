@@ -15,7 +15,7 @@ const Layout = () => {
             options={{
               headerShown: false,
               presentation: "transparentModal",
-              animation: "fade",
+              animation: "fade"
             }}
           />
         </Stack>

@@ -23,14 +23,8 @@ export const CommonFilterRow = ({ data, filterName, filters, setFilters }) => {
           let backgroundColor = isActive ? theme.colors.neutral(0.7) : "white";
           let color = isActive ? "white" : theme.colors.neutral(0.7);
           return (
-            <Pressable
-              onPress={() => onSelect(item)}
-              key={item}
-              style={[styles.outlinedButton, { backgroundColor }]}
-            >
-              <Text style={[styles.outlinedButtonText, { color }]}>
-                {capitalize(item)}
-              </Text>
+            <Pressable onPress={() => onSelect(item)} key={item} style={[styles.outlinedButton, { backgroundColor }]}>
+              <Text style={[styles.outlinedButtonText, { color }]}>{capitalize(item)}</Text>
             </Pressable>
           );
         })}
@@ -60,17 +54,17 @@ export const ColorFilter = ({ data, filterName, filters, setFilters }) => {
 };
 const styles = StyleSheet.create({
   sectionContainer: {
-    gap: 8,
+    gap: 8
   },
   sectionTitle: {
     fontSize: hp(2.4),
     fontWeight: theme.fontWeight.meduim,
-    color: theme.colors.neutral(0.8),
+    color: theme.colors.neutral(0.8)
   },
   flexRowWrap: {
     gap: 10,
     flexDirection: "row",
-    flexWrap: "wrap",
+    flexWrap: "wrap"
   },
   outlinedButton: {
     padding: 8,
@@ -78,21 +72,21 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: theme.colors.grayBG,
     borderRadius: theme.radius.xs,
-    borderCurve: "continuous",
+    borderCurve: "continuous"
   },
   outlinedButtonText: {
-    fontSize: hp(1.7),
+    fontSize: hp(1.7)
   },
   colorWrapper: {
     padding: 3,
     borderRadius: theme.radius.xs,
     borderWidth: 2,
-    borderCurve: "continuous",
+    borderCurve: "continuous"
   },
   color: {
     height: 30,
     width: 40,
     borderRadius: theme.radius.xs - 3,
-    borderCurve: "continuous",
-  },
+    borderCurve: "continuous"
+  }
 });

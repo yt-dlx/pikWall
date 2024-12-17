@@ -13,43 +13,20 @@ const WelcomeScreen = () => {
     <View style={styles.container}>
       <StatusBar style="light" />
       {/* Background Image */}
-      <Image
-        source={require("../assets/images/welcome.png")}
-        style={styles.bgImage}
-        resizeMode="cover"
-      />
+      <Image source={require("../assets/images/welcome.png")} style={styles.bgImage} resizeMode="cover" />
       {/* Linear Gradient */}
       <Animated.View entering={FadeInDown.duration(600)} style={{ flex: 1 }}>
-        <LinearGradient
-          colors={[
-            "rgba(255,255,255,0)",
-            "rgba(255,255,255,0.5)",
-            "white",
-            "white",
-          ]}
-          style={styles.gradient}
-          start={{ x: 0.5, y: 0 }}
-          end={{ x: 0.5, y: 0.8 }}
-        />
+        <LinearGradient colors={["rgba(255,255,255,0)", "rgba(255,255,255,0.5)", "white", "white"]} style={styles.gradient} start={{ x: 0.5, y: 0 }} end={{ x: 0.5, y: 0.8 }} />
         {/* Content */}
         <View style={styles.contentContainer}>
-          <Animated.Text
-            entering={FadeInDown.duration(400).springify()}
-            style={styles.title}
-          >
+          <Animated.Text entering={FadeInDown.duration(400).springify()} style={styles.title}>
             Walpee
           </Animated.Text>
-          <Animated.Text
-            entering={FadeInDown.duration(500).springify()}
-            style={styles.punchLine}
-          >
+          <Animated.Text entering={FadeInDown.duration(500).springify()} style={styles.punchLine}>
             Stunning visuals, endless possibilities
           </Animated.Text>
           <Animated.View entering={FadeInDown.duration(600).springify()}>
-            <Pressable
-              onPress={() => router.push("home")}
-              style={styles.startButton}
-            >
+            <Pressable onPress={() => router.push("home")} style={styles.startButton}>
               <Text style={styles.startText}>Let's Explore</Text>
             </Pressable>
           </Animated.View>
@@ -61,35 +38,35 @@ const WelcomeScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1
   },
   bgImage: {
     width: wp(100),
     height: hp(100),
-    position: "absolute",
+    position: "absolute"
   },
   gradient: {
     width: wp(100),
     height: hp(65),
     position: "absolute",
-    bottom: 0,
+    bottom: 0
   },
   contentContainer: {
     flex: 1,
     alignItems: "center",
     justifyContent: "flex-end",
-    gap: 14,
+    gap: 14
   },
   title: {
     fontSize: hp(7),
     color: theme.colors.neutral(0.9),
-    fontWeight: theme.fontWeight.bold,
+    fontWeight: theme.fontWeight.bold
   },
   punchLine: {
     fontSize: hp(2),
     letterSpacing: 1,
     marginBottom: 10,
-    fontWeight: theme.fontWeight.meduim,
+    fontWeight: theme.fontWeight.meduim
   },
   startButton: {
     marginBottom: 50,
@@ -97,14 +74,14 @@ const styles = StyleSheet.create({
     padding: 15,
     paddingHorizontal: 90,
     borderRadius: theme.radius.xl,
-    borderCurve: "continuous",
+    borderCurve: "continuous"
   },
   startText: {
     color: theme.colors.white,
     fontSize: hp(3),
     fontWeight: theme.fontWeight.meduim,
-    letterSpacing: 1,
-  },
+    letterSpacing: 1
+  }
 });
 
 export default WelcomeScreen;
