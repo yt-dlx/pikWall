@@ -3,7 +3,7 @@ import { Text, View } from "react-native";
 
 export default function Index() {
   return (
-    <View className="bg-black flex-1 justify-center items-center bg-gradient-to-r from-blue-500 to-indigo-600 p-4">
+    <View className="bg-blackflex-1 justify-center items-center bg-gradient-to-r from-blue-500 to-indigo-600 p-4">
       <View className="shadow-lg rounded-lg p-6 w-11/12 max-w-sm">
         <Text className="text-lg font-semibold text-gray-800 text-center">
           Edit <Text className="text-indigo-500">app/index.tsx</Text> to edit this screen.
