@@ -1,4 +1,4 @@
-import "../global.css";
+import "./css/global.css";
 import { Stack } from "expo-router";
 
 export default function RootLayout() {
