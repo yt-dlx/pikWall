@@ -4,16 +4,12 @@
 @tailwind utilities;
 
 #three-canvas-container {
+  position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
   width: 100%;
   height: 100%;
-  position: fixed;
-}
-
-body {
-  -webkit-tap-highlight-color: transparent;
 }
 
 main {
@@ -26,13 +22,13 @@ main {
 }
 
 *::-webkit-scrollbar-track {
-  border-radius: 4px !important;
   background: #181b21 !important;
+  border-radius: 4px !important;
 }
 
 *::-webkit-scrollbar-thumb {
-  border-radius: 4px !important;
   background: #89b4fa !important;
+  border-radius: 4px !important;
 }
 
 *::-webkit-scrollbar-thumb:hover {
@@ -40,18 +36,16 @@ main {
 }
 
 * {
-  scrollbar-width: thin !important;
   scrollbar-color: #89b4fa #181b21 !important;
+  scrollbar-width: thin !important;
 }
 
 .nordic-gradient-text {
-  background-clip: text;        
-  -moz-background-clip: text;   
-  -webkit-background-clip: text; 
+  background: linear-gradient(-45deg, #89b4fa, #74c7ec, #a6e3a1, #fab387, #f38ba8, #cba6f7);
   background-size: 400% 400%;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradient-animation 6s ease infinite;
-  background: linear-gradient(-45deg, #89b4fa, #74c7ec, #a6e3a1, #fab387, #f38ba8, #cba6f7);
 }
 
 @keyframes gradient-animation {
@@ -64,4 +58,9 @@ main {
   100% {
     background-position: 0% 50%;
   }
+}
+
+
+body {
+  -webkit-tap-highlight-color: transparent;
 }
