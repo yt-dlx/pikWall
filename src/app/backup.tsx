@@ -31,9 +31,9 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
     <div
       key={cardIdx}
       onClick={() => setSelectedCard(cardIdx)}
-      className="bg-[#313244]/80 rounded-2xl overflow-hidden cursor-pointer relative group hover:shadow-xl flex flex-col w-full min-h-[280px] sm:min-h-[320px] transition-shadow duration-300 ease-in-out shadow-black shadow  -lg"
+      className="bg-[#313244]/80 rounded-lg overflow-hidden cursor-pointer relative group hover:shadow-xl flex flex-col w-full min-h-[280px] sm:min-h-[320px] transition-shadow duration-300 ease-in-out shadow-black shadow  -lg"
     >
-      <div className="absolute top-2 left-2 z-10 flex items-center space-x-2 bg-[#3b4252]/80 text-[#cdd6f4] px-2 py-1 rounded-2xl shadow-md text-xs border">
+      <div className="absolute top-2 left-2 z-10 flex items-center space-x-2 bg-[#3b4252]/80 text-[#cdd6f4] px-2 py-1 rounded-lg shadow-md text-xs border">
         <FiInfo className="text-[#88c0d0] text-xs" />
         <span className="text-xs">Hover/Click To Download</span>
       </div>
@@ -41,12 +41,18 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
         {card.images.slice(0, 4).map((image, imgIdx) => {
           const isHovered = hoveredImage[cardIdx] === imgIdx;
           const isActive = !isHovered && autoImageIndex[cardIdx] === imgIdx;
-          const gradientStyle = isHovered ? { background: `linear-gradient(135deg, ${image.primary}, ${image.secondary}, ${image.tertiary})`, borderRadius: "8px", padding: "1px" } : {};
+          const gradientStyle = isHovered
+            ? {
+                background: `linear-gradient(135deg, ${image.primary}, ${image.secondary}, ${image.tertiary})`,
+                borderRadius: "10px",
+                padding: "2px"
+              }
+            : {};
           return (
             <motion.div
               key={imgIdx}
               animate={{
-                width: isHovered || isActive ? "70%" : "25%",
+                width: isHovered || isActive ? "80%" : "25%",
                 left: isHovered || isActive ? (imgIdx === card.images.slice(0, 4).length - 1 ? "30%" : imgIdx === 0 ? "0%" : `${imgIdx * 7.5}%`) : `${imgIdx * 25}%`
               }}
               transition={{ duration: 0.2, ease: "easeInOut" }}
@@ -54,9 +60,9 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
               onMouseLeave={() => handleMouseLeave(cardIdx)}
               onMouseEnter={() => handleMouseEnter(cardIdx, imgIdx)}
               style={{ ...gradientStyle, zIndex: 4 - imgIdx, willChange: "width, left" }}
-              className={`absolute top-0 h-full rounded-2xl overflow-hidden transition-all ${isHovered ? "" : "sm:blur-[1px]"}`}
+              className={`absolute top-0 h-full rounded-lg overflow-hidden transition-all ${isHovered ? "" : "sm:blur-[1px]"}`}
             >
-              <div className={`w-full h-full bg-[#313244] rounded-2xl overflow-hidden ${isHovered || isActive ? "" : "filter saturate-[0.2]"}`}>
+              <div className={`w-full h-full bg-[#313244] rounded-lg overflow-hidden ${isHovered || isActive ? "" : "filter saturate-[0.2]"}`}>
                 {image.previewLink ? (
                   <motion.div initial={{ scale: 1 }} animate={{ scale: isHovered || isActive ? 1.2 : 1, transition: { duration: 0.2, ease: "easeInOut" } }} className="w-full h-full">
                     <Image src={image.previewLink} alt={`Preview ${imgIdx + 1}`} fill className="object-cover" unoptimized sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
@@ -94,16 +100,16 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
 Card.displayName = "Card";
 // ====================================================================
 const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
-  const closeImageDetails = () => setSelectedImage(null);
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [hoveredColor, setHoveredColor] = useState<string | null>(null);
   const handleImageClick = (index: number) => setSelectedImage(index);
-  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const closeImageDetails = () => setSelectedImage(null);
   const handleCopyToClipboard = (color: string) => navigator.clipboard.writeText(color);
   if (selectedImage !== null) {
     return (
-      <div className="fixed inset-0 bg-[#0b0d0f]/50 backdrop-blur-2xl flex justify-center items-end sm:items-center z-50">
-        <motion.div
-          className="bg-gradient-to-b from-[color:var(--tw-gradient-from)] via-[color:var(--tw-gradient-via)] to-[color:var(--tw-gradient-to)] p-[4px] rounded-t-2xl sm:rounded-2xl w-full sm:w-[90%]"
+      <div className="fixed inset-0 bg-[#0b0d0f]/80 backdrop-blur-md flex justify-center items-center z-50">
+        <div
+          className="bg-gradient-to-b from-[color:var(--tw-gradient-from)] via-[color:var(--tw-gradient-via)] to-[color:var(--tw-gradient-to)] p-[4px] rounded-2xl w-full"
           style={
             {
               "--tw-gradient-from": card.images[selectedImage].primary,
@@ -111,20 +117,16 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
               "--tw-gradient-to": card.images[selectedImage].tertiary
             } as Record<string, string>
           }
-          transition={{ duration: 0.4, ease: "easeOut" }}
-          animate={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 30 }}
-          exit={{ opacity: 0, y: 30 }}
         >
           <motion.div
-            className="bg-[#1e1e2e] backdrop-blur-2xl rounded-t-2xl sm:rounded-2xl sm:p-4 md:p-6 w-full max-h-[70vh] overflow-y-auto flex flex-col lg:flex-row"
+            className="bg-[#1e1e2e] backdrop-blur-2xl rounded-2xl sm:p-4 md:p-6 w-full max-h-[60vh] sm:max-h-[70vh] md:max-h-[80vh] overflow-y-auto flex flex-col lg:flex-row"
             transition={{ duration: 0.3, ease: "easeOut" }}
             animate={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 30 }}
             exit={{ opacity: 0, y: 30 }}
           >
             <div className="w-full lg:w-1/2 flex justify-center items-center sm:p-4 relative group">
-              <div className="relative w-full h-auto max-h-[60vh] rounded-2xl overflow-hidden shadow-lg group">
+              <div className="relative w-full h-auto max-h-[60vh] rounded-lg overflow-hidden shadow-lg group">
                 {card.images[selectedImage].previewLink ? (
                   <>
                     <Image
@@ -132,7 +134,7 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
                       alt={`Image ${selectedImage + 1} - ${card.title}`}
                       width={800}
                       height={450}
-                      className="w-full h-full object-cover transition-transform transform duration-500 group-hover:scale-[1.5] group-hover:saturate-50 shadow-[#0b0d0f] shadow-xl rounded-2xl"
+                      className="w-full h-full object-cover transition-transform transform duration-500 group-hover:scale-[1.5] group-hover:saturate-50 shadow-[#0b0d0f] shadow-xl border-2 border-[#0b0d0f] rounded-lg"
                     />
                     <a
                       download
@@ -185,13 +187,13 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
                   </li>
                 </ul>
               </div>
-              <div className="flex flex-wrap gap-2 mt-4 max-h-[120px] overflow-y-auto">
+              <div className="flex flex-wrap justify-center gap-2 mt-4 max-h-[120px] overflow-y-auto">
                 {Object.keys(card.images[selectedImage])
                   .filter((key) => key.startsWith("more_"))
                   .map((colorKey) => (
                     <div
                       key={colorKey}
-                      className="relative w-6 h-6 rounded-full border border-white cursor-pointer flex items-center justify-center"
+                      className="relative w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white cursor-pointer flex items-center justify-center"
                       style={{ backgroundColor: card.images[selectedImage][colorKey] as string }}
                       onMouseEnter={() => setHoveredColor(card.images[selectedImage][colorKey] as string)}
                       onMouseLeave={() => setHoveredColor(null)}
@@ -215,31 +217,24 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
               </div>
             </div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     );
   }
   return (
-    <div className="fixed inset-0 bg-[#0b0d0f]/50 backdrop-blur-2xl flex justify-center items-end sm:items-center z-50">
+    <div className="fixed top-0 inset-0 bg-[#0b0d0f]/80 flex justify-center items-center z-50">
       <motion.div
-        className="bg-[#1e1e2e] rounded-t-2xl sm:rounded-2xl shadow-xl shadow-[#0b0d0f] border-2 border-[#89b4fa] p-4 sm:p-6 md:p-8 w-full sm:w-[90%] max-h-[70vh] overflow-y-auto flex flex-col lg:flex-row relative"
+        className="bg-[#1e1e2e]/60 backdrop-blur-2xl rounded-2xl shadow-xl shadow-[#0b0d0f] border-2 border-[#89b4fa] p-4 sm:p-6 md:p-8 w-full max-h-[60vh] sm:max-h-[70vh] md:max-h-[80vh] overflow-y-auto flex flex-col lg:flex-row relative"
         transition={{ duration: 0.3, ease: "easeOut" }}
         animate={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 30 }}
         exit={{ opacity: 0, y: 30 }}
       >
-        <button
-          onClick={onClose}
-          className="mt-4 sm:mt-6 px-4 sm:px-6 py-2 sm:py-3 bg-[#89b4fa] text-[#1e1e2e] w-full rounded-2xl shadow-md font-semibold hover:bg-[#74c7ec] transition flex items-center justify-center gap-2 text-sm sm:text-base"
-        >
-          <FiX />
-          Close Environment
-        </button>
-        <div className="w-full lg:w-1/2 grid grid-cols-2 sm:gap-4 gap-2 p-2 sm:p-4 rounded-2xl relative">
+        <div className="w-full lg:w-1/2 grid grid-cols-2 sm:gap-4 gap-2 p-2 sm:p-4 rounded-lg relative">
           {card.images.slice(0, 6).map((image, idx) => (
             <motion.div
               key={idx}
-              className="relative w-full h-0 pb-[56.25%] overflow-hidden rounded-2xl shadow-[#0b0d0f] shadow-2xl border-2 border-[#89b4fa]/20 hover:border-[#89b4fa] hover:border-dashed cursor-pointer"
+              className="relative w-full h-0 pb-[56.25%] overflow-hidden rounded-lg shadow-[#0b0d0f] shadow-2xl border-2 border-[#89b4fa]/20 hover:border-[#89b4fa] hover:border-dashed cursor-pointer"
               transition={{ duration: 0.3, ease: "easeOut" }}
               animate={{ opacity: 1, scale: 1 }}
               initial={{ opacity: 0, scale: 0.9 }}
@@ -260,9 +255,9 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
                   <p className="text-sm sm:text-base mt-2">No Image</p>
                 </div>
               )}
-              <div className="absolute top-2 left-2 z-10 flex items-center space-x-2 bg-[#3b4252]/80 text-[#cdd6f4] px-2 py-1 rounded-2xl shadow-md text-xs border">
+              <div className="absolute top-2 left-2 z-10 flex items-center space-x-2 bg-[#3b4252]/80 text-[#cdd6f4] px-2 py-1 rounded-lg shadow-md text-xs border">
                 <FiInfo className="text-[#88c0d0] text-xs" />
-                <span className="text-xs">download</span>
+                <span className="text-xs">view</span>
               </div>
             </motion.div>
           ))}
@@ -275,6 +270,13 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
             </h4>
             <p className="text-sm leading-relaxed mb-4 sm:mb-6 text-[#a6adc8] capitalize">{card.description}</p>
           </div>
+          <button
+            onClick={onClose}
+            className="mt-4 sm:mt-6 px-4 sm:px-6 py-2 sm:py-3 bg-[#89b4fa] text-[#1e1e2e] w-full rounded-full shadow-md font-semibold hover:bg-[#74c7ec] transition flex items-center justify-center gap-2 text-sm sm:text-base"
+          >
+            <FiX />
+            Close Environment
+          </button>
         </div>
       </motion.div>
     </div>
@@ -287,6 +289,7 @@ const ExploreSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
   const [error, setError] = useState<string | null>(null);
   const [filteredCards, setFilteredCards] = useState<CardData[]>([]);
   const [selectedCard, setSelectedCard] = useState<null | number>(null);
+  const [pausedCards, setPausedCards] = useState<Record<number, boolean>>({});
   const [autoImageIndex, setAutoImageIndex] = useState<Record<number, number>>({});
   const [hoveredImage, setHoveredImage] = useState<Record<number, number | null>>({});
   useEffect(() => {
@@ -310,6 +313,7 @@ const ExploreSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
         setFilteredCards(transformedCards);
         setAutoImageIndex(transformedCards.reduce((acc, _, idx) => ({ ...acc, [idx]: 0 }), {}));
         setHoveredImage(transformedCards.reduce((acc, _, idx) => ({ ...acc, [idx]: null }), {}));
+        setPausedCards(transformedCards.reduce((acc, _, idx) => ({ ...acc, [idx]: false }), {}));
         setLoading(false);
       } catch (err) {
         setError((err as Error).message);
@@ -323,18 +327,21 @@ const ExploreSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
       setAutoImageIndex((prevIndex) =>
         Object.keys(prevIndex).reduce((newIndex, cardIdx) => {
           const idx = parseInt(cardIdx);
+          if (pausedCards[idx]) return { ...newIndex, [idx]: prevIndex[idx] };
           const card = cards[idx];
           const nextIndex = (prevIndex[idx] + 1) % (card?.images.length || 1);
           return { ...newIndex, [idx]: nextIndex };
         }, {})
       );
-    }, 3000);
+    }, 2000);
     return () => clearInterval(interval);
-  }, [cards]);
+  }, [cards, pausedCards]);
   const handleMouseEnter = (cardIdx: number, imgIdx: number) => {
+    setPausedCards((prev) => ({ ...prev, [cardIdx]: true }));
     setHoveredImage((prev) => ({ ...prev, [cardIdx]: imgIdx }));
   };
   const handleMouseLeave = (cardIdx: number) => {
+    setPausedCards((prev) => ({ ...prev, [cardIdx]: false }));
     setAutoImageIndex((prev) => {
       const lastHoveredImage = hoveredImage[cardIdx];
       if (lastHoveredImage !== null) return { ...prev, [cardIdx]: lastHoveredImage };
