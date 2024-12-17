@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "asset": "npx pwa-asset-generator public/icon512_maskable.png public/splash -m src/app/manifest.ts --padding 'calc(50vh - 25%) calc(50vw - 25%)' -b '#1a1a1a' -q 100 -i public/asset-generator-changes.html --favicon",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
