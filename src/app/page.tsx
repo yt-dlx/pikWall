@@ -1,4 +1,4 @@
-// app/picbook/page.tsx
+// src/app/page.tsx
 "use client";
 import Image from "next/image";
 import Galaxy from "@/components/galaxy";
