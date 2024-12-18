@@ -9,12 +9,11 @@ import type { CardProps } from "@/types/CardProps";
 import React, { useState, useEffect, memo } from "react";
 import type { ModalProps } from "@/types/ModalProps";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaBookOpen, FaFeatherAlt, FaScroll } from "react-icons/fa";
 import type { EnvironmentEntry } from "@/types/EnvironmentEntry";
-import { FiInfo, FiX, FiBookOpen, FiDownload, FiClipboard } from "react-icons/fi";
+import { FiInfo, FiX, FiBookOpen, FiDownload, FiClipboard, FiBook } from "react-icons/fi";
+import { FaBookOpen, FaFeatherAlt, FaScroll, FaArrowDown, FaRegCompass, FaRegHeart } from "react-icons/fa";
 // ====================================================================================================
 // ====================================================================================================
-import { FaArrowDown } from "react-icons/fa";
 const HeroSection: React.FC = () => {
   return (
     <section className="relative h-screen flex flex-col items-center justify-center text-[#cdd6f4] px-4 text-center overflow-hidden">
@@ -33,7 +32,6 @@ const HeroSection: React.FC = () => {
 };
 // ====================================================================================================
 // ====================================================================================================
-import { FiBook } from "react-icons/fi";
 const Header: React.FC<{ onSearch: (query: string) => void }> = ({ onSearch }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const handleSearch = () => onSearch(searchQuery);
@@ -67,7 +65,6 @@ const Header: React.FC<{ onSearch: (query: string) => void }> = ({ onSearch }) =
 };
 // ====================================================================================================
 // ====================================================================================================
-import { FaRegCompass, FaRegHeart } from "react-icons/fa";
 const Footer: React.FC = () => {
   return (
     <footer className="relative w-full bg-[#0b0d0f]/60 backdrop-blur-md shadow-md py-2 sm:py-4 z-20">
