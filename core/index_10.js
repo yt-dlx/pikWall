@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 //  ==================================================XXX==================================================
-//  This Code Is Used To Upload The Final Low-Res Files To GitHub
+//  This Code Is Used To Upload The Final High-Res Files To GitHub
 //  ==================================================XXX==================================================
 import { join } from "path";
 import dotenv from "dotenv";
@@ -8,8 +8,8 @@ dotenv.config({ path: ".env" });
 import { readFileSync, readdirSync } from "fs";
 const owner = "yt-dlx";
 const repo = "picbook";
-const branch = "lowRes";
-const filesDir = "./sources/lowRes";
+const branch = "highRes";
+const filesDir = "./sources/highRes";
 const commitMessage = "Add multiple files";
 const token = process.env.GITHUB_TOKEN;
 const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/`;
