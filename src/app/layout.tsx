@@ -117,7 +117,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${Kurale.variable} ${Brittany.variable} antialiased font-Kurale`}>
+      <body className={`${Kurale.variable} ${Brittany.variable} antialiased font-Kurale capitalize`}>
         <Providers>
           <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9464475307933754" crossOrigin="anonymous" />
           {children}
