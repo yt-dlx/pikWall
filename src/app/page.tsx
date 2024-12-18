@@ -176,6 +176,7 @@ const ExploreSection: React.FC<{ searchQuery: string }> = ({ searchQuery }) => {
         const data: Record<string, EnvironmentEntry> = await response.json();
         const transformedCards = Object.values(data).map((entry) => ({
           title: entry.environment_title,
+          moral: entry.environment_moral,
           description: entry.environment_prompt,
           images: shuffleArray(entry.images.map((image) => ({ ...image, downloadLink: atob(image.downloadLink), previewLink: atob(image.previewLink) })))
         }));

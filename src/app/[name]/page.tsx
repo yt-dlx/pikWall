@@ -49,6 +49,7 @@ const CardPage: React.FC = () => {
         const data: Record<string, EnvironmentEntry> = await response.json();
         const cards: CardData[] = Object.values(data).map((entry) => ({
           title: entry.environment_title,
+          moral: entry.environment_moral,
           description: entry.environment_prompt,
           images: entry.images.map((image) => ({
             ...image,
@@ -84,6 +85,10 @@ const CardPage: React.FC = () => {
           <p className="text-[#a6adc8] mx-auto leading-relaxed text-sm">
             <span className="nordic-gradient-text font-bold text-lg">Environment: </span>
             {card?.description}
+          </p>
+          <p className="text-[#a6adc8] mx-auto leading-relaxed text-sm">
+            <span className="nordic-gradient-text font-bold text-lg">Moral: </span>
+            {card?.moral}
           </p>
         </motion.div>
         <motion.div
