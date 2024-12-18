@@ -1,5 +1,6 @@
 // src/app/page.tsx
 "use client";
+import Link from "next/link";
 import Image from "next/image";
 import Galaxy from "@/components/galaxy";
 import "react-toastify/dist/ReactToastify.css";
@@ -91,68 +92,66 @@ const Footer: React.FC = () => {
 };
 // ====================================================================================================
 // ====================================================================================================
-const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnter, handleMouseLeave, setSelectedCard }: CardProps) => {
+const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnter, handleMouseLeave }: CardProps) => {
+  Card.displayName = "Card";
   return (
-    <React.Fragment>
-      <div
-        key={cardIdx}
-        onClick={() => setSelectedCard(cardIdx)}
-        className="bg-[#313244]/80 rounded-2xl overflow-hidden cursor-pointer relative group hover:shadow-xl flex flex-col w-full min-h-[280px] sm:min-h-[320px] transition-shadow duration-300 ease-in-out shadow-black shadow  -lg"
-      >
-        <div className="absolute top-2 left-2 z-10 flex items-center space-x-2 bg-[#3b4252]/80 text-[#cdd6f4] px-2 py-1 rounded-2xl shadow-md text-xs border">
-          <FiInfo className="text-[#88c0d0] text-xs" />
-          <span className="text-xs">Hover/Click To Download</span>
-        </div>
-        <div className="relative w-full h-60 overflow-hidden flex">
-          {card.images.slice(0, 4).map((image, imgIdx) => {
-            const isHovered = hoveredImage[cardIdx] === imgIdx;
-            const isActive = !isHovered && autoImageIndex[cardIdx] === imgIdx;
-            const gradientStyle = isHovered ? { background: `linear-gradient(135deg, ${image.primary}, ${image.secondary}, ${image.tertiary})`, borderRadius: "18px", padding: "2px" } : {};
-            return (
-              <motion.div
-                key={imgIdx}
-                animate={{
-                  width: isHovered || isActive ? "70%" : "25%",
-                  left: isHovered || isActive ? (imgIdx === card.images.slice(0, 4).length - 1 ? "30%" : imgIdx === 0 ? "0%" : `${imgIdx * 7.5}%`) : `${imgIdx * 25}%`
-                }}
-                transition={{ duration: 0.2, ease: "easeInOut" }}
-                initial={{ width: "25%", left: `${imgIdx * 25}%` }}
-                onMouseLeave={() => handleMouseLeave(cardIdx)}
-                onMouseEnter={() => handleMouseEnter(cardIdx, imgIdx)}
-                style={{ ...gradientStyle, zIndex: 4 - imgIdx, willChange: "width, left" }}
-                className="absolute top-0 h-full rounded-2xl overflow-hidden transition-all"
-              >
-                <div className={`w-full h-full bg-[#313244] rounded-2xl overflow-hidden ${isHovered || isActive ? "" : "filter saturate-[0.2]"}`}>
-                  <motion.div initial={{ scale: 1 }} animate={{ scale: isHovered || isActive ? 1.2 : 1, transition: { duration: 0.2, ease: "easeInOut" } }} className="w-full h-full">
-                    <Image src={image.previewLink} alt={`Preview ${imgIdx + 1}`} fill className="object-cover" unoptimized sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
-                  </motion.div>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
-        <div className="p-2 flex flex-grow">
-          <div className="space-y-2 flex flex-col justify-between w-full">
-            <div>
-              <h4 className="text-xl font-semibold text-[#cdd6f4] flex items-center space-x-2">
-                <FaScroll className="text-sm sm:text-base" />
-                <span className="nordic-gradient-text capitalize truncate block w-full">{card.title}</span>
-              </h4>
-              <p className="text-[#a6adc8] flex items-center space-x-2 text-base sm:text-lg mt-1">
-                <FaFeatherAlt className="text-xs sm:text-base" />
-                <span className="text-xs truncate overflow-hidden whitespace-nowrap w-full capitalize">
-                  <span className="nordic-gradient-text">Environment: </span>
-                  {card.description}
-                </span>
-              </p>
+    <AnimatePresence>
+      <Link href={{ pathname: `/${encodeURIComponent(card.title)}`, query: { name: card.title } }}>
+        <div className="bg-[#313244]/80 rounded-2xl overflow-hidden cursor-pointer relative group hover:shadow-xl flex flex-col w-full min-h-[280px] sm:min-h-[320px] transition-shadow duration-300 ease-in-out shadow-black shadow-lg">
+          <div className="absolute top-2 left-2 z-10 flex items-center space-x-2 bg-[#3b4252]/80 text-[#cdd6f4] px-2 py-1 rounded-2xl shadow-md text-xs border">
+            <FiInfo className="text-[#88c0d0] text-xs" />
+            <span className="text-xs">Hover/Click To Download</span>
+          </div>
+          <div className="relative w-full h-60 overflow-hidden flex">
+            {card.images.slice(0, 4).map((image, imgIdx) => {
+              const isHovered = hoveredImage[cardIdx] === imgIdx;
+              const isActive = !isHovered && autoImageIndex[cardIdx] === imgIdx;
+              const gradientStyle = isHovered ? { background: `linear-gradient(135deg, ${image.primary}, ${image.secondary}, ${image.tertiary})`, borderRadius: "18px", padding: "2px" } : {};
+              return (
+                <motion.div
+                  key={imgIdx}
+                  animate={{
+                    width: isHovered || isActive ? "70%" : "25%",
+                    left: isHovered || isActive ? (imgIdx === card.images.slice(0, 4).length - 1 ? "30%" : imgIdx === 0 ? "0%" : `${imgIdx * 7.5}%`) : `${imgIdx * 25}%`
+                  }}
+                  transition={{ duration: 0.2, ease: "easeInOut" }}
+                  initial={{ width: "25%", left: `${imgIdx * 25}%` }}
+                  onMouseLeave={() => handleMouseLeave(cardIdx)}
+                  onMouseEnter={() => handleMouseEnter(cardIdx, imgIdx)}
+                  style={{ ...gradientStyle, zIndex: 4 - imgIdx, willChange: "width, left" }}
+                  className="absolute top-0 h-full rounded-2xl overflow-hidden transition-all"
+                >
+                  <div className={`w-full h-full bg-[#313244] rounded-2xl overflow-hidden ${isHovered || isActive ? "" : "filter saturate-[0.2]"}`}>
+                    <motion.div initial={{ scale: 1 }} animate={{ scale: isHovered || isActive ? 1.2 : 1, transition: { duration: 0.2, ease: "easeInOut" } }} className="w-full h-full">
+                      <Image src={image.previewLink} alt={`Preview ${imgIdx + 1}`} fill className="object-cover" unoptimized sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                    </motion.div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+          <div className="p-2 flex flex-grow">
+            <div className="space-y-2 flex flex-col justify-between w-full">
+              <div>
+                <h4 className="text-xl font-semibold text-[#cdd6f4] flex items-center space-x-2">
+                  <FaScroll className="text-sm sm:text-base" />
+                  <span className="nordic-gradient-text capitalize truncate block w-full">{card.title}</span>
+                </h4>
+                <p className="text-[#a6adc8] flex items-center space-x-2 text-base sm:text-lg mt-1">
+                  <FaFeatherAlt className="text-xs sm:text-base" />
+                  <span className="text-xs truncate overflow-hidden whitespace-nowrap w-full capitalize">
+                    <span className="nordic-gradient-text">Environment: </span>
+                    {card.description}
+                  </span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </React.Fragment>
+      </Link>
+    </AnimatePresence>
   );
 });
-Card.displayName = "Card";
 // ====================================================================================================
 // ====================================================================================================
 const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
@@ -163,7 +162,7 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
   const handleCopyToClipboard = (color: string) => navigator.clipboard.writeText(color);
   if (selectedImage !== null) {
     return (
-      <React.Fragment>
+      <AnimatePresence>
         <div className="fixed inset-0 bg-[#0b0d0f]/50 backdrop-blur-2xl flex justify-center items-end sm:items-center z-50">
           <motion.div
             className="bg-gradient-to-b from-[color:var(--tw-gradient-from)] via-[color:var(--tw-gradient-via)] to-[color:var(--tw-gradient-to)] p-[4px] rounded-t-2xl sm:rounded-2xl w-full sm:w-[90%]"
@@ -281,11 +280,11 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
             </motion.div>
           </motion.div>
         </div>
-      </React.Fragment>
+      </AnimatePresence>
     );
   }
   return (
-    <React.Fragment>
+    <AnimatePresence>
       <div className="fixed inset-0 bg-[#0b0d0f]/50 backdrop-blur-2xl flex justify-center items-end sm:items-center z-50">
         <motion.div
           className="bg-[#1e1e2e] rounded-t-2xl sm:rounded-2xl shadow-xl shadow-[#0b0d0f] border-2 border-[#89b4fa] p-4 sm:p-6 md:p-8 w-full sm:w-[90%] max-h-[70vh] overflow-y-auto flex flex-col lg:flex-row relative"
@@ -344,7 +343,7 @@ const Modal: React.FC<ModalProps> = ({ card, onClose }) => {
           </div>
         </motion.div>
       </div>
-    </React.Fragment>
+    </AnimatePresence>
   );
 };
 // ====================================================================================================
