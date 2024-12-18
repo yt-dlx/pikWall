@@ -4,6 +4,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Chaos Carved In Colorful Stone",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Chaos Carved In Colorful Stone (1).jpg",
@@ -251,6 +253,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Cracked Earth Beneath Sulfuric Skies",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Cracked Earth Beneath Sulfuric Skies (1).jpg",
@@ -498,6 +502,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Cybernetic Glow Beneath Liquid Skies",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Cybernetic Glow Beneath Liquid Skies (1).jpg",
@@ -745,6 +751,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Dreamscape Of Blush Meadows",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Dreamscape Of Blush Meadows (1).jpg",
@@ -992,6 +1000,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Dusk Falls On Serene Cliffs",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Dusk Falls On Serene Cliffs (1).jpg",
@@ -1239,6 +1249,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Electric Night Beneath Floating Bridges",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Electric Night Beneath Floating Bridges (1).jpg",
@@ -1486,6 +1498,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Evening Glow Across Quiet Fields",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Evening Glow Across Quiet Fields (1).jpg",
@@ -1733,6 +1747,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Frostbound Shores Beneath Arctic Light",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Frostbound Shores Beneath Arctic Light (1).jpg",
@@ -1980,6 +1996,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Frosted Plains Beneath Soft Aurora",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Frosted Plains Beneath Soft Aurora (1).jpg",
@@ -2227,6 +2245,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Gilded Twilight Over Coastal Peaks",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Gilded Twilight Over Coastal Peaks (1).jpg",
@@ -2474,6 +2494,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Glacial Majesty Under Arctic Sun",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Glacial Majesty Under Arctic Sun (1).jpg",
@@ -2721,6 +2743,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Hidden Cascades In Verdant Hollow",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Hidden Cascades In Verdant Hollow (1).jpg",
@@ -2968,6 +2992,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Molten Plains Beneath A Crimson Sky",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Molten Plains Beneath A Crimson Sky (1).jpg",
@@ -3215,6 +3241,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Moonlit Symphony Among Alpine Peaks",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Moonlit Symphony Among Alpine Peaks (1).jpg",
@@ -3462,6 +3490,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Neon Abyss Beneath Floating Skylines",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Neon Abyss Beneath Floating Skylines (1).jpg",
@@ -3709,6 +3739,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Neon Twilight Over Broken Towers",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Neon Twilight Over Broken Towers (1).jpg",
@@ -3956,6 +3988,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Opalescent Sky Over Still Lagoon",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Opalescent Sky Over Still Lagoon (1).jpg",
@@ -4203,6 +4237,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Pastel Waves Upon Soft Shores",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Pastel Waves Upon Soft Shores (1).jpg",
@@ -4450,6 +4486,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Rusted Spires Under Poisoned Skies",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Rusted Spires Under Poisoned Skies (1).jpg",
@@ -4697,6 +4735,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Serene Glade In Golden Light",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Serene Glade In Golden Light (1).jpg",
@@ -4944,6 +4984,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Soft Glow Of Pastel Skies",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Soft Glow Of Pastel Skies (1).jpg",
@@ -5191,6 +5233,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Tranquility Under Emerald Canopy",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Tranquility Under Emerald Canopy (1).jpg",
@@ -5438,6 +5482,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Twilight Serenade On Tranquil Lake",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Twilight Serenade On Tranquil Lake (1).jpg",
@@ -5685,6 +5731,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Twilight Song Beneath Luminous Peaks",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Twilight Song Beneath Luminous Peaks (1).jpg",
@@ -5932,6 +5980,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Urban Canvas Of Eternal Color",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Urban Canvas Of Eternal Color (1).jpg",
@@ -6179,6 +6229,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Vibrant Echoes In Hidden Alley",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Vibrant Echoes In Hidden Alley (1).jpg",
@@ -6426,6 +6478,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Vivid Chronicles On Hidden Walls",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Vivid Chronicles On Hidden Walls (1).jpg",
@@ -6673,6 +6727,8 @@ const database: Record<string, EnvironmentEntry> = {
     environment_title: "The Whispering Waters In Verdant Gorge",
     environment_prompt:
       "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
+    environment_moral:
+      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
     images: [
       {
         original_file_name: "The Whispering Waters In Verdant Gorge (1).jpg",

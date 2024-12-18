@@ -16,6 +16,7 @@ type ImageMetadata = {
 type EnvironmentEntry = {
   environment_title: string;
   environment_prompt: string;
+  environment_moral: string;
   images: ImageMetadata[];
 };
 export type { EnvironmentEntry };
