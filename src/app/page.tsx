@@ -41,7 +41,7 @@ const Header: React.FC<{ onSearch: (query: string) => void }> = ({ onSearch }) =
         <div className="flex items-center space-x-4 md:space-x-6 w-full md:w-auto mb-4 md:mb-0">
           <h1 className="text-xl md:text-2xl font-bold text-[#cdd6f4] flex items-center nordic-gradient-text">
             <FiBook className="inline-block mr-2" />
-            picBook<span className="ml-2 text-xs animate-bounce hidden sm:inline">by Shovit</span>
+            picBook<span className="ml-2 text-xs">by Shovit</span>
           </h1>
         </div>
         <div className="flex items-center bg-[#3b4252] text-[#cdd6f4] px-4 py-2 rounded-lg w-full md:w-auto max-w-lg">
