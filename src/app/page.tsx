@@ -1,20 +1,97 @@
 // app/picbook/page.tsx
 "use client";
 import Image from "next/image";
-import Footer from "@/components/Footer";
 import Galaxy from "@/components/galaxy";
-import Header from "@/components/Header";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import type { CardData } from "@/types/CardData";
 import type { CardProps } from "@/types/CardProps";
-import HeroSection from "@/components/HeroSection";
 import React, { useState, useEffect, memo } from "react";
 import type { ModalProps } from "@/types/ModalProps";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBookOpen, FaFeatherAlt, FaScroll } from "react-icons/fa";
 import type { EnvironmentEntry } from "@/types/EnvironmentEntry";
 import { FiInfo, FiX, FiBookOpen, FiDownload, FiClipboard } from "react-icons/fi";
+// ====================================================================================================
+// ====================================================================================================
+import { FaArrowDown } from "react-icons/fa";
+const HeroSection: React.FC = () => {
+  return (
+    <section className="relative h-screen flex flex-col items-center justify-center text-[#cdd6f4] px-4 text-center overflow-hidden">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold leading-tight mb-4 flex flex-wrap items-center justify-center nordic-gradient-text text-center">
+        <span>Stories Behind Pictures</span>
+      </h1>
+      <p className="text-base sm:text-lg md:text-2xl max-w-2xl mx-auto mb-8 text-[#a6adc8] px-4">Dive into tales inspired by unique images and discover the art of visual environmenttelling.</p>
+      <div className="w-full flex justify-center -mt-8 sm:-mt-16">
+        <Image src="/logo.png" alt="Explore" width={300} height={300} className="cursor-pointer hover:scale-105 transition-transform duration-300 -hue-rotate-180 max-w-full" />
+      </div>
+      <a href="#explore" className="mt-4 sm:mt-6">
+        <FaArrowDown className="text-[#89b4fa] text-2xl sm:text-4xl animate-bounce cursor-pointer hover:text-[#74c7ec]" aria-label="Scroll Down" />
+      </a>
+    </section>
+  );
+};
+// ====================================================================================================
+// ====================================================================================================
+import { FiBook } from "react-icons/fi";
+const Header: React.FC<{ onSearch: (query: string) => void }> = ({ onSearch }) => {
+  const [searchQuery, setSearchQuery] = useState("");
+  const handleSearch = () => onSearch(searchQuery);
+  return (
+    <header className="fixed top-0 left-0 w-full  bg-[#0b0d0f]/60 backdrop-blur-md shadow-[#0b0d0f] shadow-2xl border-b-4 border-[#0b0d0f] z-20">
+      <div className="container mx-auto px-4 py-4 flex flex-wrap items-center justify-between">
+        <div className="flex items-center space-x-4 md:space-x-6 w-full md:w-auto mb-4 md:mb-0">
+          <h1 className="text-xl md:text-2xl font-bold text-[#cdd6f4] flex items-center nordic-gradient-text">
+            <FiBook className="inline-block mr-2" />
+            picBook<span className="ml-2 text-xs animate-bounce hidden sm:inline">by Shovit</span>
+          </h1>
+        </div>
+        <div className="flex items-center bg-[#3b4252] text-[#cdd6f4] px-4 py-2 rounded-lg w-full md:w-auto max-w-lg">
+          <input
+            type="text"
+            placeholder="Search Your Favourites..."
+            className="bg-transparent outline-none text-sm md:text-base placeholder-[#a6adc8] flex-grow"
+            value={searchQuery}
+            onChange={(e) => {
+              setSearchQuery(e.target.value);
+              onSearch(e.target.value);
+            }}
+          />
+          <button onClick={handleSearch} className="ml-4 text-[#cdd6f4] hover:text-[#89b4fa] text-lg" aria-label="Search">
+            <FaRegCompass />
+          </button>
+        </div>
+      </div>
+    </header>
+  );
+};
+// ====================================================================================================
+// ====================================================================================================
+import { FaRegCompass, FaRegHeart } from "react-icons/fa";
+const Footer: React.FC = () => {
+  return (
+    <footer className="relative w-full bg-[#0b0d0f]/60 backdrop-blur-md shadow-md py-2 sm:py-4 z-20">
+      <div className="container mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-y-0">
+        <div className="text-[#cdd6f4] flex items-center space-x-2 font-semibold text-sm sm:text-base">
+          <FaBookOpen />
+          <span>picBook</span>
+        </div>
+        <p className="text-[#a6adc8] text-center text-xs sm:text-sm">Crafted with imagination and stories. All rights reserved.</p>
+        <div className="flex space-x-4 text-[#a6adc8] text-sm sm:text-base">
+          <a href="#top" className="hover:text-[#89b4fa]">
+            <FaRegCompass />
+          </a>
+          <a href="#top" className="hover:text-[#89b4fa]">
+            <FaRegHeart />
+          </a>
+          <a href="#top" className="hover:text-[#89b4fa]">
+            <FaBookOpen />
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
+};
 // ====================================================================================================
 // ====================================================================================================
 const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnter, handleMouseLeave, setSelectedCard }: CardProps) => {
