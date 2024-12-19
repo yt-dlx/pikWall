@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 // app/index.tsx
 import "../global.css";
 import { Link } from "expo-router";
@@ -54,8 +55,16 @@ const Card = ({ data }: { data: EnvironmentEntry }) => {
     },
     [opacity]
   );
+  const currentColors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
   return (
-    <View className="bg-[#101216] rounded-lg shadow-black shadow-2xl overflow-hidden">
+    <View
+      style={{
+        backgroundColor: "#101216",
+        borderColor: currentColors[0],
+        borderWidth: 1
+      }}
+      className="rounded-lg shadow-md shadow-black overflow-hidden"
+    >
       <Animated.Image style={[{ height: 192, width: "100%" }, animatedStyle]} source={{ uri: currentImage }} alt={data.environment_title} />
       <SubImages images={data.images} onImagePress={handleSubImagePress} />
       <CardText data={data} currentIndex={currentIndex} />
@@ -82,10 +91,7 @@ const CardText = ({ data, currentIndex }: { data: EnvironmentEntry; currentIndex
           );
         })}
       </View>
-      <Text className="text-gray-400">{data.environment_prompt}</Text>
-      <Text className="text-gray-400">
-        {data.images[currentIndex].primary}, {data.images[currentIndex].secondary}, {data.images[currentIndex].tertiary}
-      </Text>
+      <Text className="text-gray-400 text-justify">{data.environment_prompt}</Text>
     </View>
   );
 };
@@ -99,6 +105,15 @@ const SubImages = ({ images, onImagePress }: { images: ImageMetadata[]; onImageP
         </TouchableOpacity>
       </Link>
     ))}
+  </View>
+);
+
+const HeaderSection = () => (
+  <View className="bg-[#13151a] p-2 m-2 rounded-2xl">
+    <View className="items-center -mt-8">
+      <Image source={require("../assets/images/logo.png")} alt="logo" style={{ width: 200, height: 200, resizeMode: "contain" }} />
+    </View>
+    <Text className="text-xl text-gray-300 text-center m-4 -mt-8">Dive Into Tales Inspired By Unique Images And Discover The Art Of Visual Environment Telling.</Text>
   </View>
 );
 
@@ -146,19 +161,20 @@ const IndexPage = (): JSX.Element => {
         data={filteredData}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
-          <View className="m-2">
+          <View className="m-4">
             <Card data={item} />
           </View>
         )}
         ListHeaderComponent={
           <View>
+            <HeaderSection />
             <View className="p-4">
               <Text className="text-3xl font-bold text-gray-100 text-center">Explore Our Collection</Text>
               <TextInput
-                className="bg-gray-800 text-gray-300 mt-6 px-4 py-4 rounded-2xl w-full"
+                className="bg-gray-800 text-gray-300 mt-6 px-4 py-4 rounded-2xl w-full shadow-2xl shadow-black border border-black"
                 placeholder="Search Your Favourites..."
                 onChangeText={setSearchQuery}
-                placeholderTextColor="orange"
+                placeholderTextColor="gray"
                 value={searchQuery}
               />
             </View>
