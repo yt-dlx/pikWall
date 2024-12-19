@@ -9,7 +9,6 @@ import Animated, { useAnimatedStyle, useSharedValue, withTiming, Easing, runOnJS
 
 let globalInterval: NodeJS.Timeout | null = null;
 const subscribers = new Set<() => void>();
-
 const useGlobalTimer = (callback: () => void) => {
   useEffect(() => {
     subscribers.add(callback);
