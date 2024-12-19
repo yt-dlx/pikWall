@@ -2,8 +2,8 @@ import { EnvironmentEntry } from "./types";
 const database: Record<string, EnvironmentEntry> = {
   "The Neon Overgrowth Among Forgotten Ruins": {
     environment_title: "The Neon Overgrowth Among Forgotten Ruins",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: " The Neon Overgrowth Among Forgotten Ruins (1).jpg",
@@ -249,8 +249,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Abstract Symphony In Painted Passage": {
     environment_title: "The Abstract Symphony In Painted Passage",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Abstract Symphony In Painted Passage (1).jpg",
@@ -496,8 +496,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Abstract Visions In Forgotten Atrium": {
     environment_title: "The Abstract Visions In Forgotten Atrium",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Abstract Visions In Forgotten Atrium (1).jpg",
@@ -743,8 +743,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Amber Skies Over Rolling Meadows": {
     environment_title: "The Amber Skies Over Rolling Meadows",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Amber Skies Over Rolling Meadows (1).jpg",
@@ -990,8 +990,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Arctic Serenity Beneath Silver Sky": {
     environment_title: "The Arctic Serenity Beneath Silver Sky",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Arctic Serenity Beneath Silver Sky (1).jpg",
@@ -1237,8 +1237,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Aurora Over Frozen Wilderness": {
     environment_title: "The Aurora Over Frozen Wilderness",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Aurora Over Frozen Wilderness (1).jpg",
@@ -1484,8 +1484,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Canvas Of Kaleidoscopic Ruins": {
     environment_title: "The Canvas Of Kaleidoscopic Ruins",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Canvas Of Kaleidoscopic Ruins (1).jpg",
@@ -1731,8 +1731,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Celestial Peaks Over Silent Waters": {
     environment_title: "The Celestial Peaks Over Silent Waters",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Celestial Peaks Over Silent Waters (1).jpg",
@@ -1978,8 +1978,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Charcoal Wastes Beneath Smoldering Stars": {
     environment_title: "The Charcoal Wastes Beneath Smoldering Stars",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Charcoal Wastes Beneath Smoldering Stars (1).jpg",
@@ -2225,8 +2225,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Charred Forest Beneath Smoky Skies": {
     environment_title: "The Charred Forest Beneath Smoky Skies",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Charred Forest Beneath Smoky Skies (1).jpg",
@@ -2472,8 +2472,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Crimson Glow Over Silent Steppe": {
     environment_title: "The Crimson Glow Over Silent Steppe",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Crimson Glow Over Silent Steppe (1).jpg",
@@ -2719,8 +2719,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Crimson Shore Beneath Dying Light": {
     environment_title: "The Crimson Shore Beneath Dying Light",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Crimson Shore Beneath Dying Light (1).jpg",
@@ -2966,8 +2966,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Crystal Peaks Under Lunar Glow": {
     environment_title: "The Crystal Peaks Under Lunar Glow",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Crystal Peaks Under Lunar Glow (1).jpg",
@@ -3213,8 +3213,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Dawn Light Over Pastel Ridge": {
     environment_title: "The Dawn Light Over Pastel Ridge",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Dawn Light Over Pastel Ridge (1).jpg",
@@ -3460,8 +3460,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Electric Cascade Beneath Urban Sky": {
     environment_title: "The Electric Cascade Beneath Urban Sky",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Electric Cascade Beneath Urban Sky (1).jpg",
@@ -3707,8 +3707,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Electric Glow Beneath Infinite Spires": {
     environment_title: "The Electric Glow Beneath Infinite Spires",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Electric Glow Beneath Infinite Spires (1).jpg",
@@ -3954,8 +3954,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Electric Rain On Shimmering Streets": {
     environment_title: "The Electric Rain On Shimmering Streets",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Electric Rain On Shimmering Streets (1).jpg",
@@ -4201,8 +4201,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Ember Plains Beneath Ashen Horizo": {
     environment_title: "The Ember Plains Beneath Ashen Horizo",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Ember Plains Beneath Ashen Horizo (1).jpg",
@@ -4448,8 +4448,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Emerald Refuge In Morning Glow": {
     environment_title: "The Emerald Refuge In Morning Glow",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Emerald Refuge In Morning Glow (1).jpg",
@@ -4695,8 +4695,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Forgotten Walls Of Colorful Echoe": {
     environment_title: "The Forgotten Walls Of Colorful Echoe",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Forgotten Walls Of Colorful Echoe (1).jpg",
@@ -4942,8 +4942,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Frozen Path Beneath Glacial Stars": {
     environment_title: "The Frozen Path Beneath Glacial Stars",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Frozen Path Beneath Glacial Stars (1).jpg",
@@ -5189,8 +5189,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Frozen Plateau Beneath Cosmic Veil": {
     environment_title: "The Frozen Plateau Beneath Cosmic Veil",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Frozen Plateau Beneath Cosmic Veil (1).jpg",
@@ -5436,8 +5436,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Frozen Shores Beneath Pale Sun": {
     environment_title: "The Frozen Shores Beneath Pale Sun",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Frozen Shores Beneath Pale Sun (1).jpg",
@@ -5683,8 +5683,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Gilded Brook In Whispering Hollow": {
     environment_title: "The Gilded Brook In Whispering Hollow",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Gilded Brook In Whispering Hollow (1).jpg",
@@ -5930,8 +5930,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Glacial Horizon Under Pale Dawn": {
     environment_title: "The Glacial Horizon Under Pale Dawn",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Glacial Horizon Under Pale Dawn (1).jpg",
@@ -6177,8 +6177,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Golden Light Across Crystal Meadow": {
     environment_title: "The Golden Light Across Crystal Meadow",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Golden Light Across Crystal Meadow (1).jpg",
@@ -6424,8 +6424,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Hidden Gallery Of Urban Vividness": {
     environment_title: "The Hidden Gallery Of Urban Vividness",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Hidden Gallery Of Urban Vividness (1).jpg",
@@ -6671,8 +6671,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Icebound Cliffs Beneath Celestial": {
     environment_title: "The Icebound Cliffs Beneath Celestial",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Icebound Cliffs Beneath Celestial (1).jpg",
@@ -6918,8 +6918,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Iron Wastes Beneath Dusky Veil": {
     environment_title: "The Iron Wastes Beneath Dusky Veil",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Iron Wastes Beneath Dusky Veil (1).jpg",
@@ -7165,8 +7165,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Kaleidoscope Hues In Forgotten Atrium": {
     environment_title: "The Kaleidoscope Hues In Forgotten Atrium",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Kaleidoscope Hues In Forgotten Atrium (1).jpg",
@@ -7412,8 +7412,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Lush Haven Beneath Verdant Arches": {
     environment_title: "The Lush Haven Beneath Verdant Arches",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Lush Haven Beneath Verdant Arches (1).jpg",
@@ -7659,8 +7659,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Molten Ruins Beneath Crimson Clouds": {
     environment_title: "The Molten Ruins Beneath Crimson Clouds",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Molten Ruins Beneath Crimson Clouds (1).jpg",
@@ -7906,8 +7906,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Moonlit Peaks Over Frozen River": {
     environment_title: "The Moonlit Peaks Over Frozen River",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Moonlit Peaks Over Frozen River (1).jpg",
@@ -8153,8 +8153,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Neon Rivers Among Steel Labyrinth": {
     environment_title: "The Neon Rivers Among Steel Labyrinth",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Neon Rivers Among Steel Labyrinth (1).jpg",
@@ -8400,8 +8400,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Neon Ruins Beneath Eternal Night": {
     environment_title: "The Neon Ruins Beneath Eternal Night",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Neon Ruins Beneath Eternal Night (1).jpg",
@@ -8647,8 +8647,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Neon Towers Among Liquid Streets": {
     environment_title: "The Neon Towers Among Liquid Streets",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Neon Towers Among Liquid Streets (1).jpg",
@@ -8894,8 +8894,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Painted Echoes In Silent Corridor": {
     environment_title: "The Painted Echoes In Silent Corridor",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Painted Echoes In Silent Corridor (1).jpg",
@@ -9141,8 +9141,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Pastel Bay Under Misty Sunrise": {
     environment_title: "The Pastel Bay Under Misty Sunrise",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Pastel Bay Under Misty Sunrise (1).jpg",
@@ -9388,8 +9388,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Pastel Dreams Of Golden Lagoon": {
     environment_title: "The Pastel Dreams Of Golden Lagoon",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Pastel Dreams Of Golden Lagoon (1).jpg",
@@ -9635,8 +9635,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Pastel Hills In Morning Fog": {
     environment_title: "The Pastel Hills In Morning Fog",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Pastel Hills In Morning Fog (1).jpg",
@@ -9882,8 +9882,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Pastel Peaks Under Eternal Sunrise": {
     environment_title: "The Pastel Peaks Under Eternal Sunrise",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Pastel Peaks Under Eternal Sunrise (1).jpg",
@@ -10129,8 +10129,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Pastel Reflections On Silent Lagoon": {
     environment_title: "The Pastel Reflections On Silent Lagoon",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Pastel Reflections On Silent Lagoon (1).jpg",
@@ -10376,8 +10376,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Pastel Waves Over Gentle Dunes": {
     environment_title: "The Pastel Waves Over Gentle Dunes",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Pastel Waves Over Gentle Dunes (1).jpg",
@@ -10623,8 +10623,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Ruined Towers Among Burning Cloud": {
     environment_title: "The Ruined Towers Among Burning Cloud",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Ruined Towers Among Burning Cloud (1).jpg",
@@ -10870,8 +10870,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Sapphire Glade In Moonlit Forest": {
     environment_title: "The Sapphire Glade In Moonlit Forest",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Sapphire Glade In Moonlit Forest (1).jpg",
@@ -11117,8 +11117,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Sapphire Shore Under Starry Veil": {
     environment_title: "The Sapphire Shore Under Starry Veil",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Sapphire Shore Under Starry Veil (1).jpg",
@@ -11364,8 +11364,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Sapphire Twilight On Alpine Lake": {
     environment_title: "The Sapphire Twilight On Alpine Lake",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Sapphire Twilight On Alpine Lake (1).jpg",
@@ -11611,8 +11611,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Scarlet Dusk Over Rolling Hills": {
     environment_title: "The Scarlet Dusk Over Rolling Hills",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Scarlet Dusk Over Rolling Hills (1).jpg",
@@ -11858,8 +11858,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Scorched Plains Under Iron Skies": {
     environment_title: "The Scorched Plains Under Iron Skies",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Scorched Plains Under Iron Skies (1).jpg",
@@ -12105,8 +12105,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Serene Coast Under Pastel Sky": {
     environment_title: "The Serene Coast Under Pastel Sky",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Serene Coast Under Pastel Sky (1).jpg",
@@ -12352,8 +12352,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Silent Fields Of Ashen Echoes": {
     environment_title: "The Silent Fields Of Ashen Echoes",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Silent Fields Of Ashen Echoes (1).jpg",
@@ -12599,8 +12599,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Starbound Peaks Over Silent Lake": {
     environment_title: "The Starbound Peaks Over Silent Lake",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Starbound Peaks Over Silent Lake (1).jpg",
@@ -12846,8 +12846,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Starlit Peaks Over Frozen Stream": {
     environment_title: "The Starlit Peaks Over Frozen Stream",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Starlit Peaks Over Frozen Stream (1).jpg",
@@ -13093,8 +13093,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Starlit Tundra Beneath Whispering": {
     environment_title: "The Starlit Tundra Beneath Whispering",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Starlit Tundra Beneath Whispering (1).jpg",
@@ -13340,8 +13340,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Twilight Bloom Over Serene Peaks": {
     environment_title: "The Twilight Bloom Over Serene Peaks",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Twilight Bloom Over Serene Peaks (1).jpg",
@@ -13587,8 +13587,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Verdant Gorge Beneath Golden Canopy": {
     environment_title: "The Verdant Gorge Beneath Golden Canopy",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Verdant Gorge Beneath Golden Canopy (1).jpg",
@@ -13834,8 +13834,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Verdant Hollow In Eternal Spring": {
     environment_title: "The Verdant Hollow In Eternal Spring",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Verdant Hollow In Eternal Spring (1).jpg",
@@ -14081,8 +14081,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Verdant Path Through Hidden Valley": {
     environment_title: "The Verdant Path Through Hidden Valley",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Verdant Path Through Hidden Valley (1).jpg",
@@ -14328,8 +14328,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Vivid Labyrinth Of Urban Canvas": {
     environment_title: "The Vivid Labyrinth Of Urban Canvas",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Vivid Labyrinth Of Urban Canvas (1).jpg",
@@ -14575,8 +14575,8 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Whispering Pines Under Silver Glow": {
     environment_title: "The Whispering Pines Under Silver Glow",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "placeholder",
+    environment_prompt: "placeholder",
     images: [
       {
         original_file_name: "The Whispering Pines Under Silver Glow (1).jpg",
