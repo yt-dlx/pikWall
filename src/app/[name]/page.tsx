@@ -9,6 +9,22 @@ import { FiBook, FiDownload, FiClipboard } from "react-icons/fi";
 import type { EnvironmentEntry } from "@/types/EnvironmentEntry";
 // ====================================================================================================
 // ====================================================================================================
+const SplashScreen: React.FC = () => (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0b0d0f] text-white">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.8 }}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
+      className="flex flex-col items-center"
+    >
+      <FiBook className="text-6xl mb-4 animate-pulse" />
+      <h1 className="text-2xl font-bold">Loading picBook...</h1>
+    </motion.div>
+  </div>
+);
+// ====================================================================================================
+// ====================================================================================================
 const Header: React.FC = () => {
   return (
     <header className="fixed top-0 left-0 w-full bg-[#0b0d0f]/60 backdrop-blur-md shadow-[#0b0d0f] shadow-2xl z-20">
@@ -69,8 +85,8 @@ const CardPage: React.FC = () => {
     fetchData();
   }, [name]);
   const copyToClipboard = (color: string) => navigator.clipboard.writeText(color);
-  if (loading) return <p className="text-[#cdd6f4]">Loading...</p>;
   if (error) return <p className="text-red-500">{error}</p>;
+  if (loading) return <SplashScreen />;
   return (
     <div className="min-h-screen text-[#cdd6f4]">
       <Header />
