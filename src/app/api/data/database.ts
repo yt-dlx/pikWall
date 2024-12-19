@@ -1,3 +1,4 @@
+// src/app/api/data/database.ts
 import { EnvironmentEntry } from "./types";
 const database: Record<string, EnvironmentEntry> = {
   "The Neon Overgrowth Among Forgotten Ruins": {

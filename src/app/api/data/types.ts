@@ -1,3 +1,4 @@
+// src/app/api/data/types.ts
 type ImageMetadata = {
   original_file_name: string;
   format: string;

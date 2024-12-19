@@ -1,4 +1,4 @@
-// app/providers.tsx
+// src/app/providers.tsx
 "use client";
 import { useState } from "react";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
