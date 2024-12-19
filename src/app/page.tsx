@@ -2,14 +2,14 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import Hero from "@/components/Hero";
+import Space from "@/components/Space";
 import Footer from "@/components/Footer";
-import Galaxy from "@/components/galaxy";
 import "react-toastify/dist/ReactToastify.css";
 import { FiInfo, FiBook } from "react-icons/fi";
 import { ToastContainer } from "react-toastify";
 import type { CardData } from "@/types/CardData";
 import type { CardProps } from "@/types/CardProps";
-import HeroSection from "@/components/HeroSection";
 import React, { useState, useEffect, memo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { EnvironmentEntry } from "@/types/EnvironmentEntry";
@@ -202,9 +202,9 @@ const PicBookPage: React.FC = () => {
   return (
     <React.Fragment>
       <Header onSearch={setSearchQuery} />
-      <Galaxy isModalOpen={false} />
+      <Space isModalOpen={false} />
       <main className="relative z-10 pt-16 sm:pt-20 pb-20 sm:pb-24">
-        <HeroSection />
+        <Hero />
         <ExploreSection searchQuery={searchQuery} />
       </main>
       <Footer />

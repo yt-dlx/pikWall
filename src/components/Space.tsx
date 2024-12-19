@@ -1,11 +1,11 @@
-// src/components/galaxy.tsx
+// src/components/Space.tsx
 "use client";
 import * as THREE from "three";
 import React, { useEffect, useRef } from "react";
 interface GalaxyProps {
   isModalOpen: boolean;
 }
-const Galaxy: React.FC<GalaxyProps> = ({ isModalOpen }) => {
+const Space: React.FC<GalaxyProps> = ({ isModalOpen }) => {
   const canvasRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
     const container = canvasRef.current;
@@ -168,4 +168,4 @@ const Galaxy: React.FC<GalaxyProps> = ({ isModalOpen }) => {
   return <div id="three-canvas-container" ref={canvasRef}></div>;
 };
 
-export default Galaxy;
+export default Space;

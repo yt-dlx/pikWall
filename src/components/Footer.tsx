@@ -1,3 +1,4 @@
+// src/components/Footer.tsx
 import React from "react";
 import { FaBookOpen, FaRegCompass, FaRegHeart } from "react-icons/fa";
 const Footer: React.FC = () => {

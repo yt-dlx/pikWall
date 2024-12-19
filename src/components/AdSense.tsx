@@ -1,3 +1,4 @@
+// src/components/AdSense.tsx
 import Script from "next/script";
 import React from "react";
 const AdSense = () => {

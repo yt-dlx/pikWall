@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
-import Galaxy from "@/components/galaxy";
+import Galaxy from "@/components/Space";
 import Header from "@/components/Header";
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";

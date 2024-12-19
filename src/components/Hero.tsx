@@ -1,9 +1,10 @@
+// src/components/Hero.tsx
 import React from "react";
 import Image from "next/image";
 import { FaArrowDown } from "react-icons/fa";
 // ====================================================================================================
 // ====================================================================================================
-const HeroSection: React.FC = () => {
+const Hero: React.FC = () => {
   return (
     <section className="relative h-screen flex flex-col items-center justify-center text-[#cdd6f4] px-4 text-center overflow-hidden">
       <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold leading-tight mb-4 flex flex-wrap items-center justify-center nordic-gradient-text text-center">
@@ -19,4 +20,4 @@ const HeroSection: React.FC = () => {
     </section>
   );
 };
-export default HeroSection;
+export default Hero;
