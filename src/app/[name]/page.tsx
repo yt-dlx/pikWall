@@ -1,10 +1,12 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Footer from "@/components/Footer";
 import Galaxy from "@/components/galaxy";
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import type { CardData } from "@/types/CardProps";
+import { Header } from "react-native/Libraries/NewAppScreen";
 import { FiBook, FiDownload, FiClipboard } from "react-icons/fi";
 import type { EnvironmentEntry } from "@/types/EnvironmentEntry";
 // ====================================================================================================
@@ -12,42 +14,18 @@ import type { EnvironmentEntry } from "@/types/EnvironmentEntry";
 const SplashScreen: React.FC = () => (
   <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0b0d0f] text-white">
     <motion.div
+      exit={{ opacity: 0, scale: 0.8 }}
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.8 }}
-      transition={{ duration: 0.6, ease: "easeInOut" }}
       className="flex flex-col items-center"
+      transition={{ duration: 0.6, ease: "easeInOut" }}
     >
       <FiBook className="text-6xl mb-4 animate-pulse" />
       <h1 className="text-2xl font-bold">Loading picBook...</h1>
     </motion.div>
   </div>
 );
-// ====================================================================================================
-// ====================================================================================================
-const Header: React.FC = () => {
-  return (
-    <header className="fixed top-0 left-0 w-full bg-[#0b0d0f]/60 backdrop-blur-md shadow-[#0b0d0f] shadow-2xl z-20">
-      <div className="container mx-auto px-4 py-4 flex flex-wrap items-center justify-between">
-        <div className="flex items-center space-x-4 md:space-x-6 w-full md:w-auto mb-4 md:mb-0">
-          <h1 className="text-xl md:text-2xl font-bold text-[#cdd6f4] flex items-center nordic-gradient-text">
-            <FiBook className="inline-block mr-2" />
-            picBook<span className="ml-2 text-xs">by Shovit</span>
-          </h1>
-        </div>
-      </div>
-    </header>
-  );
-};
-// ====================================================================================================
-// ====================================================================================================
-const Footer: React.FC = () => (
-  <footer className="w-full bg-[#0b0d0f]/60 backdrop-blur-md py-4">
-    <div className="container mx-auto px-4 flex justify-center items-center">
-      <div className="text-[#cdd6f4]">© picBook 2024</div>
-    </div>
-  </footer>
-);
+
 // ====================================================================================================
 // ====================================================================================================
 const CardPage: React.FC = () => {
