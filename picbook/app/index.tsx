@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 // app/index.tsx
 import "../global.css";
 import { Link } from "expo-router";
@@ -103,23 +102,6 @@ const SubImages = ({ images, onImagePress }: { images: ImageMetadata[]; onImageP
   </View>
 );
 
-const HeaderSection = ({ searchQuery, setSearchQuery }: { searchQuery: string; setSearchQuery: (query: string) => void }) => (
-  <View className="bg-[#13151a] p-4 m-2 rounded-2xl">
-    <View className="items-center">
-      <Image source={require("../assets/images/logo.png")} alt="logo" style={{ width: 100, height: 100, resizeMode: "contain" }} />
-    </View>
-    <Text className="text-6xl font-extrabold text-orange-400 text-center">picBook™</Text>
-    <Text className="text-xl text-gray-300 mt-4">Dive Into Tales Inspired By Unique Images And Discover The Art Of Visual Environment Telling.</Text>
-    <TextInput
-      className="bg-gray-800 text-gray-300 mt-6 px-4 py-4 rounded-2xl w-full"
-      placeholder="Search Your Favourites..."
-      onChangeText={setSearchQuery}
-      placeholderTextColor="orange"
-      value={searchQuery}
-    />
-  </View>
-);
-
 const decode = (entry: EnvironmentEntry): EnvironmentEntry => {
   return {
     ...entry,
@@ -170,9 +152,15 @@ const IndexPage = (): JSX.Element => {
         )}
         ListHeaderComponent={
           <View>
-            <HeaderSection searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
             <View className="p-4">
               <Text className="text-3xl font-bold text-gray-100 text-center">Explore Our Collection</Text>
+              <TextInput
+                className="bg-gray-800 text-gray-300 mt-6 px-4 py-4 rounded-2xl w-full"
+                placeholder="Search Your Favourites..."
+                onChangeText={setSearchQuery}
+                placeholderTextColor="orange"
+                value={searchQuery}
+              />
             </View>
           </View>
         }
