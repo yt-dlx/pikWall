@@ -59,7 +59,34 @@ const Card = ({ data }: { data: EnvironmentEntry }) => {
     <View className="bg-[#101216] rounded-lg shadow-black shadow-2xl overflow-hidden">
       <Animated.Image style={[{ height: 192, width: "100%" }, animatedStyle]} source={{ uri: currentImage }} alt={data.environment_title} />
       <SubImages images={data.images} onImagePress={handleSubImagePress} />
-      <CardText title={data.environment_title} description={data.environment_moral} />
+      <CardText data={data} currentIndex={currentIndex} />
+    </View>
+  );
+};
+
+const CardText = ({ data, currentIndex }: { data: EnvironmentEntry; currentIndex: number }) => {
+  const colors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
+  const words = data.environment_title.split(" ");
+  const segmentLength = Math.ceil(words.length / 3);
+  return (
+    <View className="p-4 text-center justify-center items-center">
+      <View className="flex-row flex-wrap">
+        {words.map((word, index) => {
+          let color = "";
+          if (index < segmentLength) color = colors[0];
+          else if (index < 2 * segmentLength) color = colors[1];
+          else color = colors[2];
+          return (
+            <Text key={index} style={{ color }} className={`text-2xl font-semibold ${index !== words.length - 1 ? "mr-1" : ""}`}>
+              {word}
+            </Text>
+          );
+        })}
+      </View>
+      <Text className="text-gray-400">{data.environment_prompt}</Text>
+      <Text className="text-gray-400">
+        {data.images[currentIndex].primary}, {data.images[currentIndex].secondary}, {data.images[currentIndex].tertiary}
+      </Text>
     </View>
   );
 };
@@ -73,13 +100,6 @@ const SubImages = ({ images, onImagePress }: { images: ImageMetadata[]; onImageP
         </TouchableOpacity>
       </Link>
     ))}
-  </View>
-);
-
-const CardText = ({ title, description }: { title: string; description: string }) => (
-  <View className="p-4 text-center justify-center items-center">
-    <Text className="text-2xl font-semibold text-gray-100 mb-2">{title}</Text>
-    <Text className="text-gray-400">{description}</Text>
   </View>
 );
 
@@ -112,13 +132,21 @@ const decode = (entry: EnvironmentEntry): EnvironmentEntry => {
 };
 
 const IndexPage = (): JSX.Element => {
+  const shuffleArray = <T,>(array: T[]): T[] => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  };
   const [data, setData] = React.useState<EnvironmentEntry[]>([]);
   const [searchQuery, setSearchQuery] = React.useState("");
   useEffect(() => {
     const fetchData = () => {
       const entries = Object.values(database);
       const cards: EnvironmentEntry[] = entries.map((entry) => decode(entry));
-      setData(cards);
+      const shuffledCards = shuffleArray(cards);
+      setData(shuffledCards);
     };
     fetchData();
     return () => {
