@@ -3,7 +3,7 @@
 # ==================================================XXX==================================================
 import os
 from PIL import Image
-def upscale_and_rename_images_in_folder(source_folder, target_folder, target_size=(3840, 2160)):
+def upscale_and_rename_images_in_folder(source_folder, target_folder, target_size=(8192, 4608)):
     if not os.path.exists(target_folder):
         os.makedirs(target_folder)
     for filename in os.listdir(source_folder):
