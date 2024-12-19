@@ -3,8 +3,8 @@ import "../global.css";
 import { Link } from "expo-router";
 import database from "./data/database";
 import React, { useEffect, useCallback } from "react";
-import { ImageMetadata, EnvironmentEntry } from "./data/types";
-import { View, Text, ScrollView, TextInput, TouchableOpacity, Image } from "react-native";
+import { ImageMetadata, EnvironmentEntry } from "../types/types";
+import { View, Text, TextInput, TouchableOpacity, Image, FlatList } from "react-native";
 import Animated, { useAnimatedStyle, useSharedValue, withTiming, Easing, runOnJS } from "react-native-reanimated";
 
 let globalInterval: NodeJS.Timeout | null = null;
@@ -30,8 +30,8 @@ const useGlobalTimer = (callback: () => void) => {
 const Card = ({ data }: { data: EnvironmentEntry }) => {
   const opacity = useSharedValue(1);
   const [currentIndex, setCurrentIndex] = React.useState(0);
-  const [currentImage, setCurrentImage] = React.useState(data.images[0]?.previewLink);
   const animatedStyle = useAnimatedStyle(() => ({ opacity: opacity.value }));
+  const [currentImage, setCurrentImage] = React.useState(data.images[0]?.previewLink);
   const updateImage = useCallback(() => {
     const nextIndex = (currentIndex + 1) % data.images.length;
     setCurrentIndex(nextIndex);
@@ -48,15 +48,14 @@ const Card = ({ data }: { data: EnvironmentEntry }) => {
     (previewLink: string, index: number) => {
       opacity.value = withTiming(0, { duration: 200, easing: Easing.out(Easing.ease) }, () => {
         runOnJS(setCurrentIndex)(index);
-        runOnJS(setCurrentImage)(previewLink);
+        runOnJS(setCurrentImage)(previewLink.replace("lowRes", "highRes"));
         opacity.value = withTiming(1, { duration: 200, easing: Easing.in(Easing.ease) });
       });
     },
     [opacity]
   );
-
   return (
-    <View className="bg-[#101216] mb-6 rounded-lg shadow-black shadow-2xl overflow-hidden">
+    <View className="bg-[#101216] rounded-lg shadow-black shadow-2xl overflow-hidden">
       <Animated.Image style={[{ height: 192, width: "100%" }, animatedStyle]} source={{ uri: currentImage }} alt={data.environment_title} />
       <SubImages images={data.images} onImagePress={handleSubImagePress} />
       <CardText title={data.environment_title} description={data.environment_moral} />
@@ -77,8 +76,8 @@ const SubImages = ({ images, onImagePress }: { images: ImageMetadata[]; onImageP
 );
 
 const CardText = ({ title, description }: { title: string; description: string }) => (
-  <View className="p-4">
-    <Text className="text-lg font-semibold text-gray-100 mb-2">{title}</Text>
+  <View className="p-4 text-center justify-center items-center">
+    <Text className="text-2xl font-semibold text-gray-100 mb-2">{title}</Text>
     <Text className="text-gray-400">{description}</Text>
   </View>
 );
@@ -90,7 +89,7 @@ const HeaderSection = ({ searchQuery, setSearchQuery }: { searchQuery: string; s
     <TextInput
       className="bg-gray-800 text-gray-300 mt-6 px-4 py-2 rounded-r-2xl w-full"
       placeholder="Search Your Favourites..."
-      placeholderTextColor="gray"
+      placeholderTextColor="pink"
       value={searchQuery}
       onChangeText={setSearchQuery}
     />
@@ -98,8 +97,16 @@ const HeaderSection = ({ searchQuery, setSearchQuery }: { searchQuery: string; s
 );
 
 const decode = (entry: EnvironmentEntry): EnvironmentEntry => {
-  return { ...entry, images: entry.images.map((image) => ({ ...image, previewLink: atob(image.previewLink), downloadLink: atob(image.downloadLink) })) };
+  return {
+    ...entry,
+    images: entry.images.map((image) => ({
+      ...image,
+      previewLink: atob(image.previewLink),
+      downloadLink: atob(image.downloadLink)
+    }))
+  };
 };
+
 const IndexPage = (): JSX.Element => {
   const [data, setData] = React.useState<EnvironmentEntry[]>([]);
   const [searchQuery, setSearchQuery] = React.useState("");
@@ -120,15 +127,25 @@ const IndexPage = (): JSX.Element => {
   }, []);
   const filteredData = data.filter((item) => item.environment_title.toLowerCase().includes(searchQuery.toLowerCase()) || item.environment_moral.toLowerCase().includes(searchQuery.toLowerCase()));
   return (
-    <ScrollView className="flex-1 bg-[#181b21]">
-      <HeaderSection searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-      <View className="px-4 py-8">
-        <Text className="text-2xl font-bold text-gray-100 mb-4">Explore</Text>
-        {filteredData.map((item, index) => (
-          <Card key={index} data={item} />
-        ))}
-      </View>
-    </ScrollView>
+    <View className="flex-1 bg-[#181b21]">
+      <FlatList
+        data={filteredData}
+        keyExtractor={(item, index) => index.toString()}
+        renderItem={({ item }) => (
+          <View className="m-2">
+            <Card data={item} />
+          </View>
+        )}
+        ListHeaderComponent={
+          <View>
+            <HeaderSection searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+            <View className="px-4 py-8">
+              <Text className="text-2xl font-bold text-gray-100 mb-4">Explore</Text>
+            </View>
+          </View>
+        }
+      />
+    </View>
   );
 };
 

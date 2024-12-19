@@ -1,5 +1,5 @@
 import React from "react";
-import { ImageMetadata } from "../data/types";
+import { ImageMetadata } from "../../types/types";
 import { useRouter, useLocalSearchParams } from "expo-router";
 import { View, Image, Text, TouchableOpacity } from "react-native";
 import { FontAwesome, MaterialIcons, Feather, AntDesign } from "@expo/vector-icons";
@@ -17,7 +17,7 @@ export default function HomeScreen() {
         <Text className="text-pink-400 font-bold text-lg ml-2">Go Back</Text>
       </TouchableOpacity>
       <View className="bg-[#20232a] p-6 rounded-lg shadow-lg w-full max-w-lg">
-        <Image source={{ uri: ImageData.previewLink }} alt={ImageData.original_file_name} className="h-64 w-full rounded-lg shadow-md mb-4" />
+        <Image source={{ uri: ImageData.previewLink.replace("lowRes", "highRes") }} alt={ImageData.original_file_name} className="h-64 w-full rounded-lg shadow-md mb-4" />
         <TouchableOpacity className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded text-center mb-6 flex flex-row justify-center items-center">
           <MaterialIcons name="file-download" size={18} color="#ffffff" />
           <Text className="ml-2">Download (Highest Resolution)</Text>
