@@ -19,4 +19,4 @@ type EnvironmentEntry = {
   environment_moral: string;
   images: ImageMetadata[];
 };
-export type { EnvironmentEntry };
+export type { EnvironmentEntry, ImageMetadata };

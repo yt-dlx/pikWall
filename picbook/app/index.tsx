@@ -80,14 +80,7 @@ const Card = ({ data }: { data: CardData }) => {
 const SubImages = ({ images, onImagePress, data }: { images: string[]; onImagePress: (uri: string, index: number) => void; data: CardData }) => (
   <View className="flex flex-row flex-wrap justify-center p-2">
     {images.map((uri, index) => (
-      <Link
-        key={index}
-        href={{
-          pathname: "./Home",
-          params: { imageUri: uri, title: data.title }
-        }}
-        asChild
-      >
+      <Link key={index} href={{ pathname: "./Home", params: { data: JSON.stringify(data) } }} asChild>
         <TouchableOpacity onPress={() => onImagePress(uri, index)}>
           <Image className="h-20 w-20 m-2 rounded-lg shadow-black shadow" source={{ uri }} alt={`Sub Image ${index + 1}`} />
         </TouchableOpacity>
