@@ -1,11 +1,10 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 // app/index.tsx
 import "../global.css";
 import { Link } from "expo-router";
 import database from "./data/database";
 import React, { useEffect, useCallback } from "react";
+import { FontAwesome, Feather } from "@expo/vector-icons";
 import { ImageMetadata, EnvironmentEntry } from "../types/types";
-import { MaterialIcons, FontAwesome, Feather } from "@expo/vector-icons";
 import { View, Text, TextInput, TouchableOpacity, Image, FlatList } from "react-native";
 import Animated, { useAnimatedStyle, useSharedValue, withTiming, Easing, runOnJS } from "react-native-reanimated";
 
@@ -73,16 +72,8 @@ const Card = ({ data }: { data: EnvironmentEntry }) => {
       <Animated.Image style={[{ height: 192, width: "100%" }, animatedStyle]} source={{ uri: currentImage }} alt={data.environment_title} />
       <SubImages images={data.images} onImagePress={handleSubImagePress} />
       <CardText data={data} currentIndex={currentIndex} />
-      <View style={{ padding: 10, borderTopWidth: 1, alignItems: "center", flexDirection: "row", justifyContent: "space-between", borderTopColor: currentColors[0] }}>
-        <Text style={{ color: "#fff", fontSize: 16 }}>Take an action:</Text>
-        <View style={{ flexDirection: "row", gap: 10 }}>
-          <TouchableOpacity>
-            <MaterialIcons name="navigate-before" size={24} color={currentColors[1]} />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <MaterialIcons name="navigate-next" size={24} color={currentColors[1]} />
-          </TouchableOpacity>
-        </View>
+      <View style={{ backgroundColor: "#0d0e11", padding: 10, borderTopWidth: 1, alignItems: "center", flexDirection: "row", justifyContent: "space-between", borderTopColor: currentColors[0] }}>
+        <Text style={{ color: currentColors[0], fontSize: 16 }}>picBook™</Text>
       </View>
     </View>
   );
@@ -93,7 +84,7 @@ const CardText = ({ data, currentIndex }: { data: EnvironmentEntry; currentIndex
   const words = data.environment_title.split(" ");
   const segmentLength = Math.ceil(words.length / 3);
   return (
-    <View className="p-4 text-center justify-center items-center">
+    <View className="p-4 text-justify justify-center items-center">
       <View className="flex-row flex-wrap">
         {words.map((word, index) => {
           let color = "";
@@ -107,7 +98,10 @@ const CardText = ({ data, currentIndex }: { data: EnvironmentEntry; currentIndex
           );
         })}
       </View>
-      <Text className="text-gray-400 text-justify">{data.environment_prompt}</Text>
+      <Text className="m-2 text-justify">
+        <Text className="text-white font-bold">Environment: </Text>
+        <Text className="text-gray-400">{data.environment_prompt}</Text>
+      </Text>
     </View>
   );
 };
@@ -125,11 +119,10 @@ const SubImages = ({ images, onImagePress }: { images: ImageMetadata[]; onImageP
 );
 
 const HeaderSection = () => (
-  <View className="bg-[#13151a] p-2 m-2 rounded-2xl">
-    <View className="items-center -mt-8">
-      <Image source={require("../assets/images/logo.png")} alt="logo" style={{ width: 200, height: 200, resizeMode: "contain" }} />
-    </View>
-    <Text className="text-xl text-gray-300 text-center m-4 -mt-8">Dive Into Tales Inspired By Unique Images And Discover The Art Of Visual Environment Telling.</Text>
+  <View className="bg-[#13151a] p-8 m-4 rounded-2xl">
+    <Text className="text-6xl font-extrabold text-pink-400">picBook™</Text>
+    <Text className="text-xs text-pink-400">Crafted with imagination and stories. All rights reserved.</Text>
+    <Text className="text-xl text-gray-300 mt-4">Dive Into Tales Inspired By Unique Images And Discover The Art Of Visual Environment Telling.</Text>
   </View>
 );
 

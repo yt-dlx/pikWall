@@ -9,7 +9,7 @@ const Footer: React.FC = () => (
     <View className="flex flex-col sm:flex-row items-center justify-between px-4">
       <View className="flex-row items-center gap-2">
         <FontAwesome name="book" size={16} color="#cdd6f4" />
-        <Text className="text-[#cdd6f4] font-semibold text-sm">picBook</Text>
+        <Text className="text-[#cdd6f4] font-semibold text-sm">picBook™</Text>
       </View>
       <Text className="text-[#a6adc8] text-center text-xs">Crafted with imagination and stories. All rights reserved.</Text>
     </View>
