@@ -24,3 +24,4 @@ core/.env
 core/python
 core/sources
 core/node_modules
+.env.local
