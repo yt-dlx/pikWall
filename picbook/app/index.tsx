@@ -1,3 +1,4 @@
+import database from "./data/database";
 import React, { useEffect, useState } from "react";
 import { View, Text, ScrollView, Image, TextInput } from "react-native";
 
@@ -11,36 +12,35 @@ type CardData = {
 
 export default function IndexPage(): JSX.Element {
   const [data, setData] = useState<CardData[]>([]);
-
   useEffect(() => {
-    const fetchData = async () => {
-      const placeholderImage = "https://via.placeholder.com/300x150"; // Placeholder image URI
-      const cards: CardData[] = Array(12)
-        .fill(0)
-        .map((_, index) => {
-          const subImages = Array(4).fill(placeholderImage);
-          return {
-            id: index.toString(),
-            uri: placeholderImage,
-            title: `Card Title ${index + 1}`,
-            description: `This is a description for card ${index + 1}.`,
-            subImages
-          };
-        });
+    const fetchData = () => {
+      const entries = Object.values(database);
+      const cards: CardData[] = entries.map((entry, index) => {
+        const subImages = entry.images.slice(1, 5).map((image) => atob(image.previewLink));
+        return {
+          id: index.toString(),
+          uri: atob(entry.images[0]?.previewLink) || "https://via.placeholder.com/300x150",
+          title: entry.environment_title,
+          description: entry.environment_moral,
+          subImages
+        };
+      });
       setData(cards);
     };
-
     fetchData();
   }, []);
 
   return (
     <ScrollView className="flex-1 bg-gray-900">
+      {/* Header */}
       <View className="bg-gray-900 py-16 px-4 items-center">
         <Text className="text-6xl font-extrabold text-pink-400">Stories Behind Pictures</Text>
         <Text className="text-xl text-gray-300 mt-4 text-center">Dive Into Tales Inspired By Unique Images And Discover The Art Of Visual Environment Telling.</Text>
         <Image className="h-16 w-16 mt-8" source={{ uri: "https://example.com/logo.png" }} alt="Logo" />
         <TextInput className="bg-gray-800 text-gray-300 mt-6 px-4 py-2 rounded-full w-3/4" placeholder="Search Your Favourites..." placeholderTextColor="gray" />
       </View>
+
+      {/* Explore Section */}
       <View className="px-4 py-8">
         <Text className="text-2xl font-bold text-gray-100 mb-4">Explore</Text>
         {data.map((item) => (
