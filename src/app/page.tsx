@@ -95,7 +95,7 @@ const Card = memo(({ card, cardIdx, autoImageIndex, hoveredImage, handleMouseEnt
   Card.displayName = "Card";
   return (
     <AnimatePresence>
-      <Link href={{ pathname: `/${encodeURIComponent(card.title)}`, query: { zoomed: card.title } }}>
+      <Link href={{ pathname: `/${encodeURIComponent(card.title)}`, query: { name: card.title } }}>
         <div className="bg-[#313244]/80 rounded-2xl overflow-hidden cursor-pointer relative group hover:shadow-xl flex flex-col w-full min-h-[280px] sm:min-h-[320px] transition-shadow duration-300 ease-in-out shadow-black shadow-lg">
           <div className="absolute top-2 left-2 z-10 flex items-center space-x-2 bg-[#3b4252]/80 text-[#cdd6f4] px-2 py-1 rounded-2xl shadow-md text-xs border">
             <FiInfo className="text-[#88c0d0] text-xs" />

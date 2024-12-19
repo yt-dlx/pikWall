@@ -52,12 +52,12 @@ const Footer: React.FC = () => (
 // ====================================================================================================
 const CardPage: React.FC = () => {
   const searchParams = useSearchParams();
-  const zoomed = searchParams.get("zoomed");
+  const name = searchParams.get("name");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [card, setCard] = useState<CardData | null>(null);
   useEffect(() => {
-    if (!zoomed) return;
+    if (!name) return;
     const fetchData = async () => {
       try {
         const response = await fetch("/api/images");
@@ -69,7 +69,7 @@ const CardPage: React.FC = () => {
           description: entry.environment_prompt,
           images: entry.images.map((image) => ({ ...image, previewLink: atob(image.previewLink), downloadLink: atob(image.downloadLink) }))
         }));
-        const matchedCard = cards.find((card) => card.title.toLowerCase() === zoomed?.toLowerCase());
+        const matchedCard = cards.find((card) => card.title.toLowerCase() === name?.toLowerCase());
         if (!matchedCard) throw new Error("Card not found");
         setCard(matchedCard);
       } catch (err) {
@@ -79,7 +79,7 @@ const CardPage: React.FC = () => {
       }
     };
     fetchData();
-  }, [zoomed]);
+  }, [name]);
   const copyToClipboard = (color: string) => navigator.clipboard.writeText(color);
   if (error) return <p className="text-red-500">{error}</p>;
   if (loading) return <SplashScreen />;
