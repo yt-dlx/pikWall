@@ -2,10 +2,9 @@ import { EnvironmentEntry } from "./types";
 const database: Record<string, EnvironmentEntry> = {
   "The Chaos Carved In Colorful Stone": {
     environment_title: "The Chaos Carved In Colorful Stone",
+    environment_moral: "Art Transforms Even The Harshest Places, Proving That Creativity Finds A Way To Thrive.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "An Abandoned Quarry Turned Art Space Features Towering Walls Covered In Layered Graffiti. Vibrant Oranges, Greens, And Reds Clash With Black-And-White Geometric Shapes, Creating A Bold And Chaotic Symphony Of Color. Cracks In The Stone Are Filled With Moss, Adding A Touch Of Natural Green To The Vibrant Scene. A Shallow Pool Of Water Reflects The Kaleidoscope Of Colors, Its Surface Rippling Gently. The Air Is Cool And Faintly Metallic, Resonating With The Echoes Of Past Voices.",
     images: [
       {
         original_file_name: "The Chaos Carved In Colorful Stone (1).jpg",
@@ -251,10 +250,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Cracked Earth Beneath Sulfuric Skies": {
     environment_title: "The Cracked Earth Beneath Sulfuric Skies",
+    environment_moral: "A Planet Mistreated Speaks Loudly In Its Silence, Showing The Cost Of Apathy Toward Its Care.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "A Dystopian Landscape Stretches Into The Distance, Its Ground Fractured Into Deep, Jagged Fissures. Sulfuric Clouds Loom Overhead, Casting A Sickly Yellow Light On The Barren Terrain. Pools Of Bubbling, Toxic Sludge Emit Faint Green Glows, Their Surfaces Marred With Oily Ripples. Towering Rock Formations, Dark And Twisted, Stand As The Only Remnants Of A Natural World. The Air Is Heavy With The Acrid Scent Of Burning Minerals, And The Occasional Hiss Of Escaping Gas Breaks The Oppressive Silence.",
     images: [
       {
         original_file_name: "The Cracked Earth Beneath Sulfuric Skies (1).jpg",
@@ -500,10 +498,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Cybernetic Glow Beneath Liquid Skies": {
     environment_title: "The Cybernetic Glow Beneath Liquid Skies",
+    environment_moral: "Even The Most Dazzling Creations Must Remember Their Roots In The Natural Order Of The World.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "A Cyberpunk City Hums With Life Beneath A Sky That Seems To Ripple Like Liquid Metal. Skyscrapers Of Gleaming Chrome Rise Into The Heavens, Their Surfaces Reflecting Swirling Shades Of Gold And Silver. Electric Blue Light Pours From Vast Conduits That Wind Around The Buildings, Creating A Glowing Web Of Energy. Floating Platforms Glide Silently Through The Air, Their Paths Marked By Faint, Shimmering Trails. The Streets Below Glisten With Rain, Reflecting The Artificial Brilliance Above.",
     images: [
       {
         original_file_name: "The Cybernetic Glow Beneath Liquid Skies (1).jpg",
@@ -749,10 +746,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Dreamscape Of Blush Meadows": {
     environment_title: "The Dreamscape Of Blush Meadows",
+    environment_moral: "Softness And Beauty Exist Everywhere For Those Who Pause To Embrace The Calm Within The Chaos.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "A Vast Meadow Glows In Pastel Tones Of Blush Pink And Mint Green Under A Pale Lavender Sky. The Ground Is Dotted With Delicate, Bell-Shaped Flowers That Sway Gently In The Breeze. A Stream Flows Gently Through The Meadow, Its Waters Sparkling With Faint Hues Of Turquoise. Wisps Of Clouds Drift Low, Their Soft Shapes Catching The Colors Of The Sky. The Air Is Warm And Filled With The Scent Of Blooming Wildflowers, Creating An Atmosphere Of Tranquility.",
     images: [
       {
         original_file_name: "The Dreamscape Of Blush Meadows (1).jpg",
@@ -998,10 +994,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Dusk Falls On Serene Cliffs": {
     environment_title: "The Dusk Falls On Serene Cliffs",
+    environment_moral: "The Beauty Of Endings Reminds Us Of The Promise Of New Beginnings Waiting Just Beyond The Horizon.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "Towering Cliffs Bathed In The Warm, Amber Hues Of Dusk Overlook A Calm, Endless Sea. The Waves Lap Gently Against The Rocky Base, Their Sound Echoing Softly In The Still Air. Wild Grasses And Flowers, Touched By The Golden Light, Sway Gently Atop The Cliffs. Seagulls Glide Across The Horizon, Their Silhouettes Black Against The Fading Sun. The Distant Sky Melts From Burnt Orange Into Deep Purple, Mirroring The Calm Serenity Of The Ocean Below.",
     images: [
       {
         original_file_name: "The Dusk Falls On Serene Cliffs (1).jpg",
@@ -1247,10 +1242,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Electric Night Beneath Floating Bridges": {
     environment_title: "The Electric Night Beneath Floating Bridges",
+    environment_moral: "Progress Illuminates The Path Forward But Must Not Extinguish The Quiet Beauty Of The Present.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      " In A Cyberpunk City Glowing Under An Electric Blue Sky, Floating Bridges Stretch Across The Skyline, Their Translucent Panels Illuminated By Soft, Pulsating Lights. Below, Winding Streets Reflect The Vivid Colors Of Neon Advertisements Flickering On Mirrored Walls. Shadows Shift With The Hum Of Passing Energy Vehicles, Their Trails Leaving Faint, Glowing Afterimages. Holographic Koi Fish Swim Lazily Through The Air, Their Light Casting Rippling Patterns On The Pavement. The Faint Scent Of Ozone Mingles With The Rhythmic Drumming Of Distant Rain.",
     images: [
       {
         original_file_name: "The Electric Night Beneath Floating Bridges (1).jpg",
@@ -1496,10 +1490,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Evening Glow Across Quiet Fields": {
     environment_title: "The Evening Glow Across Quiet Fields",
+    environment_moral: "The Quiet Simplicity Of The Land Reminds Us That True Abundance Is Found In Life’S Natural Rhythms.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "An Expansive Field Of Golden Wheat Waves Gently Under The Warm Hues Of An Evening Sky. The Sun Dips Low On The Horizon, Casting Long, Soft Shadows Across The Landscape. Clusters Of Wildflowers In Shades Of Blue And White Punctuate The Golden Sea, Adding Vibrancy To The Scene. In The Distance, A Gentle Hill Rises, Crowned By A Lone Oak Tree Silhouetted Against The Fading Light. The Air Is Still, Carrying The Faint Scent Of Earth And Ripe Grain.",
     images: [
       {
         original_file_name: "The Evening Glow Across Quiet Fields (1).jpg",
@@ -1745,10 +1738,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Frostbound Shores Beneath Arctic Light": {
     environment_title: "The Frostbound Shores Beneath Arctic Light",
+    environment_moral: "In The Frozen Stillness, The World Reminds Us Of Its Strength And Quiet Perseverance.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "An Icy Shoreline Glows Under The Faint Light Of A Setting Sun, Its Waters Reflecting The Soft Hues Of Orange And Pink. Chunks Of Ice Drift Lazily, Their Jagged Edges Catching The Golden Light. Sparse, Snow-Covered Shrubs Line The Shore, Their Branches Standing Out Against The Smooth, Frozen Expanse. The Sky Above Transitions Into A Pale Lavender, With Streaks Of Brighter Light Hinting At The Approach Of An Aurora. The Air Is Silent And Crisp, Carrying The Faint Sound Of Ice Shifting In The Distance.",
     images: [
       {
         original_file_name: "The Frostbound Shores Beneath Arctic Light (1).jpg",
@@ -1994,10 +1986,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Frosted Plains Beneath Soft Aurora": {
     environment_title: "The Frosted Plains Beneath Soft Aurora",
+    environment_moral: "In The Frozen Silence, The World Whispers Of Its Resilience And Eternal Grace.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "An Endless Field Of Snow Stretches Beneath A Sky Alive With Soft Ribbons Of Green And Violet Auroras. Crystalline Formations Glitter Like Jewels On The Frozen Ground, Reflecting The Celestial Colors Above. Sparse, Frost-Covered Shrubs Dot The Horizon, Their Delicate Branches Catching The Light. The Air Is Silent And Sharp, Each Breath Visible As A Faint Mist. The Faint Rustle Of Snow Under A Light Wind Adds To The Pristine, Untouched Beauty Of The Scene.",
     images: [
       {
         original_file_name: "The Frosted Plains Beneath Soft Aurora (1).jpg",
@@ -2243,10 +2234,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Gilded Twilight Over Coastal Peaks": {
     environment_title: "The Gilded Twilight Over Coastal Peaks",
+    environment_moral: "Nature’S Enduring Beauty Is A Reminder That Life’S Most Profound Moments Are Often Its Simplest.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "Golden Sunlight Bathes A Chain Of Rugged Coastal Peaks, Their Jagged Forms Glowing Against The Shimmering Sea Below. Waves Crash Softly Against The Rocky Shore, Sending Sprays Of Mist Into The Warm Evening Air. Sparse Pine Trees Cling To The Cliffs, Their Dark Silhouettes Stark Against The Vibrant Sky. The Horizon Burns With Hues Of Deep Orange And Soft Pink, Blending Seamlessly Into The Encroaching Twilight. The Sound Of The Waves Echoes Softly, Filling The Scene With A Sense Of Timeless Peace.",
     images: [
       {
         original_file_name: "The Gilded Twilight Over Coastal Peaks (1).jpg",
@@ -2492,10 +2482,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Glacial Majesty Under Arctic Sun": {
     environment_title: "The Glacial Majesty Under Arctic Sun",
+    environment_moral: "In Stillness And Isolation, The World’S Raw Beauty Reveals Its Enduring Strength And Timeless Grace.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "A Sprawling Glacier Glimmers Under A Pale Sun, Its Surface A Dazzling Array Of Blues And Whites. Jagged Ice Formations Rise Like Frozen Waves, Their Translucent Edges Catching The Light. Small, Frozen Streams Etch Intricate Patterns Across The Surface, Shimmering Like Liquid Diamonds. Sparse Patches Of Snow Crunch Softly Under Invisible Winds, While The Faint Hum Of Cracking Ice Resonates Across The Silent Expanse. Above, A Pristine Blue Sky Stretches Endlessly, Its Stark Contrast Adding To The Frozen World's Grandeur.",
     images: [
       {
         original_file_name: "The Glacial Majesty Under Arctic Sun (1).jpg",
@@ -2741,10 +2730,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Hidden Cascades In Verdant Hollow": {
     environment_title: "The Hidden Cascades In Verdant Hollow",
+    environment_moral: "Nature’S Beauty Lies Not In Grandeur, But In The Delicate Balance Of Its Smallest, Quietest Moments.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "A Hidden Hollow Cradles A Small Waterfall That Tumbles Into A Crystal-Clear Pool Surrounded By Moss-Covered Stones. The Dense Forest Canopy Above Filters Sunlight Into Golden Beams That Dance Across The Water’S Surface. Vibrant Ferns And Bright Orchids In Shades Of Orange And Magenta Frame The Scene, Adding Bursts Of Color. The Faint Sound Of Water Trickling And The Chirping Of Unseen Creatures Create A Serene Melody. The Air Is Humid, Filled With The Earthy Scent Of Damp Leaves And Soil.",
     images: [
       {
         original_file_name: "The Hidden Cascades In Verdant Hollow (1).jpg",
@@ -2990,10 +2978,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Molten Plains Beneath A Crimson Sky": {
     environment_title: "The Molten Plains Beneath A Crimson Sky",
+    environment_moral: "Destruction Warns Of Nature’S Power, Urging Us To Cherish What Remains Before It’S Too Late.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "A Dystopian Expanse Of Scorched Earth Glows Faintly Under The Heat Of A Crimson Sky. Rivers Of Molten Lava Snake Through The Landscape, Their Bright Orange Glow Casting Eerie Shadows Across The Cracked Terrain. The Jagged Remains Of Towers Stand Silhouetted Against The Sky, Their Twisted Forms Frozen In Fiery Devastation. Ash Falls Softly, Coating The Ground In A Fine, Gray Layer. The Air Is Thick With The Acrid Scent Of Burning Minerals And The Distant Rumble Of Volcanic Activity.",
     images: [
       {
         original_file_name: "The Molten Plains Beneath A Crimson Sky (1).jpg",
@@ -3239,10 +3226,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Moonlit Symphony Among Alpine Peaks": {
     environment_title: "The Moonlit Symphony Among Alpine Peaks",
+    environment_moral: "Under The Vastness Of The Night Sky, The World Reveals Its Timeless Elegance And Enduring Tranquility.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "Jagged Alpine Peaks Rise Majestically Under A Clear, Moonlit Sky, Their Snow-Covered Slopes Glowing Faintly In The Silvery Light. A Narrow, Frozen Stream Winds Through The Valley, Its Glassy Surface Reflecting The Stars Above. Sparse Pines, Dusted With Snow, Stand Like Sentinels Against The Backdrop Of Towering Cliffs. The Air Is Crisp And Carries The Faint Scent Of Pine, Mingled With The Subtle Crunch Of Snow Underfoot. Above, The Constellations Twinkle Brightly, Casting A Celestial Glow Across The Pristine Landscape.",
     images: [
       {
         original_file_name: "The Moonlit Symphony Among Alpine Peaks (1).jpg",
@@ -3488,10 +3474,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Neon Abyss Beneath Floating Skylines": {
     environment_title: "The Neon Abyss Beneath Floating Skylines",
+    environment_moral: "The Light Of Progress Should Guide Humanity, Not Cast Shadows Where Only Few Can Thrive.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "A Cyberpunk Underworld Stretches Below A City Of Floating Platforms, Its Streets Illuminated By A Labyrinth Of Neon Signs And Holograms. Towering Pylons Covered In Glowing Graffiti Support The Platforms Above, Casting Dynamic Patterns Of Light Onto The Wet, Metallic Streets. Bright Pink And Electric Blue Lights Reflect Off Shimmering Pools Of Rainwater Gathered In Cracked Pavement. Streams Of Holographic Data Flow Like Rivers Along The Buildings, Their Light Dancing With The Rhythm Of The City’S Faint Hum.",
     images: [
       {
         original_file_name: "The Neon Abyss Beneath Floating Skylines (1).jpg",
@@ -3737,10 +3722,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Neon Twilight Over Broken Towers": {
     environment_title: "The Neon Twilight Over Broken Towers",
+    environment_moral: "Even In The Remnants Of Technological Wonders, The Need For Balance And Purpose Endures.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "A Cyberpunk Skyline Flickers Under An Eternal Twilight, Its Towering Skyscrapers Broken Yet Glowing With Holographic Patches Of Repair. Light Trails From Unseen Drones Crisscross The Darkening Sky, Leaving Faint, Colorful Streaks. Along The Jagged Streets, Vending Machines Emit Soft, Rhythmic Beeps, And Holographic Street Signs Shift Between Languages. Pools Of Glowing Water Line The Cracked Pavement, Illuminated By Flickering Neon Lights From Above. A Faint, Mechanical Hum Resonates Across The Vast Expanse Of Urban Decay.",
     images: [
       {
         original_file_name: "The Neon Twilight Over Broken Towers (1).jpg",
@@ -3986,10 +3970,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Opalescent Sky Over Still Lagoon": {
     environment_title: "The Opalescent Sky Over Still Lagoon",
+    environment_moral: "In Moments Of Stillness, The World Reveals Its Most Profound Beauty, Untouched By The Chaos Of Life.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "A Serene Lagoon Lies Still Under A Sky Painted With Opalescent Hues Of Pearl, Lavender, And Peach. Delicate Ripples Distort The Reflection Of Wispy Clouds That Drift Lazily Overhead. Soft, Grassy Banks Are Adorned With Clusters Of Pastel Wildflowers, Their Subtle Scents Carried By The Gentle Breeze. The Distant Hills Are Muted By A Soft Mist That Seems To Blur The Edges Of The World. The Air Is Warm And Quiet, Broken Only By The Faint Splash Of Water As A Gentle Ripple Forms.",
     images: [
       {
         original_file_name: "The Opalescent Sky Over Still Lagoon (1).jpg",
@@ -4235,10 +4218,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Pastel Waves Upon Soft Shores": {
     environment_title: "The Pastel Waves Upon Soft Shores",
+    environment_moral: "Gentle Moments In Nature Remind Us Of The Profound Beauty Found In Life’S Quietest Places.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "A Serene Beach Is Painted In Pastel Hues Of Lavender And Peach As The Tide Gently Laps Against The Soft, Sandy Shore. Smooth, Multicolored Stones Glisten In The Fading Light, Forming Natural Mosaics Along The Water’S Edge. Wispy Clouds Drift Overhead, Their Shapes Reflecting On The Glassy Surface Of Shallow Pools. The Faint Sound Of Distant Waves Blends With The Rustling Of Delicate Dune Grasses. The Air Is Warm, Carrying A Soft, Salty Breeze That Soothes The Senses.",
     images: [
       {
         original_file_name: "The Pastel Waves Upon Soft Shores (1).jpg",
@@ -4484,10 +4466,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Rusted Spires Under Poisoned Skies": {
     environment_title: "The Rusted Spires Under Poisoned Skies",
+    environment_moral: "A World Unbalanced Reveals The Consequences Of Neglecting The Fragile Harmony Between Nature And Progress.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "In A Desolate Dystopian City, Rust-Covered Spires Rise Into A Smoky, Green-Tinted Sky. The Air Is Thick With Acrid Fumes That Obscure The Faint Outlines Of Shattered Bridges And Broken Roads. Pools Of Black, Viscous Liquid Shimmer With An Unnatural Iridescence In The Dim Light. Twisted Cables Dangle From Crumbling Structures, Swaying In The Stagnant Air. Faint Crackling Sounds Of Electrical Discharges Echo Through The Empty Expanse, Punctuated By The Occasional Rumble Of Distant Collapses.",
     images: [
       {
         original_file_name: "The Rusted Spires Under Poisoned Skies (1).jpg",
@@ -4733,10 +4714,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Serene Glade In Golden Light": {
     environment_title: "The Serene Glade In Golden Light",
+    environment_moral: "Even The Smallest Pockets Of Nature Hold The Power To Restore The Soul And Ignite Hope.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "A Secluded Forest Clearing Glows In The Warm Light Of Early Morning. Towering Oak Trees Encircle The Glade, Their Branches Adorned With Golden Leaves That Sparkle Like Gems In The Sun. The Ground Is Soft And Blanketed With A Lush Carpet Of Wildflowers In Vibrant Hues Of Violet And Yellow. A Gentle Brook Meanders Through The Glade, Its Crystal-Clear Water Catching And Reflecting The Sunlight In Brilliant Flashes. The Air Is Cool And Carries The Faint Aroma Of Pine And Blooming Flowers.",
     images: [
       {
         original_file_name: "The Serene Glade In Golden Light (1).jpg",
@@ -4982,10 +4962,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Soft Glow Of Pastel Skies": {
     environment_title: "The Soft Glow Of Pastel Skies",
+    environment_moral: "Gentleness And Calm Are Powerful Forces, Nurturing The Soul And Quieting The Chaos Of Life.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "A Tranquil Valley Is Bathed In The Soft Glow Of A Pastel Sunset, Where Hills Of Lavender And Mint Roll Into The Horizon. A Gentle Brook Winds Through The Scene, Its Waters Reflecting Shades Of Pale Peach And Blue. Wildflowers In Hues Of Blush And Cream Blanket The Landscape, Creating A Dreamy, Ethereal Effect. The Air Is Warm And Carries The Faint Scent Of Blooming Jasmine, Blending With The Soothing Murmur Of The Brook. Above, Clouds Drift Lazily In Soft, Shifting Colors.",
     images: [
       {
         original_file_name: "The Soft Glow Of Pastel Skies (1).jpg",
@@ -5231,10 +5210,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Tranquility Under Emerald Canopy": {
     environment_title: "The Tranquility Under Emerald Canopy",
+    environment_moral: "In The Quiet Arms Of Nature, The Soul Finds Its Truest Peace And Strength.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "A Dense Rainforest Radiates Life, Its Canopy Glowing In Hues Of Emerald Green As Sunlight Filters Through The Leaves. Massive Trees Tower Above, Their Trunks Wrapped In Thick Vines Adorned With Tiny Blossoms. Pools Of Crystal-Clear Water Glisten Among The Moss-Covered Rocks, Reflecting The Lush Surroundings. Ferns And Wild Orchids Spread Across The Forest Floor, Mingling With Vibrant Fungi That Seem To Pulse Faintly With Light. The Soft Hum Of Insects And The Distant Call Of Exotic Birds Create A Symphony Of Natural Sound.",
     images: [
       {
         original_file_name: "The Tranquility Under Emerald Canopy (1).jpg",
@@ -5480,10 +5458,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Twilight Serenade On Tranquil Lake": {
     environment_title: "The Twilight Serenade On Tranquil Lake",
+    environment_moral: "The Transition Between Day And Night Reminds Us Of Life’S Quiet, Beautiful Moments Of Change.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "A Serene Lake Mirrors The Deepening Hues Of A Twilight Sky Painted In Lavender And Amber. Lily Pads Dot The Still Surface, Their Edges Glowing Softly In The Fading Light. Weeping Willows Line The Shore, Their Long Branches Swaying Gently In The Evening Breeze. The Distant Mountains Are Shrouded In Mist, Their Silhouettes Softened By The Encroaching Night. Fireflies Flit Above The Water, Their Tiny Lights Adding A Touch Of Magic To The Tranquil Scene.",
     images: [
       {
         original_file_name: "The Twilight Serenade On Tranquil Lake (1).jpg",
@@ -5729,10 +5706,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Twilight Song Beneath Luminous Peaks": {
     environment_title: "The Twilight Song Beneath Luminous Peaks",
+    environment_moral: "In The Fading Light, The Vastness Of The World Humbles Us, Reminding Us Of Our Place In The Universe.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "Sharp, Crystalline Peaks Rise Into A Twilight Sky Awash In Deep Blues And Soft Silvers. Snow Glistens On The Jagged Edges, Catching The Faint Light Of A Crescent Moon. A Winding River Snakes Through The Valley, Its Waters Glowing Faintly With A Luminescent Quality. Shadows Lengthen As The Light Fades, Creating A Stark Contrast Between The Glowing Snow And The Deepening Darkness. Above, Stars Begin To Pierce The Twilight, Forming Constellations Reflected In The Icy Waters Below.",
     images: [
       {
         original_file_name: "The Twilight Song Beneath Luminous Peaks (1).jpg",
@@ -5978,10 +5954,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Urban Canvas Of Eternal Color": {
     environment_title: "The Urban Canvas Of Eternal Color",
+    environment_moral: "Art Breathes Life Into The Forgotten, Showing That Creativity Can Transform Even The Most Desolate Spaces.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "A Forgotten Train Station Is Transformed Into An Explosion Of Color, Where Every Wall And Pillar Is Adorned With Sprawling Graffiti Murals. Bright Yellows And Fiery Reds Form Bold Statements, While Intricate Patterns Of Teal And Purple Dance Across The Ceiling. Broken Tiles On The Floor Are Painted In Mismatched Shades, Forming An Accidental Mosaic. Overhead, Cracked Skylights Allow Beams Of Sunlight To Illuminate The Vivid Art, Creating Glowing Highlights That Shift With The Passing Clouds.",
     images: [
       {
         original_file_name: "The Urban Canvas Of Eternal Color (1).jpg",
@@ -6227,10 +6202,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Vibrant Echoes In Hidden Alley": {
     environment_title: "The Vibrant Echoes In Hidden Alley",
+    environment_moral: "Art Is An Unspoken Language, Speaking Volumes In Places Where Words Fall Silent.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "A Narrow Alley Explodes With Vivid Graffiti, Where Layers Of Multicolored Murals Blend To Form An Intricate Patchwork Of Art. Splashes Of Neon Orange And Deep Purple Dominate, While Reflective Paint Creates Shifting Highlights Under A Flickering Streetlamp. The Brick Walls Are Textured, Adding Depth To The Vibrant Imagery. Small Potted Plants Sit In Random Corners, Their Green Leaves A Stark Contrast Against The Urban Canvas. The Air Smells Faintly Of Fresh Paint And Damp Stone.",
     images: [
       {
         original_file_name: "The Vibrant Echoes In Hidden Alley (1).jpg",
@@ -6476,10 +6450,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Vivid Chronicles On Hidden Walls": {
     environment_title: "The Vivid Chronicles On Hidden Walls",
+    environment_moral: "Expression Is The Soul’S Rebellion, Finding Beauty And Hope In Places Others Have Forgotten.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "A Secluded Courtyard Is Alive With Vibrant Graffiti, Where Murals Tell Stories Of Hope, Resistance, And Joy. Bright Blues And Fiery Reds Intermingle With Soft Pastels, Forming A Chaotic Yet Harmonious Masterpiece. Ivy Climbs The Painted Walls, Adding A Touch Of Green To The Urban Canvas. Broken Cobblestones Underfoot Are Stained With Splashes Of Paint, Remnants Of Creative Explosions. Overhead, Faint Sunlight Filters Through A Lattice Of Iron Beams, Casting Intricate Shadows That Dance Across The Vibrant Colors.",
     images: [
       {
         original_file_name: "The Vivid Chronicles On Hidden Walls (1).jpg",
@@ -6725,10 +6698,9 @@ const database: Record<string, EnvironmentEntry> = {
   },
   "The Whispering Waters In Verdant Gorge": {
     environment_title: "The Whispering Waters In Verdant Gorge",
+    environment_moral: "Nature’S Quiet Sanctuaries Remind Us Of The Peace And Renewal That Lie In Its Untouched Beauty.",
     environment_prompt:
-      "Magna quis ad laboris ipsum mollit ex elit pariatur tempor. Ad dolor voluptate cillum ex officia quis ea. Ut deserunt ullamco et cillum culpa elit. In et id fugiat adipisicing id ex tempor cillum non ea reprehenderit tempor nisi. Velit non sunt aliquip non sunt occaecat dolor proident.Tempor laborum voluptate sit non labore non laboris do. Non est magna aliquip magna nulla commodo dolore qui laborum quis aute voluptate sit. In occaecat cupidatat aliquip sit reprehenderit. Occaecat est officia enim aliqua excepteur nisi. Pariatur excepteur id qui Lorem sint et nostrud quis nulla nisi pariatur officia officia exercitation. Sunt sit excepteur dolor ipsum.",
-    environment_moral:
-      "Irure do anim aliquip elit eu voluptate officia officia non. Esse duis ad ex eiusmod ipsum commodo deserunt Lorem proident pariatur nulla officia Lorem Lorem. In elit ipsum qui sint nisi.",
+      "A Secluded Gorge Cradles A Turquoise River That Meanders Lazily Through Walls Of Moss-Covered Rock. Ferns And Wildflowers Line The Edges Of The Water, Their Vibrant Colors Contrasting Against The Emerald Backdrop. Sunlight Streams Through Narrow Gaps In The Canyon Walls, Creating Dramatic Beams That Illuminate The Mist Rising From The Water. Tiny Waterfalls Trickle Down From Unseen Heights, Their Gentle Splashes Adding To The Soothing Symphony Of Nature. The Air Is Damp, Rich With The Scent Of Wet Stone And Blooming Flora.",
     images: [
       {
         original_file_name: "The Whispering Waters In Verdant Gorge (1).jpg",
