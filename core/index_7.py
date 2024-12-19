@@ -59,6 +59,7 @@ def process_images_in_folder(folder_path):
                     parent_data[base_name] = {
                         base_name: {
                             "environment_title": base_name,
+                            "environment_moral": "",
                             "environment_prompt": "",
                             "images": []
                         }
