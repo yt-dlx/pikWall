@@ -91,11 +91,11 @@ const HeaderSection = ({ searchQuery, setSearchQuery }: { searchQuery: string; s
     <Text className="text-6xl font-extrabold text-orange-400 text-center">picBook™</Text>
     <Text className="text-xl text-gray-300 mt-4">Dive Into Tales Inspired By Unique Images And Discover The Art Of Visual Environment Telling.</Text>
     <TextInput
-      className="bg-gray-800 text-gray-300 mt-6 px-4 py-2 rounded-r-2xl w-full"
+      className="bg-gray-800 text-gray-300 mt-6 px-4 py-4 rounded-2xl w-full"
       placeholder="Search Your Favourites..."
+      onChangeText={setSearchQuery}
       placeholderTextColor="orange"
       value={searchQuery}
-      onChangeText={setSearchQuery}
     />
   </View>
 );

@@ -47,7 +47,7 @@ export default function HomeScreen() {
           <MaterialIcons name="color-lens" size={14} color="#ffffff" /> <Text className="font-semibold">Tertiary Color:</Text> {ImageData.tertiary}
         </Text>
         <View className="flex flex-row flex-wrap justify-start">
-          {Array.from({ length: 48 }).map((_, index) => (
+          {Array.from({ length: 48 }).map((hex, index) => (
             <View key={index} className={`h-4 w-4 m-1 rounded-full border ${index % 3 === 0 ? "bg-[#a95b45]" : index % 3 === 1 ? "bg-[#5ae783]" : "bg-[#41734d]"}`}></View>
           ))}
         </View>
