@@ -5,6 +5,7 @@ import { Link } from "expo-router";
 import database from "./data/database";
 import React, { useEffect, useCallback } from "react";
 import { ImageMetadata, EnvironmentEntry } from "../types/types";
+import { MaterialIcons, FontAwesome, Feather } from "@expo/vector-icons";
 import { View, Text, TextInput, TouchableOpacity, Image, FlatList } from "react-native";
 import Animated, { useAnimatedStyle, useSharedValue, withTiming, Easing, runOnJS } from "react-native-reanimated";
 
@@ -49,7 +50,7 @@ const Card = ({ data }: { data: EnvironmentEntry }) => {
     (previewLink: string, index: number) => {
       opacity.value = withTiming(0, { duration: 200, easing: Easing.out(Easing.ease) }, () => {
         runOnJS(setCurrentIndex)(index);
-        runOnJS(setCurrentImage)(previewLink.replace("lowRes", "highRes"));
+        runOnJS(setCurrentImage)(previewLink);
         opacity.value = withTiming(1, { duration: 200, easing: Easing.in(Easing.ease) });
       });
     },
@@ -57,17 +58,32 @@ const Card = ({ data }: { data: EnvironmentEntry }) => {
   );
   const currentColors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
   return (
-    <View
-      style={{
-        backgroundColor: "#101216",
-        borderColor: currentColors[0],
-        borderWidth: 1
-      }}
-      className="rounded-lg shadow-md shadow-black overflow-hidden"
-    >
+    <View style={{ backgroundColor: "#101216", borderColor: currentColors[0], borderWidth: 1 }} className="rounded-lg shadow-md shadow-black overflow-hidden">
+      <View style={{ flexDirection: "row", justifyContent: "space-between", padding: 10, alignItems: "center" }}>
+        <Text className="text-white text-lg font-bold">{data.environment_title}</Text>
+        <View style={{ flexDirection: "row", gap: 10 }}>
+          <TouchableOpacity>
+            <FontAwesome name="heart-o" size={20} color={currentColors[1]} />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Feather name="bookmark" size={20} color={currentColors[2]} />
+          </TouchableOpacity>
+        </View>
+      </View>
       <Animated.Image style={[{ height: 192, width: "100%" }, animatedStyle]} source={{ uri: currentImage }} alt={data.environment_title} />
       <SubImages images={data.images} onImagePress={handleSubImagePress} />
       <CardText data={data} currentIndex={currentIndex} />
+      <View style={{ padding: 10, borderTopWidth: 1, alignItems: "center", flexDirection: "row", justifyContent: "space-between", borderTopColor: currentColors[0] }}>
+        <Text style={{ color: "#fff", fontSize: 16 }}>Take an action:</Text>
+        <View style={{ flexDirection: "row", gap: 10 }}>
+          <TouchableOpacity>
+            <MaterialIcons name="navigate-before" size={24} color={currentColors[1]} />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <MaterialIcons name="navigate-next" size={24} color={currentColors[1]} />
+          </TouchableOpacity>
+        </View>
+      </View>
     </View>
   );
 };
@@ -101,7 +117,7 @@ const SubImages = ({ images, onImagePress }: { images: ImageMetadata[]; onImageP
     {images.map((image, index) => (
       <Link key={index} href={{ pathname: "./Home", params: { data: JSON.stringify(image) } }} asChild>
         <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)}>
-          <Image className="h-20 w-20 m-2 rounded-lg shadow-black shadow" source={{ uri: image.previewLink }} alt={`Sub Image ${index + 1}`} />
+          <Image className="h-20 w-20 m-2 rounded-lg shadow-2xl shadow-black border border-black" source={{ uri: image.previewLink }} alt={`Sub Image ${index + 1}`} />
         </TouchableOpacity>
       </Link>
     ))}
