@@ -1,3 +1,6 @@
+// app/index.tsx
+import "../global.css";
+import { Link } from "expo-router";
 import database from "./data/database";
 import React, { useEffect, useCallback } from "react";
 import { FontAwesome } from "@expo/vector-icons";
@@ -12,9 +15,6 @@ type CardData = {
   description: string;
   subImages: string[];
 };
-//  ====================================================================================
-//  ====================================================================================
-const AnimatedImage = Animated.createAnimatedComponent(Image);
 let globalInterval: NodeJS.Timeout | null = null;
 const subscribers = new Set<() => void>();
 //  ====================================================================================
@@ -36,8 +36,9 @@ const useGlobalTimer = (callback: () => void) => {
     };
   }, [callback]);
 };
-//  ====================================================================================
-//  ====================================================================================
+// ====================================================================================
+// Card Component
+// ====================================================================================
 const Card = ({ data }: { data: CardData }) => {
   const opacity = useSharedValue(1);
   const [currentIndex, setCurrentIndex] = React.useState(0);
@@ -67,13 +68,44 @@ const Card = ({ data }: { data: CardData }) => {
   );
   return (
     <View className="bg-[#101216] mb-6 rounded-lg shadow-black shadow-2xl overflow-hidden">
-      <AnimatedImage style={[{ height: 192, width: "100%" }, animatedStyle]} source={{ uri: currentImage }} alt={data.title} />
-      <SubImages images={data.subImages} onImagePress={handleSubImagePress} />
+      <Animated.Image style={[{ height: 192, width: "100%" }, animatedStyle]} source={{ uri: currentImage }} alt={data.title} />
+      <SubImages images={data.subImages} onImagePress={handleSubImagePress} data={data} />
       <CardText title={data.title} description={data.description} />
     </View>
   );
 };
+// ====================================================================================
+// SubImages Component
+// ====================================================================================
+const SubImages = ({ images, onImagePress, data }: { images: string[]; onImagePress: (uri: string, index: number) => void; data: CardData }) => (
+  <View className="flex flex-row flex-wrap justify-center p-2">
+    {images.map((uri, index) => (
+      <Link
+        key={index}
+        href={{
+          pathname: "./Home",
+          params: { imageUri: uri, title: data.title }
+        }}
+        asChild
+      >
+        <TouchableOpacity onPress={() => onImagePress(uri, index)}>
+          <Image className="h-20 w-20 m-2 rounded-lg shadow-black shadow" source={{ uri }} alt={`Sub Image ${index + 1}`} />
+        </TouchableOpacity>
+      </Link>
+    ))}
+  </View>
+);
 //  ====================================================================================
+//  CardText Component
+//  ====================================================================================
+const CardText = ({ title, description }: { title: string; description: string }) => (
+  <View className="p-4">
+    <Text className="text-lg font-semibold text-gray-100 mb-2">{title}</Text>
+    <Text className="text-gray-400">{description}</Text>
+  </View>
+);
+//  ====================================================================================
+//  HeaderSection Component
 //  ====================================================================================
 const HeaderSection = ({ searchQuery, setSearchQuery }: { searchQuery: string; setSearchQuery: (query: string) => void }) => (
   <View className="bg-[#13151a] p-4 m-2 rounded-2xl">
@@ -89,9 +121,10 @@ const HeaderSection = ({ searchQuery, setSearchQuery }: { searchQuery: string; s
   </View>
 );
 //  ====================================================================================
+//  Footer Component
 //  ====================================================================================
 const Footer: React.FC = () => (
-  <View className="relative w-full bg-13151a py-4">
+  <View className="relative w-full bg-[#13151a] py-4">
     <View className="flex flex-col sm:flex-row items-center justify-between px-4">
       <View className="flex-row items-center gap-2">
         <FontAwesome name="book" size={16} color="#cdd6f4" />
@@ -102,27 +135,9 @@ const Footer: React.FC = () => (
   </View>
 );
 //  ====================================================================================
+//  Main Index Page
 //  ====================================================================================
-const SubImages = ({ images, onImagePress }: { images: string[]; onImagePress: (uri: string, index: number) => void }) => (
-  <View className="flex flex-row flex-wrap justify-center p-2">
-    {images.map((uri, index) => (
-      <TouchableOpacity key={index} onPress={() => onImagePress(uri, index)}>
-        <Image className="h-20 w-20 m-2 rounded-lg shadow-black shadow" source={{ uri }} alt={`Sub Image ${index + 1}`} />
-      </TouchableOpacity>
-    ))}
-  </View>
-);
-//  ====================================================================================
-//  ====================================================================================
-const CardText = ({ title, description }: { title: string; description: string }) => (
-  <View className="p-4">
-    <Text className="text-lg font-semibold text-gray-100 mb-2">{title}</Text>
-    <Text className="text-gray-400">{description}</Text>
-  </View>
-);
-//  ====================================================================================
-//  ====================================================================================
-const HomePage = (): JSX.Element => {
+const IndexPage = (): JSX.Element => {
   const [data, setData] = React.useState<CardData[]>([]);
   const [searchQuery, setSearchQuery] = React.useState("");
   useEffect(() => {
@@ -163,5 +178,4 @@ const HomePage = (): JSX.Element => {
     </ScrollView>
   );
 };
-
-export default HomePage;
+export default IndexPage;
