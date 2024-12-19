@@ -3,10 +3,10 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
 import Galaxy from "@/components/galaxy";
+import Header from "@/components/Header";
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import type { CardData } from "@/types/CardProps";
-import { Header } from "react-native/Libraries/NewAppScreen";
 import { FiBook, FiDownload, FiClipboard } from "react-icons/fi";
 import type { EnvironmentEntry } from "@/types/EnvironmentEntry";
 // ====================================================================================================
