@@ -1,6 +1,6 @@
+import database from "./data/database";
 import React, { useEffect, useState } from "react";
 import { View, Text, ScrollView, Image, TextInput } from "react-native";
-import database from "./data/database";
 
 type CardData = {
   id: string;
@@ -11,9 +11,9 @@ type CardData = {
 };
 
 const HeaderSection = () => (
-  <View className="bg-[#181b21] py-16 px-4 items-center">
-    <Text className="text-6xl font-extrabold text-pink-400">Stories Behind Pictures</Text>
-    <Text className="text-xl text-gray-300 mt-4 text-center">Dive Into Tales Inspired By Unique Images And Discover The Art Of Visual Environment Telling.</Text>
+  <View className="bg-[#181b21] py-16 px-4">
+    <Text className="text-6xl font-extrabold text-pink-400">picBook</Text>
+    <Text className="text-xl text-gray-300 mt-4">Dive Into Tales Inspired By Unique Images And Discover The Art Of Visual Environment Telling.</Text>
     <TextInput className="bg-gray-800 text-gray-300 mt-6 px-4 py-2 rounded-full w-3/4" placeholder="Search Your Favourites..." placeholderTextColor="gray" />
   </View>
 );
