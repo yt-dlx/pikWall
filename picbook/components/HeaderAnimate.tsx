@@ -107,7 +107,7 @@ const HeaderAnimate: React.FC = () => {
               <View className="w-2 h-2 rounded-full bg-white mr-2 animate-pulse" />
               <Text className="text-sm text-white font-semibold">Crafted with imagination and stories</Text>
             </View>
-            <Text className="text-xl text-gray-300 mt-4 leading-7 font-medium">
+            <Text className="text-xl text-gray-300 mt-4 leading-7 font-medium text-center">
               Dive into tales inspired by unique images and discover the art of <Text className="text-white font-bold">visual environment telling</Text>.
             </Text>
           </View>

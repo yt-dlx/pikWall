@@ -88,7 +88,7 @@ const AnimatedTitle: React.FC = () => {
   }));
   return (
     <Animated.View style={animatedStyle}>
-      <Text className="text-7xl font-black text-white tracking-tight">picBook™</Text>
+      <Text className="text-8xl font-black text-white tracking-tight">picBook™</Text>
     </Animated.View>
   );
 };
@@ -105,7 +105,7 @@ const IndexPage: React.FC = () => {
           <View style={styles.overlay}>
             <View className="absolute justify-center items-center">
               <AnimatedTitle />
-              <View className="flex-row items-center mt-4 bg-black/30 px-4 py-2 rounded-full">
+              <View className="flex-row items-center mt-4 bg-black/50 px-4 py-2 rounded-full">
                 <View className="w-2 h-2 rounded-full bg-white mr-2 animate-pulse" />
                 <Text className="text-sm text-white font-semibold">Crafted with imagination and stories</Text>
               </View>
@@ -126,14 +126,14 @@ const IndexPage: React.FC = () => {
 };
 
 const styles = StyleSheet.create({
-  buttonContainer: { marginTop: 32, borderRadius: 12, overflow: "hidden", elevation: 4, shadowColor: "#000", shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.25, shadowRadius: 4 },
   icon: { marginRight: 8 },
-  gradient: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 },
   buttonText: { color: "black", fontSize: 16, fontWeight: "bold" },
-  content: { flex: 1, width: "100%", justifyContent: "center", alignItems: "center" },
+  gradient: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 },
   container: { height: "100%", width: "100%", backgroundColor: "#0A0A0A" },
+  content: { flex: 1, width: "100%", justifyContent: "center", alignItems: "center" },
   overlay: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center", overflow: "hidden" },
-  buttonGradient: { flexDirection: "row", alignItems: "center", justifyContent: "center", paddingVertical: 14, paddingHorizontal: 24, borderRadius: 12 }
+  buttonGradient: { flexDirection: "row", alignItems: "center", justifyContent: "center", paddingVertical: 14, paddingHorizontal: 24, borderRadius: 12 },
+  buttonContainer: { marginTop: 32, borderRadius: 12, overflow: "hidden", elevation: 4, shadowColor: "#000", shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.25, shadowRadius: 4 }
 });
 
 export default IndexPage;
