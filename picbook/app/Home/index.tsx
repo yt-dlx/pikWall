@@ -98,28 +98,6 @@ const CardText = ({ data, currentIndex }: { data: EnvironmentEntry; currentIndex
     </View>
   );
 };
-// const CardText = ({ data, currentIndex }: { data: EnvironmentEntry; currentIndex: number }) => {
-// const colors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
-// const words = data.environment_prompt.split(" ");
-// const segmentLength = Math.ceil(words.length / 3);
-// return (
-// <View style={{ backgroundColor: colors[0] + "20" }} className="p-2 m-2 rounded-xl text-justify justify-center items-center">
-// <View className="flex-row flex-wrap">
-// {words.map((word, index) => {
-// let color = "";
-// if (index < segmentLength) color = colors[0];
-// else if (index < 2 * segmentLength) color = colors[1];
-// else color = colors[2];
-// return (
-// <Text key={index} style={{ color }} className={`text-xs ${index !== words.length - 1 ? "mr-1" : ""}`}>
-// {word}
-// </Text>
-// );
-// })}
-// </View>
-// </View>
-// );
-// };
 const SubImages = ({ images, currentColors, onImagePress }: { images: ImageMetadata[]; currentColors: string[]; onImagePress: (previewLink: string, index: number) => void }) => (
   <View className="flex flex-row flex-wrap justify-center p-2">
     {images.map((image, index) => (
@@ -209,3 +187,26 @@ const IndexPage = (): JSX.Element => {
   );
 };
 export default IndexPage;
+
+// const CardText = ({ data, currentIndex }: { data: EnvironmentEntry; currentIndex: number }) => {
+// const colors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
+// const words = data.environment_prompt.split(" ");
+// const segmentLength = Math.ceil(words.length / 3);
+// return (
+// <View style={{ backgroundColor: colors[0] + "20" }} className="p-2 m-2 rounded-xl text-justify justify-center items-center">
+// <View className="flex-row flex-wrap">
+// {words.map((word, index) => {
+// let color = "";
+// if (index < segmentLength) color = colors[0];
+// else if (index < 2 * segmentLength) color = colors[1];
+// else color = colors[2];
+// return (
+// <Text key={index} style={{ color }} className={`text-xs ${index !== words.length - 1 ? "mr-1" : ""}`}>
+// {word}
+// </Text>
+// );
+// })}
+// </View>
+// </View>
+// );
+// };
