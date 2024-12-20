@@ -3,7 +3,7 @@
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
-    "apk": "expo prebuild && cd android && gradlew clean && gradlew assembleRelease",
+    "apk": "expo prebuild && cd android && ./gradlew clean && ./gradlew assembleRelease",
     "android": "expo run:android",
     "web": "expo start --web",
     "test": "jest --watchAll",
