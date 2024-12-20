@@ -26,7 +26,7 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse }) => {
     <View className="flex-1 overflow-hidden">
       <Animated.View style={animatedStyle} className="flex-col">
         {images.concat(images).map((uri: string, idx: number) => (
-          <Image key={idx} alt="image" source={{ uri }} className="w-full h-36" resizeMode="cover" blurRadius={1.4} />
+          <Image key={idx} alt="image" source={{ uri }} className="w-full h-36" resizeMode="cover" blurRadius={1.8} />
         ))}
       </Animated.View>
     </View>
@@ -76,7 +76,6 @@ const HeaderAnimate: React.FC = () => {
       "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Dreamscape Of Blush Meadows (3).jpg"
     ]
   ];
-
   return (
     <View className="flex-1 items-center justify-center m-4">
       <View className="flex-row h-40 overflow-hidden rounded-xl relative">
@@ -106,7 +105,7 @@ const HeaderAnimate: React.FC = () => {
 
 const styles = StyleSheet.create({
   overlay: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center", borderRadius: 10, overflow: "hidden" },
-  blurredBackground: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "#000000", opacity: 0.6, borderRadius: 10 }
+  blurredBackground: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "#000000", opacity: 0.7, borderRadius: 10 }
 });
 
 export default HeaderAnimate;
