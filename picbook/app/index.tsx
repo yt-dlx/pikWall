@@ -42,12 +42,12 @@ const imageSets: string[][] = [
   ]
 ];
 
+import { Link } from "expo-router";
 import React, { useEffect } from "react";
 import { Text, View } from "react-native";
-import { Image, StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { Image, StyleSheet, TouchableOpacity } from "react-native";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat } from "react-native-reanimated";
-import { Link } from "expo-router";
 
 interface ScrollingSlotProps {
   images: string[];
@@ -90,20 +90,18 @@ const IndexPage: React.FC = () => {
           <LinearGradient colors={["#0A0A0A", "transparent"]} style={styles.gradient} />
           <LinearGradient colors={["transparent", "#0A0A0A"]} style={styles.gradient} />
           <View style={styles.overlay}>
-            <View className="absolute justify-center items-center m-4 p-2">
+            <View className="absolute justify-center items-center m-8 p-8">
               <Image source={require("../assets/images/logo.png")} alt="image" style={styles.logo} />
-              <View className="flex-row mb-2">
-                <Text className="text-6xl font-black text-white tracking-tight">picBook™</Text>
-              </View>
-              <View className="flex-row">
-                <View className="w-2 h-2 rounded-full" />
+              <View className="flex-row mt-4">
+                <View className="w-2 h-2 rounded-full bg-white mr-2" />
                 <Text className="text-sm text-white font-semibold">Crafted with imagination and stories. All rights reserved.</Text>
               </View>
-              <Text className="text-xl text-gray-300 mt-4 leading-7 font-medium">
-                Dive into tales inspired by unique images and discover the art of <Text className="text-white font-bold">visual environment telling</Text>.
-              </Text>
               <Link href={{ pathname: "./home" }} asChild>
-                <Text style={styles.exploreButtonText}>Explore</Text>
+                <TouchableOpacity style={styles.button}>
+                  <LinearGradient colors={["rgba(255,255,255,0.5)", "rgba(255,255,255,0.5)"]} style={styles.buttonGradient}>
+                    <Text style={styles.buttonText}>Explore picBook™</Text>
+                  </LinearGradient>
+                </TouchableOpacity>
               </Link>
             </View>
           </View>
@@ -114,27 +112,15 @@ const IndexPage: React.FC = () => {
 };
 
 const styles = StyleSheet.create({
+  icon: { marginRight: 8 },
+  logo: { width: 400, height: 240, marginBottom: 10 },
+  button: { marginTop: 20, borderRadius: 30, overflow: "hidden" },
   gradient: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 },
+  buttonText: { color: "white", fontSize: 16, fontWeight: "bold", marginLeft: 8 },
   content: { flex: 1, width: "100%", justifyContent: "center", alignItems: "center" },
   container: { height: "100%", width: "100%", justifyContent: "flex-start", alignItems: "center" },
   overlay: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center", overflow: "hidden" },
-  logo: {
-    width: 100,
-    height: 100,
-    marginBottom: 16
-  },
-  exploreButton: {
-    marginTop: 16,
-    backgroundColor: "#1E90FF",
-    paddingVertical: 12,
-    paddingHorizontal: 24,
-    borderRadius: 8
-  },
-  exploreButtonText: {
-    color: "#FFFFFF",
-    fontSize: 16,
-    fontWeight: "bold"
-  }
+  buttonGradient: { flexDirection: "row", alignItems: "center", justifyContent: "center", paddingVertical: 12, paddingHorizontal: 20, borderRadius: 30 }
 });
 
 export default IndexPage;
