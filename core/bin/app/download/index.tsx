@@ -1,57 +1,75 @@
 import React from "react";
 import { ImageMetadata } from "../../types/types";
 import { useRouter, useLocalSearchParams } from "expo-router";
-import { View, Image, Text, TouchableOpacity } from "react-native";
+import { View, Image, Text, TouchableOpacity, ScrollView } from "react-native";
 import { FontAwesome, MaterialIcons, Feather, AntDesign } from "@expo/vector-icons";
 
-export default function HomeScreen() {
+interface InfoRowProps {
+  icon: JSX.Element;
+  label: string;
+  value: string | number;
+}
+
+export default function DownloadScreen() {
   const router = useRouter();
   const params = useLocalSearchParams();
-  const dataString = params.data as string;
-  const ImageData: ImageMetadata = JSON.parse(dataString);
-
-  return (
-    <View className="flex-1 bg-[#181b21] p-6 justify-center items-center">
-      <TouchableOpacity onPress={() => router.back()} className="mb-4 self-start flex flex-row items-center">
-        <FontAwesome name="arrow-left" size={18} color="#f472b6" />
-        <Text className="text-pink-400 font-bold text-lg ml-2">Go Back</Text>
-      </TouchableOpacity>
-      <View className="bg-[#20232a] p-6 rounded-lg shadow-lg w-full max-w-lg">
-        <Image source={{ uri: ImageData.previewLink.replace("lowRes", "highRes") }} alt={ImageData.original_file_name} className="h-64 w-full rounded-lg shadow-md mb-4" />
-        <TouchableOpacity className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded text-center mb-6 flex flex-row justify-center items-center">
-          <MaterialIcons name="file-download" size={18} color="#ffffff" />
-          <Text className="ml-2">Download (Highest Resolution)</Text>
-        </TouchableOpacity>
-        <Text className="text-gray-300 text-sm mb-2">
-          <FontAwesome name="file" size={14} color="#ffffff" /> <Text className="font-semibold">File Name:</Text> {ImageData.original_file_name}
-        </Text>
-        <Text className="text-gray-300 text-sm mb-2">
-          <Feather name="image" size={14} color="#ffffff" /> <Text className="font-semibold">Format:</Text> {ImageData.format}
-        </Text>
-        <Text className="text-gray-300 text-sm mb-2">
-          <MaterialIcons name="palette" size={14} color="#ffffff" /> <Text className="font-semibold">Mode:</Text> {ImageData.mode}
-        </Text>
-        <Text className="text-gray-300 text-sm mb-2">
-          <AntDesign name="database" size={14} color="#ffffff" /> <Text className="font-semibold">Size:</Text> {ImageData.file_size_megabytes} MB ({ImageData.file_size_bytes} Bytes)
-        </Text>
-        <Text className="text-gray-300 text-sm mb-2">
-          <FontAwesome name="expand" size={14} color="#ffffff" /> <Text className="font-semibold">Resolution:</Text> {ImageData.width} X {ImageData.height}
-        </Text>
-        <Text className="text-gray-300 text-sm mb-2">
-          <MaterialIcons name="color-lens" size={14} color="#ffffff" /> <Text className="font-semibold">Primary Color:</Text> {ImageData.primary}
-        </Text>
-        <Text className="text-gray-300 text-sm mb-2">
-          <MaterialIcons name="color-lens" size={14} color="#ffffff" /> <Text className="font-semibold">Secondary Color:</Text> {ImageData.secondary}
-        </Text>
-        <Text className="text-gray-300 text-sm mb-6">
-          <MaterialIcons name="color-lens" size={14} color="#ffffff" /> <Text className="font-semibold">Tertiary Color:</Text> {ImageData.tertiary}
-        </Text>
-        <View className="flex flex-row flex-wrap justify-start">
-          {Array.from({ length: 48 }).map((hex, index) => (
-            <View key={index} className={`h-4 w-4 m-1 rounded-full border ${index % 3 === 0 ? "bg-[#a95b45]" : index % 3 === 1 ? "bg-[#5ae783]" : "bg-[#41734d]"}`}></View>
-          ))}
-        </View>
+  const rawDataString = params.data as string;
+  const ImageData: ImageMetadata = JSON.parse(rawDataString);
+  const colorSection = [
+    { color: ImageData.primary, label: "Primary" },
+    { color: ImageData.secondary, label: "Secondary" },
+    { color: ImageData.tertiary, label: "Tertiary" }
+  ];
+  const InfoRow: React.FC<InfoRowProps> = ({ icon, label, value }) => (
+    <View className="flex-row items-center py-3 border-b border-gray-800">
+      {icon}
+      <View className="ml-3">
+        <Text className="text-gray-400 text-xs mb-1">{label}</Text>
+        <Text className="text-gray-200 font-medium">{value}</Text>
       </View>
     </View>
+  );
+  return (
+    <ScrollView className="flex-1 bg-gray-900">
+      <View className="p-4">
+        <TouchableOpacity onPress={() => router.back()} className="mb-6 flex-row items-center">
+          <FontAwesome name="arrow-left" size={18} color="#f472b6" />
+          <Text className="text-pink-400 font-bold text-lg ml-2">Back</Text>
+        </TouchableOpacity>
+        <View className="relative mb-6 rounded-xl overflow-hidden shadow-lg">
+          <Image source={{ uri: ImageData.previewLink }} alt="image" className="w-full h-64" resizeMode="cover" />
+          <View className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm p-4">
+            <Text className="text-white font-semibold text-lg">{ImageData.original_file_name}</Text>
+          </View>
+        </View>
+        <TouchableOpacity className="bg-pink-500 py-4 px-6 rounded-lg mb-8 flex-row justify-center items-center">
+          <MaterialIcons name="file-download" size={24} color="#ffffff" />
+          <Text className="text-white font-bold text-lg ml-2">Download Image</Text>
+        </TouchableOpacity>
+        <View className="bg-gray-800/50 rounded-xl p-4 mb-6">
+          <Text className="text-gray-200 font-bold text-lg mb-4">Image Details</Text>
+          <InfoRow icon={<Feather name="image" size={20} color="#9ca3af" />} label="Format" value={ImageData.format.toUpperCase()} />
+          <InfoRow icon={<MaterialIcons name="palette" size={20} color="#9ca3af" />} label="Mode" value={ImageData.mode} />
+          <InfoRow
+            icon={<AntDesign name="database" size={20} color="#9ca3af" />}
+            label="File Size"
+            value={`${ImageData.file_size_megabytes} MB (${ImageData.file_size_bytes.toLocaleString()} Bytes)`}
+          />
+          <InfoRow icon={<FontAwesome name="expand" size={20} color="#9ca3af" />} label="Resolution" value={`${ImageData.width} × ${ImageData.height}`} />
+        </View>
+        <View className="bg-gray-800/50 rounded-xl p-4">
+          <Text className="text-gray-200 font-bold text-lg mb-4">Color Palette</Text>
+          <View className="flex-row justify-between">
+            {colorSection.map((item, index) => (
+              <View key={index} className="items-center">
+                <View style={{ backgroundColor: item.color }} className="w-16 h-16 rounded-lg mb-2" />
+                <Text className="text-gray-400 text-sm">{item.label}</Text>
+                <Text className="text-gray-300 text-xs">{item.color}</Text>
+              </View>
+            ))}
+          </View>
+        </View>
+      </View>
+    </ScrollView>
   );
 }
