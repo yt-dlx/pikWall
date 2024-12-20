@@ -2,31 +2,32 @@
 import React, { useEffect } from "react";
 import { Text, View } from "react-native";
 import { Image, StyleSheet } from "react-native";
-import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence } from "react-native-reanimated";
+import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence, withDelay } from "react-native-reanimated";
 
 interface ScrollingSlotProps {
   images: string[];
   reverse: boolean;
+  delay: number;
 }
 
-const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse }) => {
+const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay }) => {
   const imageHeight = 144;
   const totalHeight = images.length * imageHeight;
   const scrollValue = useSharedValue(0);
+  const opacity = useSharedValue(0);
   useEffect(() => {
-    scrollValue.value = withRepeat(withTiming(totalHeight, { duration: 10000 }), -1, reverse);
-  }, [scrollValue, totalHeight, reverse]);
-  const animatedStyle = useAnimatedStyle(() => {
-    const translateY = -scrollValue.value % totalHeight;
-    return {
-      transform: [{ translateY }]
-    };
-  });
+    opacity.value = withDelay(delay, withTiming(1, { duration: 1000 }));
+    scrollValue.value = withDelay(delay, withRepeat(withTiming(totalHeight, { duration: 15000 }), -1, reverse));
+  }, [scrollValue, totalHeight, reverse, delay, opacity]);
+  const animatedStyle = useAnimatedStyle(() => ({
+    transform: [{ translateY: -scrollValue.value % totalHeight }],
+    opacity: opacity.value
+  }));
   return (
-    <View className="flex-1 overflow-hidden">
+    <View className="flex-1 overflow-hidden px-1">
       <Animated.View style={animatedStyle} className="flex-col">
         {images.concat(images).map((uri: string, idx: number) => (
-          <Image key={idx} alt="image" source={{ uri }} className="w-full h-36" resizeMode="cover" blurRadius={1.8} />
+          <Image key={idx} alt="image" source={{ uri }} className="w-full h-36 rounded-lg mb-2" resizeMode="cover" blurRadius={1.2} />
         ))}
       </Animated.View>
     </View>
@@ -94,8 +95,7 @@ const HeaderAnimate: React.FC = () => {
     <View className="flex-1 items-center justify-center m-4">
       <View style={{ height: 300 }} className="flex-row overflow-hidden rounded-xl relative">
         {imageSets.map((images, slotIndex) => {
-          const isEven = slotIndex % 2 === 0;
-          return <ScrollingSlot key={slotIndex} images={images} reverse={isEven} />;
+          return <ScrollingSlot key={slotIndex} images={images} reverse={slotIndex % 2 === 0} delay={slotIndex * 200} />;
         })}
         <View style={styles.overlay} className="rounded-2xl text-center">
           <View style={styles.blurredBackground} />
@@ -103,9 +103,9 @@ const HeaderAnimate: React.FC = () => {
             <View className="flex-row mb-2">
               <AnimatedTitle />
             </View>
-            <View className="flex-row">
-              <View className="w-2 h-2 rounded-full" />
-              <Text className="text-sm text-white font-semibold">Crafted with imagination and stories. All rights reserved.</Text>
+            <View className="flex-row items-center mt-4 bg-black/30 px-4 py-2 rounded-full">
+              <View className="w-2 h-2 rounded-full bg-white mr-2 animate-pulse" />
+              <Text className="text-sm text-white font-semibold">Crafted with imagination and stories</Text>
             </View>
             <Text className="text-xl text-gray-300 mt-4 leading-7 font-medium">
               Dive into tales inspired by unique images and discover the art of <Text className="text-white font-bold">visual environment telling</Text>.

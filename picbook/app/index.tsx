@@ -40,13 +40,12 @@ const imageSets: string[][] = [
     "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Dreamscape Of Blush Meadows (3).jpg"
   ]
 ];
-
-import React, { useEffect } from "react";
 import { Link } from "expo-router";
+import React, { useEffect } from "react";
 import { Text, View } from "react-native";
+import { MaterialIcons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { Image, StyleSheet, TouchableOpacity } from "react-native";
-import { MaterialIcons } from "@expo/vector-icons";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence, withDelay } from "react-native-reanimated";
 
 interface ScrollingSlotProps {
@@ -60,17 +59,14 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
   const totalHeight = images.length * imageHeight;
   const scrollValue = useSharedValue(0);
   const opacity = useSharedValue(0);
-
   useEffect(() => {
     opacity.value = withDelay(delay, withTiming(1, { duration: 1000 }));
     scrollValue.value = withDelay(delay, withRepeat(withTiming(totalHeight, { duration: 15000 }), -1, reverse));
   }, [scrollValue, totalHeight, reverse, delay, opacity]);
-
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [{ translateY: -scrollValue.value % totalHeight }],
     opacity: opacity.value
   }));
-
   return (
     <View className="flex-1 overflow-hidden px-1">
       <Animated.View style={animatedStyle} className="flex-col">
