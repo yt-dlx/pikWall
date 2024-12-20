@@ -1,11 +1,10 @@
-// app/index.tsx
 import { Link } from "expo-router";
 import database from "./data/database";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import HeaderAnimate from "../components/HeaderAnimate";
 import React, { useEffect, useCallback, useState } from "react";
 import { ImageMetadata, EnvironmentEntry } from "../types/types";
-import { View, Text, TextInput, TouchableOpacity, Image, FlatList } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, Image, FlatList, ScrollView } from "react-native";
 import Animated, { useAnimatedStyle, useSharedValue, withTiming, Easing, runOnJS } from "react-native-reanimated";
 
 let globalInterval: NodeJS.Timeout | null = null;
@@ -124,7 +123,7 @@ const SubImages = ({ images, currentColors, onImagePress }: { images: ImageMetad
     ))}
   </View>
 );
-const IndexPage = (): JSX.Element => {
+const HomePage = (): JSX.Element => {
   const shuffleArray = <T,>(array: T[]): T[] => {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -160,7 +159,9 @@ const IndexPage = (): JSX.Element => {
       subscribers.clear();
     };
   }, []);
+
   const filteredData = data.filter((item) => item.environment_title.toLowerCase().includes(searchQuery.toLowerCase()) || item.environment_moral.toLowerCase().includes(searchQuery.toLowerCase()));
+
   return (
     <View style={{ backgroundColor: "#0A0A0A" }} className="flex-1">
       <FlatList
@@ -181,13 +182,20 @@ const IndexPage = (): JSX.Element => {
                 <Ionicons name="images-outline" size={28} color="white" className="ml-2" />
               </View>
               <TextInput
-                className="mt-6 px-4 py-4 rounded-3xl w-full text-gray-300 bg-opacity-10"
-                style={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+                className="mt-6 px-4 py-4 rounded-2xl w-full text-gray-300 bg-opacity-10"
+                style={{ backgroundColor: "rgba(255,255,255,0.2)" }}
                 placeholder="Search Your Query..."
                 onChangeText={setSearchQuery}
                 placeholderTextColor="#dfd2e6"
                 value={searchQuery}
               />
+              <ScrollView horizontal showsHorizontalScrollIndicator={false} className="mt-4">
+                {["Anime XL", "Realistic XL", "Cartoon 3D", "Black & White", "Abstract"].map((category, index) => (
+                  <TouchableOpacity key={index} className="px-4 py-2 bg-white rounded-xl mx-0.5" activeOpacity={0.7} onPress={() => console.log(`Selected category: ${category}`)}>
+                    <Text className="text-black text-sm font-medium">{category}</Text>
+                  </TouchableOpacity>
+                ))}
+              </ScrollView>
             </View>
           </View>
         }
@@ -195,27 +203,4 @@ const IndexPage = (): JSX.Element => {
     </View>
   );
 };
-export default IndexPage;
-
-// const CardText = ({ data, currentIndex }: { data: EnvironmentEntry; currentIndex: number }) => {
-// const colors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
-// const words = data.environment_prompt.split(" ");
-// const segmentLength = Math.ceil(words.length / 3);
-// return (
-// <View style={{ backgroundColor: colors[0] + "20" }} className="p-2 m-2 rounded-xl text-justify justify-center items-center">
-// <View className="flex-row flex-wrap">
-// {words.map((word, index) => {
-// let color = "";
-// if (index < segmentLength) color = colors[0];
-// else if (index < 2 * segmentLength) color = colors[1];
-// else color = colors[2];
-// return (
-// <Text key={index} style={{ color }} className={`text-xs ${index !== words.length - 1 ? "mr-1" : ""}`}>
-// {word}
-// </Text>
-// );
-// })}
-// </View>
-// </View>
-// );
-// };
+export default HomePage;
