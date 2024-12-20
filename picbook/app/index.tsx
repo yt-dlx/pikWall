@@ -2,11 +2,12 @@
 import "../global.css";
 import { Link } from "expo-router";
 import database from "./data/database";
+import HeaderAnimate from "./HeaderAnimate";
 import React, { useEffect, useCallback } from "react";
 import { FontAwesome, Feather } from "@expo/vector-icons";
 import { ImageMetadata, EnvironmentEntry } from "../types/types";
 import { View, Text, TextInput, TouchableOpacity, Image, FlatList } from "react-native";
-import Animated, { useAnimatedStyle, useSharedValue, withTiming, Easing, runOnJS, withSpring } from "react-native-reanimated";
+import Animated, { useAnimatedStyle, useSharedValue, withTiming, Easing, runOnJS } from "react-native-reanimated";
 
 let globalInterval: NodeJS.Timeout | null = null;
 const subscribers = new Set<() => void>();
@@ -69,7 +70,11 @@ const Card = ({ data }: { data: EnvironmentEntry }) => {
           </TouchableOpacity>
         </View>
       </View>
-      <Animated.Image style={[{ height: 192, width: "100%" }, animatedStyle]} source={{ uri: currentImage }} alt={data.environment_title} />
+      <Animated.Image
+        style={[{ height: 192, width: "100%", borderWidth: 1, marginBottom: 8, borderColor: currentColors[0] }, animatedStyle]}
+        source={{ uri: currentImage }}
+        alt={data.environment_title}
+      />
       <SubImages images={data.images} onImagePress={handleSubImagePress} />
       <CardText data={data} currentIndex={currentIndex} />
       <View style={{ backgroundColor: "#0d0e11", padding: 10, borderTopWidth: 1, alignItems: "center", flexDirection: "row", justifyContent: "space-between", borderTopColor: currentColors[0] }}>
@@ -111,39 +116,12 @@ const SubImages = ({ images, onImagePress }: { images: ImageMetadata[]; onImageP
     {images.map((image, index) => (
       <Link key={index} href={{ pathname: "./Home", params: { data: JSON.stringify(image) } }} asChild>
         <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)}>
-          <Image className="h-20 w-20 mx-auto mt-4 px-2 rounded-lg shadow-2xl shadow-black border border-black" source={{ uri: image.previewLink }} alt={`Sub Image ${index + 1}`} />
+          <Image className="h-20 w-28 mx-auto rounded-lg shadow-2xl shadow-black border border-black" source={{ uri: image.previewLink }} alt={`Sub Image ${index + 1}`} />
         </TouchableOpacity>
       </Link>
     ))}
   </View>
 );
-
-const HeaderSection = () => {
-  const opacity = useSharedValue(0);
-  const scale = useSharedValue(0.95);
-  useEffect(() => {
-    opacity.value = withTiming(1, { duration: 1000 });
-    scale.value = withSpring(1, { damping: 8, stiffness: 40 });
-  }, [opacity, scale]);
-  const animatedStyle = useAnimatedStyle(() => {
-    return { opacity: opacity.value, transform: [{ scale: scale.value }] };
-  });
-  return (
-    <Animated.View className="bg-[#13151a] p-8 m-4 rounded-3xl shadow-2xl" style={animatedStyle}>
-      <View className="flex-row items-center mb-2">
-        <Feather name="star" size={32} color="#ec4899" className="mr-2" />
-        <Text className="text-6xl font-black text-pink-400 tracking-tight">picBook™</Text>
-      </View>
-      <View className="flex-row items-center">
-        <View className="w-2 h-2 rounded-full bg-pink-400 mr-2" />
-        <Text className="text-xs text-pink-400 font-semibold opacity-80">Crafted with imagination and stories. All rights reserved.</Text>
-      </View>
-      <Text className="text-xl text-gray-300 mt-4 leading-7 font-medium">
-        Dive into tales inspired by unique images and discover the art of <Text className="text-pink-400 font-bold">visual environment telling</Text>.
-      </Text>
-    </Animated.View>
-  );
-};
 
 const IndexPage = (): JSX.Element => {
   const shuffleArray = <T,>(array: T[]): T[] => {
@@ -194,7 +172,7 @@ const IndexPage = (): JSX.Element => {
         )}
         ListHeaderComponent={
           <View>
-            <HeaderSection />
+            <HeaderAnimate />
             <View className="p-4">
               <Text className="text-3xl font-bold text-gray-100 text-center">Explore Our Collection</Text>
               <TextInput
