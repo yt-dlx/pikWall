@@ -1,5 +1,4 @@
 // app/index.tsx
-import "../global.css";
 import { Link } from "expo-router";
 import database from "./data/database";
 import HeaderAnimate from "./HeaderAnimate";
@@ -161,7 +160,7 @@ const IndexPage = (): JSX.Element => {
   }, []);
   const filteredData = data.filter((item) => item.environment_title.toLowerCase().includes(searchQuery.toLowerCase()) || item.environment_moral.toLowerCase().includes(searchQuery.toLowerCase()));
   return (
-    <View style={{ backgroundColor: "#090c0e" }} className="flex-1">
+    <View style={{ backgroundColor: "#111214" }} className="flex-1">
       <FlatList
         data={filteredData}
         keyExtractor={(_, index) => index.toString()}
@@ -176,8 +175,9 @@ const IndexPage = (): JSX.Element => {
             <View className="p-4">
               <Text className="text-3xl font-bold text-gray-100 text-center">Explore Our Collection</Text>
               <TextInput
-                className="text-gray-300 mt-6 px-4 py-4 rounded-xl w-full shadow-2xl shadow-black border border-black"
-                placeholder="Search Your Favourites..."
+                className="text-gray-300 mt-6 px-4 py-4 rounded-xl w-full"
+                style={{ backgroundColor: "#11181c" }}
+                placeholder="Search Your Query..."
                 onChangeText={setSearchQuery}
                 placeholderTextColor="gray"
                 value={searchQuery}
