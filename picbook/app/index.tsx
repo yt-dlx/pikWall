@@ -1,7 +1,7 @@
 // app/index.tsx
 import { Link } from "expo-router";
 import database from "./data/database";
-import HeaderAnimate from "./HeaderAnimate";
+import HeaderAnimate from "../components/HeaderAnimate";
 import React, { useEffect, useCallback } from "react";
 import { FontAwesome, Feather } from "@expo/vector-icons";
 import { ImageMetadata, EnvironmentEntry } from "../types/types";
@@ -57,7 +57,7 @@ const Card = ({ data }: { data: EnvironmentEntry }) => {
   );
   const currentColors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
   return (
-    <View style={{ backgroundColor: "black", borderColor: currentColors[0], borderWidth: 1 }} className="rounded-2xl shadow-md shadow-black overflow-hidden">
+    <View style={{ backgroundColor: currentColors[0] + "15", borderColor: currentColors[0], borderWidth: 1 }} className="rounded-2xl shadow-md shadow-black overflow-hidden">
       <View style={{ flexDirection: "row", justifyContent: "space-between", padding: 10, alignItems: "center" }}>
         <Text className="text-white text-lg font-bold">{data.environment_title}</Text>
         <View style={{ flexDirection: "row", gap: 10 }}>
@@ -76,8 +76,24 @@ const Card = ({ data }: { data: EnvironmentEntry }) => {
       />
       <SubImages images={data.images} onImagePress={handleSubImagePress} />
       <CardText data={data} currentIndex={currentIndex} />
-      <View style={{ backgroundColor: "#0d0e11", padding: 10, borderTopWidth: 1, alignItems: "center", flexDirection: "row", justifyContent: "space-between", borderTopColor: currentColors[0] }}>
-        <Text style={{ color: currentColors[0], fontSize: 16 }}>picBook™</Text>
+      <View
+        style={{
+          backgroundColor: currentColors[0],
+          borderTopWidth: 1,
+          alignItems: "center",
+          justifyContent: "center",
+          borderTopColor: currentColors[0]
+        }}
+      >
+        <Text
+          style={{
+            color: "black",
+            fontSize: 16,
+            lineHeight: 20
+          }}
+        >
+          picBook™
+        </Text>
       </View>
     </View>
   );
@@ -160,7 +176,7 @@ const IndexPage = (): JSX.Element => {
   }, []);
   const filteredData = data.filter((item) => item.environment_title.toLowerCase().includes(searchQuery.toLowerCase()) || item.environment_moral.toLowerCase().includes(searchQuery.toLowerCase()));
   return (
-    <View style={{ backgroundColor: "#111214" }} className="flex-1">
+    <View style={{ backgroundColor: "#0D0610" }} className="flex-1">
       <FlatList
         data={filteredData}
         keyExtractor={(_, index) => index.toString()}
@@ -176,10 +192,10 @@ const IndexPage = (): JSX.Element => {
               <Text className="text-3xl font-bold text-gray-100 text-center">Explore Our Collection</Text>
               <TextInput
                 className="text-gray-300 mt-6 px-4 py-4 rounded-xl w-full"
-                style={{ backgroundColor: "#11181c" }}
+                style={{ backgroundColor: "#1b0726" }}
                 placeholder="Search Your Query..."
                 onChangeText={setSearchQuery}
-                placeholderTextColor="gray"
+                placeholderTextColor="#dfd2e6"
                 value={searchQuery}
               />
             </View>

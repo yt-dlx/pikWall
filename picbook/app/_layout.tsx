@@ -18,9 +18,9 @@ const Footer: React.FC = () => (
 
 export default function RootLayout() {
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#111214" }}>
-      <StatusBar backgroundColor="#111214" barStyle="light-content" />
-      <View style={{ flex: 1, backgroundColor: "#111214" }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: "#0D0610" }}>
+      <StatusBar backgroundColor="#0D0610" barStyle="light-content" />
+      <View style={{ flex: 1, backgroundColor: "#0D0610" }}>
         <Stack screenOptions={{ headerShown: false }} />
       </View>
       <Footer />

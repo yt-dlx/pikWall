@@ -79,19 +79,19 @@ const HeaderAnimate: React.FC = () => {
 
   return (
     <View className="flex-1 items-center justify-center m-4">
-      <View className="flex-row w-11/12 h-40 overflow-hidden rounded-xl relative">
+      <View className="flex-row h-40 overflow-hidden rounded-xl relative">
         {imageSets.map((images, slotIndex) => {
           const isEven = slotIndex % 2 === 0;
           return <ScrollingSlot key={slotIndex} images={images} reverse={isEven} />;
         })}
         <View style={styles.overlay} className="rounded-2xl text-center">
           <View style={styles.blurredBackground} />
-          <View className="absolute justify-center items-center m-4 p-4">
+          <View className="absolute justify-center items-center m-4 p-2">
             <View className="flex-row mb-2">
               <Text className="text-6xl font-black text-pink-400 tracking-tight">picBook™</Text>
             </View>
             <View className="flex-row">
-              <View className="w-2 h-2 rounded-full bg-pink-400" />
+              <View className="w-2 h-2 rounded-full" />
               <Text className="text-sm text-pink-400 font-semibold">Crafted with imagination and stories. All rights reserved.</Text>
             </View>
             <Text className="text-xl text-gray-300 mt-4 leading-7 font-medium">
@@ -106,7 +106,7 @@ const HeaderAnimate: React.FC = () => {
 
 const styles = StyleSheet.create({
   overlay: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center", borderRadius: 10, overflow: "hidden" },
-  blurredBackground: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "#111214", opacity: 0.8, borderRadius: 10 }
+  blurredBackground: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "#0D0610", opacity: 0.8, borderRadius: 10 }
 });
 
 export default HeaderAnimate;
