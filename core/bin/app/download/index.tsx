@@ -68,10 +68,15 @@ export default function DownloadScreen() {
             alt="image"
             resizeMode="cover"
             className="w-ful h-60"
-            source={{ uri: ImageData.previewLink }}
+            source={{ uri: ImageData.previewLink.replace("lowRes", "highRes") }}
             onLoadStart={() => setImageLoading(true)}
             onLoadEnd={() => setImageLoading(false)}
-            style={imageLoading ? { display: "none" } : {}}
+            onError={(error) => {
+              console.error("Image failed to load", error);
+              setImageLoading(false);
+              Alert.alert("Error", "Failed to load image. Please try again.");
+            }}
+            style={!imageLoading ? {} : { width: 0, height: 0 }}
           />
           <View style={{ backgroundColor: ImageData.primary + "80" }} className="absolute bottom-0 left-0 right-0 backdrop-blur-sm p-0.5">
             <Text className="text-white font-semibold text-lg text-center">{ImageData.original_file_name.replace(".jpg", "")}</Text>
@@ -92,7 +97,7 @@ export default function DownloadScreen() {
             <Text className="text-gray-400 text-sm mt-2">{Math.round(downloadProgress * 100)}% Complete</Text>
           </View>
         )}
-        <View style={{ backgroundColor: ImageData.primary + "10", borderColor: ImageData.primary, borderWidth: 1 }} className="rounded-xl p-4 mb-6">
+        <View style={{ backgroundColor: ImageData.primary + "20", borderColor: ImageData.primary, borderWidth: 1 }} className="rounded-xl p-4 mb-6">
           <Text className="text-gray-200 font-bold text-lg mb-4">Image Details</Text>
           <InfoRow icon={<Feather name="image" size={20} color="#9ca3af" />} label="Format" value={ImageData.format.toUpperCase()} />
           <InfoRow icon={<MaterialIcons name="palette" size={20} color="#9ca3af" />} label="Mode" value={ImageData.mode} />
@@ -103,7 +108,7 @@ export default function DownloadScreen() {
           />
           <InfoRow icon={<FontAwesome name="expand" size={20} color="#9ca3af" />} label="Resolution" value={`${ImageData.width} × ${ImageData.height}`} />
         </View>
-        <View style={{ backgroundColor: ImageData.primary + "10", borderColor: ImageData.primary, borderWidth: 1 }} className="rounded-xl p-4">
+        <View style={{ backgroundColor: ImageData.primary + "20", borderColor: ImageData.primary, borderWidth: 1 }} className="rounded-xl p-4">
           <Text className="text-gray-200 font-bold text-lg mb-4">Extra Color Palette</Text>
           <View className="flex-wrap flex-row justify-between">
             {Array.from({ length: 46 }, (_, i) => `more_${i + 4}`).map((key, index) => {
