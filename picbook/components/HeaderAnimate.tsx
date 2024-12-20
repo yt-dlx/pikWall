@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import { Text, View } from "react-native";
 import { Image, StyleSheet } from "react-native";
-import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat } from "react-native-reanimated";
+import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence } from "react-native-reanimated";
 
 interface ScrollingSlotProps {
   images: string[];
@@ -76,9 +76,23 @@ const HeaderAnimate: React.FC = () => {
       "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Dreamscape Of Blush Meadows (3).jpg"
     ]
   ];
+  const AnimatedTitle: React.FC = () => {
+    const scale = useSharedValue(0.95);
+    useEffect(() => {
+      scale.value = withRepeat(withSequence(withTiming(1.05, { duration: 2000 }), withTiming(0.95, { duration: 2000 })), -1, true);
+    }, [scale]);
+    const animatedStyle = useAnimatedStyle(() => ({
+      transform: [{ scale: scale.value }]
+    }));
+    return (
+      <Animated.View style={animatedStyle}>
+        <Text className="text-7xl font-black text-white tracking-tight">picBook™</Text>
+      </Animated.View>
+    );
+  };
   return (
     <View className="flex-1 items-center justify-center m-4">
-      <View className="flex-row h-40 overflow-hidden rounded-xl relative">
+      <View style={{ height: 300 }} className="flex-row overflow-hidden rounded-xl relative">
         {imageSets.map((images, slotIndex) => {
           const isEven = slotIndex % 2 === 0;
           return <ScrollingSlot key={slotIndex} images={images} reverse={isEven} />;
@@ -87,7 +101,7 @@ const HeaderAnimate: React.FC = () => {
           <View style={styles.blurredBackground} />
           <View className="absolute justify-center items-center m-4 p-2">
             <View className="flex-row mb-2">
-              <Text className="text-6xl font-black text-white tracking-tight">picBook™</Text>
+              <AnimatedTitle />
             </View>
             <View className="flex-row">
               <View className="w-2 h-2 rounded-full" />

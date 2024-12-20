@@ -105,7 +105,7 @@ const SubImages = ({ images, currentColors, onImagePress }: { images: ImageMetad
         <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="m-1">
           <View className="relative">
             <Image
-              style={{ borderColor: currentColors[index % currentColors.length], borderWidth: 1, height: 40, width: 160 }}
+              style={{ borderColor: currentColors[index % currentColors.length], borderWidth: 1, height: 40, width: 140 }}
               className="mx-auto rounded-lg shadow-2xl shadow-black"
               source={{ uri: image.previewLink }}
               alt={`Sub Image ${index + 1}`}

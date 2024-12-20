@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 const imageSets: string[][] = [
   [
     "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Soft Glow Of Pastel Skies (1).jpg",
@@ -42,39 +41,59 @@ const imageSets: string[][] = [
   ]
 ];
 
-import { Link } from "expo-router";
 import React, { useEffect } from "react";
+import { Link } from "expo-router";
 import { Text, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Image, StyleSheet, TouchableOpacity } from "react-native";
-import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat } from "react-native-reanimated";
+import { MaterialIcons } from "@expo/vector-icons";
+import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence, withDelay } from "react-native-reanimated";
 
 interface ScrollingSlotProps {
   images: string[];
   reverse: boolean;
+  delay: number;
 }
 
-const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse }) => {
+const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay }) => {
   const imageHeight = 144;
   const totalHeight = images.length * imageHeight;
   const scrollValue = useSharedValue(0);
+  const opacity = useSharedValue(0);
+
   useEffect(() => {
-    scrollValue.value = withRepeat(withTiming(totalHeight, { duration: 10000 }), -1, reverse);
-  }, [scrollValue, totalHeight, reverse]);
-  const animatedStyle = useAnimatedStyle(() => {
-    const translateY = -scrollValue.value % totalHeight;
-    return {
-      transform: [{ translateY }]
-    };
-  });
+    opacity.value = withDelay(delay, withTiming(1, { duration: 1000 }));
+    scrollValue.value = withDelay(delay, withRepeat(withTiming(totalHeight, { duration: 15000 }), -1, reverse));
+  }, [scrollValue, totalHeight, reverse, delay, opacity]);
+
+  const animatedStyle = useAnimatedStyle(() => ({
+    transform: [{ translateY: -scrollValue.value % totalHeight }],
+    opacity: opacity.value
+  }));
+
   return (
-    <View className="flex-1 overflow-hidden">
+    <View className="flex-1 overflow-hidden px-1">
       <Animated.View style={animatedStyle} className="flex-col">
         {images.concat(images).map((uri: string, idx: number) => (
-          <Image key={idx} alt="image" source={{ uri }} className="w-full h-36" resizeMode="cover" blurRadius={1.8} />
+          <Image key={idx} alt="image" source={{ uri }} className="w-full h-36 rounded-lg mb-2" resizeMode="cover" blurRadius={1.2} />
         ))}
       </Animated.View>
     </View>
+  );
+};
+
+const AnimatedTitle: React.FC = () => {
+  const scale = useSharedValue(0.95);
+  useEffect(() => {
+    scale.value = withRepeat(withSequence(withTiming(1.05, { duration: 2000 }), withTiming(0.95, { duration: 2000 })), -1, true);
+  }, [scale]);
+  const animatedStyle = useAnimatedStyle(() => ({
+    transform: [{ scale: scale.value }]
+  }));
+  return (
+    <Animated.View style={animatedStyle}>
+      <Text className="text-7xl font-black text-white tracking-tight">picBook™</Text>
+    </Animated.View>
   );
 };
 
@@ -83,23 +102,22 @@ const IndexPage: React.FC = () => {
     <View style={styles.container}>
       <View style={styles.content}>
         <View className="flex-row h-full overflow-hidden relative">
-          {imageSets.map((images, slotIndex) => {
-            const isEven = slotIndex % 2 === 0;
-            return <ScrollingSlot key={slotIndex} images={images} reverse={isEven} />;
-          })}
-          <LinearGradient colors={["#0A0A0A", "transparent"]} style={styles.gradient} />
-          <LinearGradient colors={["transparent", "#0A0A0A"]} style={styles.gradient} />
+          {imageSets.map((images, slotIndex) => (
+            <ScrollingSlot key={slotIndex} images={images} reverse={slotIndex % 2 === 0} delay={slotIndex * 200} />
+          ))}
+          <LinearGradient colors={["#0A0A0A", "transparent", "transparent", "#0A0A0A"]} locations={[0, 0.2, 0.8, 1]} style={styles.gradient} />
           <View style={styles.overlay}>
-            <View className="absolute justify-center items-center m-8 p-8">
-              <Image source={require("../assets/images/logo.png")} alt="image" style={styles.logo} />
-              <View className="flex-row mt-4">
-                <View className="w-2 h-2 rounded-full bg-white mr-2" />
-                <Text className="text-sm text-white font-semibold">Crafted with imagination and stories. All rights reserved.</Text>
+            <View className="absolute justify-center items-center">
+              <AnimatedTitle />
+              <View className="flex-row items-center mt-4 bg-black/30 px-4 py-2 rounded-full">
+                <View className="w-2 h-2 rounded-full bg-white mr-2 animate-pulse" />
+                <Text className="text-sm text-white font-semibold">Crafted with imagination and stories</Text>
               </View>
-              <Link href={{ pathname: "./home" }} asChild>
-                <TouchableOpacity style={styles.button}>
-                  <LinearGradient colors={["rgba(255,255,255,0.5)", "rgba(255,255,255,0.5)"]} style={styles.buttonGradient}>
-                    <Text style={styles.buttonText}>Explore picBook™</Text>
+              <Link href="./home" asChild>
+                <TouchableOpacity style={styles.buttonContainer}>
+                  <LinearGradient colors={["rgba(255,255,255,0.95)", "rgba(255,255,255,1)"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.buttonGradient}>
+                    <MaterialIcons name="photo-camera" size={24} color="black" style={styles.icon} />
+                    <Text style={styles.buttonText}>Start Exploring</Text>
                   </LinearGradient>
                 </TouchableOpacity>
               </Link>
@@ -112,15 +130,14 @@ const IndexPage: React.FC = () => {
 };
 
 const styles = StyleSheet.create({
+  buttonContainer: { marginTop: 32, borderRadius: 12, overflow: "hidden", elevation: 4, shadowColor: "#000", shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.25, shadowRadius: 4 },
   icon: { marginRight: 8 },
-  logo: { width: 400, height: 240, marginBottom: 10 },
-  button: { marginTop: 20, borderRadius: 30, overflow: "hidden" },
   gradient: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 },
-  buttonText: { color: "white", fontSize: 16, fontWeight: "bold", marginLeft: 8 },
+  buttonText: { color: "black", fontSize: 16, fontWeight: "bold" },
   content: { flex: 1, width: "100%", justifyContent: "center", alignItems: "center" },
-  container: { height: "100%", width: "100%", justifyContent: "flex-start", alignItems: "center" },
+  container: { height: "100%", width: "100%", backgroundColor: "#0A0A0A" },
   overlay: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center", overflow: "hidden" },
-  buttonGradient: { flexDirection: "row", alignItems: "center", justifyContent: "center", paddingVertical: 12, paddingHorizontal: 20, borderRadius: 30 }
+  buttonGradient: { flexDirection: "row", alignItems: "center", justifyContent: "center", paddingVertical: 14, paddingHorizontal: 24, borderRadius: 12 }
 });
 
 export default IndexPage;
