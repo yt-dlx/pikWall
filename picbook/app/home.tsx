@@ -1,10 +1,10 @@
 // app/index.tsx
 import { Link } from "expo-router";
 import database from "./data/database";
+import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import HeaderAnimate from "../components/HeaderAnimate";
 import React, { useEffect, useCallback, useState } from "react";
 import { ImageMetadata, EnvironmentEntry } from "../types/types";
-import { FontAwesome, MaterialIcons } from "@expo/vector-icons";
 import { View, Text, TextInput, TouchableOpacity, Image, FlatList } from "react-native";
 import Animated, { useAnimatedStyle, useSharedValue, withTiming, Easing, runOnJS } from "react-native-reanimated";
 
@@ -66,23 +66,27 @@ const Card = ({ data }: { data: EnvironmentEntry }) => {
   const currentColors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
   return (
     <View style={{ backgroundColor: currentColors[0] + "20", borderColor: currentColors[0], borderWidth: 0.5 }} className="rounded-3xl overflow-hidden">
-      <View style={{ position: "relative", height: 192, width: "100%" }}>
-        <Animated.Image
-          style={[{ height: "100%", width: "100%", position: "absolute", borderColor: currentColors[0] }, currentImageStyle]}
-          source={{ uri: currentImage }}
-          alt={data.environment_title}
-          className="rounded-t-3xl border"
-        />
-        <Animated.Image
-          style={[{ height: "100%", width: "100%", position: "absolute", borderColor: currentColors[0] }, nextImageStyle]}
-          source={{ uri: nextImage }}
-          alt={data.environment_title}
-          className="rounded-t-3xl border"
-        />
-        <View style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0, 0, 0, 0.6)" }}>
-          <Text style={{ color: "white", fontSize: 30, fontWeight: "bold", textAlign: "center", paddingHorizontal: 15 }}>{data.environment_title}</Text>
-        </View>
-      </View>
+      <Link href={{ pathname: "./download", params: { data: JSON.stringify(data.images[currentIndex]) } }} asChild>
+        <TouchableOpacity>
+          <View style={{ position: "relative", height: 192, width: "100%" }}>
+            <Animated.Image
+              style={[{ height: "100%", width: "100%", position: "absolute", borderColor: currentColors[0] }, currentImageStyle]}
+              className="rounded-t-3xl border"
+              source={{ uri: currentImage }}
+              alt={data.environment_title}
+            />
+            <Animated.Image
+              style={[{ height: "100%", width: "100%", position: "absolute", borderColor: currentColors[0] }, nextImageStyle]}
+              className="rounded-t-3xl border"
+              source={{ uri: nextImage }}
+              alt={data.environment_title}
+            />
+            <View style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0, 0, 0, 0.4)" }}>
+              <Text style={{ color: "white", fontSize: 30, fontWeight: "bold", textAlign: "center", paddingHorizontal: 15 }}>{data.environment_title}</Text>
+            </View>
+          </View>
+        </TouchableOpacity>
+      </Link>
       <SubImages images={data.images} currentColors={currentColors} onImagePress={handleSubImagePress} />
       <CardText data={data} currentIndex={currentIndex} />
       <View style={{ backgroundColor: currentColors[0], borderTopWidth: 1, alignItems: "center", justifyContent: "center", borderTopColor: currentColors[0] }}>
@@ -158,7 +162,7 @@ const IndexPage = (): JSX.Element => {
   }, []);
   const filteredData = data.filter((item) => item.environment_title.toLowerCase().includes(searchQuery.toLowerCase()) || item.environment_moral.toLowerCase().includes(searchQuery.toLowerCase()));
   return (
-    <View className="flex-1 bg-black">
+    <View style={{ backgroundColor: "#0A0A0A" }} className="flex-1">
       <FlatList
         data={filteredData}
         keyExtractor={(_, index) => index.toString()}
@@ -174,7 +178,7 @@ const IndexPage = (): JSX.Element => {
               <View className="flex-row items-center justify-center">
                 <FontAwesome name="wpexplorer" size={28} color="white" className="mr-2" />
                 <Text className="text-3xl font-bold text-gray-100">Explore Our Collection</Text>
-                <MaterialIcons name="collections" size={28} color="white" className="ml-2" />
+                <Ionicons name="images-outline" size={28} color="white" className="ml-2" />
               </View>
               <TextInput
                 className="mt-6 px-4 py-4 rounded-3xl w-full text-gray-300 bg-opacity-10"
