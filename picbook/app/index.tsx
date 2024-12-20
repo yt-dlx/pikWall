@@ -58,7 +58,7 @@ const Card = ({ data }: { data: EnvironmentEntry }) => {
   );
   const currentColors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
   return (
-    <View style={{ backgroundColor: "#101216", borderColor: currentColors[0], borderWidth: 1 }} className="rounded-lg shadow-md shadow-black overflow-hidden">
+    <View style={{ backgroundColor: "black", borderColor: currentColors[0], borderWidth: 1 }} className="rounded-2xl shadow-md shadow-black overflow-hidden">
       <View style={{ flexDirection: "row", justifyContent: "space-between", padding: 10, alignItems: "center" }}>
         <Text className="text-white text-lg font-bold">{data.environment_title}</Text>
         <View style={{ flexDirection: "row", gap: 10 }}>
@@ -161,7 +161,7 @@ const IndexPage = (): JSX.Element => {
   }, []);
   const filteredData = data.filter((item) => item.environment_title.toLowerCase().includes(searchQuery.toLowerCase()) || item.environment_moral.toLowerCase().includes(searchQuery.toLowerCase()));
   return (
-    <View className="flex-1">
+    <View className="flex-1 bg-black">
       <FlatList
         data={filteredData}
         keyExtractor={(item, index) => index.toString()}
@@ -176,7 +176,7 @@ const IndexPage = (): JSX.Element => {
             <View className="p-4">
               <Text className="text-3xl font-bold text-gray-100 text-center">Explore Our Collection</Text>
               <TextInput
-                className="text-gray-300 mt-6 px-4 py-4 rounded-2xl w-full shadow-2xl shadow-black border border-black"
+                className="text-gray-300 mt-6 px-4 py-4 rounded-3xl w-full shadow-2xl shadow-black border border-black"
                 placeholder="Search Your Favourites..."
                 onChangeText={setSearchQuery}
                 placeholderTextColor="gray"
