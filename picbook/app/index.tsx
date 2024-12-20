@@ -1,8 +1,8 @@
 // app/index.tsx
 import { Link } from "expo-router";
 import database from "./data/database";
-import React, { useEffect, useCallback } from "react";
 import HeaderAnimate from "../components/HeaderAnimate";
+import React, { useEffect, useCallback, useState } from "react";
 import { ImageMetadata, EnvironmentEntry } from "../types/types";
 import { View, Text, TextInput, TouchableOpacity, Image, FlatList } from "react-native";
 import Animated, { useAnimatedStyle, useSharedValue, withTiming, Easing, runOnJS } from "react-native-reanimated";
@@ -29,9 +29,9 @@ const useGlobalTimer = (callback: () => void) => {
 
 const Card = ({ data }: { data: EnvironmentEntry }) => {
   const opacity = useSharedValue(1);
-  const [currentIndex, setCurrentIndex] = React.useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const animatedStyle = useAnimatedStyle(() => ({ opacity: opacity.value }));
-  const [currentImage, setCurrentImage] = React.useState(data.images[0]?.previewLink);
+  const [currentImage, setCurrentImage] = useState(data.images[0]?.previewLink);
   const updateImage = useCallback(() => {
     const nextIndex = (currentIndex + 1) % data.images.length;
     setCurrentIndex(nextIndex);
@@ -119,7 +119,7 @@ const SubImages = ({ images, onImagePress }: { images: ImageMetadata[]; onImageP
   <View className="flex flex-row flex-wrap justify-center">
     {images.map((image, index) => (
       <Link key={index} href={{ pathname: "./Home", params: { data: JSON.stringify(image) } }} asChild>
-        <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="m-1.5">
+        <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="m-1.2 mx-0.5">
           <Image style={{ height: 50, width: 100 }} className="mx-auto rounded-lg shadow-2xl shadow-black border border-black" source={{ uri: image.previewLink }} alt={`Sub Image ${index + 1}`} />
         </TouchableOpacity>
       </Link>
@@ -135,8 +135,8 @@ const IndexPage = (): JSX.Element => {
     }
     return array;
   };
-  const [data, setData] = React.useState<EnvironmentEntry[]>([]);
-  const [searchQuery, setSearchQuery] = React.useState("");
+  const [data, setData] = useState<EnvironmentEntry[]>([]);
+  const [searchQuery, setSearchQuery] = useState("");
   useEffect(() => {
     const someChange = (entry: EnvironmentEntry): EnvironmentEntry => {
       return {
