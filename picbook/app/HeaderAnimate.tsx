@@ -79,7 +79,7 @@ const HeaderAnimate: React.FC = () => {
 
   return (
     <View className="flex-1 items-center justify-center m-4">
-      <View className="flex-row w-11/12 h-40 overflow-hidden rounded-3xl relative">
+      <View className="flex-row w-11/12 h-40 overflow-hidden rounded-xl relative">
         {imageSets.map((images, slotIndex) => {
           const isEven = slotIndex % 2 === 0;
           return <ScrollingSlot key={slotIndex} images={images} reverse={isEven} />;

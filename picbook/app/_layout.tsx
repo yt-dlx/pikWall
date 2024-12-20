@@ -5,7 +5,7 @@ import { FontAwesome } from "@expo/vector-icons";
 import { SafeAreaView, StatusBar, Text, View } from "react-native";
 
 const Footer: React.FC = () => (
-  <View className="relative w-full py-4">
+  <View style={{ backgroundColor: "#050708" }} className="relative w-full py-4">
     <View className="flex flex-col sm:flex-row items-center justify-between px-4">
       <View className="flex-row items-center gap-2">
         <FontAwesome name="book" size={16} color="#cdd6f4" />
@@ -18,9 +18,9 @@ const Footer: React.FC = () => (
 
 export default function RootLayout() {
   return (
-    <SafeAreaView className="flex-1 bg-black">
-      <StatusBar backgroundColor="black" barStyle="light-content" />
-      <View className="flex-1 bg-black">
+    <SafeAreaView style={{ flex: 1, backgroundColor: "#090c0e" }}>
+      <StatusBar backgroundColor="#090c0e" barStyle="light-content" />
+      <View style={{ flex: 1, backgroundColor: "#090c0e" }}>
         <Stack screenOptions={{ headerShown: false }} />
       </View>
       <Footer />

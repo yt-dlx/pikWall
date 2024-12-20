@@ -161,10 +161,10 @@ const IndexPage = (): JSX.Element => {
   }, []);
   const filteredData = data.filter((item) => item.environment_title.toLowerCase().includes(searchQuery.toLowerCase()) || item.environment_moral.toLowerCase().includes(searchQuery.toLowerCase()));
   return (
-    <View className="flex-1 bg-black">
+    <View style={{ backgroundColor: "#090c0e" }} className="flex-1">
       <FlatList
         data={filteredData}
-        keyExtractor={(item, index) => index.toString()}
+        keyExtractor={(_, index) => index.toString()}
         renderItem={({ item }) => (
           <View className="m-4">
             <Card data={item} />
@@ -176,7 +176,7 @@ const IndexPage = (): JSX.Element => {
             <View className="p-4">
               <Text className="text-3xl font-bold text-gray-100 text-center">Explore Our Collection</Text>
               <TextInput
-                className="text-gray-300 mt-6 px-4 py-4 rounded-3xl w-full shadow-2xl shadow-black border border-black"
+                className="text-gray-300 mt-6 px-4 py-4 rounded-xl w-full shadow-2xl shadow-black border border-black"
                 placeholder="Search Your Favourites..."
                 onChangeText={setSearchQuery}
                 placeholderTextColor="gray"
