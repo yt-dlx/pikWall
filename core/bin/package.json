@@ -1,7 +1,7 @@
 {
+  "version": "1.0.0",
   "name": "picbook",
   "main": "expo-router/entry",
-  "version": "1.0.0",
   "scripts": {
     "apk": "expo prebuild && cd android && ./gradlew clean && ./gradlew assembleRelease",
     "android": "expo run:android",
@@ -11,10 +11,8 @@
     "ios": "expo run:ios",
     "lint": "expo lint"
   },
-  "jest": {
-    "preset": "jest-expo"
-  },
   "dependencies": {
+    "@babel/preset-env": "^7.26.0",
     "@expo/vector-icons": "^14.0.4",
     "@react-navigation/bottom-tabs": "^7.0.0",
     "@react-navigation/native": "^7.0.0",
@@ -30,7 +28,6 @@
     "expo-symbols": "~0.2.0",
     "expo-system-ui": "~4.0.6",
     "expo-web-browser": "~14.0.1",
-    "lucide-react": "^0.468.0",
     "nativewind": "^4.1.23",
     "react": "18.3.1",
     "react-dom": "18.3.1",
@@ -50,8 +47,6 @@
     "@types/react": "~18.3.12",
     "@types/react-test-renderer": "^18.3.0",
     "expo-dev-client": "^5.0.6",
-    "jest": "^29.2.1",
-    "jest-expo": "~52.0.2",
     "react-test-renderer": "18.3.1",
     "typescript": "^5.3.3"
   },
