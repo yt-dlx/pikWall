@@ -3,7 +3,7 @@ import * as FileSystem from "expo-file-system";
 import { ImageMetadata } from "../../types/types";
 import { ProgressBar } from "react-native-paper";
 import { useRouter, useLocalSearchParams } from "expo-router";
-import { View, Image, Text, TouchableOpacity, ScrollView, Alert } from "react-native";
+import { View, Image, Text, TouchableOpacity, ScrollView, Alert, ActivityIndicator } from "react-native";
 import { FontAwesome, MaterialIcons, Feather, AntDesign } from "@expo/vector-icons";
 
 interface InfoRowProps {
@@ -16,9 +16,10 @@ export default function DownloadScreen() {
   const router = useRouter();
   const params = useLocalSearchParams();
   const rawDataString = params.data as string;
-  const ImageData: ImageMetadata = JSON.parse(rawDataString);
+  const [imageLoading, setImageLoading] = useState(true);
   const [isDownloading, setIsDownloading] = useState(false);
   const [downloadProgress, setDownloadProgress] = useState(0);
+  const ImageData: ImageMetadata = JSON.parse(rawDataString);
   const InfoRow: React.FC<InfoRowProps> = ({ icon, label, value }) => (
     <View className="flex-row items-center py-3 border-b border-gray-800">
       {icon}
@@ -56,8 +57,22 @@ export default function DownloadScreen() {
             Go Back To Gallery
           </Text>
         </TouchableOpacity>
-        <View className="relative rounded-t-xl overflow-hidden shadow-lg">
-          <Image source={{ uri: ImageData.previewLink }} alt="image" className="w-ful h-60" resizeMode="cover" />
+        <View style={{ borderColor: ImageData.primary, borderWidth: 1 }} className="relative rounded-t-3xl overflow-hidden shadow-lg">
+          {imageLoading && (
+            <View style={{ height: 240, justifyContent: "center", alignItems: "center", backgroundColor: "#0A0A0A" }}>
+              <ActivityIndicator size="large" color={ImageData.primary} />
+              <Text style={{ color: ImageData.primary, marginTop: 10 }}>Loading HD Image Preview...</Text>
+            </View>
+          )}
+          <Image
+            alt="image"
+            resizeMode="cover"
+            className="w-ful h-60"
+            source={{ uri: ImageData.previewLink }}
+            onLoadStart={() => setImageLoading(true)}
+            onLoadEnd={() => setImageLoading(false)}
+            style={imageLoading ? { display: "none" } : {}}
+          />
           <View style={{ backgroundColor: ImageData.primary + "80" }} className="absolute bottom-0 left-0 right-0 backdrop-blur-sm p-0.5">
             <Text className="text-white font-semibold text-lg text-center">{ImageData.original_file_name.replace(".jpg", "")}</Text>
           </View>
@@ -65,7 +80,7 @@ export default function DownloadScreen() {
         <TouchableOpacity
           disabled={isDownloading}
           onPress={handleDownload}
-          style={{ backgroundColor: ImageData.primary + "50" }}
+          style={{ backgroundColor: ImageData.primary + "50", borderColor: ImageData.primary, borderWidth: 1 }}
           className={`py-2 px-2 rounded-b-lg mb-4 flex-row justify-center items-center ${isDownloading ? "opacity-50" : ""}`}
         >
           <MaterialIcons name="file-download" size={24} color="#ffffff" />
@@ -77,7 +92,7 @@ export default function DownloadScreen() {
             <Text className="text-gray-400 text-sm mt-2">{Math.round(downloadProgress * 100)}% Complete</Text>
           </View>
         )}
-        <View className="bg-neutral-900/50 rounded-xl p-4 mb-6">
+        <View style={{ backgroundColor: ImageData.primary + "10", borderColor: ImageData.primary, borderWidth: 1 }} className="rounded-xl p-4 mb-6">
           <Text className="text-gray-200 font-bold text-lg mb-4">Image Details</Text>
           <InfoRow icon={<Feather name="image" size={20} color="#9ca3af" />} label="Format" value={ImageData.format.toUpperCase()} />
           <InfoRow icon={<MaterialIcons name="palette" size={20} color="#9ca3af" />} label="Mode" value={ImageData.mode} />
@@ -88,7 +103,7 @@ export default function DownloadScreen() {
           />
           <InfoRow icon={<FontAwesome name="expand" size={20} color="#9ca3af" />} label="Resolution" value={`${ImageData.width} × ${ImageData.height}`} />
         </View>
-        <View className="bg-neutral-900/50 rounded-xl p-4">
+        <View style={{ backgroundColor: ImageData.primary + "10", borderColor: ImageData.primary, borderWidth: 1 }} className="rounded-xl p-4">
           <Text className="text-gray-200 font-bold text-lg mb-4">Extra Color Palette</Text>
           <View className="flex-wrap flex-row justify-between">
             {Array.from({ length: 46 }, (_, i) => `more_${i + 4}`).map((key, index) => {
