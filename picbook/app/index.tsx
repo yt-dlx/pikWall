@@ -26,107 +26,121 @@ const useGlobalTimer = (callback: () => void) => {
     };
   }, [callback]);
 };
-
 const Card = ({ data }: { data: EnvironmentEntry }) => {
   const opacity = useSharedValue(1);
+  const translateX = useSharedValue(0);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const animatedStyle = useAnimatedStyle(() => ({ opacity: opacity.value }));
   const [currentImage, setCurrentImage] = useState(data.images[0]?.previewLink);
-  const updateImage = useCallback(() => {
+  const [nextImage, setNextImage] = useState(data.images[0]?.previewLink);
+  const currentImageStyle = useAnimatedStyle(() => ({ opacity: opacity.value }));
+  const nextImageStyle = useAnimatedStyle(() => ({ transform: [{ translateX: translateX.value }] }));
+  const updateNextImage = useCallback(() => {
     const nextIndex = (currentIndex + 1) % data.images.length;
     setCurrentIndex(nextIndex);
-    setCurrentImage(data.images[nextIndex]?.previewLink);
+    setNextImage(data.images[nextIndex]?.previewLink);
   }, [currentIndex, data.images]);
   const handleImageTransition = useCallback(() => {
+    runOnJS(updateNextImage)();
+    translateX.value = -192;
+    translateX.value = withTiming(0, { duration: 400, easing: Easing.inOut(Easing.ease) });
     opacity.value = withTiming(0, { duration: 300, easing: Easing.out(Easing.ease) }, () => {
-      runOnJS(updateImage)();
-      opacity.value = withTiming(1, { duration: 300, easing: Easing.in(Easing.ease) });
+      runOnJS(setCurrentImage)(nextImage);
+      opacity.value = 1;
     });
-  }, [opacity, updateImage]);
+  }, [opacity, translateX, nextImage, updateNextImage]);
   useGlobalTimer(handleImageTransition);
   const handleSubImagePress = useCallback(
     (previewLink: string, index: number) => {
-      opacity.value = withTiming(0, { duration: 200, easing: Easing.out(Easing.ease) }, () => {
-        runOnJS(setCurrentIndex)(index);
+      runOnJS(setNextImage)(previewLink);
+      runOnJS(setCurrentIndex)(index);
+      translateX.value = -192;
+      translateX.value = withTiming(0, { duration: 400, easing: Easing.inOut(Easing.ease) });
+      opacity.value = withTiming(0, { duration: 300, easing: Easing.out(Easing.ease) }, () => {
         runOnJS(setCurrentImage)(previewLink);
-        opacity.value = withTiming(1, { duration: 200, easing: Easing.in(Easing.ease) });
+        opacity.value = 1;
       });
     },
-    [opacity]
+    [opacity, translateX]
   );
   const currentColors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
   return (
-    <View style={{ backgroundColor: currentColors[0] + "20", borderColor: currentColors[0], borderWidth: 1 }} className="rounded-3xl shadow-md shadow-black overflow-hidden">
-      <Animated.Image
-        style={[{ height: 192, width: "100%", borderWidth: 1, marginBottom: 4, borderColor: currentColors[0] }, animatedStyle]}
-        source={{ uri: currentImage }}
-        alt={data.environment_title}
-        className="rounded-t-3xl"
-      />
-      <SubImages images={data.images} onImagePress={handleSubImagePress} />
+    <View style={{ backgroundColor: currentColors[0] + "20", borderColor: currentColors[0], borderWidth: 0.5 }} className="rounded-3xl shadow-md shadow-black overflow-hidden">
+      <View style={{ position: "relative", height: 192, width: "100%" }}>
+        <Animated.Image
+          style={[{ height: "100%", width: "100%", position: "absolute", borderColor: currentColors[0] }, currentImageStyle]}
+          source={{ uri: currentImage }}
+          alt={data.environment_title}
+          className="rounded-t-3xl border"
+        />
+        <Animated.Image
+          style={[{ height: "100%", width: "100%", position: "absolute", borderColor: currentColors[0] }, nextImageStyle]}
+          source={{ uri: nextImage }}
+          alt={data.environment_title}
+          className="rounded-t-3xl border"
+        />
+        <View style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0, 0, 0, 0.6)" }}>
+          <Text style={{ color: "white", fontSize: 30, fontWeight: "bold", textAlign: "center", paddingHorizontal: 15 }}>{data.environment_title}</Text>
+        </View>
+      </View>
+      <SubImages images={data.images} currentColors={currentColors} onImagePress={handleSubImagePress} />
       <CardText data={data} currentIndex={currentIndex} />
-      <View
-        style={{
-          backgroundColor: currentColors[0],
-          borderTopWidth: 1,
-          alignItems: "center",
-          justifyContent: "center",
-          borderTopColor: currentColors[0]
-        }}
-      >
-        <Text
-          style={{
-            color: "black",
-            fontSize: 16,
-            lineHeight: 20
-          }}
-        >
-          picBook™
-        </Text>
+      <View style={{ backgroundColor: currentColors[0], borderTopWidth: 1, alignItems: "center", justifyContent: "center", borderTopColor: currentColors[0] }}>
+        <Text style={{ color: "black", fontSize: 16, lineHeight: 20 }}>picBook™</Text>
       </View>
     </View>
   );
 };
-
 const CardText = ({ data, currentIndex }: { data: EnvironmentEntry; currentIndex: number }) => {
   const colors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
-  const words = data.environment_title.split(" ");
-  const segmentLength = Math.ceil(words.length / 3);
   return (
-    <View className="p-4 text-justify justify-center items-center">
-      <View className="flex-row flex-wrap">
-        {words.map((word, index) => {
-          let color = "";
-          if (index < segmentLength) color = colors[0];
-          else if (index < 2 * segmentLength) color = colors[1];
-          else color = colors[2];
-          return (
-            <Text key={index} style={{ color }} className={`text-2xl font-semibold ${index !== words.length - 1 ? "mr-1" : ""}`}>
-              {word}
-            </Text>
-          );
-        })}
-      </View>
-      <Text className="m-1 text-justify">
-        <Text className="text-white font-bold">Environment: </Text>
-        <Text className="text-gray-400">{data.environment_prompt}</Text>
-      </Text>
+    <View style={{ backgroundColor: colors[0] + "30", marginTop: -2 }} className="p-2 m-4 rounded-xl">
+      <Text className="text-xs justify-evenly text-justify text-white">{data.environment_prompt}</Text>
     </View>
   );
 };
-
-const SubImages = ({ images, onImagePress }: { images: ImageMetadata[]; onImagePress: (previewLink: string, index: number) => void }) => (
-  <View className="flex flex-row flex-wrap justify-center">
+// const CardText = ({ data, currentIndex }: { data: EnvironmentEntry; currentIndex: number }) => {
+// const colors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
+// const words = data.environment_prompt.split(" ");
+// const segmentLength = Math.ceil(words.length / 3);
+// return (
+// <View style={{ backgroundColor: colors[0] + "20" }} className="p-2 m-2 rounded-xl text-justify justify-center items-center">
+// <View className="flex-row flex-wrap">
+// {words.map((word, index) => {
+// let color = "";
+// if (index < segmentLength) color = colors[0];
+// else if (index < 2 * segmentLength) color = colors[1];
+// else color = colors[2];
+// return (
+// <Text key={index} style={{ color }} className={`text-xs ${index !== words.length - 1 ? "mr-1" : ""}`}>
+// {word}
+// </Text>
+// );
+// })}
+// </View>
+// </View>
+// );
+// };
+const SubImages = ({ images, currentColors, onImagePress }: { images: ImageMetadata[]; currentColors: string[]; onImagePress: (previewLink: string, index: number) => void }) => (
+  <View className="flex flex-row flex-wrap justify-center p-2">
     {images.map((image, index) => (
       <Link key={index} href={{ pathname: "./Home", params: { data: JSON.stringify(image) } }} asChild>
-        <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="m-1.2 mx-0.5">
-          <Image style={{ height: 50, width: 100 }} className="mx-auto rounded-lg shadow-2xl shadow-black border border-black" source={{ uri: image.previewLink }} alt={`Sub Image ${index + 1}`} />
+        <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="m-1">
+          <View className="relative">
+            <Image
+              style={{ borderColor: currentColors[index % currentColors.length], borderWidth: 1, height: 40, width: 160 }}
+              className="mx-auto rounded-lg shadow-2xl shadow-black"
+              source={{ uri: image.previewLink }}
+              alt={`Sub Image ${index + 1}`}
+            />
+            <Text style={{ color: "black", backgroundColor: currentColors[index % currentColors.length] }} className="absolute top-1 left-1 px-1 rounded text-sm">
+              {currentColors[index % currentColors.length]}
+            </Text>
+          </View>
         </TouchableOpacity>
       </Link>
     ))}
   </View>
 );
-
 const IndexPage = (): JSX.Element => {
   const shuffleArray = <T,>(array: T[]): T[] => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -165,7 +179,7 @@ const IndexPage = (): JSX.Element => {
   }, []);
   const filteredData = data.filter((item) => item.environment_title.toLowerCase().includes(searchQuery.toLowerCase()) || item.environment_moral.toLowerCase().includes(searchQuery.toLowerCase()));
   return (
-    <View style={{ backgroundColor: "#000000" }} className="flex-1">
+    <View style={{ backgroundColor: "#0A0A0A" }} className="flex-1">
       <FlatList
         data={filteredData}
         keyExtractor={(_, index) => index.toString()}
@@ -180,8 +194,8 @@ const IndexPage = (): JSX.Element => {
             <View className="p-4">
               <Text className="text-3xl font-bold text-gray-100 text-center">Explore Our Collection</Text>
               <TextInput
-                className="text-gray-300 mt-6 px-4 py-4 rounded-xl w-full"
-                style={{ backgroundColor: "#1b0726" }}
+                className="text-gray-300 mt-6 px-4 py-4 rounded-3xl w-full"
+                style={{ backgroundColor: "rgba(255,255,255,0.1)" }}
                 placeholder="Search Your Query..."
                 onChangeText={setSearchQuery}
                 placeholderTextColor="#dfd2e6"
@@ -194,5 +208,4 @@ const IndexPage = (): JSX.Element => {
     </View>
   );
 };
-
 export default IndexPage;

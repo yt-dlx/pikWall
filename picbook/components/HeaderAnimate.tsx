@@ -88,14 +88,14 @@ const HeaderAnimate: React.FC = () => {
           <View style={styles.blurredBackground} />
           <View className="absolute justify-center items-center m-4 p-2">
             <View className="flex-row mb-2">
-              <Text className="text-6xl font-black text-pink-400 tracking-tight">picBook™</Text>
+              <Text className="text-6xl font-black text-white tracking-tight">picBook™</Text>
             </View>
             <View className="flex-row">
               <View className="w-2 h-2 rounded-full" />
-              <Text className="text-sm text-pink-400 font-semibold">Crafted with imagination and stories. All rights reserved.</Text>
+              <Text className="text-sm text-white font-semibold">Crafted with imagination and stories. All rights reserved.</Text>
             </View>
             <Text className="text-xl text-gray-300 mt-4 leading-7 font-medium">
-              Dive into tales inspired by unique images and discover the art of <Text className="text-pink-400 font-bold">visual environment telling</Text>.
+              Dive into tales inspired by unique images and discover the art of <Text className="text-white font-bold">visual environment telling</Text>.
             </Text>
           </View>
         </View>
@@ -106,7 +106,7 @@ const HeaderAnimate: React.FC = () => {
 
 const styles = StyleSheet.create({
   overlay: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center", borderRadius: 10, overflow: "hidden" },
-  blurredBackground: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "#000000", opacity: 0.8, borderRadius: 10 }
+  blurredBackground: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "#000000", opacity: 0.6, borderRadius: 10 }
 });
 
 export default HeaderAnimate;
