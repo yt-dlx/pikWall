@@ -119,7 +119,7 @@ const HeaderAnimate: React.FC = () => {
 
 const styles = StyleSheet.create({
   overlay: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center", borderRadius: 10, overflow: "hidden" },
-  blurredBackground: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "#000000", opacity: 0.7, borderRadius: 10 }
+  blurredBackground: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "#000000", opacity: 0.5, borderRadius: 10 }
 });
 
 export default HeaderAnimate;

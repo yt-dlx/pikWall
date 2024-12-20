@@ -1,8 +1,8 @@
 // app/index.tsx
 import { Link } from "expo-router";
 import database from "./data/database";
-import React, { useEffect, useCallback, useState } from "react";
 import HeaderAnimate from "../components/HeaderAnimate";
+import React, { useEffect, useCallback, useState } from "react";
 import { ImageMetadata, EnvironmentEntry } from "../types/types";
 import { View, Text, TextInput, TouchableOpacity, Image, FlatList } from "react-native";
 import Animated, { useAnimatedStyle, useSharedValue, withTiming, Easing, runOnJS } from "react-native-reanimated";
@@ -64,7 +64,7 @@ const Card = ({ data }: { data: EnvironmentEntry }) => {
   );
   const currentColors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
   return (
-    <View style={{ backgroundColor: currentColors[0] + "20", borderColor: currentColors[0], borderWidth: 0.5 }} className="rounded-3xl shadow-md shadow-black overflow-hidden">
+    <View style={{ backgroundColor: currentColors[0] + "20", borderColor: currentColors[0], borderWidth: 0.5 }} className="rounded-3xl overflow-hidden">
       <View style={{ position: "relative", height: 192, width: "100%" }}>
         <Animated.Image
           style={[{ height: "100%", width: "100%", position: "absolute", borderColor: currentColors[0] }, currentImageStyle]}
