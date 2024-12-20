@@ -79,7 +79,7 @@ const HeaderAnimate: React.FC = () => {
 
   return (
     <View className="flex-1 items-center justify-center m-4">
-      <View className="flex-row w-11/12 h-72 bg-black overflow-hidden rounded-2xl relative">
+      <View className="flex-row w-11/12 h-40 overflow-hidden rounded-3xl relative">
         {imageSets.map((images, slotIndex) => {
           const isEven = slotIndex % 2 === 0;
           return <ScrollingSlot key={slotIndex} images={images} reverse={isEven} />;
@@ -91,8 +91,8 @@ const HeaderAnimate: React.FC = () => {
               <Text className="text-6xl font-black text-pink-400 tracking-tight">picBook™</Text>
             </View>
             <View className="flex-row">
-              <View className="w-2 h-2 rounded-full bg-pink-400 mr-2" />
-              <Text className="text-sm text-pink-400 font-semibold opacity-80">Crafted with imagination and stories. All rights reserved.</Text>
+              <View className="w-2 h-2 rounded-full bg-pink-400" />
+              <Text className="text-sm text-pink-400 font-semibold">Crafted with imagination and stories. All rights reserved.</Text>
             </View>
             <Text className="text-xl text-gray-300 mt-4 leading-7 font-medium">
               Dive into tales inspired by unique images and discover the art of <Text className="text-pink-400 font-bold">visual environment telling</Text>.
