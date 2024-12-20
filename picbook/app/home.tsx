@@ -4,6 +4,7 @@ import database from "./data/database";
 import HeaderAnimate from "../components/HeaderAnimate";
 import React, { useEffect, useCallback, useState } from "react";
 import { ImageMetadata, EnvironmentEntry } from "../types/types";
+import { FontAwesome, MaterialIcons } from "@expo/vector-icons";
 import { View, Text, TextInput, TouchableOpacity, Image, FlatList } from "react-native";
 import Animated, { useAnimatedStyle, useSharedValue, withTiming, Easing, runOnJS } from "react-native-reanimated";
 
@@ -157,7 +158,7 @@ const IndexPage = (): JSX.Element => {
   }, []);
   const filteredData = data.filter((item) => item.environment_title.toLowerCase().includes(searchQuery.toLowerCase()) || item.environment_moral.toLowerCase().includes(searchQuery.toLowerCase()));
   return (
-    <View style={{ backgroundColor: "#0A0A0A" }} className="flex-1">
+    <View className="flex-1 bg-black">
       <FlatList
         data={filteredData}
         keyExtractor={(_, index) => index.toString()}
@@ -170,9 +171,13 @@ const IndexPage = (): JSX.Element => {
           <View>
             <HeaderAnimate />
             <View className="p-4">
-              <Text className="text-3xl font-bold text-gray-100 text-center">Explore Our Collection</Text>
+              <View className="flex-row items-center justify-center">
+                <FontAwesome name="wpexplorer" size={28} color="white" className="mr-2" />
+                <Text className="text-3xl font-bold text-gray-100">Explore Our Collection</Text>
+                <MaterialIcons name="collections" size={28} color="white" className="ml-2" />
+              </View>
               <TextInput
-                className="text-gray-300 mt-6 px-4 py-4 rounded-3xl w-full"
+                className="mt-6 px-4 py-4 rounded-3xl w-full text-gray-300 bg-opacity-10"
                 style={{ backgroundColor: "rgba(255,255,255,0.1)" }}
                 placeholder="Search Your Query..."
                 onChangeText={setSearchQuery}
