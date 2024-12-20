@@ -1,9 +1,9 @@
 // app/index.tsx
 import { Link } from "expo-router";
-import database from "../data/database";
+import database from "./data/database";
 import React, { useEffect, useCallback, useState } from "react";
-import HeaderAnimate from "../../components/HeaderAnimate";
-import { ImageMetadata, EnvironmentEntry } from "../../types/types";
+import HeaderAnimate from "../components/HeaderAnimate";
+import { ImageMetadata, EnvironmentEntry } from "../types/types";
 import { View, Text, TextInput, TouchableOpacity, Image, FlatList } from "react-native";
 import Animated, { useAnimatedStyle, useSharedValue, withTiming, Easing, runOnJS } from "react-native-reanimated";
 

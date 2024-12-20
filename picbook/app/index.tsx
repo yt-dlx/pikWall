@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 const imageSets: string[][] = [
   [
     "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Soft Glow Of Pastel Skies (1).jpg",
@@ -46,6 +47,7 @@ import { Text, View } from "react-native";
 import { Image, StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat } from "react-native-reanimated";
+import { Link } from "expo-router";
 
 interface ScrollingSlotProps {
   images: string[];
@@ -89,6 +91,7 @@ const IndexPage: React.FC = () => {
           <LinearGradient colors={["transparent", "#0A0A0A"]} style={styles.gradient} />
           <View style={styles.overlay}>
             <View className="absolute justify-center items-center m-4 p-2">
+              <Image source={require("../assets/images/logo.png")} alt="image" style={styles.logo} />
               <View className="flex-row mb-2">
                 <Text className="text-6xl font-black text-white tracking-tight">picBook™</Text>
               </View>
@@ -99,6 +102,9 @@ const IndexPage: React.FC = () => {
               <Text className="text-xl text-gray-300 mt-4 leading-7 font-medium">
                 Dive into tales inspired by unique images and discover the art of <Text className="text-white font-bold">visual environment telling</Text>.
               </Text>
+              <Link href={{ pathname: "./home" }} asChild>
+                <Text style={styles.exploreButtonText}>Explore</Text>
+              </Link>
             </View>
           </View>
         </View>
@@ -111,7 +117,24 @@ const styles = StyleSheet.create({
   gradient: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 },
   content: { flex: 1, width: "100%", justifyContent: "center", alignItems: "center" },
   container: { height: "100%", width: "100%", justifyContent: "flex-start", alignItems: "center" },
-  overlay: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center", overflow: "hidden" }
+  overlay: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center", overflow: "hidden" },
+  logo: {
+    width: 100,
+    height: 100,
+    marginBottom: 16
+  },
+  exploreButton: {
+    marginTop: 16,
+    backgroundColor: "#1E90FF",
+    paddingVertical: 12,
+    paddingHorizontal: 24,
+    borderRadius: 8
+  },
+  exploreButtonText: {
+    color: "#FFFFFF",
+    fontSize: 16,
+    fontWeight: "bold"
+  }
 });
 
 export default IndexPage;
