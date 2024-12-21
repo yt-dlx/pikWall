@@ -44,6 +44,7 @@ const imageSets: string[][] = [
 import { Link } from "expo-router";
 import React, { useEffect } from "react";
 import { Text, View } from "react-native";
+import Footer from "@/components/Footer";
 import { MaterialIcons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { Image, StyleSheet, TouchableOpacity } from "react-native";
@@ -127,6 +128,7 @@ const IndexPage: React.FC = () => {
           </View>
         </View>
       </View>
+      <Footer />
     </View>
   );
 };

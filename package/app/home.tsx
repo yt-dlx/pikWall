@@ -6,6 +6,7 @@ import React, { useEffect, useCallback, useState } from "react";
 import { ImageMetadata, EnvironmentEntry } from "../types/types";
 import { View, Text, TextInput, TouchableOpacity, Image, FlatList, ScrollView } from "react-native";
 import Animated, { useAnimatedStyle, useSharedValue, withTiming, Easing, runOnJS } from "react-native-reanimated";
+import Footer from "@/components/Footer";
 
 let globalInterval: NodeJS.Timeout | null = null;
 const subscribers = new Set<() => void>();
@@ -197,6 +198,7 @@ const HomePage = (): JSX.Element => {
           </View>
         }
       />
+      <Footer />
     </View>
   );
 };
