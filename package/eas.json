@@ -5,6 +5,6 @@
     "preview": { "distribution": "internal" },
     "production": { "autoIncrement": true },
     "development": { "distribution": "internal", "developmentClient": true },
-    "local": { "android": { "buildType": "apk", "developmentClient": false, "gradleCommand": ":app:assembleRelease" } }
+    "local": { "android": { "buildType": "apk", "developmentClient": false } }
   }
 }
