@@ -1,42 +1,25 @@
 {
   "expo": {
-    "name": "picbook",
+    "owner": "shovit",
     "slug": "picbook",
-    "version": "1.0.0",
+    "version": "2.0.0",
+    "name": "picbook",
+    "scheme": "picbook",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
-    "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.shovit.picbook"
     },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "package": "com.shovit.picbook"
-    },
-    "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
-    },
-    "plugins": [
-      "expo-router",
-      [
-        "expo-splash-screen",
-        {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
-        }
-      ]
-    ],
+    "userInterfaceStyle": "automatic",
     "experiments": {
       "typedRoutes": true
+    },
+    "icon": "./assets/picbook/picbook_white_nobg.png",
+    "web": {
+      "output": "static",
+      "bundler": "metro",
+      "favicon": "./assets/picbook/picbook_black_bg.png"
     },
     "extra": {
       "router": {
@@ -46,6 +29,33 @@
         "projectId": "bf8ce3fd-d2bc-4897-ab27-b6b34c9a428f"
       }
     },
-    "owner": "shovit"
+    "android": {
+      "package": "com.shovit.picbook",
+      "adaptiveIcon": {
+        "backgroundColor": "#000000",
+        "foregroundImage": "./assets/picbook/picbook_white_nobg.png"
+      }
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Kurale.ttf",
+            "./assets/fonts/Brittany.otf"
+          ]
+        }
+      ],
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#000000",
+          "image": "./assets/picbook/picbook_white_nobg.png"
+        }
+      ]
+    ]
   }
 }

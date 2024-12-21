@@ -77,7 +77,6 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
     </View>
   );
 };
-
 const AnimatedTitle: React.FC = () => {
   const scale = useSharedValue(0.95);
   useEffect(() => {
@@ -87,12 +86,16 @@ const AnimatedTitle: React.FC = () => {
     transform: [{ scale: scale.value }]
   }));
   return (
-    <Animated.View style={animatedStyle}>
-      <Text className="text-8xl font-black text-white tracking-tight">picBook™</Text>
+    <Animated.View style={animatedStyle} className="items-center">
+      <View className=" bg-black/60 rounded-full">
+        <Image source={require("../assets/picbook/picbook_white_nobg.png")} className="w-56 h-56 border-white border-2 rounded-full" resizeMode="contain" />
+      </View>
+      <Text style={{ fontFamily: "Kurale" }} className="text-8xl font-black text-white tracking-tight">
+        picBook™
+      </Text>
     </Animated.View>
   );
 };
-
 const IndexPage: React.FC = () => {
   return (
     <View style={styles.container}>
@@ -107,13 +110,15 @@ const IndexPage: React.FC = () => {
               <AnimatedTitle />
               <View className="flex-row items-center mt-4 bg-black/50 px-4 py-2 rounded-full">
                 <View className="w-2 h-2 rounded-full bg-white mr-2 animate-pulse" />
-                <Text className="text-sm text-white font-semibold">Crafted with imagination and stories</Text>
+                <Text style={{ fontFamily: "Kurale" }} className="text-sm text-white font-semibold">
+                  Crafted with imagination and stories
+                </Text>
               </View>
               <Link href="./home" asChild>
                 <TouchableOpacity style={styles.buttonContainer}>
                   <LinearGradient colors={["rgba(255,255,255,0.95)", "rgba(255,255,255,1)"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.buttonGradient}>
                     <MaterialIcons name="photo-camera" size={24} color="black" style={styles.icon} />
-                    <Text style={styles.buttonText}>Start Exploring</Text>
+                    <Text style={{ fontFamily: "Kurale", ...styles.buttonText }}>Start Exploring</Text>
                   </LinearGradient>
                 </TouchableOpacity>
               </Link>

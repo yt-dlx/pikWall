@@ -81,7 +81,7 @@ const Card = ({ data }: { data: EnvironmentEntry }) => {
               alt={data.environment_title}
             />
             <View style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0, 0, 0, 0.4)" }}>
-              <Text style={{ color: "white", fontSize: 30, fontWeight: "bold", textAlign: "center", paddingHorizontal: 15 }}>{data.environment_title}</Text>
+              <Text style={{ fontFamily: "Kurale", color: "white", fontSize: 30, fontWeight: "bold", textAlign: "center", paddingHorizontal: 15 }}>{data.environment_title}</Text>
             </View>
           </View>
         </TouchableOpacity>
@@ -89,7 +89,7 @@ const Card = ({ data }: { data: EnvironmentEntry }) => {
       <SubImages images={data.images} currentColors={currentColors} onImagePress={handleSubImagePress} />
       <CardText data={data} currentIndex={currentIndex} />
       <View style={{ backgroundColor: currentColors[0], borderTopWidth: 1, alignItems: "center", justifyContent: "center", borderTopColor: currentColors[0] }}>
-        <Text style={{ color: "black", fontSize: 16, lineHeight: 20 }}>picBook™</Text>
+        <Text style={{ fontFamily: "Kurale", color: "black", fontSize: 16, lineHeight: 20 }}>picBook™</Text>
       </View>
     </View>
   );
@@ -98,7 +98,9 @@ const CardText = ({ data, currentIndex }: { data: EnvironmentEntry; currentIndex
   const colors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
   return (
     <View style={{ backgroundColor: colors[0] + "30", marginTop: -2 }} className="p-2 m-4 rounded-xl">
-      <Text className="text-xs justify-evenly text-justify text-white">{data.environment_prompt}</Text>
+      <Text style={{ fontFamily: "Kurale" }} className="text-xs justify-evenly text-justify text-white">
+        {data.environment_prompt}
+      </Text>
     </View>
   );
 };
@@ -114,7 +116,7 @@ const SubImages = ({ images, currentColors, onImagePress }: { images: ImageMetad
               source={{ uri: image.previewLink }}
               alt={`Sub Image ${index + 1}`}
             />
-            <Text style={{ color: "black", backgroundColor: currentColors[index % currentColors.length] }} className="absolute top-1 left-1 px-1 rounded text-sm">
+            <Text style={{ fontFamily: "Kurale", color: "black", backgroundColor: currentColors[index % currentColors.length] }} className="absolute top-1 left-1 px-1 rounded text-sm">
               {currentColors[index % currentColors.length]}
             </Text>
           </View>
@@ -178,7 +180,9 @@ const HomePage = (): JSX.Element => {
             <View className="p-4">
               <View className="flex-row items-center justify-center">
                 <FontAwesome name="wpexplorer" size={28} color="white" className="mr-2" />
-                <Text className="text-3xl font-bold text-gray-100">Explore Our Collection</Text>
+                <Text style={{ fontFamily: "Kurale" }} className="text-3xl font-bold text-gray-100">
+                  Explore Our Collection
+                </Text>
                 <Ionicons name="images-outline" size={28} color="white" className="ml-2" />
               </View>
               <TextInput
@@ -192,7 +196,9 @@ const HomePage = (): JSX.Element => {
               <ScrollView horizontal showsHorizontalScrollIndicator={false} className="mt-4">
                 {["Anime XL", "Realistic XL", "Cartoon 3D", "Black & White", "Abstract"].map((category, index) => (
                   <TouchableOpacity key={index} className="px-4 py-2 bg-white rounded-xl mx-0.5" activeOpacity={0.7} onPress={() => console.log(`Selected category: ${category}`)}>
-                    <Text className="text-black text-sm font-medium">{category}</Text>
+                    <Text style={{ fontFamily: "Kurale" }} className="text-black text-sm font-medium">
+                      {category}
+                    </Text>
                   </TouchableOpacity>
                 ))}
               </ScrollView>

@@ -86,8 +86,13 @@ const HeaderAnimate: React.FC = () => {
       transform: [{ scale: scale.value }]
     }));
     return (
-      <Animated.View style={animatedStyle}>
-        <Text className="text-7xl font-black text-white tracking-tight">picBook™</Text>
+      <Animated.View style={animatedStyle} className="items-center">
+        <View className=" bg-black/60 rounded-full">
+          <Image source={require("../assets/picbook/picbook_white_nobg.png")} className="w-16 h-16 border-white border-2 rounded-full" resizeMode="contain" />
+        </View>
+        <Text style={{ fontFamily: "Kurale" }} className="text-7xl font-black text-white tracking-tight">
+          picBook™
+        </Text>
       </Animated.View>
     );
   };
@@ -105,10 +110,16 @@ const HeaderAnimate: React.FC = () => {
             </View>
             <View className="flex-row items-center mt-4 bg-black/30 px-4 py-2 rounded-full">
               <View className="w-2 h-2 rounded-full bg-white mr-2 animate-pulse" />
-              <Text className="text-sm text-white font-semibold">Crafted with imagination and stories</Text>
+              <Text style={{ fontFamily: "Kurale" }} className="text-sm text-white font-semibold">
+                Crafted with imagination and stories
+              </Text>
             </View>
-            <Text className="text-xl text-gray-300 mt-4 leading-7 font-medium text-center">
-              Dive into tales inspired by unique images and discover the art of <Text className="text-white font-bold">visual environment telling</Text>.
+            <Text style={{ fontFamily: "Kurale" }} className="text-xl text-gray-300 mt-4 leading-7 font-medium text-center">
+              Dive into tales inspired by unique images and discover the art of{" "}
+              <Text style={{ fontFamily: "Kurale" }} className="text-white font-bold">
+                visual environment telling
+              </Text>
+              .
             </Text>
           </View>
         </View>
