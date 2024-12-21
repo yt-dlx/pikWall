@@ -13,11 +13,8 @@
     },
     "local": {
       "android": {
-        "buildType": "apk"
-      }
-    },
-    "local:gradle": {
-      "android": {
+        "buildType": "apk",
+        "developmentClient": false,
         "gradleCommand": ":app:assembleRelease"
       }
     },

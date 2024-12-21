@@ -41,6 +41,9 @@
     "extra": {
       "router": {
         "origin": false
+      },
+      "eas": {
+        "projectId": "bf8ce3fd-d2bc-4897-ab27-b6b34c9a428f"
       }
     },
     "owner": "shovit"
