@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 "../global.css";
 import React, { useEffect } from "react";
 import { Text, View } from "react-native";
@@ -88,7 +89,7 @@ const HeaderAnimate: React.FC = () => {
     return (
       <Animated.View style={animatedStyle} className="items-center">
         <View className=" bg-black/60 rounded-full">
-          <Image source={require("../assets/picbook/picbook_white_nobg.png")} className="w-16 h-16 border-white border-2 rounded-full" resizeMode="contain" />
+          <Image source={require("../assets/picbook/picbook_white_nobg.png")} alt="logo" className="w-16 h-16 border-white border-2 rounded-full" resizeMode="contain" />
         </View>
         <Text style={{ fontFamily: "Kurale" }} className="text-7xl font-black text-white tracking-tight">
           picBook™

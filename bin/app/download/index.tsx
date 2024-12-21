@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import { ImageMetadata } from "../../types/types";
 import { ProgressBar } from "react-native-paper";
 import { MaterialIcons } from "@expo/vector-icons";
@@ -35,7 +36,7 @@ const HorizontalImage: React.FC<ImageProps> = ({ ImageData, screenWidth }) => {
     <View className="relative">
       <View className="absolute inset-0 z-50 flex justify-center items-center">
         <Animated.View style={{ transform: [{ scale: scaleValue }, { rotate: rotateInterpolate }] }} className="rounded-full flex items-center">
-          <Image style={{ backgroundColor: ImageData.primary }} source={require("../../assets/picbook/picbook_white_nobg.png")} className="w-10 h-10 rounded-full" resizeMode="contain" />
+          <Image style={{ backgroundColor: ImageData.primary }} alt="logo" source={require("../../assets/picbook/picbook_white_nobg.png")} className="w-10 h-10 rounded-full" resizeMode="contain" />
         </Animated.View>
         <Text style={{ fontFamily: "Kurale" }} className="text-xl font-black text-white tracking-tight">
           picBook™
@@ -52,7 +53,7 @@ const HorizontalImage: React.FC<ImageProps> = ({ ImageData, screenWidth }) => {
           <Image
             alt="horizontal-image"
             resizeMode="cover"
-            source={{ uri: ImageData.previewLink }}
+            source={{ uri: ImageData.previewLink.replace("lowRes", "highRes") }}
             onLoadStart={() => setImageLoading(true)}
             onLoadEnd={() => setImageLoading(false)}
             onError={(e) => {
@@ -82,7 +83,7 @@ const HorizontalImage: React.FC<ImageProps> = ({ ImageData, screenWidth }) => {
 };
 //  =======================================================================================
 //  =======================================================================================
-const VerticalImage: React.FC<ImageProps> = ({ ImageData, screenWidth, screenHeight }) => {
+const VerticalImage: React.FC<ImageProps> = ({ ImageData, screenHeight }) => {
   const [imageLoading, setImageLoading] = useState(true);
   const aspectRatio = ImageData.width / ImageData.height;
   const fullHeight = screenHeight * 0.9;
@@ -102,7 +103,13 @@ const VerticalImage: React.FC<ImageProps> = ({ ImageData, screenWidth, screenHei
         <View className="relative">
           <View className="absolute inset-0 z-50 flex justify-center items-center">
             <Animated.View style={{ transform: [{ scale: scaleValue }, { rotate: rotateInterpolate }] }} className="rounded-full flex items-center">
-              <Image style={{ backgroundColor: ImageData.primary }} source={require("../../assets/picbook/picbook_white_nobg.png")} className="w-10 h-10 rounded-full" resizeMode="contain" />
+              <Image
+                style={{ backgroundColor: ImageData.primary }}
+                source={require("../../assets/picbook/picbook_white_nobg.png")}
+                alt="logo"
+                className="w-10 h-10 rounded-full"
+                resizeMode="contain"
+              />
             </Animated.View>
             <Text style={{ fontFamily: "Kurale" }} className="text-xl font-black text-white tracking-tight">
               picBook™
@@ -120,7 +127,7 @@ const VerticalImage: React.FC<ImageProps> = ({ ImageData, screenWidth, screenHei
                 <Image
                   alt="vertical-image"
                   resizeMode="cover"
-                  source={{ uri: ImageData.previewLink }}
+                  source={{ uri: ImageData.previewLink.replace("lowRes", "highRes") }}
                   onLoadStart={() => setImageLoading(true)}
                   onLoadEnd={() => setImageLoading(false)}
                   onError={(e) => {

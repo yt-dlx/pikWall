@@ -137,14 +137,7 @@ const HomePage = (): JSX.Element => {
   const [searchQuery, setSearchQuery] = useState("");
   useEffect(() => {
     const someChange = (entry: EnvironmentEntry): EnvironmentEntry => {
-      return {
-        ...entry,
-        images: entry.images.map((image) => ({
-          ...image,
-          downloadLink: atob(image.downloadLink),
-          previewLink: atob(image.previewLink.replace("lowRes", "highRes"))
-        }))
-      };
+      return { ...entry, images: entry.images.map((image) => ({ ...image, previewLink: atob(image.previewLink), downloadLink: atob(image.downloadLink) })) };
     };
     const fetchData = () => {
       const entries = Object.values(database);
@@ -161,9 +154,7 @@ const HomePage = (): JSX.Element => {
       subscribers.clear();
     };
   }, []);
-
   const filteredData = data.filter((item) => item.environment_title.toLowerCase().includes(searchQuery.toLowerCase()) || item.environment_moral.toLowerCase().includes(searchQuery.toLowerCase()));
-
   return (
     <View style={{ backgroundColor: "#0A0A0A" }} className="flex-1">
       <FlatList
