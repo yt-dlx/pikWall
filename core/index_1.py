@@ -37,7 +37,7 @@ def venv_exists():
 def setup_virtual_environment():
     if not venv_exists():
         cprint("Creating virtual environment...", "green")
-        execute_command("python3 -m venv venv" if not is_windows() else "python -m venv venv")
+        execute_command("python3 -m venv python" if not is_windows() else "python -m venv python")
     activate_command = f". {get_venv_activate_path()}" if not is_windows() else f".\\{get_venv_activate_path()}"
     execute_command(f"{activate_command} && python -m pip install --upgrade pip")
     cuda_torch_command = f"{activate_command} && pip install --index-url https://download.pytorch.org/whl/cu124 torch torchvision torchaudio xformers"
