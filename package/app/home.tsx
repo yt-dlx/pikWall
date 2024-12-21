@@ -137,7 +137,7 @@ const HomePage = (): JSX.Element => {
   const [searchQuery, setSearchQuery] = useState("");
   useEffect(() => {
     const someChange = (entry: EnvironmentEntry): EnvironmentEntry => {
-      return { ...entry, images: entry.images.map((image) => ({ ...image, previewLink: atob(image.previewLink), downloadLink: atob(image.downloadLink) })) };
+      return { ...entry, images: entry.images.map((image) => ({ ...image, previewLink: atob(image.previewLink.replace("lowRes", "highRes")), downloadLink: atob(image.downloadLink) })) };
     };
     const fetchData = () => {
       const entries = Object.values(database);
