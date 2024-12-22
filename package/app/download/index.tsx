@@ -38,12 +38,12 @@ const PreviewImage: React.FC<{ data: DownloadScreenProps; screenWidth: number }>
             <Animated.View style={{ borderRadius: 9999, justifyContent: "center", alignItems: "center", transform: [{ rotate: rotateInterpolate }] }}>
               <Image
                 style={{ width: 40, height: 40, borderRadius: 9999, backgroundColor: data.data[0].primary }}
-                source={require("../../assets/picbook/picbook_white_nobg.png")}
+                source={require("../../assets/picbook/white_nobg_1024.png")}
                 resizeMode="contain"
                 alt="logo"
               />
             </Animated.View>
-            <Text style={{ fontFamily: "Kurale", fontSize: 20, fontWeight: "900", color: "white", textAlign: "center" }}> picBook™ </Text>
+            <Text style={{ fontFamily: "Kurale", fontSize: 20, fontWeight: "900", color: "white", textAlign: "center", marginBottom: 5, lineHeight: 24 }}> picBook™ </Text>
           </>
         )}
       </View>

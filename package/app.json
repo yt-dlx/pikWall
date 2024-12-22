@@ -9,15 +9,15 @@
     "newArchEnabled": true,
     "userInterfaceStyle": "automatic",
     "experiments": { "typedRoutes": true },
-    "icon": "./assets/picbook/splash/picbook_white_nobg.png",
+    "icon": "./assets/picbook/black_nobg_3200.png",
     "ios": { "supportsTablet": true, "bundleIdentifier": "com.shovit.picbook" },
-    "web": { "output": "static", "bundler": "metro", "favicon": "./assets/picbook/splash/picbook_black_bg.png" },
+    "web": { "output": "static", "bundler": "metro", "favicon": "./assets/picbook/black_nobg_3200.png" },
     "extra": { "router": { "origin": false }, "eas": { "projectId": "bf8ce3fd-d2bc-4897-ab27-b6b34c9a428f" } },
-    "android": { "package": "com.shovit.picbook", "adaptiveIcon": { "backgroundColor": "#000000", "foregroundImage": "./assets/picbook/splash/picbook_white_nobg.png" } },
+    "android": { "package": "com.shovit.picbook", "adaptiveIcon": { "backgroundColor": "#0A0A0A", "foregroundImage": "./assets/picbook/black_nobg_3200.png" } },
     "plugins": [
       ["expo-font", { "fonts": ["./assets/fonts/Kurale.ttf", "./assets/fonts/Brittany.otf"] }],
       "expo-router",
-      ["expo-splash-screen", { "imageWidth": 200, "resizeMode": "contain", "backgroundColor": "#000000", "image": "./assets/picbook/splash/picbook_white_nobg/splash_3200x3200.png" }]
+      ["expo-splash-screen", { "imageWidth": 200, "resizeMode": "contain", "backgroundColor": "#0A0A0A", "image": "./assets/picbook/black_nobg_3200.png" }]
     ]
   }
 }
