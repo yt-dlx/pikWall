@@ -1,3 +1,4 @@
+// app/download.tsx
 /* eslint-disable @typescript-eslint/no-require-imports */
 import Footer from "@/components/Footer";
 import { ImageMetadata } from "@/types/types";

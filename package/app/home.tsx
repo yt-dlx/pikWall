@@ -1,3 +1,4 @@
+// app/home.tsx
 import { Link } from "expo-router";
 import database from "./data/database";
 import Footer from "@/components/Footer";
