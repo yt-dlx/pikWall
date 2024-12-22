@@ -20,8 +20,8 @@ yarn-error.log*
 .vercel
 *.tsbuildinfo
 next-env.d.ts
-core/.env
-core/python
-core/sources
-core/node_modules
+backend/.env
+backend/python
+backend/sources
+backend/node_modules
 .env.local
