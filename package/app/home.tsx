@@ -1,12 +1,19 @@
 import { Link } from "expo-router";
 import database from "./data/database";
+import Footer from "@/components/Footer";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import HeaderAnimate from "../components/HeaderAnimate";
 import React, { useEffect, useCallback, useState } from "react";
 import { ImageMetadata, EnvironmentEntry } from "../types/types";
 import { View, Text, TextInput, TouchableOpacity, Image, FlatList, ScrollView } from "react-native";
 import Animated, { useAnimatedStyle, useSharedValue, withTiming, Easing, runOnJS } from "react-native-reanimated";
-import Footer from "@/components/Footer";
+
+type DownloadScreenProps = {
+  environment_title: string;
+  environment_prompt: string;
+  environment_moral: string;
+  data: ImageMetadata[];
+};
 
 let globalInterval: NodeJS.Timeout | null = null;
 const subscribers = new Set<() => void>();
@@ -65,8 +72,21 @@ const Card = ({ data }: { data: EnvironmentEntry }) => {
   );
   const currentColors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
   return (
-    <View style={{ backgroundColor: currentColors[0] + "20", borderColor: currentColors[0], borderWidth: 0.5 }} className="rounded-3xl overflow-hidden">
-      <Link href={{ pathname: "./download", params: { data: JSON.stringify(data.images[currentIndex]) } }} asChild>
+    <View style={{ backgroundColor: `${currentColors[0]}20`, borderColor: currentColors[0], borderWidth: 0.5 }} className="rounded-3xl overflow-hidden">
+      <Link
+        href={{
+          pathname: "./download",
+          params: {
+            data: JSON.stringify({
+              environment_title: data.environment_title,
+              environment_prompt: data.environment_prompt,
+              environment_moral: data.environment_moral,
+              data: data.images
+            })
+          }
+        }}
+        asChild
+      >
         <TouchableOpacity>
           <View style={{ position: "relative", height: 192, width: "100%" }}>
             <Animated.Image
@@ -87,7 +107,16 @@ const Card = ({ data }: { data: EnvironmentEntry }) => {
           </View>
         </TouchableOpacity>
       </Link>
-      <SubImages images={data.images} currentColors={currentColors} onImagePress={handleSubImagePress} />
+      <SubImages
+        images={{
+          data: data.images,
+          environment_title: data.environment_title,
+          environment_moral: data.environment_moral,
+          environment_prompt: data.environment_prompt
+        }}
+        currentColors={currentColors}
+        onImagePress={handleSubImagePress}
+      />
       <CardText data={data} currentIndex={currentIndex} />
       <View style={{ backgroundColor: currentColors[0], borderTopWidth: 1, alignItems: "center", justifyContent: "center", borderTopColor: currentColors[0] }}>
         <Text style={{ fontFamily: "Kurale", color: "black", fontSize: 16, lineHeight: 20 }}>picBook™</Text>
@@ -98,17 +127,26 @@ const Card = ({ data }: { data: EnvironmentEntry }) => {
 const CardText = ({ data, currentIndex }: { data: EnvironmentEntry; currentIndex: number }) => {
   const colors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
   return (
-    <View style={{ backgroundColor: colors[0] + "30", marginTop: -2 }} className="p-2 m-4 rounded-xl">
+    <View style={{ backgroundColor: `${colors[0]}30`, marginTop: -2 }} className="p-2 m-4 rounded-xl">
       <Text style={{ fontFamily: "Kurale" }} className="text-xs justify-evenly text-justify text-white">
         {data.environment_prompt}
       </Text>
     </View>
   );
 };
-const SubImages = ({ images, currentColors, onImagePress }: { images: ImageMetadata[]; currentColors: string[]; onImagePress: (previewLink: string, index: number) => void }) => (
+const SubImages = ({ images, currentColors, onImagePress }: { images: DownloadScreenProps; currentColors: string[]; onImagePress: (previewLink: string, index: number) => void }) => (
   <View className="flex flex-row flex-wrap justify-center p-2">
-    {images.map((image, index) => (
-      <Link key={index} href={{ pathname: "./download", params: { data: JSON.stringify(image) } }} asChild>
+    {images.data.map((image, index) => (
+      <Link
+        key={index}
+        href={{
+          pathname: "./download",
+          params: {
+            data: JSON.stringify({ environment_title: images.environment_title, environment_prompt: images.environment_prompt, environment_moral: images.environment_moral, data: images.data })
+          }
+        }}
+        asChild
+      >
         <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="m-1">
           <View className="relative">
             <Image
@@ -137,9 +175,14 @@ const HomePage = (): JSX.Element => {
   const [data, setData] = useState<EnvironmentEntry[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   useEffect(() => {
-    const someChange = (entry: EnvironmentEntry): EnvironmentEntry => {
-      return { ...entry, images: entry.images.map((image) => ({ ...image, previewLink: atob(image.previewLink.replace("lowRes", "highRes")), downloadLink: atob(image.downloadLink) })) };
-    };
+    const someChange = (entry: EnvironmentEntry): EnvironmentEntry => ({
+      ...entry,
+      images: entry.images.map((image) => ({
+        ...image,
+        previewLink: `${image.previewLink}lowRes/${image.original_file_name}`,
+        downloadLink: `${image.downloadLink}blob/highRes/${image.original_file_name}`
+      }))
+    });
     const fetchData = () => {
       const entries = Object.values(database);
       const cards: EnvironmentEntry[] = entries.map((entry) => someChange(entry));

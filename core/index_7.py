@@ -13,7 +13,7 @@ def create_temp_resized_image(file_path, size=(300, 300)):
         temp_path = "Tri.jpg"
         img.save(temp_path, "JPEG")
     return temp_path
-def get_top_colors(file_path, num_colors=50):
+def get_top_colors(file_path, num_colors=10):
     color_thief = ColorThief(file_path)
     palette = color_thief.get_palette(color_count=num_colors, quality=1)
     hex_colors = [f"#{r:02x}{g:02x}{b:02x}" for r, g, b in palette]
@@ -24,7 +24,7 @@ def get_image_metadata(file_path):
 def create_image_data(file_path):
     temp_file_path = create_temp_resized_image(file_path)
     try:
-        hex_colors = get_top_colors(temp_file_path, num_colors=50)
+        hex_colors = get_top_colors(temp_file_path, num_colors=10)
     finally:
         os.remove(temp_file_path)
     file_metadata = get_image_metadata(file_path)
@@ -42,10 +42,12 @@ def create_image_data(file_path):
         "primary": hex_colors[0],
         "secondary": hex_colors[1],
         "tertiary": hex_colors[2],
+        "downloadLink": "https://github.com/yt-dlx/picbook/blob/",
+        "previewLink": "https://raw.githubusercontent.com/yt-dlx/picbook/"
     }
     for i, color in enumerate(hex_colors[3:], start=4):
-        if i <= 50:
-            image_data[f"more_{i}"] = color
+        if i <= 10:
+            image_data[f"hex_{i}"] = color
     return image_data
 def process_images_in_folder(folder_path):
     parent_data = {}
