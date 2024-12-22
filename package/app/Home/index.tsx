@@ -1,9 +1,9 @@
 // app/home.tsx
 import { Link } from "expo-router";
-import database from "./data/database";
+import database from "../data/database";
 import Footer from "@/components/Footer";
-import HeaderAnimate from "../components/HeaderAnimate";
-import { EnvironmentEntry, ImageMetadata } from "../types/types";
+import HeaderAnimate from "../../components/HeaderAnimate";
+import { EnvironmentEntry, ImageMetadata } from "../../types/types";
 import React, { useEffect, useCallback, useState, memo } from "react";
 import { FontAwesome, Ionicons, FontAwesome5 } from "@expo/vector-icons";
 import { View, Text, TouchableOpacity, Image, FlatList, ScrollView, ListRenderItem } from "react-native";
@@ -13,6 +13,7 @@ type RGB = `rgb(${number}, ${number}, ${number})`;
 type RGBA = `rgba(${number}, ${number}, ${number}, ${number})`;
 type HEX = `#${string}`;
 type ColorValue = RGB | RGBA | HEX | string;
+
 interface SubImageProps {
   image: ImageMetadata;
   index: number;
@@ -20,39 +21,47 @@ interface SubImageProps {
   onImagePress: (previewLink: string, index: number) => void;
   environmentData: DownloadScreenProps;
 }
+
 interface SubImagesProps {
   images: DownloadScreenProps;
   currentColors: ColorValue[];
   onImagePress: (previewLink: string, index: number) => void;
 }
+
 interface CardTextProps {
   data: EnvironmentEntry;
   currentIndex: number;
 }
+
 interface CardProps {
   data: EnvironmentEntry;
 }
+
 interface AlphabetGroupProps {
   title: string;
   items: EnvironmentEntry[];
 }
+
 interface CategoryButtonProps {
   category: string;
 }
+
 interface DownloadScreenProps {
   environment_title: string;
   environment_prompt: string;
   environment_moral: string;
   data: ImageMetadata[];
 }
+
 type GroupedData = {
   [key: string]: EnvironmentEntry[];
 };
 
+// SubImage Component
 const SubImage: React.FC<SubImageProps> = memo(({ image, index, currentColors, onImagePress, environmentData }) => (
   <Link
     href={{
-      pathname: "./download",
+      pathname: "./Image",
       params: {
         data: JSON.stringify({
           environment_title: environmentData.environment_title,
@@ -80,6 +89,8 @@ const SubImage: React.FC<SubImageProps> = memo(({ image, index, currentColors, o
   </Link>
 ));
 SubImage.displayName = "SubImage";
+
+// SubImages Component
 const SubImages: React.FC<SubImagesProps> = memo(({ images, currentColors, onImagePress }) => (
   <View className="flex flex-row flex-wrap justify-center p-2">
     {images.data.map((image, index) => (
@@ -88,6 +99,8 @@ const SubImages: React.FC<SubImagesProps> = memo(({ images, currentColors, onIma
   </View>
 ));
 SubImages.displayName = "SubImages";
+
+// CardText Component
 const CardText: React.FC<CardTextProps> = memo(({ data, currentIndex }) => {
   const colors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
   return (
@@ -99,31 +112,43 @@ const CardText: React.FC<CardTextProps> = memo(({ data, currentIndex }) => {
   );
 });
 CardText.displayName = "CardText";
+
+// Updated Card Component with runOnJS
 const Card: React.FC<CardProps> = memo(({ data }) => {
   const opacity = useSharedValue(1);
   const translateX = useSharedValue(0);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [currentImage, setCurrentImage] = useState<string>(data.images[0]?.previewLink);
   const [nextImage, setNextImage] = useState<string>(data.images[0]?.previewLink);
+
+  // Callback to set current image
   const setCurrentImageJS = useCallback((image: string) => {
     setCurrentImage(image);
   }, []);
+
+  // Animated styles
   const currentImageStyle = useAnimatedStyle(() => ({ opacity: opacity.value }));
   const nextImageStyle = useAnimatedStyle(() => ({ transform: [{ translateX: translateX.value }] }));
+
+  // Update next image index and link
   const updateNextImage = useCallback(() => {
     const nextIndex = (currentIndex + 1) % data.images.length;
     setCurrentIndex(nextIndex);
     setNextImage(data.images[nextIndex]?.previewLink);
   }, [currentIndex, data.images]);
+
+  // Handle image transition with runOnJS
   const handleImageTransition = useCallback(() => {
     runOnJS(updateNextImage)();
     translateX.value = -192;
     translateX.value = withTiming(0, { duration: 400, easing: Easing.inOut(Easing.ease) });
     opacity.value = withTiming(0, { duration: 300, easing: Easing.out(Easing.ease) }, () => {
-      runOnJS(setCurrentImageJS)(nextImage);
+      runOnJS(setCurrentImageJS)(nextImage); // Using runOnJS
       opacity.value = 1;
     });
   }, [opacity, translateX, nextImage, updateNextImage, setCurrentImageJS]);
+
+  // Handle subimage press with runOnJS
   const handleSubImagePress = useCallback(
     (previewLink: string, index: number) => {
       setNextImage(previewLink);
@@ -131,23 +156,34 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
       translateX.value = -192;
       translateX.value = withTiming(0, { duration: 400, easing: Easing.inOut(Easing.ease) });
       opacity.value = withTiming(0, { duration: 300, easing: Easing.out(Easing.ease) }, () => {
-        setCurrentImage(previewLink);
+        runOnJS(setCurrentImageJS)(previewLink); // Using runOnJS
         opacity.value = 1;
       });
     },
-    [opacity, translateX]
+    [opacity, translateX, setCurrentImageJS]
   );
+
+  // Set up interval for image transition
   useEffect(() => {
     const interval = setInterval(handleImageTransition, 4000);
     return () => clearInterval(interval);
   }, [handleImageTransition]);
+
   const currentColors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
+
   return (
     <View style={{ backgroundColor: `${currentColors[0]}20`, borderColor: currentColors[0], borderWidth: 0.5 }} className="rounded-3xl overflow-hidden">
       <Link
         href={{
-          pathname: "./download",
-          params: { data: JSON.stringify({ environment_title: data.environment_title, environment_prompt: data.environment_prompt, environment_moral: data.environment_moral, data: data.images }) }
+          pathname: "./Image",
+          params: {
+            data: JSON.stringify({
+              environment_title: data.environment_title,
+              environment_prompt: data.environment_prompt,
+              environment_moral: data.environment_moral,
+              data: data.images
+            })
+          }
         }}
         asChild
       >
@@ -166,30 +202,58 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
               alt={data.environment_title}
             />
             <View style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0, 0, 0, 0.4)" }}>
-              <Text style={{ fontFamily: "Kurale", color: "white", fontSize: 30, fontWeight: "bold", textAlign: "center", paddingHorizontal: 15 }}>{data.environment_title}</Text>
+              <Text
+                style={{
+                  fontFamily: "Kurale",
+                  color: "white",
+                  fontSize: 30,
+                  fontWeight: "bold",
+                  textAlign: "center",
+                  paddingHorizontal: 15
+                }}
+              >
+                {data.environment_title}
+              </Text>
             </View>
           </View>
         </TouchableOpacity>
       </Link>
       <SubImages
-        images={{ data: data.images, environment_title: data.environment_title, environment_moral: data.environment_moral, environment_prompt: data.environment_prompt }}
+        images={{
+          data: data.images,
+          environment_title: data.environment_title,
+          environment_moral: data.environment_moral,
+          environment_prompt: data.environment_prompt
+        }}
         currentColors={currentColors}
         onImagePress={handleSubImagePress}
       />
       <CardText data={data} currentIndex={currentIndex} />
-      <View style={{ backgroundColor: currentColors[0], borderTopWidth: 1, alignItems: "center", justifyContent: "center", borderTopColor: currentColors[0] }}>
+      <View
+        style={{
+          backgroundColor: currentColors[0],
+          borderTopWidth: 1,
+          alignItems: "center",
+          justifyContent: "center",
+          borderTopColor: currentColors[0]
+        }}
+      >
         <Text style={{ fontFamily: "Kurale", color: "black", fontSize: 16, lineHeight: 20 }}>picBook™</Text>
       </View>
     </View>
   );
 });
 Card.displayName = "Card";
+
+// AlphabetGroup Component
 const AlphabetGroup: React.FC<AlphabetGroupProps> = memo(({ title, items }) => {
   const bounce = useSharedValue(0);
   useEffect(() => {
     bounce.value = withRepeat(withSequence(withTiming(-5, { duration: 500 }), withTiming(0, { duration: 500 })), -1, true);
   }, [bounce]);
+
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ translateY: bounce.value }] }));
+
   return (
     <View className="m-2 bg-[#161616] rounded-3xl">
       <View className="flex-row m-4">
@@ -211,6 +275,8 @@ const AlphabetGroup: React.FC<AlphabetGroupProps> = memo(({ title, items }) => {
   );
 });
 AlphabetGroup.displayName = "AlphabetGroup";
+
+// CategoryButton Component
 const CategoryButton: React.FC<CategoryButtonProps> = memo(({ category }) => (
   <TouchableOpacity className="px-4 py-2 bg-white rounded-xl mx-0.5" activeOpacity={0.7} onPress={() => console.log(`Selected category: ${category}`)}>
     <Text style={{ fontFamily: "Kurale" }} className="text-black text-sm font-medium">
@@ -219,6 +285,8 @@ const CategoryButton: React.FC<CategoryButtonProps> = memo(({ category }) => (
   </TouchableOpacity>
 ));
 CategoryButton.displayName = "CategoryButton";
+
+// HeaderComponent
 const HeaderComponent: React.FC = memo(() => (
   <>
     <HeaderAnimate />
@@ -239,9 +307,12 @@ const HeaderComponent: React.FC = memo(() => (
   </>
 ));
 HeaderComponent.displayName = "HeaderComponent";
+
+// HomePage Component
 const HomePage = (): JSX.Element => {
   const [groupedData, setGroupedData] = useState<GroupedData>({});
   const [searchQuery] = useState<string>("");
+
   useEffect(() => {
     const processImageUrls = (entry: EnvironmentEntry): EnvironmentEntry => ({
       ...entry,
@@ -251,6 +322,7 @@ const HomePage = (): JSX.Element => {
         downloadLink: `${image.downloadLink}blob/highRes/${image.original_file_name}`
       }))
     });
+
     const groupEntriesByFirstLetter = (entries: EnvironmentEntry[]) =>
       entries.reduce((acc, card) => {
         const firstLetter = card.environment_title[0].toUpperCase();
@@ -258,6 +330,7 @@ const HomePage = (): JSX.Element => {
         acc[firstLetter].push(card);
         return acc;
       }, {} as { [key: string]: EnvironmentEntry[] });
+
     const fetchData = () => {
       const entries = Object.values(database);
       const processedEntries = entries.map(processImageUrls);
@@ -270,8 +343,10 @@ const HomePage = (): JSX.Element => {
         }, {} as { [key: string]: EnvironmentEntry[] });
       setGroupedData(sortedGrouped);
     };
+
     fetchData();
   }, []);
+
   const filteredGroups = searchQuery
     ? Object.entries(groupedData).reduce((acc, [letter, items]) => {
         const filteredItems = items.filter(
@@ -281,9 +356,11 @@ const HomePage = (): JSX.Element => {
         return acc;
       }, {} as { [key: string]: EnvironmentEntry[] })
     : groupedData;
+
   const renderGroup: ListRenderItem<[string, EnvironmentEntry[]]> = useCallback(({ item }) => <AlphabetGroup title={item[0]} items={item[1]} />, []);
   const getItemLayout = useCallback((_: unknown, index: number) => ({ length: 400, offset: 400 * index, index }), []);
   const keyExtractor = useCallback((item: [string, EnvironmentEntry[]]) => item[0], []);
+
   return (
     <View style={{ backgroundColor: "#0A0A0A" }} className="flex-1">
       <FlatList
@@ -302,4 +379,5 @@ const HomePage = (): JSX.Element => {
     </View>
   );
 };
+
 export default HomePage;
