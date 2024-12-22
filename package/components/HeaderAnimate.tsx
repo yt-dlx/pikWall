@@ -1,44 +1,44 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 const imageSets: string[][] = [
   [
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Soft Glow Of Pastel Skies (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Tranquility Under Emerald Canopy (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Soft Glow Of Pastel Skies (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Tranquility Under Emerald Canopy (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Dreamscape Of Blush Meadows (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crimson Glow Over Silent Steppe (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Dreamscape Of Blush Meadows (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crimson Glow Over Silent Steppe (2).jpg"
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Abstract Symphony In Painted Passage (1).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Abstract Visions In Forgotten Atrium (1).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Amber Skies Over Rolling Meadows (1).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Arctic Serenity Beneath Silver Sky (1).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Aurora Over Frozen Wilderness (1).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Canvas Of Kaleidoscopic Ruins (1).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Celestial Peaks Over Silent Waters (1).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Chaos Carved In Colorful Stone (1).jpg"
   ],
   [
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Tranquility Under Emerald Canopy (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Dreamscape Of Blush Meadows (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Tranquility Under Emerald Canopy (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Dreamscape Of Blush Meadows (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Soft Glow Of Pastel Skies (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crimson Glow Over Silent Steppe (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crimson Glow Over Silent Steppe (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Soft Glow Of Pastel Skies (4).jpg"
-  ],
-  [
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Dreamscape Of Blush Meadows (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crimson Glow Over Silent Steppe (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crimson Glow Over Silent Steppe (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Dreamscape Of Blush Meadows (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Tranquility Under Emerald Canopy (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Soft Glow Of Pastel Skies (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Soft Glow Of Pastel Skies (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Tranquility Under Emerald Canopy (4).jpg"
-  ],
-  [
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Dreamscape Of Blush Meadows (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Soft Glow Of Pastel Skies (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Tranquility Under Emerald Canopy (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Soft Glow Of Pastel Skies (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Tranquility Under Emerald Canopy (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crimson Glow Over Silent Steppe (3).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Charcoal Wastes Beneath Smoldering Stars (2).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Charred Forest Beneath Smoky Skies (2).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Cracked Earth Beneath Sulfuric Skies (2).jpg",
     "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crimson Glow Over Silent Steppe (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Dreamscape Of Blush Meadows (3).jpg"
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crimson Shore Beneath Dying Light (2).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crystal Peaks Under Lunar Glow (2).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Cybernetic Glow Beneath Liquid Skies (2).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Dawn Light Over Pastel Ridge (2).jpg"
+  ],
+  [
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Abstract Symphony In Painted Passage (3).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Abstract Visions In Forgotten Atrium (3).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Amber Skies Over Rolling Meadows (3).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Arctic Serenity Beneath Silver Sky (3).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Aurora Over Frozen Wilderness (3).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Canvas Of Kaleidoscopic Ruins (3).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Celestial Peaks Over Silent Waters (3).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Chaos Carved In Colorful Stone (3).jpg"
+  ],
+  [
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Charcoal Wastes Beneath Smoldering Stars (4).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Charred Forest Beneath Smoky Skies (4).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Cracked Earth Beneath Sulfuric Skies (4).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crimson Glow Over Silent Steppe (4).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crimson Shore Beneath Dying Light (4).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crystal Peaks Under Lunar Glow (4).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Cybernetic Glow Beneath Liquid Skies (4).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Dawn Light Over Pastel Ridge (4).jpg"
   ]
 ];
 import React, { useEffect } from "react";
@@ -65,7 +65,7 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
     <View className="flex-1 overflow-hidden px-1">
       <Animated.View style={animatedStyle} className="flex-col">
         {images.concat(images).map((uri: string, idx: number) => (
-          <Image key={idx} source={{ uri }} alt="image" className="w-full h-44 rounded-lg mb-1" resizeMode="cover" blurRadius={1.0} />
+          <Image key={idx} source={{ uri }} alt="image" className="w-full h-36 rounded-lg mb-1" resizeMode="cover" blurRadius={1.0} />
         ))}
       </Animated.View>
     </View>
