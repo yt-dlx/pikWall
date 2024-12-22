@@ -1,9 +1,9 @@
-// app/home.tsx
+// app/Home/index.tsx
 import { Link } from "expo-router";
-import database from "../data/database";
+import database from "@/database";
 import Footer from "@/components/Footer";
-import HeaderAnimate from "../../components/HeaderAnimate";
-import { EnvironmentEntry, ImageMetadata } from "../../types/types";
+import HeaderAnimate from "@/components/HeaderAnimate";
+import { EnvironmentEntry, ImageMetadata } from "@/types/types";
 import React, { useEffect, useCallback, useState, memo } from "react";
 import { FontAwesome, Ionicons, FontAwesome5 } from "@expo/vector-icons";
 import { View, Text, TouchableOpacity, Image, FlatList, ScrollView, ListRenderItem } from "react-native";
