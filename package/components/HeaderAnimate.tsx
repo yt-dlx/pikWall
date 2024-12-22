@@ -116,11 +116,7 @@ const HeaderAnimate: React.FC = () => {
               </Text>
             </View>
             <Text style={{ fontFamily: "Kurale" }} className="text-xl text-gray-300 mt-4 leading-7 font-medium text-center">
-              Dive into tales inspired by unique images and discover the art of{" "}
-              <Text style={{ fontFamily: "Kurale" }} className="text-white font-bold">
-                visual environment telling
-              </Text>
-              .
+              Dive into tales inspired by unique images and discover the art of visual environment telling.
             </Text>
           </View>
         </View>
@@ -130,8 +126,8 @@ const HeaderAnimate: React.FC = () => {
 };
 
 const styles = StyleSheet.create({
-  overlay: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center", borderRadius: 10, overflow: "hidden" },
-  blurredBackground: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "#000000", opacity: 0.5, borderRadius: 10 }
+  blurredBackground: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "#0A0A0A", opacity: 0.5, borderRadius: 15 },
+  overlay: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center", borderRadius: 10, overflow: "hidden" }
 });
 
 export default HeaderAnimate;

@@ -82,7 +82,7 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
 const AnimatedTitle: React.FC = () => {
   const scale = useSharedValue(0.95);
   useEffect(() => {
-    scale.value = withRepeat(withSequence(withTiming(1.05, { duration: 2000 }), withTiming(0.95, { duration: 2000 })), -1, true);
+    scale.value = withRepeat(withSequence(withTiming(0.5, { duration: 2000 }), withTiming(0.8, { duration: 2000 })), -1, true);
   }, [scale]);
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [{ scale: scale.value }]
