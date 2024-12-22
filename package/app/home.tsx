@@ -107,22 +107,31 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [currentImage, setCurrentImage] = useState<string>(data.images[0]?.previewLink);
   const [nextImage, setNextImage] = useState<string>(data.images[0]?.previewLink);
+
+  // Wrapper function for runOnJS
+  const setCurrentImageJS = useCallback((image: string) => {
+    setCurrentImage(image);
+  }, []);
+
   const currentImageStyle = useAnimatedStyle(() => ({ opacity: opacity.value }));
   const nextImageStyle = useAnimatedStyle(() => ({ transform: [{ translateX: translateX.value }] }));
+
   const updateNextImage = useCallback(() => {
     const nextIndex = (currentIndex + 1) % data.images.length;
     setCurrentIndex(nextIndex);
     setNextImage(data.images[nextIndex]?.previewLink);
   }, [currentIndex, data.images]);
+
   const handleImageTransition = useCallback(() => {
     runOnJS(updateNextImage)();
     translateX.value = -192;
     translateX.value = withTiming(0, { duration: 400, easing: Easing.inOut(Easing.ease) });
     opacity.value = withTiming(0, { duration: 300, easing: Easing.out(Easing.ease) }, () => {
-      runOnJS(setCurrentImage)(nextImage);
+      runOnJS(setCurrentImageJS)(nextImage);
       opacity.value = 1;
     });
-  }, [opacity, translateX, nextImage, updateNextImage]);
+  }, [opacity, translateX, nextImage, updateNextImage, setCurrentImageJS]);
+
   const handleSubImagePress = useCallback(
     (previewLink: string, index: number) => {
       setNextImage(previewLink);
@@ -136,11 +145,14 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
     },
     [opacity, translateX]
   );
+
   useEffect(() => {
     const interval = setInterval(handleImageTransition, 4000);
     return () => clearInterval(interval);
   }, [handleImageTransition]);
+
   const currentColors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
+
   return (
     <View style={{ backgroundColor: `${currentColors[0]}20`, borderColor: currentColors[0], borderWidth: 0.5 }} className="rounded-3xl overflow-hidden">
       <Link
@@ -187,7 +199,7 @@ const AlphabetGroup: React.FC<AlphabetGroupProps> = memo(({ title, items }) => {
   const bounce = useSharedValue(0);
   useEffect(() => {
     bounce.value = withRepeat(withSequence(withTiming(-5, { duration: 500 }), withTiming(0, { duration: 500 })), -1, true);
-  }, []);
+  }, [bounce]);
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ translateY: bounce.value }] }));
   return (
     <View className="m-2 bg-[#161616] rounded-3xl">
