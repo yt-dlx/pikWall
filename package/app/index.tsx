@@ -1,44 +1,44 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 const imageSets: string[][] = [
   [
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Soft Glow Of Pastel Skies (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Soft Glow Of Pastel Skies (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Tranquility Under Emerald Canopy (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Tranquility Under Emerald Canopy (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Dreamscape Of Blush Meadows (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Dreamscape Of Blush Meadows (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Crimson Glow Over Silent Steppe (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Crimson Glow Over Silent Steppe (2).jpg"
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Soft Glow Of Pastel Skies (1).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Soft Glow Of Pastel Skies (2).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Tranquility Under Emerald Canopy (1).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Tranquility Under Emerald Canopy (2).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Dreamscape Of Blush Meadows (1).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Dreamscape Of Blush Meadows (2).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crimson Glow Over Silent Steppe (1).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crimson Glow Over Silent Steppe (2).jpg"
   ],
   [
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Tranquility Under Emerald Canopy (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Tranquility Under Emerald Canopy (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Dreamscape Of Blush Meadows (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Dreamscape Of Blush Meadows (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Crimson Glow Over Silent Steppe (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Crimson Glow Over Silent Steppe (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Soft Glow Of Pastel Skies (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Soft Glow Of Pastel Skies (4).jpg"
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Tranquility Under Emerald Canopy (3).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Tranquility Under Emerald Canopy (4).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Dreamscape Of Blush Meadows (3).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Dreamscape Of Blush Meadows (4).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crimson Glow Over Silent Steppe (3).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crimson Glow Over Silent Steppe (4).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Soft Glow Of Pastel Skies (3).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Soft Glow Of Pastel Skies (4).jpg"
   ],
   [
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Dreamscape Of Blush Meadows (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Dreamscape Of Blush Meadows (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Crimson Glow Over Silent Steppe (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Crimson Glow Over Silent Steppe (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Soft Glow Of Pastel Skies (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Soft Glow Of Pastel Skies (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Tranquility Under Emerald Canopy (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Tranquility Under Emerald Canopy (4).jpg"
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Dreamscape Of Blush Meadows (1).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Dreamscape Of Blush Meadows (4).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crimson Glow Over Silent Steppe (1).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crimson Glow Over Silent Steppe (4).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Soft Glow Of Pastel Skies (1).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Soft Glow Of Pastel Skies (4).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Tranquility Under Emerald Canopy (1).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Tranquility Under Emerald Canopy (4).jpg"
   ],
   [
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Crimson Glow Over Silent Steppe (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Crimson Glow Over Silent Steppe (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Soft Glow Of Pastel Skies (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Soft Glow Of Pastel Skies (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Tranquility Under Emerald Canopy (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Tranquility Under Emerald Canopy (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Dreamscape Of Blush Meadows (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/The Dreamscape Of Blush Meadows (3).jpg"
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crimson Glow Over Silent Steppe (2).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crimson Glow Over Silent Steppe (3).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Soft Glow Of Pastel Skies (2).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Soft Glow Of Pastel Skies (3).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Tranquility Under Emerald Canopy (2).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Tranquility Under Emerald Canopy (3).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Dreamscape Of Blush Meadows (2).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Dreamscape Of Blush Meadows (3).jpg"
   ]
 ];
 import { Link } from "expo-router";
