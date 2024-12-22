@@ -67,7 +67,7 @@ const PreviewImage: React.FC<{ data: DownloadScreenProps; screenWidth: number }>
                 transform: [{ rotate: rotateInterpolate }]
               }}
             >
-              <Image className="w-10 h-10 rounded-full" style={{ backgroundColor: data.data[0].primary }} source={require("../assets/picbook/white_nobg_1024.png")} alt="logo" resizeMode="contain" />
+              <Image className="w-10 h-10 rounded-full" style={{ backgroundColor: data.data[0].primary }} source={require("@/assets/picbook/white_nobg_1024.png")} alt="logo" resizeMode="contain" />
             </Animated.View>
             <Text
               className="text-center mb-1.5 leading-6"

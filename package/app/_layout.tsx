@@ -8,7 +8,7 @@ import { SafeAreaView, StatusBar, View } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
-  const [loaded, error] = useFonts({ Kurale: require("../assets/fonts/Kurale.ttf") });
+  const [loaded, error] = useFonts({ Kurale: require("@/assets/fonts/Kurale.ttf") });
   React.useEffect(() => {
     if (loaded || error) SplashScreen.hideAsync();
   }, [loaded, error]);

@@ -90,7 +90,7 @@ const AnimatedTitle: React.FC = () => {
   return (
     <Animated.View style={animatedStyle} className="items-center">
       <View className=" bg-black/60 rounded-full">
-        <Image source={require("../assets/picbook/white_nobg_1024.png")} alt="logo" className="w-56 h-56 border-white border-2 rounded-full" resizeMode="contain" />
+        <Image source={require("@/assets/picbook/white_nobg_1024.png")} alt="logo" className="w-56 h-56 border-white border-2 rounded-full" resizeMode="contain" />
       </View>
       <Text style={{ fontFamily: "Kurale" }} className="text-8xl font-black text-white tracking-tight">
         picBook™
