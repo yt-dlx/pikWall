@@ -7,13 +7,11 @@ import React, { useEffect, useCallback, useState, memo } from "react";
 import { FontAwesome, Ionicons, FontAwesome5 } from "@expo/vector-icons";
 import { View, Text, TouchableOpacity, Image, FlatList, ScrollView, ListRenderItem } from "react-native";
 import Animated, { useAnimatedStyle, useSharedValue, withTiming, Easing, runOnJS, withRepeat, withSequence } from "react-native-reanimated";
-// ==================================================================
-// Base types for image and color data
+
 type RGB = `rgb(${number}, ${number}, ${number})`;
 type RGBA = `rgba(${number}, ${number}, ${number}, ${number})`;
 type HEX = `#${string}`;
 type ColorValue = RGB | RGBA | HEX | string;
-// Component props interfaces
 interface SubImageProps {
   image: ImageMetadata;
   index: number;
@@ -46,11 +44,10 @@ interface DownloadScreenProps {
   environment_moral: string;
   data: ImageMetadata[];
 }
-// State types
 type GroupedData = {
   [key: string]: EnvironmentEntry[];
 };
-// ==================================================================
+
 const SubImage: React.FC<SubImageProps> = memo(({ image, index, currentColors, onImagePress, environmentData }) => (
   <Link
     href={{
@@ -107,21 +104,16 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [currentImage, setCurrentImage] = useState<string>(data.images[0]?.previewLink);
   const [nextImage, setNextImage] = useState<string>(data.images[0]?.previewLink);
-
-  // Wrapper function for runOnJS
   const setCurrentImageJS = useCallback((image: string) => {
     setCurrentImage(image);
   }, []);
-
   const currentImageStyle = useAnimatedStyle(() => ({ opacity: opacity.value }));
   const nextImageStyle = useAnimatedStyle(() => ({ transform: [{ translateX: translateX.value }] }));
-
   const updateNextImage = useCallback(() => {
     const nextIndex = (currentIndex + 1) % data.images.length;
     setCurrentIndex(nextIndex);
     setNextImage(data.images[nextIndex]?.previewLink);
   }, [currentIndex, data.images]);
-
   const handleImageTransition = useCallback(() => {
     runOnJS(updateNextImage)();
     translateX.value = -192;
@@ -131,7 +123,6 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
       opacity.value = 1;
     });
   }, [opacity, translateX, nextImage, updateNextImage, setCurrentImageJS]);
-
   const handleSubImagePress = useCallback(
     (previewLink: string, index: number) => {
       setNextImage(previewLink);
@@ -145,14 +136,11 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
     },
     [opacity, translateX]
   );
-
   useEffect(() => {
     const interval = setInterval(handleImageTransition, 4000);
     return () => clearInterval(interval);
   }, [handleImageTransition]);
-
   const currentColors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
-
   return (
     <View style={{ backgroundColor: `${currentColors[0]}20`, borderColor: currentColors[0], borderWidth: 0.5 }} className="rounded-3xl overflow-hidden">
       <Link
