@@ -116,7 +116,7 @@ const IndexPage: React.FC = () => {
                   Crafted with imagination and stories
                 </Text>
               </View>
-              <Link href="./home" asChild>
+              <Link href="./Home" asChild>
                 <TouchableOpacity style={styles.buttonContainer}>
                   <LinearGradient colors={["rgba(255,255,255,0.95)", "rgba(255,255,255,1)"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.buttonGradient}>
                     <MaterialIcons name="photo-camera" size={24} color="black" style={styles.icon} />
