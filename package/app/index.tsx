@@ -1,61 +1,16 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
-const imageSets: string[][] = [
-  [
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Abstract Symphony In Painted Passage (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Abstract Visions In Forgotten Atrium (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Amber Skies Over Rolling Meadows (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Arctic Serenity Beneath Silver Sky (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Aurora Over Frozen Wilderness (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Canvas Of Kaleidoscopic Ruins (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Celestial Peaks Over Silent Waters (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Chaos Carved In Colorful Stone (2).jpg"
-  ],
-  [
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Charcoal Wastes Beneath Smoldering Stars (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Charred Forest Beneath Smoky Skies (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Cracked Earth Beneath Sulfuric Skies (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crimson Glow Over Silent Steppe (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crimson Shore Beneath Dying Light (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crystal Peaks Under Lunar Glow (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Cybernetic Glow Beneath Liquid Skies (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Dawn Light Over Pastel Ridge (1).jpg"
-  ],
-  [
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Abstract Symphony In Painted Passage (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Abstract Visions In Forgotten Atrium (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Amber Skies Over Rolling Meadows (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Arctic Serenity Beneath Silver Sky (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Aurora Over Frozen Wilderness (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Canvas Of Kaleidoscopic Ruins (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Celestial Peaks Over Silent Waters (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Chaos Carved In Colorful Stone (4).jpg"
-  ],
-  [
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Charcoal Wastes Beneath Smoldering Stars (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Charred Forest Beneath Smoky Skies (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Cracked Earth Beneath Sulfuric Skies (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crimson Glow Over Silent Steppe (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crimson Shore Beneath Dying Light (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Crystal Peaks Under Lunar Glow (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Cybernetic Glow Beneath Liquid Skies (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picbook/lowRes/Dawn Light Over Pastel Ridge (3).jpg"
-  ]
-];
 import { Link } from "expo-router";
 import React, { useEffect } from "react";
 import { Text, View } from "react-native";
+import imageSets from "@/database/static";
 import Footer from "@/components/Footer";
 import { MaterialIcons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
+import { ScrollingSlotProps } from "@/types/components";
 import { Image, StyleSheet, TouchableOpacity } from "react-native";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence, withDelay } from "react-native-reanimated";
-
-interface ScrollingSlotProps {
-  images: string[];
-  reverse: boolean;
-  delay: number;
-}
-
+// ==================================================================================================
+// ==================================================================================================
 const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay }) => {
   const imageHeight = 144;
   const totalHeight = images.length * imageHeight;
@@ -79,6 +34,8 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
     </View>
   );
 };
+// ==================================================================================================
+// ==================================================================================================
 const AnimatedTitle: React.FC = () => {
   const scale = useSharedValue(0.95);
   useEffect(() => {
@@ -98,6 +55,8 @@ const AnimatedTitle: React.FC = () => {
     </Animated.View>
   );
 };
+// ==================================================================================================
+// ==================================================================================================
 const IndexPage: React.FC = () => {
   return (
     <View style={styles.container}>
@@ -132,7 +91,8 @@ const IndexPage: React.FC = () => {
     </View>
   );
 };
-
+// ==================================================================================================
+// ==================================================================================================
 const styles = StyleSheet.create({
   icon: { marginRight: 8 },
   buttonText: { color: "black", fontSize: 16, fontWeight: "bold" },
@@ -143,5 +103,4 @@ const styles = StyleSheet.create({
   buttonGradient: { flexDirection: "row", alignItems: "center", justifyContent: "center", paddingVertical: 14, paddingHorizontal: 24, borderRadius: 12 },
   buttonContainer: { marginTop: 32, borderRadius: 12, overflow: "hidden", elevation: 4, shadowColor: "#000", shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.25, shadowRadius: 4 }
 });
-
 export default IndexPage;

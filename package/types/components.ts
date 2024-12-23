@@ -48,6 +48,12 @@ type GroupedData = {
   [key: string]: EnvironmentEntry[];
 };
 
+interface ScrollingSlotProps {
+  images: string[];
+  reverse: boolean;
+  delay: number;
+}
+
 export type {
   RGB,
   RGBA,
@@ -59,6 +65,7 @@ export type {
   SubImagesProps,
   CardTextProps,
   CardProps,
+  ScrollingSlotProps,
   AlphabetGroupProps,
   CategoryButtonProps,
   DownloadScreenProps,
