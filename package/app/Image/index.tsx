@@ -32,7 +32,7 @@ const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () =>
         <Ionicons name="checkmark-done-circle" size={50} color="#28a745" /> <Text style={{ fontSize: 24, fontWeight: "bold", marginTop: 10 }}>Success</Text>
         <Text style={{ textAlign: "center", marginVertical: 10 }}>{message}</Text>
         <TouchableOpacity style={{ backgroundColor: HexToRGBA("#007BFF", 1.0), paddingVertical: 10, paddingHorizontal: 20, borderRadius: 5, marginTop: 10 }} onPress={onClose} className="mt-2">
-          <Text style={{ color: "#FFFFFF" }}>OK</Text>
+          <Text style={{ color: HexToRGBA("#FFFFFF", 1.0) }}>OK</Text>
         </TouchableOpacity>
       </Animated.View>
     </View>
@@ -61,7 +61,7 @@ const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => v
         <MaterialIcons name="error" size={50} color="#dc3545" /> <Text style={{ fontSize: 24, fontWeight: "bold", marginTop: 10 }}>Error</Text>
         <Text style={{ textAlign: "center", marginVertical: 10 }}>{message}</Text>
         <TouchableOpacity style={{ backgroundColor: HexToRGBA("#007BFF", 1.0), paddingVertical: 10, paddingHorizontal: 20, borderRadius: 5, marginTop: 10 }} onPress={onClose} className="mt-2">
-          <Text style={{ color: "#FFFFFF" }}>OK</Text>
+          <Text style={{ color: HexToRGBA("#FFFFFF", 1.0) }}>OK</Text>
         </TouchableOpacity>
       </Animated.View>
     </View>
@@ -193,11 +193,11 @@ const DownloadButton: React.FC<{ onDownload?: (event: GestureResponderEvent) => 
   return (
     <TouchableOpacity onPress={onDownload} activeOpacity={0.8} className="m-2 rounded-2xl overflow-hidden" style={{ backgroundColor: HexToRGBA(colors.primary, 0.4) }}>
       <Animated.View className="p-3 flex-row items-center justify-center" style={animatedStyle}>
-        <Text className="text-base font-bold" style={{ fontFamily: "Kurale", color: "#FFFFFF" }}>
+        <Text className="text-base font-bold" style={{ fontFamily: "Kurale", color: HexToRGBA("#FFFFFF", 1.0) }}>
           Download Wallpaper
         </Text>
         <FontAwesome5 name="download" size={15} color="#FFFFFF" className="m-2" />
-        <Text className="text-base font-bold" style={{ fontFamily: "Kurale", color: "#FFFFFF" }}>
+        <Text className="text-base font-bold" style={{ fontFamily: "Kurale", color: HexToRGBA("#FFFFFF", 1.0) }}>
           (Highest Quality)
         </Text>
       </Animated.View>
