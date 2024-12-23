@@ -6,8 +6,8 @@ import imageSets from "@/database/static";
 import Footer from "@/components/Footer";
 import { MaterialIcons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
+import { Image, TouchableOpacity } from "react-native";
 import { ScrollingSlotProps } from "@/types/components";
-import { Image, StyleSheet, TouchableOpacity } from "react-native";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence, withDelay } from "react-native-reanimated";
 // ==================================================================================================
 // ==================================================================================================
@@ -25,10 +25,10 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
     opacity: opacity.value
   }));
   return (
-    <View className="flex-1 overflow-hidden px-1">
+    <View className="flex-1 overflow-hidden px-2">
       <Animated.View style={animatedStyle} className="flex-col">
-        {images.concat(images).map((uri: string, idx: number) => (
-          <Image key={idx} alt="image" source={{ uri }} className="w-full h-36 rounded-lg mb-2" resizeMode="cover" blurRadius={1.2} />
+        {images.concat(images).map((uri, idx) => (
+          <Image key={idx} alt="Scrolling Image" source={{ uri }} className="w-full h-36 rounded-lg mb-2" resizeMode="cover" blurRadius={1.2} />
         ))}
       </Animated.View>
     </View>
@@ -46,12 +46,10 @@ const AnimatedTitle: React.FC = () => {
   }));
   return (
     <Animated.View style={animatedStyle} className="items-center">
-      <View className=" bg-black/60 rounded-full">
-        <Image source={require("@/assets/picbook/white_nobg_1024.png")} alt="logo" className="w-56 h-56 border-white border-2 rounded-full" resizeMode="contain" />
+      <View className="bg-black/60 rounded-full p-2">
+        <Image source={require("@/assets/picbook/white_nobg_1024.png")} alt="logo" className="w-56 h-56 border-2 border-white rounded-full" resizeMode="contain" />
       </View>
-      <Text style={{ fontFamily: "Kurale" }} className="text-8xl font-black text-white tracking-tight">
-        picBook™
-      </Text>
+      <Text className="text-8xl font-black text-white tracking-tight">picBook™</Text>
     </Animated.View>
   );
 };
@@ -59,31 +57,32 @@ const AnimatedTitle: React.FC = () => {
 // ==================================================================================================
 const IndexPage: React.FC = () => {
   return (
-    <View style={styles.container}>
-      <View style={styles.content}>
+    <View className="h-full w-full bg-black">
+      <View className="flex-1 justify-center items-center relative">
         <View className="flex-row h-full overflow-hidden relative">
           {imageSets.map((images, slotIndex) => (
             <ScrollingSlot key={slotIndex} images={images} reverse={slotIndex % 2 === 0} delay={slotIndex * 200} />
           ))}
-          <LinearGradient colors={["#0A0A0A", "transparent", "transparent", "#0A0A0A"]} locations={[0, 0.2, 0.8, 1]} style={styles.gradient} />
-          <View style={styles.overlay}>
-            <View className="absolute justify-center items-center">
-              <AnimatedTitle />
-              <View className="flex-row items-center mt-4 bg-black/50 px-4 py-2 rounded-full">
-                <View className="w-2 h-2 rounded-full bg-white mr-2 animate-pulse" />
-                <Text style={{ fontFamily: "Kurale" }} className="text-sm text-white font-semibold">
-                  Crafted with imagination and stories
-                </Text>
-              </View>
-              <Link href="./Home" asChild>
-                <TouchableOpacity style={styles.buttonContainer}>
-                  <LinearGradient colors={["rgba(255,255,255,0.95)", "rgba(255,255,255,1)"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.buttonGradient}>
-                    <MaterialIcons name="photo-camera" size={24} color="black" style={styles.icon} />
-                    <Text style={{ fontFamily: "Kurale", ...styles.buttonText }}>Start Exploring</Text>
-                  </LinearGradient>
-                </TouchableOpacity>
-              </Link>
+          <LinearGradient colors={["#0A0A0A", "transparent", "transparent", "#0A0A0A"]} locations={[0, 0.2, 0.8, 1]} className="absolute inset-0" />
+          <View className="absolute inset-0 flex items-center justify-center">
+            <AnimatedTitle />
+            <View className="flex-row items-center mt-4 bg-black/50 px-4 py-2 rounded-full">
+              <View className="w-2 h-2 rounded-full bg-white mr-2 animate-pulse" />
+              <Text className="text-sm text-white font-semibold">Crafted with imagination and stories</Text>
             </View>
+            <Link href="./Home" asChild>
+              <TouchableOpacity className="mt-8 rounded-xl overflow-hidden shadow-lg">
+                <LinearGradient
+                  colors={["rgba(255,255,255,0.95)", "rgba(255,255,255,1)"]}
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 1 }}
+                  className="flex-row items-center justify-center px-6 py-4 rounded-lg"
+                >
+                  <MaterialIcons name="photo-camera" size={24} color="black" className="mr-2" />
+                  <Text className="text-lg font-bold text-black">Start Exploring</Text>
+                </LinearGradient>
+              </TouchableOpacity>
+            </Link>
           </View>
         </View>
       </View>
@@ -91,16 +90,4 @@ const IndexPage: React.FC = () => {
     </View>
   );
 };
-// ==================================================================================================
-// ==================================================================================================
-const styles = StyleSheet.create({
-  icon: { marginRight: 8 },
-  buttonText: { color: "black", fontSize: 16, fontWeight: "bold" },
-  gradient: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 },
-  container: { height: "100%", width: "100%", backgroundColor: "#0A0A0A" },
-  content: { flex: 1, width: "100%", justifyContent: "center", alignItems: "center" },
-  overlay: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center", overflow: "hidden" },
-  buttonGradient: { flexDirection: "row", alignItems: "center", justifyContent: "center", paddingVertical: 14, paddingHorizontal: 24, borderRadius: 12 },
-  buttonContainer: { marginTop: 32, borderRadius: 12, overflow: "hidden", elevation: 4, shadowColor: "#000", shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.25, shadowRadius: 4 }
-});
 export default IndexPage;
