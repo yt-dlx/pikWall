@@ -72,7 +72,8 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
     </View>
   );
 };
-
+// ==================================================================================================
+// ==================================================================================================
 const PressToDownload: React.FC<{ onDownload?: (event: GestureResponderEvent) => void; colors: { primary: string; secondary: string; tertiary: string } }> = ({ onDownload, colors }) => {
   const scale = useSharedValue(1);
   useEffect(() => {
@@ -90,7 +91,8 @@ const PressToDownload: React.FC<{ onDownload?: (event: GestureResponderEvent) =>
     </TouchableOpacity>
   );
 };
-
+// ==================================================================================================
+// ==================================================================================================
 const DownloadScreen = () => {
   const params = useLocalSearchParams();
   const rawDataString = params.data as string;
