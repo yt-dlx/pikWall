@@ -278,5 +278,4 @@ const HomePage = (): JSX.Element => {
     </View>
   );
 };
-
 export default HomePage;
