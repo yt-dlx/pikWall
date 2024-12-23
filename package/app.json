@@ -12,6 +12,7 @@
     "icon": "./assets/picbook/white_nobg_3200.png",
     "ios": {
       "supportsTablet": true,
+      "requiresFullScreen": true,
       "bundleIdentifier": "com.shovit.picbook",
       "infoPlist": {
         "NSPhotoLibraryAddUsageDescription": "picBook™: needs permission to save photos to your library.",
@@ -21,6 +22,7 @@
     "web": { "output": "static", "bundler": "metro", "favicon": "./assets/picbook/white_nobg_3200.png" },
     "extra": { "router": { "origin": false }, "eas": { "projectId": "bf8ce3fd-d2bc-4897-ab27-b6b34c9a428f" } },
     "android": {
+      "requiresFullScreen": true,
       "package": "com.shovit.picbook",
       "permissions": ["READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"],
       "adaptiveIcon": { "backgroundColor": "#0A0A0A", "foregroundImage": "./assets/picbook/white_nobg_3200.png" }
