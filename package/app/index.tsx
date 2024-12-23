@@ -63,13 +63,13 @@ const IndexPage: React.FC = () => {
           <View className="absolute inset-0 flex items-center justify-center">
             <AnimatedTitle />
             <Text className="text-8xl font-black text-white tracking-tight">picBook™</Text>
-            <View className="flex-row items-center mt-4 bg-black/50 px-4 py-2 rounded-full">
+            <View className="flex-row items-center mt-4 bg-black px-4 py-2 rounded-full">
               <View className="w-2 h-2 rounded-full bg-white mr-2 animate-pulse" />
               <Text className="text-sm text-white font-semibold">Crafted with imagination and stories</Text>
             </View>
             <Link href="./Home" asChild>
               <TouchableOpacity className="mt-8 rounded-xl overflow-hidden shadow-lg">
-                <LinearGradient colors={["rgba(255,255,255,0.95)", "rgba(255,255,255,1)"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} className="flex-row items-center justify-center px-6 py-4 rounded-lg">
+                <LinearGradient colors={["rgba(255,255,255,0.95)", "rgba(255,255,255,1)"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={{ borderRadius: 40 }} className="flex-row items-center justify-center px-14 py-4">
                   <MaterialIcons name="photo-camera" size={24} color={HexToRGBA("#0A0A0A", 1.0)} className="mr-2" />
                   <Text className="text-lg font-bold text-black">Start Exploring</Text>
                 </LinearGradient>
