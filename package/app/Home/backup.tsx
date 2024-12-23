@@ -27,7 +27,7 @@ const SubImage: React.FC<SubImageProps> = memo(({ image, index, currentColors, o
     }}
     asChild
   >
-    <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="m-0.5 flex-1">
+    <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="m-1 flex-1">
       <View className="relative">
         <Image
           style={{ borderColor: currentColors[index % currentColors.length], borderWidth: 0.5, height: 40, width: "100%" }}
@@ -46,7 +46,7 @@ SubImage.displayName = "SubImage";
 // ==============================================(picBook™)==============================================
 // ==============================================(picBook™)==============================================
 const SubImages: React.FC<SubImagesProps> = memo(({ images, currentColors, onImagePress }) => (
-  <View className="flex flex-col justify-start p-1 space-y-1">
+  <View className="flex flex-col justify-start p-2 space-y-2">
     {images.data.slice(0, 4).map((image, index) => (
       <SubImage key={index} image={image} index={index} currentColors={currentColors} onImagePress={onImagePress} environmentData={images} />
     ))}
@@ -58,9 +58,9 @@ SubImages.displayName = "SubImages";
 const CardText: React.FC<CardTextProps> = memo(({ data, currentIndex }) => {
   const colors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
   return (
-    <View style={{ padding: 1, margin: 4, borderRadius: 12 }}>
-      <Text style={{ fontFamily: "Kurale", color: colors[0], fontSize: 20, fontWeight: "bold" }}>Environment:</Text>
-      <Text style={{ fontFamily: "Kurale", color: colors[0], fontSize: 12 }}>{data.environment_prompt}</Text>
+    <View style={{ padding: 2, margin: 8, borderRadius: 12 }}>
+      <Text style={{ fontFamily: "Kurale", color: colors[0], fontSize: 15, fontWeight: "bold" }}>Environment:</Text>
+      <Text style={{ fontFamily: "Kurale", color: "#FFFFFF", fontSize: 12 }}>{data.environment_prompt}</Text>
     </View>
   );
 });
@@ -111,7 +111,10 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
         </TouchableOpacity>
       </Link>
       <View className="flex flex-row p-2">
-        <View style={{ width: "50%" }}>
+        <View style={{ width: "50%" }} className="pr-2">
+          <CardText data={data} currentIndex={currentIndex} />
+        </View>
+        <View style={{ width: "50%" }} className="pl-2">
           <SubImages
             currentColors={currentColors}
             onImagePress={handleSubImagePress}
@@ -123,9 +126,6 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
               environment_prompt: data.environment_prompt
             }}
           />
-        </View>
-        <View style={{ width: "50%" }}>
-          <CardText data={data} currentIndex={currentIndex} />
         </View>
       </View>
       <View style={{ backgroundColor: currentColors[0], borderTopWidth: 1, alignItems: "center", justifyContent: "center", borderTopColor: currentColors[0] }}>
@@ -155,7 +155,7 @@ const AlphabetGroup: React.FC<AlphabetGroupProps> = memo(({ title, items }) => {
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {items.map((item, index) => (
-          <View key={index} className="mx-1" style={{ width: 300 }}>
+          <View key={index} className="mx-2" style={{ width: 300 }}>
             <Card data={item} />
           </View>
         ))}
