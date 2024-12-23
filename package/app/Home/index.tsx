@@ -85,8 +85,9 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
     const interval = setInterval(updateNextImage, 4000);
     return () => clearInterval(interval);
   }, [updateNextImage]);
+
   return (
-    <View style={{ backgroundColor: HexToRGBA(currentColors[0], 0.2), borderColor: currentColors[0], borderWidth: 0.5 }} className="rounded-3xl overflow-hidden">
+    <View style={{ backgroundColor: HexToRGBA(currentColors[0], 0.2), borderColor: currentColors[0], borderWidth: 1 }} className="rounded-3xl overflow-hidden">
       <Link
         href={{
           pathname: "./Image",
@@ -103,10 +104,10 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
         asChild
       >
         <TouchableOpacity>
-          <View style={{ position: "relative", height: 192, width: "100%" }}>
+          <View style={{ position: "relative", height: 300, width: "100%" }}>
             <Image style={{ width: "100%", height: "100%" }} className="rounded-t-3xl" source={{ uri: currentImage }} alt={data.environment_title} />
             <View style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0, 0, 0, 0.2)" }}>
-              <Text style={{ fontFamily: "Kurale", color: "white", fontSize: 30, fontWeight: "bold", textAlign: "center", paddingHorizontal: 15 }}> {data.environment_title} </Text>
+              <Text style={{ fontFamily: "Kurale", color: "white", fontSize: 30, fontWeight: "bold", textAlign: "center", paddingHorizontal: 15 }}>{data.environment_title || ""}</Text>
             </View>
           </View>
         </TouchableOpacity>
@@ -145,7 +146,7 @@ const AlphabetGroup: React.FC<AlphabetGroupProps> = memo(({ title, items }) => {
   }, [bounce]);
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ translateY: bounce.value }] }));
   return (
-    <View className="m-2 bg-[#161616] rounded-3xl">
+    <View className="bg-[#1b1b1b] m-1 p-1 rounded-l-3xl">
       <View className="flex-row m-4">
         <Animated.View style={animatedStyle}>
           <FontAwesome5 name="layer-group" size={28} color="white" className="mr-2" />

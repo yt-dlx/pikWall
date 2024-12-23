@@ -19,14 +19,14 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
   const opacity = useSharedValue(0);
   useEffect(() => {
     opacity.value = withDelay(delay, withTiming(1, { duration: 1000 }));
-    scrollValue.value = withDelay(delay, withRepeat(withTiming(totalHeight, { duration: 15000 }), -1, reverse));
+    scrollValue.value = withDelay(delay, withRepeat(withTiming(totalHeight, { duration: 5000 }), -1, reverse));
   }, [scrollValue, totalHeight, reverse, delay, opacity]);
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ translateY: -scrollValue.value % totalHeight }], opacity: opacity.value }));
   return (
-    <View className="flex-1 overflow-hidden px-2">
+    <View className="flex-1 overflow-hidden px-1">
       <Animated.View style={animatedStyle} className="flex-col">
         {images.concat(images).map((uri, idx) => (
-          <Image key={idx} alt="Scrolling Image" source={{ uri }} className="w-full h-36 rounded-lg mb-2" resizeMode="cover" blurRadius={1.2} />
+          <Image key={idx} alt="Scrolling Image" source={{ uri }} className="w-full h-44 rounded-lg mb-2" resizeMode="cover" blurRadius={1.2} />
         ))}
       </Animated.View>
     </View>
