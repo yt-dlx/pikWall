@@ -37,7 +37,7 @@ const SubImage: React.FC<SubImageProps> = memo(({ image, index, onImagePress, en
           alt={`Sub Image ${index + 1}`}
         />
         <Text style={{ color: "#FFFFFF", fontFamily: "Kurale", backgroundColor: HexToRGBA(image.primary, 0.8) }} className="absolute top-1 left-1 px-1 rounded-lg text-sm">
-          Image ({index}): {image.primary}
+          ({index}): {image.primary}
         </Text>
       </View>
     </TouchableOpacity>
