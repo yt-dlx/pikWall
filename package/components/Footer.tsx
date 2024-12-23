@@ -1,5 +1,6 @@
-import { FontAwesome } from "@expo/vector-icons";
+// components/Footer.tsx
 import { Text, View } from "react-native";
+import { FontAwesome } from "@expo/vector-icons";
 
 const Footer: React.FC = () => (
   <View style={{ backgroundColor: "#0A0A0A" }} className="relative w-full py-4">

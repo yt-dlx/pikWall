@@ -1,3 +1,4 @@
+// components/DownloadAndSaveImage.tsx
 import * as FileSystem from "expo-file-system";
 import React, { useState, useEffect } from "react";
 import * as MediaLibrary from "expo-media-library";
@@ -33,7 +34,6 @@ const AlertModal = ({ visible, title, message, iconName, onClose }: { visible: b
     </>
   ) : null;
 };
-
 const DownloadAndSaveImage: React.FC<{ url: string }> = ({ url }) => {
   const [isDownloading, setIsDownloading] = useState(false);
   const [alertVisible, setAlertVisible] = useState(false);
@@ -48,9 +48,7 @@ const DownloadAndSaveImage: React.FC<{ url: string }> = ({ url }) => {
     setAlertVisible(true);
   };
   const hideAlert = () => setAlertVisible(false);
-  const progressBarStyle = useAnimatedStyle(() => ({
-    width: `${animatedProgress.value * 100}%`
-  }));
+  const progressBarStyle = useAnimatedStyle(() => ({ width: `${animatedProgress.value * 100}%` }));
   const downloadAndSaveImage = async () => {
     try {
       const { status } = await MediaLibrary.requestPermissionsAsync();
@@ -60,7 +58,6 @@ const DownloadAndSaveImage: React.FC<{ url: string }> = ({ url }) => {
       }
       setIsDownloading(true);
       animatedProgress.value = 0;
-
       const fileUri = FileSystem.documentDirectory + "downloaded_image.jpg";
       const downloadResumable = FileSystem.createDownloadResumable(url, fileUri, {}, (downloadProgressEvent) => {
         const progress = downloadProgressEvent.totalBytesWritten / downloadProgressEvent.totalBytesExpectedToWrite;
@@ -106,5 +103,4 @@ const DownloadAndSaveImage: React.FC<{ url: string }> = ({ url }) => {
     </View>
   );
 };
-
 export default DownloadAndSaveImage;
