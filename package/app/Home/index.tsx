@@ -3,6 +3,7 @@ import { Link } from "expo-router";
 import database from "@/database";
 import Footer from "@/components/Footer";
 import { EnvironmentEntry } from "@/types/database";
+import HexToRGBA from "@/components/HexToRGBA";
 import HeaderAnimate from "@/components/HeaderAnimated";
 import React, { useEffect, useCallback, useState, memo } from "react";
 import { FontAwesome, Ionicons, FontAwesome5 } from "@expo/vector-icons";
@@ -11,7 +12,7 @@ import Animated, { useAnimatedStyle, useSharedValue, withTiming, withRepeat, wit
 import { SubImageProps, SubImagesProps, CardTextProps, CardProps, AlphabetGroupProps, CategoryButtonProps, GroupedData } from "@/types/components";
 // ==============================================(picBook™)==============================================
 // ==============================================(picBook™)==============================================
-const SubImage: React.FC<SubImageProps> = memo(({ image, index, currentColors, onImagePress, environmentData }) => (
+const SubImage: React.FC<SubImageProps> = memo(({ image, index, onImagePress, environmentData }) => (
   <Link
     href={{
       pathname: "./Image",
@@ -30,13 +31,13 @@ const SubImage: React.FC<SubImageProps> = memo(({ image, index, currentColors, o
     <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="m-0.5 flex-1">
       <View className="relative">
         <Image
-          style={{ borderColor: currentColors[index % currentColors.length], borderWidth: 0.5, height: 40, width: "100%" }}
+          style={{ borderColor: image.primary, borderWidth: 0.5, width: "100%", height: 40 }}
           className="rounded-lg shadow-2xl shadow-black"
           source={{ uri: image.previewLink }}
           alt={`Sub Image ${index + 1}`}
         />
-        <Text style={{ fontFamily: "Kurale", color: "#FFFFFF", backgroundColor: currentColors[index % currentColors.length] }} className="absolute top-1 left-1 px-1 rounded text-xs">
-          {currentColors[index % currentColors.length]}
+        <Text style={{ color: "#FFFFFF", fontFamily: "Kurale", backgroundColor: HexToRGBA(image.primary, 0.8) }} className="absolute top-1 left-1 px-1 rounded-lg text-sm">
+          Image ({index}): {image.primary}
         </Text>
       </View>
     </TouchableOpacity>
@@ -45,10 +46,10 @@ const SubImage: React.FC<SubImageProps> = memo(({ image, index, currentColors, o
 SubImage.displayName = "SubImage";
 // ==============================================(picBook™)==============================================
 // ==============================================(picBook™)==============================================
-const SubImages: React.FC<SubImagesProps> = memo(({ images, currentColors, onImagePress }) => (
+const SubImages: React.FC<SubImagesProps> = memo(({ images, onImagePress }) => (
   <View className="flex flex-col justify-start p-1 space-y-1">
     {images.data.slice(0, 4).map((image, index) => (
-      <SubImage key={index} image={image} index={index} currentColors={currentColors} onImagePress={onImagePress} environmentData={images} />
+      <SubImage key={index} image={image} index={index} onImagePress={onImagePress} environmentData={images} />
     ))}
   </View>
 ));
@@ -85,7 +86,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
     return () => clearInterval(interval);
   }, [updateNextImage]);
   return (
-    <View style={{ backgroundColor: `${currentColors[0]}20`, borderColor: currentColors[0], borderWidth: 0.5 }} className="rounded-3xl overflow-hidden">
+    <View style={{ backgroundColor: HexToRGBA(currentColors[0], 0.2), borderColor: currentColors[0], borderWidth: 0.5 }} className="rounded-3xl overflow-hidden">
       <Link
         href={{
           pathname: "./Image",

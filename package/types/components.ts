@@ -8,7 +8,6 @@ type ColorValue = RGB | RGBA | HEX | string;
 interface SubImageProps {
   image: ImageMetadata;
   index: number;
-  currentColors: ColorValue[];
   onImagePress: (previewLink: string, index: number) => void;
   environmentData: DownloadScreenProps;
 }
