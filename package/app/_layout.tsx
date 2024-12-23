@@ -5,6 +5,7 @@ import React from "react";
 import { Stack } from "expo-router";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
+import HexToRGBA from "@/components/HexToRGBA";
 import { SafeAreaView, StatusBar, View } from "react-native";
 // ==============================================(picBook™)==============================================
 // ==============================================(picBook™)==============================================
@@ -16,9 +17,9 @@ export default function RootLayout() {
   }, [loaded, error]);
   if (!loaded && !error) return null;
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#0A0A0A" }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: HexToRGBA("#0A0A0A", 1.0) }}>
       <StatusBar backgroundColor="#0A0A0A" barStyle="light-content" />
-      <View style={{ flex: 1, backgroundColor: "#0A0A0A" }} className="capitalize">
+      <View style={{ flex: 1, backgroundColor: HexToRGBA("#0A0A0A", 1.0) }} className="capitalize">
         <Stack screenOptions={{ headerShown: false }} />
       </View>
     </SafeAreaView>

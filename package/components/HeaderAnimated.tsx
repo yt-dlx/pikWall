@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 import React, { useEffect } from "react";
 import imageSets from "@/database/static";
+import HexToRGBA from "./HexToRGBA";
 import { Text, View, Image } from "react-native";
 import { ScrollingSlotProps } from "@/types/components";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence, withDelay } from "react-native-reanimated";
@@ -54,7 +55,7 @@ const HeaderAnimated: React.FC = () => {
           <ScrollingSlot key={slotIndex} images={images} reverse={slotIndex % 2 === 0} delay={slotIndex * 200} />
         ))}
         <View className="absolute inset-0 items-center justify-center rounded-[8px] overflow-hidden">
-          <View className="absolute inset-0" style={{ backgroundColor: "#0A0A0A", opacity: 0.5, borderRadius: 8 }} />
+          <View className="absolute inset-0" style={{ backgroundColor: HexToRGBA("#0A0A0A", 1.0), opacity: 0.5, borderRadius: 8 }} />
           <View className="absolute justify-center items-center m-2 p-1">
             <View className="flex-row mb-1">
               <AnimatedTitle />

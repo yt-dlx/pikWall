@@ -27,12 +27,12 @@ const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () =>
   const modalStyle = useAnimatedStyle(() => ({ opacity: modalOpacity.value, transform: [{ scale: modalScale.value }] }));
   return visible ? (
     <View className="absolute inset-0 justify-center items-center">
-      <Animated.View style={[{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "rgba(0, 0, 0, 0.5)" }, backdropStyle]} />
-      <Animated.View style={[{ backgroundColor: "white", borderRadius: 10, padding: 20, justifyContent: "center", alignItems: "center", width: "80%" }, modalStyle]} className="shadow-lg">
+      <Animated.View style={[{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: HexToRGBA("#0A0A0A", 0.5) }, backdropStyle]} />
+      <Animated.View style={[{ backgroundColor: HexToRGBA("#FFFFFF", 1.0), borderRadius: 10, padding: 20, justifyContent: "center", alignItems: "center", width: "80%" }, modalStyle]} className="shadow-lg">
         <Ionicons name="checkmark-done-circle" size={50} color="#28a745" /> <Text style={{ fontSize: 24, fontWeight: "bold", marginTop: 10 }}>Success</Text>
         <Text style={{ textAlign: "center", marginVertical: 10 }}>{message}</Text>
-        <TouchableOpacity style={{ backgroundColor: "#007BFF", paddingVertical: 10, paddingHorizontal: 20, borderRadius: 5, marginTop: 10 }} onPress={onClose} className="mt-2">
-          <Text style={{ color: "white" }}>OK</Text>
+        <TouchableOpacity style={{ backgroundColor: HexToRGBA("#007BFF", 1.0), paddingVertical: 10, paddingHorizontal: 20, borderRadius: 5, marginTop: 10 }} onPress={onClose} className="mt-2">
+          <Text style={{ color: "#FFFFFF" }}>OK</Text>
         </TouchableOpacity>
       </Animated.View>
     </View>
@@ -57,11 +57,11 @@ const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => v
   return visible ? (
     <View className="absolute inset-0 justify-center items-center">
       <Animated.View style={[{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "rgba(0, 0, 0, 0.5)" }, backdropStyle]} />
-      <Animated.View style={[{ backgroundColor: "white", borderRadius: 10, padding: 20, justifyContent: "center", alignItems: "center", width: "80%" }, modalStyle]} className="shadow-lg">
+      <Animated.View style={[{ backgroundColor: HexToRGBA("#FFFFFF", 1.0), borderRadius: 10, padding: 20, justifyContent: "center", alignItems: "center", width: "80%" }, modalStyle]} className="shadow-lg">
         <MaterialIcons name="error" size={50} color="#dc3545" /> <Text style={{ fontSize: 24, fontWeight: "bold", marginTop: 10 }}>Error</Text>
         <Text style={{ textAlign: "center", marginVertical: 10 }}>{message}</Text>
-        <TouchableOpacity style={{ backgroundColor: "#007BFF", paddingVertical: 10, paddingHorizontal: 20, borderRadius: 5, marginTop: 10 }} onPress={onClose} className="mt-2">
-          <Text style={{ color: "white" }}>OK</Text>
+        <TouchableOpacity style={{ backgroundColor: HexToRGBA("#007BFF", 1.0), paddingVertical: 10, paddingHorizontal: 20, borderRadius: 5, marginTop: 10 }} onPress={onClose} className="mt-2">
+          <Text style={{ color: "#FFFFFF" }}>OK</Text>
         </TouchableOpacity>
       </Animated.View>
     </View>
@@ -103,8 +103,8 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
         <Text className="mt-2 text-base" style={{ color: primaryColor }}>
           {percentage.toFixed(2)}%
         </Text>
-        <View style={{ width: "80%", height: 10, backgroundColor: "#e0e0e0", borderRadius: 5, overflow: "hidden", marginTop: 10 }}>
-          <Animated.View style={[{ height: "100%", backgroundColor: primaryColor }, progressBarStyle]} />
+        <View style={{ width: "80%", height: 10, borderRadius: 5, overflow: "hidden", marginTop: 10 }}>
+          <Animated.View style={[{ height: "100%", backgroundColor: HexToRGBA(primaryColor, 1.0) }, progressBarStyle]} />
         </View>
         <View className="flex-row mt-4">
           <View className="flex-1 items-center">
@@ -131,10 +131,7 @@ const PreviewImage: React.FC<{ selectedImage: any; screenWidth: number; onViewFu
   const scaleValue = useRef(new Animated.Value(1.1)).current;
   const rotateValue = useRef(new Animated.Value(0)).current;
   useEffect(() => {
-    const scaleAnimation = Animated.sequence([
-      Animated.timing(scaleValue, { toValue: 1.4, duration: 4000, easing: Easing.inOut(Easing.ease), useNativeDriver: true }),
-      Animated.timing(scaleValue, { toValue: 1.1, duration: 2000, easing: Easing.inOut(Easing.ease), useNativeDriver: true })
-    ]);
+    const scaleAnimation = Animated.sequence([Animated.timing(scaleValue, { toValue: 1.4, duration: 4000, easing: Easing.inOut(Easing.ease), useNativeDriver: true }), Animated.timing(scaleValue, { toValue: 1.1, duration: 2000, easing: Easing.inOut(Easing.ease), useNativeDriver: true })]);
     Animated.loop(scaleAnimation).start();
     Animated.loop(Animated.timing(rotateValue, { toValue: 1, duration: 4000, easing: Easing.linear, useNativeDriver: true })).start();
   }, [scaleValue, rotateValue]);
@@ -146,7 +143,7 @@ const PreviewImage: React.FC<{ selectedImage: any; screenWidth: number; onViewFu
         {!imageLoading && (
           <>
             <Animated.View className="rounded-full justify-center items-center transform" style={{ transform: [{ rotate: rotateInterpolate }] }}>
-              <Image className="w-10 h-10 rounded-full" style={{ backgroundColor: selectedImage.primary }} source={require("@/assets/picbook/white_nobg_1024.png")} resizeMode="contain" />
+              <Image className="w-10 h-10 rounded-full" style={{ backgroundColor: HexToRGBA(selectedImage.primary, 1.0) }} source={require("@/assets/picbook/white_nobg_1024.png")} resizeMode="contain" />
             </Animated.View>
             <Text className="text-center mb-6 leading-6" style={{ fontFamily: "Kurale", color: selectedImage.primary }}>
               picBook™
@@ -177,12 +174,7 @@ const PreviewImage: React.FC<{ selectedImage: any; screenWidth: number; onViewFu
           }}
         />
       </View>
-      <TouchableOpacity
-        onPress={onViewFullScreen}
-        activeOpacity={0.8}
-        className="absolute bottom-5 right-5 py-2 px-4 rounded-full z-50"
-        style={{ backgroundColor: HexToRGBA(selectedImage.primary, 0.8) }}
-      >
+      <TouchableOpacity onPress={onViewFullScreen} activeOpacity={0.8} className="absolute bottom-5 right-5 py-2 px-4 rounded-full z-50" style={{ backgroundColor: HexToRGBA(selectedImage.primary, 0.8) }}>
         <Text className="text-white text-base" style={{ fontFamily: "Kurale" }}>
           View FullScreen
         </Text>
@@ -199,11 +191,14 @@ const DownloadButton: React.FC<{ onDownload?: (event: GestureResponderEvent) => 
   }, [scale]);
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
   return (
-    <TouchableOpacity onPress={onDownload} activeOpacity={0.8} className="m-2 rounded-2xl overflow-hidden" style={{ backgroundColor: `${colors.primary}30` }}>
+    <TouchableOpacity onPress={onDownload} activeOpacity={0.8} className="m-2 rounded-2xl overflow-hidden" style={{ backgroundColor: HexToRGBA(colors.primary, 0.4) }}>
       <Animated.View className="p-3 flex-row items-center justify-center" style={animatedStyle}>
-        <FontAwesome5 name="download" size={15} color={colors.primary} className="mr-2" />
-        <Text className="text-base" style={{ fontFamily: "Kurale", color: colors.primary }}>
-          Press To Download
+        <Text className="text-base font-bold" style={{ fontFamily: "Kurale", color: "#FFFFFF" }}>
+          Download Wallpaper
+        </Text>
+        <FontAwesome5 name="download" size={15} color="#FFFFFF" className="m-2" />
+        <Text className="text-base font-bold" style={{ fontFamily: "Kurale", color: "#FFFFFF" }}>
+          (Highest Quality)
         </Text>
       </Animated.View>
     </TouchableOpacity>
@@ -300,7 +295,7 @@ const DownloadScreen = () => {
               </Text>
             </View>
           ))}
-          <View className="p-2 m-2 bg-opacity-20 rounded-2xl" style={{ backgroundColor: `${selectedImage.primary}20` }}>
+          <View className="p-2 m-2 bg-opacity-20 rounded-2xl" style={{ backgroundColor: HexToRGBA(selectedImage.primary, 0.2) }}>
             <Text className="ml-2 text-lg" style={{ fontFamily: "Kurale", color: selectedImage.primary }}>
               Environment:
             </Text>

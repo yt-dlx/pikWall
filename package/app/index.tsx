@@ -68,12 +68,7 @@ const IndexPage: React.FC = () => {
             </View>
             <Link href="./Home" asChild>
               <TouchableOpacity className="mt-8 rounded-xl overflow-hidden shadow-lg">
-                <LinearGradient
-                  colors={["rgba(255,255,255,0.95)", "rgba(255,255,255,1)"]}
-                  start={{ x: 0, y: 0 }}
-                  end={{ x: 1, y: 1 }}
-                  className="flex-row items-center justify-center px-6 py-4 rounded-lg"
-                >
+                <LinearGradient colors={["rgba(255,255,255,0.95)", "rgba(255,255,255,1)"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} className="flex-row items-center justify-center px-6 py-4 rounded-lg">
                   <MaterialIcons name="photo-camera" size={24} color="black" className="mr-2" />
                   <Text className="text-lg font-bold text-black">Start Exploring</Text>
                 </LinearGradient>

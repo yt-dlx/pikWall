@@ -30,12 +30,7 @@ const SubImage: React.FC<SubImageProps> = memo(({ image, index, onImagePress, en
   >
     <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="m-0.5 flex-1">
       <View className="relative">
-        <Image
-          style={{ borderColor: image.primary, borderWidth: 0.5, width: "100%", height: 40 }}
-          className="rounded-lg shadow-2xl shadow-black"
-          source={{ uri: image.previewLink }}
-          alt={`Sub Image ${index + 1}`}
-        />
+        <Image style={{ borderColor: image.primary, borderWidth: 0.5, width: "100%", height: 40 }} className="rounded-lg shadow-2xl shadow-black" source={{ uri: image.previewLink }} alt={`Sub Image ${index + 1}`} />
         <Text style={{ color: "#FFFFFF", fontFamily: "Kurale", backgroundColor: HexToRGBA(image.primary, 0.8) }} className="absolute top-1 left-1 px-1 rounded-lg text-sm">
           ({index}): {image.primary}
         </Text>
@@ -106,7 +101,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
         <TouchableOpacity>
           <View style={{ position: "relative", height: 300, width: "100%" }}>
             <Image style={{ width: "100%", height: "100%" }} className="rounded-t-3xl" source={{ uri: currentImage }} alt={data.environment_title} />
-            <View style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0, 0, 0, 0.2)" }}>
+            <View style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center" }}>
               <Text style={{ fontFamily: "Kurale", color: "white", fontSize: 30, fontWeight: "bold", textAlign: "center", paddingHorizontal: 15 }}>{data.environment_title || ""}</Text>
             </View>
           </View>
@@ -130,7 +125,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
           <CardText data={data} currentIndex={currentIndex} />
         </View>
       </View>
-      <View style={{ backgroundColor: currentColors[0], borderTopWidth: 1, alignItems: "center", justifyContent: "center", borderTopColor: currentColors[0] }}>
+      <View style={{ backgroundColor: HexToRGBA(currentColors[0], 1.0), borderTopWidth: 1, alignItems: "center", justifyContent: "center", borderTopColor: currentColors[0] }}>
         <Text style={{ fontFamily: "Kurale", color: "black", fontSize: 16, lineHeight: 20 }}>picBook™</Text>
       </View>
     </View>
@@ -235,9 +230,7 @@ const HomePage = (): JSX.Element => {
   }, []);
   const filteredGroups = searchQuery
     ? Object.entries(groupedData).reduce((acc, [letter, items]) => {
-        const filteredItems = items.filter(
-          (item) => item.environment_title.toLowerCase().includes(searchQuery.toLowerCase()) || item.environment_moral.toLowerCase().includes(searchQuery.toLowerCase())
-        );
+        const filteredItems = items.filter((item) => item.environment_title.toLowerCase().includes(searchQuery.toLowerCase()) || item.environment_moral.toLowerCase().includes(searchQuery.toLowerCase()));
         if (filteredItems.length > 0) acc[letter] = filteredItems;
         return acc;
       }, {} as { [key: string]: EnvironmentEntry[] })
@@ -246,7 +239,7 @@ const HomePage = (): JSX.Element => {
   const getItemLayout = useCallback((_: unknown, index: number) => ({ length: 400, offset: 400 * index, index }), []);
   const keyExtractor = useCallback((item: [string, EnvironmentEntry[]]) => item[0], []);
   return (
-    <View style={{ backgroundColor: "#0A0A0A" }} className="flex-1">
+    <View style={{ backgroundColor: HexToRGBA("#0A0A0A", 1.0) }} className="flex-1">
       <FlatList
         windowSize={3}
         initialNumToRender={3}
