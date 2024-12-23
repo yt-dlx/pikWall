@@ -40,9 +40,9 @@ const HeaderAnimated: React.FC = () => {
     return (
       <Animated.View style={animatedStyle} className="items-center">
         <View className="bg-black/60 rounded-full p-1">
-          <Image source={require("@/assets/picbook/white_nobg_1024.png")} alt="logo" className="w-12 h-12 border-2 rounded-full" style={{ borderColor: "white" }} resizeMode="contain" />
+          <Image source={require("@/assets/picbook/white_nobg_1024.png")} alt="logo" className="w-12 h-12 border-2 rounded-full" style={{ borderColor: HexToRGBA("#FFFFFF", 1.0) }} resizeMode="contain" />
         </View>
-        <Text style={{ fontFamily: "Kurale", fontSize: 32, fontWeight: "bold", color: "white" }} className="tracking-tight">
+        <Text style={{ fontFamily: "Kurale", fontSize: 32, fontWeight: "bold", color: HexToRGBA("#FFFFFF", 1.0) }} className="tracking-tight">
           picBook™
         </Text>
       </Animated.View>
@@ -62,7 +62,7 @@ const HeaderAnimated: React.FC = () => {
             </View>
             <View className="flex-row items-center mt-2 bg-black/30 px-2 py-1 rounded-full">
               <View className="w-1.5 h-1.5 rounded-full bg-white mr-1 animate-pulse" />
-              <Text style={{ fontFamily: "Kurale", fontSize: 12, fontWeight: "600", color: "white" }}> Crafted with imagination and stories </Text>
+              <Text style={{ fontFamily: "Kurale", fontSize: 12, fontWeight: "600", color: HexToRGBA("#FFFFFF", 1.0) }}> Crafted with imagination and stories </Text>
             </View>
             <Text style={{ fontFamily: "Kurale", fontSize: 14, color: "#D1D5DB", textAlign: "center", lineHeight: 20, fontWeight: "500" }} className="mt-2">
               Dive into tales inspired by unique images and discover the art of visual environment telling.

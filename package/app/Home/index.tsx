@@ -102,7 +102,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
           <View style={{ position: "relative", height: 300, width: "100%" }}>
             <Image style={{ width: "100%", height: "100%" }} className="rounded-t-3xl" source={{ uri: currentImage }} alt={data.environment_title} />
             <View style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center" }}>
-              <Text style={{ fontFamily: "Kurale", color: "white", fontSize: 30, fontWeight: "bold", textAlign: "center", paddingHorizontal: 15 }}>{data.environment_title || ""}</Text>
+              <Text style={{ fontFamily: "Kurale", color: HexToRGBA("#FFFFFF", 1.0), fontSize: 30, fontWeight: "bold", textAlign: "center", paddingHorizontal: 15 }}>{data.environment_title || ""}</Text>
             </View>
           </View>
         </TouchableOpacity>
@@ -125,7 +125,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
           <CardText data={data} currentIndex={currentIndex} />
         </View>
       </View>
-      <View style={{ backgroundColor: HexToRGBA(currentColors[0], 1.0), borderTopWidth: 1, alignItems: "center", justifyContent: "center", borderTopColor: currentColors[0] }}>
+      <View style={{ backgroundColor: HexToRGBA(currentColors[0], 1.0), borderTopWidth: 1, alignItems: "center", justifyContent: "center", borderTopColor: HexToRGBA(currentColors[0], 1.0) }}>
         <Text style={{ fontFamily: "Kurale", color: HexToRGBA("#0A0A0A", 1.0), fontSize: 16, lineHeight: 20 }}>picBook™</Text>
       </View>
     </View>
