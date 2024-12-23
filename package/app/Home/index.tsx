@@ -144,7 +144,7 @@ const AlphabetGroup: React.FC<AlphabetGroupProps> = memo(({ title, items }) => {
     <View className="bg-[#1b1b1b] m-1 p-1 rounded-l-3xl">
       <View className="flex-row m-4">
         <Animated.View style={animatedStyle}>
-          <FontAwesome5 name="layer-group" size={28} color="white" className="mr-2" />
+          <FontAwesome5 name="layer-group" size={28} color={HexToRGBA("FFFFFF", 1.0)} className="mr-2" />
         </Animated.View>
         <Text className="text-2xl font-bold text-center text-white" style={{ fontFamily: "Kurale" }}>
           Sub-Category - &quot;{title}&quot;
@@ -178,11 +178,11 @@ const HeaderComponent: React.FC = memo(() => (
     <HeaderAnimate />
     <View className="p-4">
       <View className="flex-row items-center justify-center">
-        <FontAwesome name="wpexplorer" size={28} color="white" className="mr-2" />
+        <FontAwesome name="wpexplorer" size={28} color={HexToRGBA("FFFFFF", 1.0)} className="mr-2" />
         <Text style={{ fontFamily: "Kurale" }} className="text-3xl font-bold text-gray-100">
           Explore Our Collection
         </Text>
-        <Ionicons name="images-outline" size={28} color="white" className="ml-2" />
+        <Ionicons name="images-outline" size={28} color={HexToRGBA("FFFFFF", 1.0)} className="ml-2" />
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} className="mt-4 mb-6">
         {["Anime XL", "Realistic XL", "Cartoon 3D", "Black & White", "Abstract"].map((category, index) => (
