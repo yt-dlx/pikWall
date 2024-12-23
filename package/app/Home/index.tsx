@@ -7,7 +7,7 @@ import HeaderAnimate from "@/components/HeaderAnimate";
 import React, { useEffect, useCallback, useState, memo } from "react";
 import { FontAwesome, Ionicons, FontAwesome5 } from "@expo/vector-icons";
 import { View, Text, TouchableOpacity, Image, FlatList, ScrollView, ListRenderItem } from "react-native";
-import Animated, { useAnimatedStyle, useSharedValue, withTiming, Easing, runOnJS, withRepeat, withSequence } from "react-native-reanimated";
+import Animated, { useAnimatedStyle, useSharedValue, withTiming, withRepeat, withSequence } from "react-native-reanimated";
 import { SubImageProps, SubImagesProps, CardTextProps, CardProps, AlphabetGroupProps, CategoryButtonProps, GroupedData } from "@/types/components";
 // ==================================================================================================
 // ==================================================================================================
@@ -27,15 +27,15 @@ const SubImage: React.FC<SubImageProps> = memo(({ image, index, currentColors, o
     }}
     asChild
   >
-    <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="m-1">
+    <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="m-1 flex-1">
       <View className="relative">
         <Image
-          style={{ borderColor: currentColors[index % currentColors.length] + "80", borderWidth: 1, height: 40, width: 120 }}
-          className="mx-auto rounded-lg shadow-2xl shadow-black"
+          style={{ borderColor: currentColors[index % currentColors.length], borderWidth: 0.5, height: 40, width: "100%" }}
+          className="rounded-lg shadow-2xl shadow-black"
           source={{ uri: image.previewLink }}
           alt={`Sub Image ${index + 1}`}
         />
-        <Text style={{ fontFamily: "Kurale", color: "black", backgroundColor: currentColors[index % currentColors.length] }} className="absolute top-1 left-1 px-1 rounded text-sm">
+        <Text style={{ fontFamily: "Kurale", color: "#FFFFFF", backgroundColor: currentColors[index % currentColors.length] }} className="absolute top-1 left-1 px-1 rounded text-xs">
           {currentColors[index % currentColors.length]}
         </Text>
       </View>
@@ -46,8 +46,8 @@ SubImage.displayName = "SubImage";
 // ==================================================================================================
 // ==================================================================================================
 const SubImages: React.FC<SubImagesProps> = memo(({ images, currentColors, onImagePress }) => (
-  <View className="flex flex-row flex-wrap justify-center p-2">
-    {images.data.map((image, index) => (
+  <View className="flex flex-col justify-start p-2 space-y-2">
+    {images.data.slice(0, 4).map((image, index) => (
       <SubImage key={index} image={image} index={index} currentColors={currentColors} onImagePress={onImagePress} environmentData={images} />
     ))}
   </View>
@@ -58,10 +58,9 @@ SubImages.displayName = "SubImages";
 const CardText: React.FC<CardTextProps> = memo(({ data, currentIndex }) => {
   const colors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
   return (
-    <View style={{ backgroundColor: `${colors[0]}30`, marginTop: -2 }} className="p-2 m-4 rounded-xl">
-      <Text style={{ fontFamily: "Kurale" }} className="text-xs justify-evenly text-justify text-white">
-        {data.environment_prompt}
-      </Text>
+    <View style={{ padding: 2, margin: 8, borderRadius: 12 }}>
+      <Text style={{ fontFamily: "Kurale", color: colors[0], fontSize: 15, fontWeight: "bold" }}>Environment:</Text>
+      <Text style={{ fontFamily: "Kurale", color: "#FFFFFF", fontSize: 12 }}>{data.environment_prompt}</Text>
     </View>
   );
 });
@@ -69,48 +68,22 @@ CardText.displayName = "CardText";
 // ==================================================================================================
 // ==================================================================================================
 const Card: React.FC<CardProps> = memo(({ data }) => {
-  const opacity = useSharedValue(1);
-  const translateX = useSharedValue(0);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [currentImage, setCurrentImage] = useState<string>(data.images[0]?.previewLink);
-  const [nextImage, setNextImage] = useState<string>(data.images[0]?.previewLink);
-  const setCurrentImageJS = useCallback((image: string) => {
-    setCurrentImage(image);
-  }, []);
-  const currentImageStyle = useAnimatedStyle(() => ({ opacity: opacity.value }));
-  const nextImageStyle = useAnimatedStyle(() => ({ transform: [{ translateX: translateX.value }] }));
+  const currentColors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
   const updateNextImage = useCallback(() => {
     const nextIndex = (currentIndex + 1) % data.images.length;
     setCurrentIndex(nextIndex);
-    setNextImage(data.images[nextIndex]?.previewLink);
+    setCurrentImage(data.images[nextIndex]?.previewLink);
   }, [currentIndex, data.images]);
-  const handleImageTransition = useCallback(() => {
-    runOnJS(updateNextImage)();
-    translateX.value = -192;
-    translateX.value = withTiming(0, { duration: 400, easing: Easing.inOut(Easing.ease) });
-    opacity.value = withTiming(0, { duration: 300, easing: Easing.out(Easing.ease) }, () => {
-      runOnJS(setCurrentImageJS)(nextImage);
-      opacity.value = 1;
-    });
-  }, [opacity, translateX, nextImage, updateNextImage, setCurrentImageJS]);
-  const handleSubImagePress = useCallback(
-    (previewLink: string, index: number) => {
-      setNextImage(previewLink);
-      setCurrentIndex(index);
-      translateX.value = -192;
-      translateX.value = withTiming(0, { duration: 400, easing: Easing.inOut(Easing.ease) });
-      opacity.value = withTiming(0, { duration: 300, easing: Easing.out(Easing.ease) }, () => {
-        runOnJS(setCurrentImageJS)(previewLink);
-        opacity.value = 1;
-      });
-    },
-    [opacity, translateX, setCurrentImageJS]
-  );
+  const handleSubImagePress = useCallback((previewLink: string, index: number) => {
+    setCurrentImage(previewLink);
+    setCurrentIndex(index);
+  }, []);
   useEffect(() => {
-    const interval = setInterval(handleImageTransition, 4000);
+    const interval = setInterval(updateNextImage, 4000);
     return () => clearInterval(interval);
-  }, [handleImageTransition]);
-  const currentColors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
+  }, [updateNextImage]);
   return (
     <View style={{ backgroundColor: `${currentColors[0]}20`, borderColor: currentColors[0], borderWidth: 0.5 }} className="rounded-3xl overflow-hidden">
       <Link
@@ -130,32 +103,35 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
       >
         <TouchableOpacity>
           <View style={{ position: "relative", height: 192, width: "100%" }}>
-            <Animated.Image
-              style={[{ height: "100%", width: "100%", position: "absolute", borderColor: currentColors[0] }, currentImageStyle]}
-              className="rounded-t-3xl border"
-              source={{ uri: currentImage }}
-              alt={data.environment_title}
-            />
-            <Animated.Image
-              style={[{ height: "100%", width: "100%", position: "absolute", borderColor: currentColors[0] }, nextImageStyle]}
-              className="rounded-t-3xl border"
-              source={{ uri: nextImage }}
-              alt={data.environment_title}
-            />
+            <Image style={{ width: "100%", height: "100%" }} className="rounded-t-3xl" source={{ uri: currentImage }} alt={data.environment_title} />
             <View style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0, 0, 0, 0.4)" }}>
               <Text style={{ fontFamily: "Kurale", color: "white", fontSize: 30, fontWeight: "bold", textAlign: "center", paddingHorizontal: 15 }}> {data.environment_title} </Text>
             </View>
           </View>
         </TouchableOpacity>
       </Link>
-      <SubImages
-        currentColors={currentColors}
-        onImagePress={handleSubImagePress}
-        images={{ data: data.images, selectedIndex: currentIndex, environment_title: data.environment_title, environment_moral: data.environment_moral, environment_prompt: data.environment_prompt }}
-      />
-      <CardText data={data} currentIndex={currentIndex} />
+      <View className="flex flex-row p-2">
+        <View style={{ width: "50%" }} className="pr-2">
+          <CardText data={data} currentIndex={currentIndex} />
+        </View>
+        <View style={{ width: "50%" }} className="pl-2">
+          <SubImages
+            currentColors={currentColors}
+            onImagePress={handleSubImagePress}
+            images={{
+              data: data.images,
+              selectedIndex: currentIndex,
+              environment_title: data.environment_title,
+              environment_moral: data.environment_moral,
+              environment_prompt: data.environment_prompt
+            }}
+          />
+        </View>
+      </View>
+
+      {/* Footer Section */}
       <View style={{ backgroundColor: currentColors[0], borderTopWidth: 1, alignItems: "center", justifyContent: "center", borderTopColor: currentColors[0] }}>
-        <Text style={{ fontFamily: "Kurale", color: "black", fontSize: 16, lineHeight: 20 }}>picBook™</Text>
+        <Text style={{ fontFamily: "Kurale", color: "black", fontSize: 16, lineHeight: 20 }}> picBook™ </Text>
       </View>
     </View>
   );
