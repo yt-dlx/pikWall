@@ -17,10 +17,11 @@ const SubImage: React.FC<SubImageProps> = memo(({ image, index, currentColors, o
       pathname: "./Image",
       params: {
         data: JSON.stringify({
+          selectedIndex: index,
+          data: environmentData.data,
           environment_title: environmentData.environment_title,
-          environment_prompt: environmentData.environment_prompt,
           environment_moral: environmentData.environment_moral,
-          data: environmentData.data
+          environment_prompt: environmentData.environment_prompt
         })
       }
     }}
@@ -115,7 +116,15 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
       <Link
         href={{
           pathname: "./Image",
-          params: { data: JSON.stringify({ environment_title: data.environment_title, environment_prompt: data.environment_prompt, environment_moral: data.environment_moral, data: data.images }) }
+          params: {
+            data: JSON.stringify({
+              data: data.images,
+              selectedIndex: currentIndex,
+              environment_title: data.environment_title,
+              environment_moral: data.environment_moral,
+              environment_prompt: data.environment_prompt
+            })
+          }
         }}
         asChild
       >
@@ -167,7 +176,7 @@ const AlphabetGroup: React.FC<AlphabetGroupProps> = memo(({ title, items }) => {
           <FontAwesome5 name="layer-group" size={28} color="white" className="mr-2" />
         </Animated.View>
         <Text className="text-2xl font-bold text-center text-white" style={{ fontFamily: "Kurale" }}>
-          Starting With &quot;{title}&quot;
+          Sub-Category - &quot;{title}&quot;
         </Text>
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
