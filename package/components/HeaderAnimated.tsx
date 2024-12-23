@@ -64,7 +64,7 @@ const HeaderAnimated: React.FC = () => {
               <View className="w-1.5 h-1.5 rounded-full bg-white mr-1 animate-pulse" />
               <Text style={{ fontFamily: "Kurale", fontSize: 12, fontWeight: "600", color: HexToRGBA("#FFFFFF", 1.0) }}> Crafted with imagination and stories </Text>
             </View>
-            <Text style={{ fontFamily: "Kurale", fontSize: 14, color: "#D1D5DB", textAlign: "center", lineHeight: 20, fontWeight: "500" }} className="mt-2">
+            <Text style={{ fontFamily: "Kurale", fontSize: 14, color: HexToRGBA("#D1D5DB", 1.0), textAlign: "center", lineHeight: 20, fontWeight: "500" }} className="mt-2">
               Dive into tales inspired by unique images and discover the art of visual environment telling.
             </Text>
           </View>
