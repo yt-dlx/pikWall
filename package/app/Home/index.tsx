@@ -149,9 +149,9 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
         </TouchableOpacity>
       </Link>
       <SubImages
-        images={{ data: data.images, environment_title: data.environment_title, environment_moral: data.environment_moral, environment_prompt: data.environment_prompt }}
         currentColors={currentColors}
         onImagePress={handleSubImagePress}
+        images={{ data: data.images, selectedIndex: currentIndex, environment_title: data.environment_title, environment_moral: data.environment_moral, environment_prompt: data.environment_prompt }}
       />
       <CardText data={data} currentIndex={currentIndex} />
       <View style={{ backgroundColor: currentColors[0], borderTopWidth: 1, alignItems: "center", justifyContent: "center", borderTopColor: currentColors[0] }}>
