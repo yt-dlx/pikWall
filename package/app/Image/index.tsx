@@ -5,33 +5,36 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { useLocalSearchParams } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import React, { useState, useEffect, useRef } from "react";
+import HexToRGBA from "@/components/HexToRGBA";
 import { useSharedValue, useAnimatedStyle, withRepeat, withSequence, withTiming, Easing } from "react-native-reanimated";
-import { ScrollView, View, Text, Dimensions, StatusBar, ActivityIndicator, Image, TouchableOpacity, Alert, Animated, GestureResponderEvent } from "react-native";
+import { ScrollView, View, Text, Dimensions, StatusBar, ActivityIndicator, Image, TouchableOpacity, Alert, Animated, GestureResponderEvent, Modal } from "react-native";
 // ==============================================(picBook™)==============================================
 // ==============================================(picBook™)==============================================
-const PreviewImage: React.FC<{ selectedImage: any; screenWidth: number }> = ({ selectedImage, screenWidth }) => {
+const PreviewImage: React.FC<{ selectedImage: any; screenWidth: number; onViewFullScreen: () => void }> = ({ selectedImage, screenWidth, onViewFullScreen }) => {
   const [imageLoading, setImageLoading] = useState(true);
   const aspectRatio = selectedImage.width / selectedImage.height;
-  const imageHeight = (screenWidth / aspectRatio) * 1.5;
-  const scaleValue = useRef(new Animated.Value(1)).current;
+  const imageHeight = (screenWidth / aspectRatio) * 1.6;
+  const scaleValue = useRef(new Animated.Value(1.1)).current;
   const rotateValue = useRef(new Animated.Value(0)).current;
   useEffect(() => {
-    Animated.loop(
-      Animated.sequence([Animated.timing(scaleValue, { toValue: 1.4, duration: 4000, useNativeDriver: true }), Animated.timing(scaleValue, { toValue: 1.1, duration: 2000, useNativeDriver: true })])
-    ).start();
-    Animated.loop(Animated.timing(rotateValue, { toValue: 1, duration: 4000, useNativeDriver: true, easing: Easing.linear })).start();
+    const scaleAnimation = Animated.sequence([
+      Animated.timing(scaleValue, { toValue: 1.4, duration: 4000, easing: Easing.inOut(Easing.ease), useNativeDriver: true }),
+      Animated.timing(scaleValue, { toValue: 1.1, duration: 2000, easing: Easing.inOut(Easing.ease), useNativeDriver: true })
+    ]);
+    Animated.loop(scaleAnimation).start();
+    Animated.loop(Animated.timing(rotateValue, { toValue: 1, duration: 4000, easing: Easing.linear, useNativeDriver: true })).start();
   }, [scaleValue, rotateValue]);
   const rotateInterpolate = rotateValue.interpolate({ inputRange: [0, 1], outputRange: ["0deg", "360deg"] });
   return (
     <View className="relative">
-      <LinearGradient colors={["#0A0A0A", "transparent"]} style={{ position: "absolute", top: 0, left: 0, right: 0, height: 100, zIndex: 10 }} />
+      <LinearGradient colors={["#0A0A0A", "transparent"]} className="absolute top-0 left-0 right-0 h-24 z-10" />
       <View className="absolute inset-0 justify-center items-center z-50">
         {!imageLoading && (
           <>
-            <Animated.View style={{ borderRadius: 9999, justifyContent: "center", alignItems: "center", transform: [{ rotate: rotateInterpolate }] }}>
-              <Image className="w-10 h-10 rounded-full" style={{ backgroundColor: selectedImage.primary }} source={require("@/assets/picbook/white_nobg_1024.png")} alt="logo" resizeMode="contain" />
+            <Animated.View className="rounded-full justify-center items-center transform" style={{ transform: [{ rotate: rotateInterpolate }] }}>
+              <Image className="w-10 h-10 rounded-full" style={{ backgroundColor: selectedImage.primary }} source={require("@/assets/picbook/white_nobg_1024.png")} resizeMode="contain" />
             </Animated.View>
-            <Text className="text-center mb-1.5 leading-6" style={{ fontFamily: "Kurale", fontSize: 20, fontWeight: "900", color: selectedImage.primary }}>
+            <Text className="text-center mb-6 leading-6" style={{ fontFamily: "Kurale", color: selectedImage.primary }}>
               picBook™
             </Text>
           </>
@@ -41,7 +44,7 @@ const PreviewImage: React.FC<{ selectedImage: any; screenWidth: number }> = ({ s
         {imageLoading && (
           <View className="justify-center items-center bg-[#0A0A0A]" style={{ height: imageHeight }}>
             <ActivityIndicator size="large" color={selectedImage.primary} />
-            <Text className="mt-2.5" style={{ fontFamily: "Kurale", marginTop: 10, color: selectedImage.primary }}>
+            <Text className="mt-2.5" style={{ fontFamily: "Kurale", color: selectedImage.primary }}>
               Loading HD Image Preview...
             </Text>
           </View>
@@ -60,6 +63,16 @@ const PreviewImage: React.FC<{ selectedImage: any; screenWidth: number }> = ({ s
           }}
         />
       </View>
+      <TouchableOpacity
+        onPress={onViewFullScreen}
+        activeOpacity={0.8}
+        className="absolute bottom-5 right-5 py-2 px-4 rounded-full z-50"
+        style={{ backgroundColor: HexToRGBA(selectedImage.primary, 0.8) }}
+      >
+        <Text className="text-white text-base" style={{ fontFamily: "Kurale" }}>
+          View FullScreen
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -72,10 +85,10 @@ const PressToDownload: React.FC<{ onDownload?: (event: GestureResponderEvent) =>
   }, [scale]);
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
   return (
-    <TouchableOpacity onPress={onDownload} activeOpacity={0.8} style={{ backgroundColor: `${colors.primary}30` }} className="m-2 rounded-2xl overflow-hidden">
+    <TouchableOpacity onPress={onDownload} activeOpacity={0.8} className="m-2 rounded-2xl overflow-hidden" style={{ backgroundColor: `${colors.primary}30` }}>
       <Animated.View className="p-3 flex-row items-center justify-center" style={animatedStyle}>
         <FontAwesome5 name="download" size={15} color={colors.primary} className="mr-2" />
-        <Text className="text-base" style={{ fontFamily: "Kurale", fontSize: 16, color: colors.primary }}>
+        <Text className="text-base" style={{ fontFamily: "Kurale", color: colors.primary }}>
           Press To Download
         </Text>
       </Animated.View>
@@ -88,16 +101,17 @@ const DownloadScreen = () => {
   const params = useLocalSearchParams();
   const rawDataString = params.data as string;
   const parsedData = JSON.parse(rawDataString);
-  const selectedIndex = parseInt(parsedData.selectedIndex as unknown as string) || 0;
+  const [isFullScreen, setIsFullScreen] = useState(false);
   const { width: screenWidth } = Dimensions.get("window");
+  const selectedIndex = parseInt(parsedData.selectedIndex as unknown as string) || 0;
   const selectedImage = parsedData.data[selectedIndex];
   return (
     <View className="flex-1 bg-[#0A0A0A]">
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
       <ScrollView className="flex-1" contentContainerStyle={{ paddingBottom: 20 }}>
-        <PreviewImage selectedImage={selectedImage} screenWidth={screenWidth} />
-        <View className="p-2 m-2 mt-2.5 border-2 rounded-2xl bg-[#111111]" style={{ borderColor: selectedImage.primary }}>
-          <Text className="mb-2" style={{ fontFamily: "Kurale", fontSize: 24, marginBottom: 8, color: selectedImage.primary }}>
+        <PreviewImage selectedImage={selectedImage} screenWidth={screenWidth} onViewFullScreen={() => setIsFullScreen(true)} />
+        <View className="p-4 m-3 mt-2.5 border-2 rounded-3xl bg-[#111111]" style={{ borderColor: selectedImage.primary }}>
+          <Text className="mb-2 text-lg" style={{ fontFamily: "Kurale", color: selectedImage.primary }}>
             {selectedImage.original_file_name.replace(".jpg", "")}
           </Text>
           {[
@@ -106,26 +120,26 @@ const DownloadScreen = () => {
             { label: "Dimensions", value: `${selectedImage.width} x ${selectedImage.height}` }
           ].map((item, index) => (
             <View key={index} className="flex-row items-center my-1">
-              <FontAwesome5 name={index === 0 ? "adjust" : index === 1 ? "file-alt" : "ruler-combined"} size={16} style={{ marginLeft: 5 }} color={selectedImage.primary} />
-              <Text className="text-16 ml-2" style={{ fontFamily: "Kurale", fontSize: 16, marginLeft: 8, color: selectedImage.primary }}>
+              <FontAwesome5 name={index === 0 ? "adjust" : index === 1 ? "file-alt" : "ruler-combined"} size={16} className="ml-1" color={selectedImage.primary} />
+              <Text className="ml-2" style={{ fontFamily: "Kurale", color: selectedImage.primary }}>
                 {item.label}:
               </Text>
-              <Text className="text-16 ml-2" style={{ fontFamily: "Kurale", fontSize: 16, marginLeft: 8, color: selectedImage.primary }}>
+              <Text className="ml-2" style={{ fontFamily: "Kurale", color: selectedImage.primary }}>
                 {item.value}
               </Text>
             </View>
           ))}
           <View className="p-2 m-2 bg-opacity-20 rounded-2xl" style={{ backgroundColor: `${selectedImage.primary}20` }}>
-            <Text className="text-20 ml-2" style={{ fontFamily: "Kurale", fontSize: 20, marginLeft: 8, color: selectedImage.primary }}>
+            <Text className="ml-2 text-lg" style={{ fontFamily: "Kurale", color: selectedImage.primary }}>
               Environment:
             </Text>
-            <Text className="text-16 ml-2" style={{ fontFamily: "Kurale", fontSize: 16, marginLeft: 8, color: selectedImage.primary }}>
+            <Text className="ml-2" style={{ fontFamily: "Kurale", color: selectedImage.primary }}>
               {parsedData.environment_prompt}
             </Text>
-            <Text className="text-20 ml-2 mt-2" style={{ fontFamily: "Kurale", fontSize: 20, marginLeft: 8, color: selectedImage.primary }}>
+            <Text className="ml-2 mt-2 text-lg" style={{ fontFamily: "Kurale", color: selectedImage.primary }}>
               Moral:
             </Text>
-            <Text className="text-16 ml-2" style={{ fontFamily: "Kurale", fontSize: 16, marginLeft: 8, color: selectedImage.primary }}>
+            <Text className="ml-2" style={{ fontFamily: "Kurale", color: selectedImage.primary }}>
               {parsedData.environment_moral}
             </Text>
           </View>
@@ -133,7 +147,18 @@ const DownloadScreen = () => {
         </View>
       </ScrollView>
       <Footer />
+      <Modal visible={isFullScreen} transparent={false} onRequestClose={() => setIsFullScreen(false)} presentationStyle="fullScreen" statusBarTranslucent>
+        <View className="flex-1 bg-black">
+          <TouchableOpacity onPress={() => setIsFullScreen(false)} className="absolute top-14 left-8 z-10">
+            <FontAwesome5 name="times" size={50} color="#FFFFFF" />
+          </TouchableOpacity>
+          <ScrollView horizontal={true} contentContainerStyle={{ justifyContent: "center", alignItems: "center", flexGrow: 1 }} className="">
+            <Image className="h-full" source={{ uri: selectedImage.previewLink.replace("lowRes", "highRes") }} resizeMode="contain" style={{ aspectRatio: 16 / 9 }} />
+          </ScrollView>
+        </View>
+      </Modal>
     </View>
   );
 };
+
 export default DownloadScreen;
