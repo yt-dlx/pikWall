@@ -1,3 +1,4 @@
+// app/_layout.tsx
 /* eslint-disable @typescript-eslint/no-require-imports */
 import "@/global.css";
 import React from "react";

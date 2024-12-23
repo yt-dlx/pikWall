@@ -1,3 +1,4 @@
+// app/index.tsx\
 /* eslint-disable @typescript-eslint/no-require-imports */
 import { Link } from "expo-router";
 import React, { useEffect } from "react";
@@ -20,10 +21,7 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
     opacity.value = withDelay(delay, withTiming(1, { duration: 1000 }));
     scrollValue.value = withDelay(delay, withRepeat(withTiming(totalHeight, { duration: 15000 }), -1, reverse));
   }, [scrollValue, totalHeight, reverse, delay, opacity]);
-  const animatedStyle = useAnimatedStyle(() => ({
-    transform: [{ translateY: -scrollValue.value % totalHeight }],
-    opacity: opacity.value
-  }));
+  const animatedStyle = useAnimatedStyle(() => ({ transform: [{ translateY: -scrollValue.value % totalHeight }], opacity: opacity.value }));
   return (
     <View className="flex-1 overflow-hidden px-2">
       <Animated.View style={animatedStyle} className="flex-col">
@@ -41,9 +39,7 @@ const AnimatedTitle: React.FC = () => {
   useEffect(() => {
     scale.value = withRepeat(withSequence(withTiming(0.5, { duration: 2000 }), withTiming(0.8, { duration: 2000 })), -1, true);
   }, [scale]);
-  const animatedStyle = useAnimatedStyle(() => ({
-    transform: [{ scale: scale.value }]
-  }));
+  const animatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
   return (
     <Animated.View style={animatedStyle} className="items-center">
       <View className="bg-black/60 rounded-full p-2">
