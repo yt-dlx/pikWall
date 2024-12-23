@@ -126,7 +126,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
         </View>
       </View>
       <View style={{ backgroundColor: HexToRGBA(currentColors[0], 1.0), borderTopWidth: 1, alignItems: "center", justifyContent: "center", borderTopColor: currentColors[0] }}>
-        <Text style={{ fontFamily: "Kurale", color: "black", fontSize: 16, lineHeight: 20 }}>picBook™</Text>
+        <Text style={{ fontFamily: "Kurale", color: HexToRGBA("#0A0A0A", 1.0), fontSize: 16, lineHeight: 20 }}>picBook™</Text>
       </View>
     </View>
   );
