@@ -10,8 +10,8 @@ import { LinearGradient } from "expo-linear-gradient";
 import { Image, TouchableOpacity } from "react-native";
 import { ScrollingSlotProps } from "@/types/components";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence, withDelay } from "react-native-reanimated";
-// ==================================================================================================
-// ==================================================================================================
+// ==============================================(picBook™)==============================================
+// ==============================================(picBook™)==============================================
 const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay }) => {
   const imageHeight = 144;
   const totalHeight = images.length * imageHeight;
@@ -32,8 +32,8 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
     </View>
   );
 };
-// ==================================================================================================
-// ==================================================================================================
+// ==============================================(picBook™)==============================================
+// ==============================================(picBook™)==============================================
 const AnimatedTitle: React.FC = () => {
   const scale = useSharedValue(0.95);
   useEffect(() => {
@@ -45,12 +45,11 @@ const AnimatedTitle: React.FC = () => {
       <View className="bg-black/60 rounded-full p-2">
         <Image source={require("@/assets/picbook/white_nobg_1024.png")} alt="logo" className="w-56 h-56 border-2 border-white rounded-full" resizeMode="contain" />
       </View>
-      <Text className="text-8xl font-black text-white tracking-tight">picBook™</Text>
     </Animated.View>
   );
 };
-// ==================================================================================================
-// ==================================================================================================
+// ==============================================(picBook™)==============================================
+// ==============================================(picBook™)==============================================
 const IndexPage: React.FC = () => {
   return (
     <View className="h-full w-full bg-black">
@@ -62,6 +61,7 @@ const IndexPage: React.FC = () => {
           <LinearGradient colors={["#0A0A0A", "transparent", "transparent", "#0A0A0A"]} locations={[0, 0.2, 0.8, 1]} className="absolute inset-0" />
           <View className="absolute inset-0 flex items-center justify-center">
             <AnimatedTitle />
+            <Text className="text-8xl font-black text-white tracking-tight">picBook™</Text>
             <View className="flex-row items-center mt-4 bg-black/50 px-4 py-2 rounded-full">
               <View className="w-2 h-2 rounded-full bg-white mr-2 animate-pulse" />
               <Text className="text-sm text-white font-semibold">Crafted with imagination and stories</Text>

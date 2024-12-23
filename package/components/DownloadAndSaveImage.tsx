@@ -5,7 +5,8 @@ import * as MediaLibrary from "expo-media-library";
 import { MaterialIcons, Ionicons } from "@expo/vector-icons";
 import { View, Text, TouchableOpacity, ActivityIndicator } from "react-native";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, runOnJS } from "react-native-reanimated";
-
+// ==============================================(picBook™)==============================================
+// ==============================================(picBook™)==============================================
 const AlertModal = ({ visible, title, message, iconName, onClose }: { visible: boolean; title: string; message: string; iconName: "error" | "checkmark-done-circle"; onClose: () => void }) => {
   const modalOpacity = useSharedValue(0);
   const modalScale = useSharedValue(0.8);
@@ -34,6 +35,8 @@ const AlertModal = ({ visible, title, message, iconName, onClose }: { visible: b
     </>
   ) : null;
 };
+// ==============================================(picBook™)==============================================
+// ==============================================(picBook™)==============================================
 const DownloadAndSaveImage: React.FC<{ url: string }> = ({ url }) => {
   const [isDownloading, setIsDownloading] = useState(false);
   const [alertVisible, setAlertVisible] = useState(false);

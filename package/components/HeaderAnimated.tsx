@@ -5,7 +5,8 @@ import imageSets from "@/database/static";
 import { Text, View, Image } from "react-native";
 import { ScrollingSlotProps } from "@/types/components";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence, withDelay } from "react-native-reanimated";
-
+// ==============================================(picBook™)==============================================
+// ==============================================(picBook™)==============================================
 const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay }) => {
   const imageHeight = 96;
   const opacity = useSharedValue(0);
@@ -26,6 +27,8 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
     </View>
   );
 };
+// ==============================================(picBook™)==============================================
+// ==============================================(picBook™)==============================================
 const HeaderAnimated: React.FC = () => {
   const AnimatedTitle: React.FC = () => {
     const scale = useSharedValue(0.95);

@@ -9,8 +9,8 @@ import { FontAwesome, Ionicons, FontAwesome5 } from "@expo/vector-icons";
 import { View, Text, TouchableOpacity, Image, FlatList, ScrollView, ListRenderItem } from "react-native";
 import Animated, { useAnimatedStyle, useSharedValue, withTiming, withRepeat, withSequence } from "react-native-reanimated";
 import { SubImageProps, SubImagesProps, CardTextProps, CardProps, AlphabetGroupProps, CategoryButtonProps, GroupedData } from "@/types/components";
-
-// SubImage Component
+// ==============================================(picBook™)==============================================
+// ==============================================(picBook™)==============================================
 const SubImage: React.FC<SubImageProps> = memo(({ image, index, currentColors, onImagePress, environmentData }) => (
   <Link
     href={{
@@ -30,24 +30,12 @@ const SubImage: React.FC<SubImageProps> = memo(({ image, index, currentColors, o
     <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="m-1 flex-1">
       <View className="relative">
         <Image
-          style={{
-            borderColor: currentColors[index % currentColors.length],
-            borderWidth: 0.5,
-            height: 40,
-            width: "100%"
-          }}
+          style={{ borderColor: currentColors[index % currentColors.length], borderWidth: 0.5, height: 40, width: "100%" }}
           className="rounded-lg shadow-2xl shadow-black"
           source={{ uri: image.previewLink }}
           alt={`Sub Image ${index + 1}`}
         />
-        <Text
-          style={{
-            fontFamily: "Kurale",
-            color: "#FFFFFF",
-            backgroundColor: currentColors[index % currentColors.length]
-          }}
-          className="absolute top-1 left-1 px-1 rounded text-xs"
-        >
+        <Text style={{ fontFamily: "Kurale", color: "#FFFFFF", backgroundColor: currentColors[index % currentColors.length] }} className="absolute top-1 left-1 px-1 rounded text-xs">
           {currentColors[index % currentColors.length]}
         </Text>
       </View>
@@ -55,8 +43,8 @@ const SubImage: React.FC<SubImageProps> = memo(({ image, index, currentColors, o
   </Link>
 ));
 SubImage.displayName = "SubImage";
-
-// SubImages Component
+// ==============================================(picBook™)==============================================
+// ==============================================(picBook™)==============================================
 const SubImages: React.FC<SubImagesProps> = memo(({ images, currentColors, onImagePress }) => (
   <View className="flex flex-col justify-start p-2 space-y-2">
     {images.data.slice(0, 4).map((image, index) => (
@@ -65,8 +53,8 @@ const SubImages: React.FC<SubImagesProps> = memo(({ images, currentColors, onIma
   </View>
 ));
 SubImages.displayName = "SubImages";
-
-// CardText Component
+// ==============================================(picBook™)==============================================
+// ==============================================(picBook™)==============================================
 const CardText: React.FC<CardTextProps> = memo(({ data, currentIndex }) => {
   const colors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
   return (
@@ -77,38 +65,27 @@ const CardText: React.FC<CardTextProps> = memo(({ data, currentIndex }) => {
   );
 });
 CardText.displayName = "CardText";
-
-// Card Component
+// ==============================================(picBook™)==============================================
+// ==============================================(picBook™)==============================================
 const Card: React.FC<CardProps> = memo(({ data }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [currentImage, setCurrentImage] = useState<string>(data.images[0]?.previewLink);
   const currentColors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
-
   const updateNextImage = useCallback(() => {
     const nextIndex = (currentIndex + 1) % data.images.length;
     setCurrentIndex(nextIndex);
     setCurrentImage(data.images[nextIndex]?.previewLink);
   }, [currentIndex, data.images]);
-
   const handleSubImagePress = useCallback((previewLink: string, index: number) => {
     setCurrentImage(previewLink);
     setCurrentIndex(index);
   }, []);
-
   useEffect(() => {
     const interval = setInterval(updateNextImage, 4000);
     return () => clearInterval(interval);
   }, [updateNextImage]);
-
   return (
-    <View
-      style={{
-        backgroundColor: `${currentColors[0]}20`,
-        borderColor: currentColors[0],
-        borderWidth: 0.5
-      }}
-      className="rounded-3xl overflow-hidden"
-    >
+    <View style={{ backgroundColor: `${currentColors[0]}20`, borderColor: currentColors[0], borderWidth: 0.5 }} className="rounded-3xl overflow-hidden">
       <Link
         href={{
           pathname: "./Image",
@@ -127,30 +104,8 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
         <TouchableOpacity>
           <View style={{ position: "relative", height: 192, width: "100%" }}>
             <Image style={{ width: "100%", height: "100%" }} className="rounded-t-3xl" source={{ uri: currentImage }} alt={data.environment_title} />
-            <View
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "rgba(0, 0, 0, 0.4)"
-              }}
-            >
-              <Text
-                style={{
-                  fontFamily: "Kurale",
-                  color: "white",
-                  fontSize: 30,
-                  fontWeight: "bold",
-                  textAlign: "center",
-                  paddingHorizontal: 15
-                }}
-              >
-                {data.environment_title}
-              </Text>
+            <View style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0, 0, 0, 0.4)" }}>
+              <Text style={{ fontFamily: "Kurale", color: "white", fontSize: 30, fontWeight: "bold", textAlign: "center", paddingHorizontal: 15 }}> {data.environment_title} </Text>
             </View>
           </View>
         </TouchableOpacity>
@@ -173,34 +128,21 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
           />
         </View>
       </View>
-      <View
-        style={{
-          backgroundColor: currentColors[0],
-          borderTopWidth: 1,
-          alignItems: "center",
-          justifyContent: "center",
-          borderTopColor: currentColors[0]
-        }}
-      >
+      <View style={{ backgroundColor: currentColors[0], borderTopWidth: 1, alignItems: "center", justifyContent: "center", borderTopColor: currentColors[0] }}>
         <Text style={{ fontFamily: "Kurale", color: "black", fontSize: 16, lineHeight: 20 }}>picBook™</Text>
       </View>
     </View>
   );
 });
 Card.displayName = "Card";
-
-// AlphabetGroup Component
+// ==============================================(picBook™)==============================================
+// ==============================================(picBook™)==============================================
 const AlphabetGroup: React.FC<AlphabetGroupProps> = memo(({ title, items }) => {
   const bounce = useSharedValue(0);
-
   useEffect(() => {
     bounce.value = withRepeat(withSequence(withTiming(-5, { duration: 500 }), withTiming(0, { duration: 500 })), -1, true);
   }, [bounce]);
-
-  const animatedStyle = useAnimatedStyle(() => ({
-    transform: [{ translateY: bounce.value }]
-  }));
-
+  const animatedStyle = useAnimatedStyle(() => ({ transform: [{ translateY: bounce.value }] }));
   return (
     <View className="m-2 bg-[#161616] rounded-3xl">
       <View className="flex-row m-4">
@@ -222,8 +164,8 @@ const AlphabetGroup: React.FC<AlphabetGroupProps> = memo(({ title, items }) => {
   );
 });
 AlphabetGroup.displayName = "AlphabetGroup";
-
-// CategoryButton Component
+// ==============================================(picBook™)==============================================
+// ==============================================(picBook™)==============================================
 const CategoryButton: React.FC<CategoryButtonProps> = memo(({ category }) => (
   <TouchableOpacity className="px-4 py-2 bg-white rounded-xl mx-0.5" activeOpacity={0.7} onPress={() => console.log(`Selected category: ${category}`)}>
     <Text style={{ fontFamily: "Kurale" }} className="text-black text-sm font-medium">
@@ -232,8 +174,8 @@ const CategoryButton: React.FC<CategoryButtonProps> = memo(({ category }) => (
   </TouchableOpacity>
 ));
 CategoryButton.displayName = "CategoryButton";
-
-// HeaderComponent
+// ==============================================(picBook™)==============================================
+// ==============================================(picBook™)==============================================
 const HeaderComponent: React.FC = memo(() => (
   <>
     <HeaderAnimate />
@@ -254,14 +196,12 @@ const HeaderComponent: React.FC = memo(() => (
   </>
 ));
 HeaderComponent.displayName = "HeaderComponent";
-
-// HomePage Component
+// ==============================================(picBook™)==============================================
+// ==============================================(picBook™)==============================================
 const HomePage = (): JSX.Element => {
   const [groupedData, setGroupedData] = useState<GroupedData>({});
   const [searchQuery] = useState<string>("");
-
   useEffect(() => {
-    // Processes image URLs to ensure consistency.
     const processImageUrls = (entry: EnvironmentEntry): EnvironmentEntry => ({
       ...entry,
       images: entry.images.map((image) => ({
@@ -270,8 +210,6 @@ const HomePage = (): JSX.Element => {
         downloadLink: `${image.downloadLink}blob/highRes/${image.original_file_name}`
       }))
     });
-
-    // Groups entries by the first letter of their title.
     const groupEntriesByFirstLetter = (entries: EnvironmentEntry[]) =>
       entries.reduce((acc, card) => {
         const firstLetter = card.environment_title[0].toUpperCase();
@@ -279,27 +217,20 @@ const HomePage = (): JSX.Element => {
         acc[firstLetter].push(card);
         return acc;
       }, {} as { [key: string]: EnvironmentEntry[] });
-
-    // Fetch and process data.
     const fetchData = () => {
-      const entries = Object.values(database) as EnvironmentEntry[]; // Ensure database is typed.
+      const entries = Object.values(database) as EnvironmentEntry[];
       const processedEntries = entries.map(processImageUrls);
       const grouped = groupEntriesByFirstLetter(processedEntries);
-
       const sortedGrouped = Object.keys(grouped)
         .sort()
         .reduce((acc, key) => {
           acc[key] = grouped[key];
           return acc;
         }, {} as { [key: string]: EnvironmentEntry[] });
-
       setGroupedData(sortedGrouped);
     };
-
     fetchData();
   }, []);
-
-  // Filters grouped data based on search query.
   const filteredGroups = searchQuery
     ? Object.entries(groupedData).reduce((acc, [letter, items]) => {
         const filteredItems = items.filter(
@@ -309,33 +240,25 @@ const HomePage = (): JSX.Element => {
         return acc;
       }, {} as { [key: string]: EnvironmentEntry[] })
     : groupedData;
-
-  // Renders each group of data.
   const renderGroup: ListRenderItem<[string, EnvironmentEntry[]]> = useCallback(({ item }) => <AlphabetGroup title={item[0]} items={item[1]} />, []);
-
-  // Optimizes FlatList rendering performance.
   const getItemLayout = useCallback((_: unknown, index: number) => ({ length: 400, offset: 400 * index, index }), []);
-
-  // Key extractor for FlatList.
   const keyExtractor = useCallback((item: [string, EnvironmentEntry[]]) => item[0], []);
-
   return (
     <View style={{ backgroundColor: "#0A0A0A" }} className="flex-1">
       <FlatList
-        ListHeaderComponent={HeaderComponent}
         windowSize={3}
         initialNumToRender={3}
         maxToRenderPerBatch={2}
-        updateCellsBatchingPeriod={50}
-        removeClippedSubviews={true}
         renderItem={renderGroup}
-        getItemLayout={getItemLayout}
-        ListFooterComponent={Footer}
         keyExtractor={keyExtractor}
+        ListFooterComponent={Footer}
+        removeClippedSubviews={true}
+        getItemLayout={getItemLayout}
+        updateCellsBatchingPeriod={50}
         data={Object.entries(filteredGroups)}
+        ListHeaderComponent={HeaderComponent}
       />
     </View>
   );
 };
-
 export default HomePage;
