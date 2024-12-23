@@ -19,7 +19,7 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
   const opacity = useSharedValue(0);
   useEffect(() => {
     opacity.value = withDelay(delay, withTiming(1, { duration: 1000 }));
-    scrollValue.value = withDelay(delay, withRepeat(withTiming(totalHeight, { duration: 5000 }), -1, reverse));
+    scrollValue.value = withDelay(delay, withRepeat(withTiming(totalHeight, { duration: 10000 }), -1, reverse));
   }, [scrollValue, totalHeight, reverse, delay, opacity]);
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ translateY: -scrollValue.value % totalHeight }], opacity: opacity.value }));
   return (

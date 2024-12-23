@@ -1,13 +1,127 @@
 // app/Image/index.tsx
-/* eslint-disable @typescript-eslint/no-require-imports */
 import Footer from "@/components/Footer";
-import { FontAwesome5 } from "@expo/vector-icons";
+import * as FileSystem from "expo-file-system";
 import { useLocalSearchParams } from "expo-router";
+import * as MediaLibrary from "expo-media-library";
 import { LinearGradient } from "expo-linear-gradient";
 import React, { useState, useEffect, useRef } from "react";
 import HexToRGBA from "@/components/HexToRGBA";
+import { FontAwesome5, MaterialIcons, Ionicons } from "@expo/vector-icons";
 import { useSharedValue, useAnimatedStyle, withRepeat, withSequence, withTiming, Easing } from "react-native-reanimated";
 import { ScrollView, View, Text, Dimensions, StatusBar, ActivityIndicator, Image, TouchableOpacity, Alert, Animated, GestureResponderEvent, Modal } from "react-native";
+// ==============================================(picBook™)==============================================
+// ==============================================(picBook™)==============================================
+const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () => void }> = ({ visible, message, onClose }) => {
+  const modalOpacity = useSharedValue(0);
+  const modalScale = useSharedValue(0.8);
+  useEffect(() => {
+    if (visible) {
+      modalOpacity.value = withTiming(1, { duration: 300 });
+      modalScale.value = withTiming(1, { duration: 300 });
+    } else {
+      modalOpacity.value = withTiming(0, { duration: 300 });
+      modalScale.value = withTiming(0.8, { duration: 300 });
+    }
+  }, [visible]);
+  const backdropStyle = useAnimatedStyle(() => ({ opacity: modalOpacity.value }));
+  const modalStyle = useAnimatedStyle(() => ({ opacity: modalOpacity.value, transform: [{ scale: modalScale.value }] }));
+  return visible ? (
+    <View className="absolute inset-0 justify-center items-center">
+      <Animated.View style={[{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "rgba(0, 0, 0, 0.5)" }, backdropStyle]} />
+      <Animated.View style={[{ backgroundColor: "white", borderRadius: 10, padding: 20, justifyContent: "center", alignItems: "center", width: "80%" }, modalStyle]} className="shadow-lg">
+        <Ionicons name="checkmark-done-circle" size={50} color="#28a745" /> <Text style={{ fontSize: 24, fontWeight: "bold", marginTop: 10 }}>Success</Text>
+        <Text style={{ textAlign: "center", marginVertical: 10 }}>{message}</Text>
+        <TouchableOpacity style={{ backgroundColor: "#007BFF", paddingVertical: 10, paddingHorizontal: 20, borderRadius: 5, marginTop: 10 }} onPress={onClose} className="mt-2">
+          <Text style={{ color: "white" }}>OK</Text>
+        </TouchableOpacity>
+      </Animated.View>
+    </View>
+  ) : null;
+};
+// ==============================================(picBook™)==============================================
+// ==============================================(picBook™)==============================================
+const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => void }> = ({ visible, message, onClose }) => {
+  const modalOpacity = useSharedValue(0);
+  const modalScale = useSharedValue(0.8);
+  useEffect(() => {
+    if (visible) {
+      modalOpacity.value = withTiming(1, { duration: 300 });
+      modalScale.value = withTiming(1, { duration: 300 });
+    } else {
+      modalOpacity.value = withTiming(0, { duration: 300 });
+      modalScale.value = withTiming(0.8, { duration: 300 });
+    }
+  }, [visible]);
+  const backdropStyle = useAnimatedStyle(() => ({ opacity: modalOpacity.value }));
+  const modalStyle = useAnimatedStyle(() => ({ opacity: modalOpacity.value, transform: [{ scale: modalScale.value }] }));
+  return visible ? (
+    <View className="absolute inset-0 justify-center items-center">
+      <Animated.View style={[{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "rgba(0, 0, 0, 0.5)" }, backdropStyle]} />
+      <Animated.View style={[{ backgroundColor: "white", borderRadius: 10, padding: 20, justifyContent: "center", alignItems: "center", width: "80%" }, modalStyle]} className="shadow-lg">
+        <MaterialIcons name="error" size={50} color="#dc3545" /> <Text style={{ fontSize: 24, fontWeight: "bold", marginTop: 10 }}>Error</Text>
+        <Text style={{ textAlign: "center", marginVertical: 10 }}>{message}</Text>
+        <TouchableOpacity style={{ backgroundColor: "#007BFF", paddingVertical: 10, paddingHorizontal: 20, borderRadius: 5, marginTop: 10 }} onPress={onClose} className="mt-2">
+          <Text style={{ color: "white" }}>OK</Text>
+        </TouchableOpacity>
+      </Animated.View>
+    </View>
+  ) : null;
+};
+// ==============================================(picBook™)==============================================
+// ==============================================(picBook™)==============================================
+const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloadRate: number; eta: number; primaryColor: string }> = ({ visible, percentage, downloadRate, eta, primaryColor }) => {
+  const formatBytes = (bytes: number): string => {
+    if (bytes === 0) return "0 Bytes";
+    const k = 1024;
+    const sizes = ["Bytes", "KB", "MB", "GB", "TB"];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
+  };
+  const formatTime = (seconds: number): string => {
+    const m = Math.floor(seconds / 60);
+    const s = Math.floor(seconds % 60);
+    return `${m}m ${s}s`;
+  };
+  const animatedProgress = useSharedValue(percentage / 100);
+  useEffect(() => {
+    animatedProgress.value = withTiming(percentage / 100, { duration: 500, easing: Easing.linear });
+  }, [percentage]);
+  const progressBarStyle = useAnimatedStyle(() => ({ width: `${animatedProgress.value * 100}%` }));
+  return visible ? (
+    <View className="absolute inset-0 justify-center items-center">
+      <View
+        className="absolute inset-0"
+        style={{
+          backgroundColor: HexToRGBA(primaryColor, 0.3)
+        }}
+      />
+      <View className="bg-white rounded-lg p-5 justify-center items-center shadow-lg">
+        <ActivityIndicator size="large" color={primaryColor} />
+        <Text className="text-lg mt-3" style={{ color: primaryColor }}>
+          Downloading...
+        </Text>
+        <Text className="mt-2 text-base" style={{ color: primaryColor }}>
+          {percentage.toFixed(2)}%
+        </Text>
+        <View style={{ width: "80%", height: 10, backgroundColor: "#e0e0e0", borderRadius: 5, overflow: "hidden", marginTop: 10 }}>
+          <Animated.View style={[{ height: "100%", backgroundColor: primaryColor }, progressBarStyle]} />
+        </View>
+        <View className="flex-row mt-4">
+          <View className="flex-1 items-center">
+            <Text className="text-sm" style={{ color: primaryColor }}>
+              Rate: {formatBytes(downloadRate)}/s
+            </Text>
+          </View>
+          <View className="flex-1 items-center">
+            <Text className="text-sm" style={{ color: primaryColor }}>
+              ETA: {formatTime(eta)}
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  ) : null;
+};
 // ==============================================(picBook™)==============================================
 // ==============================================(picBook™)==============================================
 const PreviewImage: React.FC<{ selectedImage: any; screenWidth: number; onViewFullScreen: () => void }> = ({ selectedImage, screenWidth, onViewFullScreen }) => {
@@ -78,7 +192,7 @@ const PreviewImage: React.FC<{ selectedImage: any; screenWidth: number; onViewFu
 };
 // ==============================================(picBook™)==============================================
 // ==============================================(picBook™)==============================================
-const PressToDownload: React.FC<{ onDownload?: (event: GestureResponderEvent) => void; colors: { primary: string; secondary: string; tertiary: string } }> = ({ onDownload, colors }) => {
+const DownloadButton: React.FC<{ onDownload?: (event: GestureResponderEvent) => void; colors: { primary: string; secondary: string; tertiary: string } }> = ({ onDownload, colors }) => {
   const scale = useSharedValue(1);
   useEffect(() => {
     scale.value = withRepeat(withSequence(withTiming(1.08, { duration: 0, easing: Easing.inOut(Easing.ease) }), withTiming(1, { duration: 700, easing: Easing.inOut(Easing.ease) })), -1, true);
@@ -99,19 +213,76 @@ const PressToDownload: React.FC<{ onDownload?: (event: GestureResponderEvent) =>
 // ==============================================(picBook™)==============================================
 const DownloadScreen = () => {
   const params = useLocalSearchParams();
+  const [eta, setEta] = useState<number>(0);
   const rawDataString = params.data as string;
   const parsedData = JSON.parse(rawDataString);
+  const downloadStartTime = useRef<number>(0);
+  const [alertVisible, setAlertVisible] = useState(false);
   const [isFullScreen, setIsFullScreen] = useState(false);
+  const [alertMessage, setAlertMessage] = useState("");
+  const [percentage, setPercentage] = useState<number>(0);
+  const [isDownloading, setIsDownloading] = useState(false);
   const { width: screenWidth } = Dimensions.get("window");
+  const [downloadRate, setDownloadRate] = useState<number>(0);
   const selectedIndex = parseInt(parsedData.selectedIndex as unknown as string) || 0;
+  const [alertIcon, setAlertIcon] = useState<"error" | "checkmark-done-circle">("checkmark-done-circle");
   const selectedImage = parsedData.data[selectedIndex];
+  const showAlert = (title: string, message: string, iconName: "error" | "checkmark-done-circle") => {
+    setAlertMessage(message);
+    setAlertIcon(iconName);
+    setAlertVisible(true);
+  };
+  const hideAlert = () => setAlertVisible(false);
+  const downloadAndSaveImage = async () => {
+    try {
+      const { status } = await MediaLibrary.requestPermissionsAsync();
+      if (status !== "granted") {
+        showAlert("Permission Required", "Please grant media library permissions to save the image.", "error");
+        return;
+      }
+      setIsDownloading(true);
+      setPercentage(0);
+      setDownloadRate(0);
+      setEta(0);
+      downloadStartTime.current = Date.now();
+      const fileUri = FileSystem.documentDirectory + selectedImage.original_file_name;
+      const downloadResumable = FileSystem.createDownloadResumable(selectedImage.previewLink.replace("lowRes", "highRes"), fileUri, {}, (downloadProgressEvent) => {
+        const progress = downloadProgressEvent.totalBytesWritten / downloadProgressEvent.totalBytesExpectedToWrite;
+        setPercentage(progress * 100);
+        const elapsedTime = (Date.now() - downloadStartTime.current) / 1000;
+        if (elapsedTime > 0) {
+          const rate = downloadProgressEvent.totalBytesWritten / elapsedTime;
+          setDownloadRate(rate);
+          const remainingBytes = downloadProgressEvent.totalBytesExpectedToWrite - downloadProgressEvent.totalBytesWritten;
+          const estimatedTime = remainingBytes / rate;
+          setEta(estimatedTime);
+        }
+      });
+      const result = await downloadResumable.downloadAsync();
+      if (!result || !result.uri) {
+        showAlert("Download Failed", "Unable to download the image.", "error");
+        setIsDownloading(false);
+        return;
+      }
+      const asset = await MediaLibrary.createAssetAsync(result.uri);
+      const album = await MediaLibrary.getAlbumAsync("Download");
+      if (!album) await MediaLibrary.createAlbumAsync("Download", asset, false);
+      else await MediaLibrary.addAssetsToAlbumAsync([asset], album, false);
+      setIsDownloading(false);
+      showAlert("Success", "The image has been saved to your gallery.", "checkmark-done-circle");
+    } catch (error) {
+      console.error("Error downloading or saving the image:", error);
+      setIsDownloading(false);
+      showAlert("Error", "An error occurred while downloading or saving the image.", "error");
+    }
+  };
   return (
     <View className="flex-1 bg-[#0A0A0A]">
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
       <ScrollView className="flex-1" contentContainerStyle={{ paddingBottom: 20 }}>
         <PreviewImage selectedImage={selectedImage} screenWidth={screenWidth} onViewFullScreen={() => setIsFullScreen(true)} />
         <View className="p-4 m-3 mt-2.5 border-2 rounded-3xl bg-[#111111]" style={{ borderColor: selectedImage.primary }}>
-          <Text className="mb-2 text-lg" style={{ fontFamily: "Kurale", color: selectedImage.primary }}>
+          <Text className="mb-2 text-4xl" style={{ fontFamily: "Kurale", color: selectedImage.primary }}>
             {selectedImage.original_file_name.replace(".jpg", "")}
           </Text>
           {[
@@ -143,7 +314,7 @@ const DownloadScreen = () => {
               {parsedData.environment_moral}
             </Text>
           </View>
-          <PressToDownload onDownload={() => Alert.alert("Download initiated!")} colors={{ primary: selectedImage.primary, secondary: selectedImage.primary, tertiary: selectedImage.primary }} />
+          <DownloadButton onDownload={downloadAndSaveImage} colors={{ primary: selectedImage.primary, secondary: selectedImage.primary, tertiary: selectedImage.primary }} />
         </View>
       </ScrollView>
       <Footer />
@@ -157,8 +328,10 @@ const DownloadScreen = () => {
           </ScrollView>
         </View>
       </Modal>
+      <DownloadingModal visible={isDownloading} percentage={percentage} downloadRate={downloadRate} eta={eta} primaryColor={selectedImage.primary} />
+      <SuccessModal visible={alertVisible && alertIcon === "checkmark-done-circle"} message={alertMessage} onClose={hideAlert} />
+      <ErrorModal visible={alertVisible && alertIcon === "error"} message={alertMessage} onClose={hideAlert} />
     </View>
   );
 };
-
 export default DownloadScreen;

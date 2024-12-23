@@ -13,4 +13,5 @@ const HexToRGBA = (hex: string, opacity: number): string => {
   const validOpacity = Math.max(0, Math.min(1, opacity));
   return `rgba(${r}, ${g}, ${b}, ${validOpacity})`;
 };
+
 export default HexToRGBA;
