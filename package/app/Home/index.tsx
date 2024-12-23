@@ -2,8 +2,8 @@
 import { Link } from "expo-router";
 import database from "@/database";
 import Footer from "@/components/Footer";
+import Colorizer from "@/components/Colorizer";
 import { EnvironmentEntry } from "@/types/database";
-import HexToRGBA from "@/components/HexToRGBA";
 import HeaderAnimate from "@/components/HeaderAnimated";
 import React, { useEffect, useCallback, useState, memo } from "react";
 import { FontAwesome, Ionicons, FontAwesome5 } from "@expo/vector-icons";
@@ -30,8 +30,8 @@ const SubImage: React.FC<SubImageProps> = memo(({ image, index, onImagePress, en
   >
     <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="m-0.5 flex-1">
       <View className="relative">
-        <Image style={{ borderColor: HexToRGBA(image.primary, 1.0), borderWidth: 0.5, width: "100%", height: 40 }} className="rounded-lg shadow-2xl shadow-black" source={{ uri: image.previewLink }} alt={`Sub Image ${index + 1}`} />
-        <Text style={{ color: HexToRGBA("#FFFFFF", 1.0), fontFamily: "Kurale", backgroundColor: HexToRGBA(image.primary, 0.8) }} className="absolute top-1 left-1 px-1 rounded-lg text-sm">
+        <Image style={{ borderColor: Colorizer(image.primary, 1.0), borderWidth: 0.5, width: "100%", height: 40 }} className="rounded-lg shadow-2xl shadow-black" source={{ uri: image.previewLink }} alt={`Sub Image ${index + 1}`} />
+        <Text style={{ color: Colorizer("#FFFFFF", 1.0), fontFamily: "Kurale", backgroundColor: Colorizer(image.primary, 0.8) }} className="absolute top-1 left-1 px-1 rounded-lg text-sm">
           ({index}): {image.primary}
         </Text>
       </View>
@@ -55,8 +55,8 @@ const CardText: React.FC<CardTextProps> = memo(({ data, currentIndex }) => {
   const colors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
   return (
     <View style={{ padding: 1, margin: 4, borderRadius: 12 }}>
-      <Text style={{ fontFamily: "Kurale", color: HexToRGBA(colors[0], 1.0), fontSize: 20, fontWeight: "bold" }}>Environment:</Text>
-      <Text style={{ fontFamily: "Kurale", color: HexToRGBA(colors[0], 1.0), fontSize: 12 }}>{data.environment_prompt}</Text>
+      <Text style={{ fontFamily: "Kurale", color: Colorizer(colors[0], 1.0), fontSize: 20, fontWeight: "bold" }}>Environment:</Text>
+      <Text style={{ fontFamily: "Kurale", color: Colorizer(colors[0], 1.0), fontSize: 12 }}>{data.environment_prompt}</Text>
     </View>
   );
 });
@@ -82,7 +82,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
   }, [updateNextImage]);
 
   return (
-    <View style={{ backgroundColor: HexToRGBA(currentColors[0], 0.2), borderColor: HexToRGBA(currentColors[0], 1.0), borderWidth: 1 }} className="rounded-3xl overflow-hidden">
+    <View style={{ backgroundColor: Colorizer(currentColors[0], 0.2), borderColor: Colorizer(currentColors[0], 1.0), borderWidth: 1 }} className="rounded-3xl overflow-hidden">
       <Link
         href={{
           pathname: "./Image",
@@ -102,7 +102,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
           <View style={{ position: "relative", height: 300, width: "100%" }}>
             <Image style={{ width: "100%", height: "100%" }} className="rounded-t-3xl" source={{ uri: currentImage }} alt={data.environment_title} />
             <View style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center" }}>
-              <Text style={{ fontFamily: "Kurale", color: HexToRGBA("#FFFFFF", 1.0), fontSize: 30, fontWeight: "bold", textAlign: "center", paddingHorizontal: 15 }}>{data.environment_title || ""}</Text>
+              <Text style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 1.0), fontSize: 30, fontWeight: "bold", textAlign: "center", paddingHorizontal: 15 }}>{data.environment_title || ""}</Text>
             </View>
           </View>
         </TouchableOpacity>
@@ -125,8 +125,8 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
           <CardText data={data} currentIndex={currentIndex} />
         </View>
       </View>
-      <View style={{ backgroundColor: HexToRGBA(currentColors[0], 1.0), borderTopWidth: 1, alignItems: "center", justifyContent: "center", borderTopColor: HexToRGBA(currentColors[0], 1.0) }}>
-        <Text style={{ fontFamily: "Kurale", color: HexToRGBA("#0A0A0A", 1.0), fontSize: 16, lineHeight: 20 }}>picBook™</Text>
+      <View style={{ backgroundColor: Colorizer(currentColors[0], 1.0), borderTopWidth: 1, alignItems: "center", justifyContent: "center", borderTopColor: Colorizer(currentColors[0], 1.0) }}>
+        <Text style={{ fontFamily: "Kurale", color: Colorizer("#0A0A0A", 1.0), fontSize: 16, lineHeight: 20 }}>picBook™</Text>
       </View>
     </View>
   );
@@ -144,7 +144,7 @@ const AlphabetGroup: React.FC<AlphabetGroupProps> = memo(({ title, items }) => {
     <View className="bg-[#1b1b1b] m-1 p-1 rounded-l-3xl">
       <View className="flex-row m-4">
         <Animated.View style={animatedStyle}>
-          <FontAwesome5 name="layer-group" size={28} color={HexToRGBA("#FFFFFF", 1.0)} className="mr-2" />
+          <FontAwesome5 name="layer-group" size={28} color={Colorizer("#FFFFFF", 1.0)} className="mr-2" />
         </Animated.View>
         <Text className="text-2xl font-bold text-center text-white" style={{ fontFamily: "Kurale" }}>
           Sub-Category - &quot;{title}&quot;
@@ -178,11 +178,11 @@ const HeaderComponent: React.FC = memo(() => (
     <HeaderAnimate />
     <View className="p-4">
       <View className="flex-row items-center justify-center">
-        <FontAwesome name="wpexplorer" size={28} color={HexToRGBA("#FFFFFF", 1.0)} className="mr-2" />
+        <FontAwesome name="wpexplorer" size={28} color={Colorizer("#FFFFFF", 1.0)} className="mr-2" />
         <Text style={{ fontFamily: "Kurale" }} className="text-3xl font-bold text-gray-100">
           Explore Our Collection
         </Text>
-        <Ionicons name="images-outline" size={28} color={HexToRGBA("#FFFFFF", 1.0)} className="ml-2" />
+        <Ionicons name="images-outline" size={28} color={Colorizer("#FFFFFF", 1.0)} className="ml-2" />
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} className="mt-4 mb-6">
         {["Anime XL", "Realistic XL", "Cartoon 3D", "Black & White", "Abstract"].map((category, index) => (
@@ -239,7 +239,7 @@ const HomePage = (): JSX.Element => {
   const getItemLayout = useCallback((_: unknown, index: number) => ({ length: 400, offset: 400 * index, index }), []);
   const keyExtractor = useCallback((item: [string, EnvironmentEntry[]]) => item[0], []);
   return (
-    <View style={{ backgroundColor: HexToRGBA("#0A0A0A", 1.0) }} className="flex-1">
+    <View style={{ backgroundColor: Colorizer("#0A0A0A", 1.0) }} className="flex-1">
       <FlatList
         windowSize={3}
         initialNumToRender={3}

@@ -1,4 +1,5 @@
-const HexToRGBA = (hex: string, opacity: number): string => {
+// components/Colorizer.ts
+const Colorizer = (hex: string, opacity: number): string => {
   const sanitizedHex = hex.replace(/^#/, "");
   const r = parseInt(sanitizedHex.substring(0, 2), 16);
   const g = parseInt(sanitizedHex.substring(2, 4), 16);
@@ -7,4 +8,4 @@ const HexToRGBA = (hex: string, opacity: number): string => {
   return `rgba(${r}, ${g}, ${b}, ${validOpacity})`;
 };
 
-export default HexToRGBA;
+export default Colorizer;

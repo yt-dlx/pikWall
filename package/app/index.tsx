@@ -5,11 +5,11 @@ import React, { useEffect } from "react";
 import { Text, View } from "react-native";
 import imageSets from "@/database/static";
 import Footer from "@/components/Footer";
+import Colorizer from "@/components/Colorizer";
 import { MaterialIcons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { Image, TouchableOpacity } from "react-native";
 import { ScrollingSlotProps } from "@/types/components";
-import HexToRGBA from "@/components/HexToRGBA";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence, withDelay } from "react-native-reanimated";
 // ==============================================(picBook™)==============================================
 // ==============================================(picBook™)==============================================
@@ -70,7 +70,7 @@ const IndexPage: React.FC = () => {
             <Link href="./Home" asChild>
               <TouchableOpacity className="mt-8 rounded-xl overflow-hidden shadow-lg">
                 <LinearGradient colors={["rgba(255,255,255,0.95)", "rgba(255,255,255,1)"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={{ borderRadius: 40 }} className="flex-row items-center justify-center px-14 py-4">
-                  <MaterialIcons name="photo-camera" size={24} color={HexToRGBA("#0A0A0A", 1.0)} className="mr-2" />
+                  <MaterialIcons name="photo-camera" size={24} color={Colorizer("#0A0A0A", 1.0)} className="mr-2" />
                   <Text className="text-lg font-bold text-black">Start Exploring</Text>
                 </LinearGradient>
               </TouchableOpacity>

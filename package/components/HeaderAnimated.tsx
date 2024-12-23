@@ -1,8 +1,8 @@
 // components/HeaderAnimated.tsx
 /* eslint-disable @typescript-eslint/no-require-imports */
+import Colorizer from "./Colorizer";
 import React, { useEffect } from "react";
 import imageSets from "@/database/static";
-import HexToRGBA from "./HexToRGBA";
 import { Text, View, Image } from "react-native";
 import { ScrollingSlotProps } from "@/types/components";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence, withDelay } from "react-native-reanimated";
@@ -40,9 +40,9 @@ const HeaderAnimated: React.FC = () => {
     return (
       <Animated.View style={animatedStyle} className="items-center">
         <View className="bg-black/60 rounded-full p-1">
-          <Image source={require("@/assets/picbook/white_nobg_1024.png")} alt="logo" className="w-12 h-12 border-2 rounded-full" style={{ borderColor: HexToRGBA("#FFFFFF", 1.0) }} resizeMode="contain" />
+          <Image source={require("@/assets/picbook/white_nobg_1024.png")} alt="logo" className="w-12 h-12 border-2 rounded-full" style={{ borderColor: Colorizer("#FFFFFF", 1.0) }} resizeMode="contain" />
         </View>
-        <Text style={{ fontFamily: "Kurale", fontSize: 32, fontWeight: "bold", color: HexToRGBA("#FFFFFF", 1.0) }} className="tracking-tight">
+        <Text style={{ fontFamily: "Kurale", fontSize: 32, fontWeight: "bold", color: Colorizer("#FFFFFF", 1.0) }} className="tracking-tight">
           picBook™
         </Text>
       </Animated.View>
@@ -55,16 +55,16 @@ const HeaderAnimated: React.FC = () => {
           <ScrollingSlot key={slotIndex} images={images} reverse={slotIndex % 2 === 0} delay={slotIndex * 200} />
         ))}
         <View className="absolute inset-0 items-center justify-center rounded-[8px] overflow-hidden">
-          <View className="absolute inset-0" style={{ backgroundColor: HexToRGBA("#0A0A0A", 1.0), opacity: 0.5, borderRadius: 8 }} />
+          <View className="absolute inset-0" style={{ backgroundColor: Colorizer("#0A0A0A", 1.0), opacity: 0.5, borderRadius: 8 }} />
           <View className="absolute justify-center items-center m-2 p-1">
             <View className="flex-row mb-1">
               <AnimatedTitle />
             </View>
             <View className="flex-row items-center mt-2 bg-black/30 px-2 py-1 rounded-full">
               <View className="w-1.5 h-1.5 rounded-full bg-white mr-1 animate-pulse" />
-              <Text style={{ fontFamily: "Kurale", fontSize: 12, fontWeight: "600", color: HexToRGBA("#FFFFFF", 1.0) }}> Crafted with imagination and stories </Text>
+              <Text style={{ fontFamily: "Kurale", fontSize: 12, fontWeight: "600", color: Colorizer("#FFFFFF", 1.0) }}> Crafted with imagination and stories </Text>
             </View>
-            <Text style={{ fontFamily: "Kurale", fontSize: 14, color: HexToRGBA("#D1D5DB", 1.0), textAlign: "center", lineHeight: 20, fontWeight: "500" }} className="mt-2">
+            <Text style={{ fontFamily: "Kurale", fontSize: 14, color: Colorizer("#D1D5DB", 1.0), textAlign: "center", lineHeight: 20, fontWeight: "500" }} className="mt-2">
               Dive into tales inspired by unique images and discover the art of visual environment telling.
             </Text>
           </View>
