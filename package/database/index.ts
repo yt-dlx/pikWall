@@ -1,4 +1,4 @@
-import { EnvironmentEntry } from "@/types/types";
+import { EnvironmentEntry } from "@/types/database";
 const database: Record<string, EnvironmentEntry> = {
   "Abstract Symphony In Painted Passage": {
     environment_title: "Abstract Symphony In Painted Passage",

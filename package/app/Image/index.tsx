@@ -3,7 +3,7 @@
 import Footer from "@/components/Footer";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { useLocalSearchParams } from "expo-router";
-import { DownloadScreenProps } from "@/types/home";
+import { DownloadScreenProps } from "@/types/components";
 import { LinearGradient } from "expo-linear-gradient";
 import React, { useState, useEffect, useRef } from "react";
 import { useSharedValue, useAnimatedStyle, withRepeat, withSequence, withTiming, Easing } from "react-native-reanimated";

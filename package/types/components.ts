@@ -1,4 +1,4 @@
-import { ImageMetadata, EnvironmentEntry } from "./types";
+import { ImageMetadata, EnvironmentEntry } from "./database";
 
 type RGB = `rgb(${number}, ${number}, ${number})`;
 type RGBA = `rgba(${number}, ${number}, ${number}, ${number})`;

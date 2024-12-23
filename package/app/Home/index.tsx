@@ -2,13 +2,13 @@
 import { Link } from "expo-router";
 import database from "@/database";
 import Footer from "@/components/Footer";
-import { EnvironmentEntry } from "@/types/types";
+import { EnvironmentEntry } from "@/types/database";
 import HeaderAnimate from "@/components/HeaderAnimate";
 import React, { useEffect, useCallback, useState, memo } from "react";
 import { FontAwesome, Ionicons, FontAwesome5 } from "@expo/vector-icons";
 import { View, Text, TouchableOpacity, Image, FlatList, ScrollView, ListRenderItem } from "react-native";
 import Animated, { useAnimatedStyle, useSharedValue, withTiming, Easing, runOnJS, withRepeat, withSequence } from "react-native-reanimated";
-import { SubImageProps, SubImagesProps, CardTextProps, CardProps, AlphabetGroupProps, CategoryButtonProps, GroupedData } from "@/types/home";
+import { SubImageProps, SubImagesProps, CardTextProps, CardProps, AlphabetGroupProps, CategoryButtonProps, GroupedData } from "@/types/components";
 // ==================================================================================================
 // ==================================================================================================
 const SubImage: React.FC<SubImageProps> = memo(({ image, index, currentColors, onImagePress, environmentData }) => (
