@@ -1,7 +1,9 @@
 // app/Image/index.tsx
+/* eslint-disable @typescript-eslint/no-require-imports */
 import Footer from "@/components/Footer";
 import * as FileSystem from "expo-file-system";
 import Colorizer from "@/components/Colorizer";
+import { ImageMetadata } from "@/types/database";
 import { useLocalSearchParams } from "expo-router";
 import * as MediaLibrary from "expo-media-library";
 import { LinearGradient } from "expo-linear-gradient";
@@ -22,7 +24,7 @@ const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () =>
       modalOpacity.value = withTiming(0, { duration: 300 });
       modalScale.value = withTiming(0.8, { duration: 300 });
     }
-  }, [visible]);
+  }, [modalOpacity, modalScale, visible]);
   const backdropStyle = useAnimatedStyle(() => ({ opacity: modalOpacity.value }));
   const modalStyle = useAnimatedStyle(() => ({ opacity: modalOpacity.value, transform: [{ scale: modalScale.value }] }));
   return visible ? (
@@ -51,7 +53,7 @@ const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => v
       modalOpacity.value = withTiming(0, { duration: 300 });
       modalScale.value = withTiming(0.8, { duration: 300 });
     }
-  }, [visible]);
+  }, [modalOpacity, modalScale, visible]);
   const backdropStyle = useAnimatedStyle(() => ({ opacity: modalOpacity.value }));
   const modalStyle = useAnimatedStyle(() => ({ opacity: modalOpacity.value, transform: [{ scale: modalScale.value }] }));
   return visible ? (
@@ -85,7 +87,7 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
   const animatedProgress = useSharedValue(percentage / 100);
   useEffect(() => {
     animatedProgress.value = withTiming(percentage / 100, { duration: 500, easing: Easing.linear });
-  }, [percentage]);
+  }, [animatedProgress, percentage]);
   const progressBarStyle = useAnimatedStyle(() => ({ width: `${animatedProgress.value * 100}%` }));
   return visible ? (
     <View className="absolute inset-0 justify-center items-center">
@@ -124,7 +126,7 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
 };
 // ==============================================(picBook™)==============================================
 // ==============================================(picBook™)==============================================
-const PreviewImage: React.FC<{ selectedImage: any; screenWidth: number; onViewFullScreen: () => void }> = ({ selectedImage, screenWidth, onViewFullScreen }) => {
+const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number; onViewFullScreen: () => void }> = ({ selectedImage, screenWidth, onViewFullScreen }) => {
   const [imageLoading, setImageLoading] = useState(true);
   const aspectRatio = selectedImage.width / selectedImage.height;
   const imageHeight = (screenWidth / aspectRatio) * 1.6;
@@ -143,7 +145,7 @@ const PreviewImage: React.FC<{ selectedImage: any; screenWidth: number; onViewFu
         {!imageLoading && (
           <>
             <Animated.View className="rounded-full justify-center items-center transform" style={{ transform: [{ rotate: rotateInterpolate }] }}>
-              <Image className="w-10 h-10 rounded-full" style={{ backgroundColor: Colorizer(selectedImage.primary, 1.0) }} source={require("@/assets/picbook/white_nobg_1024.png")} resizeMode="contain" />
+              <Image className="w-10 h-10 rounded-full" style={{ backgroundColor: Colorizer(selectedImage.primary, 1.0) }} alt="image" source={require("@/assets/picbook/white_nobg_1024.png")} resizeMode="contain" />
             </Animated.View>
             <Text className="text-center mb-6 leading-6" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
               picBook™
@@ -319,7 +321,7 @@ const DownloadScreen = () => {
             <FontAwesome5 name="times" size={50} color={Colorizer("#FFFFFF", 1.0)} />
           </TouchableOpacity>
           <ScrollView horizontal={true} contentContainerStyle={{ justifyContent: "center", alignItems: "center", flexGrow: 1 }} className="">
-            <Image className="h-full" source={{ uri: selectedImage.previewLink.replace("lowRes", "highRes") }} resizeMode="contain" style={{ aspectRatio: 16 / 9 }} />
+            <Image className="h-full" source={{ uri: selectedImage.previewLink.replace("lowRes", "highRes") }} alt="image" resizeMode="contain" style={{ aspectRatio: 16 / 9 }} />
           </ScrollView>
         </View>
       </Modal>
