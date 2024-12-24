@@ -29,11 +29,37 @@ const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () =>
   return visible ? (
     <View className="absolute inset-0 justify-center items-center">
       <Animated.View style={[{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: Colorizer("#0A0A0A", 0.5) }, backdropStyle]} />
-      <Animated.View style={[{ backgroundColor: Colorizer("#FFFFFF", 1.0), borderRadius: 10, padding: 20, justifyContent: "center", alignItems: "center", width: "80%" }, modalStyle]} className="shadow-lg">
+      <Animated.View
+        style={[
+          {
+            backgroundColor: Colorizer("#FFFFFF", 1.0),
+            borderRadius: 10,
+            padding: 20,
+            justifyContent: "center",
+            alignItems: "center",
+            width: "80%",
+            shadowColor: Colorizer("#000000", 0.25),
+            shadowOffset: { width: 0, height: 5 },
+            shadowOpacity: 0.25,
+            shadowRadius: 10,
+            elevation: 10
+          },
+          modalStyle
+        ]}
+      >
         <Ionicons name="checkmark-done-circle" size={50} color={Colorizer("#28a745", 1.0)} />
         <Text style={{ fontSize: 24, fontWeight: "bold", marginTop: 10, fontFamily: "Kurale" }}>Success</Text>
         <Text style={{ textAlign: "center", marginVertical: 10, fontFamily: "Kurale" }}>{message}</Text>
-        <TouchableOpacity style={{ backgroundColor: Colorizer("#007BFF", 1.0), paddingVertical: 10, paddingHorizontal: 20, borderRadius: 5, marginTop: 10 }} onPress={onClose} className="mt-2">
+        <TouchableOpacity
+          style={{
+            backgroundColor: Colorizer("#007BFF", 1.0),
+            paddingVertical: 10,
+            paddingHorizontal: 20,
+            borderRadius: 5,
+            marginTop: 10
+          }}
+          onPress={onClose}
+        >
           <Text style={{ color: Colorizer("#FFFFFF", 1.0), fontFamily: "Kurale" }}>OK</Text>
         </TouchableOpacity>
       </Animated.View>
@@ -58,11 +84,37 @@ const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => v
   return visible ? (
     <View className="absolute inset-0 justify-center items-center">
       <Animated.View style={[{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: Colorizer("#000000", 0.5) }, backdropStyle]} />
-      <Animated.View style={[{ backgroundColor: Colorizer("#FFFFFF", 1.0), borderRadius: 10, padding: 20, justifyContent: "center", alignItems: "center", width: "80%" }, modalStyle]} className="shadow-lg">
+      <Animated.View
+        style={[
+          {
+            backgroundColor: Colorizer("#FFFFFF", 1.0),
+            borderRadius: 10,
+            padding: 20,
+            justifyContent: "center",
+            alignItems: "center",
+            width: "80%",
+            shadowColor: Colorizer("#000000", 0.25),
+            shadowOffset: { width: 0, height: 5 },
+            shadowOpacity: 0.25,
+            shadowRadius: 10,
+            elevation: 10
+          },
+          modalStyle
+        ]}
+      >
         <MaterialIcons name="error" size={50} color={Colorizer("#dc3545", 1.0)} />
         <Text style={{ fontSize: 24, fontWeight: "bold", marginTop: 10, fontFamily: "Kurale" }}>Error</Text>
         <Text style={{ textAlign: "center", marginVertical: 10, fontFamily: "Kurale" }}>{message}</Text>
-        <TouchableOpacity style={{ backgroundColor: Colorizer("#007BFF", 1.0), paddingVertical: 10, paddingHorizontal: 20, borderRadius: 5, marginTop: 10 }} onPress={onClose} className="mt-2">
+        <TouchableOpacity
+          style={{
+            backgroundColor: Colorizer("#007BFF", 1.0),
+            paddingVertical: 10,
+            paddingHorizontal: 20,
+            borderRadius: 5,
+            marginTop: 10
+          }}
+          onPress={onClose}
+        >
           <Text style={{ color: Colorizer("#FFFFFF", 1.0), fontFamily: "Kurale" }}>OK</Text>
         </TouchableOpacity>
       </Animated.View>
@@ -91,32 +143,41 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
   return visible ? (
     <View className="absolute inset-0 justify-center items-center">
       <View
-        className="absolute inset-0"
         style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
           backgroundColor: Colorizer(primaryColor, 0.3)
         }}
       />
-      <View className="bg-white rounded-lg p-5 justify-center items-center shadow-lg">
+      <View
+        style={{
+          backgroundColor: Colorizer("#FFFFFF", 1.0),
+          borderRadius: 10,
+          padding: 20,
+          justifyContent: "center",
+          alignItems: "center",
+          shadowColor: Colorizer("#000000", 0.25),
+          shadowOffset: { width: 0, height: 5 },
+          shadowOpacity: 0.25,
+          shadowRadius: 10,
+          elevation: 10
+        }}
+      >
         <ActivityIndicator size="large" color={Colorizer(primaryColor, 1.0)} />
-        <Text className="text-lg mt-3" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Kurale" }}>
-          Downloading...
-        </Text>
-        <Text className="mt-2 text-base" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Kurale" }}>
-          {percentage.toFixed(2)}%
-        </Text>
+        <Text style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Kurale", fontSize: 18, marginTop: 12 }}>Downloading...</Text>
+        <Text style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Kurale", marginTop: 8, fontSize: 16 }}>{percentage.toFixed(2)}%</Text>
         <View style={{ width: "80%", height: 10, borderRadius: 5, overflow: "hidden", marginTop: 10 }}>
           <Animated.View style={[{ height: "100%", backgroundColor: Colorizer(primaryColor, 1.0) }, progressBarStyle]} />
         </View>
-        <View className="flex-row mt-4">
-          <View className="flex-1 items-center">
-            <Text className="text-sm" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Kurale" }}>
-              Rate: {formatBytes(downloadRate)}/s
-            </Text>
+        <View style={{ flexDirection: "row", marginTop: 16 }}>
+          <View style={{ flex: 1, alignItems: "center" }}>
+            <Text style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Kurale", fontSize: 12 }}>Rate: {formatBytes(downloadRate)}/s</Text>
           </View>
-          <View className="flex-1 items-center">
-            <Text className="text-sm" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Kurale" }}>
-              ETA: {formatTime(eta)}
-            </Text>
+          <View style={{ flex: 1, alignItems: "center" }}>
+            <Text style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Kurale", fontSize: 12 }}>ETA: {formatTime(eta)}</Text>
           </View>
         </View>
       </View>
@@ -133,36 +194,38 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
   useEffect(() => {
     const scaleAnimation = Animated.sequence([Animated.timing(scaleValue, { toValue: 1.4, duration: 4000, easing: Easing.inOut(Easing.ease), useNativeDriver: true }), Animated.timing(scaleValue, { toValue: 1.1, duration: 2000, easing: Easing.inOut(Easing.ease), useNativeDriver: true })]);
     Animated.loop(scaleAnimation).start();
-    Animated.loop(Animated.timing(rotateValue, { toValue: 1, duration: 4000, easing: Easing.linear, useNativeDriver: true })).start();
+    Animated.loop(
+      Animated.timing(rotateValue, {
+        toValue: 1,
+        duration: 4000,
+        easing: Easing.linear,
+        useNativeDriver: true
+      })
+    ).start();
   }, [scaleValue, rotateValue]);
   const rotateInterpolate = rotateValue.interpolate({ inputRange: [0, 1], outputRange: ["0deg", "360deg"] });
   return (
     <View className="relative">
-      <LinearGradient colors={["#0A0A0A", "transparent"]} className="absolute top-0 left-0 right-0 h-24 z-10" />
-      <View className="absolute inset-0 justify-center items-center z-50">
+      <LinearGradient colors={["#0A0A0A", "transparent"]} style={{ position: "absolute", top: 0, left: 0, right: 0, height: 96, zIndex: 10 }} />
+      <View style={{ position: "absolute", inset: 0, justifyContent: "center", alignItems: "center", zIndex: 50 }}>
         {!imageLoading && (
           <>
-            <Animated.View className="rounded-full justify-center items-center transform" style={{ transform: [{ rotate: rotateInterpolate }] }}>
-              <Image className="w-10 h-10 rounded-full" style={{ backgroundColor: Colorizer(selectedImage.primary, 1.0) }} alt="image" source={require("@/assets/picbook/white_nobg_1024.png")} resizeMode="contain" />
+            <Animated.View style={{ borderRadius: 999, justifyContent: "center", alignItems: "center", transform: [{ rotate: rotateInterpolate }] }}>
+              <Image style={{ width: 40, height: 40, borderRadius: 20, backgroundColor: Colorizer(selectedImage.primary, 1.0) }} alt="image" source={require("@/assets/picbook/white_nobg_1024.png")} resizeMode="contain" />
             </Animated.View>
-            <Text className="text-center mb-6 leading-6" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
-              picBook™
-            </Text>
+            <Text style={{ textAlign: "center", marginBottom: 24, lineHeight: 24, fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>picBook™</Text>
           </>
         )}
       </View>
-      <View className="rounded-t-2xl overflow-hidden elevation-4">
+      <View style={{ borderTopLeftRadius: 20, borderTopRightRadius: 20, overflow: "hidden", elevation: 4 }}>
         {imageLoading && (
-          <View className="justify-center items-center" style={{ backgroundColor: Colorizer("#0A0A0A", 1.0), height: imageHeight }}>
+          <View style={{ justifyContent: "center", alignItems: "center", backgroundColor: Colorizer("#0A0A0A", 1.0), height: imageHeight }}>
             <ActivityIndicator size="large" color={Colorizer(selectedImage.primary, 1.0)} />
-            <Text className="mt-2.5" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
-              Loading HD Image Preview...
-            </Text>
+            <Text style={{ marginTop: 10, fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>Loading HD Image Preview...</Text>
           </View>
         )}
         <Animated.Image
-          className="rounded-t-2xl"
-          style={!imageLoading ? { width: screenWidth, height: imageHeight, transform: [{ scale: scaleValue }] } : { width: 0, height: 0 }}
+          style={!imageLoading ? { width: screenWidth, height: imageHeight, transform: [{ scale: scaleValue }], borderTopLeftRadius: 20, borderTopRightRadius: 20 } : { width: 0, height: 0 }}
           source={{ uri: selectedImage.previewLink.replace("lowRes", "highRes") }}
           onLoadStart={() => setImageLoading(true)}
           onLoadEnd={() => setImageLoading(false)}
@@ -174,10 +237,21 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
           }}
         />
       </View>
-      <TouchableOpacity onPress={onViewFullScreen} activeOpacity={0.8} className="absolute bottom-5 right-5 py-2 px-4 rounded-full z-50" style={{ backgroundColor: Colorizer(selectedImage.primary, 0.5) }}>
-        <Text className="text-white text-base" style={{ fontFamily: "Kurale" }}>
-          View FullScreen
-        </Text>
+      <TouchableOpacity
+        onPress={onViewFullScreen}
+        activeOpacity={0.8}
+        style={{
+          position: "absolute",
+          bottom: 20,
+          right: 20,
+          paddingVertical: 8,
+          paddingHorizontal: 16,
+          borderRadius: 9999,
+          zIndex: 50,
+          backgroundColor: Colorizer(selectedImage.primary, 0.5)
+        }}
+      >
+        <Text style={{ color: Colorizer("#FFFFFF", 1.0), fontFamily: "Kurale", fontSize: 16 }}>View FullScreen</Text>
       </TouchableOpacity>
     </View>
   );
@@ -190,15 +264,11 @@ const DownloadButton: React.FC<{ onDownload?: (event: GestureResponderEvent) => 
   }, [scale]);
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
   return (
-    <TouchableOpacity onPress={onDownload} activeOpacity={0.8} className="m-2 rounded-2xl overflow-hidden" style={{ backgroundColor: Colorizer(colors.primary, 0.4) }}>
-      <Animated.View className="p-3 flex-row items-center justify-center" style={animatedStyle}>
-        <Text className="text-base" style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 1.0) }}>
-          Download Wallpaper
-        </Text>
-        <FontAwesome5 name="download" size={15} color={Colorizer("#FFFFFF", 1.0)} className="m-2" />
-        <Text className="text-base" style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 1.0) }}>
-          (Highest Quality)
-        </Text>
+    <TouchableOpacity onPress={onDownload} activeOpacity={0.8} style={{ margin: 8, borderRadius: 20, overflow: "hidden", backgroundColor: Colorizer(colors.primary, 0.4) }}>
+      <Animated.View style={[{ padding: 12, flexDirection: "row", alignItems: "center", justifyContent: "center" }, animatedStyle]}>
+        <Text style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 1.0), fontSize: 16, marginRight: 8 }}>Download Wallpaper</Text>
+        <FontAwesome5 name="download" size={15} color={Colorizer("#FFFFFF", 1.0)} style={{ marginHorizontal: 8 }} />
+        <Text style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 1.0), fontSize: 16 }}>(Highest Quality)</Text>
       </Animated.View>
     </TouchableOpacity>
   );
@@ -270,12 +340,25 @@ const DownloadScreen = () => {
     }
   };
   return (
-    <View className="flex-1" style={{ backgroundColor: Colorizer("#0A0A0A", 1.0) }}>
+    <View style={{ flex: 1, backgroundColor: Colorizer("#0A0A0A", 1.0) }}>
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
-      <ScrollView className="flex-1" contentContainerStyle={{ paddingBottom: 20 }}>
+      <ScrollView style={{ flex: 1 }} contentContainerStyle={{ paddingBottom: 20 }}>
         <PreviewImage selectedImage={selectedImage} screenWidth={screenWidth} onViewFullScreen={() => setIsFullScreen(true)} />
-        <View className="p-4 m-3 mt-2.5 border-2 rounded-3xl" style={{ borderColor: Colorizer(selectedImage.primary, 1.0), backgroundColor: Colorizer("#111111", 1.0) }}>
-          <Text className="mb-2 text-4xl" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
+        <View
+          className="p-4 m-3 mt-2.5 border-2 rounded-3xl"
+          style={{
+            borderColor: Colorizer(selectedImage.primary, 1.0),
+            backgroundColor: Colorizer("#111111", 1.0)
+          }}
+        >
+          <Text
+            style={{
+              fontFamily: "Kurale",
+              color: Colorizer(selectedImage.primary, 1.0),
+              marginBottom: 8,
+              fontSize: 32
+            }}
+          >
             {selectedImage.original_file_name.replace(".jpg", "")}
           </Text>
           {[
@@ -283,32 +366,35 @@ const DownloadScreen = () => {
             { label: "FileSize", value: `${selectedImage.file_size_megabytes} mb` },
             { label: "Dimensions", value: `${selectedImage.width} x ${selectedImage.height}` }
           ].map((item, index) => (
-            <View key={index} className="flex-row items-center my-1">
-              <FontAwesome5 name={index === 0 ? "adjust" : index === 1 ? "file-alt" : "ruler-combined"} size={16} className="ml-1" color={Colorizer(selectedImage.primary, 1.0)} />
-              <Text className="ml-2" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
-                {item.label}:
-              </Text>
-              <Text className="ml-2" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
-                {item.value}
-              </Text>
+            <View key={index} style={{ flexDirection: "row", alignItems: "center", marginVertical: 4 }}>
+              <FontAwesome5 name={index === 0 ? "adjust" : index === 1 ? "file-alt" : "ruler-combined"} size={16} color={Colorizer(selectedImage.primary, 1.0)} style={{ marginLeft: 4 }} />
+              <Text style={{ marginLeft: 8, fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>{item.label}:</Text>
+              <Text style={{ marginLeft: 8, fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>{item.value}</Text>
             </View>
           ))}
-          <View className="p-2 m-2 bg-opacity-20 rounded-2xl" style={{ backgroundColor: Colorizer(selectedImage.primary, 0.2) }}>
-            <View className="p-2 m-0.5 rounded-t-2xl" style={{ backgroundColor: Colorizer(selectedImage.tertiary, 0.2) }}>
-              <Text className="ml-2 text-xl" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
-                Environment:
-              </Text>
-              <Text className="ml-2" style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 0.4) }}>
-                {parsedData.environment_prompt}
-              </Text>
+          <View
+            className="p-2 m-2 rounded-2xl"
+            style={{
+              backgroundColor: Colorizer(selectedImage.primary, 0.2)
+            }}
+          >
+            <View
+              className="p-2 m-0.5 rounded-t-2xl"
+              style={{
+                backgroundColor: Colorizer(selectedImage.tertiary, 0.2)
+              }}
+            >
+              <Text style={{ marginLeft: 8, fontSize: 20, fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>Environment:</Text>
+              <Text style={{ marginLeft: 8, fontFamily: "Kurale", color: Colorizer("#FFFFFF", 0.4) }}>{parsedData.environment_prompt}</Text>
             </View>
-            <View className="p-2 m-0.5 rounded-b-2xl" style={{ backgroundColor: Colorizer(selectedImage.tertiary, 0.2) }}>
-              <Text className="ml-2 mt-2 text-xl" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
-                Moral:
-              </Text>
-              <Text className="ml-2" style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 0.4) }}>
-                {parsedData.environment_moral}
-              </Text>
+            <View
+              className="p-2 m-0.5 rounded-b-2xl"
+              style={{
+                backgroundColor: Colorizer(selectedImage.tertiary, 0.2)
+              }}
+            >
+              <Text style={{ marginLeft: 8, marginTop: 8, fontSize: 20, fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>Moral:</Text>
+              <Text style={{ marginLeft: 8, fontFamily: "Kurale", color: Colorizer("#FFFFFF", 0.4) }}>{parsedData.environment_moral}</Text>
             </View>
           </View>
           <DownloadButton onDownload={downloadAndSaveImage} colors={{ primary: selectedImage.primary, secondary: selectedImage.primary, tertiary: selectedImage.primary }} />
@@ -316,12 +402,12 @@ const DownloadScreen = () => {
       </ScrollView>
       <Footer />
       <Modal visible={isFullScreen} transparent={false} onRequestClose={() => setIsFullScreen(false)} presentationStyle="fullScreen" statusBarTranslucent>
-        <View style={{ backgroundColor: Colorizer("#0A0A0A", 1.0) }} className="flex-1">
-          <TouchableOpacity onPress={() => setIsFullScreen(false)} className="absolute top-14 left-8 z-10">
+        <View style={{ flex: 1, backgroundColor: Colorizer("#0A0A0A", 1.0) }}>
+          <TouchableOpacity onPress={() => setIsFullScreen(false)} style={{ position: "absolute", top: 56, left: 32, zIndex: 10 }}>
             <FontAwesome5 name="times" size={50} color={Colorizer("#FFFFFF", 1.0)} />
           </TouchableOpacity>
-          <ScrollView horizontal={true} contentContainerStyle={{ justifyContent: "center", alignItems: "center", flexGrow: 1 }} className="">
-            <Image className="h-full" source={{ uri: selectedImage.previewLink.replace("lowRes", "highRes") }} alt="image" resizeMode="contain" style={{ aspectRatio: 16 / 9 }} />
+          <ScrollView horizontal={true} contentContainerStyle={{ justifyContent: "center", alignItems: "center", flexGrow: 1 }}>
+            <Image style={{ height: "100%", aspectRatio: 16 / 9 }} alt="image" source={{ uri: selectedImage.previewLink.replace("lowRes", "highRes") }} resizeMode="contain" />
           </ScrollView>
         </View>
       </Modal>
