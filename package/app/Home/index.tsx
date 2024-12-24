@@ -80,7 +80,6 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
     const interval = setInterval(updateNextImage, 4000);
     return () => clearInterval(interval);
   }, [updateNextImage]);
-
   return (
     <View style={{ backgroundColor: Colorizer(currentColors[0], 0.2), borderColor: Colorizer(currentColors[0], 1.0), borderWidth: 1 }} className="rounded-3xl overflow-hidden">
       <Link
@@ -141,7 +140,7 @@ const AlphabetGroup: React.FC<AlphabetGroupProps> = memo(({ title, items }) => {
   }, [bounce]);
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ translateY: bounce.value }] }));
   return (
-    <View className="bg-[#1b1b1b] m-1 p-1 rounded-l-3xl">
+    <View className="bg-[#1b1b1b] m-1 p-1 pb-2 rounded-l-[30px] border-t border-b border-l border-white/50">
       <View className="flex-row m-4">
         <Animated.View style={animatedStyle}>
           <FontAwesome5 name="layer-group" size={28} color={Colorizer("#FFFFFF", 1.0)} className="mr-2" />
@@ -164,8 +163,8 @@ AlphabetGroup.displayName = "AlphabetGroup";
 // ==============================================(picBook™)==============================================
 // ==============================================(picBook™)==============================================
 const CategoryButton: React.FC<CategoryButtonProps> = memo(({ category }) => (
-  <TouchableOpacity className="px-4 py-2 bg-white rounded-xl mx-0.5" activeOpacity={0.7} onPress={() => console.log(`Selected category: ${category}`)}>
-    <Text style={{ fontFamily: "Kurale" }} className="text-black text-sm font-medium">
+  <TouchableOpacity style={{ backgroundColor: Colorizer("#FFFFFF", 1.0) }} className="px-4 py-2 rounded-lg mx-1" activeOpacity={0.7} onPress={() => console.log(`Selected category: ${category}`)}>
+    <Text style={{ fontFamily: "Kurale" }} className="text-black text-sm font-bold">
       {category}
     </Text>
   </TouchableOpacity>

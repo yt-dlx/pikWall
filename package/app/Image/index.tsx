@@ -31,7 +31,8 @@ const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () =>
     <View className="absolute inset-0 justify-center items-center">
       <Animated.View style={[{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: Colorizer("#0A0A0A", 0.5) }, backdropStyle]} />
       <Animated.View style={[{ backgroundColor: Colorizer("#FFFFFF", 1.0), borderRadius: 10, padding: 20, justifyContent: "center", alignItems: "center", width: "80%" }, modalStyle]} className="shadow-lg">
-        <Ionicons name="checkmark-done-circle" size={50} color={Colorizer("#28a745", 1.0)} /> <Text style={{ fontSize: 24, fontWeight: "bold", marginTop: 10 }}>Success</Text>
+        <Ionicons name="checkmark-done-circle" size={50} color={Colorizer("#28a745", 1.0)} />
+        <Text style={{ fontSize: 24, fontWeight: "bold", marginTop: 10 }}>Success</Text>
         <Text style={{ textAlign: "center", marginVertical: 10 }}>{message}</Text>
         <TouchableOpacity style={{ backgroundColor: Colorizer("#007BFF", 1.0), paddingVertical: 10, paddingHorizontal: 20, borderRadius: 5, marginTop: 10 }} onPress={onClose} className="mt-2">
           <Text style={{ color: Colorizer("#FFFFFF", 1.0) }}>OK</Text>
@@ -60,7 +61,8 @@ const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => v
     <View className="absolute inset-0 justify-center items-center">
       <Animated.View style={[{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "rgba(0, 0, 0, 0.5)" }, backdropStyle]} />
       <Animated.View style={[{ backgroundColor: Colorizer("#FFFFFF", 1.0), borderRadius: 10, padding: 20, justifyContent: "center", alignItems: "center", width: "80%" }, modalStyle]} className="shadow-lg">
-        <MaterialIcons name="error" size={50} color={Colorizer("#dc3545", 1.0)} /> <Text style={{ fontSize: 24, fontWeight: "bold", marginTop: 10 }}>Error</Text>
+        <MaterialIcons name="error" size={50} color={Colorizer("#dc3545", 1.0)} />
+        <Text style={{ fontSize: 24, fontWeight: "bold", marginTop: 10 }}>Error</Text>
         <Text style={{ textAlign: "center", marginVertical: 10 }}>{message}</Text>
         <TouchableOpacity style={{ backgroundColor: Colorizer("#007BFF", 1.0), paddingVertical: 10, paddingHorizontal: 20, borderRadius: 5, marginTop: 10 }} onPress={onClose} className="mt-2">
           <Text style={{ color: Colorizer("#FFFFFF", 1.0) }}>OK</Text>
@@ -176,7 +178,7 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
           }}
         />
       </View>
-      <TouchableOpacity onPress={onViewFullScreen} activeOpacity={0.8} className="absolute bottom-5 right-5 py-2 px-4 rounded-full z-50" style={{ backgroundColor: Colorizer(selectedImage.primary, 0.8) }}>
+      <TouchableOpacity onPress={onViewFullScreen} activeOpacity={0.8} className="absolute bottom-5 right-5 py-2 px-4 rounded-full z-50" style={{ backgroundColor: Colorizer(selectedImage.primary, 0.5) }}>
         <Text className="text-white text-base" style={{ fontFamily: "Kurale" }}>
           View FullScreen
         </Text>
@@ -195,11 +197,11 @@ const DownloadButton: React.FC<{ onDownload?: (event: GestureResponderEvent) => 
   return (
     <TouchableOpacity onPress={onDownload} activeOpacity={0.8} className="m-2 rounded-2xl overflow-hidden" style={{ backgroundColor: Colorizer(colors.primary, 0.4) }}>
       <Animated.View className="p-3 flex-row items-center justify-center" style={animatedStyle}>
-        <Text className="text-base font-bold" style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 1.0) }}>
+        <Text className="text-base" style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 1.0) }}>
           Download Wallpaper
         </Text>
         <FontAwesome5 name="download" size={15} color={Colorizer("#FFFFFF", 1.0)} className="m-2" />
-        <Text className="text-base font-bold" style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 1.0) }}>
+        <Text className="text-base" style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 1.0) }}>
           (Highest Quality)
         </Text>
       </Animated.View>
@@ -298,18 +300,22 @@ const DownloadScreen = () => {
             </View>
           ))}
           <View className="p-2 m-2 bg-opacity-20 rounded-2xl" style={{ backgroundColor: Colorizer(selectedImage.primary, 0.2) }}>
-            <Text className="ml-2 text-lg" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
-              Environment:
-            </Text>
-            <Text className="ml-2" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
-              {parsedData.environment_prompt}
-            </Text>
-            <Text className="ml-2 mt-2 text-lg" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
-              Moral:
-            </Text>
-            <Text className="ml-2" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
-              {parsedData.environment_moral}
-            </Text>
+            <View className="p-2 m-0.5 rounded-t-2xl " style={{ backgroundColor: Colorizer(selectedImage.tertiary, 0.2) }}>
+              <Text className="ml-2 text-xl" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
+                Environment:
+              </Text>
+              <Text className="ml-2" style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 0.4) }}>
+                {parsedData.environment_prompt}
+              </Text>
+            </View>
+            <View className="p-2 m-0.5 rounded-b-2xl " style={{ backgroundColor: Colorizer(selectedImage.tertiary, 0.2) }}>
+              <Text className="ml-2 mt-2 text-xl" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
+                Moral:
+              </Text>
+              <Text className="ml-2" style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 0.4) }}>
+                {parsedData.environment_moral}
+              </Text>
+            </View>
           </View>
           <DownloadButton onDownload={downloadAndSaveImage} colors={{ primary: selectedImage.primary, secondary: selectedImage.primary, tertiary: selectedImage.primary }} />
         </View>
