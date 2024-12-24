@@ -164,7 +164,7 @@ AlphabetGroup.displayName = "AlphabetGroup";
 // ==============================================(picBook™)==============================================
 const CategoryButton: React.FC<CategoryButtonProps> = memo(({ category }) => (
   <TouchableOpacity style={{ backgroundColor: Colorizer("#FFFFFF", 1.0) }} className="px-4 py-2 rounded-lg mx-1" activeOpacity={0.7} onPress={() => console.log(`Selected category: ${category}`)}>
-    <Text style={{ fontFamily: "Kurale" }} className="text-black text-sm font-bold">
+    <Text style={{ fontFamily: "Kurale", color: Colorizer("#000000", 1.0) }} className="text-black text-sm font-bold">
       {category}
     </Text>
   </TouchableOpacity>
@@ -178,7 +178,7 @@ const HeaderComponent: React.FC = memo(() => (
     <View className="p-4">
       <View className="flex-row items-center justify-center">
         <FontAwesome name="wpexplorer" size={28} color={Colorizer("#FFFFFF", 1.0)} className="mr-2" />
-        <Text style={{ fontFamily: "Kurale" }} className="text-3xl font-bold text-gray-100">
+        <Text style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 1.0) }} className="text-3xl font-bold text-gray-100">
           Explore Our Collection
         </Text>
         <Ionicons name="images-outline" size={28} color={Colorizer("#FFFFFF", 1.0)} className="ml-2" />

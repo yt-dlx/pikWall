@@ -12,7 +12,6 @@ import { FontAwesome5, MaterialIcons, Ionicons } from "@expo/vector-icons";
 import { useSharedValue, useAnimatedStyle, withRepeat, withSequence, withTiming, Easing } from "react-native-reanimated";
 import { ScrollView, View, Text, Dimensions, StatusBar, ActivityIndicator, Image, TouchableOpacity, Alert, Animated, GestureResponderEvent, Modal } from "react-native";
 // ==============================================(picBook™)==============================================
-// ==============================================(picBook™)==============================================
 const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () => void }> = ({ visible, message, onClose }) => {
   const modalOpacity = useSharedValue(0);
   const modalScale = useSharedValue(0.8);
@@ -32,16 +31,15 @@ const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () =>
       <Animated.View style={[{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: Colorizer("#0A0A0A", 0.5) }, backdropStyle]} />
       <Animated.View style={[{ backgroundColor: Colorizer("#FFFFFF", 1.0), borderRadius: 10, padding: 20, justifyContent: "center", alignItems: "center", width: "80%" }, modalStyle]} className="shadow-lg">
         <Ionicons name="checkmark-done-circle" size={50} color={Colorizer("#28a745", 1.0)} />
-        <Text style={{ fontSize: 24, fontWeight: "bold", marginTop: 10 }}>Success</Text>
-        <Text style={{ textAlign: "center", marginVertical: 10 }}>{message}</Text>
+        <Text style={{ fontSize: 24, fontWeight: "bold", marginTop: 10, fontFamily: "Kurale" }}>Success</Text>
+        <Text style={{ textAlign: "center", marginVertical: 10, fontFamily: "Kurale" }}>{message}</Text>
         <TouchableOpacity style={{ backgroundColor: Colorizer("#007BFF", 1.0), paddingVertical: 10, paddingHorizontal: 20, borderRadius: 5, marginTop: 10 }} onPress={onClose} className="mt-2">
-          <Text style={{ color: Colorizer("#FFFFFF", 1.0) }}>OK</Text>
+          <Text style={{ color: Colorizer("#FFFFFF", 1.0), fontFamily: "Kurale" }}>OK</Text>
         </TouchableOpacity>
       </Animated.View>
     </View>
   ) : null;
 };
-// ==============================================(picBook™)==============================================
 // ==============================================(picBook™)==============================================
 const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => void }> = ({ visible, message, onClose }) => {
   const modalOpacity = useSharedValue(0);
@@ -59,19 +57,18 @@ const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => v
   const modalStyle = useAnimatedStyle(() => ({ opacity: modalOpacity.value, transform: [{ scale: modalScale.value }] }));
   return visible ? (
     <View className="absolute inset-0 justify-center items-center">
-      <Animated.View style={[{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "rgba(0, 0, 0, 0.5)" }, backdropStyle]} />
+      <Animated.View style={[{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: Colorizer("#000000", 0.5) }, backdropStyle]} />
       <Animated.View style={[{ backgroundColor: Colorizer("#FFFFFF", 1.0), borderRadius: 10, padding: 20, justifyContent: "center", alignItems: "center", width: "80%" }, modalStyle]} className="shadow-lg">
         <MaterialIcons name="error" size={50} color={Colorizer("#dc3545", 1.0)} />
-        <Text style={{ fontSize: 24, fontWeight: "bold", marginTop: 10 }}>Error</Text>
-        <Text style={{ textAlign: "center", marginVertical: 10 }}>{message}</Text>
+        <Text style={{ fontSize: 24, fontWeight: "bold", marginTop: 10, fontFamily: "Kurale" }}>Error</Text>
+        <Text style={{ textAlign: "center", marginVertical: 10, fontFamily: "Kurale" }}>{message}</Text>
         <TouchableOpacity style={{ backgroundColor: Colorizer("#007BFF", 1.0), paddingVertical: 10, paddingHorizontal: 20, borderRadius: 5, marginTop: 10 }} onPress={onClose} className="mt-2">
-          <Text style={{ color: Colorizer("#FFFFFF", 1.0) }}>OK</Text>
+          <Text style={{ color: Colorizer("#FFFFFF", 1.0), fontFamily: "Kurale" }}>OK</Text>
         </TouchableOpacity>
       </Animated.View>
     </View>
   ) : null;
 };
-// ==============================================(picBook™)==============================================
 // ==============================================(picBook™)==============================================
 const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloadRate: number; eta: number; primaryColor: string }> = ({ visible, percentage, downloadRate, eta, primaryColor }) => {
   const formatBytes = (bytes: number): string => {
@@ -101,10 +98,10 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
       />
       <View className="bg-white rounded-lg p-5 justify-center items-center shadow-lg">
         <ActivityIndicator size="large" color={Colorizer(primaryColor, 1.0)} />
-        <Text className="text-lg mt-3" style={{ color: Colorizer(primaryColor, 1.0) }}>
+        <Text className="text-lg mt-3" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Kurale" }}>
           Downloading...
         </Text>
-        <Text className="mt-2 text-base" style={{ color: Colorizer(primaryColor, 1.0) }}>
+        <Text className="mt-2 text-base" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Kurale" }}>
           {percentage.toFixed(2)}%
         </Text>
         <View style={{ width: "80%", height: 10, borderRadius: 5, overflow: "hidden", marginTop: 10 }}>
@@ -112,12 +109,12 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
         </View>
         <View className="flex-row mt-4">
           <View className="flex-1 items-center">
-            <Text className="text-sm" style={{ color: Colorizer(primaryColor, 1.0) }}>
+            <Text className="text-sm" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Kurale" }}>
               Rate: {formatBytes(downloadRate)}/s
             </Text>
           </View>
           <View className="flex-1 items-center">
-            <Text className="text-sm" style={{ color: Colorizer(primaryColor, 1.0) }}>
+            <Text className="text-sm" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Kurale" }}>
               ETA: {formatTime(eta)}
             </Text>
           </View>
@@ -126,7 +123,6 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
     </View>
   ) : null;
 };
-// ==============================================(picBook™)==============================================
 // ==============================================(picBook™)==============================================
 const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number; onViewFullScreen: () => void }> = ({ selectedImage, screenWidth, onViewFullScreen }) => {
   const [imageLoading, setImageLoading] = useState(true);
@@ -157,7 +153,7 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
       </View>
       <View className="rounded-t-2xl overflow-hidden elevation-4">
         {imageLoading && (
-          <View className="justify-center items-center bg-[#0A0A0A]" style={{ height: imageHeight }}>
+          <View className="justify-center items-center" style={{ backgroundColor: Colorizer("#0A0A0A", 1.0), height: imageHeight }}>
             <ActivityIndicator size="large" color={Colorizer(selectedImage.primary, 1.0)} />
             <Text className="mt-2.5" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
               Loading HD Image Preview...
@@ -187,7 +183,6 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
   );
 };
 // ==============================================(picBook™)==============================================
-// ==============================================(picBook™)==============================================
 const DownloadButton: React.FC<{ onDownload?: (event: GestureResponderEvent) => void; colors: { primary: string; secondary: string; tertiary: string } }> = ({ onDownload, colors }) => {
   const scale = useSharedValue(1);
   useEffect(() => {
@@ -208,7 +203,6 @@ const DownloadButton: React.FC<{ onDownload?: (event: GestureResponderEvent) => 
     </TouchableOpacity>
   );
 };
-// ==============================================(picBook™)==============================================
 // ==============================================(picBook™)==============================================
 const DownloadScreen = () => {
   const params = useLocalSearchParams();
@@ -276,11 +270,11 @@ const DownloadScreen = () => {
     }
   };
   return (
-    <View className="flex-1 bg-[#0A0A0A]">
+    <View className="flex-1" style={{ backgroundColor: Colorizer("#0A0A0A", 1.0) }}>
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
       <ScrollView className="flex-1" contentContainerStyle={{ paddingBottom: 20 }}>
         <PreviewImage selectedImage={selectedImage} screenWidth={screenWidth} onViewFullScreen={() => setIsFullScreen(true)} />
-        <View className="p-4 m-3 mt-2.5 border-2 rounded-3xl bg-[#111111]" style={{ borderColor: Colorizer(selectedImage.primary, 1.0) }}>
+        <View className="p-4 m-3 mt-2.5 border-2 rounded-3xl" style={{ borderColor: Colorizer(selectedImage.primary, 1.0), backgroundColor: Colorizer("#111111", 1.0) }}>
           <Text className="mb-2 text-4xl" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
             {selectedImage.original_file_name.replace(".jpg", "")}
           </Text>
@@ -290,7 +284,7 @@ const DownloadScreen = () => {
             { label: "Dimensions", value: `${selectedImage.width} x ${selectedImage.height}` }
           ].map((item, index) => (
             <View key={index} className="flex-row items-center my-1">
-              <FontAwesome5 name={index === 0 ? "adjust" : index === 1 ? "file-alt" : "ruler-combined"} size={16} className="ml-1" color={selectedImage.primary} />
+              <FontAwesome5 name={index === 0 ? "adjust" : index === 1 ? "file-alt" : "ruler-combined"} size={16} className="ml-1" color={Colorizer(selectedImage.primary, 1.0)} />
               <Text className="ml-2" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
                 {item.label}:
               </Text>
@@ -300,7 +294,7 @@ const DownloadScreen = () => {
             </View>
           ))}
           <View className="p-2 m-2 bg-opacity-20 rounded-2xl" style={{ backgroundColor: Colorizer(selectedImage.primary, 0.2) }}>
-            <View className="p-2 m-0.5 rounded-t-2xl " style={{ backgroundColor: Colorizer(selectedImage.tertiary, 0.2) }}>
+            <View className="p-2 m-0.5 rounded-t-2xl" style={{ backgroundColor: Colorizer(selectedImage.tertiary, 0.2) }}>
               <Text className="ml-2 text-xl" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
                 Environment:
               </Text>
@@ -308,7 +302,7 @@ const DownloadScreen = () => {
                 {parsedData.environment_prompt}
               </Text>
             </View>
-            <View className="p-2 m-0.5 rounded-b-2xl " style={{ backgroundColor: Colorizer(selectedImage.tertiary, 0.2) }}>
+            <View className="p-2 m-0.5 rounded-b-2xl" style={{ backgroundColor: Colorizer(selectedImage.tertiary, 0.2) }}>
               <Text className="ml-2 mt-2 text-xl" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
                 Moral:
               </Text>
@@ -322,7 +316,7 @@ const DownloadScreen = () => {
       </ScrollView>
       <Footer />
       <Modal visible={isFullScreen} transparent={false} onRequestClose={() => setIsFullScreen(false)} presentationStyle="fullScreen" statusBarTranslucent>
-        <View className="flex-1 bg-black">
+        <View style={{ backgroundColor: Colorizer("#0A0A0A", 1.0) }} className="flex-1">
           <TouchableOpacity onPress={() => setIsFullScreen(false)} className="absolute top-14 left-8 z-10">
             <FontAwesome5 name="times" size={50} color={Colorizer("#FFFFFF", 1.0)} />
           </TouchableOpacity>

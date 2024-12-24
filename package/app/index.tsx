@@ -43,7 +43,7 @@ const AnimatedTitle: React.FC = () => {
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
   return (
     <Animated.View style={animatedStyle} className="items-center">
-      <View className="bg-black/60 rounded-full p-2">
+      <View style={{ backgroundColor: Colorizer("#0A0A0A", 0.5) }} className="rounded-full p-2">
         <Image source={require("@/assets/picbook/white_nobg_1024.png")} alt="logo" className="w-56 h-56 border-2 border-white rounded-full" resizeMode="contain" />
       </View>
     </Animated.View>
@@ -53,7 +53,7 @@ const AnimatedTitle: React.FC = () => {
 // ==============================================(picBook™)==============================================
 const IndexPage: React.FC = () => {
   return (
-    <View className="h-full w-full bg-black">
+    <View style={{ backgroundColor: Colorizer("#0A0A0A", 1.0) }} className="h-full w-full">
       <View className="flex-1 justify-center items-center relative">
         <View className="flex-row h-full overflow-hidden relative">
           {imageSets.map((images, slotIndex) => (
@@ -62,16 +62,22 @@ const IndexPage: React.FC = () => {
           <LinearGradient colors={["#0A0A0A", "transparent", "transparent", "#0A0A0A"]} locations={[0, 0.2, 0.8, 1]} className="absolute inset-0" />
           <View className="absolute inset-0 flex items-center justify-center">
             <AnimatedTitle />
-            <Text className="text-8xl font-black text-white tracking-tight">picBook™</Text>
-            <View className="flex-row items-center mt-4 bg-black px-4 py-2 rounded-full">
+            <Text style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 1.0) }} className="text-8xl tracking-tight">
+              picBook™
+            </Text>
+            <View style={{ backgroundColor: Colorizer("#0A0A0A", 1.0) }} className="flex-row items-center mt-4 px-4 py-2 rounded-full">
               <View className="w-2 h-2 rounded-full bg-white mr-2 animate-pulse" />
-              <Text className="text-sm text-white font-semibold">Crafted with imagination and stories</Text>
+              <Text style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 1.0) }} className="text-sm">
+                Crafted with imagination and stories
+              </Text>
             </View>
             <Link href="./Home" asChild>
               <TouchableOpacity className="mt-8 rounded-xl overflow-hidden shadow-lg">
                 <LinearGradient colors={["rgba(255,255,255,0.95)", "rgba(255,255,255,1)"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={{ borderRadius: 40 }} className="flex-row items-center justify-center px-14 py-4">
                   <MaterialIcons name="photo-camera" size={24} color={Colorizer("#0A0A0A", 1.0)} className="mr-2" />
-                  <Text className="text-lg font-bold text-black">Start Exploring</Text>
+                  <Text style={{ fontFamily: "Kurale", color: Colorizer("#0A0A0A", 1.0) }} className="text-lg">
+                    Start Exploring
+                  </Text>
                 </LinearGradient>
               </TouchableOpacity>
             </Link>
