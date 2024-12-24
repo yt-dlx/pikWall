@@ -11,7 +11,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { FontAwesome5, MaterialIcons, Ionicons } from "@expo/vector-icons";
 import { useSharedValue, useAnimatedStyle, withRepeat, withSequence, withTiming, Easing } from "react-native-reanimated";
 import { ScrollView, View, Text, Dimensions, StatusBar, ActivityIndicator, Image, TouchableOpacity, Alert, Animated, GestureResponderEvent, Modal } from "react-native";
-// ==============================================(picBook™)==============================================
+// ============================================================================================
 const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () => void }> = ({ visible, message, onClose }) => {
   const modalOpacity = useSharedValue(0);
   const modalScale = useSharedValue(0.8);
@@ -66,7 +66,7 @@ const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () =>
     </View>
   ) : null;
 };
-// ==============================================(picBook™)==============================================
+// ============================================================================================
 const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => void }> = ({ visible, message, onClose }) => {
   const modalOpacity = useSharedValue(0);
   const modalScale = useSharedValue(0.8);
@@ -121,7 +121,7 @@ const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => v
     </View>
   ) : null;
 };
-// ==============================================(picBook™)==============================================
+// ============================================================================================
 const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloadRate: number; eta: number; primaryColor: string }> = ({ visible, percentage, downloadRate, eta, primaryColor }) => {
   const formatBytes = (bytes: number): string => {
     if (bytes === 0) return "0 Bytes";
@@ -184,7 +184,7 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
     </View>
   ) : null;
 };
-// ==============================================(picBook™)==============================================
+// ============================================================================================
 const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number; onViewFullScreen: () => void }> = ({ selectedImage, screenWidth, onViewFullScreen }) => {
   const [imageLoading, setImageLoading] = useState(true);
   const aspectRatio = selectedImage.width / selectedImage.height;
@@ -256,7 +256,7 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
     </View>
   );
 };
-// ==============================================(picBook™)==============================================
+// ============================================================================================
 const DownloadButton: React.FC<{ onDownload?: (event: GestureResponderEvent) => void; colors: { primary: string; secondary: string; tertiary: string } }> = ({ onDownload, colors }) => {
   const scale = useSharedValue(1);
   useEffect(() => {
@@ -273,7 +273,7 @@ const DownloadButton: React.FC<{ onDownload?: (event: GestureResponderEvent) => 
     </TouchableOpacity>
   );
 };
-// ==============================================(picBook™)==============================================
+// ============================================================================================
 const DownloadScreen = () => {
   const params = useLocalSearchParams();
   const [eta, setEta] = useState<number>(0);

@@ -11,7 +11,7 @@ import { View, Text, TouchableOpacity, Image, FlatList, ScrollView, ListRenderIt
 import Animated, { useAnimatedStyle, useSharedValue, withTiming, withRepeat, withSequence } from "react-native-reanimated";
 import { SubImageProps, SubImagesProps, CardTextProps, CardProps, AlphabetGroupProps, CategoryButtonProps, GroupedData } from "@/types/components";
 
-// ==============================================(picBook™)==============================================
+// ============================================================================================
 const SubImage: React.FC<SubImageProps> = memo(({ image, index, onImagePress, environmentData }) => (
   <Link
     href={{
@@ -57,9 +57,9 @@ const SubImage: React.FC<SubImageProps> = memo(({ image, index, onImagePress, en
   </Link>
 ));
 SubImage.displayName = "SubImage";
-// ==============================================(picBook™)==============================================
+// ============================================================================================
 
-// ==============================================(picBook™)==============================================
+// ============================================================================================
 const SubImages: React.FC<SubImagesProps> = memo(({ images, onImagePress }) => (
   <View className="flex flex-col justify-start p-1 space-y-1">
     {images.data.slice(0, 4).map((image, index) => (
@@ -68,9 +68,9 @@ const SubImages: React.FC<SubImagesProps> = memo(({ images, onImagePress }) => (
   </View>
 ));
 SubImages.displayName = "SubImages";
-// ==============================================(picBook™)==============================================
+// ============================================================================================
 
-// ==============================================(picBook™)==============================================
+// ============================================================================================
 const CardText: React.FC<CardTextProps> = memo(({ data, currentIndex }) => {
   const colors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
   return (
@@ -81,9 +81,9 @@ const CardText: React.FC<CardTextProps> = memo(({ data, currentIndex }) => {
   );
 });
 CardText.displayName = "CardText";
-// ==============================================(picBook™)==============================================
+// ============================================================================================
 
-// ==============================================(picBook™)==============================================
+// ============================================================================================
 const Card: React.FC<CardProps> = memo(({ data }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [currentImage, setCurrentImage] = useState<string>(data.images[0]?.previewLink);
@@ -205,9 +205,9 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
   );
 });
 Card.displayName = "Card";
-// ==============================================(picBook™)==============================================
+// ============================================================================================
 
-// ==============================================(picBook™)==============================================
+// ============================================================================================
 const AlphabetGroup: React.FC<AlphabetGroupProps> = memo(({ title, items }) => {
   const bounce = useSharedValue(0);
   useEffect(() => {
@@ -249,9 +249,9 @@ const AlphabetGroup: React.FC<AlphabetGroupProps> = memo(({ title, items }) => {
   );
 });
 AlphabetGroup.displayName = "AlphabetGroup";
-// ==============================================(picBook™)==============================================
+// ============================================================================================
 
-// ==============================================(picBook™)==============================================
+// ============================================================================================
 const CategoryButton: React.FC<CategoryButtonProps> = memo(({ category }) => (
   <TouchableOpacity style={{ backgroundColor: Colorizer("#FFFFFF", 1.0) }} className="px-4 py-2 rounded-lg mx-1" activeOpacity={0.7} onPress={() => console.log(`Selected category: ${category}`)}>
     <Text
@@ -266,9 +266,9 @@ const CategoryButton: React.FC<CategoryButtonProps> = memo(({ category }) => (
   </TouchableOpacity>
 ));
 CategoryButton.displayName = "CategoryButton";
-// ==============================================(picBook™)==============================================
+// ============================================================================================
 
-// ==============================================(picBook™)==============================================
+// ============================================================================================
 const HeaderComponent: React.FC = memo(() => (
   <>
     <HeaderAnimate />
@@ -295,9 +295,9 @@ const HeaderComponent: React.FC = memo(() => (
   </>
 ));
 HeaderComponent.displayName = "HeaderComponent";
-// ==============================================(picBook™)==============================================
+// ============================================================================================
 
-// ==============================================(picBook™)==============================================
+// ============================================================================================
 const HomePage = (): JSX.Element => {
   const [groupedData, setGroupedData] = useState<GroupedData>({});
   const [searchQuery] = useState<string>("");

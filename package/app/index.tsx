@@ -11,8 +11,8 @@ import { LinearGradient } from "expo-linear-gradient";
 import { Image, TouchableOpacity } from "react-native";
 import { ScrollingSlotProps } from "@/types/components";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence, withDelay } from "react-native-reanimated";
-// ==============================================(picBook™)==============================================
-// ==============================================(picBook™)==============================================
+// ============================================================================================
+// ============================================================================================
 const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay }) => {
   const imageHeight = 144;
   const totalHeight = images.length * imageHeight;
@@ -38,8 +38,8 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
     </View>
   );
 };
-// ==============================================(picBook™)==============================================
-// ==============================================(picBook™)==============================================
+// ============================================================================================
+// ============================================================================================
 const AnimatedTitle: React.FC = () => {
   const scale = useSharedValue(0.95);
   useEffect(() => {
@@ -58,8 +58,8 @@ const AnimatedTitle: React.FC = () => {
     </Animated.View>
   );
 };
-// ==============================================(picBook™)==============================================
-// ==============================================(picBook™)==============================================
+// ============================================================================================
+// ============================================================================================
 const IndexPage: React.FC = () => {
   return (
     <View style={{ backgroundColor: Colorizer("#0A0A0A", 1.0) }} className="h-full w-full">
