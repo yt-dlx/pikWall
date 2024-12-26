@@ -1,36 +1,36 @@
 ===========================================================
 Title: Golden Beach Sunrise  
-Prompt: a serene beach at sunrise, with soft golden light reflecting off gentle wavesInclude footprints in the sand to add a sense of life and tranquility 
+Prompt: a serene beach at sunrise, with soft golden light reflecting off gentle waves. Include footprints in the sand to add a sense of life and tranquility 
 ===========================================================
 Title: Misty Mountain Morning  
-Prompt: a peaceful mountain scene at dawn, with layers of mist rolling over the peaksUse soft light to highlight the lush greenery and create depth 
+Prompt: a peaceful mountain scene at dawn, with layers of mist rolling over the peaks. Use soft light to highlight the lush greenery and create depth 
 ===========================================================
 Title: Crystal Clear Lake  
-Prompt: a picturesque lake surrounded by vibrant autumn treesEnsure the still water perfectly reflects the vivid colors and clear sky 
+Prompt: a picturesque lake surrounded by vibrant autumn trees. Ensure the still water perfectly reflects the vivid colors and clear sky 
 ===========================================================
 Title: Vibrant Wildflowers  
 Prompt: a close-up of colorful wildflowers in a field, with soft sunlight enhancing their natural vibrancy and blurred greenery in the background 
 ===========================================================
 Title: Desert Serenity  
-Prompt: an expansive desert scene with golden sand dunes under a glowing orange sunsetInclude small details like footprints or a distant camel silhouette 
+Prompt: an expansive desert scene with golden sand dunes under a glowing orange sunset. Include small details like footprints or a distant camel silhouette 
 ===========================================================
 Title: Forest Pathway  
-Prompt: a lush forest pathway with sunlight streaming through tall treesAdd dappled light on the ground for a natural and calming effect 
+Prompt: a lush forest pathway with sunlight streaming through tall trees. Add dappled light on the ground for a natural and calming effect 
 ===========================================================
 Title: Northern Lights Magic  
 Prompt: a stunning night scene with vibrant green and purple auroras dancing across the sky, above a snow-covered landscape 
 ===========================================================
 Title: Tranquil Waterfall  
-Prompt: a serene waterfall in a dense jungle, with sunlight peeking through the foliageUse soft water flow and natural stone textures for a peaceful vibe 
+Prompt: a serene waterfall in a dense jungle, with sunlight peeking through the foliage. Use soft water flow and natural stone textures for a peaceful vibe 
 ===========================================================
 Title: Frozen Lake Beauty  
-Prompt: a frozen lake surrounded by snow-covered trees and mountainsAdd soft pink and blue hues of sunset to enhance the tranquil winter scene 
+Prompt: a frozen lake surrounded by snow-covered trees and mountains. Add soft pink and blue hues of sunset to enhance the tranquil winter scene 
 ===========================================================
 Title: Rolling Hills  
-Prompt: a landscape of rolling green hills under a clear blue skyInclude wildflowers and a small winding path for added interest 
+Prompt: a landscape of rolling green hills under a clear blue sky. Include wildflowers and a small winding path for added interest 
 ===========================================================
 Title: Vibrant City Nights  
-Prompt: a bustling city street at night, with neon signs reflecting off wet pavementEnsure sharp focus on glowing lights and blurred movement of people 
+Prompt: a bustling city street at night, with neon signs reflecting off wet pavement. Ensure sharp focus on glowing lights and blurred movement of people 
 ===========================================================
 Title: Rooftop Sunset  
 Prompt: an urban skyline view from a rooftop, with warm sunset tones highlighting the buildingsInclude soft clouds to add depth 

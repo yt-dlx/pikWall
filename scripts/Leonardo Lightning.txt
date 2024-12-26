@@ -1,6 +1,6 @@
 ===========================================================
 Title: Neon Skyline  
-Prompt: a futuristic city skyline illuminated by vibrant neon lights in shades of blue, pink, and greenInclude sleek skyscrapers with glowing windows and flying vehicles 
+Prompt: a futuristic city skyline illuminated by vibrant neon lights in shades of blue, pink, and green. Include sleek skyscrapers with glowing windows and flying vehicles 
 ===========================================================
 Title: Cyberpunk Alley  
 Prompt: a narrow alley in a cyberpunk city, with glowing signs, steam rising from vents, and reflections on wet pavementUse bold contrasts for a dynamic look 
