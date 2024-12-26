@@ -1,499 +1,150 @@
-===========================================================
-Title: Timeless Beauty  
-Prompt: a classic portrait with soft, diffused lighting on a black background. Focus on the subject’s serene expression and glowing skin, with subtle shadows accentuating the contours of the face. Add a slight vignette for a timeless and elegant aesthetic.  
-===========================================================
-Title: Elegant Simplicity  
-Prompt: a clean and minimalist portrait with the subject wearing white, against a plain beige background. Use soft, natural lighting to highlight facial details, emphasizing a sense of calm and purity. Ensure the background complements the subject without distraction.  
-===========================================================
-Title: Radiant Glow  
-Prompt: a portrait with warm golden hour lighting. The subject is smiling gently, bathed in a soft, radiant glow. Incorporate blurred floral elements in the foreground to add a dreamy and natural feel to the image.  
-===========================================================
-Title: The Thinker  
-Prompt: a thoughtful portrait of a person in a relaxed pose, resting their chin on one hand. Use muted lighting with a gradient backdrop, creating an intimate and contemplative atmosphere. Highlight subtle details, like the texture of the skin and the sparkle in the eyes.  
-===========================================================
-Title: Monochrome Grace  
-Prompt: a black-and-white portrait with high contrast. Emphasize sharp facial details and dramatic shadows, with the subject gazing directly into the lens. Use a plain black background to enhance the timeless and sophisticated appeal.  
-===========================================================
-Title: Vibrant Confidence  
-Prompt: a vibrant portrait with the subject against a colorful, gradient backdrop. Use bold lighting to emphasize facial contours, while ensuring the colors blend harmoniously to exude energy and confidence.  
-===========================================================
-Title: Delicate Balance  
-Prompt: Generate a portrait with soft pastel tones, focusing on the subject’s delicate features. Use side lighting to cast gentle shadows, creating depth and dimension. The background should have a soft blur effect to enhance the focus on the subject.  
-===========================================================
-Title: Artistic Flair  
-Prompt: a creative portrait with dramatic lighting and colorful streaks in the background. Incorporate light reflections and shadow play on the subject’s face, creating a dynamic and artistic composition.  
-===========================================================
-Title: Natural Serenity  
-Prompt: a natural outdoor portrait with the subject surrounded by soft greenery. Use warm lighting filtered through leaves, creating a calming interplay of light and shadow on the subject’s face.  
-===========================================================
-Title: Golden Elegance  
-Prompt: a portrait with golden tones, featuring the subject adorned in jewelry that catches the light. Use a rich, textured background to add depth, emphasizing luxury and refinement in the image.  
-===========================================================
-Title: Candid Smile  
-Prompt: a candid portrait of a person mid-laugh, with soft sunlight highlighting their features. Include blurred movement in the background to add a sense of spontaneity and liveliness to the composition.  
-===========================================================
-Title: Mystic Vibes  
-Prompt: a moody portrait with cool, muted tones and a dark background. Use a single light source to highlight one side of the subject’s face, creating an air of mystery and depth.  
-===========================================================
-Title: Urban Chic  
-Prompt: a modern portrait with the subject wearing sleek, urban attire against a blurred cityscape. Use natural lighting to emphasize sharp details, ensuring the background remains subtly dynamic yet non-distracting.  
-===========================================================
-Title: Subtle Emotions  
-Prompt: Generate a close-up portrait focusing on the subject’s eyes and subtle expression. Use soft, even lighting and a neutral background to evoke a sense of introspection and emotion.  
-===========================================================
-Title: Ethereal Beauty  
-Prompt: a glowing portrait with the subject surrounded by soft, white fabric. Incorporate gentle backlighting to create a halo effect, emphasizing an ethereal and angelic aesthetic.  
-===========================================================
-Title: Rustic Charm  
-Prompt: a portrait in a rustic outdoor setting, with warm tones and earthy colors. Highlight the subject’s features with natural sunlight, blending the background’s texture seamlessly into the composition.  
-===========================================================
-Title: Bold Contrast  
-Prompt: a striking portrait with dramatic lighting that emphasizes sharp contrasts between light and shadow. Use a dark background and bold makeup on the subject to add intensity and focus.  
-===========================================================
-Title: Youthful Joy  
-Prompt: a vibrant and playful portrait of a young person against a bright, cheerful background. Use dynamic lighting and colorful props to convey a sense of fun and energy.  
-===========================================================
-Title: Cultural Elegance  
-Prompt: a portrait of a person dressed in traditional attire, with intricate patterns and textures. Use soft, diffused lighting to emphasize the details of the fabric and the subject’s serene expression.  
-===========================================================
-Title: Poised Perfection  
-Prompt: a formal portrait of a subject in professional attire, against a neutral gray backdrop. Use soft lighting to highlight their confidence and sophistication, with subtle shadow details for depth.  
-===========================================================
-Title: Dreamy Hues  
-Prompt: a portrait with pastel lighting and a blurred gradient background. Use soft focus on the subject’s features to evoke a dreamy and whimsical atmosphere.  
-===========================================================
-Title: Nature’s Glow  
-Prompt: a portrait of a person standing in soft sunlight, surrounded by wildflowers. Use warm tones and a shallow depth of field to emphasize natural beauty and simplicity.  
-===========================================================
-Title: Bold Expression  
-Prompt: a creative portrait with vivid colors and dramatic lighting. Emphasize the subject’s confident expression and unique makeup, set against a textured backdrop.  
-===========================================================
-Title: Silhouette Drama  
-Prompt: Generate a silhouette portrait with the subject in profile, against a sunset gradient background. Use soft rim lighting to outline the features, adding mystery and elegance.  
-===========================================================
-Title: Glowing Portrait  
-Prompt: a high-contrast portrait with the subject illuminated by a single golden light. The background should remain dark, focusing entirely on the glowing subject.  
-===========================================================
-Title: Soft Minimalism  
-Prompt: a minimalist portrait with the subject against a plain, softly lit background. Focus on clean lines and simplicity, with a natural pose and serene expression.  
-===========================================================
-Title: Fiery Essence  
-Prompt: a vibrant portrait with warm red and orange tones. Incorporate subtle flames in the background to convey passion and intensity, while keeping the subject sharply in focus.  
-===========================================================
-Title: Calm Horizon  
-Prompt: Generate a peaceful portrait of a person standing against a blurred horizon, with soft blue and orange hues in the background. Use gentle lighting to emphasize tranquility.  
-===========================================================
-Title: Artistic Shadow Play  
-Prompt: a creative portrait with intricate shadows cast on the subject’s face by geometric patterns. Use strong lighting to highlight the interplay between light and shadow.  
-===========================================================
-Title: Regal Grace  
-Prompt: a royal-inspired portrait with the subject wearing elegant attire and a crown. Use soft, golden lighting to evoke a sense of power and sophistication.  
-===========================================================
-Title: Luminous Layers  
-Prompt: a layered portrait with subtle reflections or double exposure effects, blending the subject’s face with a vibrant abstract background.  
-===========================================================
-Title: Serene Monochrome  
-Prompt: Generate a grayscale portrait with soft lighting and subtle textures. Emphasize the subject’s calm and introspective expression for a timeless appeal.  
-===========================================================
-Title: Vibrant Pop  
-Prompt: a bold and colorful portrait with neon lights reflecting off the subject’s face. Use a dark background to enhance the vibrancy and energy of the colors.  
-===========================================================
-Title: Radiant Harmony  
-Prompt: a portrait with warm golden tones and soft shadows, focusing on the subject’s peaceful expression. Add subtle lens flares for a touch of elegance.  
-===========================================================
-Title: Abstract Glow  
-Prompt: a modern portrait with abstract shapes and glowing lines integrated into the background. Use cool tones to create a futuristic aesthetic.  
-===========================================================
-Title: Light and Shadow  
-Prompt: a dramatic portrait with the subject partially illuminated by a narrow beam of light. Emphasize sharp contrasts and a mysterious atmosphere.  
-===========================================================
-Title: Nature’s Serenity  
-Prompt: Generate an outdoor portrait with the subject surrounded by tall grass and soft, golden-hour light. Use a shallow depth of field to create a dreamy, natural composition.  
-===========================================================
-Title: Urban Night  
-Prompt: a moody portrait with the subject illuminated by streetlights and neon signs in an urban setting. Use bokeh effects to enhance the nighttime ambiance.  
-===========================================================
-Title: Morning Glow  
-Prompt: a warm portrait of a subject bathed in early morning sunlight. Include soft mist in the background for an ethereal and peaceful mood.  
-===========================================================
-Title: Golden Silhouette  
-Prompt: a silhouette portrait with the subject against a vibrant sunset. Highlight the golden rim light around the edges of the subject for added depth.  
-===========================================================
-Title: Enchanted Mist  
-Prompt: a mysterious portrait of a person surrounded by mist, with soft backlighting creating a glowing halo effect. Use cool tones to add an eerie touch.  
-===========================================================
-Title: Elegance in Red  
-Prompt: a dramatic portrait with the subject wearing a striking red outfit, set against a deep, textured background. Use soft lighting to highlight the boldness of the colors.  
-===========================================================
-Title: Light Fragments  
-Prompt: a unique portrait with fragmented light patterns reflecting on the subject’s face. Use soft tones to add an artistic, modern flair.  
-===========================================================
-Title: Pastel Serenity  
-Prompt: a portrait with a pastel gradient background, focusing on soft, natural features of the subject. Use diffused lighting to maintain a peaceful, harmonious vibe.  
-===========================================================
-Title: Ethereal Twilight  
-Prompt: a portrait of a person under a twilight sky, with a subtle glow highlighting their face. Include blurred stars in the background to evoke a dreamy, magical atmosphere.  
-===========================================================
-Title: Celestial Glow  
-Prompt: a portrait where the subject is bathed in soft celestial light. Use glowing orbs subtly floating in the background, with cool blue and silver tones. The composition should evoke a sense of wonder and mystery.  
-===========================================================
-Title: Desert Elegance  
-Prompt: a portrait of a person standing against a backdrop of golden sand dunes at sunset. The soft light enhances the subject’s features, while the warm tones of the desert create a harmonious and serene atmosphere.  
-===========================================================
-Title: Radiant Reflection  
-Prompt: Generate a portrait where the subject is holding a mirror, reflecting soft natural light onto their face. The blurred background contains soft floral elements to complement the dreamy and radiant feel.  
-===========================================================
-Title: Whimsical Breeze  
-Prompt: a portrait of a person with their hair flowing naturally in the wind. The backdrop is a blurred field of flowers, with soft lighting that enhances the carefree and whimsical mood.  
-===========================================================
-Title: Aurora Dreams  
-Prompt: a magical portrait with the subject standing under a vivid aurora borealis. Use cool tones of green and purple to complement the glowing sky, with the subject illuminated by a soft light.  
-===========================================================
-Title: Urban Glow  
-Prompt: a modern portrait with the subject lit by colorful neon signs in a city street. Add reflections of the lights on their face, emphasizing a vibrant and energetic urban vibe.  
-===========================================================
-Title: Classic Vintage  
-Prompt: Generate a vintage-inspired portrait with sepia tones. The subject wears classic attire, with soft lighting and subtle grain effects to evoke a nostalgic and timeless aesthetic.  
-===========================================================
-Title: Vibrant Blossoms  
-Prompt: a portrait of a person surrounded by vibrant cherry blossoms. Use warm natural lighting to enhance the pink hues and create a harmonious balance between the subject and the floral background.  
-===========================================================
-Title: Under the Stars  
-Prompt: a serene portrait of a person gazing upwards under a starlit sky. Use soft lighting on the subject’s face, with blurred constellations creating depth and a peaceful atmosphere.  
-===========================================================
-Title: Flowing Silk  
-Prompt: an elegant portrait of a person draped in flowing silk fabric, softly illuminated by diffused lighting. The fabric adds movement and grace to the composition, complementing the subject’s poised expression.  
-===========================================================
-Title: Serene Lakeside  
-Prompt: a portrait of a subject standing by a calm lake at dusk. The soft reflections on the water and warm tones of the sky enhance the tranquil and reflective atmosphere.  
-===========================================================
-Title: Midnight Glow  
-Prompt: Generate a moody portrait where the subject is illuminated by a single soft light source in a dark room. Subtle details in the background hint at mystery, while the lighting highlights the subject’s serene expression.  
-===========================================================
-Title: Enchanted Woods  
-Prompt: a portrait of a person standing in a dense forest, with soft sunlight streaming through the trees. Use warm tones and a shallow depth of field to evoke a magical, enchanting feel.  
-===========================================================
-Title: Bold Shadows  
-Prompt: a striking portrait with sharp, geometric shadows cast on the subject’s face. Use a neutral background and high-contrast lighting to create an artistic and modern effect.  
-===========================================================
-Title: Rustic Barn  
-Prompt: a portrait of a subject in a rustic barn setting. Use soft, warm lighting and earthy tones to create an inviting and nostalgic mood, with hay bales subtly blurred in the background.  
-===========================================================
-Title: Ethereal Petals  
-Prompt: a dreamy portrait where the subject is surrounded by falling petals. Use soft, diffused lighting and pastel tones to enhance the romantic and whimsical atmosphere.  
-===========================================================
-Title: Dramatic Silhouette  
-Prompt: Generate a silhouette portrait of a person standing against a vibrant horizon, with the sun setting behind them. Use soft rim lighting to define the subject’s shape and create a dramatic effect.  
-===========================================================
-Title: Ice Queen  
-Prompt: a striking portrait of a subject with icy blue tones and frosty textures in the background. Use soft lighting to highlight facial features, giving a regal and winter-inspired look.  
-===========================================================
-Title: Rainy Reflection  
-Prompt: a portrait of a person looking out through a rain-speckled window. Use soft lighting to create reflections, emphasizing a calm and introspective mood.  
-===========================================================
-Title: Coastal Breeze  
-Prompt: a portrait of a person standing on a rocky coast, with waves crashing in the background. Use warm natural lighting and soft focus to create a harmonious blend of energy and tranquility.  
-===========================================================
-Title: Radiant Gold  
-Prompt: Generate a glowing portrait with golden backlighting and warm tones. Incorporate subtle lens flares and soft shadows to highlight the subject’s features.  
-===========================================================
-Title: Cinematic Noir  
-Prompt: a noir-inspired portrait in black and white. Use dramatic lighting and a dark background to emphasize sharp contrasts and create a cinematic feel.  
-===========================================================
-Title: Mystic Veil  
-Prompt: a portrait of a person partially covered by a translucent veil, with soft light filtering through. The composition should evoke mystery and elegance, with subtle textures in the background.  
-===========================================================
-Title: Sunlit Meadow  
-Prompt: a portrait of a person standing in a sunlit meadow, with soft wildflowers in the foreground. Use warm tones and natural lighting to enhance the serene and joyful atmosphere.  
-===========================================================
-Title: Artistic Reflection  
-Prompt: Generate a creative portrait where the subject is reflected in a puddle. Use warm lighting and a blurred urban background to add depth and intrigue.  
-===========================================================
-Title: Celestial Crown  
-Prompt: a portrait with the subject wearing a crown of glowing stars. Use soft backlighting and a dark background to emphasize the celestial theme.  
-===========================================================
-Title: Radiant Layers  
-Prompt: a layered portrait with abstract geometric shapes and glowing colors in the background. Use soft lighting to blend the layers harmoniously with the subject.  
-===========================================================
-Title: Windy Elegance  
-Prompt: a portrait of a person with their hair flowing in a natural breeze. Use warm, golden tones and a blurred field in the background to evoke a calm and inviting feel.  
-===========================================================
-Title: Twilight Wonder  
-Prompt: a portrait of a subject standing under a twilight sky with hues of orange and purple. Use soft rim lighting to highlight their silhouette, creating a peaceful and magical atmosphere.  
-===========================================================
-Title: Enchanted Glow  
-Prompt: Generate a portrait where the subject is illuminated by glowing fireflies. Use a dark forest background with soft lighting to evoke a sense of wonder and enchantment.  
-===========================================================
-Title: Bold and Beautiful  
-Prompt: a portrait of a subject with vibrant makeup, bold jewelry, and a striking expression. Use dramatic lighting and a plain dark background to enhance the intensity and focus on their features.  
-===========================================================
-Title: Desert Glow  
-Prompt: a portrait of a person standing in the desert at golden hour, with soft light casting long shadows. The warm tones of the sand and sky create a harmonious and serene composition.  
-===========================================================
-Title: Flowing Water  
-Prompt: a portrait of a subject standing near a gentle waterfall. Use natural lighting and soft focus to emphasize the peaceful and refreshing mood.  
-===========================================================
-Title: Radiant Sparkles  
-Prompt: a whimsical portrait with subtle glitter and sparkles on the subject’s face. Use soft lighting and pastel tones to evoke a dreamy and magical feel.  
-===========================================================
-Title: Urban Evening  
-Prompt: a portrait of a person illuminated by streetlights and neon signs, set against a blurred urban background. Use warm lighting to create an inviting yet moody atmosphere.  
-===========================================================
-Title: Royal Glow  
-Prompt: Generate a regal portrait with the subject wearing elegant attire and glowing jewels. Use golden lighting and a rich, textured background to emphasize luxury and grace.  
-===========================================================
-Title: Subtle Focus  
-Prompt: a minimalist portrait with the subject against a plain pastel background. Use diffused lighting to softly highlight their features and create a calming, balanced aesthetic.  
-===========================================================
-Title: Whimsical Garden  
-Prompt: a portrait of a subject surrounded by blooming flowers in a lush garden. Use natural sunlight and soft shadows to emphasize the vibrant and joyful mood.  
-===========================================================
-Title: Winter Chill  
-Prompt: a portrait of a person bundled in cozy winter attire, with a snowy backdrop. Use soft, cool lighting to evoke a peaceful and frosty atmosphere.  
-===========================================================
-Title: Rustic Sunset  
-Prompt: Generate a portrait of a subject standing in a rustic field at sunset. Use warm golden light to create a serene and timeless composition.  
-===========================================================
-Title: Midnight Elegance  
-Prompt: a dramatic portrait with the subject illuminated by moonlight. Incorporate subtle shadows and a soft blue background to create a mysterious and elegant feel.  
-===========================================================
-Title: Artistic Blur  
-Prompt: a portrait with the subject sharply focused against an abstract, blurred background. Use vibrant colors to add energy and depth to the composition.  
-===========================================================
-Title: Bold Geometry  
-Prompt: Generate a creative portrait with geometric patterns in the background. Use bold lighting and sharp contrasts to create a modern and dynamic effect.  
-===========================================================
-Title: Ethereal Shadows  
-Prompt: a portrait with intricate shadow patterns cast on the subject’s face by a lace or mesh fabric. Use soft, warm lighting to create depth and a sense of mystery while keeping the background minimalistic.  
-===========================================================
-Title: Starry Halo  
-Prompt: Generate a celestial portrait with the subject standing under a clear, starry night sky. Add a subtle glow around their silhouette, resembling a halo, to evoke a serene and otherworldly atmosphere.  
-===========================================================
-Title: Gentle Rain  
-Prompt: a portrait of a person standing in soft rain, with water droplets visible on their face. Use diffused lighting to highlight the texture of the rain and evoke a calming, introspective mood.  
-===========================================================
-Title: Velvet Dream  
-Prompt: a portrait of a subject wearing luxurious velvet attire, with rich, deep colors like burgundy or emerald green. Use warm lighting to emphasize the texture and elegance of the fabric.  
-===========================================================
-Title: Ocean Breeze  
-Prompt: a portrait of a person on a rocky shoreline, with their hair tousled by the wind. Use soft sunlight and blurred waves in the background to create a natural and refreshing vibe.  
-===========================================================
-Title: Subtle Whimsy  
-Prompt: a playful portrait with the subject holding a translucent balloon that catches the light. Use pastel tones and soft focus to enhance the whimsical and joyful feel.  
-===========================================================
-Title: Abstract Lines  
-Prompt: Generate a modern portrait with bold, abstract lines projected onto the subject’s face. Use a dark background and dramatic lighting to create a high-contrast and artistic effect.  
-===========================================================
-Title: Quiet Reflection  
-Prompt: a serene portrait of a subject sitting by a window, gazing outside. Use soft, natural lighting and blurred elements of the window frame to enhance the peaceful and reflective mood.  
-===========================================================
-Title: Radiant Confidence  
-Prompt: a bold portrait of a subject illuminated by golden light, exuding strength and confidence. Use a gradient background transitioning from dark to warm tones to emphasize the subject’s vibrant energy.  
-===========================================================
-Title: Mystical Forest  
-Prompt: a portrait of a person standing in a dense, foggy forest. Use cool tones and soft lighting to evoke a sense of mystery and enchantment, with blurred trees in the background.  
-===========================================================
-Title: Fiery Spirit  
-Prompt: a dramatic portrait with the subject surrounded by subtle flames or glowing embers. Use warm, dynamic lighting to highlight their features and create a sense of intensity.  
-===========================================================
-Title: Cosmic Vibes  
-Prompt: a futuristic portrait of a person with glowing, cosmic patterns projected onto their face. Use deep blues and purples to evoke a space-inspired, otherworldly aesthetic.  
-===========================================================
-Title: Elegant Veil  
-Prompt: a delicate portrait of a person partially covered by a sheer veil. Use soft lighting to illuminate their features subtly, while adding a sense of grace and mystery to the composition.  
-===========================================================
-Title: Pastel Horizon  
-Prompt: Generate a portrait with the subject standing against a pastel-colored sky at sunrise. Use warm, diffused light to enhance the gentle and peaceful atmosphere.  
-===========================================================
-Title: Dynamic Motion  
-Prompt: a portrait where the subject appears in motion, with their hair flowing dramatically. Use blurred movement effects in the background to add energy and vibrancy.  
-===========================================================
-Title: Urban Elegance  
-Prompt: a sleek portrait of a person standing in an urban setting at dusk. Use the glow of city lights and subtle reflections from windows to create a dynamic and stylish mood.  
-===========================================================
-Title: Soft Radiance  
-Prompt: a portrait with a soft glow effect, emphasizing the subject’s features. Use a blurred, gradient background transitioning from warm to cool tones for a tranquil and balanced aesthetic.  
-===========================================================
-Title: Nature’s Frame  
-Prompt: a portrait where the subject is framed by natural elements, like tree branches or flower petals. Use warm sunlight to highlight their features and blend harmoniously with the setting.  
-===========================================================
-Title: Gentle Snowfall  
-Prompt: a serene winter portrait with soft snowflakes falling around the subject. Use cool tones and subtle lighting to evoke a peaceful and frosty ambiance.  
-===========================================================
-Title: Mirror Reflections  
-Prompt: Generate a creative portrait of a subject surrounded by mirrors. Use dynamic angles and lighting to create unique reflections and add depth to the composition.  
-===========================================================
-Title: Golden Horizon  
-Prompt: a portrait of a person standing against a glowing golden sunset. Use warm tones and soft lighting to create a harmonious and uplifting atmosphere.  
-===========================================================
-Title: Dreamlike Layers  
-Prompt: a surreal portrait with layered textures blending into the background, such as clouds or abstract patterns. Use pastel tones and subtle lighting to evoke a dreamy and imaginative feel.  
-===========================================================
-Title: Wind-Kissed Glow  
-Prompt: a portrait of a person standing in a field, with their hair gently tousled by the wind. Use warm golden-hour lighting to enhance their natural features and evoke a sense of freedom.  
-===========================================================
-Title: Desert Serenity  
-Prompt: Generate a portrait of a person standing on a sand dune under a vast sky. Use soft lighting and warm earthy tones to highlight the serene and expansive atmosphere.  
-===========================================================
-Title: Celestial Patterns  
-Prompt: a portrait with glowing celestial symbols subtly projected onto the subject’s face. Use cool, dark tones to emphasize the cosmic and mystical vibe.  
-===========================================================
-Title: Evening Elegance  
-Prompt: a sophisticated portrait of a person lit by the warm glow of candlelight. Use soft shadows and a blurred background to create an intimate and elegant atmosphere.  
-===========================================================
-Title: Playful Reflections  
-Prompt: a vibrant portrait where the subject is reflected in colorful, rippling water. Use dynamic lighting and bold colors to convey a sense of energy and playfulness.  
-===========================================================
-Title: Golden Veil  
-Prompt: Generate a portrait with the subject partially covered by a glowing golden veil. Use warm, soft lighting to emphasize their features and evoke a sense of elegance.  
-===========================================================
-Title: Midnight Serenity  
-Prompt: a peaceful portrait of a subject under a moonlit sky. Use cool tones and soft backlighting to highlight their silhouette against the stars.  
-===========================================================
-Title: Light Trails  
-Prompt: a modern portrait with dynamic light trails weaving around the subject. Use vibrant colors and soft focus to add motion and energy to the composition.  
-===========================================================
-Title: Radiant Fields  
-Prompt: a portrait of a person standing in a sunlit field, with wildflowers in soft focus. Use warm tones and natural light to create a serene and harmonious mood.  
-===========================================================
-Title: Winter Glow  
-Prompt: Generate a portrait of a subject wrapped in a cozy scarf, with their breath visible in the cold air. Use soft lighting and frosty details to evoke a warm yet wintry feel.  
-===========================================================
-Title: Shadowed Grace  
-Prompt: a striking portrait where half of the subject’s face is in shadow, with dramatic lighting emphasizing their expression. Use a plain dark background for a minimalist and powerful composition.  
-===========================================================
-Title: Dynamic Angles  
-Prompt: a creative portrait with the subject captured from an unusual angle. Use bold lighting and a textured background to add intrigue and depth.  
-===========================================================
-Title: Starry Embrace  
-Prompt: a portrait of a person standing under a swirling starry sky. Use soft lighting to highlight their features while blending them into the celestial background.  
-===========================================================
-Title: Warm Whisper  
-Prompt: a portrait of a subject surrounded by warm, soft light, with blurred details of a cozy indoor setting in the background. Add subtle shadows to create depth and harmony.  
-===========================================================
-Title: Coastal Glow  
-Prompt: Generate a portrait of a person walking along a beach at sunset, with waves gently lapping in the background. Use warm tones and soft focus to create a peaceful and inviting atmosphere.  
-===========================================================
-Title: Radiant Layers  
-Prompt: a portrait where glowing, abstract layers of light surround the subject. Use soft pastel hues and blurred transitions to evoke a dreamy, surreal aesthetic.  
-===========================================================
-Title: Gentle Focus  
-Prompt: a minimalist portrait of a person with only their face in sharp focus, while the background fades into a soft blur of neutral tones. Use diffused lighting to enhance their natural features.  
-===========================================================
-Title: Sunset Silhouette  
-Prompt: a silhouette portrait of a person standing against a glowing orange and purple sunset. Use soft rim lighting to outline the subject’s features, blending them harmoniously with the vibrant sky.  
-===========================================================
-Title: Cosmic Glow  
-Prompt: a portrait of a subject illuminated by soft cosmic light, with subtle stars and nebulae in the background. Use blue and purple hues to evoke a tranquil, celestial atmosphere.  
-===========================================================
-Title: Floral Crown  
-Prompt: Generate a portrait of a person wearing a delicate crown made of vibrant flowers. Use warm, natural lighting and a blurred floral background to enhance the subject’s radiant expression.  
-===========================================================
-Title: Windy Bliss  
-Prompt: a portrait where the subject’s hair flows dynamically in the wind, with soft golden light highlighting their face. Use a blurred outdoor background to emphasize motion and natural beauty.  
-===========================================================
-Title: Glowing Contours  
-Prompt: a close-up portrait of a subject illuminated by a single glowing light source. Use dark shadows to create high contrast, highlighting the contours of their face for a dramatic effect.  
-===========================================================
-Title: Pastel Fields  
-Prompt: a portrait of a person standing in a field of soft pastel flowers. Use warm, diffused light and a shallow depth of field to create a peaceful and dreamy atmosphere.  
-===========================================================
-Title: Starlit Shadows  
-Prompt: a portrait of a person with subtle star-shaped shadows cast on their face. Use soft, cool lighting and a dark background to add mystery and elegance.  
-===========================================================
-Title: Reflected Horizon  
-Prompt: a creative portrait of a subject standing near a lake, with their reflection visible in the water. Use warm sunset tones and soft lighting to create a serene and balanced composition.  
-===========================================================
-Title: Golden Hour Glow  
-Prompt: a radiant portrait of a person during golden hour, with the warm sunlight casting a soft glow on their face. Use a blurred natural background to enhance the feeling of tranquility.  
-===========================================================
-Title: Abstract Veil  
-Prompt: Generate a portrait of a subject partially covered by an abstract, semi-transparent veil. Use muted tones and soft focus to add a sense of mystery and artistic elegance.  
-===========================================================
-Title: Moonlit Charm  
-Prompt: a portrait of a subject bathed in soft moonlight, standing under a starry sky. Add a subtle glow to their silhouette for a magical and serene effect.  
-===========================================================
-Title: Mystical Hues  
-Prompt: a portrait of a person surrounded by glowing mist in shades of blue and purple. Use soft lighting to enhance the ethereal and otherworldly ambiance.  
-===========================================================
-Title: Vintage Glow  
-Prompt: a retro-inspired portrait with sepia tones and subtle grain. The subject wears classic attire, and warm lighting creates a nostalgic and timeless feel.  
-===========================================================
-Title: Urban Reflection  
-Prompt: Generate a portrait of a subject standing in front of a reflective glass wall in an urban setting. Use vibrant city lights to create dynamic patterns and depth in the image.  
-===========================================================
-Title: Dynamic Frame  
-Prompt: a portrait of a subject framed by natural elements like tree branches or rocks. Use soft, natural lighting to create harmony between the subject and the environment.  
-===========================================================
-Title: Twilight Serenity  
-Prompt: a portrait of a person standing against a twilight sky, with subtle stars beginning to appear. Use warm, diffused lighting to highlight their features in this serene moment.  
-===========================================================
-Title: Geometric Glow  
-Prompt: a modern portrait with glowing geometric shapes subtly integrated into the background. Use cool, vibrant tones to create a futuristic and artistic vibe.  
-===========================================================
-Title: Silken Elegance  
-Prompt: a portrait of a subject draped in flowing silk fabric, with soft lighting emphasizing the texture and movement of the material. Use a minimal background for a refined and graceful look.  
-===========================================================
-Title: Golden Petals  
-Prompt: a portrait of a person surrounded by golden flower petals, gently falling around them. Use warm, glowing light to highlight the softness of their expression.  
-===========================================================
-Title: Starry Embrace  
-Prompt: Generate a portrait of a person standing in a softly glowing starfield. Use a blend of cool and warm tones to evoke a sense of wonder and serenity.  
-===========================================================
-Title: Frosted Elegance  
-Prompt: a winter-inspired portrait of a subject with subtle frost on their hair and attire. Use soft, cool lighting to enhance the frosty details while maintaining a serene atmosphere.  
-===========================================================
-Title: Firelight Glow  
-Prompt: a dramatic portrait of a person illuminated by the warm light of a small flame. Use shadows to emphasize their features and create an intimate, moody composition.  
-===========================================================
-Title: Gradient Harmony  
-Prompt: a portrait of a subject against a softly transitioning gradient background. Use warm tones at the base blending into cool tones at the top for a balanced and artistic effect.  
-===========================================================
-Title: Velvet Shadows  
-Prompt: Generate a portrait of a subject surrounded by deep, velvety shadows, with a single light source highlighting their profile. Use rich, dark tones to create a dramatic and elegant look.  
-===========================================================
-Title: Enchanted Glow  
-Prompt: a magical portrait of a person standing in a softly glowing forest. Use warm light filtering through the trees to highlight their serene expression.  
-===========================================================
-Title: Sunset Frame  
-Prompt: a portrait of a person standing in front of a glowing sunset, framed by natural elements like branches or rocks. Use warm, radiant light to enhance their features.  
-===========================================================
-Title: Moonlit Mystery  
-Prompt: a portrait of a subject standing under a full moon, with soft blue light illuminating their face. Use a dark forest background to evoke mystery and tranquility.  
-===========================================================
-Title: Gentle Ripples  
-Prompt: Generate a portrait of a subject standing by a calm body of water, with soft ripples reflecting the warm hues of a setting sun. Use natural lighting to highlight their peaceful expression.  
-===========================================================
-Title: Artistic Fusion  
-Prompt: a modern portrait blending the subject’s face with abstract, glowing patterns. Use bold colors and smooth transitions to emphasize creativity and depth.  
-===========================================================
-Title: Radiant Confidence  
-Prompt: a confident portrait of a person standing against a golden backdrop, with soft lighting emphasizing their strong and expressive features.  
-===========================================================
-Title: Shimmering Elegance  
-Prompt: a portrait of a person wearing shimmering attire, softly illuminated by golden light. Use a dark, textured background to highlight their elegance and poise.  
-===========================================================
-Title: Frosted Glow  
-Prompt: Generate a winter-themed portrait of a subject standing in a snowy landscape, with subtle frost on their hair. Use cool tones and soft lighting for a serene effect.  
-===========================================================
-Title: Ethereal Sunset  
-Prompt: a dreamy portrait of a subject bathed in the soft orange and pink hues of a setting sun. Use blurred elements in the foreground to add depth and tranquility.  
-===========================================================
-Title: Blossoming Beauty  
-Prompt: a portrait of a person surrounded by blooming flowers in vibrant colors. Use warm natural light to emphasize their joyful and serene expression.  
-===========================================================
-Title: Nebula Glow  
-Prompt: a cosmic portrait of a person standing against a swirling nebula. Use glowing blues, purples, and pinks to evoke a mystical and otherworldly atmosphere.  
-===========================================================
-Title: Flowing Harmony  
-Prompt: Generate a portrait of a subject with flowing fabric surrounding them, gently illuminated by soft lighting. Use pastel tones to create a calming and elegant composition.  
-===========================================================
-Title: Urban Sunset  
-Prompt: a portrait of a person standing on a rooftop during a golden sunset. Use warm light and blurred city elements in the background to enhance the urban vibe.  
-===========================================================
-Title: Celestial Silhouette  
-Prompt: a portrait of a subject silhouetted against a glowing starry sky. Use soft rim lighting to outline their shape, blending them seamlessly with the celestial background.  
-===========================================================
-Title: Radiant Twilight  
-Prompt: a portrait of a person standing against the warm hues of twilight, with a gentle breeze moving their hair. Use soft, glowing light to emphasize their features and blend them with the serene sky.  
-===========================================================
+Title: Timeless Beauty: a classic portrait with soft, diffused lighting on a black background. Focus on the subject’s serene expression and glowing skin, with subtle shadows accentuating the contours of the face. Add a slight vignette for a timeless and elegant aesthetic.  
+Title: Elegant Simplicity: a clean and minimalist portrait with the subject wearing white, against a plain beige background. Use soft, natural lighting to highlight facial details, emphasizing a sense of calm and purity. Ensure the background complements the subject without distraction.  
+Title: Radiant Glow: a portrait with warm golden hour lighting. The subject is smiling gently, bathed in a soft, radiant glow. Incorporate blurred floral elements in the foreground to add a dreamy and natural feel to the image.  
+Title: The Thinker: a thoughtful portrait of a person in a relaxed pose, resting their chin on one hand. Use muted lighting with a gradient backdrop, creating an intimate and contemplative atmosphere. Highlight subtle details, like the texture of the skin and the sparkle in the eyes.  
+Title: Monochrome Grace: a black-and-white portrait with high contrast. Emphasize sharp facial details and dramatic shadows, with the subject gazing directly into the lens. Use a plain black background to enhance the timeless and sophisticated appeal.  
+Title: Vibrant Confidence: a vibrant portrait with the subject against a colorful, gradient backdrop. Use bold lighting to emphasize facial contours, while ensuring the colors blend harmoniously to exude energy and confidence.  
+Title: Delicate Balance: Generate a portrait with soft pastel tones, focusing on the subject’s delicate features. Use side lighting to cast gentle shadows, creating depth and dimension. The background should have a soft blur effect to enhance the focus on the subject.  
+Title: Artistic Flair: a creative portrait with dramatic lighting and colorful streaks in the background. Incorporate light reflections and shadow play on the subject’s face, creating a dynamic and artistic composition.  
+Title: Natural Serenity: a natural outdoor portrait with the subject surrounded by soft greenery. Use warm lighting filtered through leaves, creating a calming interplay of light and shadow on the subject’s face.  
+Title: Golden Elegance: a portrait with golden tones, featuring the subject adorned in jewelry that catches the light. Use a rich, textured background to add depth, emphasizing luxury and refinement in the image.  
+Title: Candid Smile: a candid portrait of a person mid-laugh, with soft sunlight highlighting their features. Include blurred movement in the background to add a sense of spontaneity and liveliness to the composition.  
+Title: Mystic Vibes: a moody portrait with cool, muted tones and a dark background. Use a single light source to highlight one side of the subject’s face, creating an air of mystery and depth.  
+Title: Urban Chic: a modern portrait with the subject wearing sleek, urban attire against a blurred cityscape. Use natural lighting to emphasize sharp details, ensuring the background remains subtly dynamic yet non-distracting.  
+Title: Subtle Emotions: Generate a close-up portrait focusing on the subject’s eyes and subtle expression. Use soft, even lighting and a neutral background to evoke a sense of introspection and emotion.  
+Title: Ethereal Beauty: a glowing portrait with the subject surrounded by soft, white fabric. Incorporate gentle backlighting to create a halo effect, emphasizing an ethereal and angelic aesthetic.  
+Title: Rustic Charm: a portrait in a rustic outdoor setting, with warm tones and earthy colors. Highlight the subject’s features with natural sunlight, blending the background’s texture seamlessly into the composition.  
+Title: Bold Contrast: a striking portrait with dramatic lighting that emphasizes sharp contrasts between light and shadow. Use a dark background and bold makeup on the subject to add intensity and focus.  
+Title: Youthful Joy: a vibrant and playful portrait of a young person against a bright, cheerful background. Use dynamic lighting and colorful props to convey a sense of fun and energy.  
+Title: Cultural Elegance: a portrait of a person dressed in traditional attire, with intricate patterns and textures. Use soft, diffused lighting to emphasize the details of the fabric and the subject’s serene expression.  
+Title: Poised Perfection: a formal portrait of a subject in professional attire, against a neutral gray backdrop. Use soft lighting to highlight their confidence and sophistication, with subtle shadow details for depth.  
+Title: Dreamy Hues: a portrait with pastel lighting and a blurred gradient background. Use soft focus on the subject’s features to evoke a dreamy and whimsical atmosphere.  
+Title: Nature’s Glow: a portrait of a person standing in soft sunlight, surrounded by wildflowers. Use warm tones and a shallow depth of field to emphasize natural beauty and simplicity.  
+Title: Bold Expression: a creative portrait with vivid colors and dramatic lighting. Emphasize the subject’s confident expression and unique makeup, set against a textured backdrop.  
+Title: Silhouette Drama: Generate a silhouette portrait with the subject in profile, against a sunset gradient background. Use soft rim lighting to outline the features, adding mystery and elegance.  
+Title: Glowing Portrait: a high-contrast portrait with the subject illuminated by a single golden light. The background should remain dark, focusing entirely on the glowing subject.  
+Title: Soft Minimalism: a minimalist portrait with the subject against a plain, softly lit background. Focus on clean lines and simplicity, with a natural pose and serene expression.  
+Title: Fiery Essence: a vibrant portrait with warm red and orange tones. Incorporate subtle flames in the background to convey passion and intensity, while keeping the subject sharply in focus.  
+Title: Calm Horizon: Generate a peaceful portrait of a person standing against a blurred horizon, with soft blue and orange hues in the background. Use gentle lighting to emphasize tranquility.  
+Title: Artistic Shadow Play: a creative portrait with intricate shadows cast on the subject’s face by geometric patterns. Use strong lighting to highlight the interplay between light and shadow.  
+Title: Regal Grace: a royal-inspired portrait with the subject wearing elegant attire and a crown. Use soft, golden lighting to evoke a sense of power and sophistication.  
+Title: Luminous Layers: a layered portrait with subtle reflections or double exposure effects, blending the subject’s face with a vibrant abstract background.  
+Title: Serene Monochrome: Generate a grayscale portrait with soft lighting and subtle textures. Emphasize the subject’s calm and introspective expression for a timeless appeal.  
+Title: Vibrant Pop: a bold and colorful portrait with neon lights reflecting off the subject’s face. Use a dark background to enhance the vibrancy and energy of the colors.  
+Title: Radiant Harmony: a portrait with warm golden tones and soft shadows, focusing on the subject’s peaceful expression. Add subtle lens flares for a touch of elegance.  
+Title: Abstract Glow: a modern portrait with abstract shapes and glowing lines integrated into the background. Use cool tones to create a futuristic aesthetic.  
+Title: Light and Shadow: a dramatic portrait with the subject partially illuminated by a narrow beam of light. Emphasize sharp contrasts and a mysterious atmosphere.  
+Title: Nature’s Serenity: Generate an outdoor portrait with the subject surrounded by tall grass and soft, golden-hour light. Use a shallow depth of field to create a dreamy, natural composition.  
+Title: Urban Night: a moody portrait with the subject illuminated by streetlights and neon signs in an urban setting. Use bokeh effects to enhance the nighttime ambiance.  
+Title: Morning Glow: a warm portrait of a subject bathed in early morning sunlight. Include soft mist in the background for an ethereal and peaceful mood.  
+Title: Golden Silhouette: a silhouette portrait with the subject against a vibrant sunset. Highlight the golden rim light around the edges of the subject for added depth.  
+Title: Enchanted Mist: a mysterious portrait of a person surrounded by mist, with soft backlighting creating a glowing halo effect. Use cool tones to add an eerie touch.  
+Title: Elegance in Red: a dramatic portrait with the subject wearing a striking red outfit, set against a deep, textured background. Use soft lighting to highlight the boldness of the colors.  
+Title: Light Fragments: a unique portrait with fragmented light patterns reflecting on the subject’s face. Use soft tones to add an artistic, modern flair.  
+Title: Pastel Serenity: a portrait with a pastel gradient background, focusing on soft, natural features of the subject. Use diffused lighting to maintain a peaceful, harmonious vibe.  
+Title: Ethereal Twilight: a portrait of a person under a twilight sky, with a subtle glow highlighting their face. Include blurred stars in the background to evoke a dreamy, magical atmosphere.  
+Title: Celestial Glow: a portrait where the subject is bathed in soft celestial light. Use glowing orbs subtly floating in the background, with cool blue and silver tones. The composition should evoke a sense of wonder and mystery.  
+Title: Desert Elegance: a portrait of a person standing against a backdrop of golden sand dunes at sunset. The soft light enhances the subject’s features, while the warm tones of the desert create a harmonious and serene atmosphere.  
+Title: Radiant Reflection: Generate a portrait where the subject is holding a mirror, reflecting soft natural light onto their face. The blurred background contains soft floral elements to complement the dreamy and radiant feel.  
+Title: Whimsical Breeze: a portrait of a person with their hair flowing naturally in the wind. The backdrop is a blurred field of flowers, with soft lighting that enhances the carefree and whimsical mood.  
+Title: Aurora Dreams: a magical portrait with the subject standing under a vivid aurora borealis. Use cool tones of green and purple to complement the glowing sky, with the subject illuminated by a soft light.  
+Title: Urban Glow: a modern portrait with the subject lit by colorful neon signs in a city street. Add reflections of the lights on their face, emphasizing a vibrant and energetic urban vibe.  
+Title: Classic Vintage: Generate a vintage-inspired portrait with sepia tones. The subject wears classic attire, with soft lighting and subtle grain effects to evoke a nostalgic and timeless aesthetic.  
+Title: Vibrant Blossoms: a portrait of a person surrounded by vibrant cherry blossoms. Use warm natural lighting to enhance the pink hues and create a harmonious balance between the subject and the floral background.  
+Title: Under the Stars: a serene portrait of a person gazing upwards under a starlit sky. Use soft lighting on the subject’s face, with blurred constellations creating depth and a peaceful atmosphere.  
+Title: Flowing Silk: an elegant portrait of a person draped in flowing silk fabric, softly illuminated by diffused lighting. The fabric adds movement and grace to the composition, complementing the subject’s poised expression.  
+Title: Serene Lakeside: a portrait of a subject standing by a calm lake at dusk. The soft reflections on the water and warm tones of the sky enhance the tranquil and reflective atmosphere.  
+Title: Midnight Glow: Generate a moody portrait where the subject is illuminated by a single soft light source in a dark room. Subtle details in the background hint at mystery, while the lighting highlights the subject’s serene expression.  
+Title: Enchanted Woods: a portrait of a person standing in a dense forest, with soft sunlight streaming through the trees. Use warm tones and a shallow depth of field to evoke a magical, enchanting feel.  
+Title: Bold Shadows: a striking portrait with sharp, geometric shadows cast on the subject’s face. Use a neutral background and high-contrast lighting to create an artistic and modern effect.  
+Title: Rustic Barn: a portrait of a subject in a rustic barn setting. Use soft, warm lighting and earthy tones to create an inviting and nostalgic mood, with hay bales subtly blurred in the background.  
+Title: Ethereal Petals: a dreamy portrait where the subject is surrounded by falling petals. Use soft, diffused lighting and pastel tones to enhance the romantic and whimsical atmosphere.  
+Title: Dramatic Silhouette: Generate a silhouette portrait of a person standing against a vibrant horizon, with the sun setting behind them. Use soft rim lighting to define the subject’s shape and create a dramatic effect.  
+Title: Ice Queen: a striking portrait of a subject with icy blue tones and frosty textures in the background. Use soft lighting to highlight facial features, giving a regal and winter-inspired look.  
+Title: Rainy Reflection: a portrait of a person looking out through a rain-speckled window. Use soft lighting to create reflections, emphasizing a calm and introspective mood.  
+Title: Coastal Breeze: a portrait of a person standing on a rocky coast, with waves crashing in the background. Use warm natural lighting and soft focus to create a harmonious blend of energy and tranquility.  
+Title: Radiant Gold: Generate a glowing portrait with golden backlighting and warm tones. Incorporate subtle lens flares and soft shadows to highlight the subject’s features.  
+Title: Cinematic Noir: a noir-inspired portrait in black and white. Use dramatic lighting and a dark background to emphasize sharp contrasts and create a cinematic feel.  
+Title: Mystic Veil: a portrait of a person partially covered by a translucent veil, with soft light filtering through. The composition should evoke mystery and elegance, with subtle textures in the background.  
+Title: Sunlit Meadow: a portrait of a person standing in a sunlit meadow, with soft wildflowers in the foreground. Use warm tones and natural lighting to enhance the serene and joyful atmosphere.  
+Title: Artistic Reflection: Generate a creative portrait where the subject is reflected in a puddle. Use warm lighting and a blurred urban background to add depth and intrigue.  
+Title: Celestial Crown: a portrait with the subject wearing a crown of glowing stars. Use soft backlighting and a dark background to emphasize the celestial theme.  
+Title: Radiant Layers: a layered portrait with abstract geometric shapes and glowing colors in the background. Use soft lighting to blend the layers harmoniously with the subject.  
+Title: Windy Elegance: a portrait of a person with their hair flowing in a natural breeze. Use warm, golden tones and a blurred field in the background to evoke a calm and inviting feel.  
+Title: Twilight Wonder: a portrait of a subject standing under a twilight sky with hues of orange and purple. Use soft rim lighting to highlight their silhouette, creating a peaceful and magical atmosphere.  
+Title: Enchanted Glow: Generate a portrait where the subject is illuminated by glowing fireflies. Use a dark forest background with soft lighting to evoke a sense of wonder and enchantment.  
+Title: Bold and Beautiful: a portrait of a subject with vibrant makeup, bold jewelry, and a striking expression. Use dramatic lighting and a plain dark background to enhance the intensity and focus on their features.  
+Title: Desert Glow: a portrait of a person standing in the desert at golden hour, with soft light casting long shadows. The warm tones of the sand and sky create a harmonious and serene composition.  
+Title: Flowing Water: a portrait of a subject standing near a gentle waterfall. Use natural lighting and soft focus to emphasize the peaceful and refreshing mood.  
+Title: Radiant Sparkles: a whimsical portrait with subtle glitter and sparkles on the subject’s face. Use soft lighting and pastel tones to evoke a dreamy and magical feel.  
+Title: Urban Evening: a portrait of a person illuminated by streetlights and neon signs, set against a blurred urban background. Use warm lighting to create an inviting yet moody atmosphere.  
+Title: Royal Glow: Generate a regal portrait with the subject wearing elegant attire and glowing jewels. Use golden lighting and a rich, textured background to emphasize luxury and grace.  
+Title: Subtle Focus: a minimalist portrait with the subject against a plain pastel background. Use diffused lighting to softly highlight their features and create a calming, balanced aesthetic.  
+Title: Whimsical Garden: a portrait of a subject surrounded by blooming flowers in a lush garden. Use natural sunlight and soft shadows to emphasize the vibrant and joyful mood.  
+Title: Winter Chill: a portrait of a person bundled in cozy winter attire, with a snowy backdrop. Use soft, cool lighting to evoke a peaceful and frosty atmosphere.  
+Title: Rustic Sunset: Generate a portrait of a subject standing in a rustic field at sunset. Use warm golden light to create a serene and timeless composition.  
+Title: Midnight Elegance: a dramatic portrait with the subject illuminated by moonlight. Incorporate subtle shadows and a soft blue background to create a mysterious and elegant feel.  
+Title: Artistic Blur: a portrait with the subject sharply focused against an abstract, blurred background. Use vibrant colors to add energy and depth to the composition.  
+Title: Bold Geometry: Generate a creative portrait with geometric patterns in the background. Use bold lighting and sharp contrasts to create a modern and dynamic effect.  
+Title: Ethereal Shadows: a portrait with intricate shadow patterns cast on the subject’s face by a lace or mesh fabric. Use soft, warm lighting to create depth and a sense of mystery while keeping the background minimalistic.  
+Title: Starry Halo: Generate a celestial portrait with the subject standing under a clear, starry night sky. Add a subtle glow around their silhouette, resembling a halo, to evoke a serene and otherworldly atmosphere.  
+Title: Gentle Rain: a portrait of a person standing in soft rain, with water droplets visible on their face. Use diffused lighting to highlight the texture of the rain and evoke a calming, introspective mood.  
+Title: Velvet Dream: a portrait of a subject wearing luxurious velvet attire, with rich, deep colors like burgundy or emerald green. Use warm lighting to emphasize the texture and elegance of the fabric.  
+Title: Ocean Breeze: a portrait of a person on a rocky shoreline, with their hair tousled by the wind. Use soft sunlight and blurred waves in the background to create a natural and refreshing vibe.  
+Title: Subtle Whimsy: a playful portrait with the subject holding a translucent balloon that catches the light. Use pastel tones and soft focus to enhance the whimsical and joyful feel.  
+Title: Abstract Lines: Generate a modern portrait with bold, abstract lines projected onto the subject’s face. Use a dark background and dramatic lighting to create a high-contrast and artistic effect.  
+Title: Quiet Reflection: a serene portrait of a subject sitting by a window, gazing outside. Use soft, natural lighting and blurred elements of the window frame to enhance the peaceful and reflective mood.  
+Title: Radiant Confidence: a bold portrait of a subject illuminated by golden light, exuding strength and confidence. Use a gradient background transitioning from dark to warm tones to emphasize the subject’s vibrant energy.  
+Title: Mystical Forest: a portrait of a person standing in a dense, foggy forest. Use cool tones and soft lighting to evoke a sense of mystery and enchantment, with blurred trees in the background.  
+Title: Fiery Spirit: a dramatic portrait with the subject surrounded by subtle flames or glowing embers. Use warm, dynamic lighting to highlight their features and create a sense of intensity.  
+Title: Cosmic Vibes: a futuristic portrait of a person with glowing, cosmic patterns projected onto their face. Use deep blues and purples to evoke a space-inspired, otherworldly aesthetic.  
+Title: Elegant Veil: a delicate portrait of a person partially covered by a sheer veil. Use soft lighting to illuminate their features subtly, while adding a sense of grace and mystery to the composition.  
+Title: Pastel Horizon: Generate a portrait with the subject standing against a pastel-colored sky at sunrise. Use warm, diffused light to enhance the gentle and peaceful atmosphere.  
+Title: Dynamic Motion: a portrait where the subject appears in motion, with their hair flowing dramatically. Use blurred movement effects in the background to add energy and vibrancy.  
+Title: Urban Elegance: a sleek portrait of a person standing in an urban setting at dusk. Use the glow of city lights and subtle reflections from windows to create a dynamic and stylish mood.  
+Title: Soft Radiance: a portrait with a soft glow effect, emphasizing the subject’s features. Use a blurred, gradient background transitioning from warm to cool tones for a tranquil and balanced aesthetic.  
+Title: Nature’s Frame: a portrait where the subject is framed by natural elements, like tree branches or flower petals. Use warm sunlight to highlight their features and blend harmoniously with the setting.  
+Title: Gentle Snowfall: a serene winter portrait with soft snowflakes falling around the subject. Use cool tones and subtle lighting to evoke a peaceful and frosty ambiance.  
+Title: Mirror Reflections: Generate a creative portrait of a subject surrounded by mirrors. Use dynamic angles and lighting to create unique reflections and add depth to the composition.  
+Title: Golden Horizon: a portrait of a person standing against a glowing golden sunset. Use warm tones and soft lighting to create a harmonious and uplifting atmosphere.  
+Title: Dreamlike Layers: a surreal portrait with layered textures blending into the background, such as clouds or abstract patterns. Use pastel tones and subtle lighting to evoke a dreamy and imaginative feel.  
+Title: Wind-Kissed Glow: a portrait of a person standing in a field, with their hair gently tousled by the wind. Use warm golden-hour lighting to enhance their natural features and evoke a sense of freedom.  
+Title: Desert Serenity: Generate a portrait of a person standing on a sand dune under a vast sky. Use soft lighting and warm earthy tones to highlight the serene and expansive atmosphere.  
+Title: Celestial Patterns: a portrait with glowing celestial symbols subtly projected onto the subject’s face. Use cool, dark tones to emphasize the cosmic and mystical vibe.  
+Title: Evening Elegance: a sophisticated portrait of a person lit by the warm glow of candlelight. Use soft shadows and a blurred background to create an intimate and elegant atmosphere.  
+Title: Playful Reflections: a vibrant portrait where the subject is reflected in colorful, rippling water. Use dynamic lighting and bold colors to convey a sense of energy and playfulness.  
+Title: Golden Veil: Generate a portrait with the subject partially covered by a glowing golden veil. Use warm, soft lighting to emphasize their features and evoke a sense of elegance.  
+Title: Midnight Serenity: a peaceful portrait of a subject under a moonlit sky. Use cool tones and soft backlighting to highlight their silhouette against the stars.  
+Title: Light Trails: a modern portrait with dynamic light trails weaving around the subject. Use vibrant colors and soft focus to add motion and energy to the composition.  
+Title: Radiant Fields: a portrait of a person standing in a sunlit field, with wildflowers in soft focus. Use warm tones and natural light to create a serene and harmonious mood.  
+Title: Winter Glow: Generate a portrait of a subject wrapped in a cozy scarf, with their breath visible in the cold air. Use soft lighting and frosty details to evoke a warm yet wintry feel.  
+Title: Shadowed Grace: a striking portrait where half of the subject’s face is in shadow, with dramatic lighting emphasizing their expression. Use a plain dark background for a minimalist and powerful composition.  
+Title: Dynamic Angles: a creative portrait with the subject captured from an unusual angle. Use bold lighting and a textured background to add intrigue and depth.  
+Title: Starry Embrace: a portrait of a person standing under a swirling starry sky. Use soft lighting to highlight their features while blending them into the celestial background.  
+Title: Warm Whisper: a portrait of a subject surrounded by warm, soft light, with blurred details of a cozy indoor setting in the background. Add subtle shadows to create depth and harmony.  
+Title: Coastal Glow: Generate a portrait of a person walking along a beach at sunset, with waves gently lapping in the background. Use warm tones and soft focus to create a peaceful and inviting atmosphere.  
+Title: Radiant Layers: a portrait where glowing, abstract layers of light surround the subject. Use soft pastel hues and blurred transitions to evoke a dreamy, surreal aesthetic.  
+Title: Gentle Focus: a minimalist portrait of a person with only their face in sharp focus, while the background fades into a soft blur of neutral tones. Use diffused lighting to enhance their natural features.  
+Title: Sunset Silhouette: a silhouette portrait of a person standing against a glowing orange and purple sunset. Use soft rim lighting to outline the subject’s features, blending them harmoniously with the vibrant sky.  
+Title: Cosmic Glow: a portrait of a subject illuminated by soft cosmic light, with subtle stars and nebulae in the background. Use blue and purple hues to evoke a tranquil, celestial atmosphere.  
+Title: Floral Crown: Generate a portrait of a person wearing a delicate crown made of vibrant flowers. Use warm, natural lighting and a blurred floral background to enhance the subject’s radiant expression.  
+Title: Windy Bliss: a portrait where the subject’s hair flows dynamically in the wind, with soft golden light highlighting their face. Use a blurred outdoor background to emphasize motion and natural beauty.  
+Title: Glowing Contours: a close-up portrait of a subject illuminated by a single glowing light source. Use dark shadows to create high contrast, highlighting the contours of their face for a dramatic effect.  
+Title: Pastel Fields: a portrait of a person standing in a field of soft pastel flowers. Use warm, diffused light and a shallow depth of field to create a peaceful and dreamy atmosphere.  
+Title: Starlit Shadows: a portrait of a person with subtle star-shaped shadows cast on their face. Use soft, cool lighting and a dark background to add mystery and elegance.  
+Title: Reflected Horizon: a creative portrait of a subject standing near a lake, with their reflection visible in the water. Use warm sunset tones and soft lighting to create a serene and balanced composition.  
+Title: Golden Hour Glow: a radiant portrait of a person during golden hour, with the warm sunlight casting a soft glow on their face. Use a blurred natural background to enhance the feeling of tranquility.  
+Title: Abstract Veil: Generate a portrait of a subject partially covered by an abstract, semi-transparent veil. Use muted tones and soft focus to add a sense of mystery and artistic elegance.  
+Title: Moonlit Charm: a portrait of a subject bathed in soft moonlight, standing under a starry sky. Add a subtle glow to their silhouette for a magical and serene effect.  
+Title: Mystical Hues: a portrait of a person surrounded by glowing mist in shades of blue and purple. Use soft lighting to enhance the ethereal and otherworldly ambiance.  
+Title: Vintage Glow: a retro-inspired portrait with sepia tones and subtle grain. The subject wears classic attire, and warm lighting creates a nostalgic and timeless feel.  
+Title: Urban Reflection: Generate a portrait of a subject standing in front of a reflective glass wall in an urban setting. Use vibrant city lights to create dynamic patterns and depth in the image.  
+Title: Dynamic Frame: a portrait of a subject framed by natural elements like tree branches or rocks. Use soft, natural lighting to create harmony between the subject and the environment.  
+Title: Twilight Serenity: a portrait of a person standing against a twilight sky, with subtle stars beginning to appear. Use warm, diffused lighting to highlight their features in this serene moment.  
+Title: Geometric Glow: a modern portrait with glowing geometric shapes subtly integrated into the background. Use cool, vibrant tones to create a futuristic and artistic vibe.  
+Title: Silken Elegance: a portrait of a subject draped in flowing silk fabric, with soft lighting emphasizing the texture and movement of the material. Use a minimal background for a refined and graceful look.  
+Title: Golden Petals: a portrait of a person surrounded by golden flower petals, gently falling around them. Use warm, glowing light to highlight the softness of their expression.  
+Title: Starry Embrace: Generate a portrait of a person standing in a softly glowing starfield. Use a blend of cool and warm tones to evoke a sense of wonder and serenity.  
+Title: Frosted Elegance: a winter-inspired portrait of a subject with subtle frost on their hair and attire. Use soft, cool lighting to enhance the frosty details while maintaining a serene atmosphere.  
+Title: Firelight Glow: a dramatic portrait of a person illuminated by the warm light of a small flame. Use shadows to emphasize their features and create an intimate, moody composition.  
+Title: Gradient Harmony: a portrait of a subject against a softly transitioning gradient background. Use warm tones at the base blending into cool tones at the top for a balanced and artistic effect.  

@@ -1,499 +1,150 @@
-===========================================================
-Title: Neon Skyline  
-Prompt: a futuristic city skyline illuminated by vibrant neon lights in shades of blue, pink, and green. Include sleek skyscrapers with glowing windows and flying vehicles 
-===========================================================
-Title: Cyberpunk Alley  
-Prompt: a narrow alley in a cyberpunk city, with glowing signs, steam rising from vents, and reflections on wet pavementUse bold contrasts for a dynamic look 
-===========================================================
-Title: Sci-Fi Spaceport  
-Prompt: Generate a sprawling spaceport under a glowing galaxy skyInclude futuristic spaceships docked, with bright light trails in the background 
-===========================================================
-Title: Holographic Display  
-Prompt: a scene of a person interacting with floating holographic displaysUse bright, glowing interfaces in vibrant neon colors 
-===========================================================
-Title: Cosmic Horizon  
-Prompt: a distant planet with glowing rings in a vibrant galaxy, framed by a futuristic city glowing in the foreground 
-===========================================================
-Title: Electric Circuit City  
-Prompt: Generate a city made entirely of glowing circuitry, with energy pulses lighting up the landscapeUse deep blues and vivid yellows for contrast 
-===========================================================
-Title: Starship Glow  
-Prompt: a glowing starship with energy trails flying through a dense asteroid field illuminated by distant stars 
-===========================================================
-Title: Energy Dome  
-Prompt: a glowing energy dome surrounding a futuristic colonyInclude dramatic lighting with electric sparks at the edges of the dome 
-===========================================================
-Title: Cyber Grid  
-Prompt: a glowing grid stretching infinitely into the horizon, with a figure walking toward the light source in the distance 
-===========================================================
-Title: Electric Samurai  
-Prompt: Generate a futuristic samurai with glowing armor and an electric katana, standing against a stormy neon-lit backdrop 
-===========================================================
-Title: Stormy Mountain  
-Prompt: a towering mountain peak surrounded by glowing lightning strikes under a dark, stormy sky 
-===========================================================
-Title: Electric Ocean  
-Prompt: Generate a glowing ocean lit by electric blue waves crashing against jagged rocks, with a storm flashing in the distance 
-===========================================================
-Title: Neon Storm  
-Prompt: a surreal storm with lightning bolts in vibrant neon pink and purple, illuminating the clouds and a futuristic city below 
-===========================================================
-Title: Thunderous Skyline  
-Prompt: a city skyline with glowing lightning bolts striking skyscrapers, illuminating the dark storm clouds above 
-===========================================================
-Title: Energy Tree  
-Prompt: a glowing tree with electric branches reaching into a stormy skyInclude vivid blue and purple tones for a mystical effect 
-===========================================================
-Title: Plasma Storm  
-Prompt: Generate a storm made of glowing plasma energy, with bolts connecting to futuristic antennas on a barren landscape 
-===========================================================
-Title: Lightning Bridge  
-Prompt: a glowing bridge suspended by electric arcs, with a stormy backdrop of vibrant neon clouds 
-===========================================================
-Title: Electric Waterfall  
-Prompt: a glowing waterfall with electric blue water cascading into a misty pool below, under an illuminated stormy sky 
-===========================================================
-Title: Thunderous Canyon  
-Prompt: Generate a deep canyon lit by glowing lightning bolts striking the rocks, with an electric blue river flowing below 
-===========================================================
-Title: Lightning Forest  
-Prompt: a glowing forest with trees illuminated by electric energy, with lightning bolts crackling in the background 
-===========================================================
-Title: Neon Intersection  
-Prompt: a bustling intersection in a neon-lit city, with glowing signs reflecting on wet pavement and light trails of passing vehicles 
-===========================================================
-Title: Electric Streetlights  
-Prompt: a quiet street lined with futuristic glowing streetlights, casting neon reflections on the surrounding buildings 
-===========================================================
-Title: Floating Market Glow  
-Prompt: Generate a futuristic floating market illuminated by vibrant neon lanterns, with boats casting reflections on the glowing water below 
-===========================================================
-Title: Lightning Train  
-Prompt: a high-speed futuristic train glowing with electric energy as it speeds through a neon-lit urban landscape 
-===========================================================
-Title: Electric Overpass  
-Prompt: a futuristic overpass with glowing billboards and electric trails of hovering vehicles below 
-===========================================================
-Title: Downtown Glow  
-Prompt: Generate a glowing urban scene with skyscrapers lit by bright neon signs, and a glowing river reflecting the vibrant lights 
-===========================================================
-Title: Suburban Thunder  
-Prompt: a futuristic suburban neighborhood under a glowing stormy sky, with electric lights illuminating the streets 
-===========================================================
-Title: City Fountain Sparks  
-Prompt: a glowing fountain in a futuristic plaza, with water illuminated by neon blue lights and electric sparks dancing around it 
-===========================================================
-Title: Floating Cars  
-Prompt: Generate a busy futuristic city street with hovering cars leaving light trails in a vibrant neon-lit environment 
-===========================================================
-Title: Rooftop Reflections  
-Prompt: a glowing rooftop bar overlooking a neon-lit city, with reflections of the vibrant lights in the sleek glass tables 
-===========================================================
-Title: Electric Pulse  
-Prompt: an abstract design of glowing electric pulses spreading across a dark surface, with vivid blue and green arcs 
-===========================================================
-Title: Lightning Spiral  
-Prompt: Generate a glowing spiral of lightning bolts swirling toward a bright neon coreUse vibrant purple and orange tones for a dramatic effect 
-===========================================================
-Title: Energy Fractals  
-Prompt: a glowing fractal pattern made of interconnected lightning arcs, set against a dark cosmic background 
-===========================================================
-Title: Plasma Sphere  
-Prompt: a glowing plasma sphere with electric arcs radiating from its core, illuminating the surrounding space 
-===========================================================
-Title: Lightning Flower  
-Prompt: Generate an abstract glowing flower made of neon lightning petals, with electric sparks in the background 
-===========================================================
-Title: Pulsing Grid  
-Prompt: a glowing grid illuminated by electric pulses racing along its lines, creating a dynamic and futuristic feel 
-===========================================================
-Title: Electric Wave  
-Prompt: a glowing wave of electric energy flowing through a dark, abstract landscape 
-===========================================================
-Title: Energy Vortex  
-Prompt: Generate a glowing vortex of electric energy, with vibrant neon bolts spiraling into the center 
-===========================================================
-Title: Shattered Lightning  
-Prompt: an abstract pattern of broken glass illuminated by glowing lightning cracks, with bold contrasts of blue and white 
-===========================================================
-Title: Electric Ribbon  
-Prompt: a flowing ribbon of glowing electric energy twisting through a dark void, with soft neon gradients 
-===========================================================
-Title: Thunder Dragon  
-Prompt: a glowing dragon made of lightning, flying through stormy neon cloudsUse electric blue and purple tones for dramatic impact 
-===========================================================
-Title: Electric Phoenix  
-Prompt: Generate a mythical phoenix glowing with electric energy, rising from a stormy, illuminated backdrop 
-===========================================================
-Title: Lightning Castle  
-Prompt: a glowing castle on a mountain, surrounded by swirling lightning bolts illuminating the sky 
-===========================================================
-Title: Stormy Pegasus  
-Prompt: a glowing Pegasus flying through an electric storm, with neon lightning bolts surrounding it 
-===========================================================
-Title: Energy Tree of Life  
-Prompt: a mythical tree glowing with vibrant electric energy, with lightning branches reaching into the stormy sky 
-===========================================================
-Title: Electric Golem  
-Prompt: Generate a towering golem made of glowing stone and crackling with electric energy, standing in a stormy battlefield 
-===========================================================
-Title: Lightning Portal  
-Prompt: a glowing portal made of swirling electric energy, with vivid neon bolts connecting its edges 
-===========================================================
-Title: Thunder Guardian  
-Prompt: a glowing knight clad in electric armor, wielding a lightning sword against a stormy, illuminated backdrop 
-===========================================================
-Title: Electric Mermaid  
-Prompt: a glowing mermaid swimming in an electric ocean, with neon currents trailing behind her 
-===========================================================
-Title: Storm Phoenix Rising  
-Prompt: Generate a glowing phoenix breaking through stormy clouds, with lightning bolts illuminating its radiant wings 
-===========================================================
-Title: Hovering Metropolis  
-Prompt: a futuristic city with glowing skyscrapers and flying vehicles, illuminated by radiant neon colors under a starry sky 
-===========================================================
-Title: Energy Dome Skyline  
-Prompt: Generate a glowing energy dome covering a sprawling futuristic city, with electric sparks dancing along its edges 
-===========================================================
-Title: Neon Energy Grid  
-Prompt: a glowing energy grid spanning a futuristic landscape, with vibrant blue and purple pulses of light 
-===========================================================
-Title: Robotic Lightning  
-Prompt: a humanoid robot crackling with electric energy, standing in a dark, glowing industrial setting 
-===========================================================
-Title: Neon Circuit Planet  
-Prompt: Generate a glowing planet made entirely of interconnected neon circuitry, surrounded by floating satellites 
-===========================================================
-Title: Energy Tunnel  
-Prompt: a glowing tunnel of swirling neon energy, with streaks of electric light racing along its walls 
-===========================================================
-Title: Thunder Monorail  
-Prompt: a futuristic monorail glowing with electric blue energy, speeding through a neon-lit cityscape 
-===========================================================
-Title: Energy Starship  
-Prompt: a glowing starship in space, surrounded by electric arcs and glowing nebula clouds in vibrant hues 
-===========================================================
-Title: Lightning Bridge  
-Prompt: Generate a glowing suspension bridge powered by electric energy, with bolts of lightning illuminating the dark sky 
-===========================================================
-Title: Plasma Energy Fields  
-Prompt: a futuristic field glowing with plasma energy, with electric sparks lighting up the terrain 
-===========================================================
-Title: Electric Night Sky  
-Prompt: a dramatic night sky illuminated by vibrant lightning bolts, with neon reflections shimmering on a still lake below 
-===========================================================
-Title: Lightning Plains  
-Prompt: Generate an endless plain illuminated by electric blue lightning strikes, with glowing grass rippling in the stormy wind 
-===========================================================
-Title: Thunder Tower  
-Prompt: a massive tower attracting glowing lightning bolts, illuminating the dark storm clouds above 
-===========================================================
-Title: Electric Desert  
-Prompt: a glowing desert scene with lightning bolts striking the sand, creating vibrant neon light patterns 
-===========================================================
-Title: Neon Thunderstorm  
-Prompt: Generate a surreal storm with multicolored neon lightning bolts, illuminating the clouds in vibrant pinks and purples 
-===========================================================
-Title: Thunderous Crater  
-Prompt: a glowing crater surrounded by electric lightning arcs, casting an eerie glow into the stormy night 
-===========================================================
-Title: Plasma Cliff  
-Prompt: a glowing cliff illuminated by electric lightning strikes, with neon currents running through its cracks 
-===========================================================
-Title: Lightning Horizon  
-Prompt: a distant horizon illuminated by continuous glowing lightning bolts, casting an electric light over the dark landscape 
-===========================================================
-Title: Electric Glacier  
-Prompt: Generate a glowing glacier surrounded by lightning strikes, with neon blue light reflecting off its icy surface 
-===========================================================
-Title: Lightning Tundra  
-Prompt: a vast tundra illuminated by vibrant electric storms, with glowing auroras blending with the lightning bolts 
-===========================================================
-Title: Glowing Arcade  
-Prompt: a neon-lit arcade with glowing signs and reflections on the sleek floor, creating a vibrant and nostalgic atmosphere 
-===========================================================
-Title: Electric Rain  
-Prompt: Generate a rainy urban street with glowing puddles reflecting neon lights and blurred movement of passersby 
-===========================================================
-Title: Lightning Tower  
-Prompt: a futuristic skyscraper glowing with electric energy, with lightning bolts striking its spire 
-===========================================================
-Title: Floating Neon Market  
-Prompt: a vibrant floating market illuminated by glowing neon lanterns, with reflections on the water creating a dynamic scene 
-===========================================================
-Title: Subway Lightning  
-Prompt: a glowing subway tunnel illuminated by electric blue lights, with light trails of a speeding train 
-===========================================================
-Title: Nightlife Glimmers  
-Prompt: Generate a bustling street filled with glowing neon signs and vibrant lights, capturing the energy of the nightlife 
-===========================================================
-Title: Overhead Glow  
-Prompt: an aerial view of a futuristic city glowing with radiant neon lights, with highways lit by speeding vehicles 
-===========================================================
-Title: Neon Reflection Lake  
-Prompt: a serene lake reflecting the glowing lights of a futuristic city in the distance 
-===========================================================
-Title: Thunder Alley  
-Prompt: Generate a narrow alley illuminated by glowing neon lights and lightning strikes in the stormy night sky above 
-===========================================================
-Title: Electric Skywalk  
-Prompt: a glowing skywalk connecting skyscrapers, with electric trails lighting up its transparent floor 
-===========================================================
-Title: Lightning Bloom  
-Prompt: an abstract glowing bloom of lightning bolts spreading outward, with radiant neon tones against a dark background 
-===========================================================
-Title: Electric Mandala  
-Prompt: Generate a symmetrical glowing mandala made entirely of interconnected lightning arcs in vibrant blue and white 
-===========================================================
-Title: Lightning Tunnel  
-Prompt: an abstract tunnel made of glowing lightning bolts, with electric energy racing through its walls 
-===========================================================
-Title: Plasma Pulse  
-Prompt: a glowing pulse of plasma energy radiating in waves, with vivid neon hues blending into the dark void 
-===========================================================
-Title: Electric Tree Roots  
-Prompt: glowing electric roots spreading outward like a tree, with vibrant bolts illuminating the surrounding space 
-===========================================================
-Title: Energy Spiral  
-Prompt: Generate a swirling spiral of electric energy, with glowing arcs in bold blues and purples 
-===========================================================
-Title: Thunder Fractals  
-Prompt: abstract fractal patterns illuminated by vibrant lightning bolts, creating a sense of endless energy 
-===========================================================
-Title: Electric Rainfall  
-Prompt: a scene of glowing electric raindrops falling in slow motion, with neon reflections below 
-===========================================================
-Title: Lightning Nexus  
-Prompt: Generate an abstract glowing nexus of interconnected lightning bolts, radiating energy in every direction 
-===========================================================
-Title: Plasma Ribbons  
-Prompt: flowing ribbons of electric plasma energy twisting through a dark void, with soft neon gradients 
-===========================================================
-Title: Lightning Serpent  
-Prompt: a glowing serpent made of pure electric energy, coiling through stormy neon clouds 
-===========================================================
-Title: Thunder Wizard  
-Prompt: a mythical wizard wielding a glowing lightning staff, surrounded by neon energy arcs in a stormy backdrop 
-===========================================================
-Title: Electric Unicorn  
-Prompt: a glowing unicorn galloping through an electric storm, with lightning bolts illuminating its radiant mane 
-===========================================================
-Title: Plasma Castle  
-Prompt: Generate a glowing castle powered by plasma energy, with radiant neon spires and electric shields 
-===========================================================
-Title: Energy Phoenix  
-Prompt: a phoenix reborn in a burst of glowing electric energy, with radiant wings illuminated by neon light 
-===========================================================
-Title: Lightning Dragon Egg  
-Prompt: a glowing dragon egg crackling with electric energy, set in a stormy, illuminated environment 
-===========================================================
-Title: Thunder Valkyrie  
-Prompt: a glowing Valkyrie wielding electric swords, flying through neon-lit storm clouds 
-===========================================================
-Title: Plasma Gateway  
-Prompt: Generate a mythical gateway made of swirling plasma energy, with glowing lightning arcs framing its edges 
-===========================================================
-Title: Thunder Titan  
-Prompt: a towering titan glowing with electric power, standing amidst a stormy neon-lit battlefield 
-===========================================================
-Title: Lightning Spirit  
-Prompt: a glowing ethereal spirit made of electric energy, floating in a stormy, radiant void 
-===========================================================
-Title: Plasma Skyline  
-Prompt: a futuristic city with glowing plasma streams flowing between skyscrapersUse vibrant neon colors like blue and magenta to highlight energy and motion 
-===========================================================
-Title: Floating Energy Island  
-Prompt: Generate a glowing floating island powered by electric generators, with lightning bolts connecting it to the clouds above 
-===========================================================
-Title: Cybernetic Glow  
-Prompt: a cybernetic humanoid with glowing circuits running along their body, set against a dark, futuristic backdrop 
-===========================================================
-Title: Neon Bridge  
-Prompt: a glowing bridge suspended over a vast energy field, with electric currents illuminating the structure 
-===========================================================
-Title: Space Lightning Storm  
-Prompt: Generate a cosmic lightning storm in space, with glowing nebulae and electric bolts illuminating nearby planets 
-===========================================================
-Title: Pulsing Starship  
-Prompt: a glowing starship with pulsing energy cores, flying through a dense asteroid field under vibrant neon light 
-===========================================================
-Title: Electric City Grid  
-Prompt: a city from above, with glowing neon lines forming a geometric grid that powers the urban landscape 
-===========================================================
-Title: Holographic Market  
-Prompt: a bustling holographic market filled with glowing displays and floating neon signs, surrounded by vibrant energy trails 
-===========================================================
-Title: Neon Forest  
-Prompt: Generate a surreal forest with glowing trees and electric vines, with energy pulsating through the foliage 
-===========================================================
-Title: Energy-Powered Dome  
-Prompt: a glowing dome surrounded by radiant plasma fields, with lightning bolts arcing between the structure’s edges 
-===========================================================
-Title: Electric Cliffside  
-Prompt: a dramatic cliff illuminated by vibrant lightning bolts striking the rocky surface, with glowing electric veins spreading across 
-===========================================================
-Title: Neon Lightning Cloud  
-Prompt: a glowing storm cloud radiating electric bolts in neon pink, blue, and purple, casting vibrant light across a dark sky 
-===========================================================
-Title: Thunderous Valley  
-Prompt: Generate a glowing valley illuminated by bolts of neon lightning, with reflections shimmering on the wet terrain below 
-===========================================================
-Title: Plasma Ocean  
-Prompt: an ocean glowing with electric energy, with lightning bolts illuminating the stormy waves 
-===========================================================
-Title: Lightning Columns  
-Prompt: towering glowing columns in a dark canyon, with vibrant lightning bolts racing between them 
-===========================================================
-Title: Thunder Plains Glow  
-Prompt: Generate an expansive plain lit by continuous glowing lightning arcs, with electric grass swaying in the wind 
-===========================================================
-Title: Lightning Tower Spire  
-Prompt: a glowing tower with its spire drawing electric energy from the stormy neon sky above 
-===========================================================
-Title: Electric Canyon  
-Prompt: a glowing canyon with electric rivers flowing through it, lit by vibrant lightning bolts in the distance 
-===========================================================
-Title: Plasma Lake  
-Prompt: a lake glowing with electric blue plasma, with lightning strikes illuminating its surface 
-===========================================================
-Title: Thunder Peak  
-Prompt: Generate a dramatic mountain peak surrounded by glowing clouds, with continuous lightning bolts striking its summit 
-===========================================================
-Title: Neon Street Glow  
-Prompt: a bustling city street bathed in glowing neon light, with reflections on wet pavement and vibrant signs towering overhead 
-===========================================================
-Title: Lightning Skyline Reflection  
-Prompt: Generate a futuristic skyline glowing with electric energy, reflected in a calm body of water below 
-===========================================================
-Title: Electric Bridge Trail  
-Prompt: a glowing suspension bridge with energy trails running along its cables, casting radiant light into the night 
-===========================================================
-Title: Neon Tower Glow  
-Prompt: a towering skyscraper radiating neon light, with electric currents running down its surface 
-===========================================================
-Title: Thunder Alley Reflections  
-Prompt: a glowing alley illuminated by vibrant lightning bolts and neon signs, with reflections shimmering on the wet ground 
-===========================================================
-Title: Lightning-Powered Park  
-Prompt: a futuristic park glowing with electric energy, with lightning arcs illuminating its structures and pathways 
-===========================================================
-Title: Hovering Tram Glow  
-Prompt: Generate a glowing futuristic tram suspended above a neon-lit city, with electric trails following its motion 
-===========================================================
-Title: Electric Plaza  
-Prompt: a glowing urban plaza with neon fountains and radiant electric light displays casting vibrant shadows 
-===========================================================
-Title: Thunder Subway Glow  
-Prompt: a futuristic subway station illuminated by electric arcs, with glowing rails and neon signage 
-===========================================================
-Title: Neon Lantern Market  
-Prompt: a lively street market glowing with vibrant neon lanterns, reflecting on the polished surface of the ground 
-===========================================================
-Title: Electric Burst  
-Prompt: an abstract explosion of electric energy, with glowing arcs spreading outward in vibrant neon colors 
-===========================================================
-Title: Plasma Stream  
-Prompt: Generate a flowing stream of glowing plasma energy, twisting and pulsating against a dark void 
-===========================================================
-Title: Lightning Grid Sphere  
-Prompt: a glowing sphere made of interconnected lightning arcs, casting radiant light into the surrounding darkness 
-===========================================================
-Title: Neon Fractals  
-Prompt: a glowing fractal pattern of lightning bolts, radiating energy in bold neon hues 
-===========================================================
-Title: Electric Wave Field  
-Prompt: an abstract field of flowing electric waves, glowing in shades of blue and purple against a black background 
-===========================================================
-Title: Thunder Veins  
-Prompt: Generate a close-up of glowing lightning veins spreading across a dark surface, with vibrant energy pulses racing through 
-===========================================================
-Title: Lightning Bloom  
-Prompt: an abstract glowing bloom of lightning bolts, radiating energy in vivid neon colors 
-===========================================================
-Title: Pulsing Plasma Circles  
-Prompt: a dynamic composition of glowing plasma circles, radiating energy in soft neon gradients 
-===========================================================
-Title: Energy Spiral Bloom  
-Prompt: Generate a swirling spiral of electric energy, with glowing arcs illuminating the surrounding darkness 
-===========================================================
-Title: Thunder Grid Nexus  
-Prompt: a glowing nexus of interconnected lightning bolts forming a radiant grid of energy 
-===========================================================
-Title: Lightning Griffin  
-Prompt: a glowing griffin with electric feathers, flying through a neon-lit storm cloud 
-===========================================================
-Title: Plasma Warlock  
-Prompt: a mystical warlock wielding glowing plasma orbs, surrounded by electric energy in a dark, enchanted forest 
-===========================================================
-Title: Electric Hydra  
-Prompt: Generate a glowing hydra with multiple lightning heads, crackling with energy in a stormy backdrop 
-===========================================================
-Title: Thunder Gatekeeper  
-Prompt: a glowing figure guarding an electric gateway, with lightning bolts framing the radiant portal 
-===========================================================
-Title: Energy Kraken  
-Prompt: a glowing Kraken made of electric energy, rising from a neon-lit ocean under a stormy sky 
-===========================================================
-Title: Neon Centaur  
-Prompt: a mythical centaur glowing with electric light, galloping through a radiant forest illuminated by lightning 
-===========================================================
-Title: Thunder Palace  
-Prompt: Generate a glowing palace surrounded by neon-lit clouds and electric storms, with radiant spires reaching into the sky 
-===========================================================
-Title: Lightning Spirit Wings  
-Prompt: an ethereal spirit with glowing lightning wings, radiating energy in vibrant neon colors 
-===========================================================
-Title: Plasma Colossus  
-Prompt: a towering colossus made of glowing plasma, surrounded by radiant electric arcs in a stormy environment 
-===========================================================
-Title: Energy Dragon Nest  
-Prompt: a glowing dragon’s nest crackling with electric energy, with radiant eggs surrounded by lightning bolts 
-===========================================================
-Title: Neon Canyon Path  
-Prompt: a glowing canyon with a radiant pathway illuminated by neon blue and purple lights, with electric sparks dancing across the rocky walls 
-===========================================================
-Title: Lightning Gear  
-Prompt: a glowing mechanical gear powered by electric energy, with arcs of lightning connecting its intricate components 
-===========================================================
-Title: Thunder Chariot  
-Prompt: Generate a mythical chariot glowing with electric wheels, being pulled by neon-lit horses galloping through a stormy night sky 
-===========================================================
-Title: Energy Fortress  
-Prompt: a futuristic fortress glowing with plasma defenses, surrounded by radiant electric fields under a stormy backdrop 
-===========================================================
-Title: Lightning Pathway  
-Prompt: a glowing pathway formed by interconnected lightning bolts, leading into a vibrant neon horizon 
-===========================================================
-Title: Electric Lotus  
-Prompt: a surreal glowing lotus flower made of electric energy, radiating soft neon light in shades of blue and pink 
-===========================================================
-Title: Plasma Orb Core  
-Prompt: a glowing orb core surrounded by swirling lightning arcs, with vibrant neon colors illuminating its radiant energy 
-===========================================================
-Title: Thunder Striker  
-Prompt: Generate a glowing figure wielding a lightning hammer, standing against a stormy neon-lit backdrop with electric arcs lighting up the sky 
-===========================================================
-Title: Neon Tunnel Rush  
-Prompt: a glowing tunnel of swirling neon light, with lightning streaks racing through its dynamic curves 
-===========================================================
-Title: Lightning River Glow  
-Prompt: a glowing river flowing with electric energy, illuminating its surroundings with vibrant neon reflections under a dark sky 
-===========================================================
-Title: Stormbreaker Blade  
-Prompt: a glowing sword charged with electric energy, with vibrant lightning bolts radiating from its blade against a stormy backdrop 
-===========================================================
-Title: Electric Crystal Cavern  
-Prompt: a glowing cavern filled with radiant crystals emitting electric sparks, illuminating the rocky walls with neon hues 
-===========================================================
-Title: Plasma Throne  
-Prompt: a futuristic throne glowing with plasma energy, surrounded by swirling lightning arcs and vibrant neon lights 
-===========================================================
-Title: Lightning Obelisk  
-Prompt: Generate a towering obelisk glowing with electric runes, with radiant lightning bolts connecting it to the stormy sky 
-===========================================================
-Title: Thunder Maze  
-Prompt: a glowing labyrinth with walls illuminated by electric patterns, casting vibrant neon reflections on the polished floor 
-===========================================================
-Title: Lightning Rider  
-Prompt: a futuristic motorcycle glowing with neon energy, leaving a trail of electric sparks as it speeds through a stormy landscape 
-===========================================================
+Title: Neon Skyline: a futuristic city skyline illuminated by vibrant neon lights in shades of blue, pink, and green. Include sleek skyscrapers with glowing windows and flying vehicles 
+Title: Cyberpunk Alley: a narrow alley in a cyberpunk city, with glowing signs, steam rising from vents, and reflections on wet pavementUse bold contrasts for a dynamic look 
+Title: Sci-Fi Spaceport: Generate a sprawling spaceport under a glowing galaxy skyInclude futuristic spaceships docked, with bright light trails in the background 
+Title: Holographic Display: a scene of a person interacting with floating holographic displaysUse bright, glowing interfaces in vibrant neon colors 
+Title: Cosmic Horizon: a distant planet with glowing rings in a vibrant galaxy, framed by a futuristic city glowing in the foreground 
+Title: Electric Circuit City: Generate a city made entirely of glowing circuitry, with energy pulses lighting up the landscapeUse deep blues and vivid yellows for contrast 
+Title: Starship Glow: a glowing starship with energy trails flying through a dense asteroid field illuminated by distant stars 
+Title: Energy Dome: a glowing energy dome surrounding a futuristic colonyInclude dramatic lighting with electric sparks at the edges of the dome 
+Title: Cyber Grid: a glowing grid stretching infinitely into the horizon, with a figure walking toward the light source in the distance 
+Title: Electric Samurai: Generate a futuristic samurai with glowing armor and an electric katana, standing against a stormy neon-lit backdrop 
+Title: Stormy Mountain: a towering mountain peak surrounded by glowing lightning strikes under a dark, stormy sky 
+Title: Electric Ocean: Generate a glowing ocean lit by electric blue waves crashing against jagged rocks, with a storm flashing in the distance 
+Title: Neon Storm: a surreal storm with lightning bolts in vibrant neon pink and purple, illuminating the clouds and a futuristic city below 
+Title: Thunderous Skyline: a city skyline with glowing lightning bolts striking skyscrapers, illuminating the dark storm clouds above 
+Title: Energy Tree: a glowing tree with electric branches reaching into a stormy skyInclude vivid blue and purple tones for a mystical effect 
+Title: Plasma Storm: Generate a storm made of glowing plasma energy, with bolts connecting to futuristic antennas on a barren landscape 
+Title: Lightning Bridge: a glowing bridge suspended by electric arcs, with a stormy backdrop of vibrant neon clouds 
+Title: Electric Waterfall: a glowing waterfall with electric blue water cascading into a misty pool below, under an illuminated stormy sky 
+Title: Thunderous Canyon: Generate a deep canyon lit by glowing lightning bolts striking the rocks, with an electric blue river flowing below 
+Title: Lightning Forest: a glowing forest with trees illuminated by electric energy, with lightning bolts crackling in the background 
+Title: Neon Intersection: a bustling intersection in a neon-lit city, with glowing signs reflecting on wet pavement and light trails of passing vehicles 
+Title: Electric Streetlights: a quiet street lined with futuristic glowing streetlights, casting neon reflections on the surrounding buildings 
+Title: Floating Market Glow: Generate a futuristic floating market illuminated by vibrant neon lanterns, with boats casting reflections on the glowing water below 
+Title: Lightning Train: a high-speed futuristic train glowing with electric energy as it speeds through a neon-lit urban landscape 
+Title: Electric Overpass: a futuristic overpass with glowing billboards and electric trails of hovering vehicles below 
+Title: Downtown Glow: Generate a glowing urban scene with skyscrapers lit by bright neon signs, and a glowing river reflecting the vibrant lights 
+Title: Suburban Thunder: a futuristic suburban neighborhood under a glowing stormy sky, with electric lights illuminating the streets 
+Title: City Fountain Sparks: a glowing fountain in a futuristic plaza, with water illuminated by neon blue lights and electric sparks dancing around it 
+Title: Floating Cars: Generate a busy futuristic city street with hovering cars leaving light trails in a vibrant neon-lit environment 
+Title: Rooftop Reflections: a glowing rooftop bar overlooking a neon-lit city, with reflections of the vibrant lights in the sleek glass tables 
+Title: Electric Pulse: an abstract design of glowing electric pulses spreading across a dark surface, with vivid blue and green arcs 
+Title: Lightning Spiral: Generate a glowing spiral of lightning bolts swirling toward a bright neon coreUse vibrant purple and orange tones for a dramatic effect 
+Title: Energy Fractals: a glowing fractal pattern made of interconnected lightning arcs, set against a dark cosmic background 
+Title: Plasma Sphere: a glowing plasma sphere with electric arcs radiating from its core, illuminating the surrounding space 
+Title: Lightning Flower: Generate an abstract glowing flower made of neon lightning petals, with electric sparks in the background 
+Title: Pulsing Grid: a glowing grid illuminated by electric pulses racing along its lines, creating a dynamic and futuristic feel 
+Title: Electric Wave: a glowing wave of electric energy flowing through a dark, abstract landscape 
+Title: Energy Vortex: Generate a glowing vortex of electric energy, with vibrant neon bolts spiraling into the center 
+Title: Shattered Lightning: an abstract pattern of broken glass illuminated by glowing lightning cracks, with bold contrasts of blue and white 
+Title: Electric Ribbon: a flowing ribbon of glowing electric energy twisting through a dark void, with soft neon gradients 
+Title: Thunder Dragon: a glowing dragon made of lightning, flying through stormy neon cloudsUse electric blue and purple tones for dramatic impact 
+Title: Electric Phoenix: Generate a mythical phoenix glowing with electric energy, rising from a stormy, illuminated backdrop 
+Title: Lightning Castle: a glowing castle on a mountain, surrounded by swirling lightning bolts illuminating the sky 
+Title: Stormy Pegasus: a glowing Pegasus flying through an electric storm, with neon lightning bolts surrounding it 
+Title: Energy Tree of Life: a mythical tree glowing with vibrant electric energy, with lightning branches reaching into the stormy sky 
+Title: Electric Golem: Generate a towering golem made of glowing stone and crackling with electric energy, standing in a stormy battlefield 
+Title: Lightning Portal: a glowing portal made of swirling electric energy, with vivid neon bolts connecting its edges 
+Title: Thunder Guardian: a glowing knight clad in electric armor, wielding a lightning sword against a stormy, illuminated backdrop 
+Title: Electric Mermaid: a glowing mermaid swimming in an electric ocean, with neon currents trailing behind her 
+Title: Storm Phoenix Rising: Generate a glowing phoenix breaking through stormy clouds, with lightning bolts illuminating its radiant wings 
+Title: Hovering Metropolis: a futuristic city with glowing skyscrapers and flying vehicles, illuminated by radiant neon colors under a starry sky 
+Title: Energy Dome Skyline: Generate a glowing energy dome covering a sprawling futuristic city, with electric sparks dancing along its edges 
+Title: Neon Energy Grid: a glowing energy grid spanning a futuristic landscape, with vibrant blue and purple pulses of light 
+Title: Robotic Lightning: a humanoid robot crackling with electric energy, standing in a dark, glowing industrial setting 
+Title: Neon Circuit Planet: Generate a glowing planet made entirely of interconnected neon circuitry, surrounded by floating satellites 
+Title: Energy Tunnel: a glowing tunnel of swirling neon energy, with streaks of electric light racing along its walls 
+Title: Thunder Monorail: a futuristic monorail glowing with electric blue energy, speeding through a neon-lit cityscape 
+Title: Energy Starship: a glowing starship in space, surrounded by electric arcs and glowing nebula clouds in vibrant hues 
+Title: Lightning Bridge: Generate a glowing suspension bridge powered by electric energy, with bolts of lightning illuminating the dark sky 
+Title: Plasma Energy Fields: a futuristic field glowing with plasma energy, with electric sparks lighting up the terrain 
+Title: Electric Night Sky: a dramatic night sky illuminated by vibrant lightning bolts, with neon reflections shimmering on a still lake below 
+Title: Lightning Plains: Generate an endless plain illuminated by electric blue lightning strikes, with glowing grass rippling in the stormy wind 
+Title: Thunder Tower: a massive tower attracting glowing lightning bolts, illuminating the dark storm clouds above 
+Title: Electric Desert: a glowing desert scene with lightning bolts striking the sand, creating vibrant neon light patterns 
+Title: Neon Thunderstorm: Generate a surreal storm with multicolored neon lightning bolts, illuminating the clouds in vibrant pinks and purples 
+Title: Thunderous Crater: a glowing crater surrounded by electric lightning arcs, casting an eerie glow into the stormy night 
+Title: Plasma Cliff: a glowing cliff illuminated by electric lightning strikes, with neon currents running through its cracks 
+Title: Lightning Horizon: a distant horizon illuminated by continuous glowing lightning bolts, casting an electric light over the dark landscape 
+Title: Electric Glacier: Generate a glowing glacier surrounded by lightning strikes, with neon blue light reflecting off its icy surface 
+Title: Lightning Tundra: a vast tundra illuminated by vibrant electric storms, with glowing auroras blending with the lightning bolts 
+Title: Glowing Arcade: a neon-lit arcade with glowing signs and reflections on the sleek floor, creating a vibrant and nostalgic atmosphere 
+Title: Electric Rain: Generate a rainy urban street with glowing puddles reflecting neon lights and blurred movement of passersby 
+Title: Lightning Tower: a futuristic skyscraper glowing with electric energy, with lightning bolts striking its spire 
+Title: Floating Neon Market: a vibrant floating market illuminated by glowing neon lanterns, with reflections on the water creating a dynamic scene 
+Title: Subway Lightning: a glowing subway tunnel illuminated by electric blue lights, with light trails of a speeding train 
+Title: Nightlife Glimmers: Generate a bustling street filled with glowing neon signs and vibrant lights, capturing the energy of the nightlife 
+Title: Overhead Glow: an aerial view of a futuristic city glowing with radiant neon lights, with highways lit by speeding vehicles 
+Title: Neon Reflection Lake: a serene lake reflecting the glowing lights of a futuristic city in the distance 
+Title: Thunder Alley: Generate a narrow alley illuminated by glowing neon lights and lightning strikes in the stormy night sky above 
+Title: Electric Skywalk: a glowing skywalk connecting skyscrapers, with electric trails lighting up its transparent floor 
+Title: Lightning Bloom: an abstract glowing bloom of lightning bolts spreading outward, with radiant neon tones against a dark background 
+Title: Electric Mandala: Generate a symmetrical glowing mandala made entirely of interconnected lightning arcs in vibrant blue and white 
+Title: Lightning Tunnel: an abstract tunnel made of glowing lightning bolts, with electric energy racing through its walls 
+Title: Plasma Pulse: a glowing pulse of plasma energy radiating in waves, with vivid neon hues blending into the dark void 
+Title: Electric Tree Roots: glowing electric roots spreading outward like a tree, with vibrant bolts illuminating the surrounding space 
+Title: Energy Spiral: Generate a swirling spiral of electric energy, with glowing arcs in bold blues and purples 
+Title: Thunder Fractals: abstract fractal patterns illuminated by vibrant lightning bolts, creating a sense of endless energy 
+Title: Electric Rainfall: a scene of glowing electric raindrops falling in slow motion, with neon reflections below 
+Title: Lightning Nexus: Generate an abstract glowing nexus of interconnected lightning bolts, radiating energy in every direction 
+Title: Plasma Ribbons: flowing ribbons of electric plasma energy twisting through a dark void, with soft neon gradients 
+Title: Lightning Serpent: a glowing serpent made of pure electric energy, coiling through stormy neon clouds 
+Title: Thunder Wizard: a mythical wizard wielding a glowing lightning staff, surrounded by neon energy arcs in a stormy backdrop 
+Title: Electric Unicorn: a glowing unicorn galloping through an electric storm, with lightning bolts illuminating its radiant mane 
+Title: Plasma Castle: Generate a glowing castle powered by plasma energy, with radiant neon spires and electric shields 
+Title: Energy Phoenix: a phoenix reborn in a burst of glowing electric energy, with radiant wings illuminated by neon light 
+Title: Lightning Dragon Egg: a glowing dragon egg crackling with electric energy, set in a stormy, illuminated environment 
+Title: Thunder Valkyrie: a glowing Valkyrie wielding electric swords, flying through neon-lit storm clouds 
+Title: Plasma Gateway: Generate a mythical gateway made of swirling plasma energy, with glowing lightning arcs framing its edges 
+Title: Thunder Titan: a towering titan glowing with electric power, standing amidst a stormy neon-lit battlefield 
+Title: Lightning Spirit: a glowing ethereal spirit made of electric energy, floating in a stormy, radiant void 
+Title: Plasma Skyline: a futuristic city with glowing plasma streams flowing between skyscrapersUse vibrant neon colors like blue and magenta to highlight energy and motion 
+Title: Floating Energy Island: Generate a glowing floating island powered by electric generators, with lightning bolts connecting it to the clouds above 
+Title: Cybernetic Glow: a cybernetic humanoid with glowing circuits running along their body, set against a dark, futuristic backdrop 
+Title: Neon Bridge: a glowing bridge suspended over a vast energy field, with electric currents illuminating the structure 
+Title: Space Lightning Storm: Generate a cosmic lightning storm in space, with glowing nebulae and electric bolts illuminating nearby planets 
+Title: Pulsing Starship: a glowing starship with pulsing energy cores, flying through a dense asteroid field under vibrant neon light 
+Title: Electric City Grid: a city from above, with glowing neon lines forming a geometric grid that powers the urban landscape 
+Title: Holographic Market: a bustling holographic market filled with glowing displays and floating neon signs, surrounded by vibrant energy trails 
+Title: Neon Forest: Generate a surreal forest with glowing trees and electric vines, with energy pulsating through the foliage 
+Title: Energy-Powered Dome: a glowing dome surrounded by radiant plasma fields, with lightning bolts arcing between the structure’s edges 
+Title: Electric Cliffside: a dramatic cliff illuminated by vibrant lightning bolts striking the rocky surface, with glowing electric veins spreading across 
+Title: Neon Lightning Cloud: a glowing storm cloud radiating electric bolts in neon pink, blue, and purple, casting vibrant light across a dark sky 
+Title: Thunderous Valley: Generate a glowing valley illuminated by bolts of neon lightning, with reflections shimmering on the wet terrain below 
+Title: Plasma Ocean: an ocean glowing with electric energy, with lightning bolts illuminating the stormy waves 
+Title: Lightning Columns: towering glowing columns in a dark canyon, with vibrant lightning bolts racing between them 
+Title: Thunder Plains Glow: Generate an expansive plain lit by continuous glowing lightning arcs, with electric grass swaying in the wind 
+Title: Lightning Tower Spire: a glowing tower with its spire drawing electric energy from the stormy neon sky above 
+Title: Electric Canyon: a glowing canyon with electric rivers flowing through it, lit by vibrant lightning bolts in the distance 
+Title: Plasma Lake: a lake glowing with electric blue plasma, with lightning strikes illuminating its surface 
+Title: Thunder Peak: Generate a dramatic mountain peak surrounded by glowing clouds, with continuous lightning bolts striking its summit 
+Title: Neon Street Glow: a bustling city street bathed in glowing neon light, with reflections on wet pavement and vibrant signs towering overhead 
+Title: Lightning Skyline Reflection: Generate a futuristic skyline glowing with electric energy, reflected in a calm body of water below 
+Title: Electric Bridge Trail: a glowing suspension bridge with energy trails running along its cables, casting radiant light into the night 
+Title: Neon Tower Glow: a towering skyscraper radiating neon light, with electric currents running down its surface 
+Title: Thunder Alley Reflections: a glowing alley illuminated by vibrant lightning bolts and neon signs, with reflections shimmering on the wet ground 
+Title: Lightning-Powered Park: a futuristic park glowing with electric energy, with lightning arcs illuminating its structures and pathways 
+Title: Hovering Tram Glow: Generate a glowing futuristic tram suspended above a neon-lit city, with electric trails following its motion 
+Title: Electric Plaza: a glowing urban plaza with neon fountains and radiant electric light displays casting vibrant shadows 
+Title: Thunder Subway Glow: a futuristic subway station illuminated by electric arcs, with glowing rails and neon signage 
+Title: Neon Lantern Market: a lively street market glowing with vibrant neon lanterns, reflecting on the polished surface of the ground 
+Title: Electric Burst: an abstract explosion of electric energy, with glowing arcs spreading outward in vibrant neon colors 
+Title: Plasma Stream: Generate a flowing stream of glowing plasma energy, twisting and pulsating against a dark void 
+Title: Lightning Grid Sphere: a glowing sphere made of interconnected lightning arcs, casting radiant light into the surrounding darkness 
+Title: Neon Fractals: a glowing fractal pattern of lightning bolts, radiating energy in bold neon hues 
+Title: Electric Wave Field: an abstract field of flowing electric waves, glowing in shades of blue and purple against a black background 
+Title: Thunder Veins: Generate a close-up of glowing lightning veins spreading across a dark surface, with vibrant energy pulses racing through 
+Title: Lightning Bloom: an abstract glowing bloom of lightning bolts, radiating energy in vivid neon colors 
+Title: Pulsing Plasma Circles: a dynamic composition of glowing plasma circles, radiating energy in soft neon gradients 
+Title: Energy Spiral Bloom: Generate a swirling spiral of electric energy, with glowing arcs illuminating the surrounding darkness 
+Title: Thunder Grid Nexus: a glowing nexus of interconnected lightning bolts forming a radiant grid of energy 
+Title: Lightning Griffin: a glowing griffin with electric feathers, flying through a neon-lit storm cloud 
+Title: Plasma Warlock: a mystical warlock wielding glowing plasma orbs, surrounded by electric energy in a dark, enchanted forest 
+Title: Electric Hydra: Generate a glowing hydra with multiple lightning heads, crackling with energy in a stormy backdrop 
+Title: Thunder Gatekeeper: a glowing figure guarding an electric gateway, with lightning bolts framing the radiant portal 
+Title: Energy Kraken: a glowing Kraken made of electric energy, rising from a neon-lit ocean under a stormy sky 
+Title: Neon Centaur: a mythical centaur glowing with electric light, galloping through a radiant forest illuminated by lightning 
+Title: Thunder Palace: Generate a glowing palace surrounded by neon-lit clouds and electric storms, with radiant spires reaching into the sky 
+Title: Lightning Spirit Wings: an ethereal spirit with glowing lightning wings, radiating energy in vibrant neon colors 
+Title: Plasma Colossus: a towering colossus made of glowing plasma, surrounded by radiant electric arcs in a stormy environment 
+Title: Energy Dragon Nest: a glowing dragon’s nest crackling with electric energy, with radiant eggs surrounded by lightning bolts 
