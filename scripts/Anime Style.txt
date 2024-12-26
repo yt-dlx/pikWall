@@ -1,7 +1,42 @@
-Sunset Hilltop: An Anime-Style Scene Of A Hilltop During Sunset, Casting Warm Orange And Red Tones. Includes Gently Swaying Grass, Blooming Cherry Blossoms, And Soft, Dynamic Clouds In The Background.
-Neon Cyber Alley: An Anime-Style Futuristic Alley Lit By Vibrant Yet Natural-Looking Neon Signs. Features Soft Shadows On The Walls And Rain-Slicked Streets Reflecting The Colorful Lights.
-Sakura Dreamscape: An Anime-Style Tranquil Park Filled With Cherry Blossom Trees In Full Bloom. Includes Petals Gently Falling And A Serene Lake Reflecting The Pastel-Colored Sky.
-Skybound Cityscape: An Anime-Style City Floating Among The Clouds, Featuring Intricate Architecture And Softly Glowing Bridges. Showcases The City's Edge Gazing Toward A Vast, Natural Horizon.
+    Sunset Hilltop: An Anime-Style Scene Of A Hilltop During Sunset, Casting Warm Orange And Red Tones. Includes Gently Swaying Grass, Blooming Cherry Blossoms, And Soft, Dynamic Clouds In The Background.
+    Neon Cyber Alley: An Anime-Style Futuristic Alley Lit By Vibrant Yet Natural-Looking Neon Signs. Features Soft Shadows On The Walls And Rain-Slicked Streets Reflecting The Colorful Lights.
+    Sakura Dreamscape: An Anime-Style Tranquil Park Filled With Cherry Blossom Trees In Full Bloom. Includes Petals Gently Falling And A Serene Lake Reflecting The Pastel-Colored Sky.
+    Skybound Cityscape: An Anime-Style City Floating Among The Clouds, Featuring Intricate Architecture And Softly Glowing Bridges. Showcases The City's Edge Gazing Toward A Vast, Natural Horizon.
+    Forest Morning Glow: An Anime-Style Serene Forest Illuminated By The Soft Light Of Dawn, With Detailed Foliage, Mist Rising From The Ground, And Golden Beams Filtering Through The Trees.
+    Midnight Bridge Glow: An Anime-Style Glowing Suspension Bridge Under A Vibrant Starry Sky, With Detailed Cables And Soft Reflections On The Water Below Enhancing The Scene.
+    Rural Harmony Glow: An Anime-Style Peaceful Rural Landscape Glowing Under The Golden Light Of Sunrise, With Fields Of Wheat And A Windmill Turning Slowly In The Gentle Breeze.
+    Icy Reflections: An Anime-Style Tranquil Arctic Scene With Glowing Icebergs Floating Under A Twilight Sky, Featuring Detailed Cracks In The Ice And Soft Auroras Overhead.
+    Fractal Forest: An Anime-Style Abstract Glowing Forest Made Entirely Of Fractals, With Radiant Light Patterns Cascading Through Intricate Tree Shapes, Creating A Mesmerizing Environment.
+    Liquid Galaxy Ocean: An Anime-Style Surreal Glowing Ocean Reflecting Vibrant Nebulae, With Dynamic Light Waves Merging Into A Star-Filled Horizon, Enhancing The Cosmic Feel.
+    Time Spiral: An Anime-Style Glowing Spiral Of Floating Clocks Suspended In Space, With Detailed Reflections And A Radiant Cosmic Backdrop Adding To The Mystical Ambiance.
+    Infinity Pathway Glow: An Anime-Style Endless Glowing Pathway Surrounded By Radiant Fog And Shimmering Particles, Disappearing Into A Vibrant Horizon, Creating A Sense Of Infinite Exploration.
+    Glass Cityscape: An Anime-Style Futuristic City Made Entirely Of Glowing Glass Structures, With Soft Reflections And Intricate Architectural Details Enhancing The Modern Aesthetic.
+    Elven Sanctuary Glow: An Anime-Style Glowing Elven Village Nestled In A Vibrant Forest, With Radiant Plants And Light Spilling From Intricate Wooden Homes, Creating A Magical Environment.
+    Lunar Grove Glow: An Anime-Style Glowing Forest Under A Radiant Full Moon, With Bioluminescent Plants And Soft Mist Swirling Around Intricate Roots, Enhancing The Serene Atmosphere.
+Dragon’S Domain: An Anime-Style Glowing Cave Filled With Treasure, A Radiant Dragon Resting Atop, And Intricate Light Patterns Reflecting Off The Gold, Creating A Mystical Scene.
+Cosmic Coliseum Lights: An Anime-Style Intergalactic Coliseum Glowing With Radiant Energy Barriers And Dynamic Light Streaks, Creating A Vibrant And Captivating Competition Arena.
+Skyborne Chase: An Anime-Style Glowing Pursuit Of Flying Vehicles Racing Through The Clouds, With Dynamic Motion And Radiant Exhaust Trails Adding Excitement To The Scene.
+Lava Rapids Radiance: An Anime-Style Glowing Volcanic River Of Molten Lava Rushing Through Jagged Rocks, With Sparks Flying And Glowing Mist Rising, Highlighting The Natural Power.
+Stellar Rescue Mission: An Anime-Style Glowing Starship Performing A Daring Rescue In The Middle Of A Radiant Asteroid Field, Showcasing Intricate Ship Details And Cosmic Surroundings.
+Neon Combat Zone: An Anime-Style Glowing Futuristic Battleground Illuminated By Neon Lights And Energy Weapons Clashing With Dynamic Motion Effects, Creating An Intense Atmosphere.
+Prism Wave: An Anime-Style Abstract Glowing Wave Made Of Radiant Light Refracted Through A Prismatic Structure, Creating Vibrant And Dynamic Light Patterns.
+Aurora Vortex: An Anime-Style Swirling Vortex Of Auroras Blending Vibrant Colors In A Glowing Night Sky, Enhancing The Mystical And Natural Beauty Of The Scene.
+Cosmic Hourglass: An Anime-Style Glowing Hourglass Floating In Space, With Radiant Particles Cascading Between Its Chambers, Symbolizing The Passage Of Time In A Cosmic Setting.
+Fractal Canyon: An Anime-Style Glowing Canyon With Intricate Fractal Designs Carved Into Its Radiant Walls, Highlighting Natural And Abstract Beauty.
+Energy Grid: An Anime-Style Abstract Glowing Grid Illuminated By Pulsing Light Streams And Dynamic Radiant Patterns, Creating A Modern And Vibrant Aesthetic.
+Moonlit Hilltop Haven: An Anime-Style Glowing Hilltop Under A Full Moon, With Radiant Flowers And Soft Light Beams Scattering Through The Trees, Creating A Peaceful Sanctuary.
+Starlit Pavilion Glow: An Anime-Style Glowing Pavilion On A Serene Lake Under A Vibrant Starry Sky, With Shimmering Reflections On The Water Enhancing The Tranquil Scene.
+Solar Summit Glow: An Anime-Style Glowing Mountain Peak Bathed In Golden Sunrise Light, With Radiant Snow And Intricate Rock Details Highlighting Natural Grandeur.
+Twilight Chapel Glow: An Anime-Style Glowing Chapel Surrounded By Radiant Trees And Vibrant Stained-Glass Windows Reflecting The Setting Sun, Creating A Serene Atmosphere.
+Cosmic Throne: An Anime-Style Glowing Throne Floating In Space, Surrounded By Swirling Cosmic Energy And Radiant Celestial Light, Adding To Its Majestic Presence.
+Floating Isles Radiance: An Anime-Style Glowing Series Of Floating Islands Connected By Radiant Bridges, With Cascading Waterfalls And Vibrant Skies Enhancing The Surreal Beauty.
+Sapphire Caverns Glow: An Anime-Style Glowing Underground Cave Filled With Radiant Sapphire Crystals Reflecting Soft Light, Creating A Mesmerizing Subterranean Scene.
+Radiant Temple Cliff: An Anime-Style Glowing Temple At The Edge Of A Cliff, Illuminated By Golden Light Under A Twilight Sky, Highlighting Its Architectural Beauty.
+Crimson Jungle Glow: An Anime-Style Glowing Jungle Under Red Skies, With Radiant Plants And Intricate Textures Of Leaves And Vines, Creating A Vibrant And Mystical Environment.
+Aurora Lagoon Glow: An Anime-Style Glowing Lagoon Illuminated By Vibrant Auroras, With Soft Reflections On The Water And Radiant Plants Along The Shore, Enhancing Natural Beauty.
+Alpine Glow Village: An Anime-Style Glowing Alpine Village Nestled Between Snow-Covered Peaks At Sunrise, With Smoke Rising From Chimneys And Vibrant Golden Light Creating A Welcoming Atmosphere.
+Midnight Docks Glow: An Anime-Style Glowing Dockyard At Night, With Vibrant Lanterns, Gently Rippling Water, And Detailed Wooden Planks Reflecting The Warm Light, Creating A Serene Environment.
+Seaside Serenity Glow: An Anime-Style Glowing Beach At Dusk, With Waves Softly Crashing On The Shore, Vibrant Seashells Scattered, And A Radiant Pink-Orange Sky Enhancing Natural Beauty.
 Mystic Shrine Glow: An Anime-Style Forest Shrine Surrounded By Softly Glowing Lanterns And Delicate Fireflies At Twilight. Features A Gentle Mist And Subtle Magical Energy Emanating From The Shrine.
 Arctic Aurora Landscape: An Anime-Style Pristine Arctic Scene Under A Sky Filled With Vibrant Auroras. Includes Detailed Ice Textures And Subtle Reflections Of The Auroras On A Frozen Lake.
 Cosmic Carnival Lights: An Anime-Style Space-Themed Carnival With Floating Rides And Vibrant Yet Harmonious Light Patterns, Creating A Lively Yet Natural Festive Atmosphere.
@@ -44,41 +79,6 @@ Ember Haven Village: An Anime-Style Glowing Village Nestled Beside A River Of Mo
 Ocean Mirage Glow: An Anime-Style Glowing Ocean Scene With Vibrant Bioluminescent Waves Under A Radiant Sunset, With Intricate Light Reflections On The Water Enhancing Natural Beauty.
 Galactic Arena Lights: An Anime-Style Intergalactic Arena Glowing With Radiant Energy Barriers And Dynamic Light Patterns, Creating A Vibrant And Captivating Competition Atmosphere.
 Sunset Boulevard Glow: An Anime-Style Glowing Urban Street At Sunset, With Golden Light Reflecting Off Glass Windows And Vibrant Signs Illuminating The Area, Adding Dynamic Energy.
-Forest Morning Glow: An Anime-Style Serene Forest Illuminated By The Soft Light Of Dawn, With Detailed Foliage, Mist Rising From The Ground, And Golden Beams Filtering Through The Trees.
-Midnight Bridge Glow: An Anime-Style Glowing Suspension Bridge Under A Vibrant Starry Sky, With Detailed Cables And Soft Reflections On The Water Below Enhancing The Scene.
-Rural Harmony Glow: An Anime-Style Peaceful Rural Landscape Glowing Under The Golden Light Of Sunrise, With Fields Of Wheat And A Windmill Turning Slowly In The Gentle Breeze.
-Icy Reflections: An Anime-Style Tranquil Arctic Scene With Glowing Icebergs Floating Under A Twilight Sky, Featuring Detailed Cracks In The Ice And Soft Auroras Overhead.
-Fractal Forest: An Anime-Style Abstract Glowing Forest Made Entirely Of Fractals, With Radiant Light Patterns Cascading Through Intricate Tree Shapes, Creating A Mesmerizing Environment.
-Liquid Galaxy Ocean: An Anime-Style Surreal Glowing Ocean Reflecting Vibrant Nebulae, With Dynamic Light Waves Merging Into A Star-Filled Horizon, Enhancing The Cosmic Feel.
-Time Spiral: An Anime-Style Glowing Spiral Of Floating Clocks Suspended In Space, With Detailed Reflections And A Radiant Cosmic Backdrop Adding To The Mystical Ambiance.
-Infinity Pathway Glow: An Anime-Style Endless Glowing Pathway Surrounded By Radiant Fog And Shimmering Particles, Disappearing Into A Vibrant Horizon, Creating A Sense Of Infinite Exploration.
-Glass Cityscape: An Anime-Style Futuristic City Made Entirely Of Glowing Glass Structures, With Soft Reflections And Intricate Architectural Details Enhancing The Modern Aesthetic.
-Elven Sanctuary Glow: An Anime-Style Glowing Elven Village Nestled In A Vibrant Forest, With Radiant Plants And Light Spilling From Intricate Wooden Homes, Creating A Magical Environment.
-Lunar Grove Glow: An Anime-Style Glowing Forest Under A Radiant Full Moon, With Bioluminescent Plants And Soft Mist Swirling Around Intricate Roots, Enhancing The Serene Atmosphere.
-Dragon’S Domain: An Anime-Style Glowing Cave Filled With Treasure, A Radiant Dragon Resting Atop, And Intricate Light Patterns Reflecting Off The Gold, Creating A Mystical Scene.
-Cosmic Coliseum Lights: An Anime-Style Intergalactic Coliseum Glowing With Radiant Energy Barriers And Dynamic Light Streaks, Creating A Vibrant And Captivating Competition Arena.
-Skyborne Chase: An Anime-Style Glowing Pursuit Of Flying Vehicles Racing Through The Clouds, With Dynamic Motion And Radiant Exhaust Trails Adding Excitement To The Scene.
-Lava Rapids Radiance: An Anime-Style Glowing Volcanic River Of Molten Lava Rushing Through Jagged Rocks, With Sparks Flying And Glowing Mist Rising, Highlighting The Natural Power.
-Stellar Rescue Mission: An Anime-Style Glowing Starship Performing A Daring Rescue In The Middle Of A Radiant Asteroid Field, Showcasing Intricate Ship Details And Cosmic Surroundings.
-Neon Combat Zone: An Anime-Style Glowing Futuristic Battleground Illuminated By Neon Lights And Energy Weapons Clashing With Dynamic Motion Effects, Creating An Intense Atmosphere.
-Prism Wave: An Anime-Style Abstract Glowing Wave Made Of Radiant Light Refracted Through A Prismatic Structure, Creating Vibrant And Dynamic Light Patterns.
-Aurora Vortex: An Anime-Style Swirling Vortex Of Auroras Blending Vibrant Colors In A Glowing Night Sky, Enhancing The Mystical And Natural Beauty Of The Scene.
-Cosmic Hourglass: An Anime-Style Glowing Hourglass Floating In Space, With Radiant Particles Cascading Between Its Chambers, Symbolizing The Passage Of Time In A Cosmic Setting.
-Fractal Canyon: An Anime-Style Glowing Canyon With Intricate Fractal Designs Carved Into Its Radiant Walls, Highlighting Natural And Abstract Beauty.
-Energy Grid: An Anime-Style Abstract Glowing Grid Illuminated By Pulsing Light Streams And Dynamic Radiant Patterns, Creating A Modern And Vibrant Aesthetic.
-Moonlit Hilltop Haven: An Anime-Style Glowing Hilltop Under A Full Moon, With Radiant Flowers And Soft Light Beams Scattering Through The Trees, Creating A Peaceful Sanctuary.
-Starlit Pavilion Glow: An Anime-Style Glowing Pavilion On A Serene Lake Under A Vibrant Starry Sky, With Shimmering Reflections On The Water Enhancing The Tranquil Scene.
-Solar Summit Glow: An Anime-Style Glowing Mountain Peak Bathed In Golden Sunrise Light, With Radiant Snow And Intricate Rock Details Highlighting Natural Grandeur.
-Twilight Chapel Glow: An Anime-Style Glowing Chapel Surrounded By Radiant Trees And Vibrant Stained-Glass Windows Reflecting The Setting Sun, Creating A Serene Atmosphere.
-Cosmic Throne: An Anime-Style Glowing Throne Floating In Space, Surrounded By Swirling Cosmic Energy And Radiant Celestial Light, Adding To Its Majestic Presence.
-Floating Isles Radiance: An Anime-Style Glowing Series Of Floating Islands Connected By Radiant Bridges, With Cascading Waterfalls And Vibrant Skies Enhancing The Surreal Beauty.
-Sapphire Caverns Glow: An Anime-Style Glowing Underground Cave Filled With Radiant Sapphire Crystals Reflecting Soft Light, Creating A Mesmerizing Subterranean Scene.
-Radiant Temple Cliff: An Anime-Style Glowing Temple At The Edge Of A Cliff, Illuminated By Golden Light Under A Twilight Sky, Highlighting Its Architectural Beauty.
-Crimson Jungle Glow: An Anime-Style Glowing Jungle Under Red Skies, With Radiant Plants And Intricate Textures Of Leaves And Vines, Creating A Vibrant And Mystical Environment.
-Aurora Lagoon Glow: An Anime-Style Glowing Lagoon Illuminated By Vibrant Auroras, With Soft Reflections On The Water And Radiant Plants Along The Shore, Enhancing Natural Beauty.
-Alpine Glow Village: An Anime-Style Glowing Alpine Village Nestled Between Snow-Covered Peaks At Sunrise, With Smoke Rising From Chimneys And Vibrant Golden Light Creating A Welcoming Atmosphere.
-Midnight Docks Glow: An Anime-Style Glowing Dockyard At Night, With Vibrant Lanterns, Gently Rippling Water, And Detailed Wooden Planks Reflecting The Warm Light, Creating A Serene Environment.
-Seaside Serenity Glow: An Anime-Style Glowing Beach At Dusk, With Waves Softly Crashing On The Shore, Vibrant Seashells Scattered, And A Radiant Pink-Orange Sky Enhancing Natural Beauty.
 Urban Crossroads Glow: An Anime-Style Bustling City Intersection Glowing With Neon Signs, Vibrant Reflections On Rain-Slicked Streets, And Intricate Light Patterns Adding Dynamic Energy.
 Sunset Ranch Radiance: An Anime-Style Glowing Countryside Ranch Bathed In Golden Light, With Rolling Fields, Detailed Wooden Fences, And A Tranquil Sky Enhancing The Peaceful Scene.
 Ethereal Woods Glow: An Anime-Style Glowing Forest With Radiant Trees Whose Leaves Shimmer Like Gemstones, Surrounded By A Gentle Golden Mist, Creating A Magical Atmosphere.
