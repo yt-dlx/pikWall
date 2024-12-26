@@ -1,0 +1,499 @@
+===========================================================
+Title: Neon Skyline  
+Prompt: Design a futuristic city skyline illuminated by vibrant neon lights in shades of blue, pink, and greenInclude sleek skyscrapers with glowing windows and flying vehicles 
+===========================================================
+Title: Cyberpunk Alley  
+Prompt: Capture a narrow alley in a cyberpunk city, with glowing signs, steam rising from vents, and reflections on wet pavementUse bold contrasts for a dynamic look 
+===========================================================
+Title: Sci-Fi Spaceport  
+Prompt: Generate a sprawling spaceport under a glowing galaxy skyInclude futuristic spaceships docked, with bright light trails in the background 
+===========================================================
+Title: Holographic Display  
+Prompt: Design a scene of a person interacting with floating holographic displaysUse bright, glowing interfaces in vibrant neon colors 
+===========================================================
+Title: Cosmic Horizon  
+Prompt: Capture a distant planet with glowing rings in a vibrant galaxy, framed by a futuristic city glowing in the foreground 
+===========================================================
+Title: Electric Circuit City  
+Prompt: Generate a city made entirely of glowing circuitry, with energy pulses lighting up the landscapeUse deep blues and vivid yellows for contrast 
+===========================================================
+Title: Starship Glow  
+Prompt: Showcase a glowing starship with energy trails flying through a dense asteroid field illuminated by distant stars 
+===========================================================
+Title: Energy Dome  
+Prompt: Design a glowing energy dome surrounding a futuristic colonyInclude dramatic lighting with electric sparks at the edges of the dome 
+===========================================================
+Title: Cyber Grid  
+Prompt: Capture a glowing grid stretching infinitely into the horizon, with a figure walking toward the light source in the distance 
+===========================================================
+Title: Electric Samurai  
+Prompt: Generate a futuristic samurai with glowing armor and an electric katana, standing against a stormy neon-lit backdrop 
+===========================================================
+Title: Stormy Mountain  
+Prompt: Capture a towering mountain peak surrounded by glowing lightning strikes under a dark, stormy sky 
+===========================================================
+Title: Electric Ocean  
+Prompt: Generate a glowing ocean lit by electric blue waves crashing against jagged rocks, with a storm flashing in the distance 
+===========================================================
+Title: Neon Storm  
+Prompt: Design a surreal storm with lightning bolts in vibrant neon pink and purple, illuminating the clouds and a futuristic city below 
+===========================================================
+Title: Thunderous Skyline  
+Prompt: Capture a city skyline with glowing lightning bolts striking skyscrapers, illuminating the dark storm clouds above 
+===========================================================
+Title: Energy Tree  
+Prompt: Showcase a glowing tree with electric branches reaching into a stormy skyInclude vivid blue and purple tones for a mystical effect 
+===========================================================
+Title: Plasma Storm  
+Prompt: Generate a storm made of glowing plasma energy, with bolts connecting to futuristic antennas on a barren landscape 
+===========================================================
+Title: Lightning Bridge  
+Prompt: Design a glowing bridge suspended by electric arcs, with a stormy backdrop of vibrant neon clouds 
+===========================================================
+Title: Electric Waterfall  
+Prompt: Capture a glowing waterfall with electric blue water cascading into a misty pool below, under an illuminated stormy sky 
+===========================================================
+Title: Thunderous Canyon  
+Prompt: Generate a deep canyon lit by glowing lightning bolts striking the rocks, with an electric blue river flowing below 
+===========================================================
+Title: Lightning Forest  
+Prompt: Showcase a glowing forest with trees illuminated by electric energy, with lightning bolts crackling in the background 
+===========================================================
+Title: Neon Intersection  
+Prompt: Capture a bustling intersection in a neon-lit city, with glowing signs reflecting on wet pavement and light trails of passing vehicles 
+===========================================================
+Title: Electric Streetlights  
+Prompt: Design a quiet street lined with futuristic glowing streetlights, casting neon reflections on the surrounding buildings 
+===========================================================
+Title: Floating Market Glow  
+Prompt: Generate a futuristic floating market illuminated by vibrant neon lanterns, with boats casting reflections on the glowing water below 
+===========================================================
+Title: Lightning Train  
+Prompt: Capture a high-speed futuristic train glowing with electric energy as it speeds through a neon-lit urban landscape 
+===========================================================
+Title: Electric Overpass  
+Prompt: Design a futuristic overpass with glowing billboards and electric trails of hovering vehicles below 
+===========================================================
+Title: Downtown Glow  
+Prompt: Generate a glowing urban scene with skyscrapers lit by bright neon signs, and a glowing river reflecting the vibrant lights 
+===========================================================
+Title: Suburban Thunder  
+Prompt: Capture a futuristic suburban neighborhood under a glowing stormy sky, with electric lights illuminating the streets 
+===========================================================
+Title: City Fountain Sparks  
+Prompt: Design a glowing fountain in a futuristic plaza, with water illuminated by neon blue lights and electric sparks dancing around it 
+===========================================================
+Title: Floating Cars  
+Prompt: Generate a busy futuristic city street with hovering cars leaving light trails in a vibrant neon-lit environment 
+===========================================================
+Title: Rooftop Reflections  
+Prompt: Capture a glowing rooftop bar overlooking a neon-lit city, with reflections of the vibrant lights in the sleek glass tables 
+===========================================================
+Title: Electric Pulse  
+Prompt: Create an abstract design of glowing electric pulses spreading across a dark surface, with vivid blue and green arcs 
+===========================================================
+Title: Lightning Spiral  
+Prompt: Generate a glowing spiral of lightning bolts swirling toward a bright neon coreUse vibrant purple and orange tones for a dramatic effect 
+===========================================================
+Title: Energy Fractals  
+Prompt: Design a glowing fractal pattern made of interconnected lightning arcs, set against a dark cosmic background 
+===========================================================
+Title: Plasma Sphere  
+Prompt: Capture a glowing plasma sphere with electric arcs radiating from its core, illuminating the surrounding space 
+===========================================================
+Title: Lightning Flower  
+Prompt: Generate an abstract glowing flower made of neon lightning petals, with electric sparks in the background 
+===========================================================
+Title: Pulsing Grid  
+Prompt: Design a glowing grid illuminated by electric pulses racing along its lines, creating a dynamic and futuristic feel 
+===========================================================
+Title: Electric Wave  
+Prompt: Capture a glowing wave of electric energy flowing through a dark, abstract landscape 
+===========================================================
+Title: Energy Vortex  
+Prompt: Generate a glowing vortex of electric energy, with vibrant neon bolts spiraling into the center 
+===========================================================
+Title: Shattered Lightning  
+Prompt: Showcase an abstract pattern of broken glass illuminated by glowing lightning cracks, with bold contrasts of blue and white 
+===========================================================
+Title: Electric Ribbon  
+Prompt: Design a flowing ribbon of glowing electric energy twisting through a dark void, with soft neon gradients 
+===========================================================
+Title: Thunder Dragon  
+Prompt: Capture a glowing dragon made of lightning, flying through stormy neon cloudsUse electric blue and purple tones for dramatic impact 
+===========================================================
+Title: Electric Phoenix  
+Prompt: Generate a mythical phoenix glowing with electric energy, rising from a stormy, illuminated backdrop 
+===========================================================
+Title: Lightning Castle  
+Prompt: Design a glowing castle on a mountain, surrounded by swirling lightning bolts illuminating the sky 
+===========================================================
+Title: Stormy Pegasus  
+Prompt: Showcase a glowing Pegasus flying through an electric storm, with neon lightning bolts surrounding it 
+===========================================================
+Title: Energy Tree of Life  
+Prompt: Capture a mythical tree glowing with vibrant electric energy, with lightning branches reaching into the stormy sky 
+===========================================================
+Title: Electric Golem  
+Prompt: Generate a towering golem made of glowing stone and crackling with electric energy, standing in a stormy battlefield 
+===========================================================
+Title: Lightning Portal  
+Prompt: Design a glowing portal made of swirling electric energy, with vivid neon bolts connecting its edges 
+===========================================================
+Title: Thunder Guardian  
+Prompt: Capture a glowing knight clad in electric armor, wielding a lightning sword against a stormy, illuminated backdrop 
+===========================================================
+Title: Electric Mermaid  
+Prompt: Showcase a glowing mermaid swimming in an electric ocean, with neon currents trailing behind her 
+===========================================================
+Title: Storm Phoenix Rising  
+Prompt: Generate a glowing phoenix breaking through stormy clouds, with lightning bolts illuminating its radiant wings 
+===========================================================
+Title: Hovering Metropolis  
+Prompt: Capture a futuristic city with glowing skyscrapers and flying vehicles, illuminated by radiant neon colors under a starry sky 
+===========================================================
+Title: Energy Dome Skyline  
+Prompt: Generate a glowing energy dome covering a sprawling futuristic city, with electric sparks dancing along its edges 
+===========================================================
+Title: Neon Energy Grid  
+Prompt: Showcase a glowing energy grid spanning a futuristic landscape, with vibrant blue and purple pulses of light 
+===========================================================
+Title: Robotic Lightning  
+Prompt: Design a humanoid robot crackling with electric energy, standing in a dark, glowing industrial setting 
+===========================================================
+Title: Neon Circuit Planet  
+Prompt: Generate a glowing planet made entirely of interconnected neon circuitry, surrounded by floating satellites 
+===========================================================
+Title: Energy Tunnel  
+Prompt: Capture a glowing tunnel of swirling neon energy, with streaks of electric light racing along its walls 
+===========================================================
+Title: Thunder Monorail  
+Prompt: Showcase a futuristic monorail glowing with electric blue energy, speeding through a neon-lit cityscape 
+===========================================================
+Title: Energy Starship  
+Prompt: Design a glowing starship in space, surrounded by electric arcs and glowing nebula clouds in vibrant hues 
+===========================================================
+Title: Lightning Bridge  
+Prompt: Generate a glowing suspension bridge powered by electric energy, with bolts of lightning illuminating the dark sky 
+===========================================================
+Title: Plasma Energy Fields  
+Prompt: Capture a futuristic field glowing with plasma energy, with electric sparks lighting up the terrain 
+===========================================================
+Title: Electric Night Sky  
+Prompt: Showcase a dramatic night sky illuminated by vibrant lightning bolts, with neon reflections shimmering on a still lake below 
+===========================================================
+Title: Lightning Plains  
+Prompt: Generate an endless plain illuminated by electric blue lightning strikes, with glowing grass rippling in the stormy wind 
+===========================================================
+Title: Thunder Tower  
+Prompt: Design a massive tower attracting glowing lightning bolts, illuminating the dark storm clouds above 
+===========================================================
+Title: Electric Desert  
+Prompt: Capture a glowing desert scene with lightning bolts striking the sand, creating vibrant neon light patterns 
+===========================================================
+Title: Neon Thunderstorm  
+Prompt: Generate a surreal storm with multicolored neon lightning bolts, illuminating the clouds in vibrant pinks and purples 
+===========================================================
+Title: Thunderous Crater  
+Prompt: Showcase a glowing crater surrounded by electric lightning arcs, casting an eerie glow into the stormy night 
+===========================================================
+Title: Plasma Cliff  
+Prompt: Design a glowing cliff illuminated by electric lightning strikes, with neon currents running through its cracks 
+===========================================================
+Title: Lightning Horizon  
+Prompt: Capture a distant horizon illuminated by continuous glowing lightning bolts, casting an electric light over the dark landscape 
+===========================================================
+Title: Electric Glacier  
+Prompt: Generate a glowing glacier surrounded by lightning strikes, with neon blue light reflecting off its icy surface 
+===========================================================
+Title: Lightning Tundra  
+Prompt: Showcase a vast tundra illuminated by vibrant electric storms, with glowing auroras blending with the lightning bolts 
+===========================================================
+Title: Glowing Arcade  
+Prompt: Capture a neon-lit arcade with glowing signs and reflections on the sleek floor, creating a vibrant and nostalgic atmosphere 
+===========================================================
+Title: Electric Rain  
+Prompt: Generate a rainy urban street with glowing puddles reflecting neon lights and blurred movement of passersby 
+===========================================================
+Title: Lightning Tower  
+Prompt: Design a futuristic skyscraper glowing with electric energy, with lightning bolts striking its spire 
+===========================================================
+Title: Floating Neon Market  
+Prompt: Showcase a vibrant floating market illuminated by glowing neon lanterns, with reflections on the water creating a dynamic scene 
+===========================================================
+Title: Subway Lightning  
+Prompt: Capture a glowing subway tunnel illuminated by electric blue lights, with light trails of a speeding train 
+===========================================================
+Title: Nightlife Glimmers  
+Prompt: Generate a bustling street filled with glowing neon signs and vibrant lights, capturing the energy of the nightlife 
+===========================================================
+Title: Overhead Glow  
+Prompt: Design an aerial view of a futuristic city glowing with radiant neon lights, with highways lit by speeding vehicles 
+===========================================================
+Title: Neon Reflection Lake  
+Prompt: Capture a serene lake reflecting the glowing lights of a futuristic city in the distance 
+===========================================================
+Title: Thunder Alley  
+Prompt: Generate a narrow alley illuminated by glowing neon lights and lightning strikes in the stormy night sky above 
+===========================================================
+Title: Electric Skywalk  
+Prompt: Design a glowing skywalk connecting skyscrapers, with electric trails lighting up its transparent floor 
+===========================================================
+Title: Lightning Bloom  
+Prompt: Showcase an abstract glowing bloom of lightning bolts spreading outward, with radiant neon tones against a dark background 
+===========================================================
+Title: Electric Mandala  
+Prompt: Generate a symmetrical glowing mandala made entirely of interconnected lightning arcs in vibrant blue and white 
+===========================================================
+Title: Lightning Tunnel  
+Prompt: Capture an abstract tunnel made of glowing lightning bolts, with electric energy racing through its walls 
+===========================================================
+Title: Plasma Pulse  
+Prompt: Design a glowing pulse of plasma energy radiating in waves, with vivid neon hues blending into the dark void 
+===========================================================
+Title: Electric Tree Roots  
+Prompt: Showcase glowing electric roots spreading outward like a tree, with vibrant bolts illuminating the surrounding space 
+===========================================================
+Title: Energy Spiral  
+Prompt: Generate a swirling spiral of electric energy, with glowing arcs in bold blues and purples 
+===========================================================
+Title: Thunder Fractals  
+Prompt: Capture abstract fractal patterns illuminated by vibrant lightning bolts, creating a sense of endless energy 
+===========================================================
+Title: Electric Rainfall  
+Prompt: Design a scene of glowing electric raindrops falling in slow motion, with neon reflections below 
+===========================================================
+Title: Lightning Nexus  
+Prompt: Generate an abstract glowing nexus of interconnected lightning bolts, radiating energy in every direction 
+===========================================================
+Title: Plasma Ribbons  
+Prompt: Capture flowing ribbons of electric plasma energy twisting through a dark void, with soft neon gradients 
+===========================================================
+Title: Lightning Serpent  
+Prompt: Showcase a glowing serpent made of pure electric energy, coiling through stormy neon clouds 
+===========================================================
+Title: Thunder Wizard  
+Prompt: Design a mythical wizard wielding a glowing lightning staff, surrounded by neon energy arcs in a stormy backdrop 
+===========================================================
+Title: Electric Unicorn  
+Prompt: Capture a glowing unicorn galloping through an electric storm, with lightning bolts illuminating its radiant mane 
+===========================================================
+Title: Plasma Castle  
+Prompt: Generate a glowing castle powered by plasma energy, with radiant neon spires and electric shields 
+===========================================================
+Title: Energy Phoenix  
+Prompt: Showcase a phoenix reborn in a burst of glowing electric energy, with radiant wings illuminated by neon light 
+===========================================================
+Title: Lightning Dragon Egg  
+Prompt: Capture a glowing dragon egg crackling with electric energy, set in a stormy, illuminated environment 
+===========================================================
+Title: Thunder Valkyrie  
+Prompt: Design a glowing Valkyrie wielding electric swords, flying through neon-lit storm clouds 
+===========================================================
+Title: Plasma Gateway  
+Prompt: Generate a mythical gateway made of swirling plasma energy, with glowing lightning arcs framing its edges 
+===========================================================
+Title: Thunder Titan  
+Prompt: Showcase a towering titan glowing with electric power, standing amidst a stormy neon-lit battlefield 
+===========================================================
+Title: Lightning Spirit  
+Prompt: Design a glowing ethereal spirit made of electric energy, floating in a stormy, radiant void 
+===========================================================
+Title: Plasma Skyline  
+Prompt: Showcase a futuristic city with glowing plasma streams flowing between skyscrapersUse vibrant neon colors like blue and magenta to highlight energy and motion 
+===========================================================
+Title: Floating Energy Island  
+Prompt: Generate a glowing floating island powered by electric generators, with lightning bolts connecting it to the clouds above 
+===========================================================
+Title: Cybernetic Glow  
+Prompt: Design a cybernetic humanoid with glowing circuits running along their body, set against a dark, futuristic backdrop 
+===========================================================
+Title: Neon Bridge  
+Prompt: Capture a glowing bridge suspended over a vast energy field, with electric currents illuminating the structure 
+===========================================================
+Title: Space Lightning Storm  
+Prompt: Generate a cosmic lightning storm in space, with glowing nebulae and electric bolts illuminating nearby planets 
+===========================================================
+Title: Pulsing Starship  
+Prompt: Showcase a glowing starship with pulsing energy cores, flying through a dense asteroid field under vibrant neon light 
+===========================================================
+Title: Electric City Grid  
+Prompt: Capture a city from above, with glowing neon lines forming a geometric grid that powers the urban landscape 
+===========================================================
+Title: Holographic Market  
+Prompt: Design a bustling holographic market filled with glowing displays and floating neon signs, surrounded by vibrant energy trails 
+===========================================================
+Title: Neon Forest  
+Prompt: Generate a surreal forest with glowing trees and electric vines, with energy pulsating through the foliage 
+===========================================================
+Title: Energy-Powered Dome  
+Prompt: Showcase a glowing dome surrounded by radiant plasma fields, with lightning bolts arcing between the structure’s edges 
+===========================================================
+Title: Electric Cliffside  
+Prompt: Capture a dramatic cliff illuminated by vibrant lightning bolts striking the rocky surface, with glowing electric veins spreading across 
+===========================================================
+Title: Neon Lightning Cloud  
+Prompt: Design a glowing storm cloud radiating electric bolts in neon pink, blue, and purple, casting vibrant light across a dark sky 
+===========================================================
+Title: Thunderous Valley  
+Prompt: Generate a glowing valley illuminated by bolts of neon lightning, with reflections shimmering on the wet terrain below 
+===========================================================
+Title: Plasma Ocean  
+Prompt: Showcase an ocean glowing with electric energy, with lightning bolts illuminating the stormy waves 
+===========================================================
+Title: Lightning Columns  
+Prompt: Capture towering glowing columns in a dark canyon, with vibrant lightning bolts racing between them 
+===========================================================
+Title: Thunder Plains Glow  
+Prompt: Generate an expansive plain lit by continuous glowing lightning arcs, with electric grass swaying in the wind 
+===========================================================
+Title: Lightning Tower Spire  
+Prompt: Design a glowing tower with its spire drawing electric energy from the stormy neon sky above 
+===========================================================
+Title: Electric Canyon  
+Prompt: Showcase a glowing canyon with electric rivers flowing through it, lit by vibrant lightning bolts in the distance 
+===========================================================
+Title: Plasma Lake  
+Prompt: Capture a lake glowing with electric blue plasma, with lightning strikes illuminating its surface 
+===========================================================
+Title: Thunder Peak  
+Prompt: Generate a dramatic mountain peak surrounded by glowing clouds, with continuous lightning bolts striking its summit 
+===========================================================
+Title: Neon Street Glow  
+Prompt: Capture a bustling city street bathed in glowing neon light, with reflections on wet pavement and vibrant signs towering overhead 
+===========================================================
+Title: Lightning Skyline Reflection  
+Prompt: Generate a futuristic skyline glowing with electric energy, reflected in a calm body of water below 
+===========================================================
+Title: Electric Bridge Trail  
+Prompt: Design a glowing suspension bridge with energy trails running along its cables, casting radiant light into the night 
+===========================================================
+Title: Neon Tower Glow  
+Prompt: Capture a towering skyscraper radiating neon light, with electric currents running down its surface 
+===========================================================
+Title: Thunder Alley Reflections  
+Prompt: Showcase a glowing alley illuminated by vibrant lightning bolts and neon signs, with reflections shimmering on the wet ground 
+===========================================================
+Title: Lightning-Powered Park  
+Prompt: Design a futuristic park glowing with electric energy, with lightning arcs illuminating its structures and pathways 
+===========================================================
+Title: Hovering Tram Glow  
+Prompt: Generate a glowing futuristic tram suspended above a neon-lit city, with electric trails following its motion 
+===========================================================
+Title: Electric Plaza  
+Prompt: Capture a glowing urban plaza with neon fountains and radiant electric light displays casting vibrant shadows 
+===========================================================
+Title: Thunder Subway Glow  
+Prompt: Showcase a futuristic subway station illuminated by electric arcs, with glowing rails and neon signage 
+===========================================================
+Title: Neon Lantern Market  
+Prompt: Design a lively street market glowing with vibrant neon lanterns, reflecting on the polished surface of the ground 
+===========================================================
+Title: Electric Burst  
+Prompt: Create an abstract explosion of electric energy, with glowing arcs spreading outward in vibrant neon colors 
+===========================================================
+Title: Plasma Stream  
+Prompt: Generate a flowing stream of glowing plasma energy, twisting and pulsating against a dark void 
+===========================================================
+Title: Lightning Grid Sphere  
+Prompt: Showcase a glowing sphere made of interconnected lightning arcs, casting radiant light into the surrounding darkness 
+===========================================================
+Title: Neon Fractals  
+Prompt: Capture a glowing fractal pattern of lightning bolts, radiating energy in bold neon hues 
+===========================================================
+Title: Electric Wave Field  
+Prompt: Design an abstract field of flowing electric waves, glowing in shades of blue and purple against a black background 
+===========================================================
+Title: Thunder Veins  
+Prompt: Generate a close-up of glowing lightning veins spreading across a dark surface, with vibrant energy pulses racing through 
+===========================================================
+Title: Lightning Bloom  
+Prompt: Showcase an abstract glowing bloom of lightning bolts, radiating energy in vivid neon colors 
+===========================================================
+Title: Pulsing Plasma Circles  
+Prompt: Create a dynamic composition of glowing plasma circles, radiating energy in soft neon gradients 
+===========================================================
+Title: Energy Spiral Bloom  
+Prompt: Generate a swirling spiral of electric energy, with glowing arcs illuminating the surrounding darkness 
+===========================================================
+Title: Thunder Grid Nexus  
+Prompt: Capture a glowing nexus of interconnected lightning bolts forming a radiant grid of energy 
+===========================================================
+Title: Lightning Griffin  
+Prompt: Showcase a glowing griffin with electric feathers, flying through a neon-lit storm cloud 
+===========================================================
+Title: Plasma Warlock  
+Prompt: Design a mystical warlock wielding glowing plasma orbs, surrounded by electric energy in a dark, enchanted forest 
+===========================================================
+Title: Electric Hydra  
+Prompt: Generate a glowing hydra with multiple lightning heads, crackling with energy in a stormy backdrop 
+===========================================================
+Title: Thunder Gatekeeper  
+Prompt: Capture a glowing figure guarding an electric gateway, with lightning bolts framing the radiant portal 
+===========================================================
+Title: Energy Kraken  
+Prompt: Showcase a glowing Kraken made of electric energy, rising from a neon-lit ocean under a stormy sky 
+===========================================================
+Title: Neon Centaur  
+Prompt: Design a mythical centaur glowing with electric light, galloping through a radiant forest illuminated by lightning 
+===========================================================
+Title: Thunder Palace  
+Prompt: Generate a glowing palace surrounded by neon-lit clouds and electric storms, with radiant spires reaching into the sky 
+===========================================================
+Title: Lightning Spirit Wings  
+Prompt: Capture an ethereal spirit with glowing lightning wings, radiating energy in vibrant neon colors 
+===========================================================
+Title: Plasma Colossus  
+Prompt: Design a towering colossus made of glowing plasma, surrounded by radiant electric arcs in a stormy environment 
+===========================================================
+Title: Energy Dragon Nest  
+Prompt: Showcase a glowing dragon’s nest crackling with electric energy, with radiant eggs surrounded by lightning bolts 
+===========================================================
+Title: Neon Canyon Path  
+Prompt: Capture a glowing canyon with a radiant pathway illuminated by neon blue and purple lights, with electric sparks dancing across the rocky walls 
+===========================================================
+Title: Lightning Gear  
+Prompt: Design a glowing mechanical gear powered by electric energy, with arcs of lightning connecting its intricate components 
+===========================================================
+Title: Thunder Chariot  
+Prompt: Generate a mythical chariot glowing with electric wheels, being pulled by neon-lit horses galloping through a stormy night sky 
+===========================================================
+Title: Energy Fortress  
+Prompt: Showcase a futuristic fortress glowing with plasma defenses, surrounded by radiant electric fields under a stormy backdrop 
+===========================================================
+Title: Lightning Pathway  
+Prompt: Create a glowing pathway formed by interconnected lightning bolts, leading into a vibrant neon horizon 
+===========================================================
+Title: Electric Lotus  
+Prompt: Design a surreal glowing lotus flower made of electric energy, radiating soft neon light in shades of blue and pink 
+===========================================================
+Title: Plasma Orb Core  
+Prompt: Capture a glowing orb core surrounded by swirling lightning arcs, with vibrant neon colors illuminating its radiant energy 
+===========================================================
+Title: Thunder Striker  
+Prompt: Generate a glowing figure wielding a lightning hammer, standing against a stormy neon-lit backdrop with electric arcs lighting up the sky 
+===========================================================
+Title: Neon Tunnel Rush  
+Prompt: Showcase a glowing tunnel of swirling neon light, with lightning streaks racing through its dynamic curves 
+===========================================================
+Title: Lightning River Glow  
+Prompt: Capture a glowing river flowing with electric energy, illuminating its surroundings with vibrant neon reflections under a dark sky 
+===========================================================
+Title: Stormbreaker Blade  
+Prompt: Design a glowing sword charged with electric energy, with vibrant lightning bolts radiating from its blade against a stormy backdrop 
+===========================================================
+Title: Electric Crystal Cavern  
+Prompt: Capture a glowing cavern filled with radiant crystals emitting electric sparks, illuminating the rocky walls with neon hues 
+===========================================================
+Title: Plasma Throne  
+Prompt: Showcase a futuristic throne glowing with plasma energy, surrounded by swirling lightning arcs and vibrant neon lights 
+===========================================================
+Title: Lightning Obelisk  
+Prompt: Generate a towering obelisk glowing with electric runes, with radiant lightning bolts connecting it to the stormy sky 
+===========================================================
+Title: Thunder Maze  
+Prompt: Create a glowing labyrinth with walls illuminated by electric patterns, casting vibrant neon reflections on the polished floor 
+===========================================================
+Title: Lightning Rider  
+Prompt: Design a futuristic motorcycle glowing with neon energy, leaving a trail of electric sparks as it speeds through a stormy landscape 
+===========================================================
