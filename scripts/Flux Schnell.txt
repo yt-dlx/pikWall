@@ -1,9 +1,9 @@
 ===========================================================
 Title: Futuristic Skyline  
-Prompt: Create a vibrant, futuristic city skyline at dusk with glowing skyscrapers, holographic advertisements, and flying vehicles. Include sharp details in reflections and atmospheric depth.  
+Prompt: a vibrant, futuristic city skyline at dusk with glowing skyscrapers, holographic advertisements, and flying vehicles. Include sharp details in reflections and atmospheric depth.  
 ===========================================================
 Title: Neon Racing Circuit  
-Prompt: Design a glowing cyberpunk racing track surrounded by towering neon-lit buildings. Include sharp motion effects of racing vehicles and glowing light trails.  
+Prompt: a glowing cyberpunk racing track surrounded by towering neon-lit buildings. Include sharp motion effects of racing vehicles and glowing light trails.  
 ===========================================================
 Title: Dreamscape Valley  
 Prompt: Generate a surreal valley glowing with radiant pastel hues, featuring floating islands and a cascading waterfall that emits ethereal light.  
@@ -15,19 +15,19 @@ Title: Ancient Temple Glow
 Prompt: Depict an ancient temple in a dense forest, illuminated by soft golden light filtering through the trees. Include glowing inscriptions on the temple walls.  
 ===========================================================
 Title: Arctic Aurora  
-Prompt: Showcase a pristine arctic landscape under a sky filled with vibrant auroras. Include detailed ice textures and reflections of the auroras on a frozen lake.  
+Prompt: a pristine arctic landscape under a sky filled with vibrant auroras. Include detailed ice textures and reflections of the auroras on a frozen lake.  
 ===========================================================
 Title: Cosmic Carnival  
-Prompt: Create a glowing space-themed carnival with floating rides, vibrant light patterns, and detailed crowds enjoying the festivities.  
+Prompt: a glowing space-themed carnival with floating rides, vibrant light patterns, and detailed crowds enjoying the festivities.  
 ===========================================================
 Title: Mystic River  
 Prompt: Render a glowing river winding through a dense jungle at twilight, with glowing fireflies and radiant plants illuminating the scene.  
 ===========================================================
 Title: Urban Nightlife  
-Prompt: Design a bustling nighttime street in a modern city, with glowing signs, wet pavements reflecting the light, and dynamic pedestrian activity.  
+Prompt: a bustling nighttime street in a modern city, with glowing signs, wet pavements reflecting the light, and dynamic pedestrian activity.  
 ===========================================================
 Title: Radiant Sunset Cliffs  
-Prompt: Capture a scene of rugged cliffs glowing under a radiant sunset, with waves crashing against the base and vibrant skies overhead.  
+Prompt: a scene of rugged cliffs glowing under a radiant sunset, with waves crashing against the base and vibrant skies overhead.  
 ===========================================================
 Title: Bioluminescent Forest  
 Prompt: Generate a dense forest illuminated by glowing bioluminescent plants and soft beams of light filtering through the canopy.  
@@ -39,13 +39,13 @@ Title: Sunset Mirage
 Prompt: Render a glowing desert with radiant sand dunes under a golden sunset, featuring shimmering mirages and intricate wind trails.  
 ===========================================================
 Title: Suburban Glow  
-Prompt: Create a serene suburban neighborhood at dusk, with glowing streetlights, soft warm hues in the sky, and detailed shadows cast by trees and houses.  
+Prompt: a serene suburban neighborhood at dusk, with glowing streetlights, soft warm hues in the sky, and detailed shadows cast by trees and houses.  
 ===========================================================
 Title: Crystal Lagoon  
 Prompt: Depict a glowing lagoon surrounded by crystalline structures, with vibrant underwater flora and soft light reflections on the water.  
 ===========================================================
 Title: Neon Robot Clash  
-Prompt: Design a futuristic battle between glowing robotic figures in a neon-lit industrial area. Include dynamic motion effects and sparks flying from energy weapons.  
+Prompt: a futuristic battle between glowing robotic figures in a neon-lit industrial area. Include dynamic motion effects and sparks flying from energy weapons.  
 ===========================================================
 Title: Enchanted Peaks  
 Prompt: Generate a glowing mountain range with radiant streams of light cascading down its sides under a vibrant twilight sky.  
@@ -57,10 +57,10 @@ Title: Starfall Plains
 Prompt: Depict a serene meadow under a glowing night sky filled with falling stars and soft reflections on dew-covered grass.  
 ===========================================================
 Title: Subterranean Haven  
-Prompt: Create a glowing underground cavern with intricate rock formations, radiant crystals, and a shimmering subterranean lake.  
+Prompt: a glowing underground cavern with intricate rock formations, radiant crystals, and a shimmering subterranean lake.  
 ===========================================================
 Title: Radiant Oasis  
-Prompt: Design a glowing oasis surrounded by desert dunes at dusk, with soft light reflecting off a tranquil water surface and vibrant palm trees.  
+Prompt: a glowing oasis surrounded by desert dunes at dusk, with soft light reflecting off a tranquil water surface and vibrant palm trees.  
 ===========================================================
 Title: Cosmic Shipyard  
 Prompt: Render a glowing space dock with intricate starships under construction, surrounded by vibrant nebula clouds and energy beams.  
@@ -69,7 +69,7 @@ Title: Vibrant Carnival
 Prompt: Depict a colorful carnival at night, illuminated by glowing rides, vibrant banners, and dynamic crowds enjoying the festive atmosphere.  
 ===========================================================
 Title: Mystic Library  
-Prompt: Showcase an ancient library illuminated by glowing books and radiant orbs of light, with intricate carvings on wooden shelves.  
+Prompt: an ancient library illuminated by glowing books and radiant orbs of light, with intricate carvings on wooden shelves.  
 ===========================================================
 Title: Arctic Spires  
 Prompt: Render towering ice spires glowing under a moonlit sky, with soft light reflections on the icy terrain and faint auroras in the background.  
@@ -78,7 +78,7 @@ Title: Sunset Archipelago
 Prompt: Depict a series of tropical islands glowing under a golden sunset, with vibrant reflections on the water and detailed sandy shores.  
 ===========================================================
 Title: Neon Highway  
-Prompt: Create a futuristic glowing highway stretching into a neon-lit city, with vibrant light trails from speeding vehicles.  
+Prompt: a futuristic glowing highway stretching into a neon-lit city, with vibrant light trails from speeding vehicles.  
 ===========================================================
 Title: Ember Valley  
 Prompt: Render a glowing valley illuminated by flowing streams of lava under a dark sky, with intricate rock textures and soft light reflections.  
@@ -87,13 +87,13 @@ Title: Stellar Temple
 Prompt: Depict an ancient glowing temple floating in space, surrounded by swirling cosmic energy and intricate celestial carvings.  
 ===========================================================
 Title: Lunar Reflection  
-Prompt: Showcase a tranquil lake glowing under a full moon, with vibrant stars reflected on the water and soft mist rising from the surface.  
+Prompt: a tranquil lake glowing under a full moon, with vibrant stars reflected on the water and soft mist rising from the surface.  
 ===========================================================
 Title: Crimson Forest  
 Prompt: Render a glowing forest under radiant red skies, with vibrant leaves and dynamic light contrasts illuminating the trees.  
 ===========================================================
 Title: Galactic Beacon  
-Prompt: Create a glowing tower on a barren alien landscape, radiating beams of light into a vibrant cosmic sky.  
+Prompt: a glowing tower on a barren alien landscape, radiating beams of light into a vibrant cosmic sky.  
 ===========================================================
 Title: Twilight Garden  
 Prompt: Depict a glowing botanical garden under a twilight sky, with radiant plants and floating orbs of light creating a magical ambiance.  
@@ -102,7 +102,7 @@ Title: Neon Harbor
 Prompt: Render a futuristic harbor glowing with neon lights, featuring detailed reflections on the water and towering buildings in the background.  
 ===========================================================
 Title: Midnight Fields  
-Prompt: Showcase a tranquil field glowing under a starry night sky, with bioluminescent plants and faint glowing fireflies.  
+Prompt: a tranquil field glowing under a starry night sky, with bioluminescent plants and faint glowing fireflies.  
 ===========================================================
 Title: Ethereal Cascade  
 Prompt: Generate a glowing waterfall surrounded by radiant plants under a vibrant twilight sky, with soft light scattering through the mist.  
@@ -117,10 +117,10 @@ Title: Arctic Haven
 Prompt: Depict a glowing village nestled in an icy valley under vibrant auroras, with warm lights emanating from cabins and icy reflections on the ground.  
 ===========================================================
 Title: Neon Railways  
-Prompt: Create a futuristic glowing train station in a cyberpunk city, with intricate holograms and dynamic reflections on sleek surfaces.  
+Prompt: a futuristic glowing train station in a cyberpunk city, with intricate holograms and dynamic reflections on sleek surfaces.  
 ===========================================================
 Title: Twilight Pavilion  
-Prompt: Showcase a serene glowing pavilion surrounded by cherry blossoms under a radiant sunset sky, with petals scattered across the water.  
+Prompt: a serene glowing pavilion surrounded by cherry blossoms under a radiant sunset sky, with petals scattered across the water.  
 ===========================================================
 Title: Lunar Canyon  
 Prompt: Depict a glowing canyon on the moon, illuminated by vibrant Earthlight and intricate shadows cast by jagged rocks.  
@@ -129,16 +129,16 @@ Title: Ember Haven
 Prompt: Render a glowing village nestled beside a river of molten lava, with radiant light reflections on wooden structures.  
 ===========================================================
 Title: Ocean Mirage  
-Prompt: Create a glowing ocean scene with vibrant bioluminescent waves under a radiant sunset, with intricate light reflections on the water.  
+Prompt: a glowing ocean scene with vibrant bioluminescent waves under a radiant sunset, with intricate light reflections on the water.  
 ===========================================================
 Title: Galactic Arena  
 Prompt: Depict a glowing intergalactic arena with radiant energy barriers and diverse characters preparing for a cosmic competition.  
 ======================================================================================================================
 Title: Sunset Boulevard  
-Prompt: Create a glowing urban street at sunset, with golden light reflecting off glass windows, bustling pedestrians, and faint shadows on cobblestones.  
+Prompt: a glowing urban street at sunset, with golden light reflecting off glass windows, bustling pedestrians, and faint shadows on cobblestones.  
 ===========================================================
 Title: Forest Morning Glow  
-Prompt: Design a serene forest illuminated by the soft light of dawn, with detailed foliage, mist rising from the ground, and golden beams filtering through the trees.  
+Prompt: a serene forest illuminated by the soft light of dawn, with detailed foliage, mist rising from the ground, and golden beams filtering through the trees.  
 ===========================================================
 Title: Midnight Bridge  
 Prompt: Depict a glowing suspension bridge under a vibrant starry sky, with detailed cables and soft reflections on the water below.  
@@ -147,46 +147,46 @@ Title: Rural Harmony
 Prompt: Render a peaceful rural landscape glowing under the golden light of sunrise, with fields of wheat and a windmill turning slowly in the breeze.  
 ===========================================================
 Title: Icy Reflections  
-Prompt: Create a tranquil arctic scene with glowing icebergs floating under a twilight sky, with detailed cracks in the ice and soft auroras overhead.  
+Prompt: a tranquil arctic scene with glowing icebergs floating under a twilight sky, with detailed cracks in the ice and soft auroras overhead.  
 ===========================================================
 Title: Fractal Forest  
-Prompt: Design an abstract glowing forest made entirely of fractals, with radiant light patterns cascading through intricate tree shapes.  
+Prompt: an abstract glowing forest made entirely of fractals, with radiant light patterns cascading through intricate tree shapes.  
 ===========================================================
 Title: Liquid Galaxy  
 Prompt: Depict a surreal glowing ocean reflecting vibrant nebulae, with dynamic light waves merging into a star-filled horizon.  
 ===========================================================
 Title: Time Spiral  
-Prompt: Create a glowing spiral of floating clocks suspended in space, with detailed reflections and a radiant cosmic backdrop.  
+Prompt: a glowing spiral of floating clocks suspended in space, with detailed reflections and a radiant cosmic backdrop.  
 ===========================================================
 Title: Infinity Pathway  
 Prompt: Render an endless glowing pathway surrounded by radiant fog and shimmering particles, disappearing into a vibrant horizon.  
 ===========================================================
 Title: Glass Cityscape  
-Prompt: Design a futuristic city made entirely of glowing glass structures, with soft reflections and intricate architectural details.  
+Prompt: a futuristic city made entirely of glowing glass structures, with soft reflections and intricate architectural details.  
 ===========================================================
 Title: Elven Sanctuary  
 Prompt: Depict a glowing elven village nestled in a vibrant forest, with radiant plants and light spilling from intricate wooden homes.  
 ===========================================================
 Title: Lunar Grove  
-Prompt: Create a glowing forest under a radiant full moon, with bioluminescent plants and soft mist swirling around intricate roots.  
+Prompt: a glowing forest under a radiant full moon, with bioluminescent plants and soft mist swirling around intricate roots.  
 ===========================================================
 Title: Dragon’s Domain  
 Prompt: Render a glowing cave filled with treasure, a radiant dragon resting atop, and intricate light patterns reflecting off the gold.  
 ===========================================================
 Title: Cosmic Coliseum  
-Prompt: Showcase a glowing intergalactic coliseum, with radiant energy barriers and crowds of diverse beings cheering in the stands.  
+Prompt: a glowing intergalactic coliseum, with radiant energy barriers and crowds of diverse beings cheering in the stands.  
 ===========================================================
 Title: Celestial Plains  
-Prompt: Design a glowing meadow filled with radiant flowers and celestial orbs floating under a twilight sky.  
+Prompt: a glowing meadow filled with radiant flowers and celestial orbs floating under a twilight sky.  
 ===========================================================
 Title: Neon Outpost  
 Prompt: Depict a glowing futuristic outpost surrounded by harsh desert terrain, with radiant energy shields and dynamic holograms.  
 ===========================================================
 Title: Cyber Nexus  
-Prompt: Create a vibrant neon-lit cyberpunk hub, with towering buildings, glowing street signs, and bustling futuristic pedestrians.  
+Prompt: a vibrant neon-lit cyberpunk hub, with towering buildings, glowing street signs, and bustling futuristic pedestrians.  
 ===========================================================
 Title: Starship Dock  
-Prompt: Showcase a glowing starship docked in a massive spaceport, with radiant fuel lines and bustling engineers in detailed suits.  
+Prompt: a glowing starship docked in a massive spaceport, with radiant fuel lines and bustling engineers in detailed suits.  
 ===========================================================
 Title: Quantum Gateway  
 Prompt: Render a glowing sci-fi portal surrounded by intricate energy patterns and a vivid nebula-filled sky.  
@@ -195,28 +195,28 @@ Title: Lunar City
 Prompt: Depict a glowing city on the moon, with intricate domed structures, radiant pathways, and Earth glowing in the background.  
 ===========================================================
 Title: Radiant Coral Reef  
-Prompt: Design a vibrant underwater coral reef glowing with bioluminescent life, surrounded by soft beams of light penetrating the water.  
+Prompt: a vibrant underwater coral reef glowing with bioluminescent life, surrounded by soft beams of light penetrating the water.  
 ===========================================================
 Title: Aurora Peaks  
-Prompt: Showcase a glowing mountain range under a vivid aurora sky, with intricate snow patterns reflecting the light.  
+Prompt: a glowing mountain range under a vivid aurora sky, with intricate snow patterns reflecting the light.  
 ===========================================================
 Title: Enchanted Lagoon  
 Prompt: Render a serene glowing lagoon surrounded by radiant flowers, cascading waterfalls, and soft mist rising in the air.  
 ===========================================================
 Title: Sunset Cliffs  
-Prompt: Create a rugged coastline glowing under a radiant sunset, with waves crashing and soft golden light reflecting on wet rocks.  
+Prompt: a rugged coastline glowing under a radiant sunset, with waves crashing and soft golden light reflecting on wet rocks.  
 ===========================================================
 Title: Mystic Jungle  
 Prompt: Depict a dense jungle glowing with vibrant plants and radiant waterfalls, with intricate shadows cast by large leaves.  
 ===========================================================
 Title: Galactic Voyage  
-Prompt: Showcase a glowing spaceship traveling through a radiant nebula, with intricate designs on the ship and vibrant light trails behind.  
+Prompt: a glowing spaceship traveling through a radiant nebula, with intricate designs on the ship and vibrant light trails behind.  
 ===========================================================
 Title: Racing Circuit  
-Prompt: Design a glowing futuristic racetrack illuminated by neon lights, with speeding vehicles leaving dynamic trails of light.  
+Prompt: a glowing futuristic racetrack illuminated by neon lights, with speeding vehicles leaving dynamic trails of light.  
 ===========================================================
 Title: Skybound Duel  
-Prompt: Create a glowing aerial battle between two futuristic characters, with dynamic motion effects and vibrant energy weapons.  
+Prompt: a glowing aerial battle between two futuristic characters, with dynamic motion effects and vibrant energy weapons.  
 ===========================================================
 Title: Twilight Adventure  
 Prompt: Render a glowing forest pathway at dusk, with a character walking into the distance surrounded by radiant fireflies.  
@@ -225,7 +225,7 @@ Title: Celestial Rapids
 Prompt: Depict a glowing river rushing through a radiant canyon, with dynamic waves and soft light scattering off wet rocks.  
 ===========================================================
 Title: Stellar Fountain  
-Prompt: Create a glowing fountain of light cascading into a serene cosmic pool, surrounded by radiant floating orbs.  
+Prompt: a glowing fountain of light cascading into a serene cosmic pool, surrounded by radiant floating orbs.  
 ===========================================================
 Title: Frosted Monument  
 Prompt: Depict a glowing ancient monument rising from a snowy landscape under vibrant auroras, with intricate carvings illuminated by soft light.  
@@ -234,13 +234,13 @@ Title: Bioluminescent Tides
 Prompt: Render a glowing ocean shore at night, with vibrant waves illuminated by bioluminescent organisms.  
 ===========================================================
 Title: Time’s Edge  
-Prompt: Design a glowing cliff at the edge of time, with cascading light streams and celestial patterns forming in the sky above.  
+Prompt: a glowing cliff at the edge of time, with cascading light streams and celestial patterns forming in the sky above.  
 ===========================================================
 Title: Crystal Bridge  
-Prompt: Showcase a glowing bridge made entirely of radiant crystals, spanning across a tranquil valley under a starry sky.  
+Prompt: a glowing bridge made entirely of radiant crystals, spanning across a tranquil valley under a starry sky.  
 ===========================================================
 Title: Golden Wheat Fields  
-Prompt: Create a glowing rural landscape at sunset, with golden wheat swaying gently in the breeze and a vibrant orange sky.  
+Prompt: a glowing rural landscape at sunset, with golden wheat swaying gently in the breeze and a vibrant orange sky.  
 ===========================================================
 Title: Misty Riverbank  
 Prompt: Render a tranquil riverbank glowing in soft morning light, with mist rising from the water and trees reflecting in the still surface.  
@@ -249,10 +249,10 @@ Title: Lantern-lit Village
 Prompt: Depict a cozy village glowing with warm lantern light, surrounded by rolling hills under a twilight sky.  
 ===========================================================
 Title: Sunset Vineyard  
-Prompt: Showcase a vibrant vineyard glowing under golden-hour light, with rows of grapes and distant hills bathed in warm tones.  
+Prompt: a vibrant vineyard glowing under golden-hour light, with rows of grapes and distant hills bathed in warm tones.  
 ===========================================================
 Title: Foggy Harbor  
-Prompt: Create a glowing harbor at dawn, with vibrant fishing boats and soft light breaking through the misty atmosphere.  
+Prompt: a glowing harbor at dawn, with vibrant fishing boats and soft light breaking through the misty atmosphere.  
 ===========================================================
 Title: Floating Waterfalls  
 Prompt: Render a surreal glowing landscape of waterfalls cascading from floating islands into a radiant void below.  
@@ -261,13 +261,13 @@ Title: Kaleidoscope Sky
 Prompt: Depict a dreamlike glowing sky filled with swirling patterns of radiant colors and floating stars.  
 ===========================================================
 Title: Fractal Waves  
-Prompt: Create an abstract ocean of glowing fractal waves, with intricate patterns reflecting vibrant light.  
+Prompt: an abstract ocean of glowing fractal waves, with intricate patterns reflecting vibrant light.  
 ===========================================================
 Title: Eternal Maze  
-Prompt: Showcase a glowing maze stretching infinitely into a cosmic backdrop, with intricate pathways and radiant neon outlines.  
+Prompt: a glowing maze stretching infinitely into a cosmic backdrop, with intricate pathways and radiant neon outlines.  
 ===========================================================
 Title: Glass Forest  
-Prompt: Design a glowing forest where trees are made of reflective glass, casting vibrant light patterns onto the ground.  
+Prompt: a glowing forest where trees are made of reflective glass, casting vibrant light patterns onto the ground.  
 ===========================================================
 Title: Enchanted Glade  
 Prompt: Render a glowing forest clearing illuminated by floating magical lights, with intricate details of radiant flora.  
@@ -276,19 +276,19 @@ Title: Celestial Waterfall
 Prompt: Depict a glowing waterfall flowing from the stars into a serene pool surrounded by vibrant plants.  
 ===========================================================
 Title: Mystic Portal  
-Prompt: Create a glowing stone portal surrounded by ancient ruins and a radiant magical aura.  
+Prompt: a glowing stone portal surrounded by ancient ruins and a radiant magical aura.  
 ===========================================================
 Title: Dragon's Peak  
-Prompt: Showcase a glowing dragon perched on a mountaintop, illuminated by a vibrant sunset and glowing runes on the rocks.  
+Prompt: a glowing dragon perched on a mountaintop, illuminated by a vibrant sunset and glowing runes on the rocks.  
 ===========================================================
 Title: Lunar Garden  
 Prompt: Render a glowing garden under a full moon, with radiant flowers and shimmering dew-covered leaves.  
 ===========================================================
 Title: Stellar Highway  
-Prompt: Create a glowing interstellar highway filled with speeding spacecraft, dynamic light trails, and vibrant cosmic surroundings.  
+Prompt: a glowing interstellar highway filled with speeding spacecraft, dynamic light trails, and vibrant cosmic surroundings.  
 ===========================================================
 Title: Neon Alley  
-Prompt: Design a gritty cyberpunk alley glowing with vibrant neon signs and dynamic reflections on wet pavement.  
+Prompt: a gritty cyberpunk alley glowing with vibrant neon signs and dynamic reflections on wet pavement.  
 ===========================================================
 Title: Space Bazaar  
 Prompt: Depict a glowing futuristic marketplace on an alien planet, with vibrant stalls and bustling extraterrestrial life.  
@@ -297,10 +297,10 @@ Title: Quantum Observatory
 Prompt: Render a glowing space observatory surrounded by swirling nebula clouds and intricate energy patterns.  
 ===========================================================
 Title: Plasma Reactor  
-Prompt: Showcase a glowing sci-fi power plant with radiant energy streams and complex machinery illuminated by vibrant light.  
+Prompt: a glowing sci-fi power plant with radiant energy streams and complex machinery illuminated by vibrant light.  
 ===========================================================
 Title: Rainbow Falls  
-Prompt: Create a glowing waterfall refracting light into a vibrant rainbow, surrounded by lush green foliage and soft mist.  
+Prompt: a glowing waterfall refracting light into a vibrant rainbow, surrounded by lush green foliage and soft mist.  
 ===========================================================
 Title: Sunset Grove  
 Prompt: Depict a glowing grove of ancient trees bathed in the warm light of a setting sun, with vibrant leaves shimmering.  
@@ -309,13 +309,13 @@ Title: Bioluminescent Cove
 Prompt: Render a glowing cove illuminated by bioluminescent waves and radiant plants growing along the rocky shoreline.  
 ===========================================================
 Title: Frosted Pines  
-Prompt: Showcase a serene glowing forest of snow-covered pine trees under a twilight sky with faint auroras.  
+Prompt: a serene glowing forest of snow-covered pine trees under a twilight sky with faint auroras.  
 ===========================================================
 Title: Golden Dunes  
 Prompt: Depict a glowing desert landscape under golden-hour light, with intricate wind patterns on the sand dunes.  
 ===========================================================
 Title: Celestial Battle  
-Prompt: Create a glowing battle between two cosmic entities in a vibrant nebula, with dynamic light streaks and radiant energy explosions.  
+Prompt: a glowing battle between two cosmic entities in a vibrant nebula, with dynamic light streaks and radiant energy explosions.  
 ===========================================================
 Title: Skyborne Chase  
 Prompt: Render a glowing pursuit of flying vehicles racing through the clouds, with dynamic motion and radiant exhaust trails.  
@@ -324,13 +324,13 @@ Title: Lava Rapids
 Prompt: Depict a glowing volcanic river of molten lava rushing through jagged rocks, with sparks flying and glowing mist rising.  
 ===========================================================
 Title: Stellar Rescue  
-Prompt: Showcase a glowing starship performing a daring rescue in the middle of a radiant asteroid field.  
+Prompt: a glowing starship performing a daring rescue in the middle of a radiant asteroid field.  
 ===========================================================
 Title: Neon Combat Zone  
-Prompt: Design a glowing futuristic battleground illuminated by neon lights and energy weapons clashing in dynamic motion.  
+Prompt: a glowing futuristic battleground illuminated by neon lights and energy weapons clashing in dynamic motion.  
 ===========================================================
 Title: Prism Wave  
-Prompt: Create an abstract glowing wave made of radiant light refracted through a prismatic structure.  
+Prompt: an abstract glowing wave made of radiant light refracted through a prismatic structure.  
 ===========================================================
 Title: Aurora Vortex  
 Prompt: Render a swirling vortex of auroras blending vibrant colors in a glowing night sky.  
@@ -339,10 +339,10 @@ Title: Cosmic Hourglass
 Prompt: Depict a glowing hourglass floating in space, with radiant particles cascading between its chambers.  
 ===========================================================
 Title: Fractal Canyon  
-Prompt: Showcase a glowing canyon with intricate fractal designs carved into its glowing walls.  
+Prompt: a glowing canyon with intricate fractal designs carved into its glowing walls.  
 ===========================================================
 Title: Energy Grid  
-Prompt: Design an abstract glowing grid illuminated by pulsing light streams and dynamic radiant patterns.  
+Prompt: an abstract glowing grid illuminated by pulsing light streams and dynamic radiant patterns.  
 ===========================================================
 Title: Moonlit Haven  
 Prompt: Render a glowing hilltop under a full moon, with radiant flowers and soft light beams scattering through the trees.  
@@ -351,13 +351,13 @@ Title: Starlit Pavilion
 Prompt: Depict a glowing pavilion on a serene lake under a vibrant starry sky, with shimmering reflections on the water.  
 ===========================================================
 Title: Solar Summit  
-Prompt: Create a glowing mountain peak bathed in golden sunrise light, with radiant snow and intricate rock details.  
+Prompt: a glowing mountain peak bathed in golden sunrise light, with radiant snow and intricate rock details.  
 ===========================================================
 Title: Twilight Chapel  
 Prompt: Render a glowing chapel surrounded by radiant trees and vibrant stained-glass windows reflecting the setting sun.  
 ===========================================================
 Title: Cosmic Throne  
-Prompt: Showcase a glowing throne floating in space, surrounded by swirling cosmic energy and radiant celestial light.  
+Prompt: a glowing throne floating in space, surrounded by swirling cosmic energy and radiant celestial light.  
 ===========================================================
 Title: Floating Isles  
 Prompt: Depict a glowing series of floating islands connected by radiant bridges, with cascading waterfalls and vibrant skies.  
@@ -366,16 +366,16 @@ Title: Sapphire Caverns
 Prompt: Render a glowing underground cave filled with radiant sapphire crystals reflecting soft light.  
 ===========================================================
 Title: Radiant Temple  
-Prompt: Create a glowing temple at the edge of a cliff, illuminated by golden light under a twilight sky.  
+Prompt: a glowing temple at the edge of a cliff, illuminated by golden light under a twilight sky.  
 ===========================================================
 Title: Crimson Jungle  
 Prompt: Depict a glowing jungle under red skies, with radiant plants and intricate textures of leaves and vines.  
 ===========================================================
 Title: Aurora Lagoon  
-Prompt: Showcase a glowing lagoon illuminated by vibrant auroras, with soft reflections on the water and radiant plants along the shore.  
+Prompt: a glowing lagoon illuminated by vibrant auroras, with soft reflections on the water and radiant plants along the shore.  
 ===========================================================
 Title: Alpine Glow  
-Prompt: Capture a glowing alpine village nestled between snow-covered peaks at sunrise, with smoke rising from chimneys and vibrant golden light.  
+Prompt: a glowing alpine village nestled between snow-covered peaks at sunrise, with smoke rising from chimneys and vibrant golden light.  
 ===========================================================
 Title: Midnight Docks  
 Prompt: Render a glowing dockyard at night, with vibrant lanterns, gently rippling water, and detailed wooden planks reflecting the warm light.  
@@ -384,13 +384,13 @@ Title: Seaside Serenity
 Prompt: Depict a glowing beach at dusk, with waves softly crashing on the shore, vibrant seashells scattered, and a radiant pink-orange sky.  
 ===========================================================
 Title: Urban Crossroads  
-Prompt: Design a bustling city intersection glowing with neon signs, vibrant reflections on rain-slicked streets, and intricate crowd details.  
+Prompt: a bustling city intersection glowing with neon signs, vibrant reflections on rain-slicked streets, and intricate crowd details.  
 ===========================================================
 Title: Sunset Ranch  
-Prompt: Showcase a glowing countryside ranch bathed in golden light, with rolling fields, detailed wooden fences, and a tranquil sky.  
+Prompt: a glowing countryside ranch bathed in golden light, with rolling fields, detailed wooden fences, and a tranquil sky.  
 ===========================================================
 Title: Etherial Woods  
-Prompt: Create a glowing forest with radiant trees whose leaves shimmer like gemstones, surrounded by a gentle golden mist.  
+Prompt: a glowing forest with radiant trees whose leaves shimmer like gemstones, surrounded by a gentle golden mist.  
 ===========================================================
 Title: Sky Fortress  
 Prompt: Render a glowing fortress floating in the sky, illuminated by celestial light and surrounded by drifting clouds.  
@@ -399,13 +399,13 @@ Title: Dragon’s Haven
 Prompt: Depict a glowing lair filled with radiant treasures, a majestic dragon resting, and intricate light patterns reflecting off scales.  
 ===========================================================
 Title: Mystical Isle  
-Prompt: Showcase a glowing island surrounded by turquoise waters, with radiant flora and a serene glowing aura.  
+Prompt: a glowing island surrounded by turquoise waters, with radiant flora and a serene glowing aura.  
 ===========================================================
 Title: Lunar Citadel  
-Prompt: Design a glowing ancient citadel on the moon, with intricate carvings illuminated by soft Earthlight.  
+Prompt: a glowing ancient citadel on the moon, with intricate carvings illuminated by soft Earthlight.  
 ===========================================================
 Title: Quantum Grid  
-Prompt: Create a glowing futuristic energy grid, with dynamic neon pathways and radiant nodes pulsating with light.  
+Prompt: a glowing futuristic energy grid, with dynamic neon pathways and radiant nodes pulsating with light.  
 ===========================================================
 Title: Solar Megacity  
 Prompt: Render a sprawling glowing city under twin suns, with vibrant architecture and intricate radiant streets.  
@@ -414,16 +414,16 @@ Title: Galactic Refuge
 Prompt: Depict a glowing space station nestled in an asteroid field, with intricate details and vibrant energy shields.  
 ===========================================================
 Title: Neon Concourse  
-Prompt: Design a glowing cyberpunk shopping district, illuminated by radiant signs, bustling with futuristic shoppers and intricate holograms.  
+Prompt: a glowing cyberpunk shopping district, illuminated by radiant signs, bustling with futuristic shoppers and intricate holograms.  
 ===========================================================
 Title: Starship Bridge  
-Prompt: Create a glowing futuristic starship control room with dynamic holographic screens and a radiant cosmic backdrop.  
+Prompt: a glowing futuristic starship control room with dynamic holographic screens and a radiant cosmic backdrop.  
 ===========================================================
 Title: Celestial Bloom  
-Prompt: Showcase a glowing flower blooming in space, its radiant petals reflecting starlight and cosmic energy.  
+Prompt: a glowing flower blooming in space, its radiant petals reflecting starlight and cosmic energy.  
 ===========================================================
 Title: Infinity Pool  
-Prompt: Create an abstract glowing pool that appears endless, with radiant light rippling softly through its surface.  
+Prompt: an abstract glowing pool that appears endless, with radiant light rippling softly through its surface.  
 ===========================================================
 Title: Spectrum Swirl  
 Prompt: Depict a glowing vortex of vibrant colors blending seamlessly into an ethereal void.  
@@ -432,16 +432,16 @@ Title: Fractal Plains
 Prompt: Render a glowing plain with fractal patterns spreading endlessly, illuminated by a vibrant cosmic sky.  
 ===========================================================
 Title: Shimmering Abyss  
-Prompt: Create a glowing abyss surrounded by radiant cliffs and swirling luminous particles in the depths below.  
+Prompt: a glowing abyss surrounded by radiant cliffs and swirling luminous particles in the depths below.  
 ===========================================================
 Title: Aurora Reflection  
 Prompt: Depict a glowing icy lake reflecting vibrant auroras, surrounded by snow-covered trees under a star-filled sky.  
 ===========================================================
 Title: Sunset Meadow  
-Prompt: Showcase a glowing meadow with radiant flowers swaying under golden-hour light, with detailed textures of grass and petals.  
+Prompt: a glowing meadow with radiant flowers swaying under golden-hour light, with detailed textures of grass and petals.  
 ===========================================================
 Title: Emerald Falls  
-Prompt: Create a glowing waterfall surrounded by lush greenery, with vibrant light scattering through misty droplets.  
+Prompt: a glowing waterfall surrounded by lush greenery, with vibrant light scattering through misty droplets.  
 ===========================================================
 Title: Radiant Valley  
 Prompt: Render a glowing valley illuminated by cascading golden light, with vibrant wildflowers and soft shadows from towering cliffs.  
@@ -456,10 +456,10 @@ Title: Skybound Chase
 Prompt: Depict a glowing pursuit of futuristic airships weaving through vibrant clouds with radiant light trails.  
 ===========================================================
 Title: Radiant Rapids  
-Prompt: Showcase a glowing river rushing over jagged rocks under twilight, with dynamic waves illuminated by soft golden light.  
+Prompt: a glowing river rushing over jagged rocks under twilight, with dynamic waves illuminated by soft golden light.  
 ===========================================================
 Title: Twilight Siege  
-Prompt: Create a glowing fortress under attack during dusk, with vibrant energy weapons and detailed silhouettes of defenders.  
+Prompt: a glowing fortress under attack during dusk, with vibrant energy weapons and detailed silhouettes of defenders.  
 ===========================================================
 Title: Lava Inferno  
 Prompt: Render a glowing volcanic eruption, with molten lava flowing and radiant sparks illuminating the darkened skies.  
@@ -468,10 +468,10 @@ Title: Solar Ascent
 Prompt: Depict a glowing staircase of light leading into a radiant golden sun, with ethereal beams illuminating the surrounding sky.  
 ===========================================================
 Title: Moonlit Path  
-Prompt: Showcase a glowing forest trail under a radiant full moon, with soft shadows and glowing fireflies guiding the way.  
+Prompt: a glowing forest trail under a radiant full moon, with soft shadows and glowing fireflies guiding the way.  
 ===========================================================
 Title: Stellar Pavilion  
-Prompt: Create a glowing celestial structure floating in space, with intricate designs illuminated by vibrant starlight.  
+Prompt: a glowing celestial structure floating in space, with intricate designs illuminated by vibrant starlight.  
 ===========================================================
 Title: Twilight Gateway  
 Prompt: Render a glowing portal surrounded by ancient runes and soft mist under a radiant twilight sky.  
@@ -480,7 +480,7 @@ Title: Astral Fountain
 Prompt: Depict a glowing fountain radiating celestial energy, surrounded by vibrant orbs of light and intricate carvings.  
 ===========================================================
 Title: Floating Haven  
-Prompt: Showcase a glowing village suspended in the air, connected by radiant bridges and surrounded by vibrant skies.  
+Prompt: a glowing village suspended in the air, connected by radiant bridges and surrounded by vibrant skies.  
 ===========================================================
 Title: Sapphire Caves  
 Prompt: Render a glowing cave filled with radiant sapphire crystals reflecting soft ambient light.  
@@ -489,10 +489,10 @@ Title: Sunset Fjord
 Prompt: Depict a glowing fjord illuminated by golden-hour light, with intricate details of icy cliffs and radiant water.  
 ===========================================================
 Title: Ember Archipelago  
-Prompt: Create a glowing chain of volcanic islands surrounded by vibrant lava flows and radiant tropical plants.  
+Prompt: a glowing chain of volcanic islands surrounded by vibrant lava flows and radiant tropical plants.  
 ===========================================================
 Title: Crystal Ridge  
-Prompt: Showcase a glowing mountain ridge lined with radiant crystal formations under a vivid sunset sky.  
+Prompt: a glowing mountain ridge lined with radiant crystal formations under a vivid sunset sky.  
 ===========================================================
 Title: Neon Overpass  
 Prompt: Render a glowing futuristic highway stretching across a bustling cyberpunk city, illuminated by radiant billboards and holograms.  

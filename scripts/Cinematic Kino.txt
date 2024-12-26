@@ -1,499 +1,499 @@
 ===========================================================
 Title: Cliffside Journey  
-Prompt: Create a cinematic view of a lone figure walking along a cliffside, with a glowing sunset illuminating distant mountains. Include dramatic light contrasts and soft mist for added depth.  
+Prompt: a cinematic view of a lone figure walking along a cliffside, with a glowing sunset illuminating distant mountains. Include dramatic light contrasts and soft mist for added depth.  
 ===========================================================
 Title: Galactic Voyage  
-Prompt: Design a cinematic scene of a spaceship gliding through a vibrant nebula. Include glowing stardust trails and sharp details on the spacecraft for a grand, immersive visual.  
+Prompt: a cinematic scene of a spaceship gliding through a vibrant nebula. Include glowing stardust trails and sharp details on the spacecraft for a grand, immersive visual.  
 ===========================================================
 Title: Desert Odyssey  
-Prompt: Showcase a dramatic desert landscape with a lone traveler walking toward a distant, glowing city. Include warm golden light and soft shadows for a cinematic feel.  
+Prompt: a dramatic desert landscape with a lone traveler walking toward a distant, glowing city. Include warm golden light and soft shadows for a cinematic feel.  
 ===========================================================
 Title: Forest Mystique  
-Prompt: Create a cinematic shot of an ancient forest bathed in soft light beams filtering through dense trees. Include glowing plants and mist to evoke an enchanted atmosphere.  
+Prompt: a cinematic shot of an ancient forest bathed in soft light beams filtering through dense trees. Include glowing plants and mist to evoke an enchanted atmosphere.  
 ===========================================================
 Title: Celestial Portal  
-Prompt: Capture a massive glowing portal suspended in a starlit sky. Include intricate carvings and swirling light energy for a powerful, cinematic effect.  
+Prompt: a massive glowing portal suspended in a starlit sky. Include intricate carvings and swirling light energy for a powerful, cinematic effect.  
 ===========================================================
 Title: Ruins at Twilight  
-Prompt: Design an ancient ruin glowing under the light of a fading sunset. Add cinematic shadows and warm tones to highlight the beauty and mystery of the structure.  
+Prompt: an ancient ruin glowing under the light of a fading sunset. Add cinematic shadows and warm tones to highlight the beauty and mystery of the structure.  
 ===========================================================
 Title: Mountain Majesty  
-Prompt: Showcase a dramatic mountain range illuminated by golden hour light. Include layers of mist and sharp peaks to create a grand, cinematic perspective.  
+Prompt: a dramatic mountain range illuminated by golden hour light. Include layers of mist and sharp peaks to create a grand, cinematic perspective.  
 ===========================================================
 Title: Submerged Wonder  
-Prompt: Create a cinematic underwater scene of glowing ruins surrounded by vibrant aquatic life. Include beams of light piercing through the water for a magical ambiance.  
+Prompt: a cinematic underwater scene of glowing ruins surrounded by vibrant aquatic life. Include beams of light piercing through the water for a magical ambiance.  
 ===========================================================
 Title: Cosmic Ascent  
-Prompt: Design a lone astronaut climbing a glowing staircase that fades into the stars. Include vibrant nebula colors and cinematic lighting effects for an epic feel.  
+Prompt: a lone astronaut climbing a glowing staircase that fades into the stars. Include vibrant nebula colors and cinematic lighting effects for an epic feel.  
 ===========================================================
 Title: Lighthouse Solitude  
-Prompt: Capture a cinematic lighthouse on a rugged coastline during a storm. Include glowing light beams cutting through the dark clouds and dramatic waves crashing against the rocks.  
+Prompt: a cinematic lighthouse on a rugged coastline during a storm. Include glowing light beams cutting through the dark clouds and dramatic waves crashing against the rocks.  
 ===========================================================
 Title: Ethereal Plains  
-Prompt: Showcase a vast grassy plain glowing under soft moonlight. Include layers of cinematic fog and distant mountains for an immersive, tranquil effect.  
+Prompt: a vast grassy plain glowing under soft moonlight. Include layers of cinematic fog and distant mountains for an immersive, tranquil effect.  
 ===========================================================
 Title: Distant Citadel  
-Prompt: Create a cinematic scene of a glowing fortress perched atop a rocky cliff, with dramatic clouds and golden light streaming from the horizon.  
+Prompt: a cinematic scene of a glowing fortress perched atop a rocky cliff, with dramatic clouds and golden light streaming from the horizon.  
 ===========================================================
 Title: Twilight Canyon  
-Prompt: Design a cinematic canyon glowing with warm light from a setting sun. Include cascading waterfalls and soft shadows to add depth and grandeur.  
+Prompt: a cinematic canyon glowing with warm light from a setting sun. Include cascading waterfalls and soft shadows to add depth and grandeur.  
 ===========================================================
 Title: Sky Kingdom  
-Prompt: Capture a glowing city suspended among clouds, illuminated by golden sunlight. Include intricate architecture and swirling mist for a cinematic, dreamlike atmosphere.  
+Prompt: a glowing city suspended among clouds, illuminated by golden sunlight. Include intricate architecture and swirling mist for a cinematic, dreamlike atmosphere.  
 ===========================================================
 Title: Enchanted Tower  
-Prompt: Showcase a glowing ancient tower surrounded by dense fog and illuminated by ethereal light. Include faint celestial symbols etched into the tower for added mystique.  
+Prompt: a glowing ancient tower surrounded by dense fog and illuminated by ethereal light. Include faint celestial symbols etched into the tower for added mystique.  
 ===========================================================
 Title: Coastal Serenity  
-Prompt: Create a cinematic view of waves glowing under a vibrant sunset, with sharp details of the rocky coastline and dramatic light contrasts.  
+Prompt: a cinematic view of waves glowing under a vibrant sunset, with sharp details of the rocky coastline and dramatic light contrasts.  
 ===========================================================
 Title: Starlit Temple  
-Prompt: Design a glowing temple nestled in the mountains under a star-filled sky. Include cinematic lighting effects and soft shadows to highlight its majestic design.  
+Prompt: a glowing temple nestled in the mountains under a star-filled sky. Include cinematic lighting effects and soft shadows to highlight its majestic design.  
 ===========================================================
 Title: Fiery Summit  
-Prompt: Capture a cinematic volcano erupting under a dark sky, with glowing lava flowing down the slopes. Include dramatic clouds and faint starlight for a striking contrast.  
+Prompt: a cinematic volcano erupting under a dark sky, with glowing lava flowing down the slopes. Include dramatic clouds and faint starlight for a striking contrast.  
 ===========================================================
 Title: Glacial Haven  
-Prompt: Showcase a cinematic view of a glowing ice cave with soft blue light illuminating intricate ice textures. Add faint reflections on the icy floor for depth.  
+Prompt: a cinematic view of a glowing ice cave with soft blue light illuminating intricate ice textures. Add faint reflections on the icy floor for depth.  
 ===========================================================
 Title: Twilight Shores  
-Prompt: Create a glowing shoreline at dusk, with vibrant light reflecting on the water. Include cinematic details of soft waves and a dramatic, colorful sky.  
+Prompt: a glowing shoreline at dusk, with vibrant light reflecting on the water. Include cinematic details of soft waves and a dramatic, colorful sky.  
 ===========================================================
 Title: Celestial Beacon  
-Prompt: Capture a glowing tower radiating light into a starry sky. Include intricate details on its design and faint mist for a cinematic, mysterious effect.  
+Prompt: a glowing tower radiating light into a starry sky. Include intricate details on its design and faint mist for a cinematic, mysterious effect.  
 ===========================================================
 Title: Jungle Vortex  
-Prompt: Design a glowing vortex opening in a dense jungle. Include cinematic light beams and vibrant vegetation illuminated by the swirling energy.  
+Prompt: a glowing vortex opening in a dense jungle. Include cinematic light beams and vibrant vegetation illuminated by the swirling energy.  
 ===========================================================
 Title: Radiant Peaks  
-Prompt: Showcase a dramatic mountain range bathed in glowing golden light. Include cinematic layers of fog and intricate rock textures for added depth.  
+Prompt: a dramatic mountain range bathed in glowing golden light. Include cinematic layers of fog and intricate rock textures for added depth.  
 ===========================================================
 Title: Firefly Meadow  
-Prompt: Create a cinematic meadow glowing with fireflies under a soft twilight sky. Include sharp details of wildflowers and faint mist for an enchanting effect.  
+Prompt: a cinematic meadow glowing with fireflies under a soft twilight sky. Include sharp details of wildflowers and faint mist for an enchanting effect.  
 ===========================================================
 Title: Astral Bridge  
-Prompt: Capture a glowing bridge stretching into the cosmos. Include cinematic details of swirling stars and vibrant nebula colors to enhance its grandeur.  
+Prompt: a glowing bridge stretching into the cosmos. Include cinematic details of swirling stars and vibrant nebula colors to enhance its grandeur.  
 ===========================================================
 Title: Midnight Oasis  
-Prompt: Design a glowing desert oasis under a moonlit sky. Include vibrant reflections on the water and cinematic lighting on surrounding palm trees.  
+Prompt: a glowing desert oasis under a moonlit sky. Include vibrant reflections on the water and cinematic lighting on surrounding palm trees.  
 ===========================================================
 Title: Canyon Glow  
-Prompt: Showcase a dramatic canyon illuminated by golden light at dawn. Include soft cinematic shadows and faint layers of mist for a majestic feel.  
+Prompt: a dramatic canyon illuminated by golden light at dawn. Include soft cinematic shadows and faint layers of mist for a majestic feel.  
 ===========================================================
 Title: Cosmic Ruins  
-Prompt: Create a cinematic scene of glowing ruins on an alien planet, surrounded by a vibrant, star-filled sky. Include intricate carvings and dramatic lighting.  
+Prompt: a cinematic scene of glowing ruins on an alien planet, surrounded by a vibrant, star-filled sky. Include intricate carvings and dramatic lighting.  
 ===========================================================
 Title: Frosted Peaks  
-Prompt: Capture a cinematic view of snow-covered mountains glowing under soft moonlight. Include layers of fog and faint glowing stars for a tranquil ambiance.  
+Prompt: a cinematic view of snow-covered mountains glowing under soft moonlight. Include layers of fog and faint glowing stars for a tranquil ambiance.  
 ===========================================================
 Title: Urban Dystopia  
-Prompt: Design a cinematic cityscape with glowing neon signs and towering skyscrapers. Include dynamic lighting and faint rain effects for a moody, futuristic vibe.  
+Prompt: a cinematic cityscape with glowing neon signs and towering skyscrapers. Include dynamic lighting and faint rain effects for a moody, futuristic vibe.  
 ===========================================================
 Title: Dusk Overlook  
-Prompt: Showcase a glowing overlook of a sprawling city at dusk, with cinematic lighting illuminating the urban sprawl and distant hills.  
+Prompt: a glowing overlook of a sprawling city at dusk, with cinematic lighting illuminating the urban sprawl and distant hills.  
 ===========================================================
 Title: Cosmic Pathway  
-Prompt: Capture a glowing pathway suspended in space, illuminated by vibrant celestial light. Include swirling nebula clouds and faint starlight for an epic atmosphere.  
+Prompt: a glowing pathway suspended in space, illuminated by vibrant celestial light. Include swirling nebula clouds and faint starlight for an epic atmosphere.  
 ===========================================================
 Title: Golden Ravine  
-Prompt: Design a glowing ravine illuminated by golden hour light. Include dramatic layers of cliffs and cinematic mist to enhance its depth.  
+Prompt: a glowing ravine illuminated by golden hour light. Include dramatic layers of cliffs and cinematic mist to enhance its depth.  
 ===========================================================
 Title: Lunar Beacon  
-Prompt: Create a glowing lighthouse perched on a snowy cliff under a full moon. Include cinematic lighting effects and soft, glowing reflections.  
+Prompt: a glowing lighthouse perched on a snowy cliff under a full moon. Include cinematic lighting effects and soft, glowing reflections.  
 ===========================================================
 Title: Thunderfall  
-Prompt: Showcase a glowing waterfall during a thunderstorm, with sharp cinematic details of water illuminated by lightning bolts.  
+Prompt: a glowing waterfall during a thunderstorm, with sharp cinematic details of water illuminated by lightning bolts.  
 ===========================================================
 Title: Sapphire Cavern  
-Prompt: Design a glowing underground cavern filled with sapphire crystals. Include cinematic light beams and intricate rock textures for a magical feel.  
+Prompt: a glowing underground cavern filled with sapphire crystals. Include cinematic light beams and intricate rock textures for a magical feel.  
 ===========================================================
 Title: Starlit Desert  
-Prompt: Capture a glowing desert scene under a starry night sky. Include sharp textures of sand dunes and faint glowing light from distant stars.  
+Prompt: a glowing desert scene under a starry night sky. Include sharp textures of sand dunes and faint glowing light from distant stars.  
 ===========================================================
 Title: Ember Glow  
-Prompt: Showcase a cinematic view of a glowing campfire in a dense forest at dusk. Include soft shadows and glowing embers rising into the twilight sky.  
+Prompt: a cinematic view of a glowing campfire in a dense forest at dusk. Include soft shadows and glowing embers rising into the twilight sky.  
 ===========================================================
 Title: Eternal Gate  
-Prompt: Create a glowing celestial gate suspended in the sky, with cinematic light effects and swirling cosmic energy around its frame.  
+Prompt: a glowing celestial gate suspended in the sky, with cinematic light effects and swirling cosmic energy around its frame.  
 ===========================================================
 Title: Midnight Bay  
-Prompt: Capture a glowing bay illuminated by moonlight, with photorealistic water reflections and cinematic details of rocky cliffs.  
+Prompt: a glowing bay illuminated by moonlight, with photorealistic water reflections and cinematic details of rocky cliffs.  
 ===========================================================
 Title: Urban Twilight  
-Prompt: Design a glowing urban skyline at twilight, with cinematic lighting illuminating streets and reflective skyscrapers. Include warm hues fading into a cool night sky.  
+Prompt: a glowing urban skyline at twilight, with cinematic lighting illuminating streets and reflective skyscrapers. Include warm hues fading into a cool night sky.  
 ===========================================================
 Title: Radiant Fjord  
-Prompt: Showcase a glowing fjord surrounded by towering cliffs under golden hour light. Include cinematic details of calm water and dramatic shadows.  
+Prompt: a glowing fjord surrounded by towering cliffs under golden hour light. Include cinematic details of calm water and dramatic shadows.  
 ===========================================================
 Title: Stellar Archway  
-Prompt: Create a glowing stone archway illuminated by vibrant celestial light. Include intricate carvings and swirling stars for a cinematic, otherworldly vibe.  
+Prompt: a glowing stone archway illuminated by vibrant celestial light. Include intricate carvings and swirling stars for a cinematic, otherworldly vibe.  
 ===========================================================
 Title: Forgotten Spire  
-Prompt: Capture a glowing ancient spire surrounded by mist and illuminated by golden sunlight. Include cinematic details of weathered stone and faint glowing symbols.  
+Prompt: a glowing ancient spire surrounded by mist and illuminated by golden sunlight. Include cinematic details of weathered stone and faint glowing symbols.  
 ===========================================================
 Title: Sky Sanctuary  
-Prompt: Design a glowing sanctuary floating among the clouds, illuminated by soft, warm light. Include intricate architectural details and cinematic beams of sunlight.  
+Prompt: a glowing sanctuary floating among the clouds, illuminated by soft, warm light. Include intricate architectural details and cinematic beams of sunlight.  
 ===========================================================
 Title: Eternal Horizon  
-Prompt: Showcase a glowing horizon where a desert meets the ocean at sunset. Include cinematic contrasts of golden light reflecting off the water and soft shadows on the dunes.  
+Prompt: a glowing horizon where a desert meets the ocean at sunset. Include cinematic contrasts of golden light reflecting off the water and soft shadows on the dunes.  
 ===========================================================
 Title: Cosmic Obelisk  
-Prompt: Create a glowing obelisk standing alone in a vast desert under a starry sky. Include intricate carvings on its surface illuminated by celestial light for a mystical cinematic effect.  
+Prompt: a glowing obelisk standing alone in a vast desert under a starry sky. Include intricate carvings on its surface illuminated by celestial light for a mystical cinematic effect.  
 ===========================================================
 Title: Radiant Cliffside  
-Prompt: Capture a cinematic scene of a glowing cliffside overlooking a shimmering ocean during golden hour. Add soft clouds and dynamic light reflections for an immersive visual.  
+Prompt: a cinematic scene of a glowing cliffside overlooking a shimmering ocean during golden hour. Add soft clouds and dynamic light reflections for an immersive visual.  
 ===========================================================
 Title: Dreamscape Ruins  
-Prompt: Design glowing ruins in a dense jungle bathed in golden light beams. Include cinematic details of moss-covered stones and vines illuminated by faint glowing runes.  
+Prompt: glowing ruins in a dense jungle bathed in golden light beams. Include cinematic details of moss-covered stones and vines illuminated by faint glowing runes.  
 ===========================================================
 Title: Galactic Summit  
-Prompt: Showcase a glowing mountain peak rising above swirling nebula clouds. Include a dramatic, cinematic view of starlight reflecting off the snow-covered summit.  
+Prompt: a glowing mountain peak rising above swirling nebula clouds. Include a dramatic, cinematic view of starlight reflecting off the snow-covered summit.  
 ===========================================================
 Title: Lunar Shadows  
-Prompt: Create a glowing lunar landscape illuminated by a bright Earth in the sky. Include cinematic light contrasts on sharp rocky terrain and faint craters.  
+Prompt: a glowing lunar landscape illuminated by a bright Earth in the sky. Include cinematic light contrasts on sharp rocky terrain and faint craters.  
 ===========================================================
 Title: Aurora Basin  
-Prompt: Capture a glowing arctic basin under vibrant auroras. Include cinematic textures of ice and snow, with soft reflections of celestial light on a frozen lake.  
+Prompt: a glowing arctic basin under vibrant auroras. Include cinematic textures of ice and snow, with soft reflections of celestial light on a frozen lake.  
 ===========================================================
 Title: Ember Canyon  
-Prompt: Design a cinematic canyon illuminated by glowing embers from a distant volcanic eruption. Include faint fog and dramatic shadows to enhance the depth and warmth of the scene.  
+Prompt: a cinematic canyon illuminated by glowing embers from a distant volcanic eruption. Include faint fog and dramatic shadows to enhance the depth and warmth of the scene.  
 ===========================================================
 Title: Twilight Dunes  
-Prompt: Showcase a glowing desert dune landscape under a twilight sky filled with stars. Include cinematic wind trails and glowing light scattered over the sands.  
+Prompt: a glowing desert dune landscape under a twilight sky filled with stars. Include cinematic wind trails and glowing light scattered over the sands.  
 ===========================================================
 Title: Eternal Watchtower  
-Prompt: Create a glowing medieval watchtower perched on a cliff, illuminated by a distant glowing city. Include cinematic fog rolling through the valley below.  
+Prompt: a glowing medieval watchtower perched on a cliff, illuminated by a distant glowing city. Include cinematic fog rolling through the valley below.  
 ===========================================================
 Title: Stellar Cavern  
-Prompt: Design a glowing cavern where glowing crystals and starlit water create a cinematic, ethereal light source. Include intricate details of rock textures and subtle mist.  
+Prompt: a glowing cavern where glowing crystals and starlit water create a cinematic, ethereal light source. Include intricate details of rock textures and subtle mist.  
 ===========================================================
 Title: Firestorm Peaks  
-Prompt: Showcase a glowing volcanic mountain range during an eruption. Include dramatic cinematic lighting, glowing lava rivers, and faint embers rising into the dark sky.  
+Prompt: a glowing volcanic mountain range during an eruption. Include dramatic cinematic lighting, glowing lava rivers, and faint embers rising into the dark sky.  
 ===========================================================
 Title: Ocean Cradle  
-Prompt: Capture a glowing bay surrounded by jagged cliffs during a vibrant sunrise. Include cinematic waves and dynamic lighting for a powerful visual effect.  
+Prompt: a glowing bay surrounded by jagged cliffs during a vibrant sunrise. Include cinematic waves and dynamic lighting for a powerful visual effect.  
 ===========================================================
 Title: Sky Forge  
-Prompt: Create a cinematic depiction of a massive glowing forge suspended in the sky. Include faint celestial clouds and dramatic light contrasts from the forge’s glow.  
+Prompt: a cinematic depiction of a massive glowing forge suspended in the sky. Include faint celestial clouds and dramatic light contrasts from the forge’s glow.  
 ===========================================================
 Title: Midnight Ruins  
-Prompt: Showcase glowing ruins in a dense jungle at midnight. Include soft cinematic lighting from glowing fireflies and faint celestial reflections on wet stone.  
+Prompt: glowing ruins in a dense jungle at midnight. Include soft cinematic lighting from glowing fireflies and faint celestial reflections on wet stone.  
 ===========================================================
 Title: Frozen Citadel  
-Prompt: Design a glowing ice castle perched on a frosty cliff. Include cinematic reflections of light on the icy walls and dramatic shadows cast by a rising moon.  
+Prompt: a glowing ice castle perched on a frosty cliff. Include cinematic reflections of light on the icy walls and dramatic shadows cast by a rising moon.  
 ===========================================================
 Title: Cosmic Observatory  
-Prompt: Capture a glowing ancient observatory nestled in the mountains, illuminated by celestial light. Include faint glowing constellations and cinematic contrasts of shadow and light.  
+Prompt: a glowing ancient observatory nestled in the mountains, illuminated by celestial light. Include faint glowing constellations and cinematic contrasts of shadow and light.  
 ===========================================================
 Title: Twilight Cascade  
-Prompt: Create a glowing waterfall surrounded by golden-hour light and mist. Include cinematic details of glowing spray and reflections on the water below.  
+Prompt: a glowing waterfall surrounded by golden-hour light and mist. Include cinematic details of glowing spray and reflections on the water below.  
 ===========================================================
 Title: Radiant Plateau  
-Prompt: Showcase a glowing plateau under a vibrant sunset, with faint fog rolling over the terrain. Include cinematic shadows and glowing edges on rocky outcrops.  
+Prompt: a glowing plateau under a vibrant sunset, with faint fog rolling over the terrain. Include cinematic shadows and glowing edges on rocky outcrops.  
 ===========================================================
 Title: Stellar Monolith  
-Prompt: Capture a glowing monolith standing alone on an alien planet. Include vibrant nebula colors and cinematic light effects emphasizing its grandeur.  
+Prompt: a glowing monolith standing alone on an alien planet. Include vibrant nebula colors and cinematic light effects emphasizing its grandeur.  
 ===========================================================
 Title: Fiery Skies  
-Prompt: Design a cinematic sunset over a volcanic landscape, with glowing orange skies and ash clouds illuminated by molten lava.  
+Prompt: a cinematic sunset over a volcanic landscape, with glowing orange skies and ash clouds illuminated by molten lava.  
 ===========================================================
 Title: Coastal Majesty  
-Prompt: Showcase a glowing lighthouse standing on a rocky coastline during golden hour. Include cinematic lighting effects from the lighthouse beam cutting through faint mist.  
+Prompt: a glowing lighthouse standing on a rocky coastline during golden hour. Include cinematic lighting effects from the lighthouse beam cutting through faint mist.  
 ===========================================================
 Title: Starlit Fjord  
-Prompt: Capture a glowing fjord surrounded by towering cliffs under a starry sky. Include soft cinematic reflections on the water and vibrant celestial light.  
+Prompt: a glowing fjord surrounded by towering cliffs under a starry sky. Include soft cinematic reflections on the water and vibrant celestial light.  
 ===========================================================
 Title: Golden Forest  
-Prompt: Create a glowing forest bathed in golden hour light. Include cinematic details of glowing leaves and soft shadows cast by tall trees.  
+Prompt: a glowing forest bathed in golden hour light. Include cinematic details of glowing leaves and soft shadows cast by tall trees.  
 ===========================================================
 Title: Lunar Citadel  
-Prompt: Showcase a glowing ancient citadel on the moon, illuminated by faint Earthlight. Include cinematic textures of lunar rock and glowing alien symbols on the structure.  
+Prompt: a glowing ancient citadel on the moon, illuminated by faint Earthlight. Include cinematic textures of lunar rock and glowing alien symbols on the structure.  
 ===========================================================
 Title: Ember Grove  
-Prompt: Capture a glowing grove illuminated by a vibrant campfire. Include cinematic reflections of light on trees and faint glowing embers rising into the night sky.  
+Prompt: a glowing grove illuminated by a vibrant campfire. Include cinematic reflections of light on trees and faint glowing embers rising into the night sky.  
 ===========================================================
 Title: Mystic Waters  
-Prompt: Design a glowing river cutting through a canyon, illuminated by soft golden light. Include cinematic details of rippling water and glowing rock textures.  
+Prompt: a glowing river cutting through a canyon, illuminated by soft golden light. Include cinematic details of rippling water and glowing rock textures.  
 ===========================================================
 Title: Celestial Garden  
-Prompt: Showcase a glowing alien garden with bioluminescent plants and vibrant celestial light. Include cinematic shadows and intricate floral details.  
+Prompt: a glowing alien garden with bioluminescent plants and vibrant celestial light. Include cinematic shadows and intricate floral details.  
 ===========================================================
 Title: Shattered Spire  
-Prompt: Create a glowing spire surrounded by crumbled ruins, illuminated by a vibrant dusk sky. Include cinematic light contrasts and faint mist for atmosphere.  
+Prompt: a glowing spire surrounded by crumbled ruins, illuminated by a vibrant dusk sky. Include cinematic light contrasts and faint mist for atmosphere.  
 ===========================================================
 Title: Ocean’s Radiance  
-Prompt: Capture a glowing coastline with waves softly illuminated by the moon. Include cinematic textures of wet sand and glowing light reflections on the water.  
+Prompt: a glowing coastline with waves softly illuminated by the moon. Include cinematic textures of wet sand and glowing light reflections on the water.  
 ===========================================================
 Title: Desert Colossus  
-Prompt: Design a glowing ancient statue towering above a sandy desert under a golden sky. Include cinematic details of eroded stone and faint glowing symbols.  
+Prompt: a glowing ancient statue towering above a sandy desert under a golden sky. Include cinematic details of eroded stone and faint glowing symbols.  
 ===========================================================
 Title: Starlit Crossing  
-Prompt: Showcase a glowing suspension bridge illuminated by soft starlight. Include cinematic light reflections on the water below and faint glowing fog in the air.  
+Prompt: a glowing suspension bridge illuminated by soft starlight. Include cinematic light reflections on the water below and faint glowing fog in the air.  
 ===========================================================
 Title: Aurora Sanctuary  
-Prompt: Capture a glowing sanctuary surrounded by vibrant auroras in an arctic tundra. Include cinematic light contrasts on snow and glowing architectural details.  
+Prompt: a glowing sanctuary surrounded by vibrant auroras in an arctic tundra. Include cinematic light contrasts on snow and glowing architectural details.  
 ===========================================================
 Title: Crystal Peaks  
-Prompt: Design a glowing mountain range covered in shimmering crystals under a twilight sky. Include cinematic reflections and glowing light scattering across the peaks.  
+Prompt: a glowing mountain range covered in shimmering crystals under a twilight sky. Include cinematic reflections and glowing light scattering across the peaks.  
 ===========================================================
 Title: Ember Citadel  
-Prompt: Showcase a glowing fortress surrounded by fiery lava rivers at dusk. Include cinematic lighting effects highlighting the fortress walls and molten terrain.  
+Prompt: a glowing fortress surrounded by fiery lava rivers at dusk. Include cinematic lighting effects highlighting the fortress walls and molten terrain.  
 ===========================================================
 Title: Radiant Canyons  
-Prompt: Capture a glowing canyon illuminated by the soft light of a setting sun. Include cinematic details of jagged cliffs and glowing river reflections.  
+Prompt: a glowing canyon illuminated by the soft light of a setting sun. Include cinematic details of jagged cliffs and glowing river reflections.  
 ===========================================================
 Title: Twilight Forest  
-Prompt: Create a glowing forest at twilight, illuminated by soft beams of fading sunlight. Include cinematic mist and glowing fireflies for a magical ambiance.  
+Prompt: a glowing forest at twilight, illuminated by soft beams of fading sunlight. Include cinematic mist and glowing fireflies for a magical ambiance.  
 ===========================================================
 Title: Starfall Ruins  
-Prompt: Showcase glowing ruins on an alien planet under a meteor shower. Include cinematic lighting effects and intricate carvings illuminated by celestial light.  
+Prompt: glowing ruins on an alien planet under a meteor shower. Include cinematic lighting effects and intricate carvings illuminated by celestial light.  
 ===========================================================
 Title: Ember Ridge  
-Prompt: Capture a glowing ridge surrounded by fiery light from a distant volcanic eruption. Include cinematic shadows and glowing details of rocky textures.  
+Prompt: a glowing ridge surrounded by fiery light from a distant volcanic eruption. Include cinematic shadows and glowing details of rocky textures.  
 ===========================================================
 Title: Stellar Gateway  
-Prompt: Design a glowing gateway suspended in space, surrounded by vibrant nebula clouds. Include cinematic light beams and intricate cosmic details.  
+Prompt: a glowing gateway suspended in space, surrounded by vibrant nebula clouds. Include cinematic light beams and intricate cosmic details.  
 ===========================================================
 Title: Aurora Cavern  
-Prompt: Create a glowing underground cavern illuminated by vibrant auroras filtering through cracks in the ceiling. Include cinematic textures of glowing water and crystalline walls.  
+Prompt: a glowing underground cavern illuminated by vibrant auroras filtering through cracks in the ceiling. Include cinematic textures of glowing water and crystalline walls.  
 ===========================================================
 Title: Frozen Archway  
-Prompt: Capture a glowing ice archway in an arctic landscape. Include cinematic light effects from the rising sun illuminating intricate ice textures.  
+Prompt: a glowing ice archway in an arctic landscape. Include cinematic light effects from the rising sun illuminating intricate ice textures.  
 ===========================================================
 Title: Radiant Oasis  
-Prompt: Showcase a glowing desert oasis under a golden sunset. Include cinematic water reflections and intricate details of glowing palm trees and sand textures.  
+Prompt: a glowing desert oasis under a golden sunset. Include cinematic water reflections and intricate details of glowing palm trees and sand textures.  
 ===========================================================
 Title: Twilight Fortress  
-Prompt: Capture a glowing medieval fortress at dusk, surrounded by misty valleys. Include cinematic warm lighting from torches and a soft glow from the fading sun.  
+Prompt: a glowing medieval fortress at dusk, surrounded by misty valleys. Include cinematic warm lighting from torches and a soft glow from the fading sun.  
 ===========================================================
 Title: Eternal Plains  
-Prompt: Design a glowing savanna under a radiant sunrise, with golden grass swaying in the breeze. Include cinematic shadows cast by distant acacia trees.  
+Prompt: a glowing savanna under a radiant sunrise, with golden grass swaying in the breeze. Include cinematic shadows cast by distant acacia trees.  
 ===========================================================
 Title: Solar Gateway  
-Prompt: Showcase a glowing archway in a desert, illuminated by beams of golden sunlight. Include intricate carvings on the arch and cinematic shadows stretching across the sand.  
+Prompt: a glowing archway in a desert, illuminated by beams of golden sunlight. Include intricate carvings on the arch and cinematic shadows stretching across the sand.  
 ===========================================================
 Title: Ember Path  
-Prompt: Create a glowing forest trail lit by scattered embers from an unseen fire. Include cinematic textures of fallen leaves and soft shadows from towering trees.  
+Prompt: a glowing forest trail lit by scattered embers from an unseen fire. Include cinematic textures of fallen leaves and soft shadows from towering trees.  
 ===========================================================
 Title: Astral Valley  
-Prompt: Capture a glowing valley under a starry sky, with faint nebula light illuminating a winding river. Include cinematic layers of mist and intricate textures of the valley walls.  
+Prompt: a glowing valley under a starry sky, with faint nebula light illuminating a winding river. Include cinematic layers of mist and intricate textures of the valley walls.  
 ===========================================================
 Title: Lunar Temple  
-Prompt: Design a glowing ancient temple on the moon, surrounded by sharp lunar craters. Include cinematic lighting from celestial reflections and glowing runes on the temple walls.  
+Prompt: a glowing ancient temple on the moon, surrounded by sharp lunar craters. Include cinematic lighting from celestial reflections and glowing runes on the temple walls.  
 ===========================================================
 Title: Crimson Canyon  
-Prompt: Showcase a glowing canyon bathed in the warm red hues of a setting sun. Include cinematic shadows along the canyon walls and soft mist rising from a distant waterfall.  
+Prompt: a glowing canyon bathed in the warm red hues of a setting sun. Include cinematic shadows along the canyon walls and soft mist rising from a distant waterfall.  
 ===========================================================
 Title: Celestial Ruins  
-Prompt: Capture glowing ruins atop a mountain under a vibrant aurora-filled sky. Include intricate glowing carvings and cinematic reflections on the surrounding snow.  
+Prompt: glowing ruins atop a mountain under a vibrant aurora-filled sky. Include intricate glowing carvings and cinematic reflections on the surrounding snow.  
 ===========================================================
 Title: Ocean’s Abyss  
-Prompt: Create a glowing underwater scene of a deep ocean trench. Include glowing coral, sharp cinematic textures of rocks, and faint light filtering from above.  
+Prompt: a glowing underwater scene of a deep ocean trench. Include glowing coral, sharp cinematic textures of rocks, and faint light filtering from above.  
 ===========================================================
 Title: Ember Arch  
-Prompt: Showcase a glowing stone arch standing over a lava-filled chasm. Include cinematic glowing reflections of lava and sharp textures on the arch’s surface.  
+Prompt: a glowing stone arch standing over a lava-filled chasm. Include cinematic glowing reflections of lava and sharp textures on the arch’s surface.  
 ===========================================================
 Title: Midnight Harbor  
-Prompt: Capture a glowing harbor under a starry night sky. Include cinematic textures of wooden docks, faint reflections on the water, and warm lantern light.  
+Prompt: a glowing harbor under a starry night sky. Include cinematic textures of wooden docks, faint reflections on the water, and warm lantern light.  
 ===========================================================
 Title: Frosted Spire  
-Prompt: Design a glowing mountain spire illuminated by a soft moonlit sky. Include cinematic textures of frost on rocky surfaces and mist swirling at the peak.  
+Prompt: a glowing mountain spire illuminated by a soft moonlit sky. Include cinematic textures of frost on rocky surfaces and mist swirling at the peak.  
 ===========================================================
 Title: Radiant Plateau  
-Prompt: Showcase a glowing plateau surrounded by vibrant golden light at sunrise. Include cinematic textures of rocky terrain and distant shimmering grasslands.  
+Prompt: a glowing plateau surrounded by vibrant golden light at sunrise. Include cinematic textures of rocky terrain and distant shimmering grasslands.  
 ===========================================================
 Title: Sunset Archipelago  
-Prompt: Create a glowing tropical archipelago at sunset, with cinematic light reflections on turquoise waters and faint shadows from swaying palm trees.  
+Prompt: a glowing tropical archipelago at sunset, with cinematic light reflections on turquoise waters and faint shadows from swaying palm trees.  
 ===========================================================
 Title: Fiery Ridge  
-Prompt: Capture a glowing volcanic ridge with molten lava flowing down its sides. Include cinematic lighting from erupting embers and faint mist rolling over the terrain.  
+Prompt: a glowing volcanic ridge with molten lava flowing down its sides. Include cinematic lighting from erupting embers and faint mist rolling over the terrain.  
 ===========================================================
 Title: Crystal Haven  
-Prompt: Design a glowing cavern filled with radiant crystals. Include cinematic light beams reflecting on the cavern walls and sharp textures of glowing crystal surfaces.  
+Prompt: a glowing cavern filled with radiant crystals. Include cinematic light beams reflecting on the cavern walls and sharp textures of glowing crystal surfaces.  
 ===========================================================
 Title: Lunar Refuge  
-Prompt: Showcase a glowing settlement on the moon, illuminated by soft Earthlight and faint starlight. Include cinematic shadows cast by domed habitats.  
+Prompt: a glowing settlement on the moon, illuminated by soft Earthlight and faint starlight. Include cinematic shadows cast by domed habitats.  
 ===========================================================
 Title: Celestial Cascade  
-Prompt: Capture a glowing waterfall descending from a celestial mountain under a vibrant aurora. Include cinematic reflections on the water and mist glowing with faint colors.  
+Prompt: a glowing waterfall descending from a celestial mountain under a vibrant aurora. Include cinematic reflections on the water and mist glowing with faint colors.  
 ===========================================================
 Title: Ember Grove  
-Prompt: Create a glowing grove illuminated by soft embers floating in the air. Include cinematic shadows cast by ancient trees and textures of glowing moss.  
+Prompt: a glowing grove illuminated by soft embers floating in the air. Include cinematic shadows cast by ancient trees and textures of glowing moss.  
 ===========================================================
 Title: Sky Citadel  
-Prompt: Design a glowing castle floating in the clouds under golden sunlight. Include cinematic swirling mist and intricate glowing towers to emphasize grandeur.  
+Prompt: a glowing castle floating in the clouds under golden sunlight. Include cinematic swirling mist and intricate glowing towers to emphasize grandeur.  
 ===========================================================
 Title: Midnight Abyss  
-Prompt: Showcase a glowing deep-sea trench surrounded by luminescent aquatic life. Include cinematic textures of coral reefs and faint light beams filtering through dark waters.  
+Prompt: a glowing deep-sea trench surrounded by luminescent aquatic life. Include cinematic textures of coral reefs and faint light beams filtering through dark waters.  
 ===========================================================
 Title: Radiant Canyon  
-Prompt: Capture a glowing canyon illuminated by the warm hues of a setting sun. Include cinematic textures of jagged rock formations and soft shadows for depth.  
+Prompt: a glowing canyon illuminated by the warm hues of a setting sun. Include cinematic textures of jagged rock formations and soft shadows for depth.  
 ===========================================================
 Title: Arctic Dreamscape  
-Prompt: Create a glowing arctic scene with soft aurora light illuminating icy peaks. Include cinematic textures of snowdrifts and faint glowing reflections on frozen lakes.  
+Prompt: a glowing arctic scene with soft aurora light illuminating icy peaks. Include cinematic textures of snowdrifts and faint glowing reflections on frozen lakes.  
 ===========================================================
 Title: Ember Shore  
-Prompt: Showcase a glowing shoreline at dusk, with warm light reflecting on gentle waves. Include cinematic details of wet sand and faint glowing embers floating in the breeze.  
+Prompt: a glowing shoreline at dusk, with warm light reflecting on gentle waves. Include cinematic details of wet sand and faint glowing embers floating in the breeze.  
 ===========================================================
 Title: Cosmic Pathway  
-Prompt: Capture a glowing path leading through a nebula-filled sky. Include cinematic light beams and swirling stardust for an ethereal feel.  
+Prompt: a glowing path leading through a nebula-filled sky. Include cinematic light beams and swirling stardust for an ethereal feel.  
 ===========================================================
 Title: Lunar Caverns  
-Prompt: Design a glowing cavern on the moon, illuminated by faint celestial light. Include cinematic details of rocky textures and glowing alien symbols etched into the walls.  
+Prompt: a glowing cavern on the moon, illuminated by faint celestial light. Include cinematic details of rocky textures and glowing alien symbols etched into the walls.  
 ===========================================================
 Title: Crimson Peaks  
-Prompt: Showcase glowing mountain peaks bathed in deep red hues of twilight. Include cinematic layers of mist and sharp textures on the rocky slopes.  
+Prompt: glowing mountain peaks bathed in deep red hues of twilight. Include cinematic layers of mist and sharp textures on the rocky slopes.  
 ===========================================================
 Title: Radiant Harbor  
-Prompt: Capture a glowing harbor illuminated by lantern light and the soft hues of a setting sun. Include cinematic reflections on calm water and intricate textures of wooden docks.  
+Prompt: a glowing harbor illuminated by lantern light and the soft hues of a setting sun. Include cinematic reflections on calm water and intricate textures of wooden docks.  
 ===========================================================
 Title: Frosted Bridge  
-Prompt: Design a glowing icy bridge suspended over a frozen chasm under moonlight. Include cinematic light scattering and intricate details of frost on the bridge’s surface.  
+Prompt: a glowing icy bridge suspended over a frozen chasm under moonlight. Include cinematic light scattering and intricate details of frost on the bridge’s surface.  
 ===========================================================
 Title: Celestial Lighthouse  
-Prompt: Showcase a glowing lighthouse standing on a distant cliff under a starry sky. Include cinematic light beams cutting through the mist and glowing reflections on the ocean.  
+Prompt: a glowing lighthouse standing on a distant cliff under a starry sky. Include cinematic light beams cutting through the mist and glowing reflections on the ocean.  
 ===========================================================
 Title: Ember Falls  
-Prompt: Capture a glowing waterfall surrounded by fiery hues of volcanic rock. Include cinematic light contrasts and intricate details of glowing lava streams.  
+Prompt: a glowing waterfall surrounded by fiery hues of volcanic rock. Include cinematic light contrasts and intricate details of glowing lava streams.  
 ===========================================================
 Title: Arctic Spire  
-Prompt: Create a glowing icy spire surrounded by auroras in the sky. Include cinematic textures of frost and light beams reflecting off the snow.  
+Prompt: a glowing icy spire surrounded by auroras in the sky. Include cinematic textures of frost and light beams reflecting off the snow.  
 ===========================================================
 Title: Radiant Ruins  
-Prompt: Design glowing ruins illuminated by the golden light of a rising sun. Include cinematic layers of mist and intricate carvings glowing faintly on the ruins’ walls.  
+Prompt: glowing ruins illuminated by the golden light of a rising sun. Include cinematic layers of mist and intricate carvings glowing faintly on the ruins’ walls.  
 ===========================================================
 Title: Starlit Forest  
-Prompt: Showcase a glowing forest under a vibrant starry sky. Include cinematic details of fireflies and faint glowing reflections on the leaves.  
+Prompt: a glowing forest under a vibrant starry sky. Include cinematic details of fireflies and faint glowing reflections on the leaves.  
 ===========================================================
 Title: Cosmic Citadel  
-Prompt: Capture a glowing celestial fortress floating in space, surrounded by nebula clouds and vibrant starlight. Include cinematic glowing patterns on the structure.  
+Prompt: a glowing celestial fortress floating in space, surrounded by nebula clouds and vibrant starlight. Include cinematic glowing patterns on the structure.  
 ===========================================================
 Title: Lunar Ravine  
-Prompt: Create a glowing ravine on the moon illuminated by faint Earthlight. Include cinematic textures of lunar rock and soft shadows cast by towering cliffs.  
+Prompt: a glowing ravine on the moon illuminated by faint Earthlight. Include cinematic textures of lunar rock and soft shadows cast by towering cliffs.  
 ===========================================================
 Title: Crimson Ridge  
-Prompt: Showcase a glowing volcanic ridge under the warm hues of twilight. Include cinematic glowing embers and sharp textures on the rocky terrain.  
+Prompt: a glowing volcanic ridge under the warm hues of twilight. Include cinematic glowing embers and sharp textures on the rocky terrain.  
 ===========================================================
 Title: Frosted Haven  
-Prompt: Capture a glowing ice-covered forest under soft moonlight. Include cinematic textures of frost and faint glowing stars visible through the trees.  
+Prompt: a glowing ice-covered forest under soft moonlight. Include cinematic textures of frost and faint glowing stars visible through the trees.  
 ===========================================================
 Title: Twilight Passage  
-Prompt: Create a glowing passage through a canyon, illuminated by the golden light of a setting sun. Include cinematic shadows and soft glowing reflections on a winding stream.  
+Prompt: a glowing passage through a canyon, illuminated by the golden light of a setting sun. Include cinematic shadows and soft glowing reflections on a winding stream.  
 ===========================================================
 Title: Radiant Isle  
-Prompt: Design a glowing tropical island surrounded by vibrant turquoise water. Include cinematic reflections on the waves and faint glowing vegetation.  
+Prompt: a glowing tropical island surrounded by vibrant turquoise water. Include cinematic reflections on the waves and faint glowing vegetation.  
 ===========================================================
 Title: Starlit Bridge  
-Prompt: Showcase a glowing suspension bridge under a starry sky, with cinematic light contrasts highlighting its towering structure.  
+Prompt: a glowing suspension bridge under a starry sky, with cinematic light contrasts highlighting its towering structure.  
 ===========================================================
 Title: Cosmic Falls  
-Prompt: Capture a glowing waterfall descending from a celestial plateau, surrounded by vibrant nebula clouds. Include cinematic glowing reflections in the mist.  
+Prompt: a glowing waterfall descending from a celestial plateau, surrounded by vibrant nebula clouds. Include cinematic glowing reflections in the mist.  
 ===========================================================
 Title: Sunset Ridge  
-Prompt: Capture a glowing ridgeline at sunset with vibrant orange and purple hues illuminating the horizon. Include cinematic silhouettes of distant trees and a soft mist rising from the valley below.  
+Prompt: a glowing ridgeline at sunset with vibrant orange and purple hues illuminating the horizon. Include cinematic silhouettes of distant trees and a soft mist rising from the valley below.  
 ===========================================================
 Title: Shattered Moon  
-Prompt: Create a cinematic scene featuring a glowing, fractured moon illuminating a quiet alien landscape. Include sharp textures of rocky terrain and faint glowing fragments drifting in the sky.  
+Prompt: a cinematic scene featuring a glowing, fractured moon illuminating a quiet alien landscape. Include sharp textures of rocky terrain and faint glowing fragments drifting in the sky.  
 ===========================================================
 Title: Ember Forest  
-Prompt: Showcase a glowing forest on fire, with dramatic cinematic lighting from the flames casting shadows on the trees. Include glowing embers swirling through the smoky air.  
+Prompt: a glowing forest on fire, with dramatic cinematic lighting from the flames casting shadows on the trees. Include glowing embers swirling through the smoky air.  
 ===========================================================
 Title: Eternal Sanctuary  
-Prompt: Design a glowing temple floating above clouds, illuminated by golden sunlight. Include cinematic glowing beams streaming through the temple’s arches and intricate details on its surface.  
+Prompt: a glowing temple floating above clouds, illuminated by golden sunlight. Include cinematic glowing beams streaming through the temple’s arches and intricate details on its surface.  
 ===========================================================
 Title: Crystal Bridge  
-Prompt: Capture a glowing crystalline bridge stretching across a vast canyon under a twilight sky. Include cinematic reflections and textures of the glowing structure.  
+Prompt: a glowing crystalline bridge stretching across a vast canyon under a twilight sky. Include cinematic reflections and textures of the glowing structure.  
 ===========================================================
 Title: Solar Beacon  
-Prompt: Create a glowing tower standing in the center of a desert, illuminated by the radiant beams of a setting sun. Include cinematic shadows and faint sandstorms swirling in the distance.  
+Prompt: a glowing tower standing in the center of a desert, illuminated by the radiant beams of a setting sun. Include cinematic shadows and faint sandstorms swirling in the distance.  
 ===========================================================
 Title: Starlit Archipelago  
-Prompt: Showcase a glowing tropical island chain under a vibrant starry sky. Include cinematic light contrasts between the glowing water and shadowed cliffs.  
+Prompt: a glowing tropical island chain under a vibrant starry sky. Include cinematic light contrasts between the glowing water and shadowed cliffs.  
 ===========================================================
 Title: Lunar Shadows  
-Prompt: Capture a glowing lunar crater bathed in soft Earthlight. Include cinematic textures of sharp rocks and faint glowing reflections on the moon's surface.  
+Prompt: a glowing lunar crater bathed in soft Earthlight. Include cinematic textures of sharp rocks and faint glowing reflections on the moon's surface.  
 ===========================================================
 Title: Radiant River  
-Prompt: Design a glowing river cutting through a dense forest, illuminated by golden-hour sunlight. Include cinematic shadows and intricate details of rippling water.  
+Prompt: a glowing river cutting through a dense forest, illuminated by golden-hour sunlight. Include cinematic shadows and intricate details of rippling water.  
 ===========================================================
 Title: Frosted Valley  
-Prompt: Create a glowing icy valley surrounded by towering peaks. Include cinematic aurora reflections on the ice and soft glowing light illuminating the snow.  
+Prompt: a glowing icy valley surrounded by towering peaks. Include cinematic aurora reflections on the ice and soft glowing light illuminating the snow.  
 ===========================================================
 Title: Ember Basin  
-Prompt: Showcase a glowing volcanic basin surrounded by jagged cliffs. Include cinematic glowing embers rising into the smoky air and light scattering from molten lava pools.  
+Prompt: a glowing volcanic basin surrounded by jagged cliffs. Include cinematic glowing embers rising into the smoky air and light scattering from molten lava pools.  
 ===========================================================
 Title: Twilight Village  
-Prompt: Capture a glowing village nestled in the hills at twilight, illuminated by warm lanterns and soft purple hues in the sky. Include cinematic shadows and intricate architectural details.  
+Prompt: a glowing village nestled in the hills at twilight, illuminated by warm lanterns and soft purple hues in the sky. Include cinematic shadows and intricate architectural details.  
 ===========================================================
 Title: Stellar Cathedral  
-Prompt: Design a glowing cathedral suspended in space, surrounded by swirling stardust. Include cinematic glowing stained glass and soft light beams streaming outward.  
+Prompt: a glowing cathedral suspended in space, surrounded by swirling stardust. Include cinematic glowing stained glass and soft light beams streaming outward.  
 ===========================================================
 Title: Ember Passage  
-Prompt: Showcase a glowing rocky canyon illuminated by molten lava streams. Include cinematic textures of eroded stone and faint glowing mist rising from the heat.  
+Prompt: a glowing rocky canyon illuminated by molten lava streams. Include cinematic textures of eroded stone and faint glowing mist rising from the heat.  
 ===========================================================
 Title: Crystal Cavern Falls  
-Prompt: Capture a glowing waterfall cascading into a cavern filled with crystals. Include cinematic reflections on the water and soft glowing light illuminating the cavern walls.  
+Prompt: a glowing waterfall cascading into a cavern filled with crystals. Include cinematic reflections on the water and soft glowing light illuminating the cavern walls.  
 ===========================================================
 Title: Sky Palace  
-Prompt: Design a glowing palace perched on a cloud under a radiant sunrise. Include cinematic shadows cast by its spires and intricate glowing details on its walls.  
+Prompt: a glowing palace perched on a cloud under a radiant sunrise. Include cinematic shadows cast by its spires and intricate glowing details on its walls.  
 ===========================================================
 Title: Midnight Isle  
-Prompt: Create a glowing island surrounded by calm water under a starry sky. Include cinematic glowing vegetation and faint reflections of celestial light on the waves.  
+Prompt: a glowing island surrounded by calm water under a starry sky. Include cinematic glowing vegetation and faint reflections of celestial light on the waves.  
 ===========================================================
 Title: Radiant Fortress  
-Prompt: Capture a glowing fortress standing on a cliff illuminated by the golden hues of dawn. Include cinematic textures of stone walls and faint mist rolling through the valley below.  
+Prompt: a glowing fortress standing on a cliff illuminated by the golden hues of dawn. Include cinematic textures of stone walls and faint mist rolling through the valley below.  
 ===========================================================
 Title: Arctic Twilight  
-Prompt: Showcase a glowing arctic tundra under a twilight sky filled with vibrant auroras. Include cinematic glowing reflections on icy lakes and soft light scattering across the snow.  
+Prompt: a glowing arctic tundra under a twilight sky filled with vibrant auroras. Include cinematic glowing reflections on icy lakes and soft light scattering across the snow.  
 ===========================================================
 Title: Ember Cascades  
-Prompt: Design a glowing waterfall of molten lava cascading into a fiery pool. Include cinematic glowing mist and sharp contrasts between the lava’s glow and the dark surrounding cliffs.  
+Prompt: a glowing waterfall of molten lava cascading into a fiery pool. Include cinematic glowing mist and sharp contrasts between the lava’s glow and the dark surrounding cliffs.  
 ===========================================================
 Title: Starlit Haven  
-Prompt: Capture a glowing forest clearing under a vivid starry sky. Include cinematic glowing fireflies and soft reflections of starlight on a calm stream.  
+Prompt: a glowing forest clearing under a vivid starry sky. Include cinematic glowing fireflies and soft reflections of starlight on a calm stream.  
 ===========================================================
 Title: Cosmic Spires  
-Prompt: Create a glowing alien landscape with towering spires reaching into a nebula-filled sky. Include cinematic glowing veins of energy running through the spires and soft light scattering in the atmosphere.  
+Prompt: a glowing alien landscape with towering spires reaching into a nebula-filled sky. Include cinematic glowing veins of energy running through the spires and soft light scattering in the atmosphere.  
 ===========================================================
 Title: Frostbound Canyon  
-Prompt: Showcase a glowing icy canyon under a full moon. Include cinematic glowing reflections on the ice walls and intricate details of snow-covered rocks.  
+Prompt: a glowing icy canyon under a full moon. Include cinematic glowing reflections on the ice walls and intricate details of snow-covered rocks.  
 ===========================================================
 Title: Ember Cathedral  
-Prompt: Design a glowing cathedral surrounded by rivers of molten lava. Include cinematic light beams emanating from its spires and glowing stained-glass windows reflecting the lava’s fiery light.  
+Prompt: a glowing cathedral surrounded by rivers of molten lava. Include cinematic light beams emanating from its spires and glowing stained-glass windows reflecting the lava’s fiery light.  
 ===========================================================
 Title: Twilight Waters  
-Prompt: Capture a glowing beach at twilight, with soft waves illuminated by the fading sun. Include cinematic glowing reflections on wet sand and intricate details of shells.  
+Prompt: a glowing beach at twilight, with soft waves illuminated by the fading sun. Include cinematic glowing reflections on wet sand and intricate details of shells.  
 ===========================================================
 Title: Lunar Plains  
-Prompt: Create a glowing expanse of moonlit plains with faint Earthlight illuminating rocky craters. Include cinematic glowing shadows and intricate textures of the terrain.  
+Prompt: a glowing expanse of moonlit plains with faint Earthlight illuminating rocky craters. Include cinematic glowing shadows and intricate textures of the terrain.  
 ===========================================================
 Title: Celestial Falls  
-Prompt: Showcase a glowing waterfall descending from a floating island under a nebula-filled sky. Include cinematic glowing mist and intricate details of cascading water.  
+Prompt: a glowing waterfall descending from a floating island under a nebula-filled sky. Include cinematic glowing mist and intricate details of cascading water.  
 ===========================================================
 Title: Eternal Horizon  
-Prompt: Design a glowing ridge where a desert meets the ocean under a golden sunset. Include cinematic glowing reflections on the water and sharp textures of sand dunes.  
+Prompt: a glowing ridge where a desert meets the ocean under a golden sunset. Include cinematic glowing reflections on the water and sharp textures of sand dunes.  
 ===========================================================
 Title: Radiant Coastline  
-Prompt: Capture a glowing rocky coastline illuminated by the warm hues of a setting sun. Include cinematic light scattering through sea spray and glowing reflections on wet rocks.  
+Prompt: a glowing rocky coastline illuminated by the warm hues of a setting sun. Include cinematic light scattering through sea spray and glowing reflections on wet rocks.  
 ===========================================================
 Title: Ember Bridge  
-Prompt: Create a glowing stone bridge spanning a lava-filled chasm under a starry sky. Include cinematic glowing reflections on the bridge’s surface and faint embers floating in the air.  
+Prompt: a glowing stone bridge spanning a lava-filled chasm under a starry sky. Include cinematic glowing reflections on the bridge’s surface and faint embers floating in the air.  
 ===========================================================
 Title: Frostbound Peaks  
-Prompt: Showcase a glowing icy mountain range under soft moonlight. Include cinematic glowing auroras above and sharp details of frost-covered slopes.  
+Prompt: a glowing icy mountain range under soft moonlight. Include cinematic glowing auroras above and sharp details of frost-covered slopes.  
 ===========================================================
 Title: Cosmic Abyss  
-Prompt: Capture a glowing cosmic rift in space surrounded by swirling stardust. Include cinematic light beams and intricate glowing patterns on the edges of the rift.  
+Prompt: a glowing cosmic rift in space surrounded by swirling stardust. Include cinematic light beams and intricate glowing patterns on the edges of the rift.  
 ===========================================================
 Title: Golden Bay  
-Prompt: Design a glowing tropical bay at sunrise with vibrant reflections on turquoise waters. Include cinematic details of glowing coral reefs and shadows from surrounding cliffs.  
+Prompt: a glowing tropical bay at sunrise with vibrant reflections on turquoise waters. Include cinematic details of glowing coral reefs and shadows from surrounding cliffs.  
 ===========================================================
 Title: Ember Refuge  
-Prompt: Create a glowing cave illuminated by the warm light of a distant campfire. Include cinematic glowing reflections on wet rock walls and faint smoke rising into the air.  
+Prompt: a glowing cave illuminated by the warm light of a distant campfire. Include cinematic glowing reflections on wet rock walls and faint smoke rising into the air.  
 ===========================================================
 Title: Radiant Spires  
-Prompt: Showcase a glowing alien city with towering spires radiating soft light. Include cinematic glowing patterns on the buildings and faint nebula clouds in the sky.  
+Prompt: a glowing alien city with towering spires radiating soft light. Include cinematic glowing patterns on the buildings and faint nebula clouds in the sky.  
 ===========================================================
 Title: Arctic Haven  
-Prompt: Capture a glowing snow-covered forest under a vibrant aurora. Include cinematic glowing reflections on icy surfaces and faint mist in the air.  
+Prompt: a glowing snow-covered forest under a vibrant aurora. Include cinematic glowing reflections on icy surfaces and faint mist in the air.  
 ===========================================================
