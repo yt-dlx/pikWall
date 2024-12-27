@@ -18,7 +18,6 @@ def rescale_images(source_dir, target_dir, width, height):
                 print(f"Rescaled and saved: {target_path}")
         except Exception as e:
             print(f"Failed to process {file_path}: {e}")
-
 if __name__ == "__main__":
     print("Choose the image format:")
     print("1: Landscape (640 x 360)")
@@ -31,18 +30,14 @@ if __name__ == "__main__":
     else:
         print("Invalid choice. Exiting the program.")
         exit()
-# ==================================================XXX==================================================
-    source_dir = os.path.join("sources", "output", "Anime", "highRes")
-    # source_dir = os.path.join("sources", "output", "Portrait", "highRes")
-    # source_dir = os.path.join("sources", "output", "Lightning", "highRes")
-    # source_dir = os.path.join("sources", "output", "Cinematic", "highRes")
-    # source_dir = os.path.join("sources", "output", "Photography", "highRes")
-# ==================================================XXX==================================================
-    # target_dir = os.path.join("sources", "output", "Photography", "lowRes")
-    # target_dir = os.path.join("sources", "output", "Cinematic", "lowRes")
-    # target_dir = os.path.join("sources", "output", "Lightning", "lowRes")
-    # target_dir = os.path.join("sources", "output", "Portrait", "lowRes")
-    target_dir = os.path.join("sources", "output", "Anime", "lowRes")
-# ==================================================XXX==================================================
-    rescale_images(source_dir, target_dir, width, height)
+    directories = [
+        ("Anime", os.path.join("sources", "output", "Anime", "highRes"), os.path.join("sources", "output", "Anime", "lowRes")),
+        ("Portrait", os.path.join("sources", "output", "Portrait", "highRes"), os.path.join("sources", "output", "Portrait", "lowRes")),
+        ("Lightning", os.path.join("sources", "output", "Lightning", "highRes"), os.path.join("sources", "output", "Lightning", "lowRes")),
+        ("Cinematic", os.path.join("sources", "output", "Cinematic", "highRes"), os.path.join("sources", "output", "Cinematic", "lowRes")),
+        ("Photography", os.path.join("sources", "output", "Photography", "highRes"), os.path.join("sources", "output", "Photography", "lowRes")),
+    ]
+    for name, source_dir, target_dir in directories:
+        print(f"Processing {name} images...")
+        rescale_images(source_dir, target_dir, width, height)
 # ==================================================XXX==================================================

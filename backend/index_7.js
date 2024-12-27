@@ -4,15 +4,16 @@
 //  ==================================================XXX==================================================
 import { join } from "path";
 import dotenv from "dotenv";
-dotenv.config({ path: ".env" });
 import { readFileSync, readdirSync } from "fs";
+import fetch from "node-fetch";
+dotenv.config({ path: ".env" });
 const owner = "yt-dlx";
 const repo = "picbook";
 const branch = "lowRes";
-const filesDir = "./sources/lowRes";
 const commitMessage = "Add multiple files";
 const token = process.env.GITHUB_TOKEN;
 const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/`;
+const directories = ["./sources/output/Anime/lowRes", "./sources/output/Portrait/lowRes", "./sources/output/Lightning/lowRes", "./sources/output/Cinematic/lowRes", "./sources/output/Photography/lowRes"];
 async function fetchUploadedFiles() {
   try {
     const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/trees/${branch}?recursive=1`, { headers: { Authorization: `token ${token}` } });
@@ -36,13 +37,18 @@ async function uploadFileToGitHub(filePath, fileName) {
   try {
     console.log(`INFO: Uploading file: ${fileName}`);
     const data = { message: commitMessage, content: content, branch: branch };
-    const response = await fetch(`${apiUrl}${fileName}`, { method: "PUT", headers: { Authorization: `token ${token}`, "Content-Type": "application/json" }, body: JSON.stringify(data) });
+    const response = await fetch(`${apiUrl}${fileName}`, {
+      method: "PUT",
+      headers: { Authorization: `token ${token}`, "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
     if (response.ok) console.log(`INFO: File uploaded successfully: ${fileName}`);
     else console.warn(`Unexpected response for ${fileName}: ${response.status} - ${response.statusText}`);
   } catch (error) {
     console.error(`ERROR: Error uploading ${fileName}:`, error.message);
   }
 }
+
 function sortFiles(files) {
   return files.sort((a, b) => {
     const baseNameA = a.match(/^(.*)\s\((\d+)\)\.\w+$/);
@@ -56,22 +62,27 @@ function sortFiles(files) {
     return a.localeCompare(b);
   });
 }
-async function uploadFiles() {
+async function uploadFilesFromDirectory(directory) {
   try {
-    console.log("INFO: Starting the file upload process...");
+    console.log(`INFO: Starting file upload process for directory: ${directory}`);
     const uploadedFileNames = await fetchUploadedFiles();
-    const localFiles = readdirSync(filesDir);
+    const localFiles = readdirSync(directory);
     const filesToUpload = sortFiles(localFiles.filter((file) => !uploadedFileNames.has(file)));
     for (const file of filesToUpload) {
-      const filePath = join(filesDir, file);
+      const filePath = join(directory, file);
       await uploadFileToGitHub(filePath, file);
     }
-    console.log("INFO: File upload process completed.");
+    console.log(`INFO: File upload process completed for directory: ${directory}`);
   } catch (error) {
-    console.error("ERROR: Error during file upload process:", error.message);
+    console.error(`ERROR: Error during file upload process for directory ${directory}:`, error.message);
   }
 }
-uploadFiles()
+async function uploadAllDirectories() {
+  for (const directory of directories) {
+    await uploadFilesFromDirectory(directory);
+  }
+}
+uploadAllDirectories()
   .then(() => console.log("INFO: File upload process finished successfully."))
   .catch((error) => console.error("ERROR: Error during file upload process:", error.message));
 //  ==================================================XXX==================================================
