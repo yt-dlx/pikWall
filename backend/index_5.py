@@ -49,7 +49,7 @@ def create_image_data(file_path):
         if i <= 10:
             image_data[f"hex_{i}"] = color
     return image_data
-def process_images_in_folder(folder_path):
+def process_images_in_folder(folder_path, output_ts_path):
     parent_data = {}
     for file_name in os.listdir(folder_path):
         file_path = os.path.join(folder_path, file_name)
@@ -70,18 +70,20 @@ def process_images_in_folder(folder_path):
                 console.print(f"[bold green]INFO:[/] Processed image: {file_name}")
             except Exception as e:
                 console.print(f"[bold red]ERROR:[/] Could not process {file_name}. {str(e)}")
-    output_ts_path = "database.ts"
     with open(output_ts_path, "w") as ts_file:
         ts_file.write("export const database: unknown[] = ")
         ts_file.write(str(list(parent_data.values())).replace("'", "\"").replace("True", "true").replace("False", "false"))
         ts_file.write(";\n")
     console.print(f"[bold green]INFO:[/] All image data has been written to {output_ts_path}")
-# ==================================================XXX================================================== 
-# folder_path=os.path.join("sources", "output", "Photography")
-# folder_path=os.path.join("sources", "output", "Cinematic")
-# folder_path=os.path.join("sources", "output", "Lightning")
-# folder_path=os.path.join("sources", "output", "Portrait")
-folder_path=os.path.join("sources", "output", "Anime")
-# ==================================================XXX==================================================
-process_images_in_folder(folder_path)
+folder_paths = [
+    ("Anime", os.path.join("sources", "input", "Anime")),
+    ("Portrait", os.path.join("sources", "input", "Portrait")),
+    ("Lightning", os.path.join("sources", "input", "Lightning")),
+    ("Cinematic", os.path.join("sources", "input", "Cinematic")),
+    ("Photography", os.path.join("sources", "input", "Photography")),
+]
+for folder_name, folder_path in folder_paths:
+    console.print(f"[bold cyan]INFO:[/] Processing folder: {folder_path}")
+    output_ts_path = f"{folder_name}.ts"
+    process_images_in_folder(folder_path, output_ts_path)
 # ==================================================XXX==================================================

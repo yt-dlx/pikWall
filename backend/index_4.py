@@ -3,7 +3,7 @@
 # ==================================================XXX==================================================
 import os
 from PIL import Image, ImageDraw, ImageFont
-def generate_watermark_grid(image_size, text, font, spacing_multiplier=1.5):
+def generate_watermark_grid(image_size, text, font, spacing_multiplier=4.0):
     draw = ImageDraw.Draw(Image.new("RGBA", image_size, (255, 255, 255, 0)))
     text_bbox = draw.textbbox((0, 0), text, font=font)
     text_width = text_bbox[2] - text_bbox[0]
@@ -20,11 +20,11 @@ def add_watermark_to_image(input_path, output_path, text, font_path, opacity=50)
     draw = ImageDraw.Draw(watermark)
     font_size = int(image.size[0] / 70)
     font = ImageFont.truetype(font_path, font_size)
-    positions = generate_watermark_grid(image.size, text, font, spacing_multiplier=1.5)
+    positions = generate_watermark_grid(image.size, text, font, spacing_multiplier=4.0)
     for position in positions:
         draw.text(position, text, font=font, fill=(255, 255, 255, opacity))
     watermarked_image = Image.alpha_composite(image, watermark).convert("RGB")
-    watermarked_image.save(output_path, "JPEG", quality=85, optimize=True)
+    watermarked_image.save(output_path, "JPEG")
     print(f"Watermarked image saved as {output_path}")
 def process_images(input_folder, output_folder, text, font_path):
     os.makedirs(output_folder, exist_ok=True)
@@ -33,18 +33,22 @@ def process_images(input_folder, output_folder, text, font_path):
         if os.path.isfile(input_path) and filename.lower().endswith((".png", ".jpg", ".jpeg")):
             output_path = os.path.join(output_folder, filename)
             add_watermark_to_image(input_path, output_path, text, font_path)
-# ==================================================XXX================================================== 
-input_folder=os.path.join("sources", "output", "Anime", "noised")
-# input_folder=os.path.join("sources", "output", "Portrait", "noised")
-# input_folder=os.path.join("sources", "output", "Lightning", "noised")
-# input_folder=os.path.join("sources", "output", "Cinematic", "noised")
-# input_folder=os.path.join("sources", "output", "Photography", "noised")
-# ==================================================XXX================================================== 
-# output_folder=os.path.join("sources", "output", "Photography", "highRes")
-# output_folder=os.path.join("sources", "output", "Cinematic", "highRes")
-# output_folder=os.path.join("sources", "output", "Lightning", "highRes")
-# output_folder=os.path.join("sources", "output", "Portrait", "highRes")
-output_folder=os.path.join("sources", "output", "Anime", "highRes")
-# ==================================================XXX================================================== 
-process_images(text="picBook™",  input_folder,  output_folder,  font_path=os.path.join("include", "Kurale.ttf"))
+input_folders = [
+    os.path.join("sources", "output", "Anime", "noised"),
+    os.path.join("sources", "output", "Portrait", "noised"),
+    os.path.join("sources", "output", "Lightning", "noised"),
+    os.path.join("sources", "output", "Cinematic", "noised"),
+    os.path.join("sources", "output", "Photography", "noised"),
+]
+output_folders = [
+    os.path.join("sources", "output", "Anime", "highRes"),
+    os.path.join("sources", "output", "Portrait", "highRes"),
+    os.path.join("sources", "output", "Lightning", "highRes"),
+    os.path.join("sources", "output", "Cinematic", "highRes"),
+    os.path.join("sources", "output", "Photography", "highRes"),
+]
+text = "picBook™"
+font_path = os.path.join("include", "Kurale.ttf")
+for input_folder, output_folder in zip(input_folders, output_folders):
+    process_images(input_folder, output_folder, text, font_path)
 # ==================================================XXX================================================== 
