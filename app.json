@@ -19,8 +19,8 @@
         "NSPhotoLibraryUsageDescription": "picBook™: requires access to your photo library to save images."
       }
     },
+    "extra": { "router": { "origin": false }, "eas": { "projectId": "ffc99aba-ef66-40ea-ba61-6b8adb8b5084" } },
     "web": { "output": "static", "bundler": "metro", "favicon": "./assets/picbook/white_nobg_3200.png" },
-    "extra": { "router": { "origin": false } },
     "android": {
       "requiresFullScreen": true,
       "package": "com.shovit.picbook",
