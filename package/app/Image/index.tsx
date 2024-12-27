@@ -514,14 +514,39 @@ const DownloadScreen = () => {
       </ScrollView>
       <Modal visible={isFullScreen} transparent={false} onRequestClose={() => setIsFullScreen(false)} presentationStyle="fullScreen" statusBarTranslucent>
         <View style={{ flex: 1, backgroundColor: Colorizer("#0A0A0A", 1.0) }}>
-          <TouchableOpacity onPress={() => setIsFullScreen(false)} style={{ position: "absolute", top: 56, left: 32, zIndex: 10 }}>
+          <TouchableOpacity
+            onPress={() => setIsFullScreen(false)}
+            style={{
+              position: "absolute",
+              top: 56,
+              left: 32,
+              zIndex: 10
+            }}
+          >
             <FontAwesome5 name="times" size={50} color={Colorizer("#FFFFFF", 1.0)} />
           </TouchableOpacity>
-          <ScrollView horizontal={true} contentContainerStyle={{ justifyContent: "center", alignItems: "center", flexGrow: 1 }}>
-            <Image style={{ height: "100%", aspectRatio: 16 / 9 }} alt="image" source={{ uri: selectedImage.previewLink.replace("lowRes", "highRes") }} resizeMode="contain" />
-          </ScrollView>
+          <View
+            style={{
+              flex: 1,
+              justifyContent: "center",
+              alignItems: "center"
+            }}
+          >
+            <Image
+              source={{
+                uri: selectedImage.previewLink.replace("lowRes", "highRes")
+              }}
+              alt="image"
+              style={{
+                width: Dimensions.get("window").width,
+                height: Dimensions.get("window").height,
+                resizeMode: "contain"
+              }}
+            />
+          </View>
         </View>
       </Modal>
+
       <DownloadingModal visible={isDownloading} percentage={percentage} downloadRate={downloadRate} eta={eta} primaryColor={selectedImage.primary} />
       <SuccessModal visible={alertVisible && alertIcon === "checkmark-done-circle"} message={alertMessage} onClose={hideAlert} />
       <ErrorModal visible={alertVisible && alertIcon === "error"} message={alertMessage} onClose={hideAlert} />
