@@ -3,7 +3,7 @@
 # ==================================================XXX==================================================
 import os
 from PIL import Image, ImageEnhance
-output_dir = os.path.join("sources", "images")
+output_dir = os.path.join("sources", "input")
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 for filename in os.listdir("download"):
