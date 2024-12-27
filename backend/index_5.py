@@ -76,5 +76,12 @@ def process_images_in_folder(folder_path):
         ts_file.write(str(list(parent_data.values())).replace("'", "\"").replace("True", "true").replace("False", "false"))
         ts_file.write(";\n")
     console.print(f"[bold green]INFO:[/] All image data has been written to {output_ts_path}")
-process_images_in_folder(os.path.join("sources", "input"))
+# ==================================================XXX================================================== 
+# folder_path=os.path.join("sources", "output", "Photography")
+# folder_path=os.path.join("sources", "output", "Cinematic")
+# folder_path=os.path.join("sources", "output", "Lightning")
+# folder_path=os.path.join("sources", "output", "Portrait")
+folder_path=os.path.join("sources", "output", "Anime")
+# ==================================================XXX==================================================
+process_images_in_folder(folder_path)
 # ==================================================XXX==================================================
