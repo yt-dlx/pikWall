@@ -144,17 +144,14 @@ if __name__ == "__main__":
     @sharpness >>> (Optional):Adjusts the sharpness of the image. Limit: (-)100 - (+)100
     @contrast >>> (Optional):Adjusts the contrast of the image. Limit: (-)100 - (+)100
     """
-    inference(
-        # input_path=os.path.join("sources", "input", "Photography"),  
-        # input_path=os.path.join("sources", "input", "Cinematic"),  
-        # input_path=os.path.join("sources", "input", "Lightning"),  
-        # input_path=os.path.join("sources", "input", "Portrait"),  
-        input_path=os.path.join("sources", "input", "Anime"),  
-        double_upscale_4x_to_16x=False, 
-        image_anime_style=True, 
-        brightness=00, 
-        saturation=00, 
-        sharpness=50, 
-        contrast=00
-    )
+    for name in ["Photography", "Cinematic", "Lightning", "Portrait", "Anime"]:
+        inference(
+            image_anime_style=True if name == "Anime" else False, 
+            input_path=os.path.join("sources", "input", name),  
+            double_upscale_4x_to_16x=False, 
+            sharpness=50,
+            brightness=5, 
+            saturation=5, 
+            contrast=5
+        )
 # ==================================================XXX==================================================
