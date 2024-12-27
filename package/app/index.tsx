@@ -65,14 +65,17 @@ const IndexPage: React.FC = () => {
           ))}
           <LinearGradient colors={["#0A0A0A", "transparent", "transparent", "#0A0A0A"]} locations={[0, 0.2, 0.8, 1]} style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }} />
           <View style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center" }}>
-            <AnimatedTitle /> <Text style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 1.0), fontSize: 64, letterSpacing: -2 }}> picBook™ </Text>
+            <AnimatedTitle />
+            <Text style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 1.0), fontSize: 64, letterSpacing: -2 }}>picBook™</Text>
             <View style={{ backgroundColor: Colorizer("#0A0A0A", 1.0), flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: 8, borderRadius: 9999, marginTop: 8 }}>
-              <View style={{ width: 8, height: 8, borderRadius: 4, backgroundColor: Colorizer("#FFFFFF", 1.0), marginRight: 8, opacity: 0.5 }} /> <Text style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 1.0), fontSize: 14 }}> Crafted with imagination and stories </Text>
+              <View style={{ width: 8, height: 8, borderRadius: 4, backgroundColor: Colorizer("#FFFFFF", 1.0), marginRight: 8, opacity: 0.5 }} />
+              <Text style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 1.0), fontSize: 14 }}>Crafted with imagination and stories</Text>
             </View>
             <Link href="./Home" asChild>
               <TouchableOpacity style={{ marginTop: 20, borderRadius: 16, overflow: "hidden", shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.25, shadowRadius: 4, elevation: 5 }}>
                 <LinearGradient colors={["rgba(255,255,255,0.95)", "rgba(255,255,255,1)"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={{ borderRadius: 10 }} className="flex-row items-center justify-center px-14 py-4">
-                  <MaterialIcons name="photo-camera" size={24} color={Colorizer("#0A0A0A", 1.0)} style={{ marginRight: 8 }} /> <Text style={{ fontFamily: "Kurale", color: Colorizer("#0A0A0A", 1.0), fontSize: 18 }}> Start Exploring </Text>
+                  <MaterialIcons name="photo-camera" size={24} color={Colorizer("#0A0A0A", 1.0)} style={{ marginRight: 8 }} />
+                  <Text style={{ fontFamily: "Kurale", color: Colorizer("#0A0A0A", 1.0), fontSize: 18 }}>Start Exploring</Text>
                 </LinearGradient>
               </TouchableOpacity>
             </Link>
