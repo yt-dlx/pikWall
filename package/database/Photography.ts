@@ -2,8 +2,9 @@ import { EnvironmentEntry } from "@/types/database";
 const PhotographyDatabase: Record<string, EnvironmentEntry> = {
   Busy_Crosswalk: {
     environment_title: "Busy_Crosswalk",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
+    environment_prompt:
+      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Busy_Crosswalk (1).jpg",
@@ -89,8 +90,9 @@ const PhotographyDatabase: Record<string, EnvironmentEntry> = {
   },
   Crystal_Clear: {
     environment_title: "Crystal_Clear",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
+    environment_prompt:
+      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Crystal_Clear (1).jpg",
@@ -176,8 +178,9 @@ const PhotographyDatabase: Record<string, EnvironmentEntry> = {
   },
   Desert_Serenity: {
     environment_title: "Desert_Serenity",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
+    environment_prompt:
+      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Desert_Serenity (1).jpg",
@@ -263,8 +266,9 @@ const PhotographyDatabase: Record<string, EnvironmentEntry> = {
   },
   Forest_Pathway: {
     environment_title: "Forest_Pathway",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
+    environment_prompt:
+      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Forest_Pathway (1).jpg",
@@ -350,8 +354,9 @@ const PhotographyDatabase: Record<string, EnvironmentEntry> = {
   },
   Frozen_Lake_Beauty: {
     environment_title: "Frozen_Lake_Beauty",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
+    environment_prompt:
+      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Frozen_Lake_Beauty (1).jpg",
@@ -437,8 +442,9 @@ const PhotographyDatabase: Record<string, EnvironmentEntry> = {
   },
   Golden_Beach_Sunrise: {
     environment_title: "Golden_Beach_Sunrise",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
+    environment_prompt:
+      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Golden_Beach_Sunrise (1).jpg",
@@ -524,8 +530,9 @@ const PhotographyDatabase: Record<string, EnvironmentEntry> = {
   },
   Misty_Mountain_Morning: {
     environment_title: "Misty_Mountain_Morning",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
+    environment_prompt:
+      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Misty_Mountain_Morning (1).jpg",
@@ -611,8 +618,9 @@ const PhotographyDatabase: Record<string, EnvironmentEntry> = {
   },
   Modern_Cityscape: {
     environment_title: "Modern_Cityscape",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
+    environment_prompt:
+      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Modern_Cityscape (1).jpg",
@@ -698,8 +706,9 @@ const PhotographyDatabase: Record<string, EnvironmentEntry> = {
   },
   Northern_Lights_Magic: {
     environment_title: "Northern_Lights_Magic",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
+    environment_prompt:
+      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Northern_Lights_Magic (1).jpg",
@@ -785,8 +794,9 @@ const PhotographyDatabase: Record<string, EnvironmentEntry> = {
   },
   Quiet_Alleyway: {
     environment_title: "Quiet_Alleyway",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
+    environment_prompt:
+      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Quiet_Alleyway (1).jpg",
@@ -872,8 +882,9 @@ const PhotographyDatabase: Record<string, EnvironmentEntry> = {
   },
   Quiet_Park_Bench: {
     environment_title: "Quiet_Park_Bench",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
+    environment_prompt:
+      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Quiet_Park_Bench (1).jpg",
@@ -959,8 +970,9 @@ const PhotographyDatabase: Record<string, EnvironmentEntry> = {
   },
   Rolling_Hills: {
     environment_title: "Rolling_Hills",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
+    environment_prompt:
+      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Rolling_Hills (1).jpg",
@@ -1046,8 +1058,9 @@ const PhotographyDatabase: Record<string, EnvironmentEntry> = {
   },
   Rooftop_Sunset: {
     environment_title: "Rooftop_Sunset",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
+    environment_prompt:
+      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Rooftop_Sunset (1).jpg",
@@ -1133,8 +1146,9 @@ const PhotographyDatabase: Record<string, EnvironmentEntry> = {
   },
   Skyline_Reflections: {
     environment_title: "Skyline_Reflections",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
+    environment_prompt:
+      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Skyline_Reflections (1).jpg",
@@ -1220,8 +1234,9 @@ const PhotographyDatabase: Record<string, EnvironmentEntry> = {
   },
   Street_Market_Glow: {
     environment_title: "Street_Market_Glow",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
+    environment_prompt:
+      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Street_Market_Glow (1).jpg",
@@ -1307,8 +1322,9 @@ const PhotographyDatabase: Record<string, EnvironmentEntry> = {
   },
   Subway_Station_Glow: {
     environment_title: "Subway_Station_Glow",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
+    environment_prompt:
+      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Subway_Station_Glow (1).jpg",
@@ -1394,8 +1410,9 @@ const PhotographyDatabase: Record<string, EnvironmentEntry> = {
   },
   Towering_Skyscrapers: {
     environment_title: "Towering_Skyscrapers",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
+    environment_prompt:
+      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Towering_Skyscrapers (1).jpg",
@@ -1481,8 +1498,9 @@ const PhotographyDatabase: Record<string, EnvironmentEntry> = {
   },
   Tranquil_Waterfall: {
     environment_title: "Tranquil_Waterfall",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
+    environment_prompt:
+      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Tranquil_Waterfall (1).jpg",
@@ -1568,8 +1586,9 @@ const PhotographyDatabase: Record<string, EnvironmentEntry> = {
   },
   Vibrant_City_Nights: {
     environment_title: "Vibrant_City_Nights",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
+    environment_prompt:
+      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Vibrant_City_Nights (1).jpg",
@@ -1655,8 +1674,9 @@ const PhotographyDatabase: Record<string, EnvironmentEntry> = {
   },
   Vibrant_Wildflowers: {
     environment_title: "Vibrant_Wildflowers",
-    environment_moral: "",
-    environment_prompt: "",
+    environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
+    environment_prompt:
+      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Vibrant_Wildflowers (1).jpg",
