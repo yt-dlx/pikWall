@@ -1,17 +1,17 @@
-Neon Skyline: A Futuristic City Skyline Illuminated By Vibrant Neon Lights In Shades Of Blue, Pink, And Green. Include Sleek Skyscrapers With Glowing Windows And Flying Vehicles.
-Cyberpunk Alley: A Narrow Alley In A Cyberpunk City, With Glowing Signs, Steam Rising From Vents, And Reflections On Wet Pavement. Use Bold Contrasts For A Dynamic Look.
-Sci-Fi Spaceport: A Sprawling Spaceport Under A Glowing Galaxy Sky. Include Futuristic Spaceships Docked, With Bright Light Trails In The Background.
-Holographic Display: A Scene Featuring Interactive Floating Holographic Displays With Bright, Glowing Interfaces In Vibrant Neon Colors.
-Cosmic Horizon: A Distant Planet With Glowing Rings In A Vibrant Galaxy, Framed By A Futuristic City Glowing In The Foreground.
-Electric Circuit City: A City Made Entirely Of Glowing Circuitry, With Energy Pulses Lighting Up The Landscape. Use Deep Blues And Vivid Yellows For Contrast.
-Starship Glow: A Glowing Starship With Energy Trails Flying Through A Dense Asteroid Field Illuminated By Distant Stars.
-Energy Dome: A Glowing Energy Dome Surrounding A Futuristic Colony. Include Dramatic Lighting With Electric Sparks At The Edges Of The Dome.
-Cyber Grid: A Glowing Grid Stretching Infinitely Into The Horizon, Leading Toward A Radiant Light Source In The Distance.
-Stormy Mountain: A Towering Mountain Peak Surrounded By Glowing Lightning Strikes Under A Dark, Stormy Sky.
-Electric Ocean: A Glowing Ocean Lit By Electric Blue Waves Crashing Against Jagged Rocks, With A Storm Flashing In The Distance.
-Neon Storm: A Surreal Storm With Lightning Bolts In Vibrant Neon Pink And Purple, Illuminating The Clouds And A Futuristic City Below.
-Thunderous Skyline: A City Skyline With Glowing Lightning Bolts Striking Skyscrapers, Illuminating The Dark Storm Clouds Above.
-Energy Tree: A Glowing Tree With Electric Branches Reaching Into A Stormy Sky. Include Vivid Blue And Purple Tones For A Mystical Effect.
+        Neon Skyline: A Futuristic City Skyline Illuminated By Vibrant Neon Lights In Shades Of Blue, Pink, And Green. Include Sleek Skyscrapers With Glowing Windows And Flying Vehicles.
+        Cyberpunk Alley: A Narrow Alley In A Cyberpunk City, With Glowing Signs, Steam Rising From Vents, And Reflections On Wet Pavement. Use Bold Contrasts For A Dynamic Look.
+        Sci-Fi Spaceport: A Sprawling Spaceport Under A Glowing Galaxy Sky. Include Futuristic Spaceships Docked, With Bright Light Trails In The Background.
+        Holographic Display: A Scene Featuring Interactive Floating Holographic Displays With Bright, Glowing Interfaces In Vibrant Neon Colors.
+        Cosmic Horizon: A Distant Planet With Glowing Rings In A Vibrant Galaxy, Framed By A Futuristic City Glowing In The Foreground.
+        Electric Circuit City: A City Made Entirely Of Glowing Circuitry, With Energy Pulses Lighting Up The Landscape. Use Deep Blues And Vivid Yellows For Contrast.
+        Starship Glow: A Glowing Starship With Energy Trails Flying Through A Dense Asteroid Field Illuminated By Distant Stars.
+        Energy Dome: A Glowing Energy Dome Surrounding A Futuristic Colony. Include Dramatic Lighting With Electric Sparks At The Edges Of The Dome.
+        Cyber Grid: A Glowing Grid Stretching Infinitely Into The Horizon, Leading Toward A Radiant Light Source In The Distance.
+        Stormy Mountain: A Towering Mountain Peak Surrounded By Glowing Lightning Strikes Under A Dark, Stormy Sky.
+        Electric Ocean: A Glowing Ocean Lit By Electric Blue Waves Crashing Against Jagged Rocks, With A Storm Flashing In The Distance.
+        Neon Storm: A Surreal Storm With Lightning Bolts In Vibrant Neon Pink And Purple, Illuminating The Clouds And A Futuristic City Below.
+        Thunderous Skyline: A City Skyline With Glowing Lightning Bolts Striking Skyscrapers, Illuminating The Dark Storm Clouds Above.
+        Energy Tree: A Glowing Tree With Electric Branches Reaching Into A Stormy Sky. Include Vivid Blue And Purple Tones For A Mystical Effect.
 Plasma Storm: A Storm Made Of Glowing Plasma Energy, With Bolts Connecting To Futuristic Antennas On A Barren Landscape.
 Lightning Bridge: A Glowing Bridge Suspended By Electric Arcs, With A Stormy Backdrop Of Vibrant Neon Clouds.
 Electric Waterfall: A Glowing Waterfall With Electric Blue Water Cascading Into A Misty Pool Below, Under An Illuminated Stormy Sky.
