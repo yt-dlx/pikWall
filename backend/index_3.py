@@ -4,8 +4,19 @@
 import os
 import subprocess
 Amount = 20
-source_folder = os.path.join("sources", "input")
-destination_folder = os.path.join("sources", "noised")
+# ==================================================XXX==================================================
+source_folder=os.path.join("sources", "input", "Anime", "output")
+# source_folder=os.path.join("sources", "input", "Portrait", "output")
+# source_folder=os.path.join("sources", "input", "Lightning", "output")
+# source_folder=os.path.join("sources", "input", "Cinematic", "output")
+# source_folder=os.path.join("sources", "input", "Photography", "output")
+# ==================================================XXX==================================================
+# destination_folder=os.path.join("sources", "input",  "output", "Photography", "noised")
+# destination_folder=os.path.join("sources", "input",  "output", "Cinematic", "noised")
+# destination_folder=os.path.join("sources", "input",  "output", "Lightning", "noised")
+# destination_folder=os.path.join("sources", "input",  "output", "Portrait", "noised")
+destination_folder=os.path.join("sources", "input",  "output", "Anime", "noised")
+# ==================================================XXX==================================================
 os.makedirs(destination_folder, exist_ok=True)
 for filename in os.listdir(source_folder):
     if filename.lower().endswith((".png", ".jpg", ".jpeg")):
