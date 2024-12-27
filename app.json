@@ -20,7 +20,7 @@
       }
     },
     "web": { "output": "static", "bundler": "metro", "favicon": "./assets/picbook/white_nobg_3200.png" },
-    "extra": { "router": { "origin": false }, "eas": { "projectId": "bf8ce3fd-d2bc-4897-ab27-b6b34c9a428f" } },
+    "extra": { "router": { "origin": false } },
     "android": {
       "requiresFullScreen": true,
       "package": "com.shovit.picbook",
