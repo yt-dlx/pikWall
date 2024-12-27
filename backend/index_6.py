@@ -1,37 +1,23 @@
 # ==================================================XXX==================================================
-"""                                     This Code Is Used To Add The Watermark To The Re-Scaled Files In The Environment                                        """
+"""                           This Code Is Used To Create A 1080p downscaled LowRes Images from Label Images                                                 """
 # ==================================================XXX==================================================
 import os
-from PIL import Image, ImageDraw, ImageFont
-def generate_watermark_grid(image_size, text, font, spacing_multiplier=1.5):
-    draw = ImageDraw.Draw(Image.new("RGBA", image_size, (255, 255, 255, 0)))
-    text_bbox = draw.textbbox((0, 0), text, font=font)
-    text_width = text_bbox[2] - text_bbox[0]
-    text_height = text_bbox[3] - text_bbox[1]
-    spacing = int(max(text_width, text_height) * spacing_multiplier)
-    positions = []
-    for y in range(0, image_size[1], text_height + spacing):
-        for x in range(0, image_size[0], text_width + spacing):
-            positions.append((x, y))
-    return positions
-def add_watermark_to_image(input_path, output_path, text, font_path, opacity=50):
-    image = Image.open(input_path).convert("RGBA")
-    watermark = Image.new("RGBA", image.size, (255, 255, 255, 0))
-    draw = ImageDraw.Draw(watermark)
-    font_size = int(image.size[0] / 70)
-    font = ImageFont.truetype(font_path, font_size)
-    positions = generate_watermark_grid(image.size, text, font, spacing_multiplier=1.5)
-    for position in positions:
-        draw.text(position, text, font=font, fill=(255, 255, 255, opacity))
-    watermarked_image = Image.alpha_composite(image, watermark).convert("RGB")
-    watermarked_image.save(output_path, "JPEG", quality=85, optimize=True)
-    print(f"Watermarked image saved as {output_path}")
-def process_images(input_folder, output_folder, text, font_path):
-    os.makedirs(output_folder, exist_ok=True)
-    for filename in os.listdir(input_folder):
-        input_path = os.path.join(input_folder, filename)
-        if os.path.isfile(input_path) and filename.lower().endswith((".png", ".jpg", ".jpeg")):
-            output_path = os.path.join(output_folder, filename)
-            add_watermark_to_image(input_path, output_path, text, font_path)
-process_images(text="picBook™",  input_folder=os.path.join("sources", "input"),  output_folder=os.path.join("sources", "highRes"),  font_path=os.path.join("include", "Kurale.ttf"))
-# ==================================================XXX================================================== 
+from PIL import Image
+def rescale_images(source_dir, target_dir, width, height):
+    if not os.path.exists(target_dir):
+        os.makedirs(target_dir)
+    for filename in os.listdir(source_dir):
+        file_path = os.path.join(source_dir, filename)
+        if not (filename.lower().endswith((".png", ".jpg", ".jpeg"))):
+            continue
+        try:
+            with Image.open(file_path) as img:
+                img_resized = img.resize((width, height), Image.LANCZOS)
+                target_path = os.path.join(target_dir, filename)
+                img_resized.save(target_path)
+                print(f"Rescaled and saved: {target_path}")
+        except Exception as e:
+            print(f"Failed to process {file_path}: {e}")
+if __name__ == "__main__":
+    rescale_images(os.path.join("sources", "highRes"), os.path.join("sources", "lowRes"), 640 , 360)
+# ==================================================XXX==================================================

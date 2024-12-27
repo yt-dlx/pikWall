@@ -1,24 +1,37 @@
 # ==================================================XXX==================================================
-"""                                           This Code Is Used To Introduce Noise In The Upscaled Files In The Environment                                             """
+"""                                     This Code Is Used To Add The Watermark To The Re-Scaled Files In The Environment                                        """
 # ==================================================XXX==================================================
 import os
-import subprocess
-Amount = 20
-source_folder = os.path.join("sources", "input")
-destination_folder = os.path.join("sources", "noised")
-os.makedirs(destination_folder, exist_ok=True)
-for filename in os.listdir(source_folder):
-    if filename.lower().endswith((".png", ".jpg", ".jpeg")):
-        ffmpeg_path = os.path.join("include", "ffmpeg.exe")
-        source_path = os.path.join(source_folder, filename)
-        destination_path = os.path.join(destination_folder, filename)
-        if filename.lower().endswith(".jpg") or filename.lower().endswith(".jpeg"):
-            command = [ffmpeg_path, "-i", f'"{source_path}"',  "-vf", f"noise=alls={Amount}:allf=t",  "-q:v", "2", f'"{destination_path}"']
-        elif filename.lower().endswith(".png"):
-            command = [ffmpeg_path, "-i", f'"{source_path}"',  "-vf", f"noise=alls={Amount}:allf=t",  "-compression_level", "0", f'"{destination_path}"']
-        try:
-            subprocess.run(" ".join(command), shell=True, check=True)
-            print(f"Processed and saved: {destination_path}")
-        except subprocess.CalledProcessError as e:
-            print(f"Error processing {source_path}: {e}")
-# ==================================================XXX==================================================
+from PIL import Image, ImageDraw, ImageFont
+def generate_watermark_grid(image_size, text, font, spacing_multiplier=1.5):
+    draw = ImageDraw.Draw(Image.new("RGBA", image_size, (255, 255, 255, 0)))
+    text_bbox = draw.textbbox((0, 0), text, font=font)
+    text_width = text_bbox[2] - text_bbox[0]
+    text_height = text_bbox[3] - text_bbox[1]
+    spacing = int(max(text_width, text_height) * spacing_multiplier)
+    positions = []
+    for y in range(0, image_size[1], text_height + spacing):
+        for x in range(0, image_size[0], text_width + spacing):
+            positions.append((x, y))
+    return positions
+def add_watermark_to_image(input_path, output_path, text, font_path, opacity=50):
+    image = Image.open(input_path).convert("RGBA")
+    watermark = Image.new("RGBA", image.size, (255, 255, 255, 0))
+    draw = ImageDraw.Draw(watermark)
+    font_size = int(image.size[0] / 70)
+    font = ImageFont.truetype(font_path, font_size)
+    positions = generate_watermark_grid(image.size, text, font, spacing_multiplier=1.5)
+    for position in positions:
+        draw.text(position, text, font=font, fill=(255, 255, 255, opacity))
+    watermarked_image = Image.alpha_composite(image, watermark).convert("RGB")
+    watermarked_image.save(output_path, "JPEG", quality=85, optimize=True)
+    print(f"Watermarked image saved as {output_path}")
+def process_images(input_folder, output_folder, text, font_path):
+    os.makedirs(output_folder, exist_ok=True)
+    for filename in os.listdir(input_folder):
+        input_path = os.path.join(input_folder, filename)
+        if os.path.isfile(input_path) and filename.lower().endswith((".png", ".jpg", ".jpeg")):
+            output_path = os.path.join(output_folder, filename)
+            add_watermark_to_image(input_path, output_path, text, font_path)
+process_images(text="picBook™",  input_folder=os.path.join("sources", "input"),  output_folder=os.path.join("sources", "highRes"),  font_path=os.path.join("include", "Kurale.ttf"))
+# ==================================================XXX================================================== 
