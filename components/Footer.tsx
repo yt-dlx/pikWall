@@ -2,8 +2,8 @@
 import Colorizer from "./Colorizer";
 import { Text, View } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
-// ==============================================(picBook™)==============================================
-// ==============================================(picBook™)==============================================
+// ============================================================================================
+// ============================================================================================
 const Footer: React.FC = () => (
   <View style={{ backgroundColor: Colorizer("#0A0A0A", 1.0) }} className="relative w-full py-4">
     <View className="flex flex-col sm:flex-row items-center justify-between px-4">
