@@ -33,5 +33,18 @@ def process_images(input_folder, output_folder, text, font_path):
         if os.path.isfile(input_path) and filename.lower().endswith((".png", ".jpg", ".jpeg")):
             output_path = os.path.join(output_folder, filename)
             add_watermark_to_image(input_path, output_path, text, font_path)
-process_images(text="picBook™",  input_folder=os.path.join("sources", "input"),  output_folder=os.path.join("sources", "highRes"),  font_path=os.path.join("include", "Kurale.ttf"))
+# ==================================================XXX================================================== 
+input_folder=os.path.join("sources", "output", "Anime", "noised")
+# input_folder=os.path.join("sources", "output", "Portrait", "noised")
+# input_folder=os.path.join("sources", "output", "Lightning", "noised")
+# input_folder=os.path.join("sources", "output", "Cinematic", "noised")
+# input_folder=os.path.join("sources", "output", "Photography", "noised")
+# ==================================================XXX================================================== 
+# output_folder=os.path.join("sources", "output", "Photography", "highRes")
+# output_folder=os.path.join("sources", "output", "Cinematic", "highRes")
+# output_folder=os.path.join("sources", "output", "Lightning", "highRes")
+# output_folder=os.path.join("sources", "output", "Portrait", "highRes")
+output_folder=os.path.join("sources", "output", "Anime", "highRes")
+# ==================================================XXX================================================== 
+process_images(text="picBook™",  input_folder,  output_folder,  font_path=os.path.join("include", "Kurale.ttf"))
 # ==================================================XXX================================================== 

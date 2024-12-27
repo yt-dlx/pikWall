@@ -11,11 +11,11 @@ source_folder=os.path.join("sources", "input", "Anime", "output")
 # source_folder=os.path.join("sources", "input", "Cinematic", "output")
 # source_folder=os.path.join("sources", "input", "Photography", "output")
 # ==================================================XXX==================================================
-# destination_folder=os.path.join("sources", "input",  "output", "Photography", "noised")
-# destination_folder=os.path.join("sources", "input",  "output", "Cinematic", "noised")
-# destination_folder=os.path.join("sources", "input",  "output", "Lightning", "noised")
-# destination_folder=os.path.join("sources", "input",  "output", "Portrait", "noised")
-destination_folder=os.path.join("sources", "input",  "output", "Anime", "noised")
+# destination_folder=os.path.join("sources", "output", "Photography", "noised")
+# destination_folder=os.path.join("sources", "output", "Cinematic", "noised")
+# destination_folder=os.path.join("sources", "output", "Lightning", "noised")
+# destination_folder=os.path.join("sources", "output", "Portrait", "noised")
+destination_folder=os.path.join("sources", "output", "Anime", "noised")
 # ==================================================XXX==================================================
 os.makedirs(destination_folder, exist_ok=True)
 for filename in os.listdir(source_folder):
