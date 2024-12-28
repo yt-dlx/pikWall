@@ -3,8 +3,7 @@ const AnimeDatabase: Record<string, EnvironmentEntry> = {
   Aurora_Vortex: {
     environment_title: "Aurora_Vortex",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Aurora_Vortex (1).jpg",
@@ -91,8 +90,7 @@ const AnimeDatabase: Record<string, EnvironmentEntry> = {
   Cosmic_Coliseum_Lights: {
     environment_title: "Cosmic_Coliseum_Lights",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Cosmic_Coliseum_Lights (1).jpg",
@@ -179,8 +177,7 @@ const AnimeDatabase: Record<string, EnvironmentEntry> = {
   Cosmic_Hourglass: {
     environment_title: "Cosmic_Hourglass",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Cosmic_Hourglass (1).jpg",
@@ -267,8 +264,7 @@ const AnimeDatabase: Record<string, EnvironmentEntry> = {
   DragonS_Domain: {
     environment_title: "DragonS_Domain",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "DragonS_Domain (1).jpg",
@@ -355,8 +351,7 @@ const AnimeDatabase: Record<string, EnvironmentEntry> = {
   Energy_Grid: {
     environment_title: "Energy_Grid",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Energy_Grid (1).jpg",
@@ -443,8 +438,7 @@ const AnimeDatabase: Record<string, EnvironmentEntry> = {
   Fractal_Canyon: {
     environment_title: "Fractal_Canyon",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Fractal_Canyon (1).jpg",
@@ -531,8 +525,7 @@ const AnimeDatabase: Record<string, EnvironmentEntry> = {
   Fractal_Forest: {
     environment_title: "Fractal_Forest",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Fractal_Forest (1).jpg",
@@ -619,8 +612,7 @@ const AnimeDatabase: Record<string, EnvironmentEntry> = {
   Glass_Cityscape: {
     environment_title: "Glass_Cityscape",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Glass_Cityscape (1).jpg",
@@ -707,8 +699,7 @@ const AnimeDatabase: Record<string, EnvironmentEntry> = {
   Icy_Reflections: {
     environment_title: "Icy_Reflections",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Icy_Reflections (1).jpg",
@@ -795,8 +786,7 @@ const AnimeDatabase: Record<string, EnvironmentEntry> = {
   Infinity_Pathway_Glow: {
     environment_title: "Infinity_Pathway_Glow",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Infinity_Pathway_Glow (1).jpg",
@@ -883,8 +873,7 @@ const AnimeDatabase: Record<string, EnvironmentEntry> = {
   Lava_Rapids_Radiance: {
     environment_title: "Lava_Rapids_Radiance",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Lava_Rapids_Radiance (1).jpg",
@@ -971,8 +960,7 @@ const AnimeDatabase: Record<string, EnvironmentEntry> = {
   Liquid_Galaxy_Ocean: {
     environment_title: "Liquid_Galaxy_Ocean",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Liquid_Galaxy_Ocean (1).jpg",
@@ -1059,8 +1047,7 @@ const AnimeDatabase: Record<string, EnvironmentEntry> = {
   Midnight_Bridge_Glow: {
     environment_title: "Midnight_Bridge_Glow",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Midnight_Bridge_Glow (1).jpg",
@@ -1147,8 +1134,7 @@ const AnimeDatabase: Record<string, EnvironmentEntry> = {
   Moonlit_Hilltop_Haven: {
     environment_title: "Moonlit_Hilltop_Haven",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Moonlit_Hilltop_Haven (1).jpg",
@@ -1235,8 +1221,7 @@ const AnimeDatabase: Record<string, EnvironmentEntry> = {
   Neon_Combat_Zone: {
     environment_title: "Neon_Combat_Zone",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Neon_Combat_Zone (1).jpg",
@@ -1323,8 +1308,7 @@ const AnimeDatabase: Record<string, EnvironmentEntry> = {
   Prism_Wave: {
     environment_title: "Prism_Wave",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Prism_Wave (1).jpg",
@@ -1411,8 +1395,7 @@ const AnimeDatabase: Record<string, EnvironmentEntry> = {
   Rural_Harmony_Glow: {
     environment_title: "Rural_Harmony_Glow",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Rural_Harmony_Glow (1).jpg",
@@ -1499,8 +1482,7 @@ const AnimeDatabase: Record<string, EnvironmentEntry> = {
   Skyborne_Chase: {
     environment_title: "Skyborne_Chase",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Skyborne_Chase (1).jpg",
@@ -1587,8 +1569,7 @@ const AnimeDatabase: Record<string, EnvironmentEntry> = {
   Solar_Summit_Glow: {
     environment_title: "Solar_Summit_Glow",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Solar_Summit_Glow (1).jpg",
@@ -1675,8 +1656,7 @@ const AnimeDatabase: Record<string, EnvironmentEntry> = {
   Starlit_Pavilion_Glow: {
     environment_title: "Starlit_Pavilion_Glow",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Starlit_Pavilion_Glow (1).jpg",
@@ -1763,8 +1743,7 @@ const AnimeDatabase: Record<string, EnvironmentEntry> = {
   Stellar_Rescue_Mission: {
     environment_title: "Stellar_Rescue_Mission",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Stellar_Rescue_Mission (1).jpg",
@@ -1851,8 +1830,7 @@ const AnimeDatabase: Record<string, EnvironmentEntry> = {
   Time_Spiral: {
     environment_title: "Time_Spiral",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Time_Spiral (1).jpg",
@@ -1939,8 +1917,7 @@ const AnimeDatabase: Record<string, EnvironmentEntry> = {
   Twilight_Chapel_Glow: {
     environment_title: "Twilight_Chapel_Glow",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Twilight_Chapel_Glow (1).jpg",

@@ -46,19 +46,4 @@ interface ScrollingSlotProps {
   delay: number;
 }
 
-export type {
-  RGB,
-  RGBA,
-  HEX,
-  ColorValue,
-  ImageMetadata,
-  EnvironmentEntry,
-  SubImagesProps,
-  CardTextProps,
-  CardProps,
-  ScrollingSlotProps,
-  AlphabetGroupProps,
-  CategoryButtonProps,
-  DownloadScreenProps,
-  GroupedData
-};
+export type { RGB, RGBA, HEX, ColorValue, ImageMetadata, EnvironmentEntry, SubImagesProps, CardTextProps, CardProps, ScrollingSlotProps, AlphabetGroupProps, CategoryButtonProps, DownloadScreenProps, GroupedData };

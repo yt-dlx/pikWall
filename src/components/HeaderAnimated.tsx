@@ -56,23 +56,14 @@ const HeaderAnimated: React.FC = () => {
         {imageSets.map((images, slotIndex) => (
           <ScrollingSlot key={slotIndex} images={images} reverse={slotIndex % 2 === 0} delay={slotIndex * 200} />
         ))}
-        <View
-          style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", borderRadius: 8 }}
-          className="absolute inset-0 items-center justify-center rounded-lg overflow-hidden"
-        >
+        <View style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", borderRadius: 8 }} className="absolute inset-0 items-center justify-center rounded-lg overflow-hidden">
           <View style={{ backgroundColor: Colorizer("#070808", 1.0), opacity: 0.5, borderRadius: 8 }} className="absolute inset-0" />
           <View style={{ position: "absolute", justifyContent: "center", alignItems: "center", margin: 8, padding: 4 }} className="absolute justify-center items-center m-2 p-1">
             <View className="flex-row mb-1">
               <AnimatedTitle />
             </View>
-            <View
-              style={{ backgroundColor: Colorizer("#000000", 0.6), flexDirection: "row", alignItems: "center", marginTop: 8, paddingHorizontal: 8, paddingVertical: 4, borderRadius: 9999 }}
-              className="flex-row items-center mt-2 px-2 py-1 rounded-full"
-            >
-              <View
-                style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: Colorizer("#E9E9EA", 1.0), marginRight: 4, opacity: 0.5 }}
-                className="w-1.5 h-1.5 rounded-full bg-white mr-1 animate-pulse"
-              />
+            <View style={{ backgroundColor: Colorizer("#000000", 0.6), flexDirection: "row", alignItems: "center", marginTop: 8, paddingHorizontal: 8, paddingVertical: 4, borderRadius: 9999 }} className="flex-row items-center mt-2 px-2 py-1 rounded-full">
+              <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: Colorizer("#E9E9EA", 1.0), marginRight: 4, opacity: 0.5 }} className="w-1.5 h-1.5 rounded-full bg-white mr-1 animate-pulse" />
               <Text style={{ fontFamily: "Kurale", fontSize: 12, fontWeight: "600", color: Colorizer("#E9E9EA", 1.0) }} className="text-sm">
                 Crafted with imagination and stories
               </Text>
@@ -86,5 +77,4 @@ const HeaderAnimated: React.FC = () => {
     </View>
   );
 };
-
 export default HeaderAnimated;

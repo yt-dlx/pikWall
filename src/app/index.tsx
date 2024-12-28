@@ -82,13 +82,7 @@ const IndexPage: React.FC = () => {
                   elevation: 5
                 }}
               >
-                <LinearGradient
-                  colors={["rgba(255,255,255,0.95)", "rgba(255,255,255,1)"]}
-                  start={{ x: 0, y: 0 }}
-                  end={{ x: 1, y: 1 }}
-                  style={{ borderRadius: 10 }}
-                  className="flex-row items-center justify-center px-14 py-4"
-                >
+                <LinearGradient colors={["rgba(255,255,255,0.95)", "rgba(255,255,255,1)"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={{ borderRadius: 10 }} className="flex-row items-center justify-center px-14 py-4">
                   <MaterialIcons name="photo-camera" size={24} color={Colorizer("#070808", 1.0)} className="mr-2" />
                   <Text style={{ fontFamily: "Kurale", color: Colorizer("#070808", 1.0), fontSize: 18 }}> Start Exploring </Text>
                 </LinearGradient>

@@ -3,8 +3,7 @@ const LightningDatabase: Record<string, EnvironmentEntry> = {
   Cosmic_Horizon: {
     environment_title: "Cosmic_Horizon",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Cosmic_Horizon (1).jpg",
@@ -91,8 +90,7 @@ const LightningDatabase: Record<string, EnvironmentEntry> = {
   Cyberpunk_Alley: {
     environment_title: "Cyberpunk_Alley",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Cyberpunk_Alley (1).jpg",
@@ -179,8 +177,7 @@ const LightningDatabase: Record<string, EnvironmentEntry> = {
   Cyber_Grid: {
     environment_title: "Cyber_Grid",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Cyber_Grid (1).jpg",
@@ -267,8 +264,7 @@ const LightningDatabase: Record<string, EnvironmentEntry> = {
   Electric_Circuit_City: {
     environment_title: "Electric_Circuit_City",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Electric_Circuit_City (1).jpg",
@@ -355,8 +351,7 @@ const LightningDatabase: Record<string, EnvironmentEntry> = {
   Electric_Ocean: {
     environment_title: "Electric_Ocean",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Electric_Ocean (1).jpg",
@@ -443,8 +438,7 @@ const LightningDatabase: Record<string, EnvironmentEntry> = {
   Energy_Dome: {
     environment_title: "Energy_Dome",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Energy_Dome (1).jpg",
@@ -531,8 +525,7 @@ const LightningDatabase: Record<string, EnvironmentEntry> = {
   Energy_Tree: {
     environment_title: "Energy_Tree",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Energy_Tree (1).jpg",
@@ -619,8 +612,7 @@ const LightningDatabase: Record<string, EnvironmentEntry> = {
   Holographic_Display: {
     environment_title: "Holographic_Display",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Holographic_Display (1).jpg",
@@ -707,8 +699,7 @@ const LightningDatabase: Record<string, EnvironmentEntry> = {
   Neon_Skyline: {
     environment_title: "Neon_Skyline",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Neon_Skyline (1).jpg",
@@ -795,8 +786,7 @@ const LightningDatabase: Record<string, EnvironmentEntry> = {
   Neon_Storm: {
     environment_title: "Neon_Storm",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Neon_Storm (1).jpg",
@@ -883,8 +873,7 @@ const LightningDatabase: Record<string, EnvironmentEntry> = {
   SciFi_Spaceport: {
     environment_title: "SciFi_Spaceport",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "SciFi_Spaceport (1).jpg",
@@ -971,8 +960,7 @@ const LightningDatabase: Record<string, EnvironmentEntry> = {
   Starship_Glow: {
     environment_title: "Starship_Glow",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Starship_Glow (1).jpg",
@@ -1059,8 +1047,7 @@ const LightningDatabase: Record<string, EnvironmentEntry> = {
   Stormy_Mountain: {
     environment_title: "Stormy_Mountain",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Stormy_Mountain (1).jpg",
@@ -1147,8 +1134,7 @@ const LightningDatabase: Record<string, EnvironmentEntry> = {
   Thunderous_Skyline: {
     environment_title: "Thunderous_Skyline",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Thunderous_Skyline (1).jpg",

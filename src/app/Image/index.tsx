@@ -132,10 +132,7 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
   return visible ? (
     <View className="absolute inset-0 justify-center items-center">
       <View className="absolute inset-0" style={{ backgroundColor: Colorizer(primaryColor, 0.3) }} />
-      <View
-        className="bg-white rounded-lg p-5 items-center shadow-lg"
-        style={{ backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 }}
-      >
+      <View className="bg-white rounded-lg p-5 items-center shadow-lg" style={{ backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 }}>
         <ActivityIndicator size="large" color={Colorizer(primaryColor, 1.0)} />
         <Text className="mt-3 text-lg" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Kurale" }}>
           Downloading...
@@ -164,21 +161,14 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
 };
 // ============================================================================================
 // ============================================================================================
-const PreviewImage: React.FC<{
-  selectedImage: ImageMetadata;
-  screenWidth: number;
-  onViewFullScreen: () => void;
-}> = ({ selectedImage, screenWidth, onViewFullScreen }) => {
+const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number; onViewFullScreen: () => void }> = ({ selectedImage, screenWidth, onViewFullScreen }) => {
   const [imageLoading, setImageLoading] = useState(true);
   const aspectRatio = selectedImage.width / selectedImage.height;
   const imageHeight = (screenWidth / aspectRatio) * 0.7;
   const scaleValue = useRef(new Animated.Value(1.1)).current;
   const rotateValue = useRef(new Animated.Value(0)).current;
   useEffect(() => {
-    const scaleAnimation = Animated.sequence([
-      Animated.timing(scaleValue, { toValue: 1.4, duration: 4000, easing: Easing.inOut(Easing.ease), useNativeDriver: true }),
-      Animated.timing(scaleValue, { toValue: 1.1, duration: 2000, easing: Easing.inOut(Easing.ease), useNativeDriver: true })
-    ]);
+    const scaleAnimation = Animated.sequence([Animated.timing(scaleValue, { toValue: 1.4, duration: 4000, easing: Easing.inOut(Easing.ease), useNativeDriver: true }), Animated.timing(scaleValue, { toValue: 1.1, duration: 2000, easing: Easing.inOut(Easing.ease), useNativeDriver: true })]);
     Animated.loop(scaleAnimation).start();
     Animated.loop(Animated.timing(rotateValue, { toValue: 1, duration: 4000, easing: Easing.linear, useNativeDriver: true })).start();
   }, [scaleValue, rotateValue]);
@@ -189,13 +179,7 @@ const PreviewImage: React.FC<{
         {!imageLoading && (
           <View className="items-center">
             <Animated.View className="rounded-full justify-center items-center" style={{ transform: [{ rotate: rotateInterpolate }] }}>
-              <Image
-                className="w-10 h-10 rounded-full bg-transparent"
-                style={{ backgroundColor: Colorizer(selectedImage.primary, 1.0) }}
-                source={require("@/assets/picbook/picBook_red.png")}
-                resizeMode="contain"
-                alt="image"
-              />
+              <Image className="w-10 h-10 rounded-full bg-transparent" style={{ backgroundColor: Colorizer(selectedImage.primary, 1.0) }} source={require("@/assets/picbook/picBook_red.png")} resizeMode="contain" alt="image" />
             </Animated.View>
             <Text className="mb-6 text-center leading-6" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
               picBook™
@@ -226,12 +210,7 @@ const PreviewImage: React.FC<{
           }}
         />
       </View>
-      <TouchableOpacity
-        onPress={onViewFullScreen}
-        activeOpacity={0.8}
-        className="absolute bottom-5 right-5 px-4 py-2 rounded-full z-50"
-        style={{ backgroundColor: Colorizer(selectedImage.primary, 0.8) }}
-      >
+      <TouchableOpacity onPress={onViewFullScreen} activeOpacity={0.8} className="absolute bottom-5 right-5 px-4 py-2 rounded-full z-50" style={{ backgroundColor: Colorizer(selectedImage.primary, 0.8) }}>
         <Text className="text-white text-base" style={{ fontFamily: "Kurale" }}>
           View FullScreen
         </Text>
@@ -381,14 +360,7 @@ const DownloadScreen = () => {
             <FontAwesome5 name="times" size={50} color={Colorizer("#E9E9EA", 1.0)} />
           </TouchableOpacity>
           <View className="flex-1 justify-center items-center">
-            <Image
-              source={{
-                uri: selectedImage.previewLink.replace("lowRes", "highRes")
-              }}
-              alt="image"
-              className="w-full h-full"
-              style={{ resizeMode: "contain" }}
-            />
+            <Image source={{ uri: selectedImage.previewLink.replace("lowRes", "highRes") }} alt="image" className="w-full h-full" style={{ resizeMode: "contain" }} />
           </View>
         </View>
       </Modal>
@@ -398,5 +370,4 @@ const DownloadScreen = () => {
     </View>
   );
 };
-
 export default DownloadScreen;

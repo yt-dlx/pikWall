@@ -3,8 +3,7 @@ const CinematicDatabase: Record<string, EnvironmentEntry> = {
   Celestial_Portal: {
     environment_title: "Celestial_Portal",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Celestial_Portal (1).jpg",
@@ -91,8 +90,7 @@ const CinematicDatabase: Record<string, EnvironmentEntry> = {
   Cliffside_Journey: {
     environment_title: "Cliffside_Journey",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Cliffside_Journey (1).jpg",
@@ -179,8 +177,7 @@ const CinematicDatabase: Record<string, EnvironmentEntry> = {
   Coastal_Serenity: {
     environment_title: "Coastal_Serenity",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Coastal_Serenity (1).jpg",
@@ -267,8 +264,7 @@ const CinematicDatabase: Record<string, EnvironmentEntry> = {
   Cosmic_Ascent: {
     environment_title: "Cosmic_Ascent",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Cosmic_Ascent (1).jpg",
@@ -355,8 +351,7 @@ const CinematicDatabase: Record<string, EnvironmentEntry> = {
   Desert_Odyssey: {
     environment_title: "Desert_Odyssey",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Desert_Odyssey (1).jpg",
@@ -443,8 +438,7 @@ const CinematicDatabase: Record<string, EnvironmentEntry> = {
   Distant_Citadel: {
     environment_title: "Distant_Citadel",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Distant_Citadel (1).jpg",
@@ -531,8 +525,7 @@ const CinematicDatabase: Record<string, EnvironmentEntry> = {
   Enchanted_Tower: {
     environment_title: "Enchanted_Tower",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Enchanted_Tower (1).jpg",
@@ -619,8 +612,7 @@ const CinematicDatabase: Record<string, EnvironmentEntry> = {
   Ethereal_Plains: {
     environment_title: "Ethereal_Plains",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Ethereal_Plains (1).jpg",
@@ -707,8 +699,7 @@ const CinematicDatabase: Record<string, EnvironmentEntry> = {
   Fiery_Summit: {
     environment_title: "Fiery_Summit",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Fiery_Summit (1).jpg",
@@ -795,8 +786,7 @@ const CinematicDatabase: Record<string, EnvironmentEntry> = {
   Forest_Mystique: {
     environment_title: "Forest_Mystique",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Forest_Mystique (1).jpg",
@@ -883,8 +873,7 @@ const CinematicDatabase: Record<string, EnvironmentEntry> = {
   Galactic_Voyage: {
     environment_title: "Galactic_Voyage",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Galactic_Voyage (1).jpg",
@@ -971,8 +960,7 @@ const CinematicDatabase: Record<string, EnvironmentEntry> = {
   Glacial_Haven: {
     environment_title: "Glacial_Haven",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Glacial_Haven (1).jpg",
@@ -1059,8 +1047,7 @@ const CinematicDatabase: Record<string, EnvironmentEntry> = {
   Lighthouse_Solitude: {
     environment_title: "Lighthouse_Solitude",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Lighthouse_Solitude (1).jpg",
@@ -1147,8 +1134,7 @@ const CinematicDatabase: Record<string, EnvironmentEntry> = {
   Mountain_Majesty: {
     environment_title: "Mountain_Majesty",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Mountain_Majesty (1).jpg",
@@ -1235,8 +1221,7 @@ const CinematicDatabase: Record<string, EnvironmentEntry> = {
   Ruins_At_Twilight: {
     environment_title: "Ruins_At_Twilight",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Ruins_At_Twilight (1).jpg",
@@ -1323,8 +1308,7 @@ const CinematicDatabase: Record<string, EnvironmentEntry> = {
   Sky_Kingdom: {
     environment_title: "Sky_Kingdom",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Sky_Kingdom (1).jpg",
@@ -1411,8 +1395,7 @@ const CinematicDatabase: Record<string, EnvironmentEntry> = {
   Starlit_Temple: {
     environment_title: "Starlit_Temple",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Starlit_Temple (1).jpg",
@@ -1499,8 +1482,7 @@ const CinematicDatabase: Record<string, EnvironmentEntry> = {
   Submerged_Wonder: {
     environment_title: "Submerged_Wonder",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Submerged_Wonder (1).jpg",
@@ -1587,8 +1569,7 @@ const CinematicDatabase: Record<string, EnvironmentEntry> = {
   Twilight_Canyon: {
     environment_title: "Twilight_Canyon",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Twilight_Canyon (1).jpg",
@@ -1675,8 +1656,7 @@ const CinematicDatabase: Record<string, EnvironmentEntry> = {
   Twilight_Shores: {
     environment_title: "Twilight_Shores",
     environment_moral: "Velit fugiat voluptate labore laboris consequat enim.",
-    environment_prompt:
-      "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
+    environment_prompt: "Duis pariatur reprehenderit sit culpa duis. Duis anim sit ea anim cupidatat pariatur nisi excepteur laboris anim officia enim irure fugiat. Sunt do aliqua Lorem commodo laborum in nulla do.",
     images: [
       {
         original_file_name: "Twilight_Shores (1).jpg",
