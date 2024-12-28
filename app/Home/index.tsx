@@ -2,22 +2,19 @@
 import { Link } from "expo-router";
 import Footer from "@/components/Footer";
 import Colorizer from "@/components/Colorizer";
+import AnimeDatabase from "@/database/Anime";
+import PortraitDatabase from "@/database/Portrait";
 import { EnvironmentEntry } from "@/types/database";
+import LightningDatabase from "@/database/Lightning";
+import CinematicDatabase from "@/database/Cinematic";
+import PhotographyDatabase from "@/database/Photography";
 import HeaderAnimate from "@/components/HeaderAnimated";
 import React, { useEffect, useCallback, useState, memo } from "react";
 import { FontAwesome, Ionicons, FontAwesome5 } from "@expo/vector-icons";
-import { View, Text, TouchableOpacity, Image, FlatList, ScrollView, ListRenderItem } from "react-native";
-import Animated, { useAnimatedStyle, useSharedValue, withTiming, withRepeat, withSequence } from "react-native-reanimated";
+import { View, Text, TouchableOpacity, Image, FlatList, ScrollView, StatusBar, ListRenderItem } from "react-native";
+import Animated, { useAnimatedStyle, useSharedValue, withTiming, interpolate, withRepeat, Easing, runOnJS, withSequence } from "react-native-reanimated";
 import { SubImageProps, SubImagesProps, CardTextProps, CardProps, AlphabetGroupProps, CategoryButtonProps, GroupedData } from "@/types/components";
-// ============================================================================================
-// ============================================================================================
-import PhotographyDatabase from "@/database/Photography";
-import CinematicDatabase from "@/database/Cinematic";
-import LightningDatabase from "@/database/Lightning";
-import PortraitDatabase from "@/database/Portrait";
-import AnimeDatabase from "@/database/Anime";
-// ============================================================================================
-// ============================================================================================
+
 interface Category {
   name: string;
   database: Record<string, EnvironmentEntry>;
@@ -29,8 +26,7 @@ const categories: Category[] = [
   { name: "Cinematic", database: CinematicDatabase },
   { name: "Photography", database: PhotographyDatabase }
 ];
-// ============================================================================================
-// ============================================================================================
+
 const SubImage: React.FC<SubImageProps> = memo(({ image, index, onImagePress, environmentData }) => (
   <Link
     href={{
@@ -51,7 +47,7 @@ const SubImage: React.FC<SubImageProps> = memo(({ image, index, onImagePress, en
       <View className="relative">
         <Image
           style={{ borderColor: Colorizer(image.primary, 0.2), shadowColor: Colorizer("#000000", 1.0) }}
-          className="rounded-lg shadow-2xl w-full h-10 border"
+          className="rounded-lg shadow-2xl w-full h-[36.5px] border"
           source={{ uri: image.previewLink }}
           alt={`Sub Image ${index + 1}`}
         />
@@ -63,51 +59,103 @@ const SubImage: React.FC<SubImageProps> = memo(({ image, index, onImagePress, en
   </Link>
 ));
 SubImage.displayName = "SubImage";
-// ============================================================================================
-// ============================================================================================
-const SubImages: React.FC<SubImagesProps> = memo(({ images, onImagePress }) => (
-  <View className="flex flex-col justify-start p-1 space-y-1">
+
+const SubImages: React.FC<SubImagesProps> = memo(({ images, onImagePress, currentColors }) => (
+  <View className="flex flex-col justify-start rounded-lg mr-2" style={{ backgroundColor: Colorizer(currentColors[0], 0.1) }}>
     {images.data.slice(0, 4).map((image, index) => (
       <SubImage key={index} image={image} index={index} onImagePress={onImagePress} environmentData={images} />
     ))}
   </View>
 ));
 SubImages.displayName = "SubImages";
-// ============================================================================================
-// ============================================================================================
+
 const CardText: React.FC<CardTextProps> = memo(({ data, currentIndex }) => {
   const colors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
   return (
-    <View className="p-1 rounded-lg">
-      <Text style={{ fontFamily: "Kurale", color: Colorizer(colors[0], 1.0), fontSize: 20 }}> Environment: </Text>
-      <Text style={{ fontFamily: "Kurale", color: Colorizer(colors[0], 1.0), fontSize: 12 }}> {data.environment_prompt} </Text>
+    <View className="p-1 rounded-lg" style={{ backgroundColor: Colorizer(colors[0], 0.1) }}>
+      <Text className="text-lg text-justify" style={{ fontFamily: "Kurale", color: Colorizer(colors[0], 1.0) }}>
+        Environment:
+      </Text>
+      <Text className="text-sm text-justify" style={{ fontFamily: "Kurale", color: Colorizer(colors[0], 1.0) }}>
+        {data.environment_prompt}
+      </Text>
     </View>
   );
 });
 CardText.displayName = "CardText";
-// ============================================================================================
-// ============================================================================================
+
+const AnimatedImage = Animated.createAnimatedComponent(Image);
+
 const Card: React.FC<CardProps> = memo(({ data }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [currentImage, setCurrentImage] = useState<string>(data.images[0]?.previewLink);
+  const [nextImage, setNextImage] = useState<string>(data.images[0]?.previewLink);
   const currentColors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
-  const updateNextImage = useCallback(() => {
+  const currentImageAnimation = useSharedValue(1);
+  const nextImageAnimation = useSharedValue(0);
+  const updateImageState = useCallback(
+    (nextIndex: number) => {
+      setCurrentIndex(nextIndex);
+      setCurrentImage(data.images[nextIndex]?.previewLink);
+      setNextImage(data.images[nextIndex]?.previewLink);
+      currentImageAnimation.value = 1;
+      nextImageAnimation.value = 0;
+    },
+    [data.images, currentImageAnimation, nextImageAnimation]
+  );
+  const currentImageStyle = useAnimatedStyle(() => ({
+    opacity: interpolate(currentImageAnimation.value, [0, 0.5, 1], [0, 1, 1]),
+    transform: [{ scale: interpolate(currentImageAnimation.value, [0, 0.7, 1], [1.1, 1, 1]) }],
+    position: "absolute",
+    width: "100%",
+    height: "100%",
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 24
+  }));
+  const nextImageStyle = useAnimatedStyle(() => ({
+    opacity: interpolate(nextImageAnimation.value, [0, 0.3, 1], [0, 0.3, 1]),
+    transform: [{ scale: 1 }],
+    position: "absolute",
+    width: "100%",
+    height: "100%",
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 24
+  }));
+  const animationConfig = { duration: 800, easing: Easing.inOut(Easing.ease) };
+  const updateNextImage = useCallback(async () => {
     const nextIndex = (currentIndex + 1) % data.images.length;
-    setCurrentIndex(nextIndex);
-    setCurrentImage(data.images[nextIndex]?.previewLink);
-  }, [currentIndex, data.images]);
-  const handleSubImagePress = useCallback((previewLink: string, index: number) => {
-    setCurrentImage(previewLink);
-    setCurrentIndex(index);
-  }, []);
+    const nextImageUri = data.images[nextIndex]?.previewLink;
+    try {
+      await Image.prefetch(nextImageUri);
+      currentImageAnimation.value = withTiming(0, { duration: animationConfig.duration / 2, easing: Easing.out(Easing.ease) });
+      nextImageAnimation.value = withTiming(1, { duration: animationConfig.duration / 1.5, easing: Easing.inOut(Easing.ease) }, (finished) => {
+        if (finished) runOnJS(updateImageState)(nextIndex);
+      });
+    } catch (error) {
+      console.error("Error preloading image:", error);
+    }
+  }, [currentIndex, data.images, currentImageAnimation, nextImageAnimation, updateImageState]);
+  const handleSubImagePress = useCallback(
+    async (previewLink: string, index: number) => {
+      try {
+        await Image.prefetch(previewLink);
+        currentImageAnimation.value = withTiming(0, { duration: animationConfig.duration / 2, easing: Easing.out(Easing.ease) });
+        nextImageAnimation.value = withTiming(1, { duration: animationConfig.duration / 1.5, easing: Easing.inOut(Easing.ease) }, (finished) => {
+          if (finished) runOnJS(updateImageState)(index);
+        });
+      } catch (error) {
+        console.error("Error preloading image:", error);
+      }
+    },
+    [currentImageAnimation, nextImageAnimation, updateImageState]
+  );
   useEffect(() => {
-    const interval = setInterval(updateNextImage, 2000);
+    const interval = setInterval(updateNextImage, 3000);
     return () => clearInterval(interval);
   }, [updateNextImage]);
   useEffect(() => {
-    setCurrentIndex(0);
-    setCurrentImage(data.images[0]?.previewLink);
-  }, [data]);
+    updateImageState(0);
+  }, [data, updateImageState]);
   return (
     <View style={{ backgroundColor: Colorizer(currentColors[0], 0.1), borderColor: Colorizer(currentColors[0], 0.2) }} className="rounded-3xl overflow-hidden border">
       <Link
@@ -126,16 +174,11 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
         asChild
       >
         <TouchableOpacity>
-          <View className="relative h-44 w-full">
-            <Image className="w-full h-full rounded-t-3xl" source={{ uri: currentImage }} alt={data.environment_title} />
-            <View className="absolute inset-0 flex items-center justify-center">
-              <Text
-                style={{
-                  fontFamily: "Kurale",
-                  color: Colorizer("#E9E9EA", 1.0)
-                }}
-                className="text-3xl text-center px-4"
-              >
+          <View className="relative h-80 w-full overflow-hidden">
+            <AnimatedImage style={currentImageStyle} source={{ uri: currentImage }} alt={data.environment_title} resizeMode="cover" />
+            <AnimatedImage style={nextImageStyle} source={{ uri: nextImage }} alt={data.environment_title} resizeMode="cover" />
+            <View className="absolute inset-0 flex items-center justify-center" style={{ backgroundColor: Colorizer("#111415", 0.4) }}>
+              <Text style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0) }} className="text-3xl text-center px-4">
                 {data.environment_title.replace(/_/g, " ") || ""}
               </Text>
             </View>
@@ -145,7 +188,6 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
       <View className="flex flex-row p-2">
         <View className="w-1/2">
           <SubImages
-            currentColors={currentColors}
             onImagePress={handleSubImagePress}
             images={{
               data: data.images,
@@ -154,6 +196,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
               environment_moral: data.environment_moral,
               environment_prompt: data.environment_prompt
             }}
+            currentColors={currentColors}
           />
         </View>
         <View className="w-1/2">
@@ -161,14 +204,13 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
         </View>
       </View>
       <View style={{ backgroundColor: Colorizer(currentColors[0], 1.0), borderTopColor: Colorizer(currentColors[0], 1.0) }} className="border-t items-center justify-center">
-        <Text style={{ fontFamily: "Kurale", color: Colorizer("#111415", 1.0), fontSize: 16, lineHeight: 20 }}> picBook™</Text>
+        <Text style={{ fontFamily: "Kurale", color: Colorizer("#111415", 1.0), fontSize: 16, lineHeight: 20 }}>picBook™</Text>
       </View>
     </View>
   );
 });
 Card.displayName = "Card";
-// ============================================================================================
-// ============================================================================================
+
 const AlphabetGroup: React.FC<AlphabetGroupProps> = memo(({ title, items }) => {
   const bounce = useSharedValue(0);
   useEffect(() => {
@@ -196,8 +238,7 @@ const AlphabetGroup: React.FC<AlphabetGroupProps> = memo(({ title, items }) => {
   );
 });
 AlphabetGroup.displayName = "AlphabetGroup";
-// ============================================================================================
-// ============================================================================================
+
 interface CategoryButtonExtendedProps extends CategoryButtonProps {
   selected: boolean;
   onPress: () => void;
@@ -210,13 +251,8 @@ const CategoryButton: React.FC<CategoryButtonExtendedProps> = memo(({ category, 
   </TouchableOpacity>
 ));
 CategoryButton.displayName = "CategoryButton";
-// ============================================================================================
-// ============================================================================================
-const HeaderComponent: React.FC<{
-  categories: Category[];
-  selectedCategory: string;
-  onSelectCategory: (categoryName: string) => void;
-}> = memo(({ categories, selectedCategory, onSelectCategory }) => (
+
+const HeaderComponent: React.FC<{ categories: Category[]; selectedCategory: string; onSelectCategory: (categoryName: string) => void }> = memo(({ categories, selectedCategory, onSelectCategory }) => (
   <>
     <HeaderAnimate />
     <View className="p-4">
@@ -236,7 +272,7 @@ const HeaderComponent: React.FC<{
   </>
 ));
 HeaderComponent.displayName = "HeaderComponent";
-// ============================================================================================
+
 const HomePage = (): JSX.Element => {
   const [groupedData, setGroupedData] = useState<GroupedData>({});
   const [selectedCategory, setSelectedCategory] = useState<string>("Anime");
@@ -277,7 +313,8 @@ const HomePage = (): JSX.Element => {
   const getItemLayout = useCallback((_: unknown, index: number) => ({ length: 400, offset: 400 * index, index }), []);
   const keyExtractor = useCallback((item: [string, EnvironmentEntry[]]) => item[0], []);
   return (
-    <View style={{ backgroundColor: Colorizer("#111415", 1.0) }} className="flex-1">
+    <View style={{ backgroundColor: Colorizer("#111415", 1.0), flex: 1 }} className="relative">
+      <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
       <FlatList
         windowSize={3}
         initialNumToRender={3}
@@ -294,5 +331,4 @@ const HomePage = (): JSX.Element => {
     </View>
   );
 };
-
 export default HomePage;

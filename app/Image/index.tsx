@@ -5,7 +5,6 @@ import Colorizer from "@/components/Colorizer";
 import { ImageMetadata } from "@/types/database";
 import { useLocalSearchParams } from "expo-router";
 import * as MediaLibrary from "expo-media-library";
-import { LinearGradient } from "expo-linear-gradient";
 import React, { useState, useEffect, useRef } from "react";
 import { FontAwesome5, MaterialIcons, Ionicons } from "@expo/vector-icons";
 import { useSharedValue, useAnimatedStyle, withRepeat, withSequence, withTiming, Easing } from "react-native-reanimated";
@@ -186,7 +185,6 @@ const PreviewImage: React.FC<{
   const rotateInterpolate = rotateValue.interpolate({ inputRange: [0, 1], outputRange: ["0deg", "360deg"] });
   return (
     <View className="relative">
-      <LinearGradient colors={["#111415", "transparent"]} className="absolute top-0 left-0 right-0 h-24 z-10" />
       <View className="absolute inset-0 justify-center items-center z-50">
         {!imageLoading && (
           <View className="items-center">
