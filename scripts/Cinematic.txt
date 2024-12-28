@@ -198,13 +198,3 @@ Iceberg Graveyard: Frozen sea filled with towering icebergs, each shaped like a 
 Forsaken Monastery: A half-collapsed cloister perched on a cliff, buffeted by strong coastal winds.  
 Ethereal Swamp: Gnarled trees arching over still, misty waters dotted with faint glowing lights.  
 Epic Space Observatory: A massive telescope dome on a mountain peak under a star-filled sky.  
-Ancient Marketplace: A lost city plaza with toppled statues, red dust drifting under a glaring sun.  
-Arcane Portal: A swirling energy gate in a forest clearing, roots and vines reaching for its glow.  
-Hanging Bridges: Rope bridges stretching between rocky pillars in a deep canyon filled with fog.  
-Meteor-Crater Lake: A deep turquoise lake formed in a massive crater, surrounded by rugged cliffs.  
-Fallen Colossus: A giant statue sprawled across a desert, half-buried in sand.  
-High Seas Adventure: A tall ship braving colossal waves under pitch-black storm clouds.  
-Galactic Sunset: A horizon overshadowed by a massive gas-giant planet, with swirling pastel colors in the sky.  
-Ruined Space Station: A drifting orbital facility with shattered panels and debris, Earth looming below.  
-Gateway to the Underworld: A gaping cavern entrance with eerie green light emanating from within.  
-Temple at Cliff’s Edge: A precarious sanctuary perched on a cliff over a raging ocean, golden hour light outlining its silhouette.

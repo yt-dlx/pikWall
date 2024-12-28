@@ -198,13 +198,3 @@ Tornado Duel: Rival ninjas clashing within a raging cyclone, swirling debris eve
 Superpowered Sports Arena: A massive stadium where players with incredible abilities compete.  
 Ghostly Flower Field: Ethereal blooms in a spectral field, spirits drifting among gently glowing petals.  
 Epic Mech Showdown: Two colossal robots battling against a cityscape backdrop.  
-Magical Lighthouse: A towering beacon channeling arcane light to guide sky ships.  
-Urban Shapeshifter: A back-alley metamorph revealing half-human, half-beast features under neon signs.  
-Desert Nomad City: An oasis metropolis with wind-tower architecture, caravans streaming through gates.  
-Dungeon Delvers: A party of adventurers descending into torchlit corridors, ancient runes glowing.  
-Giant Turtle Island: A civilization built on the back of a colossal, drifting turtle.  
-Elemental Dragons: Four dragons representing earth, wind, fire, and water circling a grand temple.  
-Airborne Pirate Ship: A galleon flying among the clouds, cannons ready for a sky battle.  
-Haunted Amusement Park: Abandoned rides, ghostly echoes of laughter, flickering neon.  
-Forest Samurai Haven: A village hidden among towering trees, residents wearing woven bark armor.  
-Castle in the Clouds: Elegant spires floating amid swirling mist, bridging multiple airborne islands.

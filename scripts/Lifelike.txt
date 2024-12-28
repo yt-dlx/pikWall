@@ -198,13 +198,3 @@ Tangled Vines: Thick vines twisted around a dilapidated fence, leaves lush and d
 Farmland Patchwork: Aerial view of meticulously arranged fields, color-coded by crops.  
 Flock Takeoff: A mass of birds launching into the sky from a calm lake surface.  
 Majestic Redwood Grove: Towering redwoods with sunbeams creating a warm, earthy glow.  
-Jagged Ice Shelf: Sharp, translucent ice jutting into a pale winter sky.  
-Orchard in Bloom: Rows of fruit trees exploding with pink and white blossoms.  
-Coral Reef Macro: Vibrant coral polyps in super close detail, clownfish weaving in and out.  
-Glistening Jellyfish: A translucent jellyfish floating near the ocean surface.  
-City Rain Reflections: Neon lights reflecting on wet pavement, pedestrians with umbrellas.  
-Snow Leopard: A spotted cat prowling on rocky, snowy terrain, eyes alert.  
-Cave Stalactites: Jagged mineral formations dripping from a cavern ceiling.  
-Sunset Camel Caravan: Silhouettes of camels crossing the dunes under a fiery sky.  
-Volcanic Beach: Black sand beach with steaming vents, waves crashing in the background.  
-Dramatic Valley Overlook: Lush valley seen from a high vantage point, dramatic clouds overhead.
