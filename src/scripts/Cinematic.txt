@@ -1,13 +1,13 @@
-Solar Flare Cityscape: A bustling metropolis experiences intense solar flares, causing buildings to shimmer with dynamic light effects and vibrant energy displays that illuminate the skyline against a dramatic sky.
-Moonlit Savannah: A vast savannah under the glow of a full moon, featuring silhouettes of acacia trees and graceful wildlife roaming peacefully across the illuminated grasslands.
-Deserted Railway Station: An old, abandoned railway station with overgrown tracks and rusted platforms, exuding a haunting atmosphere as nature reclaims the once-busy transit hub.
-Bioluminescent Jungle: A dense jungle comes alive at night with glowing plants and radiant creatures, creating a magical and ethereal scene illuminated by natural bioluminescence.
-Floating Desert Mirage: A surreal desert landscape where floating islands drift above the sand, casting shimmering mirages and adding an otherworldly dimension to the arid environment.
-Ancient Underwater Temple: A submerged temple adorned with intricate carvings, surrounded by vibrant marine life and coral reefs, evoking a sense of mystery and ancient grandeur beneath the waves.
-Frozen Tundra Expedition: Explorers trek through a frozen tundra, navigating towering icebergs and marveling at the aurora borealis dancing brightly in the clear, star-filled sky above.
-Victorian Steampunk Airship: A grand steampunk airship navigates through cloudy skies, featuring intricate Victorian machinery, brass fittings, and billowing steam, showcasing a blend of elegance and industrial innovation.
-Mystical Foggy Moor: A mysterious moor shrouded in thick fog, dotted with ancient stone markers and eerie silhouettes, creating an enigmatic and otherworldly landscape.
-Post-Apocalyptic Urban Park: A once-thriving urban park reclaimed by nature in a post-apocalyptic city, where trees and plants intertwine with crumbling buildings and abandoned structures.
+    Solar Flare Cityscape: A bustling metropolis experiences intense solar flares, causing buildings to shimmer with dynamic light effects and vibrant energy displays that illuminate the skyline against a dramatic sky.
+    Moonlit Savannah: A vast savannah under the glow of a full moon, featuring silhouettes of acacia trees and graceful wildlife roaming peacefully across the illuminated grasslands.
+    Deserted Railway Station: An old, abandoned railway station with overgrown tracks and rusted platforms, exuding a haunting atmosphere as nature reclaims the once-busy transit hub.
+    Bioluminescent Jungle: A dense jungle comes alive at night with glowing plants and radiant creatures, creating a magical and ethereal scene illuminated by natural bioluminescence.
+    Floating Desert Mirage: A surreal desert landscape where floating islands drift above the sand, casting shimmering mirages and adding an otherworldly dimension to the arid environment.
+    Ancient Underwater Temple: A submerged temple adorned with intricate carvings, surrounded by vibrant marine life and coral reefs, evoking a sense of mystery and ancient grandeur beneath the waves.
+    Frozen Tundra Expedition: Explorers trek through a frozen tundra, navigating towering icebergs and marveling at the aurora borealis dancing brightly in the clear, star-filled sky above.
+    Victorian Steampunk Airship: A grand steampunk airship navigates through cloudy skies, featuring intricate Victorian machinery, brass fittings, and billowing steam, showcasing a blend of elegance and industrial innovation.
+    Mystical Foggy Moor: A mysterious moor shrouded in thick fog, dotted with ancient stone markers and eerie silhouettes, creating an enigmatic and otherworldly landscape.
+    Post-Apocalyptic Urban Park: A once-thriving urban park reclaimed by nature in a post-apocalyptic city, where trees and plants intertwine with crumbling buildings and abandoned structures.
 Crimson Autumn Forest: A vibrant forest ablaze with crimson and gold autumn leaves, set against a dramatic sky that enhances the rich, warm colors of the changing season.
 Subterranean River Cave: An underground cave with a flowing river, illuminated by natural light filtering through cracks in the ceiling, creating a serene and mystical aquatic environment.
 Solar-Powered Metropolis: A futuristic city entirely powered by solar energy, featuring sleek, sustainable architecture with solar panels integrated into every building and public space.
