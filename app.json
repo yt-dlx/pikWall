@@ -11,7 +11,7 @@
     "experiments": {
       "typedRoutes": true
     },
-    "icon": "./assets/picbook/white_nobg_3200.png",
+    "icon": "./assets/picbook/picBook_white.png",
     "ios": {
       "supportsTablet": true,
       "requiresFullScreen": true,
@@ -32,28 +32,22 @@
     "web": {
       "output": "static",
       "bundler": "metro",
-      "favicon": "./assets/picbook/white_nobg_3200.png"
+      "favicon": "./assets/picbook/picBook_white.png"
     },
     "android": {
       "requiresFullScreen": true,
       "package": "com.shovit.picbook",
-      "permissions": [
-        "READ_EXTERNAL_STORAGE",
-        "WRITE_EXTERNAL_STORAGE"
-      ],
+      "permissions": ["READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"],
       "adaptiveIcon": {
         "backgroundColor": "#0A0A0A",
-        "foregroundImage": "./assets/picbook/white_nobg_3200.png"
+        "foregroundImage": "./assets/picbook/picBook_white.png"
       }
     },
     "plugins": [
       [
         "expo-font",
         {
-          "fonts": [
-            "./assets/fonts/Kurale.ttf",
-            "./assets/fonts/Brittany.otf"
-          ]
+          "fonts": ["./assets/fonts/Kurale.ttf", "./assets/fonts/Brittany.otf"]
         }
       ],
       "expo-router",
@@ -63,7 +57,7 @@
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#0A0A0A",
-          "image": "./assets/picbook/white_nobg_3200.png"
+          "image": "./assets/picbook/picBook_white.png"
         }
       ]
     ]

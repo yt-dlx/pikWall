@@ -192,7 +192,7 @@ const PreviewImage: React.FC<{
               <Image
                 className="w-10 h-10 rounded-full bg-transparent"
                 style={{ backgroundColor: Colorizer(selectedImage.primary, 1.0) }}
-                source={require("@/assets/picbook/white_nobg_1024.png")}
+                source={require("@/assets/picbook/picBook_red.png")}
                 resizeMode="contain"
                 alt="image"
               />
