@@ -86,7 +86,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [currentImage, setCurrentImage] = useState<string>(data.images[0]?.previewLink);
   const fadeAnim = useRef(new Animated.Value(1)).current;
-  const animationDuration = 2000;
+  const animationDuration = 3000;
   const updateImageState = useCallback(
     (nextIndex: number) => {
       setCurrentIndex(nextIndex);
@@ -150,7 +150,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
               }}
               resizeMode="cover"
             />
-            <View className="absolute inset-0 flex items-center justify-center" style={{ backgroundColor: Colorizer("#070808", 0.5) }}>
+            <View className="absolute inset-0 flex items-center justify-center">
               <Text style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0) }} className="text-3xl text-center px-4">
                 {data.images[currentIndex].original_file_name}
               </Text>
