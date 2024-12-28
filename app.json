@@ -25,7 +25,7 @@
       "requiresFullScreen": true,
       "package": "com.shovit.picBook",
       "permissions": ["READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"],
-      "adaptiveIcon": { "backgroundColor": "#0A0A0A", "foregroundImage": "./src/assets/picBook™/picBook_red.png" }
+      "adaptiveIcon": { "backgroundColor": "#0A0A0A", "foregroundImage": "./src/assets/picbook/picBook_red.png" }
     },
     "plugins": ["expo-router", ["expo-font", { "fonts": ["./src/assets/fonts/Kurale.ttf", "./src/assets/fonts/Brittany.otf"] }], ["expo-splash-screen", { "imageWidth": 200, "resizeMode": "contain", "backgroundColor": "#0A0A0A", "image": "./src/assets/picbook/picBook_red.png" }]]
   }
