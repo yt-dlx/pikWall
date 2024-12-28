@@ -43,11 +43,11 @@ const AnimatedTitle: React.FC = () => {
           source={require("@/assets/picbook/white_nobg_1024.png")}
           alt="logo"
           className="w-12 h-12 rounded-full border-2"
-          style={{ borderColor: Colorizer("#FFFFFF", 1.0) }}
+          style={{ borderColor: Colorizer("#E9E9EA", 1.0) }}
           resizeMode="contain"
         />
       </View>
-      <Text style={{ fontFamily: "Kurale", fontSize: 25, color: Colorizer("#FFFFFF", 1.0), letterSpacing: -1, lineHeight: 34 }} className="tracking-tight">
+      <Text style={{ fontFamily: "Kurale", fontSize: 25, color: Colorizer("#E9E9EA", 1.0), letterSpacing: -1, lineHeight: 34 }} className="tracking-tight">
         picBook™
       </Text>
     </Animated.View>
@@ -66,7 +66,7 @@ const HeaderAnimated: React.FC = () => {
           style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", borderRadius: 8 }}
           className="absolute inset-0 items-center justify-center rounded-lg overflow-hidden"
         >
-          <View style={{ backgroundColor: Colorizer("#0A0A0A", 1.0), opacity: 0.5, borderRadius: 8 }} className="absolute inset-0" />
+          <View style={{ backgroundColor: Colorizer("#111415", 1.0), opacity: 0.5, borderRadius: 8 }} className="absolute inset-0" />
           <View style={{ position: "absolute", justifyContent: "center", alignItems: "center", margin: 8, padding: 4 }} className="absolute justify-center items-center m-2 p-1">
             <View className="flex-row mb-1">
               <AnimatedTitle />
@@ -76,10 +76,10 @@ const HeaderAnimated: React.FC = () => {
               className="flex-row items-center mt-2 px-2 py-1 rounded-full"
             >
               <View
-                style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: Colorizer("#FFFFFF", 1.0), marginRight: 4, opacity: 0.5 }}
+                style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: Colorizer("#E9E9EA", 1.0), marginRight: 4, opacity: 0.5 }}
                 className="w-1.5 h-1.5 rounded-full bg-white mr-1 animate-pulse"
               />
-              <Text style={{ fontFamily: "Kurale", fontSize: 12, fontWeight: "600", color: Colorizer("#FFFFFF", 1.0) }} className="text-sm">
+              <Text style={{ fontFamily: "Kurale", fontSize: 12, fontWeight: "600", color: Colorizer("#E9E9EA", 1.0) }} className="text-sm">
                 Crafted with imagination and stories
               </Text>
             </View>

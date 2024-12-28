@@ -42,7 +42,7 @@ const AnimatedTitle: React.FC = () => {
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
   return (
     <Animated.View style={animatedStyle} className="items-center">
-      <View style={{ backgroundColor: Colorizer("#0A0A0A", 0.5) }} className="rounded-full p-2">
+      <View style={{ backgroundColor: Colorizer("#111415", 0.5) }} className="rounded-full p-2">
         <Image source={require("@/assets/picbook/white_nobg_1024.png")} alt="logo" className="w-56 h-56 rounded-full border-2 border-white" resizeMode="contain" />
       </View>
     </Animated.View>
@@ -52,21 +52,21 @@ const AnimatedTitle: React.FC = () => {
 // ============================================================================================
 const IndexPage: React.FC = () => {
   return (
-    <View style={{ backgroundColor: Colorizer("#0A0A0A", 1.0) }} className="h-full w-full">
+    <View style={{ backgroundColor: Colorizer("#111415", 1.0) }} className="h-full w-full">
       <View className="flex-1 justify-center items-center relative">
         <View className="flex-row h-full overflow-hidden relative">
           {imageSets.map((images, slotIndex) => (
             <ScrollingSlot key={slotIndex} images={images} reverse={slotIndex % 2 === 0} delay={slotIndex * 200} />
           ))}
-          <LinearGradient colors={["#0A0A0A", "transparent", "transparent", "#0A0A0A"]} locations={[0, 0.2, 0.8, 1]} style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }} />
+          <LinearGradient colors={["#111415", "transparent", "transparent", "#111415"]} locations={[0, 0.2, 0.8, 1]} style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }} />
           <View className="absolute inset-0 justify-center items-center">
             <AnimatedTitle />
-            <Text style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 1.0), fontSize: 64, letterSpacing: -2 }} className="text-center">
+            <Text style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0), fontSize: 64, letterSpacing: -2 }} className="text-center">
               picBook™
             </Text>
-            <View className="flex-row items-center px-4 py-2 rounded-full mt-8" style={{ backgroundColor: Colorizer("#0A0A0A", 1.0) }}>
-              <View className="w-2 h-2 rounded-full mr-2 opacity-50" style={{ backgroundColor: Colorizer("#FFFFFF", 1.0) }} />
-              <Text style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 1.0), fontSize: 14 }}> Crafted with imagination and stories </Text>
+            <View className="flex-row items-center px-4 py-2 rounded-full mt-8" style={{ backgroundColor: Colorizer("#111415", 1.0) }}>
+              <View className="w-2 h-2 rounded-full mr-2 opacity-50" style={{ backgroundColor: Colorizer("#E9E9EA", 1.0) }} />
+              <Text style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0), fontSize: 14 }}> Crafted with imagination and stories </Text>
             </View>
             <Link href="./Home" asChild>
               <TouchableOpacity
@@ -89,8 +89,8 @@ const IndexPage: React.FC = () => {
                   style={{ borderRadius: 10 }}
                   className="flex-row items-center justify-center px-14 py-4"
                 >
-                  <MaterialIcons name="photo-camera" size={24} color={Colorizer("#0A0A0A", 1.0)} className="mr-2" />
-                  <Text style={{ fontFamily: "Kurale", color: Colorizer("#0A0A0A", 1.0), fontSize: 18 }}> Start Exploring </Text>
+                  <MaterialIcons name="photo-camera" size={24} color={Colorizer("#111415", 1.0)} className="mr-2" />
+                  <Text style={{ fontFamily: "Kurale", color: Colorizer("#111415", 1.0), fontSize: 18 }}> Start Exploring </Text>
                 </LinearGradient>
               </TouchableOpacity>
             </Link>

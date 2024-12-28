@@ -47,15 +47,15 @@ const SubImage: React.FC<SubImageProps> = memo(({ image, index, onImagePress, en
     }}
     asChild
   >
-    <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="m-0.5 flex-1">
+    <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="m-0.5 p-0.5 flex-1">
       <View className="relative">
         <Image
-          style={{ borderColor: Colorizer(image.primary, 1.0), shadowColor: Colorizer("#000000", 1.0) }}
+          style={{ borderColor: Colorizer(image.primary, 0.2), shadowColor: Colorizer("#000000", 1.0) }}
           className="rounded-lg shadow-2xl w-full h-10 border"
           source={{ uri: image.previewLink }}
           alt={`Sub Image ${index + 1}`}
         />
-        <Text style={{ color: Colorizer("#FFFFFF", 1.0), fontFamily: "Kurale", backgroundColor: Colorizer(image.primary, 0.8) }} className="absolute top-1 left-1 px-1 rounded-lg text-sm">
+        <Text style={{ color: Colorizer("#E9E9EA", 1.0), fontFamily: "Kurale", backgroundColor: Colorizer(image.primary, 0.8) }} className="absolute top-1 left-1 px-1 rounded-lg text-sm">
           ({index}): {image.primary}
         </Text>
       </View>
@@ -78,7 +78,7 @@ SubImages.displayName = "SubImages";
 const CardText: React.FC<CardTextProps> = memo(({ data, currentIndex }) => {
   const colors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
   return (
-    <View className="p-1 m-1 rounded-lg">
+    <View className="p-1 rounded-lg">
       <Text style={{ fontFamily: "Kurale", color: Colorizer(colors[0], 1.0), fontSize: 20 }}> Environment: </Text>
       <Text style={{ fontFamily: "Kurale", color: Colorizer(colors[0], 1.0), fontSize: 12 }}> {data.environment_prompt} </Text>
     </View>
@@ -101,7 +101,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
     setCurrentIndex(index);
   }, []);
   useEffect(() => {
-    const interval = setInterval(updateNextImage, 4000);
+    const interval = setInterval(updateNextImage, 2000);
     return () => clearInterval(interval);
   }, [updateNextImage]);
   useEffect(() => {
@@ -109,7 +109,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
     setCurrentImage(data.images[0]?.previewLink);
   }, [data]);
   return (
-    <View style={{ backgroundColor: Colorizer(currentColors[0], 0.2), borderColor: Colorizer(currentColors[0], 1.0) }} className="rounded-3xl overflow-hidden border">
+    <View style={{ backgroundColor: Colorizer(currentColors[0], 0.1), borderColor: Colorizer(currentColors[0], 0.2) }} className="rounded-3xl overflow-hidden border">
       <Link
         href={{
           pathname: "./Image",
@@ -126,13 +126,13 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
         asChild
       >
         <TouchableOpacity>
-          <View className="relative h-72 w-full">
+          <View className="relative h-44 w-full">
             <Image className="w-full h-full rounded-t-3xl" source={{ uri: currentImage }} alt={data.environment_title} />
             <View className="absolute inset-0 flex items-center justify-center">
               <Text
                 style={{
                   fontFamily: "Kurale",
-                  color: Colorizer("#FFFFFF", 1.0)
+                  color: Colorizer("#E9E9EA", 1.0)
                 }}
                 className="text-3xl text-center px-4"
               >
@@ -161,7 +161,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
         </View>
       </View>
       <View style={{ backgroundColor: Colorizer(currentColors[0], 1.0), borderTopColor: Colorizer(currentColors[0], 1.0) }} className="border-t items-center justify-center">
-        <Text style={{ fontFamily: "Kurale", color: Colorizer("#0A0A0A", 1.0), fontSize: 16, lineHeight: 20 }}> picBook™</Text>
+        <Text style={{ fontFamily: "Kurale", color: Colorizer("#111415", 1.0), fontSize: 16, lineHeight: 20 }}> picBook™</Text>
       </View>
     </View>
   );
@@ -176,15 +176,12 @@ const AlphabetGroup: React.FC<AlphabetGroupProps> = memo(({ title, items }) => {
   }, [bounce]);
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ translateY: bounce.value }] }));
   return (
-    <View
-      className="m-1 p-1 pb-2 rounded-l-[30px] border-t border-b border-l"
-      style={{ backgroundColor: Colorizer("#1b1b1b", 1.0), borderTopColor: Colorizer("#FFFFFF", 0.5), borderBottomColor: Colorizer("#FFFFFF", 0.5), borderLeftColor: Colorizer("#FFFFFF", 0.5) }}
-    >
+    <View className="m-1 p-1 pb-2 rounded-l-3xl" style={{ backgroundColor: Colorizer("#1b1b1b", 1.0) }}>
       <View className="flex-row m-4">
         <Animated.View style={animatedStyle}>
-          <FontAwesome5 name="layer-group" size={28} color={Colorizer("#FFFFFF", 1.0)} className="mr-2" />
+          <FontAwesome5 name="layer-group" size={28} color={Colorizer("#E9E9EA", 1.0)} className="mr-2" />
         </Animated.View>
-        <Text className="text-2xl font-bold text-center" style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 1.0) }}>
+        <Text className="text-2xl font-bold text-center" style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0) }}>
           Sub-Category - "{title}"
         </Text>
       </View>
@@ -206,8 +203,8 @@ interface CategoryButtonExtendedProps extends CategoryButtonProps {
   onPress: () => void;
 }
 const CategoryButton: React.FC<CategoryButtonExtendedProps> = memo(({ category, selected, onPress }) => (
-  <TouchableOpacity style={{ backgroundColor: selected ? "red" : Colorizer("#FFFFFF", 1.0) }} className="px-4 py-2 rounded-lg mx-1" activeOpacity={0.7} onPress={onPress}>
-    <Text style={{ fontFamily: "Kurale", color: selected ? Colorizer("#FFFFFF", 1.0) : Colorizer("#000000", 1.0) }} className="text-sm font-bold">
+  <TouchableOpacity style={{ backgroundColor: selected ? "red" : Colorizer("#E9E9EA", 1.0) }} className="px-4 py-2 rounded-lg mx-1" activeOpacity={0.7} onPress={onPress}>
+    <Text style={{ fontFamily: "Kurale", color: selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0) }} className="text-sm font-bold">
       {category}
     </Text>
   </TouchableOpacity>
@@ -224,11 +221,11 @@ const HeaderComponent: React.FC<{
     <HeaderAnimate />
     <View className="p-4">
       <View className="flex-row items-center justify-center">
-        <FontAwesome name="wpexplorer" size={28} color={Colorizer("#FFFFFF", 1.0)} className="mr-2" />
-        <Text style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 1.0) }} className="text-3xl font-bold text-center">
+        <FontAwesome name="wpexplorer" size={28} color={Colorizer("#E9E9EA", 1.0)} className="mr-2" />
+        <Text style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0) }} className="text-3xl font-bold text-center">
           Explore Our Collection
         </Text>
-        <Ionicons name="images-outline" size={28} color={Colorizer("#FFFFFF", 1.0)} className="ml-2" />
+        <Ionicons name="images-outline" size={28} color={Colorizer("#E9E9EA", 1.0)} className="ml-2" />
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} className="mt-4 mb-6">
         {categories.map((category) => (
@@ -280,7 +277,7 @@ const HomePage = (): JSX.Element => {
   const getItemLayout = useCallback((_: unknown, index: number) => ({ length: 400, offset: 400 * index, index }), []);
   const keyExtractor = useCallback((item: [string, EnvironmentEntry[]]) => item[0], []);
   return (
-    <View style={{ backgroundColor: Colorizer("#0A0A0A", 1.0) }} className="flex-1">
+    <View style={{ backgroundColor: Colorizer("#111415", 1.0) }} className="flex-1">
       <FlatList
         windowSize={3}
         initialNumToRender={3}

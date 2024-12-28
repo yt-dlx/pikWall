@@ -17,9 +17,9 @@ export default function RootLayout() {
   }, [loaded, error]);
   if (!loaded && !error) return null;
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: Colorizer("#0A0A0A", 1.0) }}>
-      <StatusBar backgroundColor="#0A0A0A" barStyle="light-content" />
-      <View style={{ flex: 1, backgroundColor: Colorizer("#0A0A0A", 1.0) }} className="capitalize">
+    <SafeAreaView style={{ flex: 1, backgroundColor: Colorizer("#111415", 1.0) }}>
+      <StatusBar backgroundColor="#111415" barStyle="light-content" />
+      <View style={{ flex: 1, backgroundColor: Colorizer("#111415", 1.0) }} className="capitalize">
         <Stack screenOptions={{ headerShown: false }} />
       </View>
     </SafeAreaView>

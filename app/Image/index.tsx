@@ -28,12 +28,12 @@ const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () =>
   const modalStyle = useAnimatedStyle(() => ({ opacity: modalOpacity.value, transform: [{ scale: modalScale.value }] }));
   return visible ? (
     <View className="absolute inset-0 justify-center items-center">
-      <Animated.View style={[{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: Colorizer("#0A0A0A", 0.5) }, backdropStyle]} />
+      <Animated.View style={[{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: Colorizer("#111415", 0.5) }, backdropStyle]} />
       <Animated.View
         className="rounded-lg p-5 items-center shadow-lg"
         style={[
           {
-            backgroundColor: Colorizer("#FFFFFF", 1.0),
+            backgroundColor: Colorizer("#E9E9EA", 1.0),
             width: "80%",
             shadowColor: Colorizer("#000000", 0.25),
             shadowOffset: { width: 0, height: 5 },
@@ -83,7 +83,7 @@ const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => v
         className="rounded-lg p-5 items-center shadow-lg"
         style={[
           {
-            backgroundColor: Colorizer("#FFFFFF", 1.0),
+            backgroundColor: Colorizer("#E9E9EA", 1.0),
             width: "80%",
             shadowColor: Colorizer("#000000", 0.25),
             shadowOffset: { width: 0, height: 5 },
@@ -135,7 +135,7 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
       <View className="absolute inset-0" style={{ backgroundColor: Colorizer(primaryColor, 0.3) }} />
       <View
         className="bg-white rounded-lg p-5 items-center shadow-lg"
-        style={{ backgroundColor: Colorizer("#FFFFFF", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 }}
+        style={{ backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 }}
       >
         <ActivityIndicator size="large" color={Colorizer(primaryColor, 1.0)} />
         <Text className="mt-3 text-lg" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Kurale" }}>
@@ -186,7 +186,7 @@ const PreviewImage: React.FC<{
   const rotateInterpolate = rotateValue.interpolate({ inputRange: [0, 1], outputRange: ["0deg", "360deg"] });
   return (
     <View className="relative">
-      <LinearGradient colors={["#0A0A0A", "transparent"]} className="absolute top-0 left-0 right-0 h-24 z-10" />
+      <LinearGradient colors={["#111415", "transparent"]} className="absolute top-0 left-0 right-0 h-24 z-10" />
       <View className="absolute inset-0 justify-center items-center z-50">
         {!imageLoading && (
           <View className="items-center">
@@ -207,7 +207,7 @@ const PreviewImage: React.FC<{
       </View>
       <View className="rounded-t-3xl overflow-hidden shadow-lg">
         {imageLoading && (
-          <View className="flex justify-center items-center bg-black h-[${imageHeight}]" style={{ backgroundColor: Colorizer("#0A0A0A", 1.0), height: imageHeight }}>
+          <View className="flex justify-center items-center bg-black h-[${imageHeight}]" style={{ backgroundColor: Colorizer("#111415", 1.0), height: imageHeight }}>
             <ActivityIndicator size="large" color={Colorizer(selectedImage.primary, 1.0)} />
             <Text className="mt-2.5" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
               Loading HD Image Preview...
@@ -256,7 +256,7 @@ const DownloadButton: React.FC<{ onDownload?: (event: any) => void; colors: { pr
           <Text className="text-white text-sm mr-2" style={{ fontFamily: "Kurale" }}>
             Download Wallpaper
           </Text>
-          <FontAwesome5 name="download" size={15} color={Colorizer("#FFFFFF", 1.0)} className="mx-2" />
+          <FontAwesome5 name="download" size={15} color={Colorizer("#E9E9EA", 1.0)} className="mx-2" />
           <Text className="text-white text-sm" style={{ fontFamily: "Kurale" }}>
             (Highest Quality)
           </Text>
@@ -333,7 +333,7 @@ const DownloadScreen = () => {
     }
   };
   return (
-    <View className="flex-1" style={{ backgroundColor: Colorizer("#0A0A0A", 1.0) }}>
+    <View className="flex-1" style={{ backgroundColor: Colorizer("#111415", 1.0) }}>
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
       <ScrollView className="flex-1" contentContainerStyle={{ paddingBottom: 20 }}>
         <PreviewImage selectedImage={selectedImage} screenWidth={screenWidth} onViewFullScreen={() => setIsFullScreen(true)} />
@@ -361,7 +361,7 @@ const DownloadScreen = () => {
               <Text className="ml-2 text-xl" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
                 Environment:
               </Text>
-              <Text className="ml-2 text-gray-400" style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 0.6) }}>
+              <Text className="ml-2 text-gray-400" style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 0.6) }}>
                 {parsedData.environment_prompt}
               </Text>
             </View>
@@ -369,7 +369,7 @@ const DownloadScreen = () => {
               <Text className="ml-2 mt-2 text-xl" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
                 Moral:
               </Text>
-              <Text className="ml-2 text-gray-400" style={{ fontFamily: "Kurale", color: Colorizer("#FFFFFF", 0.6) }}>
+              <Text className="ml-2 text-gray-400" style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 0.6) }}>
                 {parsedData.environment_moral}
               </Text>
             </View>
@@ -378,9 +378,9 @@ const DownloadScreen = () => {
         </View>
       </ScrollView>
       <Modal visible={isFullScreen} transparent={false} onRequestClose={() => setIsFullScreen(false)} presentationStyle="fullScreen" statusBarTranslucent>
-        <View className="flex-1" style={{ backgroundColor: Colorizer("#0A0A0A", 1.0) }}>
+        <View className="flex-1" style={{ backgroundColor: Colorizer("#111415", 1.0) }}>
           <TouchableOpacity onPress={() => setIsFullScreen(false)} className="absolute top-14 left-8 z-10">
-            <FontAwesome5 name="times" size={50} color={Colorizer("#FFFFFF", 1.0)} />
+            <FontAwesome5 name="times" size={50} color={Colorizer("#E9E9EA", 1.0)} />
           </TouchableOpacity>
           <View className="flex-1 justify-center items-center">
             <Image
