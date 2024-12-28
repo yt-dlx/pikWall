@@ -11,7 +11,7 @@
     "experiments": {
       "typedRoutes": true
     },
-    "icon": "./assets/picbook/picBook_white.png",
+    "icon": "./assets/picbook/picBook_red.png",
     "ios": {
       "supportsTablet": true,
       "requiresFullScreen": true,
@@ -32,7 +32,7 @@
     "web": {
       "output": "static",
       "bundler": "metro",
-      "favicon": "./assets/picbook/picBook_white.png"
+      "favicon": "./assets/picbook/picBook_red.png"
     },
     "android": {
       "requiresFullScreen": true,
@@ -40,7 +40,7 @@
       "permissions": ["READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"],
       "adaptiveIcon": {
         "backgroundColor": "#0A0A0A",
-        "foregroundImage": "./assets/picbook/picBook_white.png"
+        "foregroundImage": "./assets/picbook/picBook_red.png"
       }
     },
     "plugins": [
@@ -57,7 +57,7 @@
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#0A0A0A",
-          "image": "./assets/picbook/picBook_white.png"
+          "image": "./assets/picbook/picBook_red.png"
         }
       ]
     ]

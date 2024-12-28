@@ -42,7 +42,7 @@ const AnimatedTitle: React.FC = () => {
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
   return (
     <Animated.View style={animatedStyle} className="items-center">
-      <View style={{ backgroundColor: Colorizer("#070808", 0.5) }} className="rounded-full p-2">
+      <View style={{ backgroundColor: Colorizer("#070808", 0.9) }} className="rounded-full p-2">
         <Image source={require("@/assets/picbook/picBook_red.png")} alt="logo" className="w-56 h-56 rounded-full border-2 border-white" resizeMode="contain" />
       </View>
     </Animated.View>
