@@ -66,7 +66,7 @@ const HeaderAnimated: React.FC = () => {
           style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", borderRadius: 8 }}
           className="absolute inset-0 items-center justify-center rounded-lg overflow-hidden"
         >
-          <View style={{ backgroundColor: Colorizer("#111415", 1.0), opacity: 0.5, borderRadius: 8 }} className="absolute inset-0" />
+          <View style={{ backgroundColor: Colorizer("#070808", 1.0), opacity: 0.5, borderRadius: 8 }} className="absolute inset-0" />
           <View style={{ position: "absolute", justifyContent: "center", alignItems: "center", margin: 8, padding: 4 }} className="absolute justify-center items-center m-2 p-1">
             <View className="flex-row mb-1">
               <AnimatedTitle />

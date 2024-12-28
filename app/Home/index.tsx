@@ -177,7 +177,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
           <View className="relative h-80 w-full overflow-hidden">
             <AnimatedImage style={currentImageStyle} source={{ uri: currentImage }} alt={data.environment_title} resizeMode="cover" />
             <AnimatedImage style={nextImageStyle} source={{ uri: nextImage }} alt={data.environment_title} resizeMode="cover" />
-            <View className="absolute inset-0 flex items-center justify-center" style={{ backgroundColor: Colorizer("#111415", 0.4) }}>
+            <View className="absolute inset-0 flex items-center justify-center" style={{ backgroundColor: Colorizer("#070808", 0.4) }}>
               <Text style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0) }} className="text-3xl text-center px-4">
                 {data.environment_title.replace(/_/g, " ") || ""}
               </Text>
@@ -204,7 +204,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
         </View>
       </View>
       <View style={{ backgroundColor: Colorizer(currentColors[0], 1.0), borderTopColor: Colorizer(currentColors[0], 1.0) }} className="border-t items-center justify-center">
-        <Text style={{ fontFamily: "Kurale", color: Colorizer("#111415", 1.0), fontSize: 16, lineHeight: 20 }}>picBook™</Text>
+        <Text style={{ fontFamily: "Kurale", color: Colorizer("#070808", 1.0), fontSize: 16, lineHeight: 20 }}>picBook™</Text>
       </View>
     </View>
   );
@@ -275,7 +275,7 @@ HeaderComponent.displayName = "HeaderComponent";
 
 const HomePage = (): JSX.Element => {
   const [groupedData, setGroupedData] = useState<GroupedData>({});
-  const [selectedCategory, setSelectedCategory] = useState<string>("Anime");
+  const [selectedCategory, setSelectedCategory] = useState<string>("Cinematic");
   useEffect(() => {
     const processImageUrls = (entry: EnvironmentEntry): EnvironmentEntry => ({
       ...entry,
@@ -313,7 +313,7 @@ const HomePage = (): JSX.Element => {
   const getItemLayout = useCallback((_: unknown, index: number) => ({ length: 400, offset: 400 * index, index }), []);
   const keyExtractor = useCallback((item: [string, EnvironmentEntry[]]) => item[0], []);
   return (
-    <View style={{ backgroundColor: Colorizer("#111415", 1.0), flex: 1 }} className="relative">
+    <View style={{ backgroundColor: Colorizer("#070808", 1.0), flex: 1 }} className="relative">
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
       <FlatList
         windowSize={3}

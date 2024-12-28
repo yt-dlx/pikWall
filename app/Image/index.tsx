@@ -27,7 +27,7 @@ const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () =>
   const modalStyle = useAnimatedStyle(() => ({ opacity: modalOpacity.value, transform: [{ scale: modalScale.value }] }));
   return visible ? (
     <View className="absolute inset-0 justify-center items-center">
-      <Animated.View style={[{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: Colorizer("#111415", 0.5) }, backdropStyle]} />
+      <Animated.View style={[{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: Colorizer("#070808", 0.5) }, backdropStyle]} />
       <Animated.View
         className="rounded-lg p-5 items-center shadow-lg"
         style={[
@@ -205,7 +205,7 @@ const PreviewImage: React.FC<{
       </View>
       <View className="rounded-t-3xl overflow-hidden shadow-lg">
         {imageLoading && (
-          <View className="flex justify-center items-center bg-black h-[${imageHeight}]" style={{ backgroundColor: Colorizer("#111415", 1.0), height: imageHeight }}>
+          <View className="flex justify-center items-center bg-black h-[${imageHeight}]" style={{ backgroundColor: Colorizer("#070808", 1.0), height: imageHeight }}>
             <ActivityIndicator size="large" color={Colorizer(selectedImage.primary, 1.0)} />
             <Text className="mt-2.5" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
               Loading HD Image Preview...
@@ -331,7 +331,7 @@ const DownloadScreen = () => {
     }
   };
   return (
-    <View className="flex-1" style={{ backgroundColor: Colorizer("#111415", 1.0) }}>
+    <View className="flex-1" style={{ backgroundColor: Colorizer("#070808", 1.0) }}>
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
       <ScrollView className="flex-1" contentContainerStyle={{ paddingBottom: 20 }}>
         <PreviewImage selectedImage={selectedImage} screenWidth={screenWidth} onViewFullScreen={() => setIsFullScreen(true)} />
@@ -376,7 +376,7 @@ const DownloadScreen = () => {
         </View>
       </ScrollView>
       <Modal visible={isFullScreen} transparent={false} onRequestClose={() => setIsFullScreen(false)} presentationStyle="fullScreen" statusBarTranslucent>
-        <View className="flex-1" style={{ backgroundColor: Colorizer("#111415", 1.0) }}>
+        <View className="flex-1" style={{ backgroundColor: Colorizer("#070808", 1.0) }}>
           <TouchableOpacity onPress={() => setIsFullScreen(false)} className="absolute top-14 left-8 z-10">
             <FontAwesome5 name="times" size={50} color={Colorizer("#E9E9EA", 1.0)} />
           </TouchableOpacity>
