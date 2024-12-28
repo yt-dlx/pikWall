@@ -8,7 +8,9 @@
     "orientation": "portrait",
     "newArchEnabled": true,
     "userInterfaceStyle": "automatic",
-    "experiments": { "typedRoutes": true },
+    "experiments": {
+      "typedRoutes": true
+    },
     "icon": "./assets/picbook/white_nobg_3200.png",
     "ios": {
       "supportsTablet": true,
@@ -19,18 +21,51 @@
         "NSPhotoLibraryUsageDescription": "picBook™: requires access to your photo library to save images."
       }
     },
-    "extra": { "router": { "origin": false } },
-    "web": { "output": "static", "bundler": "metro", "favicon": "./assets/picbook/white_nobg_3200.png" },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "af725497-56d4-41c7-a878-0bddf6109500"
+      }
+    },
+    "web": {
+      "output": "static",
+      "bundler": "metro",
+      "favicon": "./assets/picbook/white_nobg_3200.png"
+    },
     "android": {
       "requiresFullScreen": true,
       "package": "com.shovit.picbook",
-      "permissions": ["READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"],
-      "adaptiveIcon": { "backgroundColor": "#0A0A0A", "foregroundImage": "./assets/picbook/white_nobg_3200.png" }
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "adaptiveIcon": {
+        "backgroundColor": "#0A0A0A",
+        "foregroundImage": "./assets/picbook/white_nobg_3200.png"
+      }
     },
     "plugins": [
-      ["expo-font", { "fonts": ["./assets/fonts/Kurale.ttf", "./assets/fonts/Brittany.otf"] }],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Kurale.ttf",
+            "./assets/fonts/Brittany.otf"
+          ]
+        }
+      ],
       "expo-router",
-      ["expo-splash-screen", { "imageWidth": 200, "resizeMode": "contain", "backgroundColor": "#0A0A0A", "image": "./assets/picbook/white_nobg_3200.png" }]
+      [
+        "expo-splash-screen",
+        {
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#0A0A0A",
+          "image": "./assets/picbook/white_nobg_3200.png"
+        }
+      ]
     ]
   }
 }
