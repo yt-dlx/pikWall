@@ -9,20 +9,20 @@ import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, wit
 // ============================================================================================
 // ============================================================================================
 const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay }) => {
-  const imageHeight = 96;
+  const imageHeight = 200;
   const totalHeight = images.length * imageHeight;
   const scrollValue = useSharedValue(0);
   const opacity = useSharedValue(0);
   useEffect(() => {
     opacity.value = withDelay(delay, withTiming(1, { duration: 1000 }));
-    scrollValue.value = withDelay(delay, withRepeat(withTiming(totalHeight, { duration: 15000 }), -1, reverse));
+    scrollValue.value = withDelay(delay, withRepeat(withTiming(totalHeight, { duration: 10000 }), -1, reverse));
   }, [scrollValue, totalHeight, reverse, delay, opacity]);
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ translateY: -scrollValue.value % totalHeight }], opacity: opacity.value }));
   return (
     <View className="flex-1 overflow-hidden px-1">
       <Animated.View style={animatedStyle} className="flex-col">
         {images.concat(images).map((uri: string, idx: number) => (
-          <Image key={idx} source={{ uri }} alt="Scrolling Image" className="w-full h-24 rounded-lg mb-1" resizeMode="cover" blurRadius={1.0} style={{ height: imageHeight }} />
+          <Image key={idx} source={{ uri }} alt="Scrolling Image" className="w-full h-24 rounded-lg mb-1" resizeMode="cover" blurRadius={2} style={{ height: imageHeight }} />
         ))}
       </Animated.View>
     </View>
@@ -37,13 +37,10 @@ const AnimatedTitle: React.FC = () => {
   }, [scale]);
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
   return (
-    <Animated.View style={animatedStyle} className="items-center">
-      <View style={{ backgroundColor: Colorizer("#000000", 0.69) }} className="rounded-full p-1">
-        <Image source={require("@/assets/picbook/picBook_red.png")} alt="logo" className="w-16 h-16 rounded-full border-2" style={{ borderColor: Colorizer("#E9E9EA", 1.0) }} resizeMode="contain" />
+    <Animated.View style={animatedStyle} className="items-center m-4">
+      <View style={{ backgroundColor: Colorizer("#000000", 0.69) }} className="rounded-full p-2">
+        <Image source={require("@/assets/picbook/picBook_white.png")} alt="logo" className="w-24 h-24 rounded-full border-2" style={{ borderColor: Colorizer("#E9E9EA", 1.0) }} resizeMode="contain" />
       </View>
-      <Text style={{ fontFamily: "Kurale", fontSize: 25, color: Colorizer("#E9E9EA", 1.0), letterSpacing: -1, lineHeight: 34 }} className="tracking-tight">
-        picBook™
-      </Text>
     </Animated.View>
   );
 };
@@ -62,15 +59,15 @@ const HeaderAnimated: React.FC = () => {
             <View className="flex-row mb-1">
               <AnimatedTitle />
             </View>
+            <Text style={{ fontFamily: "Kurale", fontSize: 25, color: Colorizer("#E9E9EA", 1.0), letterSpacing: -1, lineHeight: 34 }} className="tracking-tight">
+              picBook™
+            </Text>
             <View style={{ backgroundColor: Colorizer("#000000", 0.6), flexDirection: "row", alignItems: "center", marginTop: 8, paddingHorizontal: 8, paddingVertical: 4, borderRadius: 9999 }} className="flex-row items-center mt-2 px-2 py-1 rounded-full">
               <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: Colorizer("#E9E9EA", 1.0), marginRight: 4, opacity: 0.5 }} className="w-1.5 h-1.5 rounded-full bg-white mr-1 animate-pulse" />
               <Text style={{ fontFamily: "Kurale", fontSize: 12, fontWeight: "600", color: Colorizer("#E9E9EA", 1.0) }} className="text-sm">
                 Crafted with imagination and stories
               </Text>
             </View>
-            <Text style={{ fontFamily: "Kurale", fontSize: 14, color: Colorizer("#D1D5DB", 1.0), textAlign: "center", lineHeight: 20, fontWeight: "500", marginTop: 8 }} className="mt-2">
-              Dive into tales inspired by unique images and discover the art of visual environment telling.
-            </Text>
           </View>
         </View>
       </View>

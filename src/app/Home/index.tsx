@@ -145,7 +145,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
             <Animated.Image source={{ uri: currentImage }} style={{ width: "100%", height: "100%", opacity: fadeAnim, borderTopLeftRadius: 10, borderTopRightRadius: 10 }} resizeMode="cover" />
             <View className="absolute inset-0 flex items-center justify-center">
               <Text style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0) }} className="text-3xl text-center px-4">
-                {data.images[currentIndex].original_file_name}
+                {data.images[currentIndex].original_file_name.replace(".jpg", "")}
               </Text>
             </View>
           </View>
@@ -216,8 +216,8 @@ AlphabetGroup.displayName = "AlphabetGroup";
 // ============================================================================================
 // ============================================================================================
 const CategoryButton: React.FC<CategoryButtonExtendedProps> = memo(({ category, selected, onPress }) => (
-  <TouchableOpacity style={{ backgroundColor: selected ? "red" : Colorizer("#E9E9EA", 1.0) }} className="px-4 py-2 rounded-lg mx-1" activeOpacity={0.7} onPress={onPress}>
-    <Text style={{ fontFamily: "Kurale", color: selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0) }} className="text-sm font-bold">
+  <TouchableOpacity style={{ backgroundColor: selected ? "red" : Colorizer("#E9E9EA", 1.0) }} className="px-8 py-2 rounded-xl mx-1" activeOpacity={0.7} onPress={onPress}>
+    <Text style={{ fontFamily: "Kurale", color: selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0) }} className="text-lg font-bold">
       {category}
     </Text>
   </TouchableOpacity>

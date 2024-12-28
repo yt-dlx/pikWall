@@ -13,7 +13,7 @@ import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, wit
 // ============================================================================================
 // ============================================================================================
 const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay }) => {
-  const imageHeight = 144;
+  const imageHeight = 200;
   const totalHeight = images.length * imageHeight;
   const scrollValue = useSharedValue(0);
   const opacity = useSharedValue(0);
@@ -26,7 +26,7 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
     <View className="flex-1 overflow-hidden px-1">
       <Animated.View style={animatedStyle} className="flex-col">
         {images.concat(images).map((uri, idx) => (
-          <Image key={idx} source={{ uri }} alt="Scrolling Image" className="w-full h-36 rounded-lg mb-2" resizeMode="cover" blurRadius={1.2} style={{ height: imageHeight }} />
+          <Image key={idx} source={{ uri }} alt="Scrolling Image" className="w-full h-36 rounded-lg mb-2" resizeMode="cover" style={{ height: imageHeight }} />
         ))}
       </Animated.View>
     </View>
@@ -43,7 +43,7 @@ const AnimatedTitle: React.FC = () => {
   return (
     <Animated.View style={animatedStyle} className="items-center">
       <View style={{ backgroundColor: Colorizer("#070808", 0.9) }} className="rounded-full p-2">
-        <Image source={require("@/assets/picbook/picBook_red.png")} alt="logo" className="w-56 h-56 rounded-full border-2 border-white" resizeMode="contain" />
+        <Image source={require("@/assets/picbook/picBook_white.png")} alt="logo" className="w-56 h-56 rounded-full border-2 border-white" resizeMode="contain" />
       </View>
     </Animated.View>
   );
@@ -61,7 +61,7 @@ const IndexPage: React.FC = () => {
           <LinearGradient colors={["#070808", "transparent", "transparent", "#070808"]} locations={[0, 0.2, 0.8, 1]} style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }} />
           <View className="absolute inset-0 justify-center items-center">
             <AnimatedTitle />
-            <Text style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0), fontSize: 64, letterSpacing: -2 }} className="text-center">
+            <Text style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0), fontSize: 90 }} className="text-center">
               picBook™
             </Text>
             <View className="flex-row items-center px-4 py-2 rounded-full mt-8" style={{ backgroundColor: Colorizer("#070808", 1.0) }}>
@@ -72,14 +72,14 @@ const IndexPage: React.FC = () => {
               <TouchableOpacity
                 className="mt-5 rounded-4 overflow-hidden shadow-lg"
                 style={{
+                  elevation: 5,
                   marginTop: 20,
+                  shadowRadius: 4,
                   borderRadius: 16,
                   overflow: "hidden",
-                  shadowColor: Colorizer("#000000", 0.25),
-                  shadowOffset: { width: 0, height: 4 },
                   shadowOpacity: 0.25,
-                  shadowRadius: 4,
-                  elevation: 5
+                  shadowOffset: { width: 0, height: 4 },
+                  shadowColor: Colorizer("#000000", 0.25)
                 }}
               >
                 <LinearGradient colors={["rgba(255,255,255,0.95)", "rgba(255,255,255,1)"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={{ borderRadius: 10 }} className="flex-row items-center justify-center px-14 py-4">
@@ -95,5 +95,4 @@ const IndexPage: React.FC = () => {
     </View>
   );
 };
-
 export default IndexPage;

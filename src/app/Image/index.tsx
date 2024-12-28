@@ -179,7 +179,7 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
         {!imageLoading && (
           <View className="items-center">
             <Animated.View className="rounded-full justify-center items-center" style={{ transform: [{ rotate: rotateInterpolate }] }}>
-              <Image className="w-10 h-10 rounded-full bg-transparent" style={{ backgroundColor: Colorizer(selectedImage.primary, 1.0) }} source={require("@/assets/picbook/picBook_red.png")} resizeMode="contain" alt="image" />
+              <Image className="w-10 h-10 rounded-full bg-transparent" style={{ backgroundColor: Colorizer(selectedImage.primary, 1.0) }} source={require("@/assets/picbook/picBook_white.png")} resizeMode="contain" alt="image" />
             </Animated.View>
             <Text className="mb-6 text-center leading-6" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
               picBook™
