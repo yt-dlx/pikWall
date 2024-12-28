@@ -9,15 +9,18 @@ import LightningDatabase from "@/database/Lightning";
 import CinematicDatabase from "@/database/Cinematic";
 import PhotographyDatabase from "@/database/Photography";
 import HeaderAnimate from "@/components/HeaderAnimated";
-import React, { useEffect, useCallback, useState, memo } from "react";
+import React, { useEffect, useCallback, useState, useRef, memo } from "react";
 import { FontAwesome, Ionicons, FontAwesome5 } from "@expo/vector-icons";
 import { useAnimatedStyle, useSharedValue, withTiming, withRepeat, withSequence } from "react-native-reanimated";
 import { View, Text, TouchableOpacity, Image, FlatList, ScrollView, StatusBar, ListRenderItem, Animated } from "react-native";
-import { SubImageProps, SubImagesProps, CardTextProps, CardProps, AlphabetGroupProps, CategoryButtonProps, GroupedData } from "@/types/components";
-
+import { SubImagesProps, CardTextProps, CardProps, AlphabetGroupProps, CategoryButtonProps, GroupedData } from "@/types/components";
 interface Category {
   name: string;
   database: Record<string, EnvironmentEntry>;
+}
+interface CategoryButtonExtendedProps extends CategoryButtonProps {
+  selected: boolean;
+  onPress: () => void;
 }
 const categories: Category[] = [
   { name: "Anime", database: AnimeDatabase },
@@ -26,49 +29,45 @@ const categories: Category[] = [
   { name: "Cinematic", database: CinematicDatabase },
   { name: "Photography", database: PhotographyDatabase }
 ];
-
-const SubImage: React.FC<SubImageProps> = memo(({ image, index, onImagePress, environmentData }) => (
-  <Link
-    href={{
-      pathname: "./Image",
-      params: {
-        data: JSON.stringify({
-          selectedIndex: index,
-          data: environmentData.data,
-          environment_title: environmentData.environment_title,
-          environment_moral: environmentData.environment_moral,
-          environment_prompt: environmentData.environment_prompt
-        })
-      }
-    }}
-    asChild
-  >
-    <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="m-0.5 p-0.5 flex-1">
-      <View className="relative">
-        <Image
-          style={{ borderColor: Colorizer(image.primary, 0.2), shadowColor: Colorizer("#000000", 1.0) }}
-          className="rounded-lg shadow-2xl w-full h-[36.5px] border"
-          source={{ uri: image.previewLink }}
-          alt={`Sub Image ${index + 1}`}
-        />
-        <Text style={{ color: Colorizer("#E9E9EA", 1.0), fontFamily: "Kurale", backgroundColor: Colorizer(image.primary, 0.8) }} className="absolute top-1 left-1 px-1 rounded-lg text-sm">
-          ({index}): {image.primary}
-        </Text>
-      </View>
-    </TouchableOpacity>
-  </Link>
-));
-SubImage.displayName = "SubImage";
-
-const SubImages: React.FC<SubImagesProps> = memo(({ images, onImagePress, currentColors }) => (
-  <View className="flex flex-col justify-start rounded-lg mr-2" style={{ backgroundColor: Colorizer(currentColors[0], 0.1) }}>
-    {images.data.slice(0, 4).map((image, index) => (
-      <SubImage key={index} image={image} index={index} onImagePress={onImagePress} environmentData={images} />
+const SubImages: React.FC<SubImagesProps> = memo(({ images, onImagePress }) => (
+  <View className="flex flex-col justify-start">
+    {images.data.map((image, index) => (
+      <Link
+        key={index}
+        href={{
+          pathname: "./Image",
+          params: {
+            data: JSON.stringify({
+              selectedIndex: index,
+              data: images.data,
+              environment_title: images.environment_title,
+              environment_moral: images.environment_moral,
+              environment_prompt: images.environment_prompt
+            })
+          }
+        }}
+        asChild
+      >
+        <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="p-0.5 flex-1">
+          <View className="relative">
+            <Image source={{ uri: image.previewLink }} className="w-full h-24 rounded-lg border" style={{ borderColor: Colorizer(image.primary, 0.2) }} resizeMode="cover" />
+            <Text
+              className="absolute bottom-1 right-1 px-2 py-1 text-xs rounded-full"
+              style={{
+                color: Colorizer("#E9E9EA", 1.0),
+                fontFamily: "Kurale",
+                backgroundColor: Colorizer(image.primary, 1.0)
+              }}
+            >
+              {image.primary}
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </Link>
     ))}
   </View>
 ));
 SubImages.displayName = "SubImages";
-
 const CardText: React.FC<CardTextProps> = memo(({ data, currentIndex }) => {
   const colors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
   return (
@@ -83,11 +82,11 @@ const CardText: React.FC<CardTextProps> = memo(({ data, currentIndex }) => {
   );
 });
 CardText.displayName = "CardText";
-
 const Card: React.FC<CardProps> = memo(({ data }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [currentImage, setCurrentImage] = useState<string>(data.images[0]?.previewLink);
-  const currentColors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
+  const fadeAnim = useRef(new Animated.Value(1)).current;
+  const animationDuration = 2000;
   const updateImageState = useCallback(
     (nextIndex: number) => {
       setCurrentIndex(nextIndex);
@@ -95,36 +94,34 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
     },
     [data.images]
   );
-  const updateNextImage = useCallback(async () => {
-    const nextIndex = (currentIndex + 1) % data.images.length;
-    const nextImageUri = data.images[nextIndex]?.previewLink;
-    try {
-      await Image.prefetch(nextImageUri);
-      updateImageState(nextIndex);
-    } catch (error) {
-      console.error("Error preloading image:", error);
-    }
-  }, [currentIndex, data.images, updateImageState]);
-  const handleSubImagePress = useCallback(
-    async (previewLink: string, index: number) => {
-      try {
-        await Image.prefetch(previewLink);
-        updateImageState(index);
-      } catch (error) {
-        console.error("Error preloading image:", error);
-      }
+  const startFadeTransition = useCallback(
+    (nextIndex: number) => {
+      Animated.timing(fadeAnim, { toValue: 0, duration: animationDuration, useNativeDriver: true }).start(() => {
+        updateImageState(nextIndex);
+        Animated.timing(fadeAnim, { toValue: 1, duration: animationDuration, useNativeDriver: true }).start();
+      });
     },
-    [updateImageState]
+    [fadeAnim, animationDuration, updateImageState]
+  );
+  const updateNextImage = useCallback(() => {
+    const nextIndex = (currentIndex + 1) % data.images.length;
+    startFadeTransition(nextIndex);
+  }, [currentIndex, data.images.length, startFadeTransition]);
+  const handleSubImagePress = useCallback(
+    (previewLink: string, index: number) => {
+      startFadeTransition(index);
+    },
+    [startFadeTransition]
   );
   useEffect(() => {
-    const interval = setInterval(updateNextImage, 3000);
+    const interval = setInterval(updateNextImage, animationDuration * 2);
     return () => clearInterval(interval);
-  }, [updateNextImage, 3000]);
+  }, [updateNextImage, animationDuration]);
   useEffect(() => {
     updateImageState(0);
   }, [data, updateImageState]);
   return (
-    <View style={{ backgroundColor: Colorizer(currentColors[0], 0.1), borderColor: Colorizer(currentColors[0], 0.2) }} className="rounded-3xl overflow-hidden border">
+    <View className="rounded-3xl overflow-hidden border" style={{ backgroundColor: Colorizer("#111415", 1.0), borderColor: Colorizer(data.images[0].primary, 0.2) }}>
       <Link
         href={{
           pathname: "./Image",
@@ -142,50 +139,58 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
       >
         <TouchableOpacity>
           <View className="relative h-80 w-full overflow-hidden">
-            <Image
+            <Animated.Image
               source={{ uri: currentImage }}
               style={{
                 width: "100%",
                 height: "100%",
+                opacity: fadeAnim,
                 borderTopLeftRadius: 10,
                 borderTopRightRadius: 10
               }}
               resizeMode="cover"
             />
-            <View className="absolute inset-0 flex items-center justify-center" style={{ backgroundColor: Colorizer("#070808", 0.4) }}>
+            <View className="absolute inset-0 flex items-center justify-center" style={{ backgroundColor: Colorizer("#070808", 0.5) }}>
               <Text style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0) }} className="text-3xl text-center px-4">
-                {data.environment_title.replace(/_/g, " ") || ""}
+                {data.images[currentIndex].original_file_name}
               </Text>
             </View>
           </View>
         </TouchableOpacity>
       </Link>
-      <View className="flex flex-row p-2">
+      <View className="flex flex-row p-1">
         <View className="w-1/2">
           <SubImages
             onImagePress={handleSubImagePress}
             images={{
-              data: data.images,
+              data: data.images.slice(0, 2),
               selectedIndex: currentIndex,
               environment_title: data.environment_title,
               environment_moral: data.environment_moral,
               environment_prompt: data.environment_prompt
             }}
-            currentColors={currentColors}
           />
         </View>
         <View className="w-1/2">
-          <CardText data={data} currentIndex={currentIndex} />
+          <SubImages
+            onImagePress={handleSubImagePress}
+            images={{
+              data: data.images.slice(2, 4),
+              selectedIndex: currentIndex,
+              environment_title: data.environment_title,
+              environment_moral: data.environment_moral,
+              environment_prompt: data.environment_prompt
+            }}
+          />
         </View>
       </View>
-      <View style={{ backgroundColor: Colorizer(currentColors[0], 1.0), borderTopColor: Colorizer(currentColors[0], 1.0) }} className="border-t items-center justify-center">
+      <View className="border-t items-center justify-center" style={{ backgroundColor: Colorizer(data.images[currentIndex].primary, 1.0) }}>
         <Text style={{ fontFamily: "Kurale", color: Colorizer("#070808", 1.0), fontSize: 16, lineHeight: 20 }}>picBook™</Text>
       </View>
     </View>
   );
 });
 Card.displayName = "Card";
-
 const AlphabetGroup: React.FC<AlphabetGroupProps> = memo(({ title, items }) => {
   const bounce = useSharedValue(0);
   useEffect(() => {
@@ -213,11 +218,6 @@ const AlphabetGroup: React.FC<AlphabetGroupProps> = memo(({ title, items }) => {
   );
 });
 AlphabetGroup.displayName = "AlphabetGroup";
-
-interface CategoryButtonExtendedProps extends CategoryButtonProps {
-  selected: boolean;
-  onPress: () => void;
-}
 const CategoryButton: React.FC<CategoryButtonExtendedProps> = memo(({ category, selected, onPress }) => (
   <TouchableOpacity style={{ backgroundColor: selected ? "red" : Colorizer("#E9E9EA", 1.0) }} className="px-4 py-2 rounded-lg mx-1" activeOpacity={0.7} onPress={onPress}>
     <Text style={{ fontFamily: "Kurale", color: selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0) }} className="text-sm font-bold">
@@ -226,7 +226,6 @@ const CategoryButton: React.FC<CategoryButtonExtendedProps> = memo(({ category, 
   </TouchableOpacity>
 ));
 CategoryButton.displayName = "CategoryButton";
-
 const HeaderComponent: React.FC<{ categories: Category[]; selectedCategory: string; onSelectCategory: (categoryName: string) => void }> = memo(({ categories, selectedCategory, onSelectCategory }) => (
   <>
     <HeaderAnimate />
@@ -247,7 +246,6 @@ const HeaderComponent: React.FC<{ categories: Category[]; selectedCategory: stri
   </>
 ));
 HeaderComponent.displayName = "HeaderComponent";
-
 const HomePage = (): JSX.Element => {
   const [groupedData, setGroupedData] = useState<GroupedData>({});
   const [selectedCategory, setSelectedCategory] = useState<string>("Cinematic");

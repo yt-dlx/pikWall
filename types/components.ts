@@ -5,16 +5,8 @@ type RGBA = `rgba(${number}, ${number}, ${number}, ${number})`;
 type HEX = `#${string}`;
 type ColorValue = RGB | RGBA | HEX | string;
 
-interface SubImageProps {
-  image: ImageMetadata;
-  index: number;
-  onImagePress: (previewLink: string, index: number) => void;
-  environmentData: DownloadScreenProps;
-}
-
 interface SubImagesProps {
   images: DownloadScreenProps;
-  currentColors: ColorValue[];
   onImagePress: (previewLink: string, index: number) => void;
 }
 
@@ -61,7 +53,6 @@ export type {
   ColorValue,
   ImageMetadata,
   EnvironmentEntry,
-  SubImageProps,
   SubImagesProps,
   CardTextProps,
   CardProps,
