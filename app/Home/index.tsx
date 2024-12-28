@@ -11,8 +11,8 @@ import PhotographyDatabase from "@/database/Photography";
 import HeaderAnimate from "@/components/HeaderAnimated";
 import React, { useEffect, useCallback, useState, memo } from "react";
 import { FontAwesome, Ionicons, FontAwesome5 } from "@expo/vector-icons";
-import { View, Text, TouchableOpacity, Image, FlatList, ScrollView, StatusBar, ListRenderItem } from "react-native";
-import Animated, { useAnimatedStyle, useSharedValue, withTiming, interpolate, withRepeat, Easing, runOnJS, withSequence } from "react-native-reanimated";
+import { useAnimatedStyle, useSharedValue, withTiming, withRepeat, withSequence } from "react-native-reanimated";
+import { View, Text, TouchableOpacity, Image, FlatList, ScrollView, StatusBar, ListRenderItem, Animated } from "react-native";
 import { SubImageProps, SubImagesProps, CardTextProps, CardProps, AlphabetGroupProps, CategoryButtonProps, GroupedData } from "@/types/components";
 
 interface Category {
@@ -84,75 +84,42 @@ const CardText: React.FC<CardTextProps> = memo(({ data, currentIndex }) => {
 });
 CardText.displayName = "CardText";
 
-const AnimatedImage = Animated.createAnimatedComponent(Image);
-
 const Card: React.FC<CardProps> = memo(({ data }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [currentImage, setCurrentImage] = useState<string>(data.images[0]?.previewLink);
-  const [nextImage, setNextImage] = useState<string>(data.images[0]?.previewLink);
   const currentColors = [data.images[currentIndex].primary, data.images[currentIndex].secondary, data.images[currentIndex].tertiary];
-  const currentImageAnimation = useSharedValue(1);
-  const nextImageAnimation = useSharedValue(0);
   const updateImageState = useCallback(
     (nextIndex: number) => {
       setCurrentIndex(nextIndex);
       setCurrentImage(data.images[nextIndex]?.previewLink);
-      setNextImage(data.images[nextIndex]?.previewLink);
-      currentImageAnimation.value = 1;
-      nextImageAnimation.value = 0;
     },
-    [data.images, currentImageAnimation, nextImageAnimation]
+    [data.images]
   );
-  const currentImageStyle = useAnimatedStyle(() => ({
-    opacity: interpolate(currentImageAnimation.value, [0, 0.5, 1], [0, 1, 1]),
-    transform: [{ scale: interpolate(currentImageAnimation.value, [0, 0.7, 1], [1.1, 1, 1]) }],
-    position: "absolute",
-    width: "100%",
-    height: "100%",
-    borderTopLeftRadius: 24,
-    borderTopRightRadius: 24
-  }));
-  const nextImageStyle = useAnimatedStyle(() => ({
-    opacity: interpolate(nextImageAnimation.value, [0, 0.3, 1], [0, 0.3, 1]),
-    transform: [{ scale: 1 }],
-    position: "absolute",
-    width: "100%",
-    height: "100%",
-    borderTopLeftRadius: 24,
-    borderTopRightRadius: 24
-  }));
-  const animationConfig = { duration: 800, easing: Easing.inOut(Easing.ease) };
   const updateNextImage = useCallback(async () => {
     const nextIndex = (currentIndex + 1) % data.images.length;
     const nextImageUri = data.images[nextIndex]?.previewLink;
     try {
       await Image.prefetch(nextImageUri);
-      currentImageAnimation.value = withTiming(0, { duration: animationConfig.duration / 2, easing: Easing.out(Easing.ease) });
-      nextImageAnimation.value = withTiming(1, { duration: animationConfig.duration / 1.5, easing: Easing.inOut(Easing.ease) }, (finished) => {
-        if (finished) runOnJS(updateImageState)(nextIndex);
-      });
+      updateImageState(nextIndex);
     } catch (error) {
       console.error("Error preloading image:", error);
     }
-  }, [currentIndex, data.images, currentImageAnimation, nextImageAnimation, updateImageState]);
+  }, [currentIndex, data.images, updateImageState]);
   const handleSubImagePress = useCallback(
     async (previewLink: string, index: number) => {
       try {
         await Image.prefetch(previewLink);
-        currentImageAnimation.value = withTiming(0, { duration: animationConfig.duration / 2, easing: Easing.out(Easing.ease) });
-        nextImageAnimation.value = withTiming(1, { duration: animationConfig.duration / 1.5, easing: Easing.inOut(Easing.ease) }, (finished) => {
-          if (finished) runOnJS(updateImageState)(index);
-        });
+        updateImageState(index);
       } catch (error) {
         console.error("Error preloading image:", error);
       }
     },
-    [currentImageAnimation, nextImageAnimation, updateImageState]
+    [updateImageState]
   );
   useEffect(() => {
     const interval = setInterval(updateNextImage, 3000);
     return () => clearInterval(interval);
-  }, [updateNextImage]);
+  }, [updateNextImage, 3000]);
   useEffect(() => {
     updateImageState(0);
   }, [data, updateImageState]);
@@ -175,8 +142,16 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
       >
         <TouchableOpacity>
           <View className="relative h-80 w-full overflow-hidden">
-            <AnimatedImage style={currentImageStyle} source={{ uri: currentImage }} alt={data.environment_title} resizeMode="cover" />
-            <AnimatedImage style={nextImageStyle} source={{ uri: nextImage }} alt={data.environment_title} resizeMode="cover" />
+            <Image
+              source={{ uri: currentImage }}
+              style={{
+                width: "100%",
+                height: "100%",
+                borderTopLeftRadius: 10,
+                borderTopRightRadius: 10
+              }}
+              resizeMode="cover"
+            />
             <View className="absolute inset-0 flex items-center justify-center" style={{ backgroundColor: Colorizer("#070808", 0.4) }}>
               <Text style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0) }} className="text-3xl text-center px-4">
                 {data.environment_title.replace(/_/g, " ") || ""}
