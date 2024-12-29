@@ -1,4 +1,5 @@
 =================================================================( https://chatgpt.com/share/e/6770d071-bf10-8005-a2eb-4eae32f50f0d )=================================================================
+| Model: Portrait AI
 | Account Name: mohobon785@matmayer.com
 | Negative: Avoid Blurry, Incomplete, Or Deformed Features. Exclude Unnatural Proportions, Pixelation, Mismatched Textures, And Distorted Anatomy. Prioritize High-Definition Facial Details, Realistic Expressions, And Accurate Symmetry.
 =======================================================================================================================================================================================
