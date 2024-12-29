@@ -4,7 +4,6 @@
   "main": "expo-router/entry",
   "scripts": {
     "_placeholder": "==============================================",
-    "build:android:local": "expo prebuild && cd android && gradlew assembleLocal",
     "build:android:preview": "expo prebuild && cd android && gradlew assemblePreview",
     "build:android:production": "expo prebuild && cd android && gradlew assembleRelease",
     "build:android:development": "expo prebuild && cd android && gradlew assembleDebug",
