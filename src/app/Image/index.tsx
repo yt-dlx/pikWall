@@ -132,7 +132,10 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
   return visible ? (
     <View className="absolute inset-0 justify-center items-center">
       <View className="absolute inset-0" style={{ backgroundColor: Colorizer(primaryColor, 0.3) }} />
-      <View className="bg-white rounded-lg p-5 items-center shadow-lg" style={{ backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 }}>
+      <View
+        className="bg-white rounded-lg p-5 items-center shadow-lg"
+        style={{ backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 }}
+      >
         <ActivityIndicator size="large" color={Colorizer(primaryColor, 1.0)} />
         <Text className="mt-3 text-lg" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Kurale" }}>
           Downloading...
@@ -168,22 +171,27 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
   const scaleValue = useRef(new Animated.Value(1.1)).current;
   const rotateValue = useRef(new Animated.Value(0)).current;
   useEffect(() => {
-    const scaleAnimation = Animated.sequence([Animated.timing(scaleValue, { toValue: 1.4, duration: 4000, easing: Easing.inOut(Easing.ease), useNativeDriver: true }), Animated.timing(scaleValue, { toValue: 1.1, duration: 2000, easing: Easing.inOut(Easing.ease), useNativeDriver: true })]);
+    const scaleAnimation = Animated.sequence([
+      Animated.timing(scaleValue, { toValue: 1.4, duration: 4000, easing: Easing.inOut(Easing.ease), useNativeDriver: true }),
+      Animated.timing(scaleValue, { toValue: 1.1, duration: 2000, easing: Easing.inOut(Easing.ease), useNativeDriver: true })
+    ]);
     Animated.loop(scaleAnimation).start();
     Animated.loop(Animated.timing(rotateValue, { toValue: 1, duration: 4000, easing: Easing.linear, useNativeDriver: true })).start();
   }, [scaleValue, rotateValue]);
-  const rotateInterpolate = rotateValue.interpolate({ inputRange: [0, 1], outputRange: ["0deg", "360deg"] });
   return (
     <View className="relative">
       <View className="absolute inset-0 justify-center items-center z-50">
         {!imageLoading && (
           <View className="items-center">
-            <Animated.View className="rounded-full justify-center items-center" style={{ transform: [{ rotate: rotateInterpolate }] }}>
-              <Image className="w-10 h-10 rounded-full bg-transparent" style={{ backgroundColor: Colorizer(selectedImage.primary, 1.0) }} source={require("@/assets/picbook/picBook_white.png")} resizeMode="contain" alt="image" />
+            <Animated.View className="rounded-full justify-center items-center">
+              <Image
+                className="w-16 h-16 rounded-full"
+                style={{ backgroundColor: Colorizer("#070808", 0.8) }}
+                source={require("@/assets/picbook/picbook_white.png")}
+                resizeMode="contain"
+                alt="image"
+              />
             </Animated.View>
-            <Text className="mb-6 text-center leading-6" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
-              picBook™
-            </Text>
           </View>
         )}
       </View>
@@ -210,7 +218,12 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
           }}
         />
       </View>
-      <TouchableOpacity onPress={onViewFullScreen} activeOpacity={0.8} className="absolute bottom-5 right-5 px-4 py-2 rounded-full z-50" style={{ backgroundColor: Colorizer(selectedImage.primary, 0.8) }}>
+      <TouchableOpacity
+        onPress={onViewFullScreen}
+        activeOpacity={0.8}
+        className="absolute bottom-5 right-5 px-4 py-2 rounded-full z-50"
+        style={{ backgroundColor: Colorizer(selectedImage.primary, 0.8) }}
+      >
         <Text className="text-white text-base" style={{ fontFamily: "Kurale" }}>
           View FullScreen
         </Text>

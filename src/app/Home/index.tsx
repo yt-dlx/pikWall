@@ -245,7 +245,7 @@ const HeaderComponent: React.FC<{ categories: Category[]; selectedCategory: stri
 HeaderComponent.displayName = "HeaderComponent";
 const HomePage = (): JSX.Element => {
   const [cardData, setCardData] = useState<EnvironmentEntry[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState<string>("Cinematic");
+  const [selectedCategory, setSelectedCategory] = useState<string>("Anime");
   useEffect(() => {
     const processImageUrls = (entry: EnvironmentEntry): EnvironmentEntry => ({
       ...entry,

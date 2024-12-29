@@ -49,7 +49,7 @@ const AnimatedTitle: React.FC = () => {
   return (
     <Animated.View style={animatedStyle} className="items-center">
       <View className="rounded-full p-3 shadow-2xl" style={{ backgroundColor: Colorizer("#070808", 0.9) }}>
-        <Image source={require("@/assets/picbook/picBook_red.png")} alt="logo" className="w-60 h-60 rounded-full border-2 border-white/20" resizeMode="contain" />
+        <Image source={require("@/assets/picbook/picbook_red.png")} alt="logo" className="w-60 h-60 rounded-full border-2 border-white/20" resizeMode="contain" />
       </View>
     </Animated.View>
   );
