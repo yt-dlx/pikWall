@@ -3152,6 +3152,11 @@ expo-haptics@~14.0.0:
   resolved "https://registry.yarnpkg.com/expo-haptics/-/expo-haptics-14.0.0.tgz#b3ccea2ed5c7f4c2505e2e8cbfa799091b185303"
   integrity sha512-5tYJN+2axYF22BtG1elBQAV1aZPUOCtr9sItClfm4jDoekGiPCxZG/nylcA3DVh2bUHMSll4Y98qjFFFhwZ1Cw==
 
+expo-image@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/expo-image/-/expo-image-2.0.3.tgz#0a39a51af7af786226aa5ffc000277ca0e564a52"
+  integrity sha512-+YnHTQv8jbXaut3FY7TDhNiSiGZ927C329mHvTZWV4Fyj32/Hjhhmk7dqq9I6LrA0nqBBiJjFj3u6VdHvCBnZg==
+
 expo-intent-launcher@^12.0.1:
   version "12.0.1"
   resolved "https://registry.yarnpkg.com/expo-intent-launcher/-/expo-intent-launcher-12.0.1.tgz#fe7853d7175c2998ebaf40b553248570301b7324"

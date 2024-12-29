@@ -1,6 +1,7 @@
 // app/index.tsx
 /* eslint-disable @typescript-eslint/no-require-imports */
 import { Link } from "expo-router";
+import { Image } from "expo-image";
 import React, { useEffect } from "react";
 import imageSets from "@/database/static";
 import Footer from "@/components/Footer";
@@ -8,7 +9,7 @@ import Colorizer from "@/components/Colorizer";
 import { MaterialIcons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { ScrollingSlotProps } from "@/types/components";
-import { Text, View, Image, TouchableOpacity } from "react-native";
+import { Text, View, TouchableOpacity } from "react-native";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence, withDelay, withSpring, Easing } from "react-native-reanimated";
 // ============================================================================================
 // ============================================================================================
@@ -23,12 +24,15 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
     scale.value = withDelay(delay, withSpring(1));
     scrollValue.value = withDelay(delay, withRepeat(withTiming(totalHeight, { duration: 15000, easing: Easing.bezier(0.25, 0.1, 0.25, 1) }), -1, reverse));
   }, [scrollValue, totalHeight, reverse, delay, opacity, scale]);
-  const animatedStyle = useAnimatedStyle(() => ({ transform: [{ translateY: -scrollValue.value % totalHeight }, { scale: scale.value }], opacity: opacity.value }));
+  const animatedStyle = useAnimatedStyle(() => ({
+    transform: [{ translateY: -scrollValue.value % totalHeight }, { scale: scale.value }],
+    opacity: opacity.value
+  }));
   return (
     <View className="flex-1 overflow-hidden px-0.5">
       <Animated.View style={animatedStyle} className="flex-col">
         {images.concat(images).map((uri, idx) => (
-          <Image key={idx} source={{ uri }} alt="Scrolling Image" className="w-full rounded-xl mb-2 border border-white/10" style={{ height: imageHeight }} resizeMode="cover" />
+          <Image key={idx} source={uri} contentFit="cover" cachePolicy="disk" style={{ height: imageHeight }} className="w-full rounded-xl mb-2 border border-white/10" />
         ))}
       </Animated.View>
     </View>
@@ -48,8 +52,14 @@ const AnimatedTitle: React.FC = () => {
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
   return (
     <Animated.View style={animatedStyle} className="items-center">
-      <View className="rounded-full p-3 shadow-2xl" style={{ backgroundColor: Colorizer("#070808", 0.9) }}>
-        <Image source={require("@/assets/picbook/picbook_red.png")} alt="logo" className="w-60 h-60 rounded-full border-2 border-white/20" resizeMode="contain" />
+      <View className="rounded-full p-3 shadow-2xl" style={{ backgroundColor: Colorizer("#070808", 0.9), justifyContent: "center", alignItems: "center" }}>
+        <Image
+          alt="logo"
+          cachePolicy="disk"
+          contentFit="contain"
+          source={require("@/assets/picbook/picbook_red.png")}
+          style={{ width: 240, height: 240, borderWidth: 2, borderRadius: 120, borderColor: "rgba(255, 255, 255, 0.2)" }}
+        />
       </View>
     </Animated.View>
   );
