@@ -1,5 +1,6 @@
 // app/Home/index.tsx
 import { Link } from "expo-router";
+import { Image } from "expo-image";
 import Footer from "@/components/Footer";
 import Colorizer from "@/components/Colorizer";
 import AnimeDatabase from "@/database/Anime";
@@ -12,16 +13,19 @@ import PhotographyDatabase from "@/database/Photography";
 import HeaderAnimate from "@/components/HeaderAnimated";
 import React, { useEffect, useCallback, useState, memo } from "react";
 import { SubImagesProps, CardProps, CategoryButtonProps } from "@/types/components";
-import { View, Text, TouchableOpacity, Image, FlatList, ScrollView, StatusBar } from "react-native";
+import { View, Text, TouchableOpacity, FlatList, ScrollView, StatusBar } from "react-native";
 import Animated, { Easing, runOnJS, useSharedValue, useAnimatedStyle, withTiming } from "react-native-reanimated";
+
 interface Category {
   name: string;
   database: Record<string, EnvironmentEntry>;
 }
+
 interface CategoryButtonExtendedProps extends CategoryButtonProps {
   selected: boolean;
   onPress: () => void;
 }
+const AnimatedImage = Animated.createAnimatedComponent(Image);
 const categories: Category[] = [
   { name: "Anime", database: AnimeDatabase },
   { name: "Portrait", database: PortraitDatabase },
@@ -29,6 +33,7 @@ const categories: Category[] = [
   { name: "Cinematic", database: CinematicDatabase },
   { name: "Photography", database: PhotographyDatabase }
 ];
+
 const SubImages: React.FC<SubImagesProps> = memo(({ images, onImagePress }) => (
   <View className="flex flex-col justify-start">
     {images.data.map((image, index) => (
@@ -50,10 +55,25 @@ const SubImages: React.FC<SubImagesProps> = memo(({ images, onImagePress }) => (
       >
         <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="p-0.5 flex-1">
           <View className="relative">
-            <Image source={{ uri: image.previewLink }} className="w-full h-16 rounded border" style={{ borderColor: Colorizer(image.primary, 0.5) }} resizeMode="cover" />
+            <Image
+              source={{ uri: image.previewLink }}
+              style={{
+                width: "100%",
+                height: 64,
+                borderRadius: 4,
+                borderWidth: 1,
+                borderColor: Colorizer(image.primary, 0.5)
+              }}
+              cachePolicy="disk"
+              contentFit="cover"
+            />
             <Text
               className="absolute bottom-0.5 right-0.5 px-1 py-0.5 text-[10px] rounded-2xl"
-              style={{ color: Colorizer("#E9E9EA", 1.0), fontFamily: "Kurale", backgroundColor: Colorizer(image.primary, 1.0) }}
+              style={{
+                color: Colorizer("#E9E9EA", 1.0),
+                fontFamily: "Kurale",
+                backgroundColor: Colorizer(image.primary, 1.0)
+              }}
             >
               {image.primary}
             </Text>
@@ -64,6 +84,7 @@ const SubImages: React.FC<SubImagesProps> = memo(({ images, onImagePress }) => (
   </View>
 ));
 SubImages.displayName = "SubImages";
+
 const Card: React.FC<CardProps> = memo(({ data }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [currentImage, setCurrentImage] = useState<string>(data.images[0]?.previewLink);
@@ -119,7 +140,10 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
     updateImageState(0);
   }, [data, updateImageState]);
   const imageStyle = useAnimatedStyle(() => ({ opacity: fadeValue.value }));
-  const textStyle = useAnimatedStyle(() => ({ opacity: textOpacity.value, transform: [{ scale: textScale.value }] }));
+  const textStyle = useAnimatedStyle(() => ({
+    opacity: textOpacity.value,
+    transform: [{ scale: textScale.value }]
+  }));
   return (
     <View className="rounded-2xl overflow-hidden border" style={{ backgroundColor: Colorizer("#111415", 1.0), borderColor: Colorizer(data.images[currentIndex].primary, 0.4) }}>
       <Link
@@ -139,7 +163,19 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
       >
         <TouchableOpacity>
           <View className="relative aspect-[9/16] w-full overflow-hidden">
-            <Animated.Image source={{ uri: currentImage }} style={[{ width: "100%", height: "100%", borderTopLeftRadius: 8, borderTopRightRadius: 8 }, imageStyle]} resizeMode="cover" />
+            <AnimatedImage
+              source={{ uri: currentImage }}
+              style={[
+                {
+                  width: "100%",
+                  height: "100%",
+                  borderTopLeftRadius: 8,
+                  borderTopRightRadius: 8
+                },
+                imageStyle
+              ]}
+              contentFit="cover"
+            />
             <View className="absolute top-0 left-0 right-0 items-center justify-start">
               <Animated.Text
                 style={[
@@ -195,6 +231,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
   );
 });
 Card.displayName = "Card";
+
 function getCategoryIcon(category: string, selected: boolean) {
   const iconColor = selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0);
   switch (category) {
@@ -212,6 +249,7 @@ function getCategoryIcon(category: string, selected: boolean) {
       return <Ionicons name="help-circle-outline" size={16} color={iconColor} />;
   }
 }
+
 const CategoryButton: React.FC<CategoryButtonExtendedProps> = memo(({ category, selected, onPress }) => (
   <TouchableOpacity style={{ backgroundColor: selected ? Colorizer("#BE2528", 1.0) : Colorizer("#E9E9EA", 1.0) }} className="px-6 py-2 rounded-2xl mx-0.5" activeOpacity={0.7} onPress={onPress}>
     <View className="flex-row items-center">
@@ -223,6 +261,7 @@ const CategoryButton: React.FC<CategoryButtonExtendedProps> = memo(({ category, 
   </TouchableOpacity>
 ));
 CategoryButton.displayName = "CategoryButton";
+
 const HeaderComponent: React.FC<{ categories: Category[]; selectedCategory: string; onSelectCategory: (categoryName: string) => void }> = memo(({ categories, selectedCategory, onSelectCategory }) => (
   <>
     <HeaderAnimate />
@@ -243,6 +282,7 @@ const HeaderComponent: React.FC<{ categories: Category[]; selectedCategory: stri
   </>
 ));
 HeaderComponent.displayName = "HeaderComponent";
+
 const HomePage = (): JSX.Element => {
   const [cardData, setCardData] = useState<EnvironmentEntry[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>("Anime");
@@ -295,4 +335,5 @@ const HomePage = (): JSX.Element => {
     </View>
   );
 };
+
 export default HomePage;
