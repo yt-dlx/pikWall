@@ -3,10 +3,6 @@
   "name": "picbook",
   "main": "expo-router/entry",
   "scripts": {
-    "emulator:android:local": "expo run:android --profile local",
-    "emulator:android:preview": "expo run:android --profile preview",
-    "emulator:android:production": "expo run:android --profile production",
-    "emulator:android:development": "expo run:android --profile development",
     "_placeholder": "==============================================",
     "build:android:local": "expo prebuild && cd android && gradlew assembleLocal",
     "build:android:preview": "expo prebuild && cd android && gradlew assemblePreview",
@@ -29,13 +25,11 @@
     "build:cloud:production:ios": "eas build --profile production --platform ios",
     "build:cloud:production:android": "eas build --profile production --platform android",
     "______placeholder": "================================================",
-    "Android": "expo run:android",
-    "Web": "expo start --web",
-    "Start": "expo start",
-    "Ios": "expo run:ios",
-    "Lint": "expo lint",
     "android": "expo run:android",
-    "ios": "expo run:ios"
+    "web": "expo start --web",
+    "start": "expo start",
+    "ios": "expo run:ios",
+    "lint": "expo lint"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.4",
