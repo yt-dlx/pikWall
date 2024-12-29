@@ -9,7 +9,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { ScrollingSlotProps } from "@/types/components";
 import { Text, View, Image, TouchableOpacity } from "react-native";
-import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence, withDelay } from "react-native-reanimated";
+import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence, withDelay, withSpring, Easing } from "react-native-reanimated";
 // ============================================================================================
 // ============================================================================================
 const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay }) => {
@@ -17,16 +17,18 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
   const totalHeight = images.length * imageHeight;
   const scrollValue = useSharedValue(0);
   const opacity = useSharedValue(0);
+  const scale = useSharedValue(0.95);
   useEffect(() => {
-    opacity.value = withDelay(delay, withTiming(1, { duration: 1000 }));
-    scrollValue.value = withDelay(delay, withRepeat(withTiming(totalHeight, { duration: 10000 }), -1, reverse));
-  }, [scrollValue, totalHeight, reverse, delay, opacity]);
-  const animatedStyle = useAnimatedStyle(() => ({ transform: [{ translateY: -scrollValue.value % totalHeight }], opacity: opacity.value }));
+    opacity.value = withDelay(delay, withTiming(1, { duration: 1500 }));
+    scale.value = withDelay(delay, withSpring(1));
+    scrollValue.value = withDelay(delay, withRepeat(withTiming(totalHeight, { duration: 15000, easing: Easing.bezier(0.25, 0.1, 0.25, 1) }), -1, reverse));
+  }, [scrollValue, totalHeight, reverse, delay, opacity, scale]);
+  const animatedStyle = useAnimatedStyle(() => ({ transform: [{ translateY: -scrollValue.value % totalHeight }, { scale: scale.value }], opacity: opacity.value }));
   return (
-    <View className="flex-1 overflow-hidden px-1">
+    <View className="flex-1 overflow-hidden px-0.5">
       <Animated.View style={animatedStyle} className="flex-col">
         {images.concat(images).map((uri, idx) => (
-          <Image key={idx} source={{ uri }} alt="Scrolling Image" className="w-full h-36 rounded-lg mb-2" resizeMode="cover" style={{ height: imageHeight }} />
+          <Image key={idx} source={{ uri }} alt="Scrolling Image" className="w-full rounded-xl mb-2 border border-white/10" style={{ height: imageHeight }} resizeMode="cover" />
         ))}
       </Animated.View>
     </View>
@@ -37,13 +39,13 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
 const AnimatedTitle: React.FC = () => {
   const scale = useSharedValue(0.95);
   useEffect(() => {
-    scale.value = withRepeat(withSequence(withTiming(0.5, { duration: 2000 }), withTiming(0.8, { duration: 2000 })), -1, true);
+    scale.value = withRepeat(withSequence(withTiming(1.05, { duration: 2000, easing: Easing.bezier(0.4, 0, 0.2, 1) }), withTiming(0.95, { duration: 2000, easing: Easing.bezier(0.4, 0, 0.2, 1) })), -1, true);
   }, [scale]);
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
   return (
     <Animated.View style={animatedStyle} className="items-center">
-      <View style={{ backgroundColor: Colorizer("#070808", 0.9) }} className="rounded-full p-2">
-        <Image source={require("@/assets/picbook/picBook_white.png")} alt="logo" className="w-56 h-56 rounded-full border-2 border-white" resizeMode="contain" />
+      <View className="rounded-full p-3 shadow-2xl" style={{ backgroundColor: Colorizer("#070808", 0.9) }}>
+        <Image source={require("@/assets/picbook/picBook_white.png")} alt="logo" className="w-60 h-60 rounded-full border-2 border-white/20" resizeMode="contain" />
       </View>
     </Animated.View>
   );
@@ -51,41 +53,48 @@ const AnimatedTitle: React.FC = () => {
 // ============================================================================================
 // ============================================================================================
 const IndexPage: React.FC = () => {
+  const buttonScale = useSharedValue(1);
+  const buttonAnimatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: buttonScale.value }] }));
+  const onPressIn = () => {
+    buttonScale.value = withSpring(0.95);
+  };
+  const onPressOut = () => {
+    buttonScale.value = withSpring(1);
+  };
   return (
     <View style={{ backgroundColor: Colorizer("#070808", 1.0) }} className="h-full w-full">
       <View className="flex-1 justify-center items-center relative">
         <View className="flex-row h-full overflow-hidden relative">
           {imageSets.map((images, slotIndex) => (
-            <ScrollingSlot key={slotIndex} images={images} reverse={slotIndex % 2 === 0} delay={slotIndex * 200} />
+            <ScrollingSlot key={slotIndex} images={images} reverse={slotIndex % 2 === 0} delay={slotIndex * 300} />
           ))}
-          <LinearGradient colors={["#070808", "transparent", "transparent", "#070808"]} locations={[0, 0.2, 0.8, 1]} style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }} />
+          <LinearGradient colors={["rgba(7,8,8,1)", "rgba(7,8,8,0.5)", "rgba(7,8,8,0.2)", "rgba(7,8,8,0.5)", "rgba(7,8,8,1)"]} locations={[0, 0.2, 0.5, 0.8, 1]} className="absolute inset-0" />
           <View className="absolute inset-0 justify-center items-center">
             <AnimatedTitle />
-            <Text style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0), fontSize: 90 }} className="text-center">
-              picBook™
-            </Text>
-            <View className="flex-row items-center px-4 py-2 rounded-full mt-8" style={{ backgroundColor: Colorizer("#070808", 1.0) }}>
-              <View className="w-2 h-2 rounded-full mr-2 opacity-50" style={{ backgroundColor: Colorizer("#E9E9EA", 1.0) }} />
-              <Text style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0), fontSize: 14 }}> Crafted with imagination and stories </Text>
+            <View>
+              <Text className="text-center" style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0), fontSize: 90, textShadowColor: "rgba(0,0,0,0.75)", textShadowOffset: { width: 2, height: 2 }, textShadowRadius: 15 }}>
+                picBook
+              </Text>
+              <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0), fontSize: 90, textShadowColor: "rgba(255,255,255,0.1)", textShadowOffset: { width: -1, height: -1 }, textShadowRadius: 10 }}>
+                picBook
+              </Text>
+            </View>
+            <View className="flex-row items-center px-6 py-3 rounded-full mt-8 backdrop-blur-lg" style={{ backgroundColor: "rgba(255,255,255,0.1)" }}>
+              <View className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: Colorizer("#E9E9EA", 0.8) }} />
+              <Text className="text-base" style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 0.9) }}>
+                Crafted with imagination and stories
+              </Text>
             </View>
             <Link href="./Home" asChild>
-              <TouchableOpacity
-                className="mt-5 rounded-4 overflow-hidden shadow-lg"
-                style={{
-                  elevation: 5,
-                  marginTop: 20,
-                  shadowRadius: 4,
-                  borderRadius: 16,
-                  overflow: "hidden",
-                  shadowOpacity: 0.25,
-                  shadowOffset: { width: 0, height: 4 },
-                  shadowColor: Colorizer("#000000", 0.25)
-                }}
-              >
-                <LinearGradient colors={["rgba(255,255,255,0.95)", "rgba(255,255,255,1)"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={{ borderRadius: 10 }} className="flex-row items-center justify-center px-14 py-4">
-                  <MaterialIcons name="photo-camera" size={24} color={Colorizer("#070808", 1.0)} className="mr-2" />
-                  <Text style={{ fontFamily: "Kurale", color: Colorizer("#070808", 1.0), fontSize: 18 }}> Start Exploring </Text>
-                </LinearGradient>
+              <TouchableOpacity onPressIn={onPressIn} onPressOut={onPressOut} className="mt-8 rounded-2xl overflow-hidden shadow-2xl">
+                <Animated.View style={buttonAnimatedStyle}>
+                  <LinearGradient colors={["#ffffff", "#f0f0f0"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} className="flex-row items-center justify-center px-16 py-5 rounded-2xl">
+                    <MaterialIcons name="photo-camera" size={28} color={Colorizer("#070808", 1.0)} className="mr-3" />
+                    <Text className="text-xl font-bold" style={{ fontFamily: "Kurale", color: Colorizer("#070808", 1.0) }}>
+                      Start Exploring
+                    </Text>
+                  </LinearGradient>
+                </Animated.View>
               </TouchableOpacity>
             </Link>
           </View>
@@ -95,4 +104,5 @@ const IndexPage: React.FC = () => {
     </View>
   );
 };
+
 export default IndexPage;
