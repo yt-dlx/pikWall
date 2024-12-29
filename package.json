@@ -4,9 +4,9 @@
   "main": "expo-router/entry",
   "scripts": {
     "_placeholder": "==============================================",
-    "build:android:preview": "expo prebuild && cd android && gradlew assemblePreview",
-    "build:android:production": "expo prebuild && cd android && gradlew assembleRelease",
-    "build:android:development": "expo prebuild && cd android && gradlew assembleDebug",
+    "build:android:preview": "rimraf android && expo prebuild && android/gradlew assemblePreview",
+    "build:android:production": "rimraf android && expo prebuild && android/gradlew assembleRelease",
+    "build:android:development": "rimraf android && expo prebuild && android/gradlew assembleDebug",
     "__placeholder": "========================================================",
     "build:cloud:development:android": "eas build --profile development --platform android",
     "build:cloud:development:ios": "eas build --profile development --platform ios",
@@ -26,8 +26,8 @@
     "______placeholder": "================================================",
     "android": "expo run:android",
     "web": "expo start --web",
-    "start": "expo start",
     "ios": "expo run:ios",
+    "start": "expo start",
     "lint": "expo lint"
   },
   "dependencies": {
