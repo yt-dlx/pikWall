@@ -1,36 +1,71 @@
 {
   "expo": {
+    "version": "1.0.0",
     "owner": "shovit",
-    "version": "4.0.0",
-    "slug": "picBook™",
-    "name": "picBook™",
-    "scheme": "picBook™",
+    "slug": "picBook",
+    "name": "picBook",
+    "scheme": "picBook",
     "orientation": "portrait",
     "newArchEnabled": true,
     "userInterfaceStyle": "automatic",
-    "experiments": { "typedRoutes": true },
+    "experiments": {
+      "typedRoutes": true
+    },
     "icon": "./src/assets/picbook/picbook_red.png",
     "ios": {
       "supportsTablet": true,
       "requiresFullScreen": true,
       "bundleIdentifier": "com.shovit.picBook",
       "infoPlist": {
-        "NSPhotoLibraryAddUsageDescription": "picBook™: needs permission to save photos to your library.",
-        "NSPhotoLibraryUsageDescription": "picBook™: requires access to your photo library to save images."
+        "NSPhotoLibraryAddUsageDescription": "picBook: needs permission to save photos to your library.",
+        "NSPhotoLibraryUsageDescription": "picBook: requires access to your photo library to save images."
       }
     },
-    "web": { "output": "static", "bundler": "metro", "favicon": "./src/assets/picbook/picbook_red.png" },
-    "extra": { "router": { "origin": false }, "eas": { "projectId": "af725497-56d4-41c7-a878-0bddf6109500" } },
+    "web": {
+      "output": "static",
+      "bundler": "metro",
+      "favicon": "./src/assets/picbook/picbook_red.png"
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "8d28e42e-f194-40ac-b49e-442b27d0d6ef"
+      }
+    },
     "android": {
       "requiresFullScreen": true,
       "package": "com.shovit.picBook",
-      "permissions": ["READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"],
-      "adaptiveIcon": { "backgroundColor": "#0A0A0A", "foregroundImage": "./src/assets/picbook/picbook_red.png" }
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "adaptiveIcon": {
+        "backgroundColor": "#0A0A0A",
+        "foregroundImage": "./src/assets/picbook/picbook_red.png"
+      }
     },
     "plugins": [
       "expo-router",
-      ["expo-font", { "fonts": ["./src/assets/fonts/Kurale.ttf", "./src/assets/fonts/Brittany.otf"] }],
-      ["expo-splash-screen", { "imageWidth": 200, "resizeMode": "contain", "backgroundColor": "#0A0A0A", "image": "./src/assets/picbook/picbook_red.png" }]
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./src/assets/fonts/Kurale.ttf",
+            "./src/assets/fonts/Brittany.otf"
+          ]
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#0A0A0A",
+          "image": "./src/assets/picbook/picbook_red.png"
+        }
+      ]
     ]
   }
 }
