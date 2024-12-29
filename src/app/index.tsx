@@ -39,13 +39,17 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
 const AnimatedTitle: React.FC = () => {
   const scale = useSharedValue(0.95);
   useEffect(() => {
-    scale.value = withRepeat(withSequence(withTiming(1.05, { duration: 2000, easing: Easing.bezier(0.4, 0, 0.2, 1) }), withTiming(0.95, { duration: 2000, easing: Easing.bezier(0.4, 0, 0.2, 1) })), -1, true);
+    scale.value = withRepeat(
+      withSequence(withTiming(1.05, { duration: 2000, easing: Easing.bezier(0.4, 0, 0.2, 1) }), withTiming(0.95, { duration: 2000, easing: Easing.bezier(0.4, 0, 0.2, 1) })),
+      -1,
+      true
+    );
   }, [scale]);
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
   return (
     <Animated.View style={animatedStyle} className="items-center">
       <View className="rounded-full p-3 shadow-2xl" style={{ backgroundColor: Colorizer("#070808", 0.9) }}>
-        <Image source={require("@/assets/picbook/picBook_white.png")} alt="logo" className="w-60 h-60 rounded-full border-2 border-white/20" resizeMode="contain" />
+        <Image source={require("@/assets/picbook/picBook_red.png")} alt="logo" className="w-60 h-60 rounded-full border-2 border-white/20" resizeMode="contain" />
       </View>
     </Animated.View>
   );
@@ -72,23 +76,26 @@ const IndexPage: React.FC = () => {
           <View className="absolute inset-0 justify-center items-center">
             <AnimatedTitle />
             <View>
-              <Text className="text-center" style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0), fontSize: 90, textShadowColor: "rgba(0,0,0,0.75)", textShadowOffset: { width: 2, height: 2 }, textShadowRadius: 15 }}>
+              <Text
+                className="text-center"
+                style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0), fontSize: 90, textShadowColor: "rgba(0,0,0,0.75)", textShadowOffset: { width: 2, height: 2 }, textShadowRadius: 15 }}
+              >
                 picBook
               </Text>
-              <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0), fontSize: 90, textShadowColor: "rgba(255,255,255,0.1)", textShadowOffset: { width: -1, height: -1 }, textShadowRadius: 10 }}>
+              <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0), fontSize: 90 }}>
                 picBook
               </Text>
             </View>
-            <View className="flex-row items-center px-6 py-3 rounded-full mt-8 backdrop-blur-lg" style={{ backgroundColor: "rgba(255,255,255,0.1)" }}>
-              <View className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: Colorizer("#E9E9EA", 0.8) }} />
-              <Text className="text-base" style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 0.9) }}>
+            <View className="flex-row items-center px-6 py-3">
+              <View className="w-4 h-4 rounded-full mr-3" style={{ backgroundColor: Colorizer("#E9E9EA", 1.0) }} />
+              <Text className="text-base font-bold" style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 0.9) }}>
                 Crafted with imagination and stories
               </Text>
             </View>
             <Link href="./Home" asChild>
-              <TouchableOpacity onPressIn={onPressIn} onPressOut={onPressOut} className="mt-8 rounded-2xl overflow-hidden shadow-2xl">
+              <TouchableOpacity onPressIn={onPressIn} onPressOut={onPressOut} className="mt-8 rounded-3xl overflow-hidden shadow-2xl">
                 <Animated.View style={buttonAnimatedStyle}>
-                  <LinearGradient colors={["#ffffff", "#f0f0f0"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} className="flex-row items-center justify-center px-16 py-5 rounded-2xl">
+                  <LinearGradient colors={["#ffffff", "#f0f0f0"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} className="flex-row items-center justify-center px-10 py-3">
                     <MaterialIcons name="photo-camera" size={28} color={Colorizer("#070808", 1.0)} className="mr-3" />
                     <Text className="text-xl font-bold" style={{ fontFamily: "Kurale", color: Colorizer("#070808", 1.0) }}>
                       Start Exploring
@@ -104,5 +111,4 @@ const IndexPage: React.FC = () => {
     </View>
   );
 };
-
 export default IndexPage;

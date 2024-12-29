@@ -10,11 +10,10 @@ import CinematicDatabase from "@/database/Cinematic";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import PhotographyDatabase from "@/database/Photography";
 import HeaderAnimate from "@/components/HeaderAnimated";
-import React, { useEffect, useCallback, useState, useRef, memo } from "react";
+import React, { useEffect, useCallback, useState, memo } from "react";
 import { SubImagesProps, CardProps, CategoryButtonProps } from "@/types/components";
-import { View, Text, TouchableOpacity, Image, FlatList, ScrollView, StatusBar, Animated } from "react-native";
-// ============================================================================================
-// ============================================================================================
+import { View, Text, TouchableOpacity, Image, FlatList, ScrollView, StatusBar } from "react-native";
+import Animated, { Easing, runOnJS, useSharedValue, useAnimatedStyle, withTiming } from "react-native-reanimated";
 interface Category {
   name: string;
   database: Record<string, EnvironmentEntry>;
@@ -23,8 +22,6 @@ interface CategoryButtonExtendedProps extends CategoryButtonProps {
   selected: boolean;
   onPress: () => void;
 }
-// ============================================================================================
-// ============================================================================================
 const categories: Category[] = [
   { name: "Anime", database: AnimeDatabase },
   { name: "Portrait", database: PortraitDatabase },
@@ -32,8 +29,6 @@ const categories: Category[] = [
   { name: "Cinematic", database: CinematicDatabase },
   { name: "Photography", database: PhotographyDatabase }
 ];
-// ============================================================================================
-// ============================================================================================
 const SubImages: React.FC<SubImagesProps> = memo(({ images, onImagePress }) => (
   <View className="flex flex-col justify-start">
     {images.data.map((image, index) => (
@@ -55,9 +50,9 @@ const SubImages: React.FC<SubImagesProps> = memo(({ images, onImagePress }) => (
       >
         <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="p-0.5 flex-1">
           <View className="relative">
-            <Image source={{ uri: image.previewLink }} className="w-full h-16 rounded-md border" style={{ borderColor: Colorizer(image.primary, 0.5) }} resizeMode="cover" />
+            <Image source={{ uri: image.previewLink }} className="w-full h-16 rounded border" style={{ borderColor: Colorizer(image.primary, 0.5) }} resizeMode="cover" />
             <Text
-              className="absolute bottom-0.5 right-0.5 px-1 py-0.5 text-[10px] rounded-full"
+              className="absolute bottom-0.5 right-0.5 px-1 py-0.5 text-[10px] rounded-2xl"
               style={{ color: Colorizer("#E9E9EA", 1.0), fontFamily: "Kurale", backgroundColor: Colorizer(image.primary, 1.0) }}
             >
               {image.primary}
@@ -69,12 +64,12 @@ const SubImages: React.FC<SubImagesProps> = memo(({ images, onImagePress }) => (
   </View>
 ));
 SubImages.displayName = "SubImages";
-// ============================================================================================
-// ============================================================================================
 const Card: React.FC<CardProps> = memo(({ data }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [currentImage, setCurrentImage] = useState<string>(data.images[0]?.previewLink);
-  const fadeAnim = useRef(new Animated.Value(1)).current;
+  const fadeValue = useSharedValue(1);
+  const textOpacity = useSharedValue(1);
+  const textScale = useSharedValue(1);
   const updateImageState = useCallback(
     (nextIndex: number) => {
       setCurrentIndex(nextIndex);
@@ -82,34 +77,51 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
     },
     [data.images]
   );
-  const startFadeTransition = useCallback(
+  const animateOut = useCallback(
+    (cb: () => void) => {
+      fadeValue.value = withTiming(0, { duration: 2000, easing: Easing.inOut(Easing.ease) }, () => {
+        runOnJS(cb)();
+      });
+      textOpacity.value = withTiming(0, { duration: 2000, easing: Easing.inOut(Easing.ease) });
+    },
+    [fadeValue, textOpacity]
+  );
+  const animateIn = useCallback(() => {
+    textScale.value = 0.8;
+    fadeValue.value = withTiming(1, { duration: 2000, easing: Easing.inOut(Easing.ease) });
+    textOpacity.value = withTiming(1, { duration: 2000, easing: Easing.inOut(Easing.ease) });
+    textScale.value = withTiming(1, { duration: 2000, easing: Easing.inOut(Easing.ease) });
+  }, [fadeValue, textOpacity, textScale]);
+  const startTransition = useCallback(
     (nextIndex: number) => {
-      Animated.timing(fadeAnim, { toValue: 0, duration: 2000, useNativeDriver: true }).start(() => {
+      animateOut(() => {
         updateImageState(nextIndex);
-        Animated.timing(fadeAnim, { toValue: 1, duration: 2000, useNativeDriver: true }).start();
+        animateIn();
       });
     },
-    [fadeAnim, updateImageState]
+    [animateOut, animateIn, updateImageState]
   );
   const updateNextImage = useCallback(() => {
     const nextIndex = (currentIndex + 1) % data.images.length;
-    startFadeTransition(nextIndex);
-  }, [currentIndex, data.images.length, startFadeTransition]);
+    startTransition(nextIndex);
+  }, [currentIndex, data.images.length, startTransition]);
   const handleSubImagePress = useCallback(
     (previewLink: string, index: number) => {
-      startFadeTransition(index);
+      startTransition(index);
     },
-    [startFadeTransition]
+    [startTransition]
   );
-  useEffect(() => {
-    const interval = setInterval(updateNextImage, 1500 * 2);
+  React.useEffect(() => {
+    const interval = setInterval(updateNextImage, 4000);
     return () => clearInterval(interval);
   }, [updateNextImage]);
-  useEffect(() => {
+  React.useEffect(() => {
     updateImageState(0);
   }, [data, updateImageState]);
+  const imageStyle = useAnimatedStyle(() => ({ opacity: fadeValue.value }));
+  const textStyle = useAnimatedStyle(() => ({ opacity: textOpacity.value, transform: [{ scale: textScale.value }] }));
   return (
-    <View className="rounded-xl overflow-hidden border mb-2" style={{ backgroundColor: Colorizer("#111415", 1.0), borderColor: Colorizer(data.images[currentIndex].primary, 0.5) }}>
+    <View className="rounded-2xl overflow-hidden border" style={{ backgroundColor: Colorizer("#111415", 1.0), borderColor: Colorizer(data.images[currentIndex].primary, 0.4) }}>
       <Link
         href={{
           pathname: "./Image",
@@ -127,14 +139,23 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
       >
         <TouchableOpacity>
           <View className="relative aspect-[9/16] w-full overflow-hidden">
-            <Animated.Image source={{ uri: currentImage }} style={{ width: "100%", height: "100%", opacity: fadeAnim, borderTopLeftRadius: 8, borderTopRightRadius: 8 }} resizeMode="cover" />
+            <Animated.Image source={{ uri: currentImage }} style={[{ width: "100%", height: "100%", borderTopLeftRadius: 8, borderTopRightRadius: 8 }, imageStyle]} resizeMode="cover" />
             <View className="absolute top-0 left-0 right-0 items-center justify-start">
-              <Text
-                style={{ fontFamily: "Kurale", backgroundColor: Colorizer(data.images[currentIndex].primary, 0.6), color: Colorizer("#E9E9EA", 1.0) }}
-                className="text-xl font-bold rounded-full text-center px-2 m-2"
+              <Animated.Text
+                style={[
+                  textStyle,
+                  {
+                    fontSize: 16,
+                    textAlign: "center",
+                    fontFamily: "Kurale",
+                    color: Colorizer("#E9E9EA", 1.0),
+                    backgroundColor: Colorizer(data.images[currentIndex].primary, 0.8)
+                  }
+                ]}
+                className="text-xl px-2 m-2 rounded-2xl"
               >
                 {data.images[currentIndex].original_file_name.replace(/_/g, " ").replace(".jpg", "")}
-              </Text>
+              </Animated.Text>
             </View>
           </View>
         </TouchableOpacity>
@@ -174,18 +195,34 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
   );
 });
 Card.displayName = "Card";
-// ============================================================================================
-// ============================================================================================
+function getCategoryIcon(category: string, selected: boolean) {
+  const iconColor = selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0);
+  switch (category) {
+    case "Anime":
+      return <Ionicons name="planet-outline" size={16} color={iconColor} />;
+    case "Portrait":
+      return <Ionicons name="person-circle-outline" size={16} color={iconColor} />;
+    case "Lightning":
+      return <Ionicons name="flash-outline" size={16} color={iconColor} />;
+    case "Cinematic":
+      return <Ionicons name="videocam-outline" size={16} color={iconColor} />;
+    case "Photography":
+      return <Ionicons name="camera-outline" size={16} color={iconColor} />;
+    default:
+      return <Ionicons name="help-circle-outline" size={16} color={iconColor} />;
+  }
+}
 const CategoryButton: React.FC<CategoryButtonExtendedProps> = memo(({ category, selected, onPress }) => (
-  <TouchableOpacity style={{ backgroundColor: selected ? Colorizer("#BE2528", 1.0) : Colorizer("#E9E9EA", 1.0) }} className="px-6 py-2 rounded mx-0.5" activeOpacity={0.7} onPress={onPress}>
-    <Text style={{ fontFamily: "Kurale", color: selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0) }} className="text-base font-bold">
-      {category}
-    </Text>
+  <TouchableOpacity style={{ backgroundColor: selected ? Colorizer("#BE2528", 1.0) : Colorizer("#E9E9EA", 1.0) }} className="px-6 py-2 rounded-2xl mx-0.5" activeOpacity={0.7} onPress={onPress}>
+    <View className="flex-row items-center">
+      {getCategoryIcon(category, selected)}
+      <Text style={{ fontFamily: "Kurale", color: selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0) }} className="ml-2 text-base font-bold">
+        {category}
+      </Text>
+    </View>
   </TouchableOpacity>
 ));
 CategoryButton.displayName = "CategoryButton";
-// ============================================================================================
-// ============================================================================================
 const HeaderComponent: React.FC<{ categories: Category[]; selectedCategory: string; onSelectCategory: (categoryName: string) => void }> = memo(({ categories, selectedCategory, onSelectCategory }) => (
   <>
     <HeaderAnimate />
@@ -206,8 +243,6 @@ const HeaderComponent: React.FC<{ categories: Category[]; selectedCategory: stri
   </>
 ));
 HeaderComponent.displayName = "HeaderComponent";
-// ============================================================================================
-// ============================================================================================
 const HomePage = (): JSX.Element => {
   const [cardData, setCardData] = useState<EnvironmentEntry[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>("Cinematic");
@@ -232,7 +267,7 @@ const HomePage = (): JSX.Element => {
   }, [selectedCategory]);
   const renderCard = useCallback(
     ({ item }: { item: EnvironmentEntry }) => (
-      <View style={{ flex: 1, padding: 1 }}>
+      <View className="flex-1 m-0.5">
         <Card data={item} />
       </View>
     ),
@@ -260,5 +295,4 @@ const HomePage = (): JSX.Element => {
     </View>
   );
 };
-
 export default HomePage;
