@@ -1,43 +1,43 @@
 const imageSets: string[][] = [
   [
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Aurora_Vortex (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Cosmic_Coliseum_Lights (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Cosmic_Hourglass (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Energy_Grid (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/DragonS_Domain (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Fractal_Canyon (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Fractal_Forest (2).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Glass_Cityscape (2).jpg"
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Agricultural Fields Mosaic (1).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Autumn Forest Canopy (1).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Coastal Island Archipelago (1).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Coastal Shoreline Pattern (1).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Desert Dunes In Perspective (1).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Desert Road Through Dunes (1).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Frozen Tundra Landscape (1).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Mountain Lake From Above (1).jpg"
   ],
   [
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Celestial_Portal (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Cliffside_Journey (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Coastal_Serenity (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Cosmic_Ascent (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Desert_Odyssey (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Distant_Citadel (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Enchanted_Tower (1).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Ethereal_Plains (1).jpg"
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Autumn Misty Bridge (2).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Autumn Misty River (2).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Crystal Ice Palace (2).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Desert Oasis Dream (2).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Emerald Forest Glade (2).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Enchanted Garden Glade (2).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Floating Lantern Isles (2).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Hidden Fairy Springs (2).jpg"
   ],
   [
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Busy_Crosswalk (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Crystal_Clear (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Desert_Serenity (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Forest_Pathway (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Frozen_Lake_Beauty (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Golden_Beach_Sunrise (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Misty_Mountain_Morning (4).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Modern_Cityscape (4).jpg"
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Ocean Wave Foam (3).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Macro View Of Dragonfly Wings (3).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Petal With Morning Dew (3).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Textured Seashell Surface (3).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Textured Tree Bark (3).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Vibrant Butterfly Wings (3).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Water Droplet On Leaf (3).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Frost Patterns On Window (3).jpg"
   ],
   [
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Artistic_Flair (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Bold_Contrast (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Candid_Smile (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Cultural_Elegance (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Delicate_Balance_Generate (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Elegant_Simplicity (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Ethereal_Beauty (3).jpg",
-    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Golden_Elegance (3).jpg"
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Adventurous Hiker In Nature (4).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Adventurous Mountain Climber (4).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Casual Skater In Urban Setting (4).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Casual Skater In Urban Setting (4).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Casual Urban Explorer (4).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Cheerful Baker In Bakery (4).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Confident Business Leader (4).jpg",
+    "https://raw.githubusercontent.com/yt-dlx/picWall/lowRes/Confident Engineer With Blueprints (4).jpg"
   ]
 ];
 export default imageSets;
