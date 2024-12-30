@@ -15,12 +15,12 @@ import React, { useEffect, useCallback, useState, memo } from "react";
 import { SubImagesProps, CardProps, CategoryButtonProps } from "@/types/components";
 import { View, Text, TouchableOpacity, FlatList, ScrollView, StatusBar } from "react-native";
 import Animated, { Easing, runOnJS, useSharedValue, useAnimatedStyle, withTiming } from "react-native-reanimated";
+import { LinearGradient } from "expo-linear-gradient";
 
 interface Category {
   name: string;
   database: Record<string, EnvironmentEntry>;
 }
-
 interface CategoryButtonExtendedProps extends CategoryButtonProps {
   selected: boolean;
   onPress: () => void;
@@ -33,7 +33,6 @@ const categories: Category[] = [
   { name: "Cinematic", database: CinematicDatabase },
   { name: "Photography", database: PhotographyDatabase }
 ];
-
 const SubImages: React.FC<SubImagesProps> = memo(({ images, onImagePress }) => (
   <View className="flex flex-col justify-start">
     {images.data.map((image, index) => (
@@ -57,24 +56,11 @@ const SubImages: React.FC<SubImagesProps> = memo(({ images, onImagePress }) => (
           <View className="relative">
             <Image
               source={{ uri: image.previewLink }}
-              style={{
-                height: 64,
-                borderWidth: 1,
-                width: "100%",
-                borderRadius: 4,
-                borderColor: Colorizer(image.primary, 0.5)
-              }}
+              style={{ height: 64, borderWidth: 1, width: "100%", borderRadius: 4, borderColor: Colorizer(image.primary, 0.5) }}
               cachePolicy="disk"
               contentFit="cover"
             />
-            <Text
-              className="absolute m-1 bottom-1 right-1 px-2 text-xs rounded-2xl"
-              style={{
-                fontFamily: "Kurale",
-                color: Colorizer("#070808", 1.0),
-                backgroundColor: Colorizer(image.primary, 1.0)
-              }}
-            >
+            <Text className="absolute m-1 bottom-1 right-1 px-2 text-xs rounded-2xl" style={{ fontFamily: "Kurale", color: Colorizer("#070808", 1.0), backgroundColor: Colorizer(image.primary, 1.0) }}>
               {image.primary}
             </Text>
           </View>
@@ -84,7 +70,6 @@ const SubImages: React.FC<SubImagesProps> = memo(({ images, onImagePress }) => (
   </View>
 ));
 SubImages.displayName = "SubImages";
-
 const Card: React.FC<CardProps> = memo(({ data }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [currentImage, setCurrentImage] = useState<string>(data.images[0]?.previewLink);
@@ -140,10 +125,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
     updateImageState(0);
   }, [data, updateImageState]);
   const imageStyle = useAnimatedStyle(() => ({ opacity: fadeValue.value }));
-  const textStyle = useAnimatedStyle(() => ({
-    opacity: textOpacity.value,
-    transform: [{ scale: textScale.value }]
-  }));
+  const textStyle = useAnimatedStyle(() => ({ opacity: textOpacity.value, transform: [{ scale: textScale.value }] }));
   return (
     <View className="rounded-2xl overflow-hidden border" style={{ backgroundColor: Colorizer("#111415", 1.0), borderColor: Colorizer(data.images[currentIndex].primary, 0.4) }}>
       <Link
@@ -163,30 +145,10 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
       >
         <TouchableOpacity>
           <View className="relative aspect-[9/16] w-full overflow-hidden">
-            <AnimatedImage
-              source={{ uri: currentImage }}
-              style={[
-                {
-                  width: "100%",
-                  height: "100%",
-                  borderTopLeftRadius: 8,
-                  borderTopRightRadius: 8
-                },
-                imageStyle
-              ]}
-              contentFit="cover"
-            />
+            <AnimatedImage source={{ uri: currentImage }} style={[{ width: "100%", height: "100%", borderTopLeftRadius: 8, borderTopRightRadius: 8 }, imageStyle]} contentFit="cover" />
             <View className="absolute bottom-0 left-0 right-0 items-center justify-start">
               <Animated.Text
-                style={[
-                  textStyle,
-                  {
-                    textAlign: "center",
-                    fontFamily: "Kurale",
-                    color: Colorizer("#070808", 1.0),
-                    backgroundColor: Colorizer(data.images[currentIndex].primary, 0.8)
-                  }
-                ]}
+                style={[textStyle, { textAlign: "center", fontFamily: "Kurale", color: Colorizer("#070808", 1.0), backgroundColor: Colorizer(data.images[currentIndex].primary, 0.8) }]}
                 className="text-sm m-1 px-3 rounded-2xl"
               >
                 {data.images[currentIndex].original_file_name.replace(/_/g, " ").replace(".jpg", "")}
@@ -228,7 +190,6 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
   );
 });
 Card.displayName = "Card";
-
 function getCategoryIcon(category: string, selected: boolean) {
   const iconColor = selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0);
   switch (category) {
@@ -246,19 +207,24 @@ function getCategoryIcon(category: string, selected: boolean) {
       return <Ionicons name="help-circle-outline" size={16} color={iconColor} />;
   }
 }
-
 const CategoryButton: React.FC<CategoryButtonExtendedProps> = memo(({ category, selected, onPress }) => (
-  <TouchableOpacity style={{ backgroundColor: selected ? Colorizer("#BE2528", 1.0) : Colorizer("#E9E9EA", 1.0) }} className="px-6 py-2 rounded-2xl mx-0.5" activeOpacity={0.7} onPress={onPress}>
-    <View className="flex-row items-center">
-      {getCategoryIcon(category, selected)}
-      <Text style={{ fontFamily: "Kurale", color: selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0) }} className="ml-2 text-base">
-        {category}
-      </Text>
-    </View>
+  <TouchableOpacity style={{ borderRadius: 5, overflow: "hidden", marginRight: 4 }} activeOpacity={0.7} onPress={onPress}>
+    <LinearGradient
+      colors={selected ? [Colorizer("#5f1314", 1.0), Colorizer("#981e20", 1.0), Colorizer("#BE2528", 1.0)] : [Colorizer("#E9E9EA", 1.0), Colorizer("#d2d2d3", 1.0), Colorizer("#bababb", 1.0)]}
+      style={{ paddingHorizontal: 24, paddingVertical: 10 }}
+      start={{ x: 0, y: 0 }}
+      end={{ x: 1, y: 1 }}
+    >
+      <View className="flex-row items-center">
+        {getCategoryIcon(category, selected)}
+        <Text style={{ fontFamily: "Kurale", color: selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0) }} className="ml-2 text-base">
+          {category}
+        </Text>
+      </View>
+    </LinearGradient>
   </TouchableOpacity>
 ));
 CategoryButton.displayName = "CategoryButton";
-
 const HeaderComponent: React.FC<{ categories: Category[]; selectedCategory: string; onSelectCategory: (categoryName: string) => void }> = memo(({ categories, selectedCategory, onSelectCategory }) => (
   <>
     <HeaderAnimate />
@@ -279,7 +245,6 @@ const HeaderComponent: React.FC<{ categories: Category[]; selectedCategory: stri
   </>
 ));
 HeaderComponent.displayName = "HeaderComponent";
-
 const HomePage = (): JSX.Element => {
   const [cardData, setCardData] = useState<EnvironmentEntry[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>("Anime");
