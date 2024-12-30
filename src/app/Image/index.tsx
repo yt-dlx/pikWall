@@ -1,4 +1,5 @@
 // app/Image/index.tsx
+import { Image } from "expo-image";
 import * as FileSystem from "expo-file-system";
 import Colorizer from "@/components/Colorizer";
 import { ImageMetadata } from "@/types/database";
@@ -8,9 +9,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { FontAwesome5, MaterialIcons, Ionicons } from "@expo/vector-icons";
 import { useSharedValue, useAnimatedStyle, withRepeat, withSequence, withTiming, Easing } from "react-native-reanimated";
 import { ScrollView, View, Text, Dimensions, StatusBar, ActivityIndicator, TouchableOpacity, Alert, Animated, Modal } from "react-native";
-import { Image as ExpoImage } from "expo-image";
-const AnimatedExpoImage = Animated.createAnimatedComponent(ExpoImage);
 
+const AnimatedImage = Animated.createAnimatedComponent(Image);
 const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () => void }> = ({ visible, message, onClose }) => {
   const modalOpacity = useSharedValue(0);
   const modalScale = useSharedValue(0.8);
@@ -181,7 +181,7 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
         {!imageLoading && (
           <View className="items-center">
             <Animated.View className="rounded-full justify-center items-center">
-              <ExpoImage style={{ width: 64, height: 64, borderRadius: 32, backgroundColor: Colorizer("#070808", 0.8) }} source={require("@/assets/picbook/picbook_white.png")} contentFit="contain" />
+              <Image style={{ width: 64, height: 64, borderRadius: 32, backgroundColor: Colorizer("#070808", 0.8) }} source={require("@/assets/picbook/picbook_white.png")} contentFit="contain" />
             </Animated.View>
           </View>
         )}
@@ -195,7 +195,7 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
             </Text>
           </View>
         )}
-        <AnimatedExpoImage
+        <AnimatedImage
           style={!imageLoading ? { width: "100%", height: imageHeight, transform: [{ scale: scaleValue }], borderTopLeftRadius: 20, borderTopRightRadius: 20 } : { width: 0, height: 0 }}
           source={{ uri: selectedImage.previewLink.replace("lowRes", "highRes") }}
           onLoadStart={() => setImageLoading(true)}
@@ -360,7 +360,7 @@ const DownloadScreen = () => {
             <FontAwesome5 name="times" size={50} color={Colorizer("#E9E9EA", 1.0)} />
           </TouchableOpacity>
           <View className="flex-1 justify-center items-center">
-            <ExpoImage source={{ uri: selectedImage.previewLink.replace("lowRes", "highRes") }} style={{ width: "100%", height: "100%" }} contentFit="contain" />
+            <Image source={{ uri: selectedImage.previewLink.replace("lowRes", "highRes") }} style={{ width: "100%", height: "100%" }} contentFit="contain" />
           </View>
         </View>
       </Modal>

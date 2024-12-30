@@ -57,7 +57,7 @@ const SubImages: React.FC<SubImagesProps> = memo(({ images, onImagePress }) => (
             <Image
               source={{ uri: image.previewLink }}
               style={{ height: 64, borderWidth: 1, width: "100%", borderRadius: 4, borderColor: Colorizer(image.primary, 0.5) }}
-              cachePolicy="disk"
+              cachePolicy="memory-disk"
               contentFit="cover"
             />
             <Text className="absolute m-1 bottom-1 right-1 px-2 text-xs rounded-2xl" style={{ fontFamily: "Kurale", color: Colorizer("#070808", 1.0), backgroundColor: Colorizer(image.primary, 1.0) }}>

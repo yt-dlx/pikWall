@@ -32,7 +32,7 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
     <View style={{ flex: 1, overflow: "hidden", paddingHorizontal: 0.5 }}>
       <Animated.View style={[animatedStyle, { flexDirection: "column" }]}>
         {images.concat(images).map((uri, idx) => (
-          <Image key={idx} source={uri} contentFit="cover" cachePolicy="disk" style={{ height: imageHeight, borderRadius: 10, width: "100%", margin: 2 }} />
+          <Image key={idx} source={uri} contentFit="cover" cachePolicy="memory-disk" style={{ height: imageHeight, borderRadius: 10, width: "100%", margin: 2 }} />
         ))}
       </Animated.View>
     </View>
@@ -55,7 +55,7 @@ const AnimatedTitle: React.FC = () => {
       <View className="rounded-full p-2 shadow-2xl" style={{ backgroundColor: Colorizer("#070808", 0.7), justifyContent: "center", alignItems: "center" }}>
         <Image
           alt="logo"
-          cachePolicy="disk"
+          cachePolicy="memory-disk"
           contentFit="contain"
           source={require("@/assets/picbook/picbook_red.png")}
           style={{ width: 200, height: 200, borderWidth: 2, borderRadius: 9999, borderColor: Colorizer("#BE2528", 0.9) }}
