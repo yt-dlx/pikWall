@@ -29,10 +29,10 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
     opacity: opacity.value
   }));
   return (
-    <View className="flex-1 overflow-hidden px-0.5">
-      <Animated.View style={animatedStyle} className="flex-col">
+    <View style={{ flex: 1, overflow: "hidden", paddingHorizontal: 0.5 }}>
+      <Animated.View style={[animatedStyle, { flexDirection: "column" }]}>
         {images.concat(images).map((uri, idx) => (
-          <Image key={idx} source={uri} contentFit="cover" cachePolicy="disk" style={{ height: imageHeight }} className="w-full rounded-xl mb-2 border border-white/10" />
+          <Image key={idx} source={uri} contentFit="cover" cachePolicy="disk" style={{ height: imageHeight, borderRadius: 10, width: "100%", margin: 2 }} />
         ))}
       </Animated.View>
     </View>
@@ -52,13 +52,13 @@ const AnimatedTitle: React.FC = () => {
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
   return (
     <Animated.View style={animatedStyle} className="items-center">
-      <View className="rounded-full p-3 shadow-2xl" style={{ backgroundColor: Colorizer("#070808", 0.9), justifyContent: "center", alignItems: "center" }}>
+      <View className="rounded-full p-2 shadow-2xl" style={{ backgroundColor: Colorizer("#070808", 0.7), justifyContent: "center", alignItems: "center" }}>
         <Image
           alt="logo"
           cachePolicy="disk"
           contentFit="contain"
           source={require("@/assets/picbook/picbook_red.png")}
-          style={{ width: 240, height: 240, borderWidth: 2, borderRadius: 120, borderColor: "rgba(255, 255, 255, 0.2)" }}
+          style={{ width: 200, height: 200, borderWidth: 2, borderRadius: 9999, borderColor: Colorizer("#BE2528", 0.9) }}
         />
       </View>
     </Animated.View>
@@ -89,9 +89,9 @@ const IndexPage: React.FC = () => {
               <Text
                 className="text-center"
                 style={{
-                  fontSize: 60,
+                  fontSize: 80,
+                  fontFamily: "Kurale",
                   textShadowRadius: 50,
-                  fontFamily: "Monoton",
                   color: Colorizer("#BE2528", 1.0),
                   textShadowOffset: { width: 8, height: 8 },
                   textShadowColor: Colorizer("#BE2528", 1.0)
@@ -99,7 +99,7 @@ const IndexPage: React.FC = () => {
               >
                 picBook
               </Text>
-              <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Monoton", color: Colorizer("#E9E9EA", 1.0), fontSize: 60 }}>
+              <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0), fontSize: 80 }}>
                 picBook
               </Text>
             </View>

@@ -62,7 +62,7 @@ const HeaderAnimated: React.FC = () => {
             <View className="flex-row mb-1">
               <AnimatedTitle />
             </View>
-            <Text style={{ fontFamily: "Monoton", fontSize: 25, color: Colorizer("#E9E9EA", 1.0), letterSpacing: -1, lineHeight: 34 }} className="tracking-tight">
+            <Text style={{ fontFamily: "Kurale", fontSize: 25, color: Colorizer("#E9E9EA", 1.0), letterSpacing: -1, lineHeight: 34 }} className="tracking-tight">
               picBook
             </Text>
             <View

@@ -48,17 +48,7 @@
       [
         "expo-font",
         {
-          "fonts": [
-            "./src/assets/fonts/Kurale.ttf",
-            "./src/assets/fonts/Brittany.otf",
-            "./src/assets/fonts/Monoton.ttf",
-            "./src/assets/fonts/Achemost.otf",
-            "./src/assets/fonts/LinotteBold.otf",
-            "./src/assets/fonts/LinotteLight.otf",
-            "./src/assets/fonts/LinotteHeavy.otf",
-            "./src/assets/fonts/LinotteRegular.otf",
-            "./src/assets/fonts/LinotteSemiBold.otf"
-          ]
+          "fonts": ["./src/assets/fonts/Kurale.ttf", "./src/assets/fonts/Brittany.otf"]
         }
       ],
       [

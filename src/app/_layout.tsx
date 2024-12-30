@@ -14,14 +14,7 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const [loaded, error] = useFonts({
     Kurale: require("@/assets/fonts/Kurale.ttf"),
-    Brittany: require("@/assets/fonts/Brittany.otf"),
-    Monoton: require("@/assets/fonts/Monoton.ttf"),
-    Achemost: require("@/assets/fonts/Achemost.otf"),
-    LinotteBold: require("@/assets/fonts/LinotteBold.otf"),
-    LinotteLight: require("@/assets/fonts/LinotteLight.otf"),
-    LinotteHeavy: require("@/assets/fonts/LinotteHeavy.otf"),
-    LinotteRegular: require("@/assets/fonts/LinotteRegular.otf"),
-    LinotteSemiBold: require("@/assets/fonts/LinotteSemiBold.otf")
+    Brittany: require("@/assets/fonts/Brittany.otf")
   });
   React.useEffect(() => {
     if (loaded || error) SplashScreen.hideAsync();
