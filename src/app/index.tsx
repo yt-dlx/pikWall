@@ -57,7 +57,7 @@ const AnimatedTitle: React.FC = () => {
           alt="logo"
           cachePolicy="memory-disk"
           contentFit="contain"
-          source={require("@/assets/picbook/picbook_red.png")}
+          source={require("@/assets/pikWall/pikWall_red.png")}
           style={{ width: 200, height: 200, borderWidth: 2, borderRadius: 9999, borderColor: Colorizer("#BE2528", 0.9) }}
         />
       </View>
@@ -97,10 +97,10 @@ const IndexPage: React.FC = () => {
                   textShadowColor: Colorizer("#BE2528", 1.0)
                 }}
               >
-                picBook
+                picWall
               </Text>
               <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0), fontSize: 80 }}>
-                picBook
+                picWall
               </Text>
             </View>
             <View className="flex-row items-center px-6 mt-44">

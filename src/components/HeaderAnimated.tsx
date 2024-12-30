@@ -39,7 +39,7 @@ const AnimatedTitle: React.FC = () => {
   return (
     <Animated.View style={animatedStyle} className="items-center m-4">
       <View style={{ backgroundColor: Colorizer("#070808", 0.6) }} className="rounded-full p-1">
-        <Image source={require("@/assets/picbook/picbook_red.png")} alt="logo" className="w-24 h-24 rounded-full border-2" style={{ borderColor: Colorizer("#E9E9EA", 1.0) }} resizeMode="contain" />
+        <Image source={require("@/assets/pikWall/pikWall_red.png")} alt="logo" className="w-24 h-24 rounded-full border-2" style={{ borderColor: Colorizer("#E9E9EA", 1.0) }} resizeMode="contain" />
       </View>
     </Animated.View>
   );
@@ -63,7 +63,7 @@ const HeaderAnimated: React.FC = () => {
               <AnimatedTitle />
             </View>
             <Text style={{ fontFamily: "Kurale", fontSize: 30, color: Colorizer("#E9E9EA", 1.0), letterSpacing: -1, lineHeight: 34 }} className="tracking-tight">
-              picBook
+              pikWall
             </Text>
             <View
               className="flex-row items-center mt-2 px-2 py-1 rounded-full"

@@ -2,29 +2,29 @@
   "expo": {
     "version": "1.0.0",
     "owner": "shovit",
-    "slug": "picBook",
-    "name": "picBook",
-    "scheme": "picBook",
+    "slug": "pikWall",
+    "name": "pikWall",
+    "scheme": "pikWall",
     "orientation": "portrait",
     "newArchEnabled": true,
     "userInterfaceStyle": "automatic",
     "experiments": {
       "typedRoutes": true
     },
-    "icon": "./src/assets/picbook/picbook_red.png",
+    "icon": "./src/assets/pikWall/pikWall_red.png",
     "ios": {
       "supportsTablet": true,
       "requiresFullScreen": true,
-      "bundleIdentifier": "com.shovit.picBook",
+      "bundleIdentifier": "com.shovit.pikWall",
       "infoPlist": {
-        "NSPhotoLibraryAddUsageDescription": "picBook: needs permission to save photos to your library.",
-        "NSPhotoLibraryUsageDescription": "picBook: requires access to your photo library to save images."
+        "NSPhotoLibraryAddUsageDescription": "pikWall: needs permission to save photos to your library.",
+        "NSPhotoLibraryUsageDescription": "pikWall: requires access to your photo library to save images."
       }
     },
     "web": {
       "output": "static",
       "bundler": "metro",
-      "favicon": "./src/assets/picbook/picbook_red.png"
+      "favicon": "./src/assets/pikWall/pikWall_red.png"
     },
     "extra": {
       "router": {
@@ -36,11 +36,11 @@
     },
     "android": {
       "requiresFullScreen": true,
-      "package": "com.shovit.picBook",
+      "package": "com.shovit.pikWall",
       "permissions": ["READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"],
       "adaptiveIcon": {
         "backgroundColor": "#0A0A0A",
-        "foregroundImage": "./src/assets/picbook/picbook_red.png"
+        "foregroundImage": "./src/assets/pikWall/pikWall_red.png"
       }
     },
     "plugins": [
@@ -57,7 +57,7 @@
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#0A0A0A",
-          "image": "./src/assets/picbook/picbook_red.png"
+          "image": "./src/assets/pikWall/pikWall_red.png"
         }
       ]
     ]

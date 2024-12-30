@@ -152,7 +152,7 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
         {!imageLoading && (
           <View className="items-center">
             <Animated.View className="rounded-full justify-center items-center">
-              <Image style={{ width: 64, height: 64, borderRadius: 32, backgroundColor: Colorizer("#070808", 0.8) }} source={require("@/assets/picbook/picbook_white.png")} contentFit="contain" />
+              <Image style={{ width: 64, height: 64, borderRadius: 32, backgroundColor: Colorizer("#070808", 0.8) }} source={require("@/assets/pikWall/pikWall_white.png")} contentFit="contain" />
             </Animated.View>
           </View>
         )}
