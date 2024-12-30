@@ -2,7 +2,7 @@ import { join } from "path";
 import dotenv from "dotenv";
 import fetch from "node-fetch";
 import { readFileSync, readdirSync, statSync } from "fs";
-dotenv.config({ path: ".env" });
+dotenv.config({ path: "../.env" });
 const owner = "yt-dlx";
 const repo = "picWall";
 const branch = "highRes";
