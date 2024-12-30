@@ -103,12 +103,10 @@ const IndexPage: React.FC = () => {
                 picWall
               </Text>
             </View>
-            <View className="flex-row items-center px-6 mt-44">
-              <View className="w-3 h-3 rounded-full m-2 mt-3" style={{ backgroundColor: Colorizer("#E9E9EA", 1.0) }} />
-              <Text className="text-lg" style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 0.9) }}>
-                Crafted with imagination and stories
+            <View className="flex-row items-center px-2 yp-2 mt-44 rounded-full" style={{ backgroundColor: Colorizer("#BE2528", 0.9) }}>
+              <Text className="text-lg font-bold" style={{ fontFamily: "Kurale", color: Colorizer("#070808", 1.0) }}>
+                This ia a development preview build. Except changes and bugs.
               </Text>
-              <View className="w-3 h-3 rounded-full m-2 mt-3" style={{ backgroundColor: Colorizer("#E9E9EA", 1.0) }} />
             </View>
             <Link href="./Home" asChild>
               <TouchableOpacity onPressIn={onPressIn} onPressOut={onPressOut} className="mt-2 rounded-3xl overflow-hidden shadow-2xl">
