@@ -208,7 +208,7 @@ function getCategoryIcon(category: string, selected: boolean) {
   }
 }
 const CategoryButton: React.FC<CategoryButtonExtendedProps> = memo(({ category, selected, onPress }) => (
-  <TouchableOpacity style={{ borderRadius: 5, overflow: "hidden", marginRight: 4 }} activeOpacity={0.7} onPress={onPress}>
+  <TouchableOpacity style={{ borderRadius: 10, overflow: "hidden", margin: 4 }} activeOpacity={0.7} onPress={onPress}>
     <LinearGradient
       colors={selected ? [Colorizer("#5f1314", 1.0), Colorizer("#981e20", 1.0), Colorizer("#BE2528", 1.0)] : [Colorizer("#E9E9EA", 1.0), Colorizer("#d2d2d3", 1.0), Colorizer("#bababb", 1.0)]}
       style={{ paddingHorizontal: 24, paddingVertical: 10 }}
