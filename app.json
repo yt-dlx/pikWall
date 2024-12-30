@@ -51,6 +51,8 @@
           "fonts": [
             "./src/assets/fonts/Kurale.ttf",
             "./src/assets/fonts/Brittany.otf",
+            "./src/assets/fonts/Monoton.ttf",
+            "./src/assets/fonts/Achemost.ttf",
             "./src/assets/fonts/Linotte Bold.otf",
             "./src/assets/fonts/Linotte Light.otf",
             "./src/assets/fonts/Linotte Heavy.otf",

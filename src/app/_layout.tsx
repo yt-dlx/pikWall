@@ -15,11 +15,13 @@ export default function RootLayout() {
   const [loaded, error] = useFonts({
     Kurale: require("@/assets/fonts/Kurale.ttf"),
     Brittany: require("@/assets/fonts/Brittany.otf"),
-    "Linotte Bold": require("@/assets/fonts/Linotte Bold.otf"),
-    "Linotte Light": require("@/assets/fonts/Linotte Light.otf"),
-    "Linotte Heavy": require("@/assets/fonts/Linotte Heavy.otf"),
-    "Linotte Regular": require("@/assets/fonts/Linotte Regular.otf"),
-    "Linotte Semi Bold": require("@/assets/fonts/Linotte Semi Bold.otf")
+    Monoton: require("@/assets/fonts/Monoton.ttf"),
+    Achemost: require("@/assets/fonts/Achemost.otf"),
+    LinotteBold: require("@/assets/fonts/LinotteBold.otf"),
+    LinotteLight: require("@/assets/fonts/LinotteLight.otf"),
+    LinotteHeavy: require("@/assets/fonts/LinotteHeavy.otf"),
+    LinotteRegular: require("@/assets/fonts/LinotteRegular.otf"),
+    LinotteSemiBold: require("@/assets/fonts/LinotteSemiBold.otf")
   });
   React.useEffect(() => {
     if (loaded || error) SplashScreen.hideAsync();

@@ -88,26 +88,34 @@ const IndexPage: React.FC = () => {
             <View>
               <Text
                 className="text-center"
-                style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0), fontSize: 90, textShadowColor: "rgba(0,0,0,0.75)", textShadowOffset: { width: 2, height: 2 }, textShadowRadius: 15 }}
+                style={{
+                  fontSize: 60,
+                  textShadowRadius: 50,
+                  fontFamily: "Monoton",
+                  color: Colorizer("#BE2528", 1.0),
+                  textShadowOffset: { width: 8, height: 8 },
+                  textShadowColor: Colorizer("#BE2528", 1.0)
+                }}
               >
                 picBook
               </Text>
-              <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0), fontSize: 90 }}>
+              <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Monoton", color: Colorizer("#E9E9EA", 1.0), fontSize: 60 }}>
                 picBook
               </Text>
             </View>
-            <View className="flex-row items-center px-6 py-3">
-              <View className="w-4 h-4 rounded-full mr-3" style={{ backgroundColor: Colorizer("#E9E9EA", 1.0) }} />
-              <Text className="text-base" style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 0.9) }}>
+            <View className="flex-row items-center px-6 mt-44">
+              <View className="w-3 h-3 rounded-full m-2 mt-3" style={{ backgroundColor: Colorizer("#E9E9EA", 1.0) }} />
+              <Text className="text-lg" style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 0.9) }}>
                 Crafted with imagination and stories
               </Text>
+              <View className="w-3 h-3 rounded-full m-2 mt-3" style={{ backgroundColor: Colorizer("#E9E9EA", 1.0) }} />
             </View>
             <Link href="./Home" asChild>
-              <TouchableOpacity onPressIn={onPressIn} onPressOut={onPressOut} className="mt-8 rounded-3xl overflow-hidden shadow-2xl">
+              <TouchableOpacity onPressIn={onPressIn} onPressOut={onPressOut} className="mt-2 rounded-3xl overflow-hidden shadow-2xl">
                 <Animated.View style={buttonAnimatedStyle}>
                   <LinearGradient colors={["#ffffff", "#f0f0f0"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} className="flex-row items-center justify-center px-10 py-3">
                     <MaterialIcons name="photo-camera" size={28} color={Colorizer("#070808", 1.0)} className="mr-3" />
-                    <Text className="text-xl" style={{ fontFamily: "Linotte Heavy", color: Colorizer("#070808", 1.0) }}>
+                    <Text className="text-xl" style={{ fontFamily: "Kurale", color: Colorizer("#070808", 1.0) }}>
                       Start Exploring
                     </Text>
                   </LinearGradient>
