@@ -58,20 +58,20 @@ const SubImages: React.FC<SubImagesProps> = memo(({ images, onImagePress }) => (
             <Image
               source={{ uri: image.previewLink }}
               style={{
-                width: "100%",
                 height: 64,
-                borderRadius: 4,
                 borderWidth: 1,
+                width: "100%",
+                borderRadius: 4,
                 borderColor: Colorizer(image.primary, 0.5)
               }}
               cachePolicy="disk"
               contentFit="cover"
             />
             <Text
-              className="absolute bottom-0.5 right-0.5 px-1 py-0.5 text-[10px] rounded-2xl"
+              className="absolute m-1 bottom-1 right-1 px-2 text-xs rounded-2xl"
               style={{
-                color: Colorizer("#E9E9EA", 1.0),
                 fontFamily: "Kurale",
+                color: Colorizer("#070808", 1.0),
                 backgroundColor: Colorizer(image.primary, 1.0)
               }}
             >
@@ -108,7 +108,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
     [fadeValue, textOpacity]
   );
   const animateIn = useCallback(() => {
-    textScale.value = 0.59;
+    textScale.value = 0.9;
     fadeValue.value = withTiming(1, { duration: 2000, easing: Easing.inOut(Easing.ease) });
     textOpacity.value = withTiming(1, { duration: 2000, easing: Easing.inOut(Easing.ease) });
     textScale.value = withTiming(1, { duration: 2000, easing: Easing.inOut(Easing.ease) });
@@ -176,19 +176,18 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
               ]}
               contentFit="cover"
             />
-            <View className="absolute top-0 left-0 right-0 items-center justify-start">
+            <View className="absolute bottom-0 left-0 right-0 items-center justify-start">
               <Animated.Text
                 style={[
                   textStyle,
                   {
-                    fontSize: 16,
                     textAlign: "center",
                     fontFamily: "Kurale",
                     color: Colorizer("#070808", 1.0),
-                    backgroundColor: Colorizer(data.images[currentIndex].primary, 1.0)
+                    backgroundColor: Colorizer(data.images[currentIndex].primary, 0.8)
                   }
                 ]}
-                className="text-xs m-1 pt-2 px-3 rounded-2xl"
+                className="text-sm m-1 px-3 rounded-2xl"
               >
                 {data.images[currentIndex].original_file_name.replace(/_/g, " ").replace(".jpg", "")}
               </Animated.Text>
@@ -223,7 +222,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
         </View>
       </View>
       <View className="border-t items-center justify-center py-0.5" style={{ backgroundColor: Colorizer(data.images[currentIndex].primary, 1.0) }}>
-        <Text style={{ fontFamily: "Monoton", color: Colorizer("#070808", 1.0), fontSize: 12, lineHeight: 16 }}>picBook</Text>
+        <Text style={{ fontFamily: "Achemost", color: Colorizer("#070808", 1.0), fontSize: 12, lineHeight: 16 }}>picBook</Text>
       </View>
     </View>
   );
@@ -265,11 +264,11 @@ const HeaderComponent: React.FC<{ categories: Category[]; selectedCategory: stri
     <HeaderAnimate />
     <View className="py-8 px-2">
       <View className="flex-row items-center justify-center">
-        <FontAwesome name="wpexplorer" size={24} color={Colorizer("#E9E9EA", 1.0)} className="mr-1" />
-        <Text style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0) }} className="text-2xl text-center">
+        <FontAwesome name="wpexplorer" size={24} color={Colorizer("#E9E9EA", 1.0)} className="m-2" />
+        <Text style={{ fontFamily: "Achemost", color: Colorizer("#E9E9EA", 1.0) }} className="text-2xl text-center">
           Explore Our Collection
         </Text>
-        <Ionicons name="images-outline" size={24} color={Colorizer("#E9E9EA", 1.0)} className="ml-1" />
+        <Ionicons name="images-outline" size={24} color={Colorizer("#E9E9EA", 1.0)} className="m-2" />
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} className="mt-2 mb-3">
         {categories.map((category) => (
