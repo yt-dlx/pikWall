@@ -10,7 +10,7 @@ const Footer: React.FC = () => (
       <View className="flex-row items-center gap-2">
         <FontAwesome name="book" size={16} style={{ color: Colorizer("#BE2528", 1.0) }} />
         <Text style={{ fontFamily: "Kurale", color: Colorizer("#BE2528", 1.0) }} className="text-sm">
-          pikWall
+          picWall
         </Text>
       </View>
       <Text style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0) }} className="text-center text-xs">
