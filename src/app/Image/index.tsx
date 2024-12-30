@@ -1,3 +1,4 @@
+// src/app/image/index.tsx
 import { Image } from "expo-image";
 import * as FileSystem from "expo-file-system";
 import Colorizer from "@/components/Colorizer";
@@ -5,8 +6,10 @@ import { ImageMetadata } from "@/types/database";
 import { useLocalSearchParams } from "expo-router";
 import * as MediaLibrary from "expo-media-library";
 import React, { useState, useEffect, useRef } from "react";
-import { View, Text, Dimensions, StatusBar, ActivityIndicator, TouchableOpacity, Alert, Modal, Animated, Easing, ScrollView } from "react-native";
 import { FontAwesome5, MaterialIcons, Ionicons } from "@expo/vector-icons";
+import { View, Text, Dimensions, StatusBar, ActivityIndicator, TouchableOpacity, Alert, Modal, Animated, Easing, ScrollView } from "react-native";
+// ============================================================================================
+// ============================================================================================
 const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () => void }> = ({ visible, message, onClose }) => {
   const [modalAnim] = useState(new Animated.Value(0));
   useEffect(() => {
@@ -45,6 +48,8 @@ const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () =>
     </View>
   ) : null;
 };
+// ============================================================================================
+// ============================================================================================
 const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => void }> = ({ visible, message, onClose }) => {
   const [modalAnim] = useState(new Animated.Value(0));
   useEffect(() => {
@@ -83,6 +88,8 @@ const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => v
     </View>
   ) : null;
 };
+// ============================================================================================
+// ============================================================================================
 const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloadRate: number; eta: number; primaryColor: string }> = ({ visible, percentage, downloadRate, eta, primaryColor }) => {
   const [progressAnim] = useState(new Animated.Value(percentage / 100));
   useEffect(() => {
@@ -134,6 +141,8 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
     </View>
   ) : null;
 };
+// ============================================================================================
+// ============================================================================================
 const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number; onViewFullScreen: () => void }> = ({ selectedImage, screenWidth, onViewFullScreen }) => {
   const [imageLoading, setImageLoading] = useState(true);
   const aspectRatio = selectedImage.width / selectedImage.height;
@@ -192,6 +201,8 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
     </View>
   );
 };
+// ============================================================================================
+// ============================================================================================
 const DownloadButton: React.FC<{ onDownload?: (event: any) => void; colors: { primary: string; secondary: string; tertiary: string } }> = ({ onDownload, colors }) => {
   const scaleValue = useRef(new Animated.Value(1)).current;
   useEffect(() => {
@@ -220,6 +231,8 @@ const DownloadButton: React.FC<{ onDownload?: (event: any) => void; colors: { pr
     </TouchableOpacity>
   );
 };
+// ============================================================================================
+// ============================================================================================
 const DownloadScreen = () => {
   const params = useLocalSearchParams();
   const [eta, setEta] = useState<number>(0);

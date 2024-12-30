@@ -1,5 +1,4 @@
 // app/index.tsx
-/* eslint-disable @typescript-eslint/no-require-imports */
 import { Link } from "expo-router";
 import { Image } from "expo-image";
 import React, { useEffect } from "react";

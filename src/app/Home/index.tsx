@@ -242,13 +242,7 @@ const CategoryButton: React.FC<CategoryButtonExtendedProps> = React.memo(({ cate
     >
       <View className="flex-row items-center">
         {getCategoryIcon(selected)}
-        <Text
-          style={{
-            fontFamily: "Kurale",
-            color: selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0)
-          }}
-          className="ml-2 text-base"
-        >
+        <Text style={{ fontFamily: "Kurale", color: selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0) }} className="ml-2 text-base">
           {category}
         </Text>
       </View>
@@ -334,5 +328,4 @@ const HomePage = (): JSX.Element => {
     </View>
   );
 };
-
 export default HomePage;
