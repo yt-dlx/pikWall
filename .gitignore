@@ -18,8 +18,8 @@ yarn-error.*
 .env*.local
 *.tsbuildinfo
 app-example
-/android
-/ios
-/sources
+download
+android
+sources
+ios
 .env
-/download
