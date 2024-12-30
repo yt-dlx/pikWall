@@ -223,7 +223,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
         </View>
       </View>
       <View className="border-t items-center justify-center py-0.5" style={{ backgroundColor: Colorizer(data.images[currentIndex].primary, 1.0) }}>
-        <Text style={{ fontFamily: "Kurale", color: Colorizer("#070808", 1.0), fontSize: 12, lineHeight: 16 }}>picBook™</Text>
+        <Text style={{ fontFamily: "Monoton", color: Colorizer("#070808", 1.0), fontSize: 12, lineHeight: 16 }}>picBook</Text>
       </View>
     </View>
   );
