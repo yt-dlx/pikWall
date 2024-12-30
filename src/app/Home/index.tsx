@@ -1,22 +1,30 @@
 // app/Home/index.tsx
+import MountainsAndBeaches from "@/database/Mountains And Beaches";
+import CosmicAndLightning from "@/database/Cosmic And Lightning";
+import AntiqueLookObject from "@/database/Antique Look Object";
+import MinimalistAbstract from "@/database/Minimalist Abstract";
+import NaturalLandscapes from "@/database/Natural Landscapes";
+import AnimeLandscapes from "@/database/Anime Landscapes";
+import NatureWonders from "@/database/Nature Wonders";
+import HyperCloseups from "@/database/Hyper Closeups";
+import PortraitPerfect from "@/database/Portrait Perfect";
+import AerialView from "@/database/Aerial View";
+// ============================================================================================
+// ============================================================================================
+import * as React from "react";
 import { Link } from "expo-router";
 import { Image } from "expo-image";
 import Footer from "@/components/Footer";
 import Colorizer from "@/components/Colorizer";
-import AnimeDatabase from "@/database/Anime";
-import PortraitDatabase from "@/database/Portrait";
 import { EnvironmentEntry } from "@/types/database";
-import LightningDatabase from "@/database/Lightning";
-import CinematicDatabase from "@/database/Cinematic";
+import { LinearGradient } from "expo-linear-gradient";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
-import PhotographyDatabase from "@/database/Photography";
 import HeaderAnimate from "@/components/HeaderAnimated";
-import React, { useEffect, useCallback, useState, memo } from "react";
 import { SubImagesProps, CardProps, CategoryButtonProps } from "@/types/components";
 import { View, Text, TouchableOpacity, FlatList, ScrollView, StatusBar } from "react-native";
 import Animated, { Easing, runOnJS, useSharedValue, useAnimatedStyle, withTiming } from "react-native-reanimated";
-import { LinearGradient } from "expo-linear-gradient";
-
+// ============================================================================================
+// ============================================================================================
 interface Category {
   name: string;
   database: Record<string, EnvironmentEntry>;
@@ -25,15 +33,24 @@ interface CategoryButtonExtendedProps extends CategoryButtonProps {
   selected: boolean;
   onPress: () => void;
 }
+// ============================================================================================
+// ============================================================================================
 const AnimatedImage = Animated.createAnimatedComponent(Image);
 const categories: Category[] = [
-  { name: "Anime", database: AnimeDatabase },
-  { name: "Portrait", database: PortraitDatabase },
-  { name: "Lightning", database: LightningDatabase },
-  { name: "Cinematic", database: CinematicDatabase },
-  { name: "Photography", database: PhotographyDatabase }
+  { name: "Aerial View", database: AerialView },
+  { name: "Portrait Perfect", database: PortraitPerfect },
+  { name: "Hyper Closeups", database: HyperCloseups },
+  { name: "Nature Wonders", database: NatureWonders },
+  { name: "Anime Landscapes", database: AnimeLandscapes },
+  { name: "Natural Landscapes", database: NaturalLandscapes },
+  { name: "Minimalist Abstract", database: MinimalistAbstract },
+  { name: "Antique Look Object", database: AntiqueLookObject },
+  { name: "Cosmic And Lightning", database: CosmicAndLightning },
+  { name: "Mountains And Beaches", database: MountainsAndBeaches }
 ];
-const SubImages: React.FC<SubImagesProps> = memo(({ images, onImagePress }) => (
+// ============================================================================================
+// ============================================================================================
+const SubImages: React.FC<SubImagesProps> = React.memo(({ images, onImagePress }) => (
   <View className="flex flex-col justify-start">
     {images.data.map((image, index) => (
       <Link
@@ -70,20 +87,22 @@ const SubImages: React.FC<SubImagesProps> = memo(({ images, onImagePress }) => (
   </View>
 ));
 SubImages.displayName = "SubImages";
-const Card: React.FC<CardProps> = memo(({ data }) => {
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const [currentImage, setCurrentImage] = useState<string>(data.images[0]?.previewLink);
+// ============================================================================================
+// ============================================================================================
+const Card: React.FC<CardProps> = React.memo(({ data }) => {
+  const [currentIndex, setCurrentIndex] = React.useState<number>(0);
+  const [currentImage, setCurrentImage] = React.useState<string>(data.images[0]?.previewLink);
   const fadeValue = useSharedValue(1);
   const textOpacity = useSharedValue(1);
   const textScale = useSharedValue(1);
-  const updateImageState = useCallback(
+  const updateImageState = React.useCallback(
     (nextIndex: number) => {
       setCurrentIndex(nextIndex);
       setCurrentImage(data.images[nextIndex]?.previewLink);
     },
     [data.images]
   );
-  const animateOut = useCallback(
+  const animateOut = React.useCallback(
     (cb: () => void) => {
       fadeValue.value = withTiming(0, { duration: 2000, easing: Easing.inOut(Easing.ease) }, () => {
         runOnJS(cb)();
@@ -92,13 +111,13 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
     },
     [fadeValue, textOpacity]
   );
-  const animateIn = useCallback(() => {
+  const animateIn = React.useCallback(() => {
     textScale.value = 0.9;
     fadeValue.value = withTiming(1, { duration: 2000, easing: Easing.inOut(Easing.ease) });
     textOpacity.value = withTiming(1, { duration: 2000, easing: Easing.inOut(Easing.ease) });
     textScale.value = withTiming(1, { duration: 2000, easing: Easing.inOut(Easing.ease) });
   }, [fadeValue, textOpacity, textScale]);
-  const startTransition = useCallback(
+  const startTransition = React.useCallback(
     (nextIndex: number) => {
       animateOut(() => {
         updateImageState(nextIndex);
@@ -107,11 +126,11 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
     },
     [animateOut, animateIn, updateImageState]
   );
-  const updateNextImage = useCallback(() => {
+  const updateNextImage = React.useCallback(() => {
     const nextIndex = (currentIndex + 1) % data.images.length;
     startTransition(nextIndex);
   }, [currentIndex, data.images.length, startTransition]);
-  const handleSubImagePress = useCallback(
+  const handleSubImagePress = React.useCallback(
     (previewLink: string, index: number) => {
       startTransition(index);
     },
@@ -148,7 +167,15 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
             <AnimatedImage source={{ uri: currentImage }} style={[{ width: "100%", height: "100%", borderTopLeftRadius: 8, borderTopRightRadius: 8 }, imageStyle]} contentFit="cover" />
             <View className="absolute bottom-0 left-0 right-0 items-center justify-start">
               <Animated.Text
-                style={[textStyle, { textAlign: "center", fontFamily: "Kurale", color: Colorizer("#070808", 1.0), backgroundColor: Colorizer(data.images[currentIndex].primary, 0.8) }]}
+                style={[
+                  textStyle,
+                  {
+                    textAlign: "center",
+                    fontFamily: "Kurale",
+                    color: Colorizer("#070808", 1.0),
+                    backgroundColor: Colorizer(data.images[currentIndex].primary, 0.8)
+                  }
+                ]}
                 className="text-sm m-1 px-3 rounded-2xl"
               >
                 {data.images[currentIndex].original_file_name.replace(/_/g, " ").replace(".jpg", "")}
@@ -190,25 +217,23 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
   );
 });
 Card.displayName = "Card";
-function getCategoryIcon(category: string, selected: boolean) {
+// ============================================================================================
+// ============================================================================================
+function getCategoryIcon(selected: boolean) {
+  const iconName = selected ? "checkmark-circle" : "ellipse-outline";
   const iconColor = selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0);
-  switch (category) {
-    case "Anime":
-      return <Ionicons name="planet-outline" size={16} color={iconColor} />;
-    case "Portrait":
-      return <Ionicons name="person-circle-outline" size={16} color={iconColor} />;
-    case "Lightning":
-      return <Ionicons name="flash-outline" size={16} color={iconColor} />;
-    case "Cinematic":
-      return <Ionicons name="videocam-outline" size={16} color={iconColor} />;
-    case "Photography":
-      return <Ionicons name="camera-outline" size={16} color={iconColor} />;
-    default:
-      return <Ionicons name="help-circle-outline" size={16} color={iconColor} />;
-  }
+  return <Ionicons name={iconName} size={20} color={iconColor} />;
 }
-const CategoryButton: React.FC<CategoryButtonExtendedProps> = memo(({ category, selected, onPress }) => (
-  <TouchableOpacity style={{ borderRadius: 10, overflow: "hidden", margin: 4 }} activeOpacity={0.7} onPress={onPress}>
+// ============================================================================================
+// ============================================================================================
+const CategoryButton: React.FC<CategoryButtonExtendedProps> = React.memo(({ category, selected, onPress }) => (
+  <TouchableOpacity
+    style={{ borderRadius: 10, overflow: "hidden", margin: 4 }}
+    activeOpacity={0.7}
+    onPress={onPress}
+    accessibilityLabel={`${category} category button`}
+    accessibilityState={{ selected }}
+  >
     <LinearGradient
       colors={selected ? [Colorizer("#5f1314", 1.0), Colorizer("#981e20", 1.0), Colorizer("#BE2528", 1.0)] : [Colorizer("#E9E9EA", 1.0), Colorizer("#d2d2d3", 1.0), Colorizer("#bababb", 1.0)]}
       style={{ paddingHorizontal: 24, paddingVertical: 10 }}
@@ -216,8 +241,14 @@ const CategoryButton: React.FC<CategoryButtonExtendedProps> = memo(({ category, 
       end={{ x: 1, y: 1 }}
     >
       <View className="flex-row items-center">
-        {getCategoryIcon(category, selected)}
-        <Text style={{ fontFamily: "Kurale", color: selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0) }} className="ml-2 text-base">
+        {getCategoryIcon(selected)}
+        <Text
+          style={{
+            fontFamily: "Kurale",
+            color: selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0)
+          }}
+          className="ml-2 text-base"
+        >
           {category}
         </Text>
       </View>
@@ -225,30 +256,36 @@ const CategoryButton: React.FC<CategoryButtonExtendedProps> = memo(({ category, 
   </TouchableOpacity>
 ));
 CategoryButton.displayName = "CategoryButton";
-const HeaderComponent: React.FC<{ categories: Category[]; selectedCategory: string; onSelectCategory: (categoryName: string) => void }> = memo(({ categories, selectedCategory, onSelectCategory }) => (
-  <>
-    <HeaderAnimate />
-    <View className="py-8 px-2">
-      <View className="flex-row items-center justify-center">
-        <FontAwesome name="wpexplorer" size={24} color={Colorizer("#E9E9EA", 1.0)} className="m-2" />
-        <Text style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0) }} className="text-2xl text-center">
-          Explore Our Collection
-        </Text>
-        <Ionicons name="images-outline" size={24} color={Colorizer("#E9E9EA", 1.0)} className="m-2" />
+// ============================================================================================
+// ============================================================================================
+const HeaderComponent: React.FC<{ categories: Category[]; selectedCategory: string; onSelectCategory: (categoryName: string) => void }> = React.memo(
+  ({ categories, selectedCategory, onSelectCategory }) => (
+    <>
+      <HeaderAnimate />
+      <View className="py-8 px-2">
+        <View className="flex-row items-center justify-center">
+          <FontAwesome name="wpexplorer" size={24} color={Colorizer("#E9E9EA", 1.0)} className="m-2" />
+          <Text style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0) }} className="text-2xl text-center">
+            Explore Our Collection
+          </Text>
+          <Ionicons name="images-outline" size={24} color={Colorizer("#E9E9EA", 1.0)} className="m-2" />
+        </View>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} className="mt-2 mb-3">
+          {categories.map((category) => (
+            <CategoryButton key={category.name} category={category.name} selected={category.name === selectedCategory} onPress={() => onSelectCategory(category.name)} />
+          ))}
+        </ScrollView>
       </View>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} className="mt-2 mb-3">
-        {categories.map((category) => (
-          <CategoryButton key={category.name} category={category.name} selected={category.name === selectedCategory} onPress={() => onSelectCategory(category.name)} />
-        ))}
-      </ScrollView>
-    </View>
-  </>
-));
+    </>
+  )
+);
 HeaderComponent.displayName = "HeaderComponent";
+// ============================================================================================
+// ============================================================================================
 const HomePage = (): JSX.Element => {
-  const [cardData, setCardData] = useState<EnvironmentEntry[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState<string>("Anime");
-  useEffect(() => {
+  const [cardData, setCardData] = React.useState<EnvironmentEntry[]>([]);
+  const [selectedCategory, setSelectedCategory] = React.useState<string>("Anime");
+  React.useEffect(() => {
     const processImageUrls = (entry: EnvironmentEntry): EnvironmentEntry => ({
       ...entry,
       images: entry.images.map((image) => ({
@@ -267,7 +304,7 @@ const HomePage = (): JSX.Element => {
     };
     fetchData();
   }, [selectedCategory]);
-  const renderCard = useCallback(
+  const renderCard = React.useCallback(
     ({ item }: { item: EnvironmentEntry }) => (
       <View className="flex-1 m-0.5">
         <Card data={item} />
@@ -275,7 +312,7 @@ const HomePage = (): JSX.Element => {
     ),
     []
   );
-  const keyExtractor = useCallback((item: EnvironmentEntry) => item.environment_title, []);
+  const keyExtractor = React.useCallback((item: EnvironmentEntry) => item.environment_title, []);
   return (
     <View style={{ backgroundColor: Colorizer("#070808", 1.0), flex: 1 }} className="relative">
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
