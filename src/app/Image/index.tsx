@@ -1,5 +1,4 @@
 // app/Image/index.tsx
-/* eslint-disable @typescript-eslint/no-require-imports */
 import * as FileSystem from "expo-file-system";
 import Colorizer from "@/components/Colorizer";
 import { ImageMetadata } from "@/types/database";
@@ -8,9 +7,10 @@ import * as MediaLibrary from "expo-media-library";
 import React, { useState, useEffect, useRef } from "react";
 import { FontAwesome5, MaterialIcons, Ionicons } from "@expo/vector-icons";
 import { useSharedValue, useAnimatedStyle, withRepeat, withSequence, withTiming, Easing } from "react-native-reanimated";
-import { ScrollView, View, Text, Dimensions, StatusBar, ActivityIndicator, Image, TouchableOpacity, Alert, Animated, Modal } from "react-native";
-// ============================================================================================
-// ============================================================================================
+import { ScrollView, View, Text, Dimensions, StatusBar, ActivityIndicator, TouchableOpacity, Alert, Animated, Modal } from "react-native";
+import { Image as ExpoImage } from "expo-image";
+const AnimatedExpoImage = Animated.createAnimatedComponent(ExpoImage);
+
 const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () => void }> = ({ visible, message, onClose }) => {
   const modalOpacity = useSharedValue(0);
   const modalScale = useSharedValue(0.8);
@@ -44,7 +44,7 @@ const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () =>
         ]}
       >
         <Ionicons name="checkmark-done-circle" size={50} color={Colorizer("#28a745", 1.0)} />
-        <Text className="mt-2.5 text-2xl font-bold text-center" style={{ fontFamily: "Kurale", color: Colorizer("#000000", 1.0) }}>
+        <Text className="mt-2.5 text-2xl text-center" style={{ fontFamily: "Kurale", color: Colorizer("#000000", 1.0) }}>
           Success
         </Text>
         <Text className="my-2.5 text-center" style={{ fontFamily: "Kurale", color: Colorizer("#000000", 1.0) }}>
@@ -59,8 +59,7 @@ const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () =>
     </View>
   ) : null;
 };
-// ============================================================================================
-// ============================================================================================
+
 const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => void }> = ({ visible, message, onClose }) => {
   const modalOpacity = useSharedValue(0);
   const modalScale = useSharedValue(0.8);
@@ -94,7 +93,7 @@ const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => v
         ]}
       >
         <MaterialIcons name="error" size={50} color={Colorizer("#dc3545", 1.0)} />
-        <Text className="mt-2.5 text-2xl font-bold text-center" style={{ fontFamily: "Kurale", color: Colorizer("#000000", 1.0) }}>
+        <Text className="mt-2.5 text-2xl text-center" style={{ fontFamily: "Kurale", color: Colorizer("#000000", 1.0) }}>
           Error
         </Text>
         <Text className="my-2.5 text-center" style={{ fontFamily: "Kurale", color: Colorizer("#000000", 1.0) }}>
@@ -109,8 +108,7 @@ const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => v
     </View>
   ) : null;
 };
-// ============================================================================================
-// ============================================================================================
+
 const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloadRate: number; eta: number; primaryColor: string }> = ({ visible, percentage, downloadRate, eta, primaryColor }) => {
   const formatBytes = (bytes: number): string => {
     if (bytes === 0) return "0 Bytes";
@@ -162,8 +160,7 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
     </View>
   ) : null;
 };
-// ============================================================================================
-// ============================================================================================
+
 const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number; onViewFullScreen: () => void }> = ({ selectedImage, screenWidth, onViewFullScreen }) => {
   const [imageLoading, setImageLoading] = useState(true);
   const aspectRatio = selectedImage.width / selectedImage.height;
@@ -184,36 +181,28 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
         {!imageLoading && (
           <View className="items-center">
             <Animated.View className="rounded-full justify-center items-center">
-              <Image
-                className="w-16 h-16 rounded-full"
-                style={{ backgroundColor: Colorizer("#070808", 0.8) }}
-                source={require("@/assets/picbook/picbook_white.png")}
-                resizeMode="contain"
-                alt="image"
-              />
+              <ExpoImage style={{ width: 64, height: 64, borderRadius: 32, backgroundColor: Colorizer("#070808", 0.8) }} source={require("@/assets/picbook/picbook_white.png")} contentFit="contain" />
             </Animated.View>
           </View>
         )}
       </View>
       <View className="rounded-t-3xl overflow-hidden shadow-lg">
         {imageLoading && (
-          <View className="flex justify-center items-center bg-black h-[${imageHeight}]" style={{ backgroundColor: Colorizer("#070808", 1.0), height: imageHeight }}>
+          <View className="flex justify-center items-center" style={{ backgroundColor: Colorizer("#070808", 1.0), height: imageHeight }}>
             <ActivityIndicator size="large" color={Colorizer(selectedImage.primary, 1.0)} />
             <Text className="mt-2.5" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
               Loading HD Image Preview...
             </Text>
           </View>
         )}
-        <Animated.Image
-          className="w-full"
-          style={!imageLoading ? { height: imageHeight, transform: [{ scale: scaleValue }], borderTopLeftRadius: 20, borderTopRightRadius: 20 } : { width: 0, height: 0 }}
+        <AnimatedExpoImage
+          style={!imageLoading ? { width: "100%", height: imageHeight, transform: [{ scale: scaleValue }], borderTopLeftRadius: 20, borderTopRightRadius: 20 } : { width: 0, height: 0 }}
           source={{ uri: selectedImage.previewLink.replace("lowRes", "highRes") }}
           onLoadStart={() => setImageLoading(true)}
           onLoadEnd={() => setImageLoading(false)}
-          resizeMode="cover"
-          onError={(e) => {
+          contentFit="cover"
+          onError={() => {
             setImageLoading(false);
-            console.error("Image failed to load", e);
             Alert.alert("Error", "Failed to load image. Please try again.");
           }}
         />
@@ -231,8 +220,7 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
     </View>
   );
 };
-// ============================================================================================
-// ============================================================================================
+
 const DownloadButton: React.FC<{ onDownload?: (event: any) => void; colors: { primary: string; secondary: string; tertiary: string } }> = ({ onDownload, colors }) => {
   const scale = useSharedValue(1);
   useEffect(() => {
@@ -255,8 +243,7 @@ const DownloadButton: React.FC<{ onDownload?: (event: any) => void; colors: { pr
     </TouchableOpacity>
   );
 };
-// ============================================================================================
-// ============================================================================================
+
 const DownloadScreen = () => {
   const params = useLocalSearchParams();
   const [eta, setEta] = useState<number>(0);
@@ -373,7 +360,7 @@ const DownloadScreen = () => {
             <FontAwesome5 name="times" size={50} color={Colorizer("#E9E9EA", 1.0)} />
           </TouchableOpacity>
           <View className="flex-1 justify-center items-center">
-            <Image source={{ uri: selectedImage.previewLink.replace("lowRes", "highRes") }} alt="image" className="w-full h-full" style={{ resizeMode: "contain" }} />
+            <ExpoImage source={{ uri: selectedImage.previewLink.replace("lowRes", "highRes") }} style={{ width: "100%", height: "100%" }} contentFit="contain" />
           </View>
         </View>
       </Modal>

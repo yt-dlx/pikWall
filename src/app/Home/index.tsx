@@ -108,7 +108,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
     [fadeValue, textOpacity]
   );
   const animateIn = useCallback(() => {
-    textScale.value = 0.8;
+    textScale.value = 0.59;
     fadeValue.value = withTiming(1, { duration: 2000, easing: Easing.inOut(Easing.ease) });
     textOpacity.value = withTiming(1, { duration: 2000, easing: Easing.inOut(Easing.ease) });
     textScale.value = withTiming(1, { duration: 2000, easing: Easing.inOut(Easing.ease) });
@@ -184,11 +184,11 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
                     fontSize: 16,
                     textAlign: "center",
                     fontFamily: "Kurale",
-                    color: Colorizer("#E9E9EA", 1.0),
-                    backgroundColor: Colorizer(data.images[currentIndex].primary, 0.8)
+                    color: Colorizer("#070808", 1.0),
+                    backgroundColor: Colorizer(data.images[currentIndex].primary, 1.0)
                   }
                 ]}
-                className="text-xl px-2 m-2 rounded-2xl"
+                className="text-xs m-1 pt-2 px-3 rounded-2xl"
               >
                 {data.images[currentIndex].original_file_name.replace(/_/g, " ").replace(".jpg", "")}
               </Animated.Text>
@@ -223,9 +223,7 @@ const Card: React.FC<CardProps> = memo(({ data }) => {
         </View>
       </View>
       <View className="border-t items-center justify-center py-0.5" style={{ backgroundColor: Colorizer(data.images[currentIndex].primary, 1.0) }}>
-        <Text style={{ fontFamily: "Kurale", color: Colorizer("#070808", 1.0), fontSize: 12, lineHeight: 16 }} className="font-bold">
-          picBook™
-        </Text>
+        <Text style={{ fontFamily: "Kurale", color: Colorizer("#070808", 1.0), fontSize: 12, lineHeight: 16 }}>picBook™</Text>
       </View>
     </View>
   );
@@ -254,7 +252,7 @@ const CategoryButton: React.FC<CategoryButtonExtendedProps> = memo(({ category, 
   <TouchableOpacity style={{ backgroundColor: selected ? Colorizer("#BE2528", 1.0) : Colorizer("#E9E9EA", 1.0) }} className="px-6 py-2 rounded-2xl mx-0.5" activeOpacity={0.7} onPress={onPress}>
     <View className="flex-row items-center">
       {getCategoryIcon(category, selected)}
-      <Text style={{ fontFamily: "Kurale", color: selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0) }} className="ml-2 text-base font-bold">
+      <Text style={{ fontFamily: "Kurale", color: selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0) }} className="ml-2 text-base">
         {category}
       </Text>
     </View>
@@ -268,7 +266,7 @@ const HeaderComponent: React.FC<{ categories: Category[]; selectedCategory: stri
     <View className="py-8 px-2">
       <View className="flex-row items-center justify-center">
         <FontAwesome name="wpexplorer" size={24} color={Colorizer("#E9E9EA", 1.0)} className="mr-1" />
-        <Text style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0) }} className="text-2xl font-bold text-center">
+        <Text style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0) }} className="text-2xl text-center">
           Explore Our Collection
         </Text>
         <Ionicons name="images-outline" size={24} color={Colorizer("#E9E9EA", 1.0)} className="ml-1" />

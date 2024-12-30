@@ -98,7 +98,7 @@ const IndexPage: React.FC = () => {
             </View>
             <View className="flex-row items-center px-6 py-3">
               <View className="w-4 h-4 rounded-full mr-3" style={{ backgroundColor: Colorizer("#E9E9EA", 1.0) }} />
-              <Text className="text-base font-bold" style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 0.9) }}>
+              <Text className="text-base" style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 0.9) }}>
                 Crafted with imagination and stories
               </Text>
             </View>
@@ -107,7 +107,7 @@ const IndexPage: React.FC = () => {
                 <Animated.View style={buttonAnimatedStyle}>
                   <LinearGradient colors={["#ffffff", "#f0f0f0"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} className="flex-row items-center justify-center px-10 py-3">
                     <MaterialIcons name="photo-camera" size={28} color={Colorizer("#070808", 1.0)} className="mr-3" />
-                    <Text className="text-xl font-bold" style={{ fontFamily: "Kurale", color: Colorizer("#070808", 1.0) }}>
+                    <Text className="text-xl" style={{ fontFamily: "Kurale", color: Colorizer("#070808", 1.0) }}>
                       Start Exploring
                     </Text>
                   </LinearGradient>
