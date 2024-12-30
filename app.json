@@ -37,10 +37,7 @@
     "android": {
       "requiresFullScreen": true,
       "package": "com.shovit.picBook",
-      "permissions": [
-        "READ_EXTERNAL_STORAGE",
-        "WRITE_EXTERNAL_STORAGE"
-      ],
+      "permissions": ["READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"],
       "adaptiveIcon": {
         "backgroundColor": "#0A0A0A",
         "foregroundImage": "./src/assets/picbook/picbook_red.png"
@@ -53,7 +50,12 @@
         {
           "fonts": [
             "./src/assets/fonts/Kurale.ttf",
-            "./src/assets/fonts/Brittany.otf"
+            "./src/assets/fonts/Brittany.otf",
+            "./src/assets/fonts/Linotte Bold.otf",
+            "./src/assets/fonts/Linotte Light.otf",
+            "./src/assets/fonts/Linotte Heavy.otf",
+            "./src/assets/fonts/Linotte Regular.otf",
+            "./src/assets/fonts/Linotte Semi Bold.otf"
           ]
         }
       ],
