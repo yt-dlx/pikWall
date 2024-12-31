@@ -73,7 +73,7 @@ const AnimatedTitle: React.FC = () => {
           contentFit="contain"
           cachePolicy="memory-disk"
           source={require("@/assets/picWall/picWall.png")}
-          style={{ width: 220, height: 220, borderWidth: 3, borderRadius: 9999, borderColor: Colorizer("#E9E9EA", 0.1) }}
+          style={{ width: 150, height: 150, borderWidth: 1, borderRadius: 9999, borderColor: Colorizer("#E9E9EA", 1.0) }}
         />
       </View>
     </Animated.View>

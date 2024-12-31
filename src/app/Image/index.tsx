@@ -10,9 +10,9 @@ import React, { useState, useEffect, useRef } from "react";
 import { setWallpaper, TYPE_SCREEN } from "rn-wallpapers";
 import { FontAwesome5, MaterialIcons, Ionicons } from "@expo/vector-icons";
 import { View, Text, Dimensions, StatusBar, ActivityIndicator, TouchableOpacity, Alert, Modal, Animated, Easing, ScrollView } from "react-native";
-// ============================================================================================
-// ============================================================================================
+
 const { width: screenWidth } = Dimensions.get("window");
+
 const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () => void }> = ({ visible, message, onClose }) => {
   const [modalAnim] = useState(new Animated.Value(0));
   useEffect(() => {
@@ -49,8 +49,7 @@ const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () =>
     </View>
   );
 };
-// ============================================================================================
-// ============================================================================================
+
 const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => void }> = ({ visible, message, onClose }) => {
   const [modalAnim] = useState(new Animated.Value(0));
   useEffect(() => {
@@ -87,8 +86,7 @@ const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => v
     </View>
   );
 };
-// ============================================================================================
-// ============================================================================================
+
 const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloadRate: number; eta: number; primaryColor: string }> = ({ visible, percentage, downloadRate, eta, primaryColor }) => {
   const [progressAnim] = useState(new Animated.Value(percentage / 100));
   useEffect(() => {
@@ -141,8 +139,7 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
     </View>
   );
 };
-// ============================================================================================
-// ============================================================================================
+
 const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number; onViewFullScreen: () => void }> = ({ selectedImage, screenWidth, onViewFullScreen }) => {
   const [imageLoading, setImageLoading] = useState(true);
   const aspectRatio = selectedImage.width / selectedImage.height;
@@ -201,12 +198,12 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
     </View>
   );
 };
-// ============================================================================================
-// ============================================================================================
+
 interface DownloadButtonProps {
   onDownload?: (event: any) => void;
   colors: { primary: string; secondary: string; tertiary: string };
 }
+
 const DownloadButton: React.FC<DownloadButtonProps> = ({ onDownload, colors }) => {
   const scaleValue = useRef(new Animated.Value(1)).current;
   useEffect(() => {
@@ -235,14 +232,14 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({ onDownload, colors }) =
     </TouchableOpacity>
   );
 };
-// ============================================================================================
-// ============================================================================================
+
 interface OtherImagesProps {
   primaryColor: string;
   tertiaryColor: string;
   setCurrentIndex: (index: number) => void;
   otherImages: { img: ImageMetadata; idx: number }[];
 }
+
 const OtherImages: React.FC<OtherImagesProps> = ({ otherImages, setCurrentIndex, primaryColor, tertiaryColor }) => (
   <View className="p-1 my-2 rounded-2xl" style={{ backgroundColor: Colorizer(primaryColor, 0.2) }}>
     <View className="p-1 rounded-2xl" style={{ backgroundColor: Colorizer(tertiaryColor, 0.2) }}>
@@ -269,9 +266,15 @@ const OtherImages: React.FC<OtherImagesProps> = ({ otherImages, setCurrentIndex,
     </View>
   </View>
 );
-// ============================================================================================
-// ============================================================================================
-const FullScreenView: React.FC<{ isFullScreen: boolean; setIsFullScreen: (isFullScreen: boolean) => void; selectedImage: ImageMetadata }> = ({ isFullScreen, setIsFullScreen, selectedImage }) => {
+
+interface FullScreenViewProps {
+  isFullScreen: boolean;
+  setIsFullScreen: (isFullScreen: boolean) => void;
+  selectedImage: ImageMetadata;
+  showAlert: (title: string, message: string, iconName: "error" | "checkmark-done-circle") => void;
+}
+
+const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFullScreen, selectedImage, showAlert }) => {
   return (
     <Modal visible={isFullScreen} transparent={false} onRequestClose={() => setIsFullScreen(false)} presentationStyle="fullScreen" statusBarTranslucent>
       <View style={{ flex: 1, backgroundColor: Colorizer("#000000", 1.0) }}>
@@ -290,13 +293,21 @@ const FullScreenView: React.FC<{ isFullScreen: boolean; setIsFullScreen: (isFull
             end={[1, 0]}
           >
             <TouchableOpacity
-              onPress={async () => await setWallpaper({ uri: selectedImage.previewLink.replace("lowRes", "highRes") }, TYPE_SCREEN.LOCK)}
+              onPress={async () => {
+                try {
+                  await setWallpaper({ uri: selectedImage.previewLink.replace("lowRes", "highRes") }, TYPE_SCREEN.LOCK);
+                  showAlert("Success", "Lock screen wallpaper set successfully.", "checkmark-done-circle");
+                } catch (error) {
+                  showAlert("Error", "Failed to set lock screen wallpaper.", "error");
+                }
+              }}
               style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}
             >
               <Ionicons name="image" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
               <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Set LockScreen</Text>
             </TouchableOpacity>
           </LinearGradient>
+
           <LinearGradient
             colors={[Colorizer(selectedImage.tertiary, 0.8), Colorizer(selectedImage.tertiary, 0.6), Colorizer(selectedImage.tertiary, 0.4)]}
             style={{ flex: 1, height: 40, borderRadius: 10, marginHorizontal: 1 }}
@@ -304,13 +315,21 @@ const FullScreenView: React.FC<{ isFullScreen: boolean; setIsFullScreen: (isFull
             end={[1, 0]}
           >
             <TouchableOpacity
-              onPress={async () => await setWallpaper({ uri: selectedImage.previewLink.replace("lowRes", "highRes") }, TYPE_SCREEN.HOME)}
+              onPress={async () => {
+                try {
+                  await setWallpaper({ uri: selectedImage.previewLink.replace("lowRes", "highRes") }, TYPE_SCREEN.HOME);
+                  showAlert("Success", "Home screen wallpaper set successfully.", "checkmark-done-circle");
+                } catch (error) {
+                  showAlert("Error", "Failed to set home screen wallpaper.", "error");
+                }
+              }}
               style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}
             >
               <Ionicons name="image" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
               <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Set HomeScreen</Text>
             </TouchableOpacity>
           </LinearGradient>
+
           <LinearGradient
             colors={[Colorizer(selectedImage.tertiary, 0.8), Colorizer(selectedImage.tertiary, 0.6), Colorizer(selectedImage.tertiary, 0.4)]}
             style={{ flex: 1, height: 40, borderRadius: 10, marginHorizontal: 1 }}
@@ -318,7 +337,14 @@ const FullScreenView: React.FC<{ isFullScreen: boolean; setIsFullScreen: (isFull
             end={[1, 0]}
           >
             <TouchableOpacity
-              onPress={async () => await setWallpaper({ uri: selectedImage.previewLink.replace("lowRes", "highRes") }, TYPE_SCREEN.BOTH)}
+              onPress={async () => {
+                try {
+                  await setWallpaper({ uri: selectedImage.previewLink.replace("lowRes", "highRes") }, TYPE_SCREEN.BOTH);
+                  showAlert("Success", "Both screen wallpapers set successfully.", "checkmark-done-circle");
+                } catch (error) {
+                  showAlert("Error", "Failed to set both screen wallpapers.", "error");
+                }
+              }}
               style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}
             >
               <Ionicons name="image" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
@@ -330,8 +356,7 @@ const FullScreenView: React.FC<{ isFullScreen: boolean; setIsFullScreen: (isFull
     </Modal>
   );
 };
-// ============================================================================================
-// ============================================================================================
+
 const ImagePage = () => {
   const params = useLocalSearchParams();
   const [eta, setEta] = useState<number>(0);
@@ -425,7 +450,7 @@ const ImagePage = () => {
           <OtherImages otherImages={otherImages} setCurrentIndex={setCurrentIndex} primaryColor={selectedImage.primary} tertiaryColor={selectedImage.tertiary} />
         </View>
       </ScrollView>
-      <FullScreenView isFullScreen={isFullScreen} setIsFullScreen={setIsFullScreen} selectedImage={selectedImage} />
+      <FullScreenView isFullScreen={isFullScreen} setIsFullScreen={setIsFullScreen} selectedImage={selectedImage} showAlert={showAlert} />
       <DownloadingModal visible={isDownloading} percentage={percentage} downloadRate={downloadRate} eta={eta} primaryColor={selectedImage.primary} />
       <SuccessModal visible={alertVisible && alertIcon === "checkmark-done-circle"} message={alertMessage} onClose={hideAlert} />
       <ErrorModal visible={alertVisible && alertIcon === "error"} message={alertMessage} onClose={hideAlert} />
