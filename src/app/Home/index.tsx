@@ -79,7 +79,7 @@ const SubImages: React.FC<SubImagesProps> = React.memo(({ images, onImagePress }
             />
             <Text
               className="absolute m-1 bottom-1 right-1 px-2 text-xs rounded-2xl"
-              style={{ fontFamily: "Linotte_Regular", color: Colorizer("#070808", 1.0), backgroundColor: Colorizer(image.primary, 1.0) }}
+              style={{ fontFamily: "Linotte_Bold", color: Colorizer("#000000", 1.0), backgroundColor: Colorizer(image.primary, 1.0) }}
             >
               {image.primary}
             </Text>
@@ -174,8 +174,8 @@ const Card: React.FC<CardProps> = React.memo(({ data }) => {
                   textStyle,
                   {
                     textAlign: "center",
-                    fontFamily: "Linotte_Regular",
-                    color: Colorizer("#070808", 1.0),
+                    fontFamily: "Linotte_Bold",
+                    color: Colorizer("#000000", 1.0),
                     backgroundColor: Colorizer(data.images[currentIndex].primary, 0.8)
                   }
                 ]}
@@ -214,7 +214,7 @@ const Card: React.FC<CardProps> = React.memo(({ data }) => {
         </View>
       </View>
       <View className="border-t items-center justify-center py-0.5" style={{ backgroundColor: Colorizer(data.images[currentIndex].primary, 1.0) }}>
-        <Text style={{ fontFamily: "Linotte_Regular", color: Colorizer("#070808", 1.0), fontSize: 12, lineHeight: 16 }}>picWall</Text>
+        <Text style={{ fontFamily: "Linotte_Bold", color: Colorizer("#000000", 1.0), fontSize: 12, lineHeight: 16 }}>picWall</Text>
       </View>
     </View>
   );
@@ -245,7 +245,7 @@ const CategoryButton: React.FC<CategoryButtonExtendedProps> = React.memo(({ cate
     >
       <View className="flex-row items-center">
         {getCategoryIcon(selected)}
-        <Text style={{ fontFamily: "Linotte_Regular", color: selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0) }} className="ml-2 text-base">
+        <Text style={{ fontFamily: "Linotte_Bold", color: selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0) }} className="ml-2 text-base">
           {category}
         </Text>
       </View>
@@ -262,7 +262,7 @@ const HeaderComponent: React.FC<{ categories: Category[]; selectedCategory: stri
       <View className="py-8 px-2">
         <View className="flex-row items-center justify-center">
           <FontAwesome name="wpexplorer" size={24} color={Colorizer("#E9E9EA", 1.0)} className="m-2" />
-          <Text style={{ fontFamily: "Linotte_Regular", color: Colorizer("#E9E9EA", 1.0) }} className="text-2xl text-center">
+          <Text style={{ fontFamily: "Linotte_Bold", color: Colorizer("#E9E9EA", 1.0) }} className="text-2xl text-center">
             Explore Our Collection
           </Text>
           <Ionicons name="images-outline" size={24} color={Colorizer("#E9E9EA", 1.0)} className="m-2" />
@@ -311,7 +311,7 @@ const HomePage = (): JSX.Element => {
   );
   const keyExtractor = React.useCallback((item: EnvironmentEntry) => item.environment_title, []);
   return (
-    <View style={{ backgroundColor: Colorizer("#070808", 1.0), flex: 1 }} className="relative">
+    <View style={{ backgroundColor: Colorizer("#000000", 1.0), flex: 1 }} className="relative">
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
       <FlatList
         windowSize={3}
