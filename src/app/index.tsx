@@ -53,7 +53,6 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
 
 const AnimatedTitle: React.FC = () => {
   const scale = useSharedValue(0.5);
-
   useEffect(() => {
     scale.value = withRepeat(
       withSequence(withTiming(1.2, { duration: 4000, easing: Easing.bezier(0.4, 0, 0.2, 1) }), withTiming(1.0, { duration: 4000, easing: Easing.bezier(0.4, 0, 0.2, 1) })),
@@ -61,9 +60,7 @@ const AnimatedTitle: React.FC = () => {
       true
     );
   }, []);
-
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
-
   return (
     <Animated.View
       style={[animatedStyle, { shadowColor: Colorizer("#000000", 1.0), shadowOffset: { width: 0, height: 8 }, shadowOpacity: 0.4, shadowRadius: 12 }]}
@@ -73,10 +70,10 @@ const AnimatedTitle: React.FC = () => {
       <View className="rounded-full p-1" style={{ backgroundColor: Colorizer("#0A0A0A", 0.8), justifyContent: "center", alignItems: "center" }}>
         <Image
           alt="logo"
-          cachePolicy="memory-disk"
           contentFit="contain"
+          cachePolicy="memory-disk"
           source={require("@/assets/picWall/picWall.png")}
-          style={{ width: 220, height: 220, borderWidth: 3, borderRadius: 9999, borderColor: Colorizer("#BE2528", 0.9) }}
+          style={{ width: 220, height: 220, borderWidth: 3, borderRadius: 9999, borderColor: Colorizer("#E9E9EA", 0.1) }}
         />
       </View>
     </Animated.View>
@@ -131,22 +128,22 @@ const IndexPage: React.FC = () => {
                 <Text
                   className="text-center"
                   style={{
-                    fontSize: 60,
+                    fontSize: 80,
                     textShadowRadius: 60,
-                    fontFamily: "Linotte_Heavy",
                     color: Colorizer("#E9E9EA", 1.0),
                     textShadowOffset: { width: 24, height: 2 },
+                    fontFamily: "Dm_Serif_Display_Regular",
                     textShadowColor: Colorizer("#0A0A0A", 1.0)
                   }}
                 >
                   picWall
                 </Text>
-                <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Linotte_Heavy", color: Colorizer("#E9E9EA", 1.0), fontSize: 60 }}>
+                <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Dm_Serif_Display_Regular", color: Colorizer("#E9E9EA", 1.0), fontSize: 80 }}>
                   picWall
                 </Text>
                 <Animated.View style={{ alignSelf: "center" }} entering={FadeInDown.delay(600).duration(1500).springify()}>
                   <View style={{ backgroundColor: Colorizer("#0A0A0A", 0.9), borderRadius: 12, paddingHorizontal: 12, paddingVertical: 4, marginTop: 8 }}>
-                    <Text className="text-center" style={{ fontFamily: "Linotte_Regular", color: Colorizer("#E9E9EA", 1.0), fontSize: 16 }}>
+                    <Text className="text-center" style={{ fontFamily: "Caveat_Bold", color: Colorizer("#E9E9EA", 1.0), fontSize: 16 }}>
                       Crafted with <Text style={{ color: Colorizer("#BE2528", 1.0) }}>♥</Text> in India
                     </Text>
                   </View>
@@ -162,7 +159,7 @@ const IndexPage: React.FC = () => {
                       className="flex-row items-center justify-center px-10 py-4"
                     >
                       <FontAwesome5 name="camera-retro" size={32} color={Colorizer("#0A0A0A", 1.0)} style={{ marginRight: 12 }} />
-                      <Text className="text-2xl" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#0A0A0A", 1.0) }}>
+                      <Text className="text-2xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer("#0A0A0A", 1.0) }}>
                         Let's Explore Wallpapers
                       </Text>
                     </LinearGradient>
@@ -170,8 +167,8 @@ const IndexPage: React.FC = () => {
                 </TouchableOpacity>
               </Link>
               <Animated.View entering={FadeIn.delay(1200).duration(1500)} style={{ marginTop: 10, paddingHorizontal: 20, alignItems: "center" }}>
-                <Text style={{ fontFamily: "Linotte_Heavy", color: Colorizer("#E9E9EA", 0.8), fontSize: 20, textAlign: "center", marginBottom: 4 }}>Personalised AI Wallpaper Gallery</Text>
-                <Text style={{ fontFamily: "Linotte_Thin", color: Colorizer("#E9E9EA", 0.6), fontSize: 10, textAlign: "center", maxWidth: 200 }}>
+                <Text style={{ fontFamily: "Caveat_Bold", color: Colorizer("#E9E9EA", 0.8), fontSize: 20, textAlign: "center", marginBottom: 4 }}>Personalised AI Wallpaper Gallery</Text>
+                <Text style={{ fontFamily: "Linotte_Thin", color: Colorizer("#E9E9EA", 0.6), fontSize: 10, textAlign: "center", maxWidth: 250 }}>
                   Create stunning collections, share your moments, and discover amazing photographs from around the world. Join our community of passionate photographers today!
                 </Text>
               </Animated.View>

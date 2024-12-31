@@ -12,6 +12,13 @@ import { SafeAreaView, StatusBar, View } from "react-native";
 SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const [loaded, error] = useFonts({
+    Caveat_Bold: require("@/assets/fonts/Caveat_Bold.ttf"),
+    Caveat_Regular: require("@/assets/fonts/Caveat_Regular.ttf"),
+    Caveat_Medium: require("@/assets/fonts/Caveat_Medium.ttf"),
+    Lobster_Regular: require("@/assets/fonts/Lobster_Regular.ttf"),
+    Caveat_SemiBold: require("@/assets/fonts/Caveat_SemiBold.ttf"),
+    Dm_Serif_Display_Italic: require("@/assets/fonts/Dm_Serif_Display_Italic.ttf"),
+    Dm_Serif_Display_Regular: require("@/assets/fonts/Dm_Serif_Display_Regular.ttf"),
     Linotte_Bold: require("@/assets/fonts/Linotte_Bold.otf"),
     Linotte_Light: require("@/assets/fonts/Linotte_Light.otf"),
     Linotte_Heavy: require("@/assets/fonts/Linotte_Heavy.otf"),

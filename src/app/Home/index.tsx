@@ -276,13 +276,11 @@ const HeaderComponent: React.FC<{ categories: Category[]; selectedCategory: stri
   ({ categories, selectedCategory, onSelectCategory }) => (
     <>
       <HeaderAnimate />
-      <View className="pt-8 pb-2 px-1">
-        <View className="flex-row items-center justify-center">
-          <FontAwesome5 name="canadian-maple-leaf" size={24} color={Colorizer("#E9E9EA", 1.0)} className="m-2" />
-          <Text style={{ fontFamily: "Linotte_Heavy", color: Colorizer("#E9E9EA", 1.0) }} className="text-4xl text-center">
+      <View className="pt-10 pb-2 px-1">
+        <View className="flex-row">
+          <Text style={{ fontFamily: "Linotte_Heavy", color: Colorizer("#E9E9EA", 1.0) }} className="text-5xl">
             Explore Our Collection
           </Text>
-          <FontAwesome5 name="black-tie" size={24} color={Colorizer("#E9E9EA", 1.0)} className="m-2" />
         </View>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           {categories.map((category) => (
