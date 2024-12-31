@@ -53,7 +53,7 @@ const categories: Category[] = [
 const SubImages: React.FC<SubImagesProps> = React.memo(({ images, onImagePress }) => (
   <View className="flex flex-col justify-start">
     {images.data.map((image, index) => (
-      <Link key={index} href={{ pathname: "./Image", params: { data: JSON.stringify({ selectedIndex: index, data: images.data, environment_title: images.environment_title, environment_moral: images.environment_moral, environment_prompt: images.environment_prompt }) } }} asChild>
+      <Link key={index} href={{ pathname: "./Image", params: { data: JSON.stringify({ selectedIndex: index, data: images.data, environment_title: images.environment_title }) } }} asChild>
         <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="p-[0.2px] flex-1">
           <View className="relative">
             <Image source={{ uri: image.previewLink }} style={{ height: 50, borderWidth: 1, width: "100%", borderRadius: 4, borderColor: Colorizer(image.primary, 0.5) }} cachePolicy="memory-disk" contentFit="cover" />
@@ -127,7 +127,7 @@ const Card: React.FC<CardProps> = React.memo(({ data }) => {
   const textStyle = useAnimatedStyle(() => ({ opacity: textOpacity.value, transform: [{ scale: textScale.value }] }));
   return (
     <View className="rounded-b-lg rounded-t-2xl overflow-hidden border" style={{ backgroundColor: Colorizer("#171717", 1.0), borderColor: Colorizer(data.images[currentIndex].primary, 0.4) }}>
-      <Link href={{ pathname: "./Image", params: { data: JSON.stringify({ data: data.images, selectedIndex: currentIndex, environment_title: data.environment_title, environment_moral: data.environment_moral, environment_prompt: data.environment_prompt }) } }} asChild>
+      <Link href={{ pathname: "./Image", params: { data: JSON.stringify({ data: data.images, selectedIndex: currentIndex, environment_title: data.environment_title }) } }} asChild>
         <TouchableOpacity>
           <View className="relative aspect-[9/16] w-full overflow-hidden">
             <AnimatedImage source={{ uri: currentImage }} style={[{ width: "100%", height: "100%", borderTopLeftRadius: 8, borderTopRightRadius: 8 }, imageStyle]} contentFit="cover" />
@@ -141,10 +141,10 @@ const Card: React.FC<CardProps> = React.memo(({ data }) => {
       </Link>
       <View className="flex flex-row p-0.5">
         <View className="w-1/2">
-          <SubImages onImagePress={handleSubImagePress} images={{ data: data.images.slice(0, 2), selectedIndex: currentIndex, environment_title: data.environment_title, environment_moral: data.environment_moral, environment_prompt: data.environment_prompt }} />
+          <SubImages onImagePress={handleSubImagePress} images={{ data: data.images.slice(0, 2), selectedIndex: currentIndex, environment_title: data.environment_title }} />
         </View>
         <View className="w-1/2">
-          <SubImages onImagePress={handleSubImagePress} images={{ data: data.images.slice(2, 4), selectedIndex: currentIndex, environment_title: data.environment_title, environment_moral: data.environment_moral, environment_prompt: data.environment_prompt }} />
+          <SubImages onImagePress={handleSubImagePress} images={{ data: data.images.slice(2, 4), selectedIndex: currentIndex, environment_title: data.environment_title }} />
         </View>
       </View>
       <View className="border-t items-center justify-center py-0.5" style={{ backgroundColor: Colorizer(data.images[currentIndex].primary, 1.0) }}>

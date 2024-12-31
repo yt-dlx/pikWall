@@ -29,8 +29,6 @@ interface CategoryButtonProps {
 }
 
 interface DownloadScreenProps {
-  environment_prompt: string;
-  environment_moral: string;
   environment_title: string;
   selectedIndex: number;
   data: ImageMetadata[];

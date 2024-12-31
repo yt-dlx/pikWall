@@ -2,8 +2,6 @@ import { EnvironmentEntry } from "@/types/database";
 const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   "Autumn Misty Bridge": {
     environment_title: "Autumn Misty Bridge",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Autumn Misty Bridge (1).jpg",
@@ -89,8 +87,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Autumn Misty River": {
     environment_title: "Autumn Misty River",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Autumn Misty River (1).jpg",
@@ -176,8 +172,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Crystal Ice Palace": {
     environment_title: "Crystal Ice Palace",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Crystal Ice Palace (1).jpg",
@@ -263,8 +257,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Crystal Lake At Dawn": {
     environment_title: "Crystal Lake At Dawn",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Crystal Lake At Dawn (1).jpg",
@@ -350,8 +342,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Desert Oasis Dream": {
     environment_title: "Desert Oasis Dream",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Desert Oasis Dream (1).jpg",
@@ -437,8 +427,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Emerald Forest Glade": {
     environment_title: "Emerald Forest Glade",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Emerald Forest Glade (1).jpg",
@@ -524,8 +512,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Enchanted Garden Glade": {
     environment_title: "Enchanted Garden Glade",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Enchanted Garden Glade (1).jpg",
@@ -611,8 +597,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Enchanted Winter Forest": {
     environment_title: "Enchanted Winter Forest",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Enchanted Winter Forest (1).jpg",
@@ -698,8 +682,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Floating Islands At Dawn": {
     environment_title: "Floating Islands At Dawn",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Floating Islands At Dawn (1).jpg",
@@ -785,8 +767,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Floating Lantern Isles": {
     environment_title: "Floating Lantern Isles",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Floating Lantern Isles (1).jpg",
@@ -872,8 +852,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Floating Lotus Islands": {
     environment_title: "Floating Lotus Islands",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Floating Lotus Islands (1).jpg",
@@ -959,8 +937,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Hidden Fairy Springs": {
     environment_title: "Hidden Fairy Springs",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Hidden Fairy Springs (1).jpg",
@@ -1046,8 +1022,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Lush Tropical Beach": {
     environment_title: "Lush Tropical Beach",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Lush Tropical Beach  (1).jpg",
@@ -1133,8 +1107,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Moonlit Bamboo Grove": {
     environment_title: "Moonlit Bamboo Grove",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Moonlit Bamboo Grove (1).jpg",
@@ -1220,8 +1192,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Mystical Moonlit Grove": {
     environment_title: "Mystical Moonlit Grove",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Mystical Moonlit Grove (1).jpg",
@@ -1307,8 +1277,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Neon Cyberpunk Garden": {
     environment_title: "Neon Cyberpunk Garden",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Neon Cyberpunk Garden (1).jpg",
@@ -1394,8 +1362,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Serene Lotus Pond": {
     environment_title: "Serene Lotus Pond",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Serene Lotus Pond (1).jpg",
@@ -1481,8 +1447,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Starflower Meadow": {
     environment_title: "Starflower Meadow",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Starflower Meadow (1).jpg",
@@ -1568,8 +1532,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Sunlit Cherry Grove": {
     environment_title: "Sunlit Cherry Grove",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Sunlit Cherry Grove (1).jpg",
@@ -1655,8 +1617,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Sunrise Over Mystic Mountains": {
     environment_title: "Sunrise Over Mystic Mountains",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Sunrise Over Mystic Mountains (1).jpg",
@@ -1742,8 +1702,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Sunset Over Cherry Blossom Lake": {
     environment_title: "Sunset Over Cherry Blossom Lake",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Sunset Over Cherry Blossom Lake (1).jpg",
@@ -1829,8 +1787,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Twilight Blossom Bridge": {
     environment_title: "Twilight Blossom Bridge",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Twilight Blossom Bridge (1).jpg",
@@ -1916,8 +1872,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Twinkling Firefly Meadow": {
     environment_title: "Twinkling Firefly Meadow",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Twinkling Firefly Meadow (1).jpg",
@@ -2003,8 +1957,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Winter Blossom Haven": {
     environment_title: "Winter Blossom Haven",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Winter Blossom Haven (1).jpg",
@@ -2090,8 +2042,6 @@ const AnimeLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Winter Night Sky": {
     environment_title: "Winter Night Sky",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Winter Night Sky (1).jpg",

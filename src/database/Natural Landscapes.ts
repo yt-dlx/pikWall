@@ -2,8 +2,6 @@ import { EnvironmentEntry } from "@/types/database";
 const NaturalLandscapes: Record<string, EnvironmentEntry> = {
   "Autumn Lakeside Reflection": {
     environment_title: "Autumn Lakeside Reflection",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Autumn Lakeside Reflection (1).jpg",
@@ -89,8 +87,6 @@ const NaturalLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Craggy Cliffside At Twilight": {
     environment_title: "Craggy Cliffside At Twilight",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Craggy Cliffside At Twilight (1).jpg",
@@ -176,8 +172,6 @@ const NaturalLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Desolate Desert Dunes": {
     environment_title: "Desolate Desert Dunes",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Desolate Desert Dunes (1).jpg",
@@ -263,8 +257,6 @@ const NaturalLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Emerald Lake At Dusk": {
     environment_title: "Emerald Lake At Dusk",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Emerald Lake At Dusk (1).jpg",
@@ -350,8 +342,6 @@ const NaturalLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Foggy Coastal Cliffs": {
     environment_title: "Foggy Coastal Cliffs",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Foggy Coastal Cliffs (1).jpg",
@@ -437,8 +427,6 @@ const NaturalLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Frozen River With Icebergs": {
     environment_title: "Frozen River With Icebergs",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Frozen River With Icebergs (1).jpg",
@@ -524,8 +512,6 @@ const NaturalLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Frozen Tundra Under Northern Lights": {
     environment_title: "Frozen Tundra Under Northern Lights",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Frozen Tundra Under Northern Lights (1).jpg",
@@ -611,8 +597,6 @@ const NaturalLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Golden Wheat Field At Noon": {
     environment_title: "Golden Wheat Field At Noon",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Golden Wheat Field At Noon (1).jpg",
@@ -698,8 +682,6 @@ const NaturalLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Lush Rainforest Waterfall": {
     environment_title: "Lush Rainforest Waterfall",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Lush Rainforest Waterfall (1).jpg",
@@ -785,8 +767,6 @@ const NaturalLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Lush Valley With Flowing River": {
     environment_title: "Lush Valley With Flowing River",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Lush Valley With Flowing River (1).jpg",
@@ -872,8 +852,6 @@ const NaturalLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Misty Morning In Lavender Fields": {
     environment_title: "Misty Morning In Lavender Fields",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Misty Morning In Lavender Fields  (1).jpg",
@@ -959,8 +937,6 @@ const NaturalLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Moonrise Over Snowy Peaks": {
     environment_title: "Moonrise Over Snowy Peaks",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Moonrise Over Snowy Peaks (1).jpg",
@@ -1046,8 +1022,6 @@ const NaturalLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Rolling Hills And Flower Fields": {
     environment_title: "Rolling Hills And Flower Fields",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Rolling Hills And Flower Fields  (1).jpg",
@@ -1133,8 +1107,6 @@ const NaturalLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Snowy Mountain Range": {
     environment_title: "Snowy Mountain Range",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Snowy Mountain Range (1).jpg",
@@ -1220,8 +1192,6 @@ const NaturalLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Starry Night Over Desert Dunes": {
     environment_title: "Starry Night Over Desert Dunes",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Starry Night Over Desert Dunes (1).jpg",
@@ -1307,8 +1277,6 @@ const NaturalLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Starry Night Over Serene Lake": {
     environment_title: "Starry Night Over Serene Lake",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Starry Night Over Serene Lake (1).jpg",
@@ -1394,8 +1362,6 @@ const NaturalLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Sunlit Orchard In Spring": {
     environment_title: "Sunlit Orchard In Spring",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Sunlit Orchard In Spring (1).jpg",
@@ -1481,8 +1447,6 @@ const NaturalLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Sunrise In The Redwood Forest": {
     environment_title: "Sunrise In The Redwood Forest",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Sunrise In The Redwood Forest (1).jpg",
@@ -1568,8 +1532,6 @@ const NaturalLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Sunrise Through Tall Grass Plains": {
     environment_title: "Sunrise Through Tall Grass Plains",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Sunrise Through Tall Grass Plains (1).jpg",
@@ -1655,8 +1617,6 @@ const NaturalLandscapes: Record<string, EnvironmentEntry> = {
   },
   "Twilight Over The Savannah": {
     environment_title: "Twilight Over The Savannah",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Twilight Over The Savannah (1).jpg",

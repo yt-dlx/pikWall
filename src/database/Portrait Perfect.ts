@@ -2,8 +2,6 @@ import { EnvironmentEntry } from "@/types/database";
 const PortraitPerfect: Record<string, EnvironmentEntry> = {
   "Adventurous Hiker In Nature": {
     environment_title: "Adventurous Hiker In Nature",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Adventurous Hiker In Nature (1).jpg",
@@ -89,8 +87,6 @@ const PortraitPerfect: Record<string, EnvironmentEntry> = {
   },
   "Adventurous Mountain Climber": {
     environment_title: "Adventurous Mountain Climber",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Adventurous Mountain Climber (1).jpg",
@@ -176,8 +172,6 @@ const PortraitPerfect: Record<string, EnvironmentEntry> = {
   },
   "Casual Skater In Urban Setting": {
     environment_title: "Casual Skater In Urban Setting",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Casual Skater In Urban Setting (1).jpg",
@@ -263,8 +257,6 @@ const PortraitPerfect: Record<string, EnvironmentEntry> = {
   },
   "Casual Urban Explorer": {
     environment_title: "Casual Urban Explorer",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Casual Urban Explorer (1).jpg",
@@ -350,8 +342,6 @@ const PortraitPerfect: Record<string, EnvironmentEntry> = {
   },
   "Cheerful Baker In Bakery": {
     environment_title: "Cheerful Baker In Bakery",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Cheerful Baker In Bakery (1).jpg",
@@ -437,8 +427,6 @@ const PortraitPerfect: Record<string, EnvironmentEntry> = {
   },
   "Confident Business Leader": {
     environment_title: "Confident Business Leader",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Confident Business Leader (1).jpg",
@@ -524,8 +512,6 @@ const PortraitPerfect: Record<string, EnvironmentEntry> = {
   },
   "Confident Engineer With Blueprints": {
     environment_title: "Confident Engineer With Blueprints",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Confident Engineer With Blueprints (1).jpg",
@@ -611,8 +597,6 @@ const PortraitPerfect: Record<string, EnvironmentEntry> = {
   },
   "Elegant Sculptor With Marble Block": {
     environment_title: "Elegant Sculptor With Marble Block",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Elegant Sculptor With Marble Block (1).jpg",
@@ -698,8 +682,6 @@ const PortraitPerfect: Record<string, EnvironmentEntry> = {
   },
   "Energetic Musician In Action": {
     environment_title: "Energetic Musician In Action",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Energetic Musician In Action (1).jpg",
@@ -785,8 +767,6 @@ const PortraitPerfect: Record<string, EnvironmentEntry> = {
   },
   "Graceful Ballet Dancer": {
     environment_title: "Graceful Ballet Dancer",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Graceful Ballet Dancer (1).jpg",
@@ -872,8 +852,6 @@ const PortraitPerfect: Record<string, EnvironmentEntry> = {
   },
   "Graceful Violinist In Concert": {
     environment_title: "Graceful Violinist In Concert",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Graceful Violinist In Concert (1).jpg",
@@ -959,8 +937,6 @@ const PortraitPerfect: Record<string, EnvironmentEntry> = {
   },
   "Joyful Family Gathering": {
     environment_title: "Joyful Family Gathering",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Joyful Family Gathering (1).jpg",
@@ -1046,8 +1022,6 @@ const PortraitPerfect: Record<string, EnvironmentEntry> = {
   },
   "Radiant Bride In Garden": {
     environment_title: "Radiant Bride In Garden",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Radiant Bride In Garden (1).jpg",
@@ -1133,8 +1107,6 @@ const PortraitPerfect: Record<string, EnvironmentEntry> = {
   },
   "Radiant Smiles In Golden Hour": {
     environment_title: "Radiant Smiles In Golden Hour",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Radiant Smiles In Golden Hour (1).jpg",
@@ -1220,8 +1192,6 @@ const PortraitPerfect: Record<string, EnvironmentEntry> = {
   },
   "Serene Meditation Practitioner": {
     environment_title: "Serene Meditation Practitioner",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Serene Meditation Practitioner (1).jpg",
@@ -1307,8 +1277,6 @@ const PortraitPerfect: Record<string, EnvironmentEntry> = {
   },
   "Stylish Fashion Designer": {
     environment_title: "Stylish Fashion Designer",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Stylish Fashion Designer (1).jpg",
@@ -1394,8 +1362,6 @@ const PortraitPerfect: Record<string, EnvironmentEntry> = {
   },
   "Thoughtful Artist In Studio": {
     environment_title: "Thoughtful Artist In Studio",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Thoughtful Artist In Studio (1).jpg",
@@ -1481,8 +1447,6 @@ const PortraitPerfect: Record<string, EnvironmentEntry> = {
   },
   "Thoughtful Writer With Notebook": {
     environment_title: "Thoughtful Writer With Notebook",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Thoughtful Writer With Notebook (1).jpg",
@@ -1568,8 +1532,6 @@ const PortraitPerfect: Record<string, EnvironmentEntry> = {
   },
   "Vintage Elegance": {
     environment_title: "Vintage Elegance",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Vintage Elegance (1).jpg",
@@ -1655,8 +1617,6 @@ const PortraitPerfect: Record<string, EnvironmentEntry> = {
   },
   "VintageInspired Photographer": {
     environment_title: "VintageInspired Photographer",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "VintageInspired Photographer (1).jpg",

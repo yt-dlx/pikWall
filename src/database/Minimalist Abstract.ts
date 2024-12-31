@@ -2,8 +2,6 @@ import { EnvironmentEntry } from "@/types/database";
 const MinimalistAbstract: Record<string, EnvironmentEntry> = {
   "Abstract Skyline Silhouette": {
     environment_title: "Abstract Skyline Silhouette",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Abstract Skyline Silhouette (1).jpg",
@@ -89,8 +87,6 @@ const MinimalistAbstract: Record<string, EnvironmentEntry> = {
   },
   "Circular Flow": {
     environment_title: "Circular Flow",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Circular Flow (1).jpg",
@@ -176,8 +172,6 @@ const MinimalistAbstract: Record<string, EnvironmentEntry> = {
   },
   "Circular Harmony": {
     environment_title: "Circular Harmony",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Circular Harmony (1).jpg",
@@ -263,8 +257,6 @@ const MinimalistAbstract: Record<string, EnvironmentEntry> = {
   },
   "Color Block Gradient": {
     environment_title: "Color Block Gradient",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Color Block Gradient (1).jpg",
@@ -350,8 +342,6 @@ const MinimalistAbstract: Record<string, EnvironmentEntry> = {
   },
   "Diagonal Light Streaks": {
     environment_title: "Diagonal Light Streaks",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Diagonal Light Streaks (1).jpg",
@@ -437,8 +427,6 @@ const MinimalistAbstract: Record<string, EnvironmentEntry> = {
   },
   "Dot Matrix Simplicity": {
     environment_title: "Dot Matrix Simplicity",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Dot Matrix Simplicity (1).jpg",
@@ -524,8 +512,6 @@ const MinimalistAbstract: Record<string, EnvironmentEntry> = {
   },
   "Geometric Harmony": {
     environment_title: "Geometric Harmony",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Geometric Harmony (1).jpg",
@@ -611,8 +597,6 @@ const MinimalistAbstract: Record<string, EnvironmentEntry> = {
   },
   "Linear Harmony": {
     environment_title: "Linear Harmony",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Linear Harmony (1).jpg",
@@ -698,8 +682,6 @@ const MinimalistAbstract: Record<string, EnvironmentEntry> = {
   },
   "Linear Symmetry": {
     environment_title: "Linear Symmetry",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Linear Symmetry (1).jpg",
@@ -785,8 +767,6 @@ const MinimalistAbstract: Record<string, EnvironmentEntry> = {
   },
   "Minimalist Mountain Silhouette": {
     environment_title: "Minimalist Mountain Silhouette",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Minimalist Mountain Silhouette (1).jpg",
@@ -872,8 +852,6 @@ const MinimalistAbstract: Record<string, EnvironmentEntry> = {
   },
   "Minimalist Rainbow Spectrum": {
     environment_title: "Minimalist Rainbow Spectrum",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Minimalist Rainbow Spectrum (1).jpg",
@@ -959,8 +937,6 @@ const MinimalistAbstract: Record<string, EnvironmentEntry> = {
   },
   "Minimalist Star Constellation": {
     environment_title: "Minimalist Star Constellation",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Minimalist Star Constellation (1).jpg",
@@ -1046,8 +1022,6 @@ const MinimalistAbstract: Record<string, EnvironmentEntry> = {
   },
   "Monochrome Waves": {
     environment_title: "Monochrome Waves",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Monochrome Waves (1).jpg",
@@ -1133,8 +1107,6 @@ const MinimalistAbstract: Record<string, EnvironmentEntry> = {
   },
   "Muted Geometric Shapes": {
     environment_title: "Muted Geometric Shapes",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Muted Geometric Shapes (1).jpg",
@@ -1220,8 +1192,6 @@ const MinimalistAbstract: Record<string, EnvironmentEntry> = {
   },
   "Negative Space Triangles": {
     environment_title: "Negative Space Triangles",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Negative Space Triangles (1).jpg",
@@ -1307,8 +1277,6 @@ const MinimalistAbstract: Record<string, EnvironmentEntry> = {
   },
   "Single Line Wave": {
     environment_title: "Single Line Wave",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Single Line Wave (1).jpg",
@@ -1394,8 +1362,6 @@ const MinimalistAbstract: Record<string, EnvironmentEntry> = {
   },
   "Sparse Color Blocks": {
     environment_title: "Sparse Color Blocks",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Sparse Color Blocks (1).jpg",
@@ -1481,8 +1447,6 @@ const MinimalistAbstract: Record<string, EnvironmentEntry> = {
   },
   "Subdued Overlapping Circles": {
     environment_title: "Subdued Overlapping Circles",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Subdued Overlapping Circles (1).jpg",
@@ -1568,8 +1532,6 @@ const MinimalistAbstract: Record<string, EnvironmentEntry> = {
   },
   "Subtle Gradient Lines": {
     environment_title: "Subtle Gradient Lines",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Subtle Gradient Lines (1).jpg",
@@ -1655,8 +1617,6 @@ const MinimalistAbstract: Record<string, EnvironmentEntry> = {
   },
   "Subtle Textured Layers": {
     environment_title: "Subtle Textured Layers",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Subtle Textured Layers (1).jpg",

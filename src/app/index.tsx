@@ -1,3 +1,4 @@
+// src/app/index.tsx
 import { Link } from "expo-router";
 import { Image } from "expo-image";
 import React, { useEffect } from "react";
@@ -9,48 +10,32 @@ import { LinearGradient } from "expo-linear-gradient";
 import { ScrollingSlotProps } from "@/types/components";
 import { Text, View, TouchableOpacity } from "react-native";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence, withDelay, withSpring, Easing, FadeIn, FadeInDown } from "react-native-reanimated";
-
+// ============================================================================================
+// ============================================================================================
 const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay }) => {
   const imageHeight = 220;
   const totalHeight = images.length * imageHeight;
   const scrollValue = useSharedValue(0);
   const opacity = useSharedValue(0);
   const scale = useSharedValue(0.9);
-
   useEffect(() => {
     opacity.value = withDelay(delay, withTiming(1, { duration: 1500, easing: Easing.bezier(0.4, 0, 0.2, 1) }));
     scale.value = withDelay(delay, withSpring(1, { damping: 15, stiffness: 90 }));
     scrollValue.value = withDelay(delay, withRepeat(withTiming(totalHeight, { duration: 30000, easing: Easing.linear }), -1, reverse));
   }, []);
-
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ translateY: -scrollValue.value % totalHeight }, { scale: scale.value }], opacity: opacity.value }));
-
   return (
     <View style={{ flex: 1, overflow: "hidden", padding: 2 }}>
       <Animated.View style={[animatedStyle]}>
         {images.concat(images).map((uri, idx) => (
-          <Image
-            key={idx}
-            source={uri}
-            contentFit="cover"
-            cachePolicy="memory-disk"
-            style={{
-              height: imageHeight,
-              borderRadius: 20,
-              width: "100%",
-              margin: 3,
-              shadowColor: Colorizer("#000000", 1.0),
-              shadowOffset: { width: 0, height: 4 },
-              shadowOpacity: 0.3,
-              shadowRadius: 8
-            }}
-          />
+          <Image key={idx} source={uri} contentFit="cover" cachePolicy="memory-disk" style={{ height: imageHeight, borderRadius: 20, width: "100%", margin: 3, shadowColor: Colorizer("#000000", 1.0), shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.3, shadowRadius: 8 }} />
         ))}
       </Animated.View>
     </View>
   );
 };
-
+// ============================================================================================
+// ============================================================================================
 const AnimatedTitle: React.FC = () => {
   const scale = useSharedValue(0.5);
   useEffect(() => {
@@ -65,7 +50,8 @@ const AnimatedTitle: React.FC = () => {
     </Animated.View>
   );
 };
-
+// ============================================================================================
+// ============================================================================================
 const IndexPage: React.FC = () => {
   const buttonScale = useSharedValue(1);
   const buttonRotate = useSharedValue(0);
@@ -98,17 +84,7 @@ const IndexPage: React.FC = () => {
             <AnimatedTitle />
             <Animated.View entering={FadeInDown.delay(600).duration(1500).springify()}>
               <View>
-                <Text
-                  className="text-center"
-                  style={{
-                    fontSize: 80,
-                    textShadowRadius: 60,
-                    color: Colorizer("#E9E9EA", 1.0),
-                    textShadowOffset: { width: 24, height: 2 },
-                    fontFamily: "Dm_Serif_Display_Regular",
-                    textShadowColor: Colorizer("#000000", 1.0)
-                  }}
-                >
+                <Text className="text-center" style={{ fontSize: 80, textShadowRadius: 60, color: Colorizer("#E9E9EA", 1.0), textShadowOffset: { width: 24, height: 2 }, fontFamily: "Dm_Serif_Display_Regular", textShadowColor: Colorizer("#000000", 1.0) }}>
                   picWall
                 </Text>
                 <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Dm_Serif_Display_Regular", color: Colorizer("#E9E9EA", 1.0), fontSize: 80 }}>

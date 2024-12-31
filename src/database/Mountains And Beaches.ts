@@ -2,8 +2,6 @@ import { EnvironmentEntry } from "@/types/database";
 const MountainsAndBeaches: Record<string, EnvironmentEntry> = {
   "Cliffside Beach Panorama": {
     environment_title: "Cliffside Beach Panorama",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Cliffside Beach Panorama (1).jpg",
@@ -89,8 +87,6 @@ const MountainsAndBeaches: Record<string, EnvironmentEntry> = {
   },
   "Clifftop Beach View": {
     environment_title: "Clifftop Beach View",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Clifftop Beach View (1).jpg",
@@ -176,8 +172,6 @@ const MountainsAndBeaches: Record<string, EnvironmentEntry> = {
   },
   "Foggy Mountain Shoreline": {
     environment_title: "Foggy Mountain Shoreline",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Foggy Mountain Shoreline (1).jpg",
@@ -263,8 +257,6 @@ const MountainsAndBeaches: Record<string, EnvironmentEntry> = {
   },
   "Golden Hour Mountain Beach": {
     environment_title: "Golden Hour Mountain Beach",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Golden Hour Mountain Beach (1).jpg",
@@ -350,8 +342,6 @@ const MountainsAndBeaches: Record<string, EnvironmentEntry> = {
   },
   "Golden Sands And Snowy Peaks": {
     environment_title: "Golden Sands And Snowy Peaks",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Golden Sands And Snowy Peaks (1).jpg",
@@ -437,8 +427,6 @@ const MountainsAndBeaches: Record<string, EnvironmentEntry> = {
   },
   "Island Mountain Peninsula": {
     environment_title: "Island Mountain Peninsula",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Island Mountain Peninsula (1).jpg",
@@ -524,8 +512,6 @@ const MountainsAndBeaches: Record<string, EnvironmentEntry> = {
   },
   "Island With Mountain Peninsula": {
     environment_title: "Island With Mountain Peninsula",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Island With Mountain Peninsula (1).jpg",
@@ -611,8 +597,6 @@ const MountainsAndBeaches: Record<string, EnvironmentEntry> = {
   },
   "Mountain Reflection On Calm Waters": {
     environment_title: "Mountain Reflection On Calm Waters",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Mountain Reflection On Calm Waters (1).jpg",
@@ -698,8 +682,6 @@ const MountainsAndBeaches: Record<string, EnvironmentEntry> = {
   },
   "Mountain Reflections On Beach": {
     environment_title: "Mountain Reflections On Beach",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Mountain Reflections On Beach (1).jpg",
@@ -785,8 +767,6 @@ const MountainsAndBeaches: Record<string, EnvironmentEntry> = {
   },
   "Rocky Shore With Mountain Silhouette": {
     environment_title: "Rocky Shore With Mountain Silhouette",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Rocky Shore With Mountain Silhouette (1).jpg",
@@ -872,8 +852,6 @@ const MountainsAndBeaches: Record<string, EnvironmentEntry> = {
   },
   "Serene Beach With Mountain Backdrop": {
     environment_title: "Serene Beach With Mountain Backdrop",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Serene Beach With Mountain Backdrop (1).jpg",
@@ -959,8 +937,6 @@ const MountainsAndBeaches: Record<string, EnvironmentEntry> = {
   },
   "Serene Lagoon With Mountain Backdrop": {
     environment_title: "Serene Lagoon With Mountain Backdrop",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Serene Lagoon With Mountain Backdrop (1).jpg",
@@ -1046,8 +1022,6 @@ const MountainsAndBeaches: Record<string, EnvironmentEntry> = {
   },
   "Snowy Peaks By The Seaside": {
     environment_title: "Snowy Peaks By The Seaside",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Snowy Peaks By The Seaside (1).jpg",
@@ -1133,8 +1107,6 @@ const MountainsAndBeaches: Record<string, EnvironmentEntry> = {
   },
   "Stormy Sea And Mountain Range": {
     environment_title: "Stormy Sea And Mountain Range",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Stormy Sea And Mountain Range (1).jpg",
@@ -1220,8 +1192,6 @@ const MountainsAndBeaches: Record<string, EnvironmentEntry> = {
   },
   "Sunlit Rocky Shoreline": {
     environment_title: "Sunlit Rocky Shoreline",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Sunlit Rocky Shoreline (1).jpg",
@@ -1307,8 +1277,6 @@ const MountainsAndBeaches: Record<string, EnvironmentEntry> = {
   },
   "Sunrise Over Rocky Beach": {
     environment_title: "Sunrise Over Rocky Beach",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Sunrise Over Rocky Beach (1).jpg",
@@ -1394,8 +1362,6 @@ const MountainsAndBeaches: Record<string, EnvironmentEntry> = {
   },
   "Sunset Over Rocky Cliffs": {
     environment_title: "Sunset Over Rocky Cliffs",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Sunset Over Rocky Cliffs (1).jpg",
@@ -1481,8 +1447,6 @@ const MountainsAndBeaches: Record<string, EnvironmentEntry> = {
   },
   "Tropical Beach With Mountain Range": {
     environment_title: "Tropical Beach With Mountain Range",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Tropical Beach With Mountain Range (1).jpg",
@@ -1568,8 +1532,6 @@ const MountainsAndBeaches: Record<string, EnvironmentEntry> = {
   },
   "Tropical Mountain Beach": {
     environment_title: "Tropical Mountain Beach",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Tropical Mountain Beach (1).jpg",
@@ -1655,8 +1617,6 @@ const MountainsAndBeaches: Record<string, EnvironmentEntry> = {
   },
   "Twilight Mountain Shore": {
     environment_title: "Twilight Mountain Shore",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Twilight Mountain Shore (1).jpg",

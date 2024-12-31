@@ -2,8 +2,6 @@ import { EnvironmentEntry } from "@/types/database";
 const AerialView: Record<string, EnvironmentEntry> = {
   "Agricultural Fields Mosaic": {
     environment_title: "Agricultural Fields Mosaic",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Agricultural Fields Mosaic (1).jpg",
@@ -89,8 +87,6 @@ const AerialView: Record<string, EnvironmentEntry> = {
   },
   "Autumn Forest Canopy": {
     environment_title: "Autumn Forest Canopy",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Autumn Forest Canopy (1).jpg",
@@ -176,8 +172,6 @@ const AerialView: Record<string, EnvironmentEntry> = {
   },
   "Coastal Island Archipelago": {
     environment_title: "Coastal Island Archipelago",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Coastal Island Archipelago (1).jpg",
@@ -263,8 +257,6 @@ const AerialView: Record<string, EnvironmentEntry> = {
   },
   "Coastal Shoreline Pattern": {
     environment_title: "Coastal Shoreline Pattern",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Coastal Shoreline Pattern (1).jpg",
@@ -350,8 +342,6 @@ const AerialView: Record<string, EnvironmentEntry> = {
   },
   "Desert Dunes In Perspective": {
     environment_title: "Desert Dunes In Perspective",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Desert Dunes In Perspective (1).jpg",
@@ -437,8 +427,6 @@ const AerialView: Record<string, EnvironmentEntry> = {
   },
   "Desert Road Through Dunes": {
     environment_title: "Desert Road Through Dunes",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Desert Road Through Dunes (1).jpg",
@@ -524,8 +512,6 @@ const AerialView: Record<string, EnvironmentEntry> = {
   },
   "Frozen Tundra Landscape": {
     environment_title: "Frozen Tundra Landscape",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Frozen Tundra Landscape (1).jpg",
@@ -611,8 +597,6 @@ const AerialView: Record<string, EnvironmentEntry> = {
   },
   "Island Chain Overview": {
     environment_title: "Island Chain Overview",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Island Chain Overview (1).jpg",
@@ -698,8 +682,6 @@ const AerialView: Record<string, EnvironmentEntry> = {
   },
   "Mountain Lake From Above": {
     environment_title: "Mountain Lake From Above",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Mountain Lake From Above (1).jpg",
@@ -785,8 +767,6 @@ const AerialView: Record<string, EnvironmentEntry> = {
   },
   "Mountain Range Panorama": {
     environment_title: "Mountain Range Panorama",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Mountain Range Panorama (1).jpg",
@@ -872,8 +852,6 @@ const AerialView: Record<string, EnvironmentEntry> = {
   },
   "Rice Terraces From The Sky": {
     environment_title: "Rice Terraces From The Sky",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Rice Terraces From The Sky (1).jpg",
@@ -959,8 +937,6 @@ const AerialView: Record<string, EnvironmentEntry> = {
   },
   "River Meandering Through Forest": {
     environment_title: "River Meandering Through Forest",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "River Meandering Through Forest (1).jpg",
@@ -1046,8 +1022,6 @@ const AerialView: Record<string, EnvironmentEntry> = {
   },
   "Rolling Hills And Forest Patches": {
     environment_title: "Rolling Hills And Forest Patches",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Rolling Hills And Forest Patches (1).jpg",
@@ -1133,8 +1107,6 @@ const AerialView: Record<string, EnvironmentEntry> = {
   },
   "SnowCovered Landscape": {
     environment_title: "SnowCovered Landscape",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "SnowCovered Landscape (1).jpg",
@@ -1220,8 +1192,6 @@ const AerialView: Record<string, EnvironmentEntry> = {
   },
   "Urban Grid From Above": {
     environment_title: "Urban Grid From Above",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Urban Grid From Above (1).jpg",
@@ -1307,8 +1277,6 @@ const AerialView: Record<string, EnvironmentEntry> = {
   },
   "Urban Park From Above": {
     environment_title: "Urban Park From Above",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Urban Park From Above (1).jpg",
@@ -1394,8 +1362,6 @@ const AerialView: Record<string, EnvironmentEntry> = {
   },
   "Urban Park Layout": {
     environment_title: "Urban Park Layout",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Urban Park Layout (1).jpg",
@@ -1481,8 +1447,6 @@ const AerialView: Record<string, EnvironmentEntry> = {
   },
   "Urban Skyline At Night": {
     environment_title: "Urban Skyline At Night",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Urban Skyline At Night (1).jpg",
@@ -1568,8 +1532,6 @@ const AerialView: Record<string, EnvironmentEntry> = {
   },
   "Verdant Forest Canopy": {
     environment_title: "Verdant Forest Canopy",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Verdant Forest Canopy (1).jpg",
@@ -1655,8 +1617,6 @@ const AerialView: Record<string, EnvironmentEntry> = {
   },
   "Vineyard Rows In Summer": {
     environment_title: "Vineyard Rows In Summer",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Vineyard Rows In Summer (1).jpg",

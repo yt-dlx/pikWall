@@ -2,8 +2,6 @@ import { EnvironmentEntry } from "@/types/database";
 const NatureWonders: Record<string, EnvironmentEntry> = {
   "Ancient Redwood Grove": {
     environment_title: "Ancient Redwood Grove",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Ancient Redwood Grove (1).jpg",
@@ -89,8 +87,6 @@ const NatureWonders: Record<string, EnvironmentEntry> = {
   },
   "Autumn Mist Over Lavender Fields": {
     environment_title: "Autumn Mist Over Lavender Fields",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Autumn Mist Over Lavender Fields (1).jpg",
@@ -176,8 +172,6 @@ const NatureWonders: Record<string, EnvironmentEntry> = {
   },
   "Bioluminescent Bay": {
     environment_title: "Bioluminescent Bay",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Bioluminescent Bay (1).jpg",
@@ -263,8 +257,6 @@ const NatureWonders: Record<string, EnvironmentEntry> = {
   },
   "Blooming Desert Cactus": {
     environment_title: "Blooming Desert Cactus",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Blooming Desert Cactus (1).jpg",
@@ -350,8 +342,6 @@ const NatureWonders: Record<string, EnvironmentEntry> = {
   },
   "Coral Reef Wonderland": {
     environment_title: "Coral Reef Wonderland",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Coral Reef Wonderland (1).jpg",
@@ -437,8 +427,6 @@ const NatureWonders: Record<string, EnvironmentEntry> = {
   },
   "Crystal Caves With Stalactites": {
     environment_title: "Crystal Caves With Stalactites",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Crystal Caves With Stalactites (1).jpg",
@@ -524,8 +512,6 @@ const NatureWonders: Record<string, EnvironmentEntry> = {
   },
   "Frozen Glacier Under Northern Lights": {
     environment_title: "Frozen Glacier Under Northern Lights",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Frozen Glacier Under Northern Lights (1).jpg",
@@ -611,8 +597,6 @@ const NatureWonders: Record<string, EnvironmentEntry> = {
   },
   "Glacial Ice Fields": {
     environment_title: "Glacial Ice Fields",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Glacial Ice Fields (1).jpg",
@@ -698,8 +682,6 @@ const NatureWonders: Record<string, EnvironmentEntry> = {
   },
   "Glowing Bioluminescent Fungi": {
     environment_title: "Glowing Bioluminescent Fungi",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Glowing Bioluminescent Fungi (1).jpg",
@@ -785,8 +767,6 @@ const NatureWonders: Record<string, EnvironmentEntry> = {
   },
   "Grand Canyon Sunset": {
     environment_title: "Grand Canyon Sunset",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Grand Canyon Sunset (1).jpg",
@@ -872,8 +852,6 @@ const NatureWonders: Record<string, EnvironmentEntry> = {
   },
   "Luminous Jellyfish In Deep Sea": {
     environment_title: "Luminous Jellyfish In Deep Sea",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Luminous Jellyfish In Deep Sea (1).jpg",
@@ -959,8 +937,6 @@ const NatureWonders: Record<string, EnvironmentEntry> = {
   },
   "Majestic Waterfall Cascade": {
     environment_title: "Majestic Waterfall Cascade",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Majestic Waterfall Cascade (1).jpg",
@@ -1046,8 +1022,6 @@ const NatureWonders: Record<string, EnvironmentEntry> = {
   },
   "Majestic Waterfall In Tropical Jungle": {
     environment_title: "Majestic Waterfall In Tropical Jungle",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Majestic Waterfall In Tropical Jungle (1).jpg",
@@ -1133,8 +1107,6 @@ const NatureWonders: Record<string, EnvironmentEntry> = {
   },
   "Northern Forest In Autumn": {
     environment_title: "Northern Forest In Autumn",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Northern Forest In Autumn (1).jpg",
@@ -1220,8 +1192,6 @@ const NatureWonders: Record<string, EnvironmentEntry> = {
   },
   "Rainforest Waterfall": {
     environment_title: "Rainforest Waterfall",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Rainforest Waterfall (1).jpg",
@@ -1307,8 +1277,6 @@ const NatureWonders: Record<string, EnvironmentEntry> = {
   },
   "Savannah Sunrise": {
     environment_title: "Savannah Sunrise",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Savannah Sunrise (1).jpg",
@@ -1394,8 +1362,6 @@ const NatureWonders: Record<string, EnvironmentEntry> = {
   },
   "Serene Alpine Meadow": {
     environment_title: "Serene Alpine Meadow",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Serene Alpine Meadow (1).jpg",
@@ -1481,8 +1447,6 @@ const NatureWonders: Record<string, EnvironmentEntry> = {
   },
   "SnowCapped Volcano": {
     environment_title: "SnowCapped Volcano",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "SnowCapped Volcano (1).jpg",
@@ -1568,8 +1532,6 @@ const NatureWonders: Record<string, EnvironmentEntry> = {
   },
   "Sunlit Coral Reef": {
     environment_title: "Sunlit Coral Reef",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Sunlit Coral Reef (1).jpg",
@@ -1655,8 +1617,6 @@ const NatureWonders: Record<string, EnvironmentEntry> = {
   },
   "Verdant Mangrove Forest": {
     environment_title: "Verdant Mangrove Forest",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Verdant Mangrove Forest (1).jpg",

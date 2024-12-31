@@ -2,8 +2,6 @@ import { EnvironmentEntry } from "@/types/database";
 const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   "Black Hole Lightning Vortex": {
     environment_title: "Black Hole Lightning Vortex",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Black Hole Lightning Vortex  (1).jpg",
@@ -89,8 +87,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "Black Hole With Lightning Rings": {
     environment_title: "Black Hole With Lightning Rings",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Black Hole With Lightning Rings (1).jpg",
@@ -176,8 +172,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "Comet With Lightning Tail": {
     environment_title: "Comet With Lightning Tail",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Comet With Lightning Tail (1).jpg",
@@ -263,8 +257,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "Electric Aurora In Space": {
     environment_title: "Electric Aurora In Space",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Electric Aurora In Space (1).jpg",
@@ -350,8 +342,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "Electric Comet In Night Sky": {
     environment_title: "Electric Comet In Night Sky",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Electric Comet In Night Sky (1).jpg",
@@ -437,8 +427,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "Electric Comet Tail A Dynamic Cosmic Pho": {
     environment_title: "Electric Comet Tail A Dynamic Cosmic Pho",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Electric Comet Tail A Dynamic Cosmic Pho (0).jpg",
@@ -524,8 +512,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "Electric Nebula Burst An Abstract Cosmic": {
     environment_title: "Electric Nebula Burst An Abstract Cosmic",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Electric Nebula Burst An Abstract Cosmic (0).jpg",
@@ -611,8 +597,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "Galactic Lightning Flash An Abstract Cos": {
     environment_title: "Galactic Lightning Flash An Abstract Cos",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Galactic Lightning Flash An Abstract Cos (0).jpg",
@@ -698,8 +682,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "Galactic Lightning Spiral An Artistic Po": {
     environment_title: "Galactic Lightning Spiral An Artistic Po",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Galactic Lightning Spiral An Artistic Po (0).jpg",
@@ -785,8 +767,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "Lightning Filled Nebula": {
     environment_title: "Lightning Filled Nebula",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Lightning Filled Nebula (1).jpg",
@@ -872,8 +852,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "Lightning Fueled Nebula Burst": {
     environment_title: "Lightning Fueled Nebula Burst",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Lightning Fueled Nebula Burst (1).jpg",
@@ -959,8 +937,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "Lightning In The Andromeda Galaxy": {
     environment_title: "Lightning In The Andromeda Galaxy",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Lightning In The Andromeda Galaxy (1).jpg",
@@ -1046,8 +1022,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "Lightning Over Alien Planet": {
     environment_title: "Lightning Over Alien Planet",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Lightning Over Alien Planet (1).jpg",
@@ -1133,8 +1107,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "Lightning Over Saturns Rings": {
     environment_title: "Lightning Over Saturns Rings",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Lightning Over Saturns Rings (1).jpg",
@@ -1220,8 +1192,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "Lightning Rings Around Star": {
     environment_title: "Lightning Rings Around Star",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Lightning Rings Around Star (1).jpg",
@@ -1307,8 +1277,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "Lightning Strike On A Distant Moon": {
     environment_title: "Lightning Strike On A Distant Moon",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Lightning Strike On A Distant Moon (1).jpg",
@@ -1394,8 +1362,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "LightningCracked Moon Surface": {
     environment_title: "LightningCracked Moon Surface",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "LightningCracked Moon Surface (1).jpg",
@@ -1481,8 +1447,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "Neon Lightning Storm": {
     environment_title: "Neon Lightning Storm",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Neon Lightning Storm (1).jpg",
@@ -1568,8 +1532,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "Planetary Lightning Storm": {
     environment_title: "Planetary Lightning Storm",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Planetary Lightning Storm (1).jpg",
@@ -1655,8 +1617,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "Planetary Storm With Lightning": {
     environment_title: "Planetary Storm With Lightning",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Planetary Storm With Lightning (1).jpg",
@@ -1742,8 +1702,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "Solar Eclipse With Lightning": {
     environment_title: "Solar Eclipse With Lightning",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Solar Eclipse With Lightning (1).jpg",
@@ -1829,8 +1787,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "Solar Flare Lightning Display": {
     environment_title: "Solar Flare Lightning Display",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Solar Flare Lightning Display (1).jpg",
@@ -1916,8 +1872,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "StarInfused Lightning Bolt": {
     environment_title: "StarInfused Lightning Bolt",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "StarInfused Lightning Bolt (1).jpg",
@@ -2003,8 +1957,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "Stellar Lightning Pathways": {
     environment_title: "Stellar Lightning Pathways",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Stellar Lightning Pathways (1).jpg",
@@ -2090,8 +2042,6 @@ const CosmicAndLightning: Record<string, EnvironmentEntry> = {
   },
   "Stormy Galaxy Spiral": {
     environment_title: "Stormy Galaxy Spiral",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Stormy Galaxy Spiral  (1).jpg",

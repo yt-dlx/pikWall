@@ -2,8 +2,6 @@ import { EnvironmentEntry } from "@/types/database";
 const HyperCloseups: Record<string, EnvironmentEntry> = {
   "Ants Compound Eyes": {
     environment_title: "Ants Compound Eyes",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Ants Compound Eyes (1).jpg",
@@ -89,8 +87,6 @@ const HyperCloseups: Record<string, EnvironmentEntry> = {
   },
   "Beetle Shell Texture": {
     environment_title: "Beetle Shell Texture",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Beetle Shell Texture (1).jpg",
@@ -176,8 +172,6 @@ const HyperCloseups: Record<string, EnvironmentEntry> = {
   },
   "Blooming Orchid Petal": {
     environment_title: "Blooming Orchid Petal",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Blooming Orchid Petal (1).jpg",
@@ -263,8 +257,6 @@ const HyperCloseups: Record<string, EnvironmentEntry> = {
   },
   "Blooming Rose Petals": {
     environment_title: "Blooming Rose Petals",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Blooming Rose Petals (1).jpg",
@@ -350,8 +342,6 @@ const HyperCloseups: Record<string, EnvironmentEntry> = {
   },
   "Closeup Of Moss On Stone": {
     environment_title: "Closeup Of Moss On Stone",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Closeup Of Moss On Stone (1).jpg",
@@ -437,8 +427,6 @@ const HyperCloseups: Record<string, EnvironmentEntry> = {
   },
   "Cracked Dried Mud Surface": {
     environment_title: "Cracked Dried Mud Surface",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Cracked Dried Mud Surface (1).jpg",
@@ -524,8 +512,6 @@ const HyperCloseups: Record<string, EnvironmentEntry> = {
   },
   "Detailed Leaf Veins": {
     environment_title: "Detailed Leaf Veins",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Detailed Leaf Veins (1).jpg",
@@ -611,8 +597,6 @@ const HyperCloseups: Record<string, EnvironmentEntry> = {
   },
   "Frost Patterns On Window": {
     environment_title: "Frost Patterns On Window",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Frost Patterns On Window (1).jpg",
@@ -698,8 +682,6 @@ const HyperCloseups: Record<string, EnvironmentEntry> = {
   },
   "Iridescent Beetle Shell": {
     environment_title: "Iridescent Beetle Shell",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Iridescent Beetle Shell (1).jpg",
@@ -785,8 +767,6 @@ const HyperCloseups: Record<string, EnvironmentEntry> = {
   },
   "Leaf Veins Macro": {
     environment_title: "Leaf Veins Macro",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Leaf Veins Macro (1).jpg",
@@ -872,8 +852,6 @@ const HyperCloseups: Record<string, EnvironmentEntry> = {
   },
   "Macro View Of Dragonfly Wings": {
     environment_title: "Macro View Of Dragonfly Wings",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Macro View Of Dragonfly Wings (1).jpg",
@@ -959,8 +937,6 @@ const HyperCloseups: Record<string, EnvironmentEntry> = {
   },
   "Morning Dew On Spiderweb": {
     environment_title: "Morning Dew On Spiderweb",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Morning Dew On Spiderweb (1).jpg",
@@ -1046,8 +1022,6 @@ const HyperCloseups: Record<string, EnvironmentEntry> = {
   },
   "Ocean Wave Foam": {
     environment_title: "Ocean Wave Foam",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Ocean Wave Foam (1).jpg",
@@ -1133,8 +1107,6 @@ const HyperCloseups: Record<string, EnvironmentEntry> = {
   },
   "Petal With Morning Dew": {
     environment_title: "Petal With Morning Dew",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Petal With Morning Dew (1).jpg",
@@ -1220,8 +1192,6 @@ const HyperCloseups: Record<string, EnvironmentEntry> = {
   },
   "Snowflake Structure": {
     environment_title: "Snowflake Structure",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Snowflake Structure (1).jpg",
@@ -1307,8 +1277,6 @@ const HyperCloseups: Record<string, EnvironmentEntry> = {
   },
   "Textured Seashell Surface": {
     environment_title: "Textured Seashell Surface",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Textured Seashell Surface (1).jpg",
@@ -1394,8 +1362,6 @@ const HyperCloseups: Record<string, EnvironmentEntry> = {
   },
   "Textured Tree Bark": {
     environment_title: "Textured Tree Bark",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Textured Tree Bark (1).jpg",
@@ -1481,8 +1447,6 @@ const HyperCloseups: Record<string, EnvironmentEntry> = {
   },
   "Vibrant Butterfly Wings": {
     environment_title: "Vibrant Butterfly Wings",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Vibrant Butterfly Wings (1).jpg",
@@ -1568,8 +1532,6 @@ const HyperCloseups: Record<string, EnvironmentEntry> = {
   },
   "Water Droplet On Leaf": {
     environment_title: "Water Droplet On Leaf",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Water Droplet On Leaf (1).jpg",

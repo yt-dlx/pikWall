@@ -8,7 +8,8 @@ import * as MediaLibrary from "expo-media-library";
 import React, { useState, useEffect, useRef } from "react";
 import { FontAwesome5, MaterialIcons, Ionicons } from "@expo/vector-icons";
 import { View, Text, Dimensions, StatusBar, ActivityIndicator, TouchableOpacity, Alert, Modal, Animated, Easing, ScrollView } from "react-native";
-
+// ============================================================================================
+// ============================================================================================
 const { width: screenWidth } = Dimensions.get("window");
 const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () => void }> = ({ visible, message, onClose }) => {
   const [modalAnim] = useState(new Animated.Value(0));
@@ -23,20 +24,7 @@ const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () =>
   return (
     <View className="absolute inset-0 justify-center items-center">
       <Animated.View className="absolute top-0 left-0 right-0 bottom-0" style={[{ backgroundColor: Colorizer("#000000", 0.5) }, backdropStyle]} />
-      <Animated.View
-        className="w-4/5 p-5 rounded-lg items-center shadow-lg"
-        style={[
-          {
-            backgroundColor: Colorizer("#E9E9EA", 1.0),
-            shadowColor: Colorizer("#000000", 0.25),
-            shadowOffset: { width: 0, height: 5 },
-            shadowOpacity: 0.25,
-            shadowRadius: 10,
-            elevation: 10
-          },
-          modalStyle
-        ]}
-      >
+      <Animated.View className="w-4/5 p-5 rounded-lg items-center shadow-lg" style={[{ backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 }, modalStyle]}>
         <Ionicons name="checkmark-done-circle" size={50} color={Colorizer("#28a745", 1.0)} />
         <Text className="mt-2.5 text-2xl text-center" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#000000", 1.0) }}>
           Success
@@ -53,7 +41,8 @@ const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () =>
     </View>
   );
 };
-
+// ============================================================================================
+// ============================================================================================
 const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => void }> = ({ visible, message, onClose }) => {
   const [modalAnim] = useState(new Animated.Value(0));
   useEffect(() => {
@@ -67,20 +56,7 @@ const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => v
   return (
     <View className="absolute inset-0 justify-center items-center">
       <Animated.View className="absolute top-0 left-0 right-0 bottom-0" style={[{ backgroundColor: Colorizer("#000000", 0.5) }, backdropStyle]} />
-      <Animated.View
-        className="w-4/5 p-5 rounded-lg items-center shadow-lg"
-        style={[
-          {
-            backgroundColor: Colorizer("#E9E9EA", 1.0),
-            shadowColor: Colorizer("#000000", 0.25),
-            shadowOffset: { width: 0, height: 5 },
-            shadowOpacity: 0.25,
-            shadowRadius: 10,
-            elevation: 10
-          },
-          modalStyle
-        ]}
-      >
+      <Animated.View className="w-4/5 p-5 rounded-lg items-center shadow-lg" style={[{ backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 }, modalStyle]}>
         <MaterialIcons name="error" size={50} color={Colorizer("#dc3545", 1.0)} />
         <Text className="mt-2.5 text-2xl text-center" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#000000", 1.0) }}>
           Error
@@ -97,7 +73,8 @@ const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => v
     </View>
   );
 };
-
+// ============================================================================================
+// ============================================================================================
 const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloadRate: number; eta: number; primaryColor: string }> = ({ visible, percentage, downloadRate, eta, primaryColor }) => {
   const [progressAnim] = useState(new Animated.Value(percentage / 100));
   useEffect(() => {
@@ -120,17 +97,7 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
   return (
     <View className="absolute inset-0 justify-center items-center">
       <View className="absolute inset-0" style={{ backgroundColor: Colorizer(primaryColor, 0.3) }} />
-      <View
-        className="rounded-lg p-5 items-center shadow-lg"
-        style={{
-          backgroundColor: Colorizer("#E9E9EA", 1.0),
-          shadowColor: Colorizer("#000000", 0.25),
-          shadowOffset: { width: 0, height: 5 },
-          shadowOpacity: 0.25,
-          shadowRadius: 10,
-          elevation: 10
-        }}
-      >
+      <View className="rounded-lg p-5 items-center shadow-lg" style={{ backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 }}>
         <ActivityIndicator size="large" color={Colorizer(primaryColor, 1.0)} />
         <Text className="mt-3 text-lg" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Linotte_Bold" }}>
           Downloading...
@@ -157,7 +124,8 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
     </View>
   );
 };
-
+// ============================================================================================
+// ============================================================================================
 const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number; onViewFullScreen: () => void }> = ({ selectedImage, screenWidth, onViewFullScreen }) => {
   const [imageLoading, setImageLoading] = useState(true);
   const aspectRatio = selectedImage.width / selectedImage.height;
@@ -208,7 +176,8 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
     </View>
   );
 };
-
+// ============================================================================================
+// ============================================================================================
 interface DownloadButtonProps {
   onDownload?: (event: any) => void;
   colors: { primary: string; secondary: string; tertiary: string };
@@ -236,14 +205,14 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({ onDownload, colors }) =
     </TouchableOpacity>
   );
 };
-
+// ============================================================================================
+// ============================================================================================
 interface OtherImagesProps {
   primaryColor: string;
   tertiaryColor: string;
   setCurrentIndex: (index: number) => void;
   otherImages: { img: ImageMetadata; idx: number }[];
 }
-
 const OtherImages: React.FC<OtherImagesProps> = ({ otherImages, setCurrentIndex, primaryColor, tertiaryColor }) => (
   <View className="p-1 my-2 rounded-2xl" style={{ backgroundColor: Colorizer(primaryColor, 0.2) }}>
     <View className="p-1 rounded-2xl" style={{ backgroundColor: Colorizer(tertiaryColor, 0.2) }}>
@@ -265,7 +234,8 @@ const OtherImages: React.FC<OtherImagesProps> = ({ otherImages, setCurrentIndex,
     </View>
   </View>
 );
-
+// ============================================================================================
+// ============================================================================================
 const ImagePage = () => {
   const params = useLocalSearchParams();
   const [eta, setEta] = useState<number>(0);
@@ -348,14 +318,7 @@ const ImagePage = () => {
             <View key={index} className="flex-row items-center my-2">
               <FontAwesome5 name={index === 0 ? "adjust" : index === 1 ? "file-alt" : "ruler-combined"} size={16} color={Colorizer(selectedImage.primary, 1.0)} className="ml-1" />
               <View className="flex-row items-center mx-1">
-                <Text
-                  style={{
-                    fontFamily: "Lobster_Regular",
-                    color: Colorizer(selectedImage.primary, 1.0)
-                  }}
-                >
-                  {item.label}:
-                </Text>
+                <Text style={{ fontFamily: "Lobster_Regular", color: Colorizer(selectedImage.primary, 1.0) }}>{item.label}:</Text>
                 <Text className="ml-2" style={{ fontFamily: "Kurale_Regular", color: Colorizer(selectedImage.primary, 1.0) }}>
                   {item.value}
                 </Text>

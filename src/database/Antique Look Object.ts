@@ -2,8 +2,6 @@ import { EnvironmentEntry } from "@/types/database";
 const AntiqueLookObject: Record<string, EnvironmentEntry> = {
   "Ancient Book And Quill": {
     environment_title: "Ancient Book And Quill",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Ancient Book And Quill (1).jpg",
@@ -89,8 +87,6 @@ const AntiqueLookObject: Record<string, EnvironmentEntry> = {
   },
   "Antique Lantern And Old Books": {
     environment_title: "Antique Lantern And Old Books",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Antique Lantern And Old Books (1).jpg",
@@ -176,8 +172,6 @@ const AntiqueLookObject: Record<string, EnvironmentEntry> = {
   },
   "Antique Phonograph And Vinyl Records": {
     environment_title: "Antique Phonograph And Vinyl Records",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Antique Phonograph And Vinyl Records (1).jpg",
@@ -263,8 +257,6 @@ const AntiqueLookObject: Record<string, EnvironmentEntry> = {
   },
   "Antique Scarf And Perfume Bottles": {
     environment_title: "Antique Scarf And Perfume Bottles",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Antique Scarf And Perfume Bottles (1).jpg",
@@ -350,8 +342,6 @@ const AntiqueLookObject: Record<string, EnvironmentEntry> = {
   },
   "Antique Typewriter And Letters": {
     environment_title: "Antique Typewriter And Letters",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Antique Typewriter And Letters (1).jpg",
@@ -437,8 +427,6 @@ const AntiqueLookObject: Record<string, EnvironmentEntry> = {
   },
   "Candlelit Clock Tower": {
     environment_title: "Candlelit Clock Tower",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Candlelit Clock Tower (1).jpg",
@@ -524,8 +512,6 @@ const AntiqueLookObject: Record<string, EnvironmentEntry> = {
   },
   "Classic Car Under Streetlights": {
     environment_title: "Classic Car Under Streetlights",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Classic Car Under Streetlights (1).jpg",
@@ -611,8 +597,6 @@ const AntiqueLookObject: Record<string, EnvironmentEntry> = {
   },
   "Classic Film Projector": {
     environment_title: "Classic Film Projector",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Classic Film Projector (1).jpg",
@@ -698,8 +682,6 @@ const AntiqueLookObject: Record<string, EnvironmentEntry> = {
   },
   "Classic Motorcycle Helmet And Gloves": {
     environment_title: "Classic Motorcycle Helmet And Gloves",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Classic Motorcycle Helmet And Gloves (1).jpg",
@@ -785,8 +767,6 @@ const AntiqueLookObject: Record<string, EnvironmentEntry> = {
   },
   "Classic Sailboat Model And Nautical Charts": {
     environment_title: "Classic Sailboat Model And Nautical Charts",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Classic Sailboat Model And Nautical Charts (1).jpg",
@@ -872,8 +852,6 @@ const AntiqueLookObject: Record<string, EnvironmentEntry> = {
   },
   "Elegant Teapot And Saucers": {
     environment_title: "Elegant Teapot And Saucers",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Elegant Teapot And Saucers (1).jpg",
@@ -959,8 +937,6 @@ const AntiqueLookObject: Record<string, EnvironmentEntry> = {
   },
   "Elegant Wine Glass And Bottle": {
     environment_title: "Elegant Wine Glass And Bottle",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Elegant Wine Glass And Bottle (1).jpg",
@@ -1046,8 +1022,6 @@ const AntiqueLookObject: Record<string, EnvironmentEntry> = {
   },
   "Grand Piano In Concert Hall": {
     environment_title: "Grand Piano In Concert Hall",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Grand Piano In Concert Hall (1).jpg",
@@ -1133,8 +1107,6 @@ const AntiqueLookObject: Record<string, EnvironmentEntry> = {
   },
   "Old Compass And Maps": {
     environment_title: "Old Compass And Maps",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Old Compass And Maps (1).jpg",
@@ -1220,8 +1192,6 @@ const AntiqueLookObject: Record<string, EnvironmentEntry> = {
   },
   "Old Map And Navigation Tools": {
     environment_title: "Old Map And Navigation Tools",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Old Map And Navigation Tools (1).jpg",
@@ -1307,8 +1277,6 @@ const AntiqueLookObject: Record<string, EnvironmentEntry> = {
   },
   "Rustic Fishing Rod And Tackle Box": {
     environment_title: "Rustic Fishing Rod And Tackle Box",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Rustic Fishing Rod And Tackle Box (1).jpg",
@@ -1394,8 +1362,6 @@ const AntiqueLookObject: Record<string, EnvironmentEntry> = {
   },
   "Rustic Lantern In Fog": {
     environment_title: "Rustic Lantern In Fog",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Rustic Lantern In Fog (1).jpg",
@@ -1481,8 +1447,6 @@ const AntiqueLookObject: Record<string, EnvironmentEntry> = {
   },
   "Vintage Camera On Wooden Table": {
     environment_title: "Vintage Camera On Wooden Table",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Vintage Camera On Wooden Table (1).jpg",
@@ -1568,8 +1532,6 @@ const AntiqueLookObject: Record<string, EnvironmentEntry> = {
   },
   "Vintage Sewing Machine And Fabric Rolls": {
     environment_title: "Vintage Sewing Machine And Fabric Rolls",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Vintage Sewing Machine And Fabric Rolls (1).jpg",
@@ -1655,8 +1617,6 @@ const AntiqueLookObject: Record<string, EnvironmentEntry> = {
   },
   "Vintage Typewriter And Ink Bottles": {
     environment_title: "Vintage Typewriter And Ink Bottles",
-    environment_moral: "",
-    environment_prompt: "",
     images: [
       {
         original_file_name: "Vintage Typewriter And Ink Bottles (1).jpg",
