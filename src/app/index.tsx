@@ -147,7 +147,7 @@ const IndexPage: React.FC = () => {
                 <Animated.View style={{ alignSelf: "center" }} entering={FadeInDown.delay(600).duration(1500).springify()}>
                   <View style={{ backgroundColor: Colorizer("#0A0A0A", 0.9), borderRadius: 12, paddingHorizontal: 12, paddingVertical: 4, marginTop: 8 }}>
                     <Text className="text-center" style={{ fontFamily: "Linotte_Regular", color: Colorizer("#E9E9EA", 1.0), fontSize: 16 }}>
-                      Crafted with <Text style={{ color: Colorizer("#BE2528", 1.0) }}>♥</Text>
+                      Crafted with <Text style={{ color: Colorizer("#BE2528", 1.0) }}>♥</Text> in India
                     </Text>
                   </View>
                 </Animated.View>
