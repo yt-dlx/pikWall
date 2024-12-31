@@ -153,7 +153,7 @@ const IndexPage: React.FC = () => {
                 </Animated.View>
               </View>
               <Link href="./Home" asChild>
-                <TouchableOpacity onPressIn={onPressIn} onPressOut={onPressOut} className="mt-52 rounded-2xl overflow-hidden">
+                <TouchableOpacity onPressIn={onPressIn} onPressOut={onPressOut} className="mt-44 rounded-2xl overflow-hidden">
                   <Animated.View style={[buttonAnimatedStyle, { shadowColor: Colorizer("#000000", 1.0), shadowOffset: { width: 0, height: 4 } }]}>
                     <LinearGradient
                       colors={[Colorizer("#FFFFFF", 1.0), Colorizer("#F0F0F0", 1.0)]}
