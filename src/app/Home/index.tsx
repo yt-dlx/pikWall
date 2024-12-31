@@ -199,10 +199,8 @@ CategoryButton.displayName = "CategoryButton";
 const HeaderComponent: React.FC<{ categories: Category[]; selectedCategory: string; onSelectCategory: (categoryName: string) => void }> = React.memo(({ categories, selectedCategory, onSelectCategory }) => (
   <>
     <HeaderAnimate />
-    <View className="pb-1 pt-6 px-1">
-      <View style={{ justifyContent: "center", alignItems: "center" }}>
-        <Text style={{ fontFamily: "Lobster_Regular", fontSize: 50, color: Colorizer("#E9E9EA", 1.0), textAlign: "center" }}>Explore Our Collection</Text>
-      </View>
+    <View className="pb-1 pt-4 px-2">
+      <Text style={{ fontFamily: "Lobster_Regular", fontSize: 40, color: Colorizer("#E9E9EA", 1.0) }}>Explore Our Collection</Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {categories.map((category) => (
           <CategoryButton key={category.name} category={category.name} selected={category.name === selectedCategory} onPress={() => onSelectCategory(category.name)} />

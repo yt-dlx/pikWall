@@ -168,9 +168,9 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
           }}
         />
       </Animated.View>
-      <TouchableOpacity onPress={onViewFullScreen} className="absolute bottom-5 right-5 px-4 py-2 rounded-full z-50" style={{ backgroundColor: Colorizer(selectedImage.primary, 0.8) }} activeOpacity={0.8}>
+      <TouchableOpacity onPress={onViewFullScreen} className="absolute w-full bottom-5 mx-4 px-4 py-2 rounded-full z-50" style={{ backgroundColor: Colorizer(selectedImage.secondary, 0.9), borderRadius: 9999, borderWidth: 1, borderColor: Colorizer(selectedImage.primary, 1.0) }} activeOpacity={0.8}>
         <Text className="text-white text-base" style={{ fontFamily: "Kurale_Regular" }}>
-          View FullScreen
+          View Current Wallpaper In Full-Screen
         </Text>
       </TouchableOpacity>
     </View>
@@ -216,12 +216,12 @@ interface OtherImagesProps {
 const OtherImages: React.FC<OtherImagesProps> = ({ otherImages, setCurrentIndex, primaryColor, tertiaryColor }) => (
   <View className="p-1 my-2 rounded-2xl" style={{ backgroundColor: Colorizer(primaryColor, 0.2) }}>
     <View className="p-1 rounded-2xl" style={{ backgroundColor: Colorizer(tertiaryColor, 0.2) }}>
-      <Text className="ml-2 text-xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer(primaryColor, 1.0) }}>
+      <Text className="ml-2 text-xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer("#E9E9EA", 1.0) }}>
         Other Wallpapers:
       </Text>
-      <View className="flex-row flex-wrap my-2">
+      <View className="flex-row flex-wrap my-1">
         {otherImages.map(({ img, idx }) => (
-          <TouchableOpacity key={idx} className="relative rounded-lg overflow-hidden mx-1 flex-1" style={{ aspectRatio: 9 / 16 }} onPress={() => setCurrentIndex(idx)}>
+          <TouchableOpacity key={idx} className="relative rounded-2xl overflow-hidden mx-0.5 flex-1" style={{ aspectRatio: 9 / 16, borderRadius: 10, borderWidth: 1, borderColor: Colorizer(primaryColor, 1.0) }} onPress={() => setCurrentIndex(idx)}>
             <Image source={{ uri: img.previewLink }} style={{ width: "100%", height: "100%" }} contentFit="cover" />
             <View className="absolute top-1 left-1 bg-black/50 px-1 py-1 rounded-lg">
               <Text className="text-white text-xs" style={{ fontFamily: "Kurale_Regular" }}>
