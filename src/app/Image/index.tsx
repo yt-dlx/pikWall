@@ -25,7 +25,13 @@ const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () =>
   return (
     <View className="absolute inset-0 justify-center items-center">
       <Animated.View className="absolute top-0 left-0 right-0 bottom-0" style={[{ backgroundColor: Colorizer("#000000", 0.5) }, backdropStyle]} />
-      <Animated.View className="w-4/5 p-5 rounded-lg items-center shadow-lg" style={[{ backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 }, modalStyle]}>
+      <Animated.View
+        className="w-4/5 p-5 rounded-lg items-center shadow-lg"
+        style={[
+          { backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 },
+          modalStyle
+        ]}
+      >
         <Ionicons name="checkmark-done-circle" size={50} color={Colorizer("#28a745", 1.0)} />
         <Text className="mt-2.5 text-2xl text-center" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#000000", 1.0) }}>
           Success
@@ -57,7 +63,13 @@ const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => v
   return (
     <View className="absolute inset-0 justify-center items-center">
       <Animated.View className="absolute top-0 left-0 right-0 bottom-0" style={[{ backgroundColor: Colorizer("#000000", 0.5) }, backdropStyle]} />
-      <Animated.View className="w-4/5 p-5 rounded-lg items-center shadow-lg" style={[{ backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 }, modalStyle]}>
+      <Animated.View
+        className="w-4/5 p-5 rounded-lg items-center shadow-lg"
+        style={[
+          { backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 },
+          modalStyle
+        ]}
+      >
         <MaterialIcons name="error" size={50} color={Colorizer("#dc3545", 1.0)} />
         <Text className="mt-2.5 text-2xl text-center" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#000000", 1.0) }}>
           Error
@@ -98,7 +110,10 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
   return (
     <View className="absolute inset-0 justify-center items-center">
       <View className="absolute inset-0" style={{ backgroundColor: Colorizer(primaryColor, 0.3) }} />
-      <View className="rounded-lg p-5 items-center shadow-lg" style={{ backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 }}>
+      <View
+        className="rounded-lg p-5 items-center shadow-lg"
+        style={{ backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 }}
+      >
         <ActivityIndicator size="large" color={Colorizer(primaryColor, 1.0)} />
         <Text className="mt-3 text-lg" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Linotte_Bold" }}>
           Downloading...
@@ -133,7 +148,10 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
   const imageHeight = (screenWidth / aspectRatio) * 0.7;
   const scaleValue = useRef(new Animated.Value(1.1)).current;
   useEffect(() => {
-    const animation = Animated.sequence([Animated.timing(scaleValue, { toValue: 1.4, duration: 4000, easing: Easing.inOut(Easing.ease), useNativeDriver: true }), Animated.timing(scaleValue, { toValue: 1.1, duration: 2000, easing: Easing.inOut(Easing.ease), useNativeDriver: true })]);
+    const animation = Animated.sequence([
+      Animated.timing(scaleValue, { toValue: 1.4, duration: 4000, easing: Easing.inOut(Easing.ease), useNativeDriver: true }),
+      Animated.timing(scaleValue, { toValue: 1.1, duration: 2000, easing: Easing.inOut(Easing.ease), useNativeDriver: true })
+    ]);
     Animated.loop(animation).start();
   }, [scaleValue]);
   return (
@@ -169,7 +187,12 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
           }}
         />
       </Animated.View>
-      <TouchableOpacity onPress={onViewFullScreen} className="absolute w-full bottom-5 mx-4 px-4 py-2 rounded-full z-50" style={{ backgroundColor: Colorizer(selectedImage.secondary, 0.9), borderRadius: 9999, borderWidth: 1, borderColor: Colorizer(selectedImage.primary, 1.0) }} activeOpacity={0.8}>
+      <TouchableOpacity
+        onPress={onViewFullScreen}
+        className="absolute w-full bottom-5 mx-4 px-4 py-2 rounded-full z-50"
+        style={{ backgroundColor: Colorizer(selectedImage.secondary, 0.9), borderRadius: 9999, borderWidth: 1, borderColor: Colorizer(selectedImage.primary, 1.0) }}
+        activeOpacity={0.8}
+      >
         <Text className="text-white text-base" style={{ fontFamily: "Kurale_Regular" }}>
           View Current Wallpaper In Full-Screen
         </Text>
@@ -186,7 +209,12 @@ interface DownloadButtonProps {
 const DownloadButton: React.FC<DownloadButtonProps> = ({ onDownload, colors }) => {
   const scaleValue = useRef(new Animated.Value(1)).current;
   useEffect(() => {
-    const pulse = Animated.loop(Animated.sequence([Animated.timing(scaleValue, { toValue: 1.08, duration: 1000, easing: Easing.inOut(Easing.ease), useNativeDriver: true }), Animated.timing(scaleValue, { toValue: 1, duration: 2000, easing: Easing.inOut(Easing.ease), useNativeDriver: true })]));
+    const pulse = Animated.loop(
+      Animated.sequence([
+        Animated.timing(scaleValue, { toValue: 1.08, duration: 1000, easing: Easing.inOut(Easing.ease), useNativeDriver: true }),
+        Animated.timing(scaleValue, { toValue: 1, duration: 2000, easing: Easing.inOut(Easing.ease), useNativeDriver: true })
+      ])
+    );
     pulse.start();
     return () => pulse.stop();
   }, [scaleValue]);
@@ -222,7 +250,12 @@ const OtherImages: React.FC<OtherImagesProps> = ({ otherImages, setCurrentIndex,
       </Text>
       <View className="flex-row flex-wrap my-1">
         {otherImages.map(({ img, idx }) => (
-          <TouchableOpacity key={idx} className="relative rounded-2xl overflow-hidden mx-0.5 flex-1" style={{ aspectRatio: 9 / 16, borderRadius: 10, borderWidth: 1, borderColor: Colorizer(primaryColor, 1.0) }} onPress={() => setCurrentIndex(idx)}>
+          <TouchableOpacity
+            key={idx}
+            className="relative rounded-2xl overflow-hidden mx-0.5 flex-1"
+            style={{ aspectRatio: 9 / 16, borderRadius: 10, borderWidth: 1, borderColor: Colorizer(primaryColor, 1.0) }}
+            onPress={() => setCurrentIndex(idx)}
+          >
             <Image source={{ uri: img.previewLink }} style={{ width: "100%", height: "100%" }} contentFit="cover" />
             <View className="absolute top-1 left-1 bg-black/50 px-1 py-1 rounded-lg">
               <Text className="text-white text-xs" style={{ fontFamily: "Kurale_Regular" }}>
@@ -333,22 +366,40 @@ const ImagePage = () => {
       <Modal visible={isFullScreen} transparent={false} onRequestClose={() => setIsFullScreen(false)} presentationStyle="fullScreen" statusBarTranslucent>
         <View style={{ flex: 1, backgroundColor: Colorizer("#000000", 1.0) }}>
           <ScrollView horizontal contentContainerStyle={{ flexGrow: 1, justifyContent: "center", alignItems: "center" }} showsHorizontalScrollIndicator={false}>
-            <Image source={{ uri: selectedImage.previewLink.replace("lowRes", "highRes") }} style={{ height: Dimensions.get("window").height, width: undefined, aspectRatio: selectedImage.width / selectedImage.height, resizeMode: "contain" }} />
+            <Image
+              source={{ uri: selectedImage.previewLink.replace("lowRes", "highRes") }}
+              style={{ height: Dimensions.get("window").height, width: undefined, aspectRatio: selectedImage.width / selectedImage.height, resizeMode: "contain" }}
+            />
           </ScrollView>
           <View style={{ position: "absolute", bottom: 10, left: 10, right: 10, flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
-            <LinearGradient colors={[Colorizer(selectedImage.primary, 0.9), Colorizer(selectedImage.secondary, 0.8), Colorizer(selectedImage.tertiary, 0.9)]} start={[0, 0]} end={[1, 0]} style={{ flex: 1, height: 40, borderRadius: 10, marginHorizontal: 1 }}>
+            <LinearGradient
+              colors={[Colorizer(selectedImage.primary, 0.9), Colorizer(selectedImage.secondary, 0.8), Colorizer(selectedImage.tertiary, 0.9)]}
+              start={[0, 0]}
+              end={[1, 0]}
+              style={{ flex: 1, height: 40, borderRadius: 10, marginHorizontal: 1 }}
+            >
               <TouchableOpacity onPress={() => setIsFullScreen(false)} style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}>
                 <FontAwesome5 name="times" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
                 <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Close Fullscreen</Text>
               </TouchableOpacity>
             </LinearGradient>
-            <LinearGradient colors={[Colorizer(selectedImage.primary, 0.9), Colorizer(selectedImage.secondary, 0.8), Colorizer(selectedImage.tertiary, 0.9)]} start={[0, 0]} end={[1, 0]} style={{ flex: 1, height: 40, borderRadius: 10, marginHorizontal: 1 }}>
+            <LinearGradient
+              colors={[Colorizer(selectedImage.primary, 0.9), Colorizer(selectedImage.secondary, 0.8), Colorizer(selectedImage.tertiary, 0.9)]}
+              start={[0, 0]}
+              end={[1, 0]}
+              style={{ flex: 1, height: 40, borderRadius: 10, marginHorizontal: 1 }}
+            >
               <TouchableOpacity onPress={downloadAndSaveImage} style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}>
                 <FontAwesome5 name="download" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
                 <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Download</Text>
               </TouchableOpacity>
             </LinearGradient>
-            <LinearGradient colors={[Colorizer(selectedImage.primary, 0.9), Colorizer(selectedImage.secondary, 0.8), Colorizer(selectedImage.tertiary, 0.9)]} start={[0, 0]} end={[1, 0]} style={{ flex: 1, height: 40, borderRadius: 10, marginHorizontal: 1 }}>
+            <LinearGradient
+              colors={[Colorizer(selectedImage.primary, 0.9), Colorizer(selectedImage.secondary, 0.8), Colorizer(selectedImage.tertiary, 0.9)]}
+              start={[0, 0]}
+              end={[1, 0]}
+              style={{ flex: 1, height: 40, borderRadius: 10, marginHorizontal: 1 }}
+            >
               <TouchableOpacity onPress={() => console.log("Set as Wallpaper")} style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}>
                 <Ionicons name="image" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
                 <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Set Wallpaper</Text>

@@ -56,8 +56,16 @@ const SubImages: React.FC<SubImagesProps> = React.memo(({ images, onImagePress }
       <Link key={index} href={{ pathname: "./Image", params: { data: JSON.stringify({ selectedIndex: index, data: images.data, environment_title: images.environment_title }) } }} asChild>
         <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="p-[0.2px] flex-1">
           <View className="relative">
-            <Image source={{ uri: image.previewLink }} style={{ height: 50, borderWidth: 1, width: "100%", borderRadius: 4, borderColor: Colorizer(image.primary, 0.5) }} cachePolicy="memory-disk" contentFit="cover" />
-            <Text className="absolute m-1 bottom-1 right-1 px-2 text-xs rounded-2xl" style={{ fontFamily: "Kurale_Regular", color: Colorizer("#000000", 1.0), backgroundColor: Colorizer(image.primary, 1.0) }}>
+            <Image
+              source={{ uri: image.previewLink }}
+              style={{ height: 50, borderWidth: 1, width: "100%", borderRadius: 4, borderColor: Colorizer(image.primary, 0.5) }}
+              cachePolicy="memory-disk"
+              contentFit="cover"
+            />
+            <Text
+              className="absolute m-1 bottom-1 right-1 px-2 text-xs rounded-2xl"
+              style={{ fontFamily: "Kurale_Regular", color: Colorizer("#000000", 1.0), backgroundColor: Colorizer(image.primary, 1.0) }}
+            >
               {image.primary.toUpperCase()}
             </Text>
           </View>
@@ -132,7 +140,10 @@ const Card: React.FC<CardProps> = React.memo(({ data }) => {
           <View className="relative aspect-[9/16] w-full overflow-hidden">
             <AnimatedImage source={{ uri: currentImage }} style={[{ width: "100%", height: "100%", borderTopLeftRadius: 8, borderTopRightRadius: 8 }, imageStyle]} contentFit="cover" />
             <View className="absolute bottom-0 left-0 right-0 items-center justify-start">
-              <Animated.Text style={[textStyle, { textAlign: "center", fontFamily: "Kurale_Regular", color: Colorizer("#000000", 0.8), backgroundColor: Colorizer(data.images[currentIndex].primary, 1.0) }]} className="text-sm m-1 px-1 rounded-xl">
+              <Animated.Text
+                style={[textStyle, { textAlign: "center", fontFamily: "Kurale_Regular", color: Colorizer("#000000", 0.8), backgroundColor: Colorizer(data.images[currentIndex].primary, 1.0) }]}
+                className="text-sm m-1 px-1 rounded-xl"
+              >
                 {data.images[currentIndex].original_file_name.replace(/_/g, " ").replace(".jpg", "")}
               </Animated.Text>
             </View>
@@ -170,9 +181,17 @@ const CategoryButton: React.FC<CategoryButtonExtendedProps> = React.memo(({ cate
     translateX.value = withRepeat(withTiming(50, { duration: 1000 }), -1, true);
   }, [translateX]);
   return (
-    <TouchableOpacity style={{ borderRadius: 4, overflow: "hidden", padding: 2 }} accessibilityLabel={`${category} category button`} accessibilityState={{ selected }} activeOpacity={0.7} onPress={onPress}>
+    <TouchableOpacity
+      style={{ borderRadius: 4, overflow: "hidden", padding: 2 }}
+      accessibilityLabel={`${category} category button`}
+      accessibilityState={{ selected }}
+      activeOpacity={0.7}
+      onPress={onPress}
+    >
       <View style={{ alignItems: "center", margin: 2 }}>
-        <Animated.View style={[{ width: 100, height: 1, backgroundColor: selected ? "#5f1314" : "#BABABB", borderRadius: 50 }, useAnimatedStyle(() => ({ transform: [{ translateX: -translateX.value }] }))]} />
+        <Animated.View
+          style={[{ width: 100, height: 1, backgroundColor: selected ? "#5f1314" : "#BABABB", borderRadius: 50 }, useAnimatedStyle(() => ({ transform: [{ translateX: -translateX.value }] }))]}
+        />
       </View>
       <LinearGradient
         colors={selected ? [Colorizer("#5f1314", 1.0), Colorizer("#981e20", 1.0), Colorizer("#BE2528", 1.0)] : [Colorizer("#E9E9EA", 1.0), Colorizer("#D2D2D3", 1.0), Colorizer("#BABABB", 1.0)]}
@@ -188,7 +207,9 @@ const CategoryButton: React.FC<CategoryButtonExtendedProps> = React.memo(({ cate
         </View>
       </LinearGradient>
       <View style={{ alignItems: "center", margin: 2 }}>
-        <Animated.View style={[{ width: 100, height: 1, backgroundColor: selected ? "#BE2528" : "#E9E9EA", borderRadius: 50 }, useAnimatedStyle(() => ({ transform: [{ translateX: translateX.value }] }))]} />
+        <Animated.View
+          style={[{ width: 100, height: 1, backgroundColor: selected ? "#BE2528" : "#E9E9EA", borderRadius: 50 }, useAnimatedStyle(() => ({ transform: [{ translateX: translateX.value }] }))]}
+        />
       </View>
     </TouchableOpacity>
   );
@@ -196,19 +217,21 @@ const CategoryButton: React.FC<CategoryButtonExtendedProps> = React.memo(({ cate
 CategoryButton.displayName = "CategoryButton";
 // ============================================================================================
 // ============================================================================================
-const HeaderComponent: React.FC<{ categories: Category[]; selectedCategory: string; onSelectCategory: (categoryName: string) => void }> = React.memo(({ categories, selectedCategory, onSelectCategory }) => (
-  <>
-    <HeaderAnimate />
-    <View className="pb-1 pt-4 px-2">
-      <Text style={{ fontFamily: "Lobster_Regular", fontSize: 40, color: Colorizer("#E9E9EA", 1.0) }}>Explore Our Collection</Text>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        {categories.map((category) => (
-          <CategoryButton key={category.name} category={category.name} selected={category.name === selectedCategory} onPress={() => onSelectCategory(category.name)} />
-        ))}
-      </ScrollView>
-    </View>
-  </>
-));
+const HeaderComponent: React.FC<{ categories: Category[]; selectedCategory: string; onSelectCategory: (categoryName: string) => void }> = React.memo(
+  ({ categories, selectedCategory, onSelectCategory }) => (
+    <>
+      <HeaderAnimate />
+      <View className="pb-1 pt-4 px-2">
+        <Text style={{ fontFamily: "Lobster_Regular", fontSize: 40, color: Colorizer("#E9E9EA", 1.0) }}>Explore Our Collection</Text>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          {categories.map((category) => (
+            <CategoryButton key={category.name} category={category.name} selected={category.name === selectedCategory} onPress={() => onSelectCategory(category.name)} />
+          ))}
+        </ScrollView>
+      </View>
+    </>
+  )
+);
 HeaderComponent.displayName = "HeaderComponent";
 // ============================================================================================
 // ============================================================================================

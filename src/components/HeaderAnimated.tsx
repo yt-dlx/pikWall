@@ -53,7 +53,10 @@ const HeaderAnimated: React.FC = () => {
         {imageSets.map((images, slotIndex) => (
           <ScrollingSlot key={slotIndex} images={images} reverse={slotIndex % 2 === 0} delay={slotIndex * 200} />
         ))}
-        <View className="absolute inset-0 items-center justify-center rounded-lg overflow-hidden" style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", borderRadius: 8 }}>
+        <View
+          className="absolute inset-0 items-center justify-center rounded-lg overflow-hidden"
+          style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", borderRadius: 8 }}
+        >
           <View style={{ backgroundColor: Colorizer("#000000", 0.5), borderRadius: 8 }} className="absolute inset-0" />
           <View style={{ position: "absolute", justifyContent: "center", alignItems: "center", margin: 8, padding: 4 }} className="absolute justify-center items-center">
             <View className="flex-row mb-1">
