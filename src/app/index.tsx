@@ -91,7 +91,7 @@ const IndexPage: React.FC = () => {
                   fontSize: 80,
                   textShadowRadius: 50,
                   fontFamily: "Linotte_Heavy",
-                  color: Colorizer("#000000", 1.0),
+                  color: Colorizer("#E9E9EA", 1.0),
                   textShadowOffset: { width: 8, height: 8 },
                   textShadowColor: Colorizer("#000000", 1.0)
                 }}
