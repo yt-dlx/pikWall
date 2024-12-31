@@ -18,8 +18,8 @@ import Footer from "@/components/Footer";
 import Colorizer from "@/components/Colorizer";
 import { EnvironmentEntry } from "@/types/database";
 import { LinearGradient } from "expo-linear-gradient";
-import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import HeaderAnimate from "@/components/HeaderAnimated";
+import { FontAwesome, Ionicons, FontAwesome5 } from "@expo/vector-icons";
 import { SubImagesProps, CardProps, CategoryButtonProps } from "@/types/components";
 import { View, Text, TouchableOpacity, FlatList, ScrollView, StatusBar } from "react-native";
 import Animated, { Easing, runOnJS, useSharedValue, useAnimatedStyle, withTiming } from "react-native-reanimated";
@@ -79,7 +79,7 @@ const SubImages: React.FC<SubImagesProps> = React.memo(({ images, onImagePress }
             />
             <Text
               className="absolute m-1 bottom-1 right-1 px-2 text-xs rounded-2xl"
-              style={{ fontFamily: "Linotte_Bold", color: Colorizer("#000000", 1.0), backgroundColor: Colorizer(image.primary, 1.0) }}
+              style={{ fontFamily: "Linotte_Bold", color: Colorizer("#171717", 1.0), backgroundColor: Colorizer(image.primary, 1.0) }}
             >
               {image.primary}
             </Text>
@@ -175,7 +175,7 @@ const Card: React.FC<CardProps> = React.memo(({ data }) => {
                   {
                     textAlign: "center",
                     fontFamily: "Linotte_Bold",
-                    color: Colorizer("#000000", 1.0),
+                    color: Colorizer("#171717", 1.0),
                     backgroundColor: Colorizer(data.images[currentIndex].primary, 0.8)
                   }
                 ]}
@@ -214,7 +214,7 @@ const Card: React.FC<CardProps> = React.memo(({ data }) => {
         </View>
       </View>
       <View className="border-t items-center justify-center py-0.5" style={{ backgroundColor: Colorizer(data.images[currentIndex].primary, 1.0) }}>
-        <Text style={{ fontFamily: "Linotte_Bold", color: Colorizer("#000000", 1.0), fontSize: 12, lineHeight: 16 }}>picWall</Text>
+        <Text style={{ fontFamily: "Linotte_Bold", color: Colorizer("#171717", 1.0), fontSize: 12, lineHeight: 16 }}>picWall</Text>
       </View>
     </View>
   );
@@ -223,29 +223,30 @@ Card.displayName = "Card";
 // ============================================================================================
 // ============================================================================================
 function getCategoryIcon(selected: boolean) {
-  const iconName = selected ? "checkmark-circle" : "ellipse-outline";
-  const iconColor = selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0);
-  return <Ionicons name={iconName} size={20} color={iconColor} />;
+  const iconSize = selected ? 20 : 10;
+  const iconName = selected ? "gripfire" : "swatchbook";
+  const iconColor = selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#171717", 1.0);
+  return <FontAwesome5 name={iconName} size={iconSize} color={iconColor} />;
 }
 // ============================================================================================
 // ============================================================================================
 const CategoryButton: React.FC<CategoryButtonExtendedProps> = React.memo(({ category, selected, onPress }) => (
   <TouchableOpacity
-    style={{ borderRadius: 10, overflow: "hidden", margin: 4 }}
-    activeOpacity={0.7}
-    onPress={onPress}
+    style={{ borderRadius: 10, overflow: "hidden", margin: 2 }}
     accessibilityLabel={`${category} category button`}
     accessibilityState={{ selected }}
+    activeOpacity={0.7}
+    onPress={onPress}
   >
     <LinearGradient
       colors={selected ? [Colorizer("#5f1314", 1.0), Colorizer("#981e20", 1.0), Colorizer("#BE2528", 1.0)] : [Colorizer("#E9E9EA", 1.0), Colorizer("#d2d2d3", 1.0), Colorizer("#bababb", 1.0)]}
-      style={{ paddingHorizontal: 24, paddingVertical: 10 }}
+      style={{ paddingHorizontal: 20, paddingVertical: 8 }}
       start={{ x: 0, y: 0 }}
       end={{ x: 1, y: 1 }}
     >
       <View className="flex-row items-center">
         {getCategoryIcon(selected)}
-        <Text style={{ fontFamily: "Linotte_Bold", color: selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0) }} className="ml-2 text-base">
+        <Text style={{ fontFamily: "Linotte_Bold", color: selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#171717", 1.0) }} className="ml-1 text-base">
           {category}
         </Text>
       </View>
@@ -259,15 +260,15 @@ const HeaderComponent: React.FC<{ categories: Category[]; selectedCategory: stri
   ({ categories, selectedCategory, onSelectCategory }) => (
     <>
       <HeaderAnimate />
-      <View className="py-8 px-2">
+      <View className="py-8 px-2 p-1 m-1 rounded-xl">
         <View className="flex-row items-center justify-center">
           <FontAwesome name="wpexplorer" size={24} color={Colorizer("#E9E9EA", 1.0)} className="m-2" />
-          <Text style={{ fontFamily: "Linotte_Bold", color: Colorizer("#E9E9EA", 1.0) }} className="text-2xl text-center">
+          <Text style={{ fontFamily: "Linotte_Bold", color: Colorizer("#E9E9EA", 1.0) }} className="text-4xl text-center">
             Explore Our Collection
           </Text>
           <Ionicons name="images-outline" size={24} color={Colorizer("#E9E9EA", 1.0)} className="m-2" />
         </View>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} className="mt-2 mb-3">
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           {categories.map((category) => (
             <CategoryButton key={category.name} category={category.name} selected={category.name === selectedCategory} onPress={() => onSelectCategory(category.name)} />
           ))}
@@ -281,7 +282,7 @@ HeaderComponent.displayName = "HeaderComponent";
 // ============================================================================================
 const HomePage = (): JSX.Element => {
   const [cardData, setCardData] = React.useState<EnvironmentEntry[]>([]);
-  const [selectedCategory, setSelectedCategory] = React.useState<string>("Anime");
+  const [selectedCategory, setSelectedCategory] = React.useState<string>("Aerial View");
   React.useEffect(() => {
     const processImageUrls = (entry: EnvironmentEntry): EnvironmentEntry => ({
       ...entry,
@@ -311,7 +312,7 @@ const HomePage = (): JSX.Element => {
   );
   const keyExtractor = React.useCallback((item: EnvironmentEntry) => item.environment_title, []);
   return (
-    <View style={{ backgroundColor: Colorizer("#000000", 1.0), flex: 1 }} className="relative">
+    <View style={{ backgroundColor: Colorizer("#171717", 1.0), flex: 1 }} className="relative">
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
       <FlatList
         windowSize={3}

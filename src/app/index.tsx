@@ -51,7 +51,7 @@ const AnimatedTitle: React.FC = () => {
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
   return (
     <Animated.View style={animatedStyle} className="items-center">
-      <View className="rounded-full p-1" style={{ backgroundColor: Colorizer("#000000", 0.7), justifyContent: "center", alignItems: "center" }}>
+      <View className="rounded-full p-1" style={{ backgroundColor: Colorizer("#171717", 0.7), justifyContent: "center", alignItems: "center" }}>
         <Image
           alt="logo"
           cachePolicy="memory-disk"
@@ -75,7 +75,7 @@ const IndexPage: React.FC = () => {
     buttonScale.value = withSpring(1);
   };
   return (
-    <View style={{ backgroundColor: Colorizer("#000000", 1.0) }} className="h-full w-full">
+    <View style={{ backgroundColor: Colorizer("#171717", 1.0) }} className="h-full w-full">
       <View className="flex-1 justify-center items-center relative">
         <View className="flex-row h-full overflow-hidden relative">
           {imageSets.map((images, slotIndex) => (
@@ -88,17 +88,17 @@ const IndexPage: React.FC = () => {
               <Text
                 className="text-center"
                 style={{
-                  fontSize: 80,
+                  fontSize: 60,
                   textShadowRadius: 50,
                   fontFamily: "Linotte_Heavy",
                   color: Colorizer("#E9E9EA", 1.0),
-                  textShadowOffset: { width: 8, height: 8 },
-                  textShadowColor: Colorizer("#000000", 1.0)
+                  textShadowOffset: { width: 20, height: 2 },
+                  textShadowColor: Colorizer("#171717", 1.0)
                 }}
               >
                 picWall
               </Text>
-              <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Linotte_Heavy", color: Colorizer("#E9E9EA", 1.0), fontSize: 80 }}>
+              <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Linotte_Heavy", color: Colorizer("#E9E9EA", 1.0), fontSize: 60 }}>
                 picWall
               </Text>
             </View>
@@ -107,8 +107,8 @@ const IndexPage: React.FC = () => {
               <TouchableOpacity onPressIn={onPressIn} onPressOut={onPressOut} className="mt-2 rounded-3xl overflow-hidden shadow-2xl">
                 <Animated.View style={buttonAnimatedStyle}>
                   <LinearGradient colors={["#ffffff", "#f0f0f0"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} className="flex-row items-center justify-center px-10 py-3">
-                    <MaterialIcons name="photo-camera" size={28} color={Colorizer("#000000", 1.0)} className="mr-3" />
-                    <Text className="text-xl" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#000000", 1.0) }}>
+                    <MaterialIcons name="photo-camera" size={28} color={Colorizer("#171717", 1.0)} className="mr-3" />
+                    <Text className="text-xl" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#171717", 1.0) }}>
                       Start Exploring
                     </Text>
                   </LinearGradient>

@@ -39,7 +39,7 @@
       "package": "com.shovit.picWall",
       "permissions": ["READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"],
       "adaptiveIcon": {
-        "backgroundColor": "#000000",
+        "backgroundColor": "#171717",
         "foregroundImage": "./src/assets/picWall/picWall.png"
       }
     },
@@ -62,7 +62,7 @@
         {
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#000000",
+          "backgroundColor": "#171717",
           "image": "./src/assets/picWall/picWall.png"
         }
       ]
