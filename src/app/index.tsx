@@ -59,7 +59,7 @@ const AnimatedTitle: React.FC = () => {
  const animatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
  return (
   <Animated.View style={[animatedStyle, { shadowColor: Colorizer("#000000", 1.0), shadowOffset: { width: 0, height: 8 }, shadowOpacity: 0.4, shadowRadius: 12 }]} className="items-center mb-4" entering={FadeIn.delay(300).duration(1500)}>
-   <View className="rounded-full p-1" style={{ backgroundColor: Colorizer("#0A0A0A", 0.8), justifyContent: "center", alignItems: "center" }}>
+   <View className="rounded-full p-1" style={{ backgroundColor: Colorizer("#000000", 0.8), justifyContent: "center", alignItems: "center" }}>
     <Image alt="logo" contentFit="contain" cachePolicy="memory-disk" source={require("@/assets/picWall/picWall.png")} style={{ width: 220, height: 220, borderWidth: 3, borderRadius: 9999, borderColor: Colorizer("#E9E9EA", 0.1) }} />
    </View>
   </Animated.View>
@@ -87,7 +87,7 @@ const IndexPage: React.FC = () => {
   buttonRotate.value = withSpring(0, { damping: 15, stiffness: 90 });
  };
  return (
-  <View style={{ backgroundColor: Colorizer("#0A0A0A", 1.0) }} className="h-full w-full">
+  <View style={{ backgroundColor: Colorizer("#000000", 1.0) }} className="h-full w-full">
    <View className="flex-1 justify-center items-center relative">
     <View className="flex-row h-full overflow-hidden relative">
      {imageSets.map((images, slotIndex) => (
@@ -106,7 +106,7 @@ const IndexPage: React.FC = () => {
           color: Colorizer("#E9E9EA", 1.0),
           textShadowOffset: { width: 24, height: 2 },
           fontFamily: "Dm_Serif_Display_Regular",
-          textShadowColor: Colorizer("#0A0A0A", 1.0)
+          textShadowColor: Colorizer("#000000", 1.0)
          }}
         >
          picWall
@@ -115,7 +115,7 @@ const IndexPage: React.FC = () => {
          picWall
         </Text>
         <Animated.View style={{ alignSelf: "center" }} entering={FadeInDown.delay(600).duration(1500).springify()}>
-         <View style={{ backgroundColor: Colorizer("#0A0A0A", 0.9), borderRadius: 12, paddingHorizontal: 12, paddingVertical: 4, marginTop: 8 }}>
+         <View style={{ backgroundColor: Colorizer("#000000", 0.9), borderRadius: 12, paddingHorizontal: 12, paddingVertical: 4, marginTop: 8 }}>
           <Text className="text-center" style={{ fontFamily: "Caveat_Bold", color: Colorizer("#E9E9EA", 1.0), fontSize: 16 }}>
            Crafted with <Text style={{ color: Colorizer("#BE2528", 1.0) }}>♥</Text> in India
           </Text>
@@ -126,8 +126,8 @@ const IndexPage: React.FC = () => {
         <TouchableOpacity onPressIn={onPressIn} onPressOut={onPressOut} className="mt-44 rounded-2xl overflow-hidden">
          <Animated.View style={[buttonAnimatedStyle, { shadowColor: Colorizer("#000000", 1.0), shadowOffset: { width: 0, height: 4 } }]}>
           <LinearGradient colors={[Colorizer("#FFFFFF", 1.0), Colorizer("#F0F0F0", 1.0)]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} className="flex-row items-center justify-center px-10 py-4">
-           <FontAwesome5 name="camera-retro" size={32} color={Colorizer("#0A0A0A", 1.0)} style={{ marginRight: 12 }} />
-           <Text className="text-2xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer("#0A0A0A", 1.0) }}>
+           <FontAwesome5 name="camera-retro" size={32} color={Colorizer("#000000", 1.0)} style={{ marginRight: 12 }} />
+           <Text className="text-2xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer("#000000", 1.0) }}>
             Let's Explore Wallpapers
            </Text>
           </LinearGradient>

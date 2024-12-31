@@ -38,7 +38,7 @@ const AnimatedTitle: React.FC = () => {
  const animatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
  return (
   <Animated.View style={animatedStyle} className="items-center mt-10">
-   <View style={{ backgroundColor: Colorizer("#0A0A0A", 0.6) }} className="rounded-full p-1">
+   <View style={{ backgroundColor: Colorizer("#000000", 0.6) }} className="rounded-full p-1">
     <Image source={require("@/assets/picWall/picWall.png")} alt="logo" className="w-24 h-24 rounded-full border-2" style={{ borderColor: Colorizer("#E9E9EA", 1.0) }} resizeMode="contain" />
    </View>
   </Animated.View>
@@ -54,7 +54,7 @@ const HeaderAnimated: React.FC = () => {
      <ScrollingSlot key={slotIndex} images={images} reverse={slotIndex % 2 === 0} delay={slotIndex * 200} />
     ))}
     <View className="absolute inset-0 items-center justify-center rounded-lg overflow-hidden" style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", borderRadius: 8 }}>
-     <View style={{ backgroundColor: Colorizer("#0A0A0A", 0.5), borderRadius: 8 }} className="absolute inset-0" />
+     <View style={{ backgroundColor: Colorizer("#000000", 0.5), borderRadius: 8 }} className="absolute inset-0" />
      <View style={{ position: "absolute", justifyContent: "center", alignItems: "center", margin: 8, padding: 4 }} className="absolute justify-center items-center">
       <View className="flex-row mb-1">
        <AnimatedTitle />
@@ -63,7 +63,7 @@ const HeaderAnimated: React.FC = () => {
        picWall
       </Text>
       <Animated.View style={{ alignSelf: "center" }} entering={FadeInDown.delay(600).duration(1500).springify()}>
-       <View style={{ backgroundColor: Colorizer("#0A0A0A", 0.9), borderRadius: 12, paddingHorizontal: 12, paddingVertical: 2, marginTop: 2 }}>
+       <View style={{ backgroundColor: Colorizer("#000000", 0.9), borderRadius: 12, paddingHorizontal: 12, paddingVertical: 2, marginTop: 2 }}>
         <Text className="text-center" style={{ fontFamily: "Caveat_Bold", color: Colorizer("#E9E9EA", 1.0), fontSize: 16 }}>
          Crafted with <Text style={{ color: Colorizer("#BE2528", 1.0) }}>♥</Text> in India
         </Text>
