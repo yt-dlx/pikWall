@@ -5,7 +5,7 @@ import { FontAwesome } from "@expo/vector-icons";
 // ============================================================================================
 // ============================================================================================
 const Footer: React.FC = () => (
-  <View style={{ backgroundColor: Colorizer("#171717", 1.0) }} className="relative w-full py-4">
+  <View style={{ backgroundColor: Colorizer("#0A0A0A", 1.0) }} className="relative w-full py-4">
     <View className="flex flex-col sm:flex-row items-center justify-between px-4">
       <View className="flex-row items-center gap-2">
         <FontAwesome name="book" size={16} style={{ color: Colorizer("#BE2528", 1.0) }} />

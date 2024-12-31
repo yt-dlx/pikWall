@@ -24,19 +24,19 @@ const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () =>
   const modalStyle = { opacity: modalAnim, transform: [{ scale }] };
   return visible ? (
     <View className="absolute inset-0 justify-center items-center">
-      <Animated.View style={[{ backgroundColor: Colorizer("#171717", 0.5), position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }, backdropStyle]} />
+      <Animated.View style={[{ backgroundColor: Colorizer("#0A0A0A", 0.5), position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }, backdropStyle]} />
       <Animated.View
         className="rounded-lg items-center shadow-lg w-4/5 p-5"
         style={[
-          { backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#171717", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 },
+          { backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#0A0A0A", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 },
           modalStyle
         ]}
       >
         <Ionicons name="checkmark-done-circle" size={50} color={Colorizer("#28a745", 1.0)} />
-        <Text className="mt-2.5 text-2xl text-center" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#171717", 1.0) }}>
+        <Text className="mt-2.5 text-2xl text-center" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#0A0A0A", 1.0) }}>
           Success
         </Text>
-        <Text className="my-2.5 text-center" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#171717", 1.0) }}>
+        <Text className="my-2.5 text-center" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#0A0A0A", 1.0) }}>
           {message}
         </Text>
         <TouchableOpacity className="mt-2.5 px-5 py-2 rounded" style={{ backgroundColor: Colorizer("#007BFF", 1.0) }} onPress={onClose}>
@@ -64,19 +64,19 @@ const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => v
   const modalStyle = { opacity: modalAnim, transform: [{ scale }] };
   return visible ? (
     <View className="absolute inset-0 justify-center items-center">
-      <Animated.View style={[{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: Colorizer("#171717", 0.5) }, backdropStyle]} />
+      <Animated.View style={[{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: Colorizer("#0A0A0A", 0.5) }, backdropStyle]} />
       <Animated.View
         className="rounded-lg p-5 items-center shadow-lg w-4/5"
         style={[
-          { backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#171717", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 },
+          { backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#0A0A0A", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 },
           modalStyle
         ]}
       >
         <MaterialIcons name="error" size={50} color={Colorizer("#dc3545", 1.0)} />
-        <Text className="mt-2.5 text-2xl text-center" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#171717", 1.0) }}>
+        <Text className="mt-2.5 text-2xl text-center" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#0A0A0A", 1.0) }}>
           Error
         </Text>
-        <Text className="my-2.5 text-center" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#171717", 1.0) }}>
+        <Text className="my-2.5 text-center" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#0A0A0A", 1.0) }}>
           {message}
         </Text>
         <TouchableOpacity className="mt-2.5 px-5 py-2 rounded" style={{ backgroundColor: Colorizer("#007BFF", 1.0) }} onPress={onClose}>
@@ -113,7 +113,7 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
       <View className="absolute inset-0" style={{ backgroundColor: Colorizer(primaryColor, 0.3) }} />
       <View
         className="rounded-lg p-5 items-center shadow-lg"
-        style={{ backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#171717", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 }}
+        style={{ backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#0A0A0A", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 }}
       >
         <ActivityIndicator size="large" color={Colorizer(primaryColor, 1.0)} />
         <Text className="mt-3 text-lg" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Linotte_Bold" }}>
@@ -161,13 +161,13 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
         {!imageLoading && (
           <View className="items-center">
             <Animated.View className="rounded-full justify-center items-center">
-              <Image style={{ width: 64, height: 64, borderRadius: 32, backgroundColor: Colorizer("#171717", 0.8) }} source={require("@/assets/picWall/picWall.png")} contentFit="contain" />
+              <Image style={{ width: 64, height: 64, borderRadius: 32, backgroundColor: Colorizer("#0A0A0A", 0.8) }} source={require("@/assets/picWall/picWall.png")} contentFit="contain" />
             </Animated.View>
           </View>
         )}
       </View>
       {imageLoading && (
-        <View className="absolute inset-0 z-40 justify-center items-center" style={{ backgroundColor: Colorizer("#171717", 1.0) }}>
+        <View className="absolute inset-0 z-40 justify-center items-center" style={{ backgroundColor: Colorizer("#0A0A0A", 1.0) }}>
           <ActivityIndicator size="large" color={Colorizer(selectedImage.primary, 1.0)} />
           <Text className="mt-2.5" style={{ fontFamily: "Linotte_Bold", color: Colorizer(selectedImage.primary, 1.0) }}>
             Loading HD Image Preview...
@@ -298,7 +298,7 @@ const DownloadScreen = () => {
     }
   };
   return (
-    <View className="flex-1" style={{ backgroundColor: Colorizer("#171717", 1.0) }}>
+    <View className="flex-1" style={{ backgroundColor: Colorizer("#0A0A0A", 1.0) }}>
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
       <ScrollView className="flex-1">
         <PreviewImage selectedImage={selectedImage} screenWidth={screenWidth} onViewFullScreen={() => setIsFullScreen(true)} />
@@ -343,7 +343,7 @@ const DownloadScreen = () => {
         </View>
       </ScrollView>
       <Modal visible={isFullScreen} transparent={false} onRequestClose={() => setIsFullScreen(false)} presentationStyle="fullScreen" statusBarTranslucent>
-        <View className="flex-1" style={{ backgroundColor: Colorizer("#171717", 1.0) }}>
+        <View className="flex-1" style={{ backgroundColor: Colorizer("#0A0A0A", 1.0) }}>
           <TouchableOpacity onPress={() => setIsFullScreen(false)} className="absolute top-14 left-8 z-10">
             <FontAwesome5 name="times" size={50} color={Colorizer("#E9E9EA", 1.0)} />
           </TouchableOpacity>

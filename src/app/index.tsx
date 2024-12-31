@@ -1,120 +1,181 @@
-// app/index.tsx
 import { Link } from "expo-router";
 import { Image } from "expo-image";
 import React, { useEffect } from "react";
 import imageSets from "@/database/static";
 import Footer from "@/components/Footer";
 import Colorizer from "@/components/Colorizer";
-import { MaterialIcons } from "@expo/vector-icons";
+import { FontAwesome5 } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { ScrollingSlotProps } from "@/types/components";
 import { Text, View, TouchableOpacity } from "react-native";
-import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence, withDelay, withSpring, Easing } from "react-native-reanimated";
-// ============================================================================================
-// ============================================================================================
+import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence, withDelay, withSpring, Easing, FadeIn, FadeInDown, SlideInDown } from "react-native-reanimated";
+
 const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay }) => {
-  const imageHeight = 200;
+  const imageHeight = 220;
   const totalHeight = images.length * imageHeight;
   const scrollValue = useSharedValue(0);
   const opacity = useSharedValue(0);
-  const scale = useSharedValue(0.95);
+  const scale = useSharedValue(0.9);
+
   useEffect(() => {
-    opacity.value = withDelay(delay, withTiming(1, { duration: 1500 }));
-    scale.value = withDelay(delay, withSpring(1));
-    scrollValue.value = withDelay(delay, withRepeat(withTiming(totalHeight, { duration: 15000, easing: Easing.bezier(0.25, 0.1, 0.25, 1) }), -1, reverse));
-  }, [scrollValue, totalHeight, reverse, delay, opacity, scale]);
-  const animatedStyle = useAnimatedStyle(() => ({
-    transform: [{ translateY: -scrollValue.value % totalHeight }, { scale: scale.value }],
-    opacity: opacity.value
-  }));
+    opacity.value = withDelay(delay, withTiming(1, { duration: 1500, easing: Easing.bezier(0.4, 0, 0.2, 1) }));
+    scale.value = withDelay(delay, withSpring(1, { damping: 15, stiffness: 90 }));
+    scrollValue.value = withDelay(delay, withRepeat(withTiming(totalHeight, { duration: 30000, easing: Easing.linear }), -1, reverse));
+  }, []);
+
+  const animatedStyle = useAnimatedStyle(() => ({ transform: [{ translateY: -scrollValue.value % totalHeight }, { scale: scale.value }], opacity: opacity.value }));
+
   return (
-    <View style={{ flex: 1, overflow: "hidden", paddingHorizontal: 0.5 }}>
-      <Animated.View style={[animatedStyle, { flexDirection: "column" }]}>
+    <View style={{ flex: 1, overflow: "hidden", padding: 2 }}>
+      <Animated.View style={[animatedStyle]}>
         {images.concat(images).map((uri, idx) => (
-          <Image key={idx} source={uri} contentFit="cover" cachePolicy="memory-disk" style={{ height: imageHeight, borderRadius: 10, width: "100%", margin: 2 }} />
+          <Image
+            key={idx}
+            source={uri}
+            contentFit="cover"
+            cachePolicy="memory-disk"
+            style={{
+              height: imageHeight,
+              borderRadius: 20,
+              width: "100%",
+              margin: 3,
+              shadowColor: Colorizer("#000000", 1.0),
+              shadowOffset: { width: 0, height: 4 },
+              shadowOpacity: 0.3,
+              shadowRadius: 8
+            }}
+          />
         ))}
       </Animated.View>
     </View>
   );
 };
-// ============================================================================================
-// ============================================================================================
+
 const AnimatedTitle: React.FC = () => {
-  const scale = useSharedValue(0.95);
+  const scale = useSharedValue(0.5);
+
   useEffect(() => {
     scale.value = withRepeat(
-      withSequence(withTiming(1.05, { duration: 2000, easing: Easing.bezier(0.4, 0, 0.2, 1) }), withTiming(0.95, { duration: 2000, easing: Easing.bezier(0.4, 0, 0.2, 1) })),
+      withSequence(withTiming(1.2, { duration: 4000, easing: Easing.bezier(0.4, 0, 0.2, 1) }), withTiming(1.0, { duration: 4000, easing: Easing.bezier(0.4, 0, 0.2, 1) })),
       -1,
       true
     );
-  }, [scale]);
+  }, []);
+
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
+
   return (
-    <Animated.View style={animatedStyle} className="items-center">
-      <View className="rounded-full p-1" style={{ backgroundColor: Colorizer("#171717", 0.7), justifyContent: "center", alignItems: "center" }}>
+    <Animated.View
+      style={[animatedStyle, { shadowColor: Colorizer("#000000", 1.0), shadowOffset: { width: 0, height: 8 }, shadowOpacity: 0.4, shadowRadius: 12 }]}
+      className="items-center"
+      entering={FadeIn.delay(300).duration(1500)}
+    >
+      <View className="rounded-full p-1" style={{ backgroundColor: Colorizer("#0A0A0A", 0.8), justifyContent: "center", alignItems: "center" }}>
         <Image
           alt="logo"
           cachePolicy="memory-disk"
           contentFit="contain"
           source={require("@/assets/picWall/picWall.png")}
-          style={{ width: 200, height: 200, borderWidth: 2, borderRadius: 9999, borderColor: Colorizer("#BE2528", 0.9) }}
+          style={{ width: 220, height: 220, borderWidth: 3, borderRadius: 9999, borderColor: Colorizer("#BE2528", 0.9) }}
         />
       </View>
     </Animated.View>
   );
 };
-// ============================================================================================
-// ============================================================================================
+
 const IndexPage: React.FC = () => {
   const buttonScale = useSharedValue(1);
-  const buttonAnimatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: buttonScale.value }] }));
+  const buttonRotate = useSharedValue(0);
+  const buttonGlow = useSharedValue(0);
+
+  useEffect(() => {
+    buttonGlow.value = withRepeat(
+      withSequence(withTiming(1, { duration: 2000, easing: Easing.bezier(0.4, 0, 0.2, 1) }), withTiming(0, { duration: 2000, easing: Easing.bezier(0.4, 0, 0.2, 1) })),
+      -1,
+      true
+    );
+  }, []);
+
+  const buttonAnimatedStyle = useAnimatedStyle(() => ({
+    transform: [{ scale: buttonScale.value }, { rotate: `${buttonRotate.value}deg` }],
+    shadowOpacity: 0.3 + buttonGlow.value * 0.3,
+    shadowRadius: 8 + buttonGlow.value * 4
+  }));
+
   const onPressIn = () => {
-    buttonScale.value = withSpring(0.95);
+    buttonScale.value = withSpring(0.94, { damping: 15, stiffness: 90 });
+    buttonRotate.value = withSpring(-2, { damping: 15, stiffness: 90 });
   };
+
   const onPressOut = () => {
-    buttonScale.value = withSpring(1);
+    buttonScale.value = withSpring(1, { damping: 15, stiffness: 90 });
+    buttonRotate.value = withSpring(0, { damping: 15, stiffness: 90 });
   };
+
   return (
-    <View style={{ backgroundColor: Colorizer("#171717", 1.0) }} className="h-full w-full">
+    <View style={{ backgroundColor: Colorizer("#0A0A0A", 1.0) }} className="h-full w-full">
       <View className="flex-1 justify-center items-center relative">
         <View className="flex-row h-full overflow-hidden relative">
           {imageSets.map((images, slotIndex) => (
-            <ScrollingSlot key={slotIndex} images={images} reverse={slotIndex % 2 === 0} delay={slotIndex * 300} />
+            <ScrollingSlot key={slotIndex} images={images} reverse={slotIndex % 2 === 0} delay={slotIndex * 400} />
           ))}
-          <LinearGradient colors={["rgba(7,8,8,1)", "rgba(7,8,8,0.5)", "rgba(7,8,8,0.2)", "rgba(7,8,8,0.5)", "rgba(7,8,8,1)"]} locations={[0, 0.2, 0.5, 0.8, 1]} className="absolute inset-0" />
+          <LinearGradient
+            colors={[Colorizer("#070808", 1.0), Colorizer("#070808", 0.4), Colorizer("#070808", 0.1), Colorizer("#070808", 0.4), Colorizer("#070808", 1.0)]}
+            locations={[0, 0.2, 0.5, 0.8, 1]}
+            className="absolute inset-0"
+          />
           <View className="absolute inset-0 justify-center items-center">
             <AnimatedTitle />
-            <View>
-              <Text
-                className="text-center"
-                style={{
-                  fontSize: 60,
-                  textShadowRadius: 50,
-                  fontFamily: "Linotte_Heavy",
-                  color: Colorizer("#E9E9EA", 1.0),
-                  textShadowOffset: { width: 20, height: 2 },
-                  textShadowColor: Colorizer("#171717", 1.0)
-                }}
-              >
-                picWall
-              </Text>
-              <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Linotte_Heavy", color: Colorizer("#E9E9EA", 1.0), fontSize: 60 }}>
-                picWall
-              </Text>
-            </View>
-            <View className="flex-row items-center px-2 yp-2 mt-44 rounded-full" style={{ backgroundColor: Colorizer("#BE2528", 0.9) }} />
-            <Link href="./Home" asChild>
-              <TouchableOpacity onPressIn={onPressIn} onPressOut={onPressOut} className="mt-2 rounded-3xl overflow-hidden shadow-2xl">
-                <Animated.View style={buttonAnimatedStyle}>
-                  <LinearGradient colors={["#ffffff", "#f0f0f0"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} className="flex-row items-center justify-center px-10 py-3">
-                    <MaterialIcons name="photo-camera" size={28} color={Colorizer("#171717", 1.0)} className="mr-3" />
-                    <Text className="text-xl" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#171717", 1.0) }}>
-                      Start Exploring
+            <Animated.View entering={FadeInDown.delay(600).duration(1500).springify()}>
+              <View>
+                <Text
+                  className="text-center"
+                  style={{
+                    fontSize: 68,
+                    textShadowRadius: 60,
+                    fontFamily: "Linotte_Heavy",
+                    color: Colorizer("#E9E9EA", 1.0),
+                    textShadowOffset: { width: 24, height: 2 },
+                    textShadowColor: Colorizer("#0A0A0A", 1.0)
+                  }}
+                >
+                  picWall
+                </Text>
+                <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Linotte_Heavy", color: Colorizer("#E9E9EA", 1.0), fontSize: 68 }}>
+                  picWall
+                </Text>
+                <Animated.View style={{ alignSelf: "center" }} entering={FadeInDown.delay(600).duration(1500).springify()}>
+                  <View style={{ backgroundColor: Colorizer("#0A0A0A", 0.9), borderRadius: 12, paddingHorizontal: 12, paddingVertical: 4, marginTop: 8 }}>
+                    <Text className="text-center" style={{ fontFamily: "Linotte_Regular", color: Colorizer("#E9E9EA", 1.0), fontSize: 16 }}>
+                      Crafted with <Text style={{ color: Colorizer("#BE2528", 1.0) }}>♥</Text>
                     </Text>
-                  </LinearGradient>
+                  </View>
                 </Animated.View>
-              </TouchableOpacity>
-            </Link>
+              </View>
+              <Link href="./Home" asChild>
+                <TouchableOpacity onPressIn={onPressIn} onPressOut={onPressOut} className="mt-52 rounded-2xl overflow-hidden">
+                  <Animated.View style={[buttonAnimatedStyle, { shadowColor: Colorizer("#000000", 1.0), shadowOffset: { width: 0, height: 4 } }]}>
+                    <LinearGradient
+                      colors={[Colorizer("#FFFFFF", 1.0), Colorizer("#F0F0F0", 1.0)]}
+                      start={{ x: 0, y: 0 }}
+                      end={{ x: 1, y: 1 }}
+                      className="flex-row items-center justify-center px-10 py-4"
+                    >
+                      <FontAwesome5 name="camera-retro" size={32} color={Colorizer("#0A0A0A", 1.0)} style={{ marginRight: 12 }} />
+                      <Text className="text-2xl" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#0A0A0A", 1.0) }}>
+                        Let's Explore Wallpapers
+                      </Text>
+                    </LinearGradient>
+                  </Animated.View>
+                </TouchableOpacity>
+              </Link>
+              <Animated.View entering={FadeIn.delay(1200).duration(1500)} style={{ marginTop: 4, paddingHorizontal: 20, alignItems: "center" }}>
+                <Text style={{ fontFamily: "Linotte_Heavy", color: Colorizer("#E9E9EA", 1.0), fontSize: 20, textAlign: "center", marginBottom: 4 }}>Personalised AI Wallpaper Gallery</Text>
+                <Text style={{ fontFamily: "Linotte_Thin", color: Colorizer("#E9E9EA", 0.8), fontSize: 10, textAlign: "center", maxWidth: 200 }}>
+                  Create stunning collections, share your moments, and discover amazing photographs from around the world. Join our community of passionate photographers today!
+                </Text>
+              </Animated.View>
+            </Animated.View>
           </View>
         </View>
       </View>
@@ -122,4 +183,5 @@ const IndexPage: React.FC = () => {
     </View>
   );
 };
+
 export default IndexPage;
