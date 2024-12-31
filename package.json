@@ -66,6 +66,7 @@
     "react-native-web": "~0.19.13",
     "react-native-webview": "13.12.5",
     "rimraf": "^6.0.1",
+    "rn-wallpapers": "^0.1.1",
     "tailwindcss": "^3.4.17"
   },
   "devDependencies": {

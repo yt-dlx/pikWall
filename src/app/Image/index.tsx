@@ -7,6 +7,7 @@ import { useLocalSearchParams } from "expo-router";
 import * as MediaLibrary from "expo-media-library";
 import { LinearGradient } from "expo-linear-gradient";
 import React, { useState, useEffect, useRef } from "react";
+import { setWallpaper, TYPE_SCREEN } from "rn-wallpapers";
 import { FontAwesome5, MaterialIcons, Ionicons } from "@expo/vector-icons";
 import { View, Text, Dimensions, StatusBar, ActivityIndicator, TouchableOpacity, Alert, Modal, Animated, Easing, ScrollView } from "react-native";
 // ============================================================================================
@@ -270,6 +271,67 @@ const OtherImages: React.FC<OtherImagesProps> = ({ otherImages, setCurrentIndex,
 );
 // ============================================================================================
 // ============================================================================================
+const FullScreenView: React.FC<{ isFullScreen: boolean; setIsFullScreen: (isFullScreen: boolean) => void; selectedImage: ImageMetadata }> = ({ isFullScreen, setIsFullScreen, selectedImage }) => {
+  return (
+    <Modal visible={isFullScreen} transparent={false} onRequestClose={() => setIsFullScreen(false)} presentationStyle="fullScreen" statusBarTranslucent>
+      <View style={{ flex: 1, backgroundColor: Colorizer("#000000", 1.0) }}>
+        <ScrollView horizontal contentContainerStyle={{ flexGrow: 1, justifyContent: "center", alignItems: "center" }} showsHorizontalScrollIndicator={false}>
+          <Image
+            contentFit="contain"
+            source={{ uri: selectedImage.previewLink.replace("lowRes", "highRes") }}
+            style={{ height: Dimensions.get("window").height, width: undefined, aspectRatio: selectedImage.width / selectedImage.height }}
+          />
+        </ScrollView>
+        <View style={{ position: "absolute", bottom: 10, left: 10, right: 10, flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+          <LinearGradient
+            colors={[Colorizer(selectedImage.tertiary, 0.8), Colorizer(selectedImage.tertiary, 0.6), Colorizer(selectedImage.tertiary, 0.4)]}
+            style={{ flex: 1, height: 40, borderRadius: 10, marginHorizontal: 1 }}
+            start={[0, 0]}
+            end={[1, 0]}
+          >
+            <TouchableOpacity
+              onPress={async () => await setWallpaper({ uri: selectedImage.previewLink.replace("lowRes", "highRes") }, TYPE_SCREEN.LOCK)}
+              style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}
+            >
+              <Ionicons name="image" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
+              <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Set LockScreen</Text>
+            </TouchableOpacity>
+          </LinearGradient>
+          <LinearGradient
+            colors={[Colorizer(selectedImage.tertiary, 0.8), Colorizer(selectedImage.tertiary, 0.6), Colorizer(selectedImage.tertiary, 0.4)]}
+            style={{ flex: 1, height: 40, borderRadius: 10, marginHorizontal: 1 }}
+            start={[0, 0]}
+            end={[1, 0]}
+          >
+            <TouchableOpacity
+              onPress={async () => await setWallpaper({ uri: selectedImage.previewLink.replace("lowRes", "highRes") }, TYPE_SCREEN.HOME)}
+              style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}
+            >
+              <Ionicons name="image" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
+              <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Set HomeScreen</Text>
+            </TouchableOpacity>
+          </LinearGradient>
+          <LinearGradient
+            colors={[Colorizer(selectedImage.tertiary, 0.8), Colorizer(selectedImage.tertiary, 0.6), Colorizer(selectedImage.tertiary, 0.4)]}
+            style={{ flex: 1, height: 40, borderRadius: 10, marginHorizontal: 1 }}
+            start={[0, 0]}
+            end={[1, 0]}
+          >
+            <TouchableOpacity
+              onPress={async () => await setWallpaper({ uri: selectedImage.previewLink.replace("lowRes", "highRes") }, TYPE_SCREEN.BOTH)}
+              style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}
+            >
+              <Ionicons name="image" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
+              <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Set BothScreens</Text>
+            </TouchableOpacity>
+          </LinearGradient>
+        </View>
+      </View>
+    </Modal>
+  );
+};
+// ============================================================================================
+// ============================================================================================
 const ImagePage = () => {
   const params = useLocalSearchParams();
   const [eta, setEta] = useState<number>(0);
@@ -363,51 +425,7 @@ const ImagePage = () => {
           <OtherImages otherImages={otherImages} setCurrentIndex={setCurrentIndex} primaryColor={selectedImage.primary} tertiaryColor={selectedImage.tertiary} />
         </View>
       </ScrollView>
-      <Modal visible={isFullScreen} transparent={false} onRequestClose={() => setIsFullScreen(false)} presentationStyle="fullScreen" statusBarTranslucent>
-        <View style={{ flex: 1, backgroundColor: Colorizer("#000000", 1.0) }}>
-          <ScrollView horizontal contentContainerStyle={{ flexGrow: 1, justifyContent: "center", alignItems: "center" }} showsHorizontalScrollIndicator={false}>
-            <Image
-              source={{ uri: selectedImage.previewLink.replace("lowRes", "highRes") }}
-              style={{ height: Dimensions.get("window").height, width: undefined, aspectRatio: selectedImage.width / selectedImage.height, resizeMode: "contain" }}
-            />
-          </ScrollView>
-          <View style={{ position: "absolute", bottom: 10, left: 10, right: 10, flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
-            <LinearGradient
-              colors={[Colorizer(selectedImage.primary, 0.9), Colorizer(selectedImage.secondary, 0.8), Colorizer(selectedImage.tertiary, 0.9)]}
-              start={[0, 0]}
-              end={[1, 0]}
-              style={{ flex: 1, height: 40, borderRadius: 10, marginHorizontal: 1 }}
-            >
-              <TouchableOpacity onPress={() => setIsFullScreen(false)} style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}>
-                <FontAwesome5 name="times" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
-                <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Close Fullscreen</Text>
-              </TouchableOpacity>
-            </LinearGradient>
-            <LinearGradient
-              colors={[Colorizer(selectedImage.primary, 0.9), Colorizer(selectedImage.secondary, 0.8), Colorizer(selectedImage.tertiary, 0.9)]}
-              start={[0, 0]}
-              end={[1, 0]}
-              style={{ flex: 1, height: 40, borderRadius: 10, marginHorizontal: 1 }}
-            >
-              <TouchableOpacity onPress={downloadAndSaveImage} style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}>
-                <FontAwesome5 name="download" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
-                <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Download</Text>
-              </TouchableOpacity>
-            </LinearGradient>
-            <LinearGradient
-              colors={[Colorizer(selectedImage.primary, 0.9), Colorizer(selectedImage.secondary, 0.8), Colorizer(selectedImage.tertiary, 0.9)]}
-              start={[0, 0]}
-              end={[1, 0]}
-              style={{ flex: 1, height: 40, borderRadius: 10, marginHorizontal: 1 }}
-            >
-              <TouchableOpacity onPress={() => console.log("Set as Wallpaper")} style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}>
-                <Ionicons name="image" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
-                <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Set Wallpaper</Text>
-              </TouchableOpacity>
-            </LinearGradient>
-          </View>
-        </View>
-      </Modal>
+      <FullScreenView isFullScreen={isFullScreen} setIsFullScreen={setIsFullScreen} selectedImage={selectedImage} />
       <DownloadingModal visible={isDownloading} percentage={percentage} downloadRate={downloadRate} eta={eta} primaryColor={selectedImage.primary} />
       <SuccessModal visible={alertVisible && alertIcon === "checkmark-done-circle"} message={alertMessage} onClose={hideAlert} />
       <ErrorModal visible={alertVisible && alertIcon === "error"} message={alertMessage} onClose={hideAlert} />
