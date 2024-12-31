@@ -191,7 +191,7 @@ const CategoryButton: React.FC<CategoryButtonExtendedProps> = React.memo(({ cate
    </View>
    <LinearGradient
     colors={selected ? [Colorizer("#5f1314", 1.0), Colorizer("#981e20", 1.0), Colorizer("#BE2528", 1.0)] : [Colorizer("#E9E9EA", 1.0), Colorizer("#D2D2D3", 1.0), Colorizer("#BABABB", 1.0)]}
-    style={{ paddingHorizontal: 10, paddingVertical: 10, borderRadius: 4 }}
+    style={{ paddingHorizontal: 10, paddingVertical: 4, borderRadius: 4 }}
     start={{ x: 0, y: 0 }}
     end={{ x: 1, y: 1 }}
    >
