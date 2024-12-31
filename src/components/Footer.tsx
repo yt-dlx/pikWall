@@ -9,11 +9,11 @@ const Footer: React.FC = () => (
     <View className="flex flex-col sm:flex-row items-center justify-between px-4">
       <View className="flex-row items-center gap-2">
         <FontAwesome name="book" size={16} style={{ color: Colorizer("#BE2528", 1.0) }} />
-        <Text style={{ fontFamily: "Kurale", color: Colorizer("#BE2528", 1.0) }} className="text-sm">
+        <Text style={{ fontFamily: "Linotte_Regular", color: Colorizer("#BE2528", 1.0) }} className="text-sm">
           picWall
         </Text>
       </View>
-      <Text style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0) }} className="text-center text-xs">
+      <Text style={{ fontFamily: "Linotte_Regular", color: Colorizer("#E9E9EA", 1.0) }} className="text-center text-xs">
         Crafted with imagination and stories. All rights reserved.
       </Text>
     </View>

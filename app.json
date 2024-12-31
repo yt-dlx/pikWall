@@ -48,7 +48,13 @@
       [
         "expo-font",
         {
-          "fonts": ["./src/assets/fonts/Kurale.ttf", "./src/assets/fonts/Brittany.otf"]
+          "fonts": [
+            "./src/assets/fonts/Linotte_Bold.otf",
+            "./src/assets/fonts/Linotte_Light.otf",
+            "./src/assets/fonts/Linotte_Heavy.otf",
+            "./src/assets/fonts/Linotte_Regular.otf",
+            "./src/assets/fonts/Linotte_Semi_Bold.otf"
+          ]
         }
       ],
       [

@@ -62,7 +62,7 @@ const HeaderAnimated: React.FC = () => {
             <View className="flex-row mb-1">
               <AnimatedTitle />
             </View>
-            <Text style={{ fontFamily: "Kurale", fontSize: 30, color: Colorizer("#E9E9EA", 1.0), letterSpacing: -1, lineHeight: 34 }} className="tracking-tight">
+            <Text style={{ fontFamily: "Linotte_Regular", fontSize: 30, color: Colorizer("#E9E9EA", 1.0), letterSpacing: -1, lineHeight: 34 }} className="tracking-tight">
               picWall
             </Text>
             <View
@@ -70,7 +70,7 @@ const HeaderAnimated: React.FC = () => {
               style={{ backgroundColor: Colorizer("#070808", 0.6), flexDirection: "row", alignItems: "center", marginTop: 8, paddingHorizontal: 8, paddingVertical: 4, borderRadius: 9999 }}
             >
               <View className="w-1.5 h-1.5 rounded-full bg-white mr-1" style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: Colorizer("#E9E9EA", 1.0), marginRight: 4, opacity: 0.5 }} />
-              <Text style={{ fontFamily: "Kurale", fontSize: 12, fontWeight: "600", color: Colorizer("#E9E9EA", 1.0) }} className="text-sm">
+              <Text style={{ fontFamily: "Linotte_Regular", fontSize: 12, fontWeight: "600", color: Colorizer("#E9E9EA", 1.0) }} className="text-sm">
                 Crafted with imagination and stories
               </Text>
             </View>

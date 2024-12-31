@@ -12,8 +12,11 @@ import { SafeAreaView, StatusBar, View } from "react-native";
 SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const [loaded, error] = useFonts({
-    Kurale: require("@/assets/fonts/Kurale.ttf"),
-    Brittany: require("@/assets/fonts/Brittany.otf")
+    Linotte_Bold: require("@/assets/fonts/Linotte_Bold.otf"),
+    Linotte_Light: require("@/assets/fonts/Linotte_Light.otf"),
+    Linotte_Heavy: require("@/assets/fonts/Linotte_Heavy.otf"),
+    Linotte_Regular: require("@/assets/fonts/Linotte_Regular.otf"),
+    Linotte_Semi_Bold: require("@/assets/fonts/Linotte_Semi_Bold.otf")
   });
   React.useEffect(() => {
     if (loaded || error) SplashScreen.hideAsync();

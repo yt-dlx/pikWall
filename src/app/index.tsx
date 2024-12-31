@@ -89,7 +89,7 @@ const IndexPage: React.FC = () => {
                 className="text-center"
                 style={{
                   fontSize: 80,
-                  fontFamily: "Kurale",
+                  fontFamily: "Linotte_Regular",
                   textShadowRadius: 50,
                   color: Colorizer("#BE2528", 1.0),
                   textShadowOffset: { width: 8, height: 8 },
@@ -98,7 +98,7 @@ const IndexPage: React.FC = () => {
               >
                 picWall
               </Text>
-              <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 1.0), fontSize: 80 }}>
+              <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Linotte_Regular", color: Colorizer("#E9E9EA", 1.0), fontSize: 80 }}>
                 picWall
               </Text>
             </View>
@@ -108,7 +108,7 @@ const IndexPage: React.FC = () => {
                 <Animated.View style={buttonAnimatedStyle}>
                   <LinearGradient colors={["#ffffff", "#f0f0f0"]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} className="flex-row items-center justify-center px-10 py-3">
                     <MaterialIcons name="photo-camera" size={28} color={Colorizer("#070808", 1.0)} className="mr-3" />
-                    <Text className="text-xl" style={{ fontFamily: "Kurale", color: Colorizer("#070808", 1.0) }}>
+                    <Text className="text-xl" style={{ fontFamily: "Linotte_Regular", color: Colorizer("#070808", 1.0) }}>
                       Start Exploring
                     </Text>
                   </LinearGradient>

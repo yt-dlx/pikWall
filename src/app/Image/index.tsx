@@ -33,14 +33,14 @@ const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () =>
         ]}
       >
         <Ionicons name="checkmark-done-circle" size={50} color={Colorizer("#28a745", 1.0)} />
-        <Text className="mt-2.5 text-2xl text-center" style={{ fontFamily: "Kurale", color: Colorizer("#000000", 1.0) }}>
+        <Text className="mt-2.5 text-2xl text-center" style={{ fontFamily: "Linotte_Regular", color: Colorizer("#000000", 1.0) }}>
           Success
         </Text>
-        <Text className="my-2.5 text-center" style={{ fontFamily: "Kurale", color: Colorizer("#000000", 1.0) }}>
+        <Text className="my-2.5 text-center" style={{ fontFamily: "Linotte_Regular", color: Colorizer("#000000", 1.0) }}>
           {message}
         </Text>
         <TouchableOpacity className="mt-2.5 px-5 py-2 rounded" style={{ backgroundColor: Colorizer("#007BFF", 1.0) }} onPress={onClose}>
-          <Text className="text-white" style={{ fontFamily: "Kurale" }}>
+          <Text className="text-white" style={{ fontFamily: "Linotte_Regular" }}>
             OK
           </Text>
         </TouchableOpacity>
@@ -73,14 +73,14 @@ const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => v
         ]}
       >
         <MaterialIcons name="error" size={50} color={Colorizer("#dc3545", 1.0)} />
-        <Text className="mt-2.5 text-2xl text-center" style={{ fontFamily: "Kurale", color: Colorizer("#000000", 1.0) }}>
+        <Text className="mt-2.5 text-2xl text-center" style={{ fontFamily: "Linotte_Regular", color: Colorizer("#000000", 1.0) }}>
           Error
         </Text>
-        <Text className="my-2.5 text-center" style={{ fontFamily: "Kurale", color: Colorizer("#000000", 1.0) }}>
+        <Text className="my-2.5 text-center" style={{ fontFamily: "Linotte_Regular", color: Colorizer("#000000", 1.0) }}>
           {message}
         </Text>
         <TouchableOpacity className="mt-2.5 px-5 py-2 rounded" style={{ backgroundColor: Colorizer("#007BFF", 1.0) }} onPress={onClose}>
-          <Text className="text-white" style={{ fontFamily: "Kurale" }}>
+          <Text className="text-white" style={{ fontFamily: "Linotte_Regular" }}>
             OK
           </Text>
         </TouchableOpacity>
@@ -116,10 +116,10 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
         style={{ backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 }}
       >
         <ActivityIndicator size="large" color={Colorizer(primaryColor, 1.0)} />
-        <Text className="mt-3 text-lg" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Kurale" }}>
+        <Text className="mt-3 text-lg" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Linotte_Regular" }}>
           Downloading...
         </Text>
-        <Text className="mt-2 text-base" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Kurale" }}>
+        <Text className="mt-2 text-base" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Linotte_Regular" }}>
           {percentage.toFixed(2)}%
         </Text>
         <View className="w-4/5 h-2.5 rounded overflow-hidden mt-2.5 bg-gray-300">
@@ -127,12 +127,12 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
         </View>
         <View className="flex-row mt-4 w-full justify-between px-2">
           <View className="items-center">
-            <Text className="text-xs" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Kurale" }}>
+            <Text className="text-xs" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Linotte_Regular" }}>
               Rate: {formatBytes(downloadRate)}/s
             </Text>
           </View>
           <View className="items-center">
-            <Text className="text-xs" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Kurale" }}>
+            <Text className="text-xs" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Linotte_Regular" }}>
               ETA: {formatTime(eta)}
             </Text>
           </View>
@@ -169,7 +169,7 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
       {imageLoading && (
         <View className="absolute inset-0 z-40 justify-center items-center" style={{ backgroundColor: Colorizer("#070808", 1.0) }}>
           <ActivityIndicator size="large" color={Colorizer(selectedImage.primary, 1.0)} />
-          <Text className="mt-2.5" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
+          <Text className="mt-2.5" style={{ fontFamily: "Linotte_Regular", color: Colorizer(selectedImage.primary, 1.0) }}>
             Loading HD Image Preview...
           </Text>
         </View>
@@ -194,7 +194,7 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
         style={{ backgroundColor: Colorizer(selectedImage.primary, 0.8) }}
         activeOpacity={0.8}
       >
-        <Text className="text-white text-base" style={{ fontFamily: "Kurale" }}>
+        <Text className="text-white text-base" style={{ fontFamily: "Linotte_Regular" }}>
           View FullScreen
         </Text>
       </TouchableOpacity>
@@ -219,11 +219,11 @@ const DownloadButton: React.FC<{ onDownload?: (event: any) => void; colors: { pr
     <TouchableOpacity onPress={onDownload} activeOpacity={0.8} className="mt-2 rounded-2xl overflow-hidden" style={{ backgroundColor: Colorizer(colors.primary, 0.4) }}>
       <Animated.View className="flex-row items-center justify-center p-3" style={{ transform: [{ scale: scaleValue }] }}>
         <View className="flex-row items-center">
-          <Text className="text-white text-sm mr-2" style={{ fontFamily: "Kurale" }}>
+          <Text className="text-white text-sm mr-2" style={{ fontFamily: "Linotte_Regular" }}>
             Download Wallpaper
           </Text>
           <FontAwesome5 name="download" size={15} color={Colorizer("#E9E9EA", 1.0)} className="mx-2" />
-          <Text className="text-white text-sm" style={{ fontFamily: "Kurale" }}>
+          <Text className="text-white text-sm" style={{ fontFamily: "Linotte_Regular" }}>
             (Highest Quality)
           </Text>
         </View>
@@ -303,7 +303,7 @@ const DownloadScreen = () => {
       <ScrollView className="flex-1">
         <PreviewImage selectedImage={selectedImage} screenWidth={screenWidth} onViewFullScreen={() => setIsFullScreen(true)} />
         <View className="p-4 m-1 mt-2.5 border-2 rounded-3xl" style={{ borderColor: Colorizer(selectedImage.primary, 1.0), backgroundColor: Colorizer("#111111", 1.0) }}>
-          <Text className="mb-2 text-4xl" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
+          <Text className="mb-2 text-4xl" style={{ fontFamily: "Linotte_Regular", color: Colorizer(selectedImage.primary, 1.0) }}>
             {selectedImage.original_file_name.replace(".jpg", "")}
           </Text>
           {[
@@ -314,8 +314,8 @@ const DownloadScreen = () => {
             <View key={index} className="flex-row items-center my-1">
               <FontAwesome5 name={index === 0 ? "adjust" : index === 1 ? "file-alt" : "ruler-combined"} size={16} color={Colorizer(selectedImage.primary, 1.0)} className="ml-1" />
               <View className="flex-row items-center ml-2">
-                <Text style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>{item.label}:</Text>
-                <Text className="ml-2" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
+                <Text style={{ fontFamily: "Linotte_Regular", color: Colorizer(selectedImage.primary, 1.0) }}>{item.label}:</Text>
+                <Text className="ml-2" style={{ fontFamily: "Linotte_Regular", color: Colorizer(selectedImage.primary, 1.0) }}>
                   {item.value}
                 </Text>
               </View>
@@ -324,18 +324,18 @@ const DownloadScreen = () => {
           <DownloadButton onDownload={downloadAndSaveImage} colors={{ primary: selectedImage.primary, secondary: selectedImage.primary, tertiary: selectedImage.primary }} />
           <View className="p-1 my-2 rounded-2xl" style={{ backgroundColor: Colorizer(selectedImage.primary, 0.2) }}>
             <View className="p-2 m-0.5 rounded-t-2xl" style={{ backgroundColor: Colorizer(selectedImage.tertiary, 0.2) }}>
-              <Text className="ml-2 text-xl" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
+              <Text className="ml-2 text-xl" style={{ fontFamily: "Linotte_Regular", color: Colorizer(selectedImage.primary, 1.0) }}>
                 Environment:
               </Text>
-              <Text className="ml-2 text-gray-400" style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 0.6) }}>
+              <Text className="ml-2 text-gray-400" style={{ fontFamily: "Linotte_Regular", color: Colorizer("#E9E9EA", 0.6) }}>
                 {parsedData.environment_prompt}
               </Text>
             </View>
             <View className="p-2 m-0.5 rounded-b-2xl" style={{ backgroundColor: Colorizer(selectedImage.tertiary, 0.2) }}>
-              <Text className="ml-2 mt-2 text-xl" style={{ fontFamily: "Kurale", color: Colorizer(selectedImage.primary, 1.0) }}>
+              <Text className="ml-2 mt-2 text-xl" style={{ fontFamily: "Linotte_Regular", color: Colorizer(selectedImage.primary, 1.0) }}>
                 Moral:
               </Text>
-              <Text className="ml-2 text-gray-400" style={{ fontFamily: "Kurale", color: Colorizer("#E9E9EA", 0.6) }}>
+              <Text className="ml-2 text-gray-400" style={{ fontFamily: "Linotte_Regular", color: Colorizer("#E9E9EA", 0.6) }}>
                 {parsedData.environment_moral}
               </Text>
             </View>
