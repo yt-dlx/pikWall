@@ -171,7 +171,7 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
         />
       </Animated.View>
       <TouchableOpacity onPress={onViewFullScreen} className="absolute bottom-5 right-5 px-4 py-2 rounded-full z-50" style={{ backgroundColor: Colorizer(selectedImage.primary, 0.8) }} activeOpacity={0.8}>
-        <Text className="text-white text-base" style={{ fontFamily: "Linotte_Bold" }}>
+        <Text className="text-white text-base" style={{ fontFamily: "Kurale_Regular" }}>
           View FullScreen
         </Text>
       </TouchableOpacity>
@@ -190,12 +190,12 @@ const DownloadButton: React.FC<{ onDownload?: (event: any) => void; colors: { pr
   return (
     <TouchableOpacity onPress={onDownload} activeOpacity={0.8} className="mt-2 rounded-2xl overflow-hidden" style={{ backgroundColor: Colorizer(colors.primary, 0.4) }}>
       <Animated.View className="flex-row items-center justify-center p-3" style={{ transform: [{ scale: scaleValue }] }}>
-        <View className="flex-row items-center">
-          <Text className="text-white text-sm mr-2" style={{ fontFamily: "Linotte_Bold" }}>
+        <View className="flex-row items-center justify-center">
+          <Text className="text-white text-lg" style={{ fontFamily: "Lobster_Regular" }}>
             Download Wallpaper
           </Text>
           <FontAwesome5 name="download" size={15} color={Colorizer("#E9E9EA", 1.0)} className="mx-2" />
-          <Text className="text-white text-sm" style={{ fontFamily: "Linotte_Bold" }}>
+          <Text className="text-white text-lg" style={{ fontFamily: "Lobster_Regular" }}>
             (Highest Quality)
           </Text>
         </View>
@@ -209,7 +209,7 @@ const DownloadScreen = () => {
   const params = useLocalSearchParams();
   const [eta, setEta] = useState<number>(0);
   const rawDataString = params.data as string;
-  const parsedData = JSON.parse(rawDataString);
+  const Sanitized = JSON.parse(rawDataString);
   const downloadStartTime = useRef<number>(0);
   const [alertVisible, setAlertVisible] = useState(false);
   const [isFullScreen, setIsFullScreen] = useState(false);
@@ -218,9 +218,9 @@ const DownloadScreen = () => {
   const [isDownloading, setIsDownloading] = useState(false);
   const { width: screenWidth } = Dimensions.get("window");
   const [downloadRate, setDownloadRate] = useState<number>(0);
-  const selectedIndex = parseInt(parsedData.selectedIndex as unknown as string) || 0;
+  const selectedIndex = parseInt(Sanitized.selectedIndex as unknown as string) || 0;
   const [alertIcon, setAlertIcon] = useState<"error" | "checkmark-done-circle">("checkmark-done-circle");
-  const selectedImage = parsedData.data[selectedIndex];
+  const selectedImage = Sanitized.data[selectedIndex];
   const showAlert = (title: string, message: string, iconName: "error" | "checkmark-done-circle") => {
     setAlertMessage(message);
     setAlertIcon(iconName);
@@ -274,8 +274,8 @@ const DownloadScreen = () => {
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
       <ScrollView className="flex-1">
         <PreviewImage selectedImage={selectedImage} screenWidth={screenWidth} onViewFullScreen={() => setIsFullScreen(true)} />
-        <View className="p-4 m-1 mt-2.5 border-2 rounded-3xl" style={{ borderColor: Colorizer(selectedImage.primary, 1.0), backgroundColor: Colorizer("#111111", 1.0) }}>
-          <Text className="mb-2 text-4xl" style={{ fontFamily: "Linotte_Bold", color: Colorizer(selectedImage.primary, 1.0) }}>
+        <View className="p-4 border-4 rounded-3xl" style={{ borderColor: Colorizer(selectedImage.primary, 1.0), backgroundColor: Colorizer("#111111", 1.0) }}>
+          <Text className="mb-2 text-5xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer(selectedImage.primary, 1.0) }}>
             {selectedImage.original_file_name.replace(".jpg", "")}
           </Text>
           {[
@@ -283,11 +283,11 @@ const DownloadScreen = () => {
             { label: "FileSize", value: `${selectedImage.file_size_megabytes} mb` },
             { label: "Dimensions", value: `${selectedImage.width} x ${selectedImage.height}` }
           ].map((item, index) => (
-            <View key={index} className="flex-row items-center my-1">
+            <View key={index} className="flex-row items-center my-2">
               <FontAwesome5 name={index === 0 ? "adjust" : index === 1 ? "file-alt" : "ruler-combined"} size={16} color={Colorizer(selectedImage.primary, 1.0)} className="ml-1" />
-              <View className="flex-row items-center ml-2">
-                <Text style={{ fontFamily: "Linotte_Bold", color: Colorizer(selectedImage.primary, 1.0) }}>{item.label}:</Text>
-                <Text className="ml-2" style={{ fontFamily: "Linotte_Bold", color: Colorizer(selectedImage.primary, 1.0) }}>
+              <View className="flex-row items-center mx-1">
+                <Text style={{ fontFamily: "Lobster_Regular", color: Colorizer(selectedImage.primary, 1.0) }}>{item.label}:</Text>
+                <Text className="ml-2" style={{ fontFamily: "Kurale_Regular", color: Colorizer(selectedImage.primary, 1.0) }}>
                   {item.value}
                 </Text>
               </View>
@@ -296,19 +296,19 @@ const DownloadScreen = () => {
           <DownloadButton onDownload={downloadAndSaveImage} colors={{ primary: selectedImage.primary, secondary: selectedImage.primary, tertiary: selectedImage.primary }} />
           <View className="p-1 my-2 rounded-2xl" style={{ backgroundColor: Colorizer(selectedImage.primary, 0.2) }}>
             <View className="p-2 m-0.5 rounded-t-2xl" style={{ backgroundColor: Colorizer(selectedImage.tertiary, 0.2) }}>
-              <Text className="ml-2 text-xl" style={{ fontFamily: "Linotte_Bold", color: Colorizer(selectedImage.primary, 1.0) }}>
+              <Text className="ml-2 text-xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer(selectedImage.primary, 1.0) }}>
                 Environment:
               </Text>
-              <Text className="ml-2 text-gray-400" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#E9E9EA", 0.6) }}>
-                {parsedData.environment_prompt}
+              <Text className="ml-2 text-gray-400" style={{ fontFamily: "Kurale_Regular", color: Colorizer("#E9E9EA", 0.6) }}>
+                {Sanitized.environment_prompt}
               </Text>
             </View>
             <View className="p-2 m-0.5 rounded-b-2xl" style={{ backgroundColor: Colorizer(selectedImage.tertiary, 0.2) }}>
-              <Text className="ml-2 mt-2 text-xl" style={{ fontFamily: "Linotte_Bold", color: Colorizer(selectedImage.primary, 1.0) }}>
+              <Text className="ml-2 mt-2 text-xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer(selectedImage.primary, 1.0) }}>
                 Moral:
               </Text>
-              <Text className="ml-2 text-gray-400" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#E9E9EA", 0.6) }}>
-                {parsedData.environment_moral}
+              <Text className="ml-2 text-gray-400" style={{ fontFamily: "Kurale_Regular", color: Colorizer("#E9E9EA", 0.6) }}>
+                {Sanitized.environment_moral}
               </Text>
             </View>
           </View>
