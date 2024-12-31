@@ -67,7 +67,7 @@ const AnimatedTitle: React.FC = () => {
   return (
     <Animated.View
       style={[animatedStyle, { shadowColor: Colorizer("#000000", 1.0), shadowOffset: { width: 0, height: 8 }, shadowOpacity: 0.4, shadowRadius: 12 }]}
-      className="items-center"
+      className="items-center mb-4"
       entering={FadeIn.delay(300).duration(1500)}
     >
       <View className="rounded-full p-1" style={{ backgroundColor: Colorizer("#0A0A0A", 0.8), justifyContent: "center", alignItems: "center" }}>
@@ -124,14 +124,14 @@ const IndexPage: React.FC = () => {
             locations={[0, 0.2, 0.5, 0.8, 1]}
             className="absolute inset-0"
           />
-          <View className="absolute inset-0 justify-center items-center">
+          <View className="absolute inset-0 justify-center items-center mt-20">
             <AnimatedTitle />
             <Animated.View entering={FadeInDown.delay(600).duration(1500).springify()}>
               <View>
                 <Text
                   className="text-center"
                   style={{
-                    fontSize: 68,
+                    fontSize: 60,
                     textShadowRadius: 60,
                     fontFamily: "Linotte_Heavy",
                     color: Colorizer("#E9E9EA", 1.0),
@@ -141,7 +141,7 @@ const IndexPage: React.FC = () => {
                 >
                   picWall
                 </Text>
-                <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Linotte_Heavy", color: Colorizer("#E9E9EA", 1.0), fontSize: 68 }}>
+                <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Linotte_Heavy", color: Colorizer("#E9E9EA", 1.0), fontSize: 60 }}>
                   picWall
                 </Text>
                 <Animated.View style={{ alignSelf: "center" }} entering={FadeInDown.delay(600).duration(1500).springify()}>
@@ -169,9 +169,9 @@ const IndexPage: React.FC = () => {
                   </Animated.View>
                 </TouchableOpacity>
               </Link>
-              <Animated.View entering={FadeIn.delay(1200).duration(1500)} style={{ marginTop: 4, paddingHorizontal: 20, alignItems: "center" }}>
-                <Text style={{ fontFamily: "Linotte_Heavy", color: Colorizer("#E9E9EA", 1.0), fontSize: 20, textAlign: "center", marginBottom: 4 }}>Personalised AI Wallpaper Gallery</Text>
-                <Text style={{ fontFamily: "Linotte_Thin", color: Colorizer("#E9E9EA", 0.8), fontSize: 10, textAlign: "center", maxWidth: 200 }}>
+              <Animated.View entering={FadeIn.delay(1200).duration(1500)} style={{ marginTop: 10, paddingHorizontal: 20, alignItems: "center" }}>
+                <Text style={{ fontFamily: "Linotte_Heavy", color: Colorizer("#E9E9EA", 0.8), fontSize: 20, textAlign: "center", marginBottom: 4 }}>Personalised AI Wallpaper Gallery</Text>
+                <Text style={{ fontFamily: "Linotte_Thin", color: Colorizer("#E9E9EA", 0.6), fontSize: 10, textAlign: "center", maxWidth: 200 }}>
                   Create stunning collections, share your moments, and discover amazing photographs from around the world. Join our community of passionate photographers today!
                 </Text>
               </Animated.View>
