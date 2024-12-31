@@ -51,12 +51,12 @@ const AnimatedTitle: React.FC = () => {
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
   return (
     <Animated.View style={animatedStyle} className="items-center">
-      <View className="rounded-full p-2 shadow-2xl" style={{ backgroundColor: Colorizer("#070808", 0.7), justifyContent: "center", alignItems: "center" }}>
+      <View className="rounded-full p-1" style={{ backgroundColor: Colorizer("#070808", 0.7), justifyContent: "center", alignItems: "center" }}>
         <Image
           alt="logo"
           cachePolicy="memory-disk"
           contentFit="contain"
-          source={require("@/assets/picWall/picWall_red.png")}
+          source={require("@/assets/picWall/picWall.png")}
           style={{ width: 200, height: 200, borderWidth: 2, borderRadius: 9999, borderColor: Colorizer("#BE2528", 0.9) }}
         />
       </View>
@@ -102,11 +102,7 @@ const IndexPage: React.FC = () => {
                 picWall
               </Text>
             </View>
-            <View className="flex-row items-center px-2 yp-2 mt-44 rounded-full" style={{ backgroundColor: Colorizer("#BE2528", 0.9) }}>
-              <Text className="text-lg font-bold" style={{ fontFamily: "Kurale", color: Colorizer("#070808", 1.0) }}>
-                This ia a development preview build. Except changes and bugs.
-              </Text>
-            </View>
+            <View className="flex-row items-center px-2 yp-2 mt-44 rounded-full" style={{ backgroundColor: Colorizer("#BE2528", 0.9) }} />
             <Link href="./Home" asChild>
               <TouchableOpacity onPressIn={onPressIn} onPressOut={onPressOut} className="mt-2 rounded-3xl overflow-hidden shadow-2xl">
                 <Animated.View style={buttonAnimatedStyle}>
