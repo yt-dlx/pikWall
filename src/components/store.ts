@@ -54,9 +54,7 @@ export const saveStateBeforeWallpaper = async () => {
   try {
     const state = useAppStore.getState();
     await AsyncStorage.setItem("pre-wallpaper-state", JSON.stringify(state));
-  } catch (error) {
-    console.error("Error saving state:", error);
-  }
+  } catch {}
 };
 
 export const restoreStateAfterRestart = async () => {
@@ -77,7 +75,5 @@ export const restoreStateAfterRestart = async () => {
       }
       await AsyncStorage.removeItem("pre-wallpaper-state");
     }
-  } catch (error) {
-    console.error("Error restoring state:", error);
-  }
+  } catch {}
 };
