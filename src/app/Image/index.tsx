@@ -8,12 +8,12 @@ import { useLocalSearchParams } from "expo-router";
 import * as MediaLibrary from "expo-media-library";
 import { LinearGradient } from "expo-linear-gradient";
 import React, { useState, useEffect, useRef } from "react";
+const { width: screenWidth } = Dimensions.get("window");
 import { setWallpaper, TYPE_SCREEN } from "rn-wallpapers";
-import { FontAwesome5, MaterialIcons, Ionicons } from "@expo/vector-icons";
+import { FontAwesome5, MaterialIcons, Ionicons, FontAwesome6 } from "@expo/vector-icons";
 import { View, Text, Dimensions, StatusBar, ActivityIndicator, TouchableOpacity, Alert, Modal, Animated, Easing, ScrollView } from "react-native";
 // ============================================================================================
 // ============================================================================================
-const { width: screenWidth } = Dimensions.get("window");
 const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () => void }> = ({ visible, message, onClose }) => {
   const [modalAnim] = useState(new Animated.Value(0));
   useEffect(() => {
@@ -26,26 +26,22 @@ const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () =>
   if (!visible) return null;
   return (
     <View className="absolute inset-0 justify-center items-center">
-      <Animated.View className="absolute top-0 left-0 right-0 bottom-0" style={[{ backgroundColor: Colorizer("#000000", 0.5) }, backdropStyle]} />
-      <Animated.View
-        className="w-4/5 p-5 rounded-lg items-center shadow-lg"
-        style={[
-          { backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 },
-          modalStyle
-        ]}
-      >
-        <Ionicons name="checkmark-done-circle" size={50} color={Colorizer("#28a745", 1.0)} />
-        <Text className="mt-2.5 text-2xl text-center" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#000000", 1.0) }}>
-          Success
-        </Text>
-        <Text className="my-2.5 text-center" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#000000", 1.0) }}>
-          {message}
-        </Text>
-        <TouchableOpacity className="mt-2.5 px-5 py-2 rounded" style={{ backgroundColor: Colorizer("#007BFF", 1.0) }} onPress={onClose}>
-          <Text className="text-white" style={{ fontFamily: "Linotte_Bold" }}>
-            OK
+      <Animated.View className="absolute inset-0" style={[{ backgroundColor: Colorizer("#1A1A1A", 0.5) }, backdropStyle]} />
+      <Animated.View className="w-4/5 rounded-3xl p-5 border-4" style={[{ backgroundColor: Colorizer("#111111", 1.0), borderColor: Colorizer("#25BE8B", 1.0) }, modalStyle]}>
+        <View className="items-center">
+          <Ionicons name="checkmark-done-circle" size={50} color={Colorizer("#25BE8B", 1.0)} />
+          <Text className="mt-2.5 text-5xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer("#25BE8B", 1.0) }}>
+            Success
           </Text>
-        </TouchableOpacity>
+          <Text className="my-2.5 text-center text-lg" style={{ fontFamily: "Kurale_Regular", color: Colorizer("#25BE8B", 1.0) }}>
+            {message}
+          </Text>
+          <TouchableOpacity className="mt-2.5 px-5 py-2 rounded-2xl overflow-hidden" style={{ backgroundColor: Colorizer("#25BE8B", 0.4) }} onPress={onClose}>
+            <Text className="text-white text-lg" style={{ fontFamily: "Lobster_Regular" }}>
+              OK
+            </Text>
+          </TouchableOpacity>
+        </View>
       </Animated.View>
     </View>
   );
@@ -64,26 +60,31 @@ const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => v
   if (!visible) return null;
   return (
     <View className="absolute inset-0 justify-center items-center">
-      <Animated.View className="absolute top-0 left-0 right-0 bottom-0" style={[{ backgroundColor: Colorizer("#000000", 0.5) }, backdropStyle]} />
+      <Animated.View className="absolute inset-0" style={[{ backgroundColor: Colorizer("#1A1A1A", 0.5) }, backdropStyle]} />
       <Animated.View
-        className="w-4/5 p-5 rounded-lg items-center shadow-lg"
+        className="w-4/5 rounded-3xl p-5 border-4"
         style={[
-          { backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 },
+          {
+            backgroundColor: Colorizer("#111111", 1.0),
+            borderColor: Colorizer("#BE2528", 1.0)
+          },
           modalStyle
         ]}
       >
-        <MaterialIcons name="error" size={50} color={Colorizer("#dc3545", 1.0)} />
-        <Text className="mt-2.5 text-2xl text-center" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#000000", 1.0) }}>
-          Error
-        </Text>
-        <Text className="my-2.5 text-center" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#000000", 1.0) }}>
-          {message}
-        </Text>
-        <TouchableOpacity className="mt-2.5 px-5 py-2 rounded" style={{ backgroundColor: Colorizer("#007BFF", 1.0) }} onPress={onClose}>
-          <Text className="text-white" style={{ fontFamily: "Linotte_Bold" }}>
-            OK
+        <View className="items-center">
+          <MaterialIcons name="error" size={50} color={Colorizer("#BE2528", 1.0)} />
+          <Text className="mt-2.5 text-5xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer("#BE2528", 1.0) }}>
+            Error
           </Text>
-        </TouchableOpacity>
+          <Text className="my-2.5 text-center text-lg" style={{ fontFamily: "Kurale_Regular", color: Colorizer("#BE2528", 1.0) }}>
+            {message}
+          </Text>
+          <TouchableOpacity className="mt-2.5 px-5 py-2 rounded-2xl overflow-hidden" style={{ backgroundColor: Colorizer("#BE2528", 0.4) }} onPress={onClose}>
+            <Text className="text-white text-lg" style={{ fontFamily: "Lobster_Regular" }}>
+              OK
+            </Text>
+          </TouchableOpacity>
+        </View>
       </Animated.View>
     </View>
   );
@@ -111,29 +112,30 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
   if (!visible) return null;
   return (
     <View className="absolute inset-0 justify-center items-center">
-      <View className="absolute inset-0" style={{ backgroundColor: Colorizer(primaryColor, 0.3) }} />
+      <View className="absolute inset-0" style={{ backgroundColor: Colorizer("#1A1A1A", 0.5) }} />
       <View
-        className="rounded-lg p-5 items-center shadow-lg"
-        style={{ backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 }}
+        className="w-4/5 rounded-3xl p-5 border-4"
+        style={{
+          backgroundColor: Colorizer("#111111", 1.0),
+          borderColor: Colorizer(primaryColor, 1.0)
+        }}
       >
-        <ActivityIndicator size="large" color={Colorizer(primaryColor, 1.0)} />
-        <Text className="mt-3 text-lg" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Linotte_Bold" }}>
-          Downloading...
-        </Text>
-        <Text className="mt-2 text-base" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Linotte_Bold" }}>
-          {percentage.toFixed(2)}%
-        </Text>
-        <View className="w-4/5 h-2.5 rounded overflow-hidden mt-2.5 bg-gray-300">
-          <Animated.View style={{ width: widthInterpolated, backgroundColor: Colorizer(primaryColor, 1.0), height: "100%" }} />
-        </View>
-        <View className="flex-row mt-4 w-full justify-between px-2">
-          <View className="items-center">
-            <Text className="text-xs" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Linotte_Bold" }}>
-              Rate: {formatBytes(downloadRate)}/s
-            </Text>
+        <View className="items-center">
+          <MaterialIcons name="cloud-download" size={50} color={Colorizer(primaryColor, 1.0)} />
+          <Text className="mt-2.5 text-5xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer(primaryColor, 1.0) }}>
+            Downloading...
+          </Text>
+          <Text className="mt-4 text-3xl" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Lobster_Regular" }}>
+            {percentage.toFixed(1)}%
+          </Text>
+          <View className="w-full h-3 rounded-full overflow-hidden mt-4 bg-gray-800">
+            <Animated.View style={{ width: widthInterpolated, backgroundColor: Colorizer(primaryColor, 1.0), height: "100%" }} />
           </View>
-          <View className="items-center">
-            <Text className="text-xs" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Linotte_Bold" }}>
+          <View className="flex-row justify-between w-full mt-4">
+            <Text className="text-lg" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Kurale_Regular" }}>
+              {formatBytes(downloadRate)}/s
+            </Text>
+            <Text className="text-lg" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Kurale_Regular" }}>
               ETA: {formatTime(eta)}
             </Text>
           </View>
@@ -162,13 +164,13 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
         {!imageLoading && (
           <View className="items-center">
             <Animated.View className="justify-center items-center rounded-full">
-              <Image style={{ width: 64, height: 64, borderRadius: 32, backgroundColor: Colorizer("#000000", 0.8) }} source={require("@/assets/picWall/picWall.png")} contentFit="contain" />
+              <Image style={{ width: 64, height: 64, borderRadius: 32, backgroundColor: Colorizer("#1A1A1A", 0.8) }} source={require("@/assets/picWall/picWall.png")} contentFit="contain" />
             </Animated.View>
           </View>
         )}
       </View>
       {imageLoading && (
-        <View className="absolute inset-0 z-40 justify-center items-center" style={{ backgroundColor: Colorizer("#000000", 1.0) }}>
+        <View className="absolute inset-0 z-40 justify-center items-center" style={{ backgroundColor: Colorizer("#1A1A1A", 1.0) }}>
           <ActivityIndicator size="large" color={Colorizer(selectedImage.primary, 1.0)} />
           <Text className="mt-2.5" style={{ fontFamily: "Linotte_Bold", color: Colorizer(selectedImage.primary, 1.0) }}>
             Loading HD Image Preview...
@@ -190,13 +192,17 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
         />
       </Animated.View>
       <TouchableOpacity
-        onPress={onViewFullScreen}
-        className="absolute w-full bottom-5 mx-4 px-4 py-2 rounded-full z-50"
-        style={{ backgroundColor: Colorizer(selectedImage.secondary, 0.9), borderRadius: 9999, borderWidth: 1, borderColor: Colorizer(selectedImage.primary, 1.0) }}
         activeOpacity={0.8}
+        onPress={onViewFullScreen}
+        className="absolute bottom-2 mx-4 px-4 py-2 z-50 flex-row items-center justify-center"
+        style={{ backgroundColor: Colorizer(selectedImage.secondary, 0.9), borderColor: Colorizer(selectedImage.primary, 1.0), width: screenWidth - 32, borderRadius: 20, borderWidth: 2 }}
       >
-        <Text className="text-white text-base" style={{ fontFamily: "Kurale_Regular" }}>
-          View Current Wallpaper In Full-Screen
+        <Text className="text-white text-lg" style={{ fontFamily: "Lobster_Regular" }}>
+          Set as Wallpaper
+        </Text>
+        <FontAwesome6 name="mobile-button" size={15} color={Colorizer("#F5F5F5", 1.0)} style={{ margin: 4 }} />
+        <Text className="text-white text-lg" style={{ fontFamily: "Lobster_Regular" }}>
+          (Full-Screen View)
         </Text>
       </TouchableOpacity>
     </View>
@@ -227,7 +233,7 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({ onDownload, colors }) =
           <Text className="text-white text-lg" style={{ fontFamily: "Lobster_Regular" }}>
             Download Wallpaper
           </Text>
-          <FontAwesome5 name="download" size={15} color={Colorizer("#E9E9EA", 1.0)} style={{ marginHorizontal: 8 }} />
+          <FontAwesome5 name="download" size={15} color={Colorizer("#F5F5F5", 1.0)} style={{ marginHorizontal: 8 }} />
           <Text className="text-white text-lg" style={{ fontFamily: "Lobster_Regular" }}>
             (Highest Quality)
           </Text>
@@ -247,7 +253,7 @@ interface OtherImagesProps {
 const OtherImages: React.FC<OtherImagesProps> = ({ otherImages, setCurrentIndex, primaryColor, tertiaryColor }) => (
   <View className="p-1 my-2 rounded-2xl" style={{ backgroundColor: Colorizer(primaryColor, 0.2) }}>
     <View className="p-1 rounded-2xl" style={{ backgroundColor: Colorizer(tertiaryColor, 0.2) }}>
-      <Text className="ml-2 text-xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer("#E9E9EA", 1.0) }}>
+      <Text className="ml-2 text-xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer("#F5F5F5", 1.0) }}>
         Other Wallpapers:
       </Text>
       <View className="flex-row flex-wrap my-1">
@@ -272,6 +278,77 @@ const OtherImages: React.FC<OtherImagesProps> = ({ otherImages, setCurrentIndex,
 );
 // ============================================================================================
 // ============================================================================================
+interface WallModalProps {
+  visible: boolean;
+  onComplete: () => void;
+  onCancel: () => void;
+  wallType: "HOME" | "LOCK" | "BOTH";
+  primaryColor: string;
+}
+const WallModal: React.FC<WallModalProps> = ({ visible, onComplete, onCancel, wallType, primaryColor }) => {
+  const [countdown, setCountdown] = useState(5);
+  const [modalAnim] = useState(new Animated.Value(0));
+  const countdownRef = useRef<NodeJS.Timeout>();
+  useEffect(() => {
+    if (visible) {
+      setCountdown(5);
+      Animated.timing(modalAnim, { toValue: 1, duration: 300, useNativeDriver: true }).start();
+      countdownRef.current = setInterval(() => {
+        setCountdown((prev) => {
+          if (prev <= 1) {
+            clearInterval(countdownRef.current);
+            onComplete();
+            return 0;
+          }
+          return prev - 1;
+        });
+      }, 1000);
+    } else {
+      Animated.timing(modalAnim, { toValue: 0, duration: 300, useNativeDriver: true }).start();
+      clearInterval(countdownRef.current);
+    }
+    return () => {
+      clearInterval(countdownRef.current);
+    };
+  }, [visible, modalAnim]);
+  const backdropStyle = { opacity: modalAnim };
+  const scale = modalAnim.interpolate({ inputRange: [0, 1], outputRange: [0.8, 1] });
+  const modalStyle = { opacity: modalAnim, transform: [{ scale }] };
+  if (!visible) return null;
+  return (
+    <View className="absolute inset-0 justify-center items-center">
+      <Animated.View className="absolute inset-0" style={[{ backgroundColor: Colorizer("#1A1A1A", 0.5) }, backdropStyle]} />
+      <Animated.View className="w-4/5 rounded-3xl p-5 border-4" style={[{ backgroundColor: Colorizer("#111111", 1.0), borderColor: Colorizer(primaryColor, 1.0) }, modalStyle]}>
+        <View className="items-center">
+          <MaterialIcons name="warning" size={50} color={Colorizer(primaryColor, 1.0)} />
+          <Text className="mt-2.5 text-5xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer(primaryColor, 1.0) }}>
+            Setting {wallType === "BOTH" ? "Both Screens" : wallType === "HOME" ? "HomeScreen" : "LockScreen"}
+          </Text>
+          <Text className="my-2.5 text-center text-lg" style={{ fontFamily: "Kurale_Regular", color: Colorizer(primaryColor, 1.0) }}>
+            Due to Android's Material You, the system UI will restart after setting the wallpaper. This is normal behavior.
+          </Text>
+          <Text className="text-6xl my-4" style={{ fontFamily: "Lobster_Regular", color: Colorizer(primaryColor, 1.0) }}>
+            {countdown}
+          </Text>
+          <TouchableOpacity
+            className="mt-2.5 px-5 py-2 rounded-2xl overflow-hidden"
+            style={{ backgroundColor: Colorizer(primaryColor, 0.4) }}
+            onPress={() => {
+              clearInterval(countdownRef.current);
+              onCancel();
+            }}
+          >
+            <Text className="text-white text-lg" style={{ fontFamily: "Lobster_Regular" }}>
+              Cancel
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </Animated.View>
+    </View>
+  );
+};
+// ============================================================================================
+// ============================================================================================
 interface FullScreenViewProps {
   isFullScreen: boolean;
   selectedIndex: number;
@@ -281,14 +358,21 @@ interface FullScreenViewProps {
   setIsFullScreen: (isFullScreen: boolean) => void;
 }
 const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFullScreen, selectedImage, selectedIndex, data, environment_title }) => {
+  const [showWallModal, setShowWallModal] = useState(false);
+  const [wallType, setWallType] = useState<"HOME" | "LOCK" | "BOTH">("HOME");
   const saveCurrentState = async () => {
     const { setLastState } = useAppState.getState();
     const stateToSave = { selectedIndex, data, environment_title };
     setLastState(stateToSave);
   };
+  const handleWallpaperSet = async () => {
+    await saveCurrentState();
+    await setWallpaper({ uri: selectedImage.previewLink.replace("lowRes", "highRes") }, TYPE_SCREEN[wallType]);
+    setShowWallModal(false);
+  };
   return (
     <Modal visible={isFullScreen} transparent={false} onRequestClose={() => setIsFullScreen(false)} presentationStyle="fullScreen" statusBarTranslucent>
-      <View style={{ flex: 1, backgroundColor: Colorizer("#000000", 1.0) }}>
+      <View style={{ flex: 1, backgroundColor: Colorizer("#1A1A1A", 1.0) }}>
         <ScrollView horizontal contentContainerStyle={{ flexGrow: 1, justifyContent: "center", alignItems: "center" }} showsHorizontalScrollIndicator={false}>
           <Image contentFit="fill" source={{ uri: selectedImage.previewLink.replace("lowRes", "highRes") }} style={{ height: "100%", width: (Dimensions.get("window").height * 9) / 16 }} />
         </ScrollView>
@@ -302,11 +386,11 @@ const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFull
             <TouchableOpacity
               style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}
               onPress={async () => {
-                await saveCurrentState();
-                await setWallpaper({ uri: selectedImage.previewLink.replace("lowRes", "highRes") }, TYPE_SCREEN.LOCK);
+                setWallType("LOCK");
+                setShowWallModal(true);
               }}
             >
-              <Ionicons name="image" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
+              <Ionicons name="image" size={20} color={Colorizer("#F5F5F5", 1.0)} style={{ marginRight: 10 }} />
               <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Set LockScreen</Text>
             </TouchableOpacity>
           </LinearGradient>
@@ -319,11 +403,11 @@ const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFull
             <TouchableOpacity
               style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}
               onPress={async () => {
-                await saveCurrentState();
-                await setWallpaper({ uri: selectedImage.previewLink.replace("lowRes", "highRes") }, TYPE_SCREEN.HOME);
+                setWallType("HOME");
+                setShowWallModal(true);
               }}
             >
-              <Ionicons name="image" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
+              <Ionicons name="image" size={20} color={Colorizer("#F5F5F5", 1.0)} style={{ marginRight: 10 }} />
               <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Set HomeScreen</Text>
             </TouchableOpacity>
           </LinearGradient>
@@ -336,15 +420,16 @@ const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFull
             <TouchableOpacity
               style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}
               onPress={async () => {
-                await saveCurrentState();
-                await setWallpaper({ uri: selectedImage.previewLink.replace("lowRes", "highRes") }, TYPE_SCREEN.BOTH);
+                setWallType("BOTH");
+                setShowWallModal(true);
               }}
             >
-              <Ionicons name="image" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
+              <Ionicons name="image" size={20} color={Colorizer("#F5F5F5", 1.0)} style={{ marginRight: 10 }} />
               <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Set BothScreens</Text>
             </TouchableOpacity>
           </LinearGradient>
         </View>
+        <WallModal visible={showWallModal} onComplete={handleWallpaperSet} onCancel={() => setShowWallModal(false)} wallType={wallType} primaryColor={selectedImage.primary} />
       </View>
     </Modal>
   );
@@ -420,7 +505,7 @@ const ImagePage = () => {
   const otherImages = allImages.filter(({ idx }) => idx !== currentIndex);
 
   return (
-    <View className="flex-1" style={{ backgroundColor: Colorizer("#000000", 1.0) }}>
+    <View className="flex-1" style={{ backgroundColor: Colorizer("#1A1A1A", 1.0) }}>
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
       <ScrollView className="flex-1">
         <PreviewImage selectedImage={selectedImage} screenWidth={screenWidth} onViewFullScreen={() => setIsFullScreen(true)} />
