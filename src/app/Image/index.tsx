@@ -10,9 +10,9 @@ import React, { useState, useEffect, useRef } from "react";
 import { setWallpaper, TYPE_SCREEN } from "rn-wallpapers";
 import { FontAwesome5, MaterialIcons, Ionicons } from "@expo/vector-icons";
 import { View, Text, Dimensions, StatusBar, ActivityIndicator, TouchableOpacity, Alert, Modal, Animated, Easing, ScrollView } from "react-native";
-
 const { width: screenWidth } = Dimensions.get("window");
-
+// ============================================================================================
+// ============================================================================================
 const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () => void }> = ({ visible, message, onClose }) => {
   const [modalAnim] = useState(new Animated.Value(0));
   useEffect(() => {
@@ -24,32 +24,37 @@ const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () =>
   const modalStyle = { opacity: modalAnim, transform: [{ scale }] };
   if (!visible) return null;
   return (
-    <View className="absolute inset-0 justify-center items-center">
-      <Animated.View className="absolute top-0 left-0 right-0 bottom-0" style={[{ backgroundColor: Colorizer("#000000", 0.5) }, backdropStyle]} />
+    <View style={{ position: "absolute", top: 0, bottom: 0, left: 0, right: 0, justifyContent: "center", alignItems: "center" }}>
+      <Animated.View style={[{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: Colorizer("#000000", 0.5) }, backdropStyle]} />
       <Animated.View
-        className="w-4/5 p-5 rounded-lg items-center shadow-lg"
         style={[
-          { backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 },
+          {
+            width: "80%",
+            padding: 20,
+            borderRadius: 8,
+            alignItems: "center",
+            backgroundColor: Colorizer("#E9E9EA", 1.0),
+            shadowColor: Colorizer("#000000", 0.25),
+            shadowOffset: { width: 0, height: 5 },
+            shadowOpacity: 0.25,
+            shadowRadius: 10,
+            elevation: 10
+          },
           modalStyle
         ]}
       >
         <Ionicons name="checkmark-done-circle" size={50} color={Colorizer("#28a745", 1.0)} />
-        <Text className="mt-2.5 text-2xl text-center" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#000000", 1.0) }}>
-          Success
-        </Text>
-        <Text className="my-2.5 text-center" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#000000", 1.0) }}>
-          {message}
-        </Text>
-        <TouchableOpacity className="mt-2.5 px-5 py-2 rounded" style={{ backgroundColor: Colorizer("#007BFF", 1.0) }} onPress={onClose}>
-          <Text className="text-white" style={{ fontFamily: "Linotte_Bold" }}>
-            OK
-          </Text>
+        <Text style={{ marginTop: 10, fontSize: 24, textAlign: "center", fontFamily: "Linotte_Bold", color: Colorizer("#000000", 1.0) }}> Success </Text>
+        <Text style={{ marginVertical: 10, textAlign: "center", fontFamily: "Linotte_Bold", color: Colorizer("#000000", 1.0) }}> {message} </Text>
+        <TouchableOpacity style={{ marginTop: 10, paddingHorizontal: 20, paddingVertical: 8, borderRadius: 4, backgroundColor: Colorizer("#007BFF", 1.0) }} onPress={onClose}>
+          <Text style={{ color: "#FFFFFF", fontFamily: "Linotte_Bold" }}> OK </Text>
         </TouchableOpacity>
       </Animated.View>
     </View>
   );
 };
-
+// ============================================================================================
+// ============================================================================================
 const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => void }> = ({ visible, message, onClose }) => {
   const [modalAnim] = useState(new Animated.Value(0));
   useEffect(() => {
@@ -61,32 +66,37 @@ const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => v
   const modalStyle = { opacity: modalAnim, transform: [{ scale }] };
   if (!visible) return null;
   return (
-    <View className="absolute inset-0 justify-center items-center">
-      <Animated.View className="absolute top-0 left-0 right-0 bottom-0" style={[{ backgroundColor: Colorizer("#000000", 0.5) }, backdropStyle]} />
+    <View style={{ position: "absolute", top: 0, bottom: 0, left: 0, right: 0, justifyContent: "center", alignItems: "center" }}>
+      <Animated.View style={[{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: Colorizer("#000000", 0.5) }, backdropStyle]} />
       <Animated.View
-        className="w-4/5 p-5 rounded-lg items-center shadow-lg"
         style={[
-          { backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 },
+          {
+            width: "80%",
+            padding: 20,
+            borderRadius: 8,
+            alignItems: "center",
+            backgroundColor: Colorizer("#E9E9EA", 1.0),
+            shadowColor: Colorizer("#000000", 0.25),
+            shadowOffset: { width: 0, height: 5 },
+            shadowOpacity: 0.25,
+            shadowRadius: 10,
+            elevation: 10
+          },
           modalStyle
         ]}
       >
         <MaterialIcons name="error" size={50} color={Colorizer("#dc3545", 1.0)} />
-        <Text className="mt-2.5 text-2xl text-center" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#000000", 1.0) }}>
-          Error
-        </Text>
-        <Text className="my-2.5 text-center" style={{ fontFamily: "Linotte_Bold", color: Colorizer("#000000", 1.0) }}>
-          {message}
-        </Text>
-        <TouchableOpacity className="mt-2.5 px-5 py-2 rounded" style={{ backgroundColor: Colorizer("#007BFF", 1.0) }} onPress={onClose}>
-          <Text className="text-white" style={{ fontFamily: "Linotte_Bold" }}>
-            OK
-          </Text>
+        <Text style={{ marginTop: 10, fontSize: 24, textAlign: "center", fontFamily: "Linotte_Bold", color: Colorizer("#000000", 1.0) }}> Error </Text>
+        <Text style={{ marginVertical: 10, textAlign: "center", fontFamily: "Linotte_Bold", color: Colorizer("#000000", 1.0) }}> {message} </Text>
+        <TouchableOpacity style={{ marginTop: 10, paddingHorizontal: 20, paddingVertical: 8, borderRadius: 4, backgroundColor: Colorizer("#007BFF", 1.0) }} onPress={onClose}>
+          <Text style={{ color: "#FFFFFF", fontFamily: "Linotte_Bold" }}> OK </Text>
         </TouchableOpacity>
       </Animated.View>
     </View>
   );
 };
-
+// ============================================================================================
+// ============================================================================================
 const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloadRate: number; eta: number; primaryColor: string }> = ({ visible, percentage, downloadRate, eta, primaryColor }) => {
   const [progressAnim] = useState(new Animated.Value(percentage / 100));
   useEffect(() => {
@@ -107,39 +117,41 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
   };
   if (!visible) return null;
   return (
-    <View className="absolute inset-0 justify-center items-center">
-      <View className="absolute inset-0" style={{ backgroundColor: Colorizer(primaryColor, 0.3) }} />
+    <View style={{ position: "absolute", top: 0, bottom: 0, left: 0, right: 0, justifyContent: "center", alignItems: "center" }}>
+      <View style={{ position: "absolute", top: 0, bottom: 0, left: 0, right: 0, backgroundColor: Colorizer(primaryColor, 0.3) }} />
       <View
-        className="rounded-lg p-5 items-center shadow-lg"
-        style={{ backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 }}
+        style={{
+          borderRadius: 8,
+          padding: 20,
+          alignItems: "center",
+          backgroundColor: Colorizer("#E9E9EA", 1.0),
+          shadowColor: Colorizer("#000000", 0.25),
+          shadowOffset: { width: 0, height: 5 },
+          shadowOpacity: 0.25,
+          shadowRadius: 10,
+          elevation: 10
+        }}
       >
         <ActivityIndicator size="large" color={Colorizer(primaryColor, 1.0)} />
-        <Text className="mt-3 text-lg" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Linotte_Bold" }}>
-          Downloading...
-        </Text>
-        <Text className="mt-2 text-base" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Linotte_Bold" }}>
-          {percentage.toFixed(2)}%
-        </Text>
-        <View className="w-4/5 h-2.5 rounded overflow-hidden mt-2.5 bg-gray-300">
+        <Text style={{ marginTop: 12, fontSize: 18, color: Colorizer(primaryColor, 1.0), fontFamily: "Linotte_Bold" }}> Downloading... </Text>
+        <Text style={{ marginTop: 8, fontSize: 16, color: Colorizer(primaryColor, 1.0), fontFamily: "Linotte_Bold" }}> {percentage.toFixed(2)}% </Text>
+        <View style={{ width: "80%", height: 10, borderRadius: 5, overflow: "hidden", marginTop: 10, backgroundColor: "#D1D5DB" }}>
           <Animated.View style={{ width: widthInterpolated, backgroundColor: Colorizer(primaryColor, 1.0), height: "100%" }} />
         </View>
-        <View className="flex-row mt-4 w-full justify-between px-2">
-          <View className="items-center">
-            <Text className="text-xs" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Linotte_Bold" }}>
-              Rate: {formatBytes(downloadRate)}/s
-            </Text>
+        <View style={{ flexDirection: "row", marginTop: 16, width: "100%", justifyContent: "space-between", paddingHorizontal: 8 }}>
+          <View style={{ alignItems: "center" }}>
+            <Text style={{ fontSize: 12, color: Colorizer(primaryColor, 1.0), fontFamily: "Linotte_Bold" }}> Rate: {formatBytes(downloadRate)}/s </Text>
           </View>
-          <View className="items-center">
-            <Text className="text-xs" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Linotte_Bold" }}>
-              ETA: {formatTime(eta)}
-            </Text>
+          <View style={{ alignItems: "center" }}>
+            <Text style={{ fontSize: 12, color: Colorizer(primaryColor, 1.0), fontFamily: "Linotte_Bold" }}> ETA: {formatTime(eta)} </Text>
           </View>
         </View>
       </View>
     </View>
   );
 };
-
+// ============================================================================================
+// ============================================================================================
 const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number; onViewFullScreen: () => void }> = ({ selectedImage, screenWidth, onViewFullScreen }) => {
   const [imageLoading, setImageLoading] = useState(true);
   const aspectRatio = selectedImage.width / selectedImage.height;
@@ -153,25 +165,23 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
     Animated.loop(animation).start();
   }, [scaleValue]);
   return (
-    <View className="relative">
-      <View className="absolute inset-0 z-50 justify-center items-center">
+    <View style={{ position: "relative" }}>
+      <View style={{ position: "absolute", top: 0, bottom: 0, left: 0, right: 0, zIndex: 50, justifyContent: "center", alignItems: "center" }}>
         {!imageLoading && (
-          <View className="items-center">
-            <Animated.View className="justify-center items-center rounded-full">
+          <View style={{ alignItems: "center" }}>
+            <Animated.View style={{ justifyContent: "center", alignItems: "center", borderRadius: 9999 }}>
               <Image style={{ width: 64, height: 64, borderRadius: 32, backgroundColor: Colorizer("#000000", 0.8) }} source={require("@/assets/picWall/picWall.png")} contentFit="contain" />
             </Animated.View>
           </View>
         )}
       </View>
       {imageLoading && (
-        <View className="absolute inset-0 z-40 justify-center items-center" style={{ backgroundColor: Colorizer("#000000", 1.0) }}>
+        <View style={{ position: "absolute", top: 0, bottom: 0, left: 0, right: 0, zIndex: 40, justifyContent: "center", alignItems: "center", backgroundColor: Colorizer("#000000", 1.0) }}>
           <ActivityIndicator size="large" color={Colorizer(selectedImage.primary, 1.0)} />
-          <Text className="mt-2.5" style={{ fontFamily: "Linotte_Bold", color: Colorizer(selectedImage.primary, 1.0) }}>
-            Loading HD Image Preview...
-          </Text>
+          <Text style={{ marginTop: 10, fontFamily: "Linotte_Bold", color: Colorizer(selectedImage.primary, 1.0) }}> Loading HD Image Preview... </Text>
         </View>
       )}
-      <Animated.View className="overflow-hidden rounded-t-3xl" style={[{ width: "100%", height: imageHeight, borderTopLeftRadius: 20, borderTopRightRadius: 20, transform: [{ scale: scaleValue }] }]}>
+      <Animated.View style={[{ overflow: "hidden", borderTopLeftRadius: 20, borderTopRightRadius: 20, width: "100%", height: imageHeight, transform: [{ scale: scaleValue }] }]}>
         <Image
           contentFit="cover"
           cachePolicy="memory-disk"
@@ -187,23 +197,32 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
       </Animated.View>
       <TouchableOpacity
         onPress={onViewFullScreen}
-        className="absolute w-full bottom-5 mx-4 px-4 py-2 rounded-full z-50"
-        style={{ backgroundColor: Colorizer(selectedImage.secondary, 0.9), borderRadius: 9999, borderWidth: 1, borderColor: Colorizer(selectedImage.primary, 1.0) }}
+        style={{
+          position: "absolute",
+          bottom: 20,
+          left: 20,
+          right: 20,
+          backgroundColor: Colorizer(selectedImage.secondary, 0.9),
+          borderRadius: 9999,
+          borderWidth: 1,
+          borderColor: Colorizer(selectedImage.primary, 1.0),
+          paddingHorizontal: 16,
+          paddingVertical: 8,
+          alignItems: "center"
+        }}
         activeOpacity={0.8}
       >
-        <Text className="text-white text-base" style={{ fontFamily: "Kurale_Regular" }}>
-          View Current Wallpaper In Full-Screen
-        </Text>
+        <Text style={{ color: "#FFFFFF", fontSize: 16, fontFamily: "Kurale_Regular", textAlign: "center" }}> View Current Wallpaper In Full-Screen </Text>
       </TouchableOpacity>
     </View>
   );
 };
-
+// ============================================================================================
+// ============================================================================================
 interface DownloadButtonProps {
   onDownload?: (event: any) => void;
   colors: { primary: string; secondary: string; tertiary: string };
 }
-
 const DownloadButton: React.FC<DownloadButtonProps> = ({ onDownload, colors }) => {
   const scaleValue = useRef(new Animated.Value(1)).current;
   useEffect(() => {
@@ -217,48 +236,39 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({ onDownload, colors }) =
     return () => pulse.stop();
   }, [scaleValue]);
   return (
-    <TouchableOpacity onPress={onDownload} activeOpacity={0.8} className="mt-2 rounded-2xl overflow-hidden" style={{ backgroundColor: Colorizer(colors.primary, 0.4) }}>
-      <Animated.View className="flex-row items-center justify-center p-3" style={{ transform: [{ scale: scaleValue }] }}>
-        <View className="flex-row items-center justify-center">
-          <Text className="text-white text-lg" style={{ fontFamily: "Lobster_Regular" }}>
-            Download Wallpaper
-          </Text>
+    <TouchableOpacity onPress={onDownload} activeOpacity={0.8} style={{ marginTop: 8, borderRadius: 24, overflow: "hidden", backgroundColor: Colorizer(colors.primary, 0.4) }}>
+      <Animated.View style={{ flexDirection: "row", alignItems: "center", justifyContent: "center", padding: 12, transform: [{ scale: scaleValue }] }}>
+        <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
+          <Text style={{ color: "#FFFFFF", fontSize: 18, fontFamily: "Lobster_Regular" }}> Download Wallpaper </Text>
           <FontAwesome5 name="download" size={15} color={Colorizer("#E9E9EA", 1.0)} style={{ marginHorizontal: 8 }} />
-          <Text className="text-white text-lg" style={{ fontFamily: "Lobster_Regular" }}>
-            (Highest Quality)
-          </Text>
+          <Text style={{ color: "#FFFFFF", fontSize: 18, fontFamily: "Lobster_Regular" }}> (Highest Quality) </Text>
         </View>
       </Animated.View>
     </TouchableOpacity>
   );
 };
-
+// ============================================================================================
+// ============================================================================================
 interface OtherImagesProps {
   primaryColor: string;
   tertiaryColor: string;
   setCurrentIndex: (index: number) => void;
   otherImages: { img: ImageMetadata; idx: number }[];
 }
-
 const OtherImages: React.FC<OtherImagesProps> = ({ otherImages, setCurrentIndex, primaryColor, tertiaryColor }) => (
-  <View className="p-1 my-2 rounded-2xl" style={{ backgroundColor: Colorizer(primaryColor, 0.2) }}>
-    <View className="p-1 rounded-2xl" style={{ backgroundColor: Colorizer(tertiaryColor, 0.2) }}>
-      <Text className="ml-2 text-xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer("#E9E9EA", 1.0) }}>
-        Other Wallpapers:
-      </Text>
-      <View className="flex-row flex-wrap my-1">
+  <View style={{ padding: 4, marginVertical: 8, borderRadius: 24, backgroundColor: Colorizer(primaryColor, 0.2) }}>
+    <View style={{ padding: 4, borderRadius: 24, backgroundColor: Colorizer(tertiaryColor, 0.2) }}>
+      <Text style={{ marginLeft: 8, fontSize: 24, fontFamily: "Lobster_Regular", color: Colorizer("#E9E9EA", 1.0) }}> Other Wallpapers: </Text>
+      <View style={{ flexDirection: "row", flexWrap: "wrap", marginVertical: 4 }}>
         {otherImages.map(({ img, idx }) => (
           <TouchableOpacity
             key={idx}
-            className="relative rounded-2xl overflow-hidden mx-0.5 flex-1"
-            style={{ aspectRatio: 9 / 16, borderRadius: 10, borderWidth: 1, borderColor: Colorizer(primaryColor, 1.0) }}
+            style={{ position: "relative", borderRadius: 24, overflow: "hidden", marginHorizontal: 1, flex: 1, aspectRatio: 9 / 16, borderWidth: 1, borderColor: Colorizer(primaryColor, 1.0) }}
             onPress={() => setCurrentIndex(idx)}
           >
             <Image source={{ uri: img.previewLink }} style={{ width: "100%", height: "100%" }} contentFit="cover" />
-            <View className="absolute top-1 left-1 bg-black/50 px-1 py-1 rounded-lg">
-              <Text className="text-white text-xs" style={{ fontFamily: "Kurale_Regular" }}>
-                {img.original_file_name.replace(".jpg", "")}
-              </Text>
+            <View style={{ position: "absolute", top: 4, left: 4, backgroundColor: "rgba(0,0,0,0.5)", paddingHorizontal: 4, paddingVertical: 2, borderRadius: 4 }}>
+              <Text style={{ color: "#FFFFFF", fontSize: 12, fontFamily: "Kurale_Regular" }}> {img.original_file_name.replace(".jpg", "")} </Text>
             </View>
           </TouchableOpacity>
         ))}
@@ -266,14 +276,14 @@ const OtherImages: React.FC<OtherImagesProps> = ({ otherImages, setCurrentIndex,
     </View>
   </View>
 );
-
+// ============================================================================================
+// ============================================================================================
 interface FullScreenViewProps {
   isFullScreen: boolean;
   setIsFullScreen: (isFullScreen: boolean) => void;
   selectedImage: ImageMetadata;
   showAlert: (title: string, message: string, iconName: "error" | "checkmark-done-circle") => void;
 }
-
 const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFullScreen, selectedImage, showAlert }) => {
   return (
     <Modal visible={isFullScreen} transparent={false} onRequestClose={() => setIsFullScreen(false)} presentationStyle="fullScreen" statusBarTranslucent>
@@ -304,10 +314,9 @@ const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFull
               style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}
             >
               <Ionicons name="image" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
-              <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Set LockScreen</Text>
+              <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}> Set LockScreen </Text>
             </TouchableOpacity>
           </LinearGradient>
-
           <LinearGradient
             colors={[Colorizer(selectedImage.tertiary, 0.8), Colorizer(selectedImage.tertiary, 0.6), Colorizer(selectedImage.tertiary, 0.4)]}
             style={{ flex: 1, height: 40, borderRadius: 10, marginHorizontal: 1 }}
@@ -326,10 +335,9 @@ const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFull
               style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}
             >
               <Ionicons name="image" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
-              <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Set HomeScreen</Text>
+              <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}> Set HomeScreen </Text>
             </TouchableOpacity>
           </LinearGradient>
-
           <LinearGradient
             colors={[Colorizer(selectedImage.tertiary, 0.8), Colorizer(selectedImage.tertiary, 0.6), Colorizer(selectedImage.tertiary, 0.4)]}
             style={{ flex: 1, height: 40, borderRadius: 10, marginHorizontal: 1 }}
@@ -348,7 +356,7 @@ const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFull
               style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}
             >
               <Ionicons name="image" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
-              <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Set BothScreens</Text>
+              <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}> Set BothScreens </Text>
             </TouchableOpacity>
           </LinearGradient>
         </View>
@@ -356,7 +364,8 @@ const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFull
     </Modal>
   );
 };
-
+// ============================================================================================
+// ============================================================================================
 const ImagePage = () => {
   const params = useLocalSearchParams();
   const [eta, setEta] = useState<number>(0);
@@ -423,26 +432,22 @@ const ImagePage = () => {
   const allImages: { img: ImageMetadata; idx: number }[] = (Sanitized.data as ImageMetadata[]).map((img, idx) => ({ img, idx }));
   const otherImages = allImages.filter(({ idx }) => idx !== currentIndex);
   return (
-    <View className="flex-1" style={{ backgroundColor: Colorizer("#000000", 1.0) }}>
+    <View style={{ flex: 1, backgroundColor: Colorizer("#000000", 1.0) }}>
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
-      <ScrollView className="flex-1">
+      <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <PreviewImage selectedImage={selectedImage} screenWidth={screenWidth} onViewFullScreen={() => setIsFullScreen(true)} />
-        <View className="p-4 border-4 rounded-3xl" style={{ borderColor: Colorizer(selectedImage.primary, 1.0), backgroundColor: Colorizer("#111111", 1.0) }}>
-          <Text className="mb-2 text-5xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer(selectedImage.primary, 1.0) }}>
-            {selectedImage.original_file_name.replace(".jpg", "")}
-          </Text>
+        <View style={{ padding: 16, borderWidth: 4, borderRadius: 24, borderColor: Colorizer(selectedImage.primary, 1.0), backgroundColor: Colorizer("#111111", 1.0), margin: 16 }}>
+          <Text style={{ marginBottom: 8, fontSize: 40, fontFamily: "Lobster_Regular", color: Colorizer(selectedImage.primary, 1.0) }}>{selectedImage.original_file_name.replace(".jpg", "")}</Text>
           {[
             { label: "Mode", value: selectedImage.mode },
             { label: "FileSize", value: `${selectedImage.file_size_megabytes} mb` },
             { label: "Dimensions", value: `${selectedImage.width} x ${selectedImage.height}` }
           ].map((item, index) => (
-            <View key={index} className="flex-row items-center my-2">
-              <FontAwesome5 name={index === 0 ? "adjust" : index === 1 ? "file-alt" : "ruler-combined"} size={16} color={Colorizer(selectedImage.primary, 1.0)} className="ml-1" />
-              <View className="flex-row items-center mx-1">
-                <Text style={{ fontFamily: "Lobster_Regular", color: Colorizer(selectedImage.primary, 1.0) }}>{item.label}:</Text>
-                <Text className="ml-2" style={{ fontFamily: "Kurale_Regular", color: Colorizer(selectedImage.primary, 1.0) }}>
-                  {item.value}
-                </Text>
+            <View key={index} style={{ flexDirection: "row", alignItems: "center", marginVertical: 8 }}>
+              <FontAwesome5 name={index === 0 ? "adjust" : index === 1 ? "file-alt" : "ruler-combined"} size={16} color={Colorizer(selectedImage.primary, 1.0)} style={{ marginLeft: 4 }} />
+              <View style={{ flexDirection: "row", alignItems: "center", marginHorizontal: 4 }}>
+                <Text style={{ fontFamily: "Lobster_Regular", color: Colorizer(selectedImage.primary, 1.0) }}> {item.label}: </Text>
+                <Text style={{ marginLeft: 8, fontFamily: "Kurale_Regular", color: Colorizer(selectedImage.primary, 1.0) }}> {item.value} </Text>
               </View>
             </View>
           ))}

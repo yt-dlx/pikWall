@@ -63,11 +63,10 @@ const AnimatedTitle: React.FC = () => {
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
   return (
     <Animated.View
-      style={[animatedStyle, { shadowColor: Colorizer("#000000", 1.0), shadowOffset: { width: 0, height: 8 }, shadowOpacity: 0.4, shadowRadius: 12 }]}
-      className="items-center mb-4"
+      style={[animatedStyle, { shadowColor: Colorizer("#000000", 1.0), shadowOffset: { width: 0, height: 8 }, shadowOpacity: 0.4, shadowRadius: 12, alignItems: "center", marginBottom: 16 }]}
       entering={FadeIn.delay(300).duration(1500)}
     >
-      <View className="rounded-full p-1" style={{ backgroundColor: Colorizer("#000000", 0.8), justifyContent: "center", alignItems: "center" }}>
+      <View style={{ borderRadius: 9999, padding: 4, backgroundColor: Colorizer("#000000", 0.8), justifyContent: "center", alignItems: "center" }}>
         <Image
           alt="logo"
           contentFit="contain"
@@ -81,7 +80,7 @@ const AnimatedTitle: React.FC = () => {
 };
 // ============================================================================================
 // ============================================================================================
-const IndexPage: React.FC = () => {
+const AppPage: React.FC = () => {
   const buttonScale = useSharedValue(1);
   const buttonRotate = useSharedValue(0);
   const buttonGlow = useSharedValue(0);
@@ -106,24 +105,24 @@ const IndexPage: React.FC = () => {
     buttonRotate.value = withSpring(0, { damping: 15, stiffness: 90 });
   };
   return (
-    <View style={{ backgroundColor: Colorizer("#000000", 1.0) }} className="h-full w-full">
-      <View className="flex-1 justify-center items-center relative">
-        <View className="flex-row h-full overflow-hidden relative">
+    <View style={{ backgroundColor: Colorizer("#000000", 1.0), height: "100%", width: "100%" }}>
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center", position: "relative" }}>
+        <View style={{ flexDirection: "row", height: "100%", overflow: "hidden", position: "relative" }}>
           {imageSets.map((images, slotIndex) => (
             <ScrollingSlot key={slotIndex} images={images} reverse={slotIndex % 2 === 0} delay={slotIndex * 400} />
           ))}
           <LinearGradient
             colors={[Colorizer("#070808", 1.0), Colorizer("#070808", 0.4), Colorizer("#070808", 0.1), Colorizer("#070808", 0.4), Colorizer("#070808", 1.0)]}
             locations={[0, 0.2, 0.5, 0.8, 1]}
-            className="absolute inset-0"
+            style={{ position: "absolute", top: 0, right: 0, bottom: 0, left: 0 }}
           />
-          <View className="absolute inset-0 justify-center items-center mt-20">
+          <View style={{ position: "absolute", top: 0, right: 0, bottom: 0, left: 0, justifyContent: "center", alignItems: "center", marginTop: 80 }}>
             <AnimatedTitle />
             <Animated.View entering={FadeInDown.delay(600).duration(1500).springify()}>
               <View>
                 <Text
-                  className="text-center"
                   style={{
+                    textAlign: "center",
                     fontSize: 80,
                     textShadowRadius: 60,
                     color: Colorizer("#E9E9EA", 1.0),
@@ -134,30 +133,28 @@ const IndexPage: React.FC = () => {
                 >
                   picWall
                 </Text>
-                <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Dm_Serif_Display_Regular", color: Colorizer("#E9E9EA", 1.0), fontSize: 80 }}>
+                <Text style={{ textAlign: "center", position: "absolute", left: 0, right: 0, top: 0, fontFamily: "Dm_Serif_Display_Regular", color: Colorizer("#E9E9EA", 1.0), fontSize: 80 }}>
                   picWall
                 </Text>
                 <Animated.View style={{ alignSelf: "center" }} entering={FadeInDown.delay(600).duration(1500).springify()}>
                   <View style={{ backgroundColor: Colorizer("#000000", 0.9), borderRadius: 12, paddingHorizontal: 12, paddingVertical: 4, marginTop: 8 }}>
-                    <Text className="text-center" style={{ fontFamily: "Caveat_Bold", color: Colorizer("#E9E9EA", 1.0), fontSize: 16 }}>
+                    <Text style={{ textAlign: "center", fontFamily: "Caveat_Bold", color: Colorizer("#E9E9EA", 1.0), fontSize: 16 }}>
                       Crafted with <Text style={{ color: Colorizer("#BE2528", 1.0) }}>♥</Text> in India
                     </Text>
                   </View>
                 </Animated.View>
               </View>
               <Link href="./Home" asChild>
-                <TouchableOpacity onPressIn={onPressIn} onPressOut={onPressOut} className="mt-44 rounded-2xl overflow-hidden">
+                <TouchableOpacity onPressIn={onPressIn} onPressOut={onPressOut} style={{ marginTop: 176, borderRadius: 24, overflow: "hidden" }}>
                   <Animated.View style={[buttonAnimatedStyle, { shadowColor: Colorizer("#000000", 1.0), shadowOffset: { width: 0, height: 4 } }]}>
                     <LinearGradient
                       colors={[Colorizer("#FFFFFF", 1.0), Colorizer("#F0F0F0", 1.0)]}
                       start={{ x: 0, y: 0 }}
                       end={{ x: 1, y: 1 }}
-                      className="flex-row items-center justify-center px-10 py-4"
+                      style={{ flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: 40, paddingVertical: 16 }}
                     >
                       <FontAwesome5 name="camera-retro" size={32} color={Colorizer("#000000", 1.0)} style={{ marginRight: 12 }} />
-                      <Text className="text-2xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer("#000000", 1.0) }}>
-                        Let's Explore Wallpapers
-                      </Text>
+                      <Text style={{ fontSize: 24, fontFamily: "Lobster_Regular", color: Colorizer("#000000", 1.0) }}> Let's Explore Wallpapers </Text>
                     </LinearGradient>
                   </Animated.View>
                 </TouchableOpacity>
@@ -177,4 +174,4 @@ const IndexPage: React.FC = () => {
   );
 };
 
-export default IndexPage;
+export default AppPage;
