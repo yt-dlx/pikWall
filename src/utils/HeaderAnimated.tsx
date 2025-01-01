@@ -1,5 +1,4 @@
-// components/HeaderAnimated.tsx
-/* eslint-disable @typescript-eslint/no-require-imports */
+// src/utils/HeaderAnimated.tsx
 import Colorizer from "./Colorizer";
 import React, { useEffect } from "react";
 import imageSets from "@/database/static";

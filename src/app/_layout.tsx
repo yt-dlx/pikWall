@@ -1,9 +1,9 @@
-// app/_layout.tsx
+// src/app/_layout.tsx
 import "@/global.css";
 import React from "react";
 import { Stack } from "expo-router";
 import { useFonts } from "expo-font";
-import Colorizer from "@/components/Colorizer";
+import Colorizer from "@/utils/Colorizer";
 import * as SplashScreen from "expo-splash-screen";
 import { LinearGradient } from "expo-linear-gradient";
 import { SafeAreaView, StatusBar, View } from "react-native";

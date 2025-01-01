@@ -1,16 +1,16 @@
 // src/app/index.tsx
-import { Link, useRouter } from "expo-router";
 import { Image } from "expo-image";
-import React, { useEffect, useState } from "react";
+import Footer from "@/utils/Footer";
+import Colorizer from "@/utils/Colorizer";
 import imageSets from "@/database/static";
-import Footer from "@/components/Footer";
-import Colorizer from "@/components/Colorizer";
+import { Link, useRouter } from "expo-router";
+import React, { useEffect, useState } from "react";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { ScrollingSlotProps } from "@/types/components";
+import { useAppStore, restoreStateAfterRestart } from "@/utils/store";
 import { Text, View, TouchableOpacity, ActivityIndicator } from "react-native";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence, withDelay, withSpring, Easing, FadeIn, FadeInDown } from "react-native-reanimated";
-import { useAppStore, restoreStateAfterRestart } from "@/components/store";
 
 const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay }) => {
   const imageHeight = 220;

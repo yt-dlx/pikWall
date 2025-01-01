@@ -1,15 +1,15 @@
-// app/ImagePage.tsx
+// src/app/Image/index.tsx
 import { Image } from "expo-image";
+import Colorizer from "@/utils/Colorizer";
 import * as FileSystem from "expo-file-system";
-import Colorizer from "@/components/Colorizer";
 import { ImageMetadata } from "@/types/database";
 import { useLocalSearchParams } from "expo-router";
 import * as MediaLibrary from "expo-media-library";
 import { LinearGradient } from "expo-linear-gradient";
 import React, { useState, useEffect, useRef } from "react";
 import { setWallpaper, TYPE_SCREEN } from "rn-wallpapers";
+import { useAppStore, saveStateBeforeWallpaper } from "@/utils/store";
 import { FontAwesome5, MaterialIcons, Ionicons } from "@expo/vector-icons";
-import { useAppStore, saveStateBeforeWallpaper } from "@/components/store";
 import { View, Text, Dimensions, StatusBar, ActivityIndicator, TouchableOpacity, Alert, Modal, Animated, Easing, ScrollView, BackHandler } from "react-native";
 
 const { width: screenWidth } = Dimensions.get("window");

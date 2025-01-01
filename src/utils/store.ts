@@ -1,4 +1,4 @@
-// src/components/store.ts
+// src/utils/store.ts
 import { create } from "zustand";
 import { ImageMetadata } from "@/types/database";
 import { createJSONStorage, persist } from "zustand/middleware";

@@ -1,4 +1,4 @@
-// app/Home/index.tsx
+// src/app/Home/index.tsx
 import MountainsAndBeaches from "@/database/Mountains And Beaches";
 import CosmicAndLightning from "@/database/Cosmic And Lightning";
 import AntiqueLookObject from "@/database/Antique Look Object";
@@ -10,15 +10,14 @@ import HyperCloseups from "@/database/Hyper Closeups";
 import PortraitPerfect from "@/database/Portrait Perfect";
 import AerialView from "@/database/Aerial View";
 import * as React from "react";
-import { useRouter } from "expo-router";
 import { Image } from "expo-image";
-import Footer from "@/components/Footer";
-import Colorizer from "@/components/Colorizer";
-import { useAppStore } from "@/components/store";
+import Footer from "@/utils/Footer";
+import Colorizer from "@/utils/Colorizer";
+import { useAppStore } from "@/utils/store";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { EnvironmentEntry } from "@/types/database";
 import { LinearGradient } from "expo-linear-gradient";
-import HeaderAnimate from "@/components/HeaderAnimated";
+import HeaderAnimate from "@/utils/HeaderAnimated";
 import { SubImagesProps, CardProps, CategoryButtonProps } from "@/types/components";
 import { View, Text, TouchableOpacity, FlatList, ScrollView, StatusBar } from "react-native";
 import Animated, { Easing, runOnJS, useSharedValue, useAnimatedStyle, withTiming, withRepeat } from "react-native-reanimated";

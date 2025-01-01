@@ -1,4 +1,4 @@
-// components/Colorizer.ts
+// src/utils/Colorizer.ts
 const Colorizer = (hex: string, opacity: number): string => {
   const sanitizedHex = hex.replace(/^#/, "");
   const r = parseInt(sanitizedHex.substring(0, 2), 16);
