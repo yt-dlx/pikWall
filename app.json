@@ -24,7 +24,7 @@
     "android": {
       "requiresFullScreen": true,
       "package": "com.shovit.picWall",
-      "adaptiveIcon": { "backgroundColor": "#000000", "foregroundImage": "./src/assets/p,icWall/picWall.png" },
+      "adaptiveIcon": { "backgroundColor": "#000000", "foregroundImage": "./src/assets/picWall/picWall.png" },
       "permissions": ["READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE", "SET_WALLPAPER "]
     },
     "plugins": [

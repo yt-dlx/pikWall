@@ -83,8 +83,8 @@ const AnimatedTitle: React.FC = () => {
 // ============================================================================================
 const IndexPage: React.FC = () => {
   const buttonScale = useSharedValue(1);
-  const buttonRotate = useSharedValue(0);
   const buttonGlow = useSharedValue(0);
+  const buttonRotate = useSharedValue(0);
   useEffect(() => {
     buttonGlow.value = withRepeat(
       withSequence(withTiming(1, { duration: 2000, easing: Easing.bezier(0.4, 0, 0.2, 1) }), withTiming(0, { duration: 2000, easing: Easing.bezier(0.4, 0, 0.2, 1) })),
