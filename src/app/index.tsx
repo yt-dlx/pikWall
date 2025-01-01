@@ -39,7 +39,7 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
               borderRadius: 20,
               width: "100%",
               margin: 3,
-              shadowColor: Colorizer("#1A1A1A", 1.0),
+              shadowColor: Colorizer("#080505", 1.0),
               shadowOffset: { width: 0, height: 4 },
               shadowOpacity: 0.3,
               shadowRadius: 8
@@ -64,17 +64,17 @@ const AnimatedTitle: React.FC = () => {
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
   return (
     <Animated.View
-      style={[animatedStyle, { shadowColor: Colorizer("#1A1A1A", 1.0), shadowOffset: { width: 0, height: 8 }, shadowOpacity: 0.4, shadowRadius: 12 }]}
+      style={[animatedStyle, { shadowColor: Colorizer("#080505", 1.0), shadowOffset: { width: 0, height: 8 }, shadowOpacity: 0.4, shadowRadius: 12 }]}
       className="items-center mb-4"
       entering={FadeIn.delay(300).duration(1500)}
     >
-      <View className="rounded-full p-1" style={{ backgroundColor: Colorizer("#1A1A1A", 0.8), justifyContent: "center", alignItems: "center" }}>
+      <View className="rounded-full p-1" style={{ backgroundColor: Colorizer("#080505", 0.8), justifyContent: "center", alignItems: "center" }}>
         <Image
           alt="logo"
           contentFit="contain"
           cachePolicy="memory-disk"
           source={require("@/assets/picWall/picWall.png")}
-          style={{ width: 150, height: 150, borderWidth: 1, borderRadius: 9999, borderColor: Colorizer("#F5F5F5", 1.0) }}
+          style={{ width: 150, height: 150, borderWidth: 1, borderRadius: 9999, borderColor: Colorizer("#F2EFE0", 1.0) }}
         />
       </View>
     </Animated.View>
@@ -107,14 +107,14 @@ const AppPage: React.FC = () => {
     buttonRotate.value = withSpring(0, { damping: 15, stiffness: 90 });
   };
   return (
-    <View style={{ backgroundColor: Colorizer("#1A1A1A", 1.0) }} className="h-full w-full">
+    <View style={{ backgroundColor: Colorizer("#080505", 1.0) }} className="h-full w-full">
       <View className="flex-1 justify-center items-center relative">
         <View className="flex-row h-full overflow-hidden relative">
           {imageSets.map((images, slotIndex) => (
             <ScrollingSlot key={slotIndex} images={images} reverse={slotIndex % 2 === 0} delay={slotIndex * 400} />
           ))}
           <LinearGradient
-            colors={[Colorizer("#1A1A1A", 1.0), Colorizer("#1A1A1A", 0.4), Colorizer("#1A1A1A", 0.1), Colorizer("#1A1A1A", 0.4), Colorizer("#1A1A1A", 1.0)]}
+            colors={[Colorizer("#080505", 1.0), Colorizer("#080505", 0.4), Colorizer("#080505", 0.1), Colorizer("#080505", 0.4), Colorizer("#080505", 1.0)]}
             style={{ position: "absolute", top: 0, right: 0, bottom: 0, left: 0 }}
             locations={[0, 0.2, 0.4, 0.5, 1]}
           />
@@ -127,20 +127,20 @@ const AppPage: React.FC = () => {
                   style={{
                     fontSize: 80,
                     textShadowRadius: 60,
-                    color: Colorizer("#F5F5F5", 1.0),
+                    color: Colorizer("#F2EFE0", 1.0),
                     textShadowOffset: { width: 24, height: 2 },
                     fontFamily: "Dm_Serif_Display_Regular",
-                    textShadowColor: Colorizer("#1A1A1A", 1.0)
+                    textShadowColor: Colorizer("#080505", 1.0)
                   }}
                 >
                   picWall
                 </Text>
-                <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Dm_Serif_Display_Regular", color: Colorizer("#F5F5F5", 1.0), fontSize: 80 }}>
+                <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Dm_Serif_Display_Regular", color: Colorizer("#F2EFE0", 1.0), fontSize: 80 }}>
                   picWall
                 </Text>
                 <Animated.View style={{ alignSelf: "center" }} entering={FadeInDown.delay(600).duration(1500).springify()}>
-                  <View style={{ backgroundColor: Colorizer("#1A1A1A", 0.9), borderRadius: 12, paddingHorizontal: 12, paddingVertical: 4, marginTop: 8 }}>
-                    <Text className="text-center" style={{ fontFamily: "Caveat_Bold", color: Colorizer("#F5F5F5", 1.0), fontSize: 16 }}>
+                  <View style={{ backgroundColor: Colorizer("#080505", 0.9), borderRadius: 12, paddingHorizontal: 12, paddingVertical: 4, marginTop: 8 }}>
+                    <Text className="text-center" style={{ fontFamily: "Caveat_Bold", color: Colorizer("#F2EFE0", 1.0), fontSize: 16 }}>
                       Crafted with <Text style={{ color: Colorizer("#BE2528", 1.0) }}>♥</Text> in India
                     </Text>
                   </View>
@@ -148,15 +148,15 @@ const AppPage: React.FC = () => {
               </View>
               <Link href="./Home" asChild>
                 <TouchableOpacity onPressIn={onPressIn} onPressOut={onPressOut} className="mt-44 rounded-2xl overflow-hidden">
-                  <Animated.View style={[buttonAnimatedStyle, { shadowColor: Colorizer("#1A1A1A", 1.0), shadowOffset: { width: 0, height: 4 } }]}>
+                  <Animated.View style={[buttonAnimatedStyle, { shadowColor: Colorizer("#080505", 1.0), shadowOffset: { width: 0, height: 4 } }]}>
                     <LinearGradient
                       colors={[Colorizer("#FFFFFF", 1.0), Colorizer("#F0F0F0", 1.0)]}
                       start={{ x: 0, y: 0 }}
                       end={{ x: 1, y: 1 }}
                       className="flex-row items-center justify-center px-10 py-4"
                     >
-                      <FontAwesome5 name="camera-retro" size={32} color={Colorizer("#1A1A1A", 1.0)} style={{ marginRight: 12 }} />
-                      <Text className="text-2xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer("#1A1A1A", 1.0) }}>
+                      <FontAwesome5 name="camera-retro" size={32} color={Colorizer("#080505", 1.0)} style={{ marginRight: 12 }} />
+                      <Text className="text-2xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer("#080505", 1.0) }}>
                         Let's Explore Wallpapers
                       </Text>
                     </LinearGradient>
@@ -164,8 +164,8 @@ const AppPage: React.FC = () => {
                 </TouchableOpacity>
               </Link>
               <Animated.View entering={FadeIn.delay(1200).duration(1500)} style={{ marginTop: 10, paddingHorizontal: 20, alignItems: "center" }}>
-                <Text style={{ fontFamily: "Caveat_Bold", color: Colorizer("#F5F5F5", 0.8), fontSize: 20, textAlign: "center", marginBottom: 4 }}>Personalised AI Wallpapers</Text>
-                <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#F5F5F5", 0.6), fontSize: 10, textAlign: "center", maxWidth: 200 }}>
+                <Text style={{ fontFamily: "Caveat_Bold", color: Colorizer("#F2EFE0", 0.8), fontSize: 20, textAlign: "center", marginBottom: 4 }}>Personalised AI Wallpapers</Text>
+                <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#F2EFE0", 0.6), fontSize: 10, textAlign: "center", maxWidth: 200 }}>
                   Create stunning collections, share your moments, and discover amazing photographs from around the world. Join our community of passionate photographers today!
                 </Text>
               </Animated.View>
