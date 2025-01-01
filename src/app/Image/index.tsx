@@ -1,4 +1,3 @@
-// src/app/Image/index.tsx
 import { Image } from "expo-image";
 import * as FileSystem from "expo-file-system";
 import Colorizer from "@/components/Colorizer";
@@ -14,23 +13,55 @@ import { View, Text, Dimensions, StatusBar, ActivityIndicator, TouchableOpacity,
 
 const { width: screenWidth } = Dimensions.get("window");
 
-const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () => void }> = ({ visible, message, onClose }) => {
+// ---------------------------------------------------
+// SuccessModal
+// ---------------------------------------------------
+const SuccessModal: React.FC<{
+  visible: boolean;
+  message: string;
+  onClose: () => void;
+}> = ({ visible, message, onClose }) => {
   const [modalAnim] = useState(new Animated.Value(0));
+
   useEffect(() => {
-    if (visible) Animated.timing(modalAnim, { toValue: 1, duration: 300, useNativeDriver: true }).start();
-    else Animated.timing(modalAnim, { toValue: 0, duration: 300, useNativeDriver: true }).start();
+    if (visible) {
+      Animated.timing(modalAnim, {
+        toValue: 1,
+        duration: 300,
+        useNativeDriver: true
+      }).start();
+    } else {
+      Animated.timing(modalAnim, {
+        toValue: 0,
+        duration: 300,
+        useNativeDriver: true
+      }).start();
+    }
   }, [visible, modalAnim]);
+
   const backdropStyle = { opacity: modalAnim };
-  const scale = modalAnim.interpolate({ inputRange: [0, 1], outputRange: [0.8, 1] });
+  const scale = modalAnim.interpolate({
+    inputRange: [0, 1],
+    outputRange: [0.8, 1]
+  });
   const modalStyle = { opacity: modalAnim, transform: [{ scale }] };
+
   if (!visible) return null;
+
   return (
     <View className="absolute inset-0 justify-center items-center">
       <Animated.View className="absolute top-0 left-0 right-0 bottom-0" style={[{ backgroundColor: Colorizer("#000000", 0.5) }, backdropStyle]} />
       <Animated.View
         className="w-4/5 p-5 rounded-lg items-center shadow-lg"
         style={[
-          { backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 },
+          {
+            backgroundColor: Colorizer("#E9E9EA", 1.0),
+            shadowColor: Colorizer("#000000", 0.25),
+            shadowOffset: { width: 0, height: 5 },
+            shadowOpacity: 0.25,
+            shadowRadius: 10,
+            elevation: 10
+          },
           modalStyle
         ]}
       >
@@ -51,23 +82,55 @@ const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () =>
   );
 };
 
-const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => void }> = ({ visible, message, onClose }) => {
+// ---------------------------------------------------
+// ErrorModal
+// ---------------------------------------------------
+const ErrorModal: React.FC<{
+  visible: boolean;
+  message: string;
+  onClose: () => void;
+}> = ({ visible, message, onClose }) => {
   const [modalAnim] = useState(new Animated.Value(0));
+
   useEffect(() => {
-    if (visible) Animated.timing(modalAnim, { toValue: 1, duration: 300, useNativeDriver: true }).start();
-    else Animated.timing(modalAnim, { toValue: 0, duration: 300, useNativeDriver: true }).start();
+    if (visible) {
+      Animated.timing(modalAnim, {
+        toValue: 1,
+        duration: 300,
+        useNativeDriver: true
+      }).start();
+    } else {
+      Animated.timing(modalAnim, {
+        toValue: 0,
+        duration: 300,
+        useNativeDriver: true
+      }).start();
+    }
   }, [visible, modalAnim]);
+
   const backdropStyle = { opacity: modalAnim };
-  const scale = modalAnim.interpolate({ inputRange: [0, 1], outputRange: [0.8, 1] });
+  const scale = modalAnim.interpolate({
+    inputRange: [0, 1],
+    outputRange: [0.8, 1]
+  });
   const modalStyle = { opacity: modalAnim, transform: [{ scale }] };
+
   if (!visible) return null;
+
   return (
     <View className="absolute inset-0 justify-center items-center">
       <Animated.View className="absolute top-0 left-0 right-0 bottom-0" style={[{ backgroundColor: Colorizer("#000000", 0.5) }, backdropStyle]} />
       <Animated.View
         className="w-4/5 p-5 rounded-lg items-center shadow-lg"
         style={[
-          { backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 },
+          {
+            backgroundColor: Colorizer("#E9E9EA", 1.0),
+            shadowColor: Colorizer("#000000", 0.25),
+            shadowOffset: { width: 0, height: 5 },
+            shadowOpacity: 0.25,
+            shadowRadius: 10,
+            elevation: 10
+          },
           modalStyle
         ]}
       >
@@ -88,12 +151,32 @@ const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => v
   );
 };
 
-const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloadRate: number; eta: number; primaryColor: string }> = ({ visible, percentage, downloadRate, eta, primaryColor }) => {
+// ---------------------------------------------------
+// DownloadingModal
+// ---------------------------------------------------
+const DownloadingModal: React.FC<{
+  visible: boolean;
+  percentage: number;
+  downloadRate: number;
+  eta: number;
+  primaryColor: string;
+}> = ({ visible, percentage, downloadRate, eta, primaryColor }) => {
   const [progressAnim] = useState(new Animated.Value(percentage / 100));
+
   useEffect(() => {
-    Animated.timing(progressAnim, { toValue: percentage / 100, duration: 500, easing: Easing.linear, useNativeDriver: false }).start();
+    Animated.timing(progressAnim, {
+      toValue: percentage / 100,
+      duration: 500,
+      easing: Easing.linear,
+      useNativeDriver: false
+    }).start();
   }, [percentage, progressAnim]);
-  const widthInterpolated = progressAnim.interpolate({ inputRange: [0, 1], outputRange: ["0%", "100%"] });
+
+  const widthInterpolated = progressAnim.interpolate({
+    inputRange: [0, 1],
+    outputRange: ["0%", "100%"]
+  });
+
   const formatBytes = (bytes: number) => {
     if (bytes === 0) return "0 Bytes";
     const k = 1024;
@@ -101,18 +184,28 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
   };
+
   const formatTime = (seconds: number) => {
     const m = Math.floor(seconds / 60);
     const s = Math.floor(seconds % 60);
     return `${m}m ${s}s`;
   };
+
   if (!visible) return null;
+
   return (
     <View className="absolute inset-0 justify-center items-center">
       <View className="absolute inset-0" style={{ backgroundColor: Colorizer(primaryColor, 0.3) }} />
       <View
         className="rounded-lg p-5 items-center shadow-lg"
-        style={{ backgroundColor: Colorizer("#E9E9EA", 1.0), shadowColor: Colorizer("#000000", 0.25), shadowOffset: { width: 0, height: 5 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 10 }}
+        style={{
+          backgroundColor: Colorizer("#E9E9EA", 1.0),
+          shadowColor: Colorizer("#000000", 0.25),
+          shadowOffset: { width: 0, height: 5 },
+          shadowOpacity: 0.25,
+          shadowRadius: 10,
+          elevation: 10
+        }}
       >
         <ActivityIndicator size="large" color={Colorizer(primaryColor, 1.0)} />
         <Text className="mt-3 text-lg" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Linotte_Bold" }}>
@@ -122,16 +215,34 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
           {percentage.toFixed(2)}%
         </Text>
         <View className="w-4/5 h-2.5 rounded overflow-hidden mt-2.5 bg-gray-300">
-          <Animated.View style={{ width: widthInterpolated, backgroundColor: Colorizer(primaryColor, 1.0), height: "100%" }} />
+          <Animated.View
+            style={{
+              width: widthInterpolated,
+              backgroundColor: Colorizer(primaryColor, 1.0),
+              height: "100%"
+            }}
+          />
         </View>
         <View className="flex-row mt-4 w-full justify-between px-2">
           <View className="items-center">
-            <Text className="text-xs" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Linotte_Bold" }}>
+            <Text
+              className="text-xs"
+              style={{
+                color: Colorizer(primaryColor, 1.0),
+                fontFamily: "Linotte_Bold"
+              }}
+            >
               Rate: {formatBytes(downloadRate)}/s
             </Text>
           </View>
           <View className="items-center">
-            <Text className="text-xs" style={{ color: Colorizer(primaryColor, 1.0), fontFamily: "Linotte_Bold" }}>
+            <Text
+              className="text-xs"
+              style={{
+                color: Colorizer(primaryColor, 1.0),
+                fontFamily: "Linotte_Bold"
+              }}
+            >
               ETA: {formatTime(eta)}
             </Text>
           </View>
@@ -141,25 +252,53 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
   );
 };
 
-const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number; onViewFullScreen: () => void }> = ({ selectedImage, screenWidth, onViewFullScreen }) => {
+// ---------------------------------------------------
+// PreviewImage
+// ---------------------------------------------------
+const PreviewImage: React.FC<{
+  selectedImage: ImageMetadata;
+  screenWidth: number;
+  onViewFullScreen: () => void;
+}> = ({ selectedImage, screenWidth, onViewFullScreen }) => {
   const [imageLoading, setImageLoading] = useState(true);
   const aspectRatio = selectedImage.width / selectedImage.height;
   const imageHeight = (screenWidth / aspectRatio) * 0.7;
   const scaleValue = useRef(new Animated.Value(1.1)).current;
+
   useEffect(() => {
     const animation = Animated.sequence([
-      Animated.timing(scaleValue, { toValue: 1.4, duration: 4000, easing: Easing.inOut(Easing.ease), useNativeDriver: true }),
-      Animated.timing(scaleValue, { toValue: 1.1, duration: 2000, easing: Easing.inOut(Easing.ease), useNativeDriver: true })
+      Animated.timing(scaleValue, {
+        toValue: 1.4,
+        duration: 4000,
+        easing: Easing.inOut(Easing.ease),
+        useNativeDriver: true
+      }),
+      Animated.timing(scaleValue, {
+        toValue: 1.1,
+        duration: 2000,
+        easing: Easing.inOut(Easing.ease),
+        useNativeDriver: true
+      })
     ]);
     Animated.loop(animation).start();
   }, [scaleValue]);
+
   return (
     <View className="relative">
       <View className="absolute inset-0 z-50 justify-center items-center">
         {!imageLoading && (
           <View className="items-center">
             <Animated.View className="justify-center items-center rounded-full">
-              <Image style={{ width: 64, height: 64, borderRadius: 32, backgroundColor: Colorizer("#000000", 0.8) }} source={require("@/assets/picWall/picWall.png")} contentFit="contain" />
+              <Image
+                style={{
+                  width: 64,
+                  height: 64,
+                  borderRadius: 32,
+                  backgroundColor: Colorizer("#000000", 0.8)
+                }}
+                source={require("@/assets/picWall/picWall.png")}
+                contentFit="contain"
+              />
             </Animated.View>
           </View>
         )}
@@ -167,19 +306,43 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
       {imageLoading && (
         <View className="absolute inset-0 z-40 justify-center items-center" style={{ backgroundColor: Colorizer("#000000", 1.0) }}>
           <ActivityIndicator size="large" color={Colorizer(selectedImage.primary, 1.0)} />
-          <Text className="mt-2.5" style={{ fontFamily: "Linotte_Bold", color: Colorizer(selectedImage.primary, 1.0) }}>
+          <Text
+            className="mt-2.5"
+            style={{
+              fontFamily: "Linotte_Bold",
+              color: Colorizer(selectedImage.primary, 1.0)
+            }}
+          >
             Loading HD Image Preview...
           </Text>
         </View>
       )}
-      <Animated.View className="overflow-hidden rounded-t-3xl" style={[{ width: "100%", height: imageHeight, borderTopLeftRadius: 20, borderTopRightRadius: 20, transform: [{ scale: scaleValue }] }]}>
+      <Animated.View
+        className="overflow-hidden rounded-t-3xl"
+        style={[
+          {
+            width: "100%",
+            height: imageHeight,
+            borderTopLeftRadius: 20,
+            borderTopRightRadius: 20,
+            transform: [{ scale: scaleValue }]
+          }
+        ]}
+      >
         <Image
           contentFit="cover"
           cachePolicy="memory-disk"
           onLoadStart={() => setImageLoading(true)}
           onLoadEnd={() => setImageLoading(false)}
-          source={{ uri: selectedImage.previewLink.replace("lowRes", "highRes") }}
-          style={{ width: "100%", height: "100%", borderTopLeftRadius: 20, borderTopRightRadius: 20 }}
+          source={{
+            uri: selectedImage.previewLink.replace("lowRes", "highRes")
+          }}
+          style={{
+            width: "100%",
+            height: "100%",
+            borderTopLeftRadius: 20,
+            borderTopRightRadius: 20
+          }}
           onError={() => {
             setImageLoading(false);
             Alert.alert("Error", "Failed to load image. Please try again.");
@@ -189,7 +352,12 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
       <TouchableOpacity
         onPress={onViewFullScreen}
         className="absolute w-full bottom-5 mx-4 px-4 py-2 rounded-full z-50"
-        style={{ backgroundColor: Colorizer(selectedImage.secondary, 0.9), borderRadius: 9999, borderWidth: 1, borderColor: Colorizer(selectedImage.primary, 1.0) }}
+        style={{
+          backgroundColor: Colorizer(selectedImage.secondary, 0.9),
+          borderRadius: 9999,
+          borderWidth: 1,
+          borderColor: Colorizer(selectedImage.primary, 1.0)
+        }}
         activeOpacity={0.8}
       >
         <Text className="text-white text-base" style={{ fontFamily: "Kurale_Regular" }}>
@@ -200,6 +368,9 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
   );
 };
 
+// ---------------------------------------------------
+// DownloadButton
+// ---------------------------------------------------
 interface DownloadButtonProps {
   onDownload?: (event: any) => void;
   colors: { primary: string; secondary: string; tertiary: string };
@@ -207,16 +378,29 @@ interface DownloadButtonProps {
 
 const DownloadButton: React.FC<DownloadButtonProps> = ({ onDownload, colors }) => {
   const scaleValue = useRef(new Animated.Value(1)).current;
+
   useEffect(() => {
     const pulse = Animated.loop(
       Animated.sequence([
-        Animated.timing(scaleValue, { toValue: 1.08, duration: 1000, easing: Easing.inOut(Easing.ease), useNativeDriver: true }),
-        Animated.timing(scaleValue, { toValue: 1, duration: 2000, easing: Easing.inOut(Easing.ease), useNativeDriver: true })
+        Animated.timing(scaleValue, {
+          toValue: 1.08,
+          duration: 1000,
+          easing: Easing.inOut(Easing.ease),
+          useNativeDriver: true
+        }),
+        Animated.timing(scaleValue, {
+          toValue: 1,
+          duration: 2000,
+          easing: Easing.inOut(Easing.ease),
+          useNativeDriver: true
+        })
       ])
     );
     pulse.start();
+
     return () => pulse.stop();
   }, [scaleValue]);
+
   return (
     <TouchableOpacity onPress={onDownload} activeOpacity={0.8} className="mt-2 rounded-2xl overflow-hidden" style={{ backgroundColor: Colorizer(colors.primary, 0.4) }}>
       <Animated.View className="flex-row items-center justify-center p-3" style={{ transform: [{ scale: scaleValue }] }}>
@@ -234,6 +418,9 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({ onDownload, colors }) =
   );
 };
 
+// ---------------------------------------------------
+// OtherImages
+// ---------------------------------------------------
 interface OtherImagesProps {
   primaryColor: string;
   tertiaryColor: string;
@@ -244,7 +431,13 @@ interface OtherImagesProps {
 const OtherImages: React.FC<OtherImagesProps> = ({ otherImages, setCurrentIndex, primaryColor, tertiaryColor }) => (
   <View className="p-1 my-2 rounded-2xl" style={{ backgroundColor: Colorizer(primaryColor, 0.2) }}>
     <View className="p-1 rounded-2xl" style={{ backgroundColor: Colorizer(tertiaryColor, 0.2) }}>
-      <Text className="ml-2 text-xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer("#E9E9EA", 1.0) }}>
+      <Text
+        className="ml-2 text-xl"
+        style={{
+          fontFamily: "Lobster_Regular",
+          color: Colorizer("#E9E9EA", 1.0)
+        }}
+      >
         Other Wallpapers:
       </Text>
       <View className="flex-row flex-wrap my-1">
@@ -252,7 +445,12 @@ const OtherImages: React.FC<OtherImagesProps> = ({ otherImages, setCurrentIndex,
           <TouchableOpacity
             key={idx}
             className="relative rounded-2xl overflow-hidden mx-0.5 flex-1"
-            style={{ aspectRatio: 9 / 16, borderRadius: 10, borderWidth: 1, borderColor: Colorizer(primaryColor, 1.0) }}
+            style={{
+              aspectRatio: 9 / 16,
+              borderRadius: 10,
+              borderWidth: 1,
+              borderColor: Colorizer(primaryColor, 1.0)
+            }}
             onPress={() => setCurrentIndex(idx)}
           >
             <Image source={{ uri: img.previewLink }} style={{ width: "100%", height: "100%" }} contentFit="cover" />
@@ -268,6 +466,9 @@ const OtherImages: React.FC<OtherImagesProps> = ({ otherImages, setCurrentIndex,
   </View>
 );
 
+// ---------------------------------------------------
+// FullScreenView
+// ---------------------------------------------------
 interface FullScreenViewProps {
   isFullScreen: boolean;
   setIsFullScreen: (isFullScreen: boolean) => void;
@@ -279,7 +480,12 @@ const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFull
   const handleSetWallpaper = async (type: number) => {
     try {
       await saveStateBeforeWallpaper();
-      await setWallpaper({ uri: selectedImage.previewLink.replace("lowRes", "highRes") }, type);
+      await setWallpaper(
+        {
+          uri: selectedImage.previewLink.replace("lowRes", "highRes")
+        },
+        type
+      );
       showAlert("Success", `${type === TYPE_SCREEN.LOCK ? "Lock" : type === TYPE_SCREEN.HOME ? "Home" : "Both"} screen wallpaper set successfully.`, "checkmark-done-circle");
     } catch (error) {
       showAlert("Error", `Failed to set ${type === TYPE_SCREEN.LOCK ? "lock" : type === TYPE_SCREEN.HOME ? "home" : "both"} screen wallpaper.`, "error");
@@ -289,23 +495,63 @@ const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFull
   return (
     <Modal visible={isFullScreen} transparent={false} onRequestClose={() => setIsFullScreen(false)} presentationStyle="fullScreen" statusBarTranslucent>
       <View style={{ flex: 1, backgroundColor: Colorizer("#000000", 1.0) }}>
-        <ScrollView horizontal contentContainerStyle={{ flexGrow: 1, justifyContent: "center", alignItems: "center" }} showsHorizontalScrollIndicator={false}>
+        <ScrollView
+          horizontal
+          contentContainerStyle={{
+            flexGrow: 1,
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+          showsHorizontalScrollIndicator={false}
+        >
           <Image
             contentFit="contain"
-            source={{ uri: selectedImage.previewLink.replace("lowRes", "highRes") }}
-            style={{ height: Dimensions.get("window").height, width: undefined, aspectRatio: selectedImage.width / selectedImage.height }}
+            source={{
+              uri: selectedImage.previewLink.replace("lowRes", "highRes")
+            }}
+            style={{
+              height: Dimensions.get("window").height,
+              width: undefined,
+              aspectRatio: selectedImage.width / selectedImage.height
+            }}
           />
         </ScrollView>
-        <View style={{ position: "absolute", bottom: 10, left: 10, right: 10, flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+        <View
+          style={{
+            position: "absolute",
+            bottom: 10,
+            left: 10,
+            right: 10,
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center"
+          }}
+        >
           <LinearGradient
             colors={[Colorizer(selectedImage.tertiary, 0.8), Colorizer(selectedImage.tertiary, 0.6), Colorizer(selectedImage.tertiary, 0.4)]}
             style={{ flex: 1, height: 40, borderRadius: 10, marginHorizontal: 1 }}
             start={[0, 0]}
             end={[1, 0]}
           >
-            <TouchableOpacity onPress={() => handleSetWallpaper(TYPE_SCREEN.LOCK)} style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}>
+            <TouchableOpacity
+              onPress={() => handleSetWallpaper(TYPE_SCREEN.LOCK)}
+              style={{
+                flexDirection: "row",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "100%"
+              }}
+            >
               <Ionicons name="image" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
-              <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Set LockScreen</Text>
+              <Text
+                style={{
+                  fontSize: 12,
+                  color: "#FFFFFF",
+                  fontFamily: "Lobster_Regular"
+                }}
+              >
+                Set LockScreen
+              </Text>
             </TouchableOpacity>
           </LinearGradient>
           <LinearGradient
@@ -314,9 +560,25 @@ const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFull
             start={[0, 0]}
             end={[1, 0]}
           >
-            <TouchableOpacity onPress={() => handleSetWallpaper(TYPE_SCREEN.HOME)} style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}>
+            <TouchableOpacity
+              onPress={() => handleSetWallpaper(TYPE_SCREEN.HOME)}
+              style={{
+                flexDirection: "row",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "100%"
+              }}
+            >
               <Ionicons name="image" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
-              <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Set HomeScreen</Text>
+              <Text
+                style={{
+                  fontSize: 12,
+                  color: "#FFFFFF",
+                  fontFamily: "Lobster_Regular"
+                }}
+              >
+                Set HomeScreen
+              </Text>
             </TouchableOpacity>
           </LinearGradient>
           <LinearGradient
@@ -325,9 +587,25 @@ const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFull
             start={[0, 0]}
             end={[1, 0]}
           >
-            <TouchableOpacity onPress={() => handleSetWallpaper(TYPE_SCREEN.BOTH)} style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}>
+            <TouchableOpacity
+              onPress={() => handleSetWallpaper(TYPE_SCREEN.BOTH)}
+              style={{
+                flexDirection: "row",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "100%"
+              }}
+            >
               <Ionicons name="image" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
-              <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Set BothScreens</Text>
+              <Text
+                style={{
+                  fontSize: 12,
+                  color: "#FFFFFF",
+                  fontFamily: "Lobster_Regular"
+                }}
+              >
+                Set BothScreens
+              </Text>
             </TouchableOpacity>
           </LinearGradient>
         </View>
@@ -336,8 +614,12 @@ const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFull
   );
 };
 
+// ---------------------------------------------------
+// ImagePage
+// ---------------------------------------------------
 const ImagePage = () => {
   const params = useLocalSearchParams();
+
   const [eta, setEta] = useState<number>(0);
   const downloadStartTime = useRef<number>(0);
   const [alertVisible, setAlertVisible] = useState(false);
@@ -346,36 +628,64 @@ const ImagePage = () => {
   const [isDownloading, setIsDownloading] = useState(false);
   const [downloadRate, setDownloadRate] = useState<number>(0);
   const [alertIcon, setAlertIcon] = useState<"error" | "checkmark-done-circle">("checkmark-done-circle");
+
   const { currentImageData, setCurrentImageData, isFullScreen, setIsFullScreen, hasRestoredState, setHasRestoredState, clearState } = useAppStore();
+
+  // Load params or use restored state
   useEffect(() => {
     if (params.data) {
       const rawDataString = params.data as string;
       const Sanitized = JSON.parse(rawDataString);
-      if (hasRestoredState && currentImageData) setHasRestoredState(false);
-      else {
+
+      // If the state has already been restored, skip overwriting it
+      if (hasRestoredState && currentImageData) {
+        // we only reset hasRestoredState
+        setHasRestoredState(false);
+      } else {
+        // Clear any existing state before setting new data
         clearState();
         setCurrentImageData({
           data: Sanitized.data,
-          selectedIndex: parseInt(Sanitized.selectedIndex as string) || 0
+          selectedIndex: parseInt(Sanitized.selectedIndex as string) || 0,
+          environment_title: Sanitized.environment_title || "Default Environment"
         });
       }
     }
-  }, [params.data, hasRestoredState]);
+  }, [params.data, hasRestoredState, currentImageData, setHasRestoredState, setCurrentImageData, clearState]);
+
+  // If state isn't loaded yet, show a loading indicator
   if (!currentImageData) {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <View
+        style={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: Colorizer("#000000", 1.0)
+        }}
+      >
         <ActivityIndicator size="large" color="#ffffff" />
       </View>
     );
   }
+
   const selectedImage = currentImageData.data[currentImageData.selectedIndex];
+
+  // Show success/error alerts
   const showAlert = (title: string, message: string, iconName: "error" | "checkmark-done-circle") => {
     setAlertMessage(message);
     setAlertIcon(iconName);
     setAlertVisible(true);
   };
+
   const hideAlert = () => setAlertVisible(false);
-  const setCurrentIndex = (index: number) => setCurrentImageData({ ...currentImageData, selectedIndex: index });
+
+  // Change the currently viewed image
+  const setCurrentIndex = (index: number) => {
+    setCurrentImageData({ ...currentImageData, selectedIndex: index });
+  };
+
+  // Download logic
   const downloadAndSaveImage = async () => {
     try {
       const { status } = await MediaLibrary.requestPermissionsAsync();
@@ -388,29 +698,38 @@ const ImagePage = () => {
       setDownloadRate(0);
       setEta(0);
       downloadStartTime.current = Date.now();
+
       const fileUri = FileSystem.documentDirectory + selectedImage.original_file_name;
       const downloadResumable = FileSystem.createDownloadResumable(selectedImage.previewLink.replace("lowRes", "highRes"), fileUri, {}, (downloadProgressEvent) => {
         const progress = downloadProgressEvent.totalBytesWritten / downloadProgressEvent.totalBytesExpectedToWrite;
         setPercentage(progress * 100);
+
         const elapsedTime = (Date.now() - downloadStartTime.current) / 1000;
         if (elapsedTime > 0) {
           const rate = downloadProgressEvent.totalBytesWritten / elapsedTime;
           setDownloadRate(rate);
+
           const remainingBytes = downloadProgressEvent.totalBytesExpectedToWrite - downloadProgressEvent.totalBytesWritten;
           const estimatedTime = remainingBytes / rate;
           setEta(estimatedTime);
         }
       });
+
       const result = await downloadResumable.downloadAsync();
       if (!result || !result.uri) {
         showAlert("Download Failed", "Unable to download the image.", "error");
         setIsDownloading(false);
         return;
       }
+
       const asset = await MediaLibrary.createAssetAsync(result.uri);
       const album = await MediaLibrary.getAlbumAsync("Download");
-      if (!album) await MediaLibrary.createAlbumAsync("Download", asset, false);
-      else await MediaLibrary.addAssetsToAlbumAsync([asset], album, false);
+      if (!album) {
+        await MediaLibrary.createAlbumAsync("Download", asset, false);
+      } else {
+        await MediaLibrary.addAssetsToAlbumAsync([asset], album, false);
+      }
+
       setIsDownloading(false);
       showAlert("Success", "The image has been saved to your gallery.", "checkmark-done-circle");
     } catch (error) {
@@ -418,15 +737,29 @@ const ImagePage = () => {
       showAlert("Error", "An error occurred while downloading or saving the image.", "error");
     }
   };
+
   const allImages: { img: ImageMetadata; idx: number }[] = currentImageData.data.map((img, idx) => ({ img, idx }));
   const otherImages = allImages.filter(({ idx }) => idx !== currentImageData.selectedIndex);
+
   return (
     <View className="flex-1" style={{ backgroundColor: Colorizer("#000000", 1.0) }}>
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
       <ScrollView className="flex-1">
         <PreviewImage selectedImage={selectedImage} screenWidth={screenWidth} onViewFullScreen={() => setIsFullScreen(true)} />
-        <View className="p-4 border-4 rounded-3xl" style={{ borderColor: Colorizer(selectedImage.primary, 1.0), backgroundColor: Colorizer("#111111", 1.0) }}>
-          <Text className="mb-2 text-5xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer(selectedImage.primary, 1.0) }}>
+        <View
+          className="p-4 border-4 rounded-3xl"
+          style={{
+            borderColor: Colorizer(selectedImage.primary, 1.0),
+            backgroundColor: Colorizer("#111111", 1.0)
+          }}
+        >
+          <Text
+            className="mb-2 text-5xl"
+            style={{
+              fontFamily: "Lobster_Regular",
+              color: Colorizer(selectedImage.primary, 1.0)
+            }}
+          >
             {selectedImage.original_file_name.replace(".jpg", "")}
           </Text>
           {[
@@ -435,21 +768,50 @@ const ImagePage = () => {
             { label: "Dimensions", value: `${selectedImage.width} x ${selectedImage.height}` }
           ].map((item, index) => (
             <View key={index} className="flex-row items-center my-2">
-              <FontAwesome5 name={index === 0 ? "adjust" : index === 1 ? "file-alt" : "ruler-combined"} size={16} color={Colorizer(selectedImage.primary, 1.0)} className="ml-1" />
+              <FontAwesome5
+                name={index === 0 ? "adjust" : index === 1 ? "file-alt" : "ruler-combined"}
+                size={16}
+                color={Colorizer(selectedImage.primary, 1.0)}
+                style={{ marginLeft: 4, marginRight: 4 }}
+              />
               <View className="flex-row items-center mx-1">
-                <Text style={{ fontFamily: "Lobster_Regular", color: Colorizer(selectedImage.primary, 1.0) }}>{item.label}:</Text>
-                <Text className="ml-2" style={{ fontFamily: "Kurale_Regular", color: Colorizer(selectedImage.primary, 1.0) }}>
+                <Text
+                  style={{
+                    fontFamily: "Lobster_Regular",
+                    color: Colorizer(selectedImage.primary, 1.0)
+                  }}
+                >
+                  {item.label}:
+                </Text>
+                <Text
+                  className="ml-2"
+                  style={{
+                    fontFamily: "Kurale_Regular",
+                    color: Colorizer(selectedImage.primary, 1.0)
+                  }}
+                >
                   {item.value}
                 </Text>
               </View>
             </View>
           ))}
-          <DownloadButton onDownload={downloadAndSaveImage} colors={{ primary: selectedImage.primary, secondary: selectedImage.primary, tertiary: selectedImage.primary }} />
+
+          <DownloadButton
+            onDownload={downloadAndSaveImage}
+            colors={{
+              primary: selectedImage.primary,
+              secondary: selectedImage.primary,
+              tertiary: selectedImage.primary
+            }}
+          />
           <OtherImages otherImages={otherImages} setCurrentIndex={setCurrentIndex} primaryColor={selectedImage.primary} tertiaryColor={selectedImage.tertiary} />
         </View>
       </ScrollView>
+
       <FullScreenView isFullScreen={isFullScreen} setIsFullScreen={setIsFullScreen} selectedImage={selectedImage} showAlert={showAlert} />
+
       <DownloadingModal visible={isDownloading} percentage={percentage} downloadRate={downloadRate} eta={eta} primaryColor={selectedImage.primary} />
+
       <SuccessModal visible={alertVisible && alertIcon === "checkmark-done-circle"} message={alertMessage} onClose={hideAlert} />
       <ErrorModal visible={alertVisible && alertIcon === "error"} message={alertMessage} onClose={hideAlert} />
     </View>
