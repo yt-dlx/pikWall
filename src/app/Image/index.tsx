@@ -10,7 +10,6 @@ import React, { useState, useEffect, useRef } from "react";
 import { setWallpaper, TYPE_SCREEN } from "rn-wallpapers";
 import { FontAwesome5, MaterialIcons, Ionicons } from "@expo/vector-icons";
 import { View, Text, Dimensions, StatusBar, ActivityIndicator, TouchableOpacity, Alert, Modal, Animated, Easing, ScrollView } from "react-native";
-import { useWallpaperStore } from "@/utils/store";
 // ============================================================================================
 // ============================================================================================
 const { width: screenWidth } = Dimensions.get("window");
@@ -336,16 +335,9 @@ const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFull
 // ============================================================================================
 const ImagePage = () => {
   const params = useLocalSearchParams();
+  const [eta, setEta] = useState<number>(0);
   const rawDataString = params.data as string;
   const Sanitized = JSON.parse(rawDataString);
-  const { currentIndex, imageData, setCurrentIndex, setImageData, clearState } = useWallpaperStore();
-  useEffect(() => {
-    if (Sanitized.data) {
-      setImageData(Sanitized.data);
-      setCurrentIndex(parseInt(Sanitized.selectedIndex as unknown as string) || 0);
-    }
-  }, []);
-  const [eta, setEta] = useState<number>(0);
   const downloadStartTime = useRef<number>(0);
   const [alertVisible, setAlertVisible] = useState(false);
   const [isFullScreen, setIsFullScreen] = useState(false);
@@ -354,6 +346,8 @@ const ImagePage = () => {
   const [isDownloading, setIsDownloading] = useState(false);
   const [downloadRate, setDownloadRate] = useState<number>(0);
   const [alertIcon, setAlertIcon] = useState<"error" | "checkmark-done-circle">("checkmark-done-circle");
+  const [currentIndex, setCurrentIndex] = useState(parseInt(Sanitized.selectedIndex as unknown as string) || 0);
+  const selectedImage = Sanitized.data[currentIndex];
   const showAlert = (title: string, message: string, iconName: "error" | "checkmark-done-circle") => {
     setAlertMessage(message);
     setAlertIcon(iconName);
@@ -402,14 +396,8 @@ const ImagePage = () => {
       showAlert("Error", "An error occurred while downloading or saving the image.", "error");
     }
   };
-  const selectedImage = imageData[currentIndex] || Sanitized.data[currentIndex];
-  const allImages: { img: ImageMetadata; idx: number }[] = (imageData.length ? imageData : Sanitized.data).map((img: any, idx: any) => ({ img, idx }));
+  const allImages: { img: ImageMetadata; idx: number }[] = (Sanitized.data as ImageMetadata[]).map((img, idx) => ({ img, idx }));
   const otherImages = allImages.filter(({ idx }) => idx !== currentIndex);
-  useEffect(() => {
-    return () => {
-      clearState();
-    };
-  }, []);
   return (
     <View className="flex-1" style={{ backgroundColor: Colorizer("#000000", 1.0) }}>
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
