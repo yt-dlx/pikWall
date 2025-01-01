@@ -22,7 +22,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import HeaderAnimate from "@/utils/HeaderAnimated";
 import { SubImagesProps, CardProps, CategoryButtonProps } from "@/types/components";
 import { View, Text, TouchableOpacity, FlatList, ScrollView, StatusBar } from "react-native";
-import Animated, { Easing, runOnJS, useSharedValue, useAnimatedStyle, withTiming, withRepeat, withDelay } from "react-native-reanimated";
+import Animated, { Easing, runOnJS, useSharedValue, useAnimatedStyle, withTiming, withRepeat } from "react-native-reanimated";
 // ============================================================================================
 // ============================================================================================
 interface Category {

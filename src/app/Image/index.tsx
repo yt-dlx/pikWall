@@ -1,5 +1,6 @@
 // src/app/Image/index.tsx
 import { Image } from "expo-image";
+import useAppState from "@/utils/store";
 import Colorizer from "@/utils/Colorizer";
 import * as FileSystem from "expo-file-system";
 import { ImageMetadata } from "@/types/database";
@@ -273,10 +274,18 @@ const OtherImages: React.FC<OtherImagesProps> = ({ otherImages, setCurrentIndex,
 // ============================================================================================
 interface FullScreenViewProps {
   isFullScreen: boolean;
+  selectedIndex: number;
+  data: ImageMetadata[];
+  environment_title: string;
   selectedImage: ImageMetadata;
   setIsFullScreen: (isFullScreen: boolean) => void;
 }
-const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFullScreen, selectedImage }) => {
+const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFullScreen, selectedImage, selectedIndex, data, environment_title }) => {
+  const saveCurrentState = async () => {
+    const { setLastState } = useAppState.getState();
+    const stateToSave = { selectedIndex, data, environment_title };
+    setLastState(stateToSave);
+  };
   return (
     <Modal visible={isFullScreen} transparent={false} onRequestClose={() => setIsFullScreen(false)} presentationStyle="fullScreen" statusBarTranslucent>
       <View style={{ flex: 1, backgroundColor: Colorizer("#000000", 1.0) }}>
@@ -292,7 +301,10 @@ const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFull
           >
             <TouchableOpacity
               style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}
-              onPress={async () => await setWallpaper({ uri: selectedImage.previewLink.replace("lowRes", "highRes") }, TYPE_SCREEN.LOCK)}
+              onPress={async () => {
+                await saveCurrentState();
+                await setWallpaper({ uri: selectedImage.previewLink.replace("lowRes", "highRes") }, TYPE_SCREEN.LOCK);
+              }}
             >
               <Ionicons name="image" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
               <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Set LockScreen</Text>
@@ -306,7 +318,10 @@ const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFull
           >
             <TouchableOpacity
               style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}
-              onPress={async () => await setWallpaper({ uri: selectedImage.previewLink.replace("lowRes", "highRes") }, TYPE_SCREEN.HOME)}
+              onPress={async () => {
+                await saveCurrentState();
+                await setWallpaper({ uri: selectedImage.previewLink.replace("lowRes", "highRes") }, TYPE_SCREEN.HOME);
+              }}
             >
               <Ionicons name="image" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
               <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Set HomeScreen</Text>
@@ -320,7 +335,10 @@ const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFull
           >
             <TouchableOpacity
               style={{ flexDirection: "row", justifyContent: "center", alignItems: "center", height: "100%" }}
-              onPress={async () => await setWallpaper({ uri: selectedImage.previewLink.replace("lowRes", "highRes") }, TYPE_SCREEN.BOTH)}
+              onPress={async () => {
+                await saveCurrentState();
+                await setWallpaper({ uri: selectedImage.previewLink.replace("lowRes", "highRes") }, TYPE_SCREEN.BOTH);
+              }}
             >
               <Ionicons name="image" size={20} color={Colorizer("#E9E9EA", 1.0)} style={{ marginRight: 10 }} />
               <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Set BothScreens</Text>
@@ -348,6 +366,7 @@ const ImagePage = () => {
   const [alertIcon, setAlertIcon] = useState<"error" | "checkmark-done-circle">("checkmark-done-circle");
   const [currentIndex, setCurrentIndex] = useState(parseInt(Sanitized.selectedIndex as unknown as string) || 0);
   const selectedImage = Sanitized.data[currentIndex];
+  const environmentTitle = Sanitized.environment_title;
   const showAlert = (title: string, message: string, iconName: "error" | "checkmark-done-circle") => {
     setAlertMessage(message);
     setAlertIcon(iconName);
@@ -396,8 +415,10 @@ const ImagePage = () => {
       showAlert("Error", "An error occurred while downloading or saving the image.", "error");
     }
   };
+
   const allImages: { img: ImageMetadata; idx: number }[] = (Sanitized.data as ImageMetadata[]).map((img, idx) => ({ img, idx }));
   const otherImages = allImages.filter(({ idx }) => idx !== currentIndex);
+
   return (
     <View className="flex-1" style={{ backgroundColor: Colorizer("#000000", 1.0) }}>
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
@@ -426,7 +447,14 @@ const ImagePage = () => {
           <OtherImages otherImages={otherImages} setCurrentIndex={setCurrentIndex} primaryColor={selectedImage.primary} tertiaryColor={selectedImage.tertiary} />
         </View>
       </ScrollView>
-      <FullScreenView isFullScreen={isFullScreen} setIsFullScreen={setIsFullScreen} selectedImage={selectedImage} />
+      <FullScreenView
+        isFullScreen={isFullScreen}
+        setIsFullScreen={setIsFullScreen}
+        selectedImage={selectedImage}
+        selectedIndex={currentIndex}
+        data={Sanitized.data}
+        environment_title={environmentTitle}
+      />
       <DownloadingModal visible={isDownloading} percentage={percentage} downloadRate={downloadRate} eta={eta} primaryColor={selectedImage.primary} />
       <SuccessModal visible={alertVisible && alertIcon === "checkmark-done-circle"} message={alertMessage} onClose={hideAlert} />
       <ErrorModal visible={alertVisible && alertIcon === "error"} message={alertMessage} onClose={hideAlert} />

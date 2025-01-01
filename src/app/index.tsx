@@ -3,6 +3,7 @@ import { Link } from "expo-router";
 import { Image } from "expo-image";
 import Footer from "@/utils/Footer";
 import React, { useEffect } from "react";
+import useAppState from "@/utils/store";
 import Colorizer from "@/utils/Colorizer";
 import imageSets from "@/database/static";
 import { FontAwesome5 } from "@expo/vector-icons";
@@ -83,8 +84,8 @@ const AnimatedTitle: React.FC = () => {
 // ============================================================================================
 const AppPage: React.FC = () => {
   const buttonScale = useSharedValue(1);
-  const buttonRotate = useSharedValue(0);
   const buttonGlow = useSharedValue(0);
+  const buttonRotate = useSharedValue(0);
   useEffect(() => {
     buttonGlow.value = withRepeat(
       withSequence(withTiming(1, { duration: 2000, easing: Easing.bezier(0.4, 0, 0.2, 1) }), withTiming(0, { duration: 2000, easing: Easing.bezier(0.4, 0, 0.2, 1) })),
