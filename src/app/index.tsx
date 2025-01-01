@@ -150,7 +150,7 @@ const AppPage: React.FC = () => {
                 <TouchableOpacity onPressIn={onPressIn} onPressOut={onPressOut} className="mt-44 rounded-2xl overflow-hidden">
                   <Animated.View style={[buttonAnimatedStyle, { shadowColor: Colorizer("#080505", 1.0), shadowOffset: { width: 0, height: 4 } }]}>
                     <LinearGradient
-                      colors={[Colorizer("#FFFFFF", 1.0), Colorizer("#F0F0F0", 1.0)]}
+                      colors={[Colorizer("#F2EFE0", 1.0), Colorizer("#F2EFE0", 1.0)]}
                       start={{ x: 0, y: 0 }}
                       end={{ x: 1, y: 1 }}
                       className="flex-row items-center justify-center px-10 py-4"

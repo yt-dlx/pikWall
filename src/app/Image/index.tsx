@@ -391,7 +391,7 @@ const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFull
               }}
             >
               <Ionicons name="image" size={20} color={Colorizer("#F2EFE0", 1.0)} style={{ marginRight: 10 }} />
-              <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Set LockScreen</Text>
+              <Text style={{ fontSize: 12, color: "#F2EFE0", fontFamily: "Lobster_Regular" }}>Set LockScreen</Text>
             </TouchableOpacity>
           </LinearGradient>
           <LinearGradient
@@ -408,7 +408,7 @@ const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFull
               }}
             >
               <Ionicons name="image" size={20} color={Colorizer("#F2EFE0", 1.0)} style={{ marginRight: 10 }} />
-              <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Set HomeScreen</Text>
+              <Text style={{ fontSize: 12, color: "#F2EFE0", fontFamily: "Lobster_Regular" }}>Set HomeScreen</Text>
             </TouchableOpacity>
           </LinearGradient>
           <LinearGradient
@@ -425,7 +425,7 @@ const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFull
               }}
             >
               <Ionicons name="image" size={20} color={Colorizer("#F2EFE0", 1.0)} style={{ marginRight: 10 }} />
-              <Text style={{ fontSize: 12, color: "#FFFFFF", fontFamily: "Lobster_Regular" }}>Set BothScreens</Text>
+              <Text style={{ fontSize: 12, color: "#F2EFE0", fontFamily: "Lobster_Regular" }}>Set BothScreens</Text>
             </TouchableOpacity>
           </LinearGradient>
         </View>
