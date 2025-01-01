@@ -1,17 +1,17 @@
 // src/app/index.tsx
+import { Link } from "expo-router";
 import { Image } from "expo-image";
 import Footer from "@/utils/Footer";
+import React, { useEffect } from "react";
 import Colorizer from "@/utils/Colorizer";
 import imageSets from "@/database/static";
-import { Link, useRouter } from "expo-router";
-import React, { useEffect, useState } from "react";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { ScrollingSlotProps } from "@/types/components";
-import { useAppStore, restoreStateAfterRestart } from "@/utils/store";
-import { Text, View, TouchableOpacity, ActivityIndicator } from "react-native";
+import { Text, View, TouchableOpacity } from "react-native";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence, withDelay, withSpring, Easing, FadeIn, FadeInDown } from "react-native-reanimated";
-
+// ============================================================================================
+// ============================================================================================
 const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay }) => {
   const imageHeight = 220;
   const totalHeight = images.length * imageHeight;
@@ -23,10 +23,7 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
     scale.value = withDelay(delay, withSpring(1, { damping: 15, stiffness: 90 }));
     scrollValue.value = withDelay(delay, withRepeat(withTiming(totalHeight, { duration: 30000, easing: Easing.linear }), -1, reverse));
   }, []);
-  const animatedStyle = useAnimatedStyle(() => ({
-    transform: [{ translateY: -scrollValue.value % totalHeight }, { scale: scale.value }],
-    opacity: opacity.value
-  }));
+  const animatedStyle = useAnimatedStyle(() => ({ transform: [{ translateY: -scrollValue.value % totalHeight }, { scale: scale.value }], opacity: opacity.value }));
   return (
     <View style={{ flex: 1, overflow: "hidden", padding: 2 }}>
       <Animated.View style={[animatedStyle]}>
@@ -52,7 +49,8 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
     </View>
   );
 };
-
+// ============================================================================================
+// ============================================================================================
 const AnimatedTitle: React.FC = () => {
   const scale = useSharedValue(0.5);
   useEffect(() => {
@@ -65,15 +63,7 @@ const AnimatedTitle: React.FC = () => {
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
   return (
     <Animated.View
-      style={[
-        animatedStyle,
-        {
-          shadowColor: Colorizer("#000000", 1.0),
-          shadowOffset: { width: 0, height: 8 },
-          shadowOpacity: 0.4,
-          shadowRadius: 12
-        }
-      ]}
+      style={[animatedStyle, { shadowColor: Colorizer("#000000", 1.0), shadowOffset: { width: 0, height: 8 }, shadowOpacity: 0.4, shadowRadius: 12 }]}
       className="items-center mb-4"
       entering={FadeIn.delay(300).duration(1500)}
     >
@@ -89,16 +79,12 @@ const AnimatedTitle: React.FC = () => {
     </Animated.View>
   );
 };
-
+// ============================================================================================
+// ============================================================================================
 const IndexPage: React.FC = () => {
-  const router = useRouter();
-  const [isRestoring, setIsRestoring] = useState(true);
-  const currentImageData = useAppStore((state) => state.currentImageData);
-  const isFullScreen = useAppStore((state) => state.isFullScreen);
-  const hasRestoredState = useAppStore((state) => state.hasRestoredState);
   const buttonScale = useSharedValue(1);
-  const buttonGlow = useSharedValue(0);
   const buttonRotate = useSharedValue(0);
+  const buttonGlow = useSharedValue(0);
   useEffect(() => {
     buttonGlow.value = withRepeat(
       withSequence(withTiming(1, { duration: 2000, easing: Easing.bezier(0.4, 0, 0.2, 1) }), withTiming(0, { duration: 2000, easing: Easing.bezier(0.4, 0, 0.2, 1) })),
@@ -119,29 +105,6 @@ const IndexPage: React.FC = () => {
     buttonScale.value = withSpring(1, { damping: 15, stiffness: 90 });
     buttonRotate.value = withSpring(0, { damping: 15, stiffness: 90 });
   };
-  useEffect(() => {
-    const restoreState = async () => {
-      await restoreStateAfterRestart();
-      setIsRestoring(false);
-    };
-    restoreState();
-  }, []);
-  useEffect(() => {
-    if (!isRestoring && currentImageData && isFullScreen) {
-      const navigateToImage = async () => {
-        await router.replace("/Home");
-        await router.push("/Image");
-      };
-      navigateToImage();
-    }
-  }, [isRestoring, currentImageData, isFullScreen, router]);
-  if (isRestoring) {
-    return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: Colorizer("#000000", 1.0) }}>
-        <ActivityIndicator size="large" color="#ffffff" />
-      </View>
-    );
-  }
   return (
     <View style={{ backgroundColor: Colorizer("#000000", 1.0) }} className="h-full w-full">
       <View className="flex-1 justify-center items-center relative">
@@ -171,14 +134,7 @@ const IndexPage: React.FC = () => {
                 >
                   picWall
                 </Text>
-                <Text
-                  className="text-center absolute inset-x-0 top-0"
-                  style={{
-                    fontFamily: "Dm_Serif_Display_Regular",
-                    color: Colorizer("#E9E9EA", 1.0),
-                    fontSize: 80
-                  }}
-                >
+                <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Dm_Serif_Display_Regular", color: Colorizer("#E9E9EA", 1.0), fontSize: 80 }}>
                   picWall
                 </Text>
                 <Animated.View style={{ alignSelf: "center" }} entering={FadeInDown.delay(600).duration(1500).springify()}>
