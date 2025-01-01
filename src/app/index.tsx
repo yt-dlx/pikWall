@@ -12,11 +12,6 @@ import { Text, View, TouchableOpacity, ActivityIndicator } from "react-native";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence, withDelay, withSpring, Easing, FadeIn, FadeInDown } from "react-native-reanimated";
 import { useAppStore, restoreStateAfterRestart } from "@/components/store";
 
-// ============================================================================
-/**
- * ScrollingSlot Component
- * Creates a vertically scrolling slot of images with animations.
- */
 const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay }) => {
   const imageHeight = 220;
   const totalHeight = images.length * imageHeight;
@@ -61,11 +56,6 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
   );
 };
 
-// ============================================================================
-/**
- * AnimatedTitle Component
- * Displays an animated logo/image with scaling effects.
- */
 const AnimatedTitle: React.FC = () => {
   const scale = useSharedValue(0.5);
 
@@ -130,11 +120,6 @@ const AnimatedTitle: React.FC = () => {
   );
 };
 
-// ============================================================================
-/**
- * IndexPage Component
- * The main landing page that handles state restoration and conditional navigation.
- */
 const IndexPage: React.FC = () => {
   const router = useRouter();
   const [isRestoring, setIsRestoring] = useState(true);
@@ -143,7 +128,6 @@ const IndexPage: React.FC = () => {
   const isFullScreen = useAppStore((state) => state.isFullScreen);
   const hasRestoredState = useAppStore((state) => state.hasRestoredState);
 
-  // Button animations
   const buttonScale = useSharedValue(1);
   const buttonGlow = useSharedValue(0);
   const buttonRotate = useSharedValue(0);
@@ -172,7 +156,6 @@ const IndexPage: React.FC = () => {
     buttonRotate.value = withSpring(0, { damping: 15, stiffness: 90 });
   };
 
-  // Attempt to restore state on component mount
   useEffect(() => {
     const restoreState = async () => {
       await restoreStateAfterRestart();
@@ -181,15 +164,17 @@ const IndexPage: React.FC = () => {
     restoreState();
   }, []);
 
-  // If state indicates we were in full screen, navigate directly to ImagePage
   useEffect(() => {
     if (!isRestoring && currentImageData && isFullScreen) {
-      router.replace("/Image");
+      const navigateToImage = async () => {
+        await router.replace("/Home");
+        await router.push("/Image");
+      };
+      navigateToImage();
     }
   }, [isRestoring, currentImageData, isFullScreen, router]);
 
   if (isRestoring) {
-    // Show a loading spinner while restoring state
     return (
       <View
         style={{
@@ -204,7 +189,6 @@ const IndexPage: React.FC = () => {
     );
   }
 
-  // Normal IndexPage Content
   return (
     <View style={{ backgroundColor: Colorizer("#000000", 1.0) }} className="h-full w-full">
       <View className="flex-1 justify-center items-center relative">

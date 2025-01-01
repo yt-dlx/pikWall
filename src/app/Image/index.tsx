@@ -1,21 +1,19 @@
+// src/app/ImagePage.tsx
 import { Image } from "expo-image";
 import * as FileSystem from "expo-file-system";
 import Colorizer from "@/components/Colorizer";
 import { ImageMetadata } from "@/types/database";
-import { useLocalSearchParams } from "expo-router";
+import { useLocalSearchParams, useRouter } from "expo-router";
 import * as MediaLibrary from "expo-media-library";
 import { LinearGradient } from "expo-linear-gradient";
 import React, { useState, useEffect, useRef } from "react";
 import { setWallpaper, TYPE_SCREEN } from "rn-wallpapers";
 import { FontAwesome5, MaterialIcons, Ionicons } from "@expo/vector-icons";
 import { useAppStore, saveStateBeforeWallpaper } from "@/components/store";
-import { View, Text, Dimensions, StatusBar, ActivityIndicator, TouchableOpacity, Alert, Modal, Animated, Easing, ScrollView } from "react-native";
+import { View, Text, Dimensions, StatusBar, ActivityIndicator, TouchableOpacity, Alert, Modal, Animated, Easing, ScrollView, BackHandler } from "react-native";
 
 const { width: screenWidth } = Dimensions.get("window");
 
-// ---------------------------------------------------
-// SuccessModal
-// ---------------------------------------------------
 const SuccessModal: React.FC<{
   visible: boolean;
   message: string;
@@ -82,9 +80,6 @@ const SuccessModal: React.FC<{
   );
 };
 
-// ---------------------------------------------------
-// ErrorModal
-// ---------------------------------------------------
 const ErrorModal: React.FC<{
   visible: boolean;
   message: string;
@@ -151,9 +146,6 @@ const ErrorModal: React.FC<{
   );
 };
 
-// ---------------------------------------------------
-// DownloadingModal
-// ---------------------------------------------------
 const DownloadingModal: React.FC<{
   visible: boolean;
   percentage: number;
@@ -252,9 +244,6 @@ const DownloadingModal: React.FC<{
   );
 };
 
-// ---------------------------------------------------
-// PreviewImage
-// ---------------------------------------------------
 const PreviewImage: React.FC<{
   selectedImage: ImageMetadata;
   screenWidth: number;
@@ -368,9 +357,6 @@ const PreviewImage: React.FC<{
   );
 };
 
-// ---------------------------------------------------
-// DownloadButton
-// ---------------------------------------------------
 interface DownloadButtonProps {
   onDownload?: (event: any) => void;
   colors: { primary: string; secondary: string; tertiary: string };
@@ -418,9 +404,6 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({ onDownload, colors }) =
   );
 };
 
-// ---------------------------------------------------
-// OtherImages
-// ---------------------------------------------------
 interface OtherImagesProps {
   primaryColor: string;
   tertiaryColor: string;
@@ -466,9 +449,6 @@ const OtherImages: React.FC<OtherImagesProps> = ({ otherImages, setCurrentIndex,
   </View>
 );
 
-// ---------------------------------------------------
-// FullScreenView
-// ---------------------------------------------------
 interface FullScreenViewProps {
   isFullScreen: boolean;
   setIsFullScreen: (isFullScreen: boolean) => void;
@@ -614,11 +594,9 @@ const FullScreenView: React.FC<FullScreenViewProps> = ({ isFullScreen, setIsFull
   );
 };
 
-// ---------------------------------------------------
-// ImagePage
-// ---------------------------------------------------
 const ImagePage = () => {
   const params = useLocalSearchParams();
+  const router = useRouter();
 
   const [eta, setEta] = useState<number>(0);
   const downloadStartTime = useRef<number>(0);
@@ -631,18 +609,14 @@ const ImagePage = () => {
 
   const { currentImageData, setCurrentImageData, isFullScreen, setIsFullScreen, hasRestoredState, setHasRestoredState, clearState } = useAppStore();
 
-  // Load params or use restored state
   useEffect(() => {
     if (params.data) {
       const rawDataString = params.data as string;
       const Sanitized = JSON.parse(rawDataString);
 
-      // If the state has already been restored, skip overwriting it
       if (hasRestoredState && currentImageData) {
-        // we only reset hasRestoredState
         setHasRestoredState(false);
       } else {
-        // Clear any existing state before setting new data
         clearState();
         setCurrentImageData({
           data: Sanitized.data,
@@ -653,7 +627,19 @@ const ImagePage = () => {
     }
   }, [params.data, hasRestoredState, currentImageData, setHasRestoredState, setCurrentImageData, clearState]);
 
-  // If state isn't loaded yet, show a loading indicator
+  useEffect(() => {
+    const handleBackPress = () => {
+      router.replace("/Home");
+      return true;
+    };
+
+    BackHandler.addEventListener("hardwareBackPress", handleBackPress);
+
+    return () => {
+      BackHandler.removeEventListener("hardwareBackPress", handleBackPress);
+    };
+  }, [router]);
+
   if (!currentImageData) {
     return (
       <View
@@ -671,7 +657,6 @@ const ImagePage = () => {
 
   const selectedImage = currentImageData.data[currentImageData.selectedIndex];
 
-  // Show success/error alerts
   const showAlert = (title: string, message: string, iconName: "error" | "checkmark-done-circle") => {
     setAlertMessage(message);
     setAlertIcon(iconName);
@@ -680,12 +665,10 @@ const ImagePage = () => {
 
   const hideAlert = () => setAlertVisible(false);
 
-  // Change the currently viewed image
   const setCurrentIndex = (index: number) => {
     setCurrentImageData({ ...currentImageData, selectedIndex: index });
   };
 
-  // Download logic
   const downloadAndSaveImage = async () => {
     try {
       const { status } = await MediaLibrary.requestPermissionsAsync();

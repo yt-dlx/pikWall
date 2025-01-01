@@ -9,12 +9,12 @@ import NatureWonders from "@/database/Nature Wonders";
 import HyperCloseups from "@/database/Hyper Closeups";
 import PortraitPerfect from "@/database/Portrait Perfect";
 import AerialView from "@/database/Aerial View";
-// ============================================================================================
 import * as React from "react";
 import { useRouter } from "expo-router";
 import { Image } from "expo-image";
 import Footer from "@/components/Footer";
 import Colorizer from "@/components/Colorizer";
+import { useAppStore } from "@/components/store";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { EnvironmentEntry } from "@/types/database";
 import { LinearGradient } from "expo-linear-gradient";
@@ -22,18 +22,19 @@ import HeaderAnimate from "@/components/HeaderAnimated";
 import { SubImagesProps, CardProps, CategoryButtonProps } from "@/types/components";
 import { View, Text, TouchableOpacity, FlatList, ScrollView, StatusBar } from "react-native";
 import Animated, { Easing, runOnJS, useSharedValue, useAnimatedStyle, withTiming, withRepeat } from "react-native-reanimated";
-import { useAppStore } from "@/components/store"; // Import Zustand store
-// ============================================================================================
+
 interface Category {
   name: string;
   database: Record<string, EnvironmentEntry>;
 }
+
 interface CategoryButtonExtendedProps extends CategoryButtonProps {
   selected: boolean;
   onPress: () => void;
 }
-// ============================================================================================
+
 const AnimatedImage = Animated.createAnimatedComponent(Image);
+
 const categories: Category[] = [
   { name: "Aerial View", database: AerialView },
   { name: "Portrait Perfect", database: PortraitPerfect },
@@ -46,7 +47,7 @@ const categories: Category[] = [
   { name: "Cosmic And Lightning", database: CosmicAndLightning },
   { name: "Mountains And Beaches", database: MountainsAndBeaches }
 ];
-// ============================================================================================
+
 const SubImages: React.FC<SubImagesProps> = React.memo(({ images, onImagePress }) => (
   <View className="flex flex-col justify-start">
     {images.data.map((image, index) => (
@@ -70,16 +71,14 @@ const SubImages: React.FC<SubImagesProps> = React.memo(({ images, onImagePress }
   </View>
 ));
 SubImages.displayName = "SubImages";
-// ============================================================================================
-const Card: React.FC<CardProps> = React.memo(({ data }) => {
-  const [currentIndex, setCurrentIndex] = React.useState<number>(0);
-  const [currentImage, setCurrentImage] = React.useState<string>(data.images[0]?.previewLink);
-  const fadeValue = useSharedValue(1);
-  const textOpacity = useSharedValue(1);
-  const textScale = useSharedValue(1);
-  const router = useRouter();
-  const { setCurrentImageData, setIsFullScreen } = useAppStore(); // Access Zustand store methods
 
+const Card: React.FC<CardProps> = React.memo(({ data }) => {
+  const [currentImage, setCurrentImage] = React.useState<string>(data.images[0]?.previewLink);
+  const [currentIndex, setCurrentIndex] = React.useState<number>(0);
+  const { setCurrentImageData, setIsFullScreen } = useAppStore();
+  const textOpacity = useSharedValue(1);
+  const fadeValue = useSharedValue(1);
+  const textScale = useSharedValue(1);
   const updateImageState = React.useCallback(
     (nextIndex: number) => {
       setCurrentIndex(nextIndex);
@@ -87,7 +86,6 @@ const Card: React.FC<CardProps> = React.memo(({ data }) => {
     },
     [data.images, setCurrentIndex, setCurrentImage]
   );
-
   const animateOut = React.useCallback(
     (cb: () => void) => {
       fadeValue.value = withTiming(0, { duration: 2000, easing: Easing.inOut(Easing.ease) }, () => {
@@ -97,14 +95,12 @@ const Card: React.FC<CardProps> = React.memo(({ data }) => {
     },
     [fadeValue, textOpacity]
   );
-
   const animateIn = React.useCallback(() => {
     textScale.value = 0.8;
     fadeValue.value = withTiming(1, { duration: 2000, easing: Easing.inOut(Easing.ease) });
     textOpacity.value = withTiming(1, { duration: 2000, easing: Easing.inOut(Easing.ease) });
     textScale.value = withTiming(1, { duration: 2000, easing: Easing.inOut(Easing.ease) });
   }, [fadeValue, textOpacity, textScale]);
-
   const startTransition = React.useCallback(
     (nextIndex: number) => {
       animateOut(() => {
@@ -114,42 +110,34 @@ const Card: React.FC<CardProps> = React.memo(({ data }) => {
     },
     [animateOut, animateIn, updateImageState]
   );
-
   const updateNextImage = React.useCallback(() => {
     const nextIndex = (currentIndex + 1) % data.images.length;
     startTransition(nextIndex);
   }, [currentIndex, data.images.length, startTransition]);
-
   const handleSubImagePress = React.useCallback(
     (previewLink: string, index: number) => {
-      // Update Zustand store with selected image data
       setCurrentImageData({
-        data: data.images,
+        environment_title: data.environment_title || "Default Environment",
         selectedIndex: index,
-        environment_title: data.environment_title || "Default Environment"
+        data: data.images
       });
-      setIsFullScreen(true); // Trigger navigation via Zustand state
+      setIsFullScreen(true);
     },
     [data.images, data.environment_title, setCurrentImageData, setIsFullScreen]
   );
-
   React.useEffect(() => {
     const interval = setInterval(updateNextImage, 4000);
     return () => clearInterval(interval);
   }, [updateNextImage]);
-
   React.useEffect(() => {
     updateImageState(0);
   }, [data, updateImageState]);
-
   const imageStyle = useAnimatedStyle(() => ({ opacity: fadeValue.value }));
   const textStyle = useAnimatedStyle(() => ({ opacity: textOpacity.value, transform: [{ scale: textScale.value }] }));
-
   return (
     <View className="rounded-b-lg rounded-t-2xl overflow-hidden border" style={{ backgroundColor: Colorizer("#171717", 1.0), borderColor: Colorizer(data.images[currentIndex].primary, 0.4) }}>
       <TouchableOpacity
         onPress={() => {
-          // Update Zustand store and navigate
           setCurrentImageData({
             data: data.images,
             selectedIndex: currentIndex,
@@ -202,14 +190,14 @@ const Card: React.FC<CardProps> = React.memo(({ data }) => {
   );
 });
 Card.displayName = "Card";
-// ============================================================================================
+
 const getCategoryIcon = (selected: boolean) => {
   const iconSize = selected ? 22 : 14;
   const iconName = selected ? "gripfire" : "swatchbook";
   const iconColor = selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0);
   return <FontAwesome5 name={iconName} size={iconSize} color={iconColor} />;
 };
-// ============================================================================================
+
 const CategoryButton: React.FC<CategoryButtonExtendedProps> = React.memo(({ category, selected, onPress }) => {
   const translateX = useSharedValue(0);
   React.useEffect(() => {
@@ -266,7 +254,7 @@ const CategoryButton: React.FC<CategoryButtonExtendedProps> = React.memo(({ cate
   );
 });
 CategoryButton.displayName = "CategoryButton";
-// ============================================================================================
+
 const HeaderComponent: React.FC<{
   categories: Category[];
   selectedCategory: string;
@@ -285,12 +273,10 @@ const HeaderComponent: React.FC<{
   </>
 ));
 HeaderComponent.displayName = "HeaderComponent";
-// ============================================================================================
+
 const HomePage = (): JSX.Element => {
   const [cardData, setCardData] = React.useState<EnvironmentEntry[]>([]);
   const [selectedCategory, setSelectedCategory] = React.useState<string>("Hyper Closeups");
-  const router = useRouter();
-
   React.useEffect(() => {
     const processImageUrls = (entry: EnvironmentEntry): EnvironmentEntry => ({
       ...entry,
@@ -310,7 +296,6 @@ const HomePage = (): JSX.Element => {
     };
     fetchData();
   }, [selectedCategory]);
-
   const renderCard = React.useCallback(
     ({ item }: { item: EnvironmentEntry }) => (
       <View className="flex-1 m-0.5">
@@ -319,9 +304,7 @@ const HomePage = (): JSX.Element => {
     ),
     []
   );
-
   const keyExtractor = React.useCallback((item: EnvironmentEntry) => item.environment_title, []);
-
   return (
     <View style={{ backgroundColor: Colorizer("#000000", 1.0), flex: 1 }} className="relative">
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
