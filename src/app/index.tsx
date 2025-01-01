@@ -5,10 +5,10 @@ import Footer from "@/utils/Footer";
 import React, { useEffect } from "react";
 import Colorizer from "@/utils/Colorizer";
 import imageSets from "@/database/static";
-import { FontAwesome5 } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { ScrollingSlotProps } from "@/types/components";
 import { Text, View, TouchableOpacity } from "react-native";
+import { AntDesign, FontAwesome5 } from "@expo/vector-icons";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence, withDelay, withSpring, Easing, FadeIn, FadeInDown } from "react-native-reanimated";
 // ============================================================================================
 // ============================================================================================
@@ -114,7 +114,7 @@ const AppPage: React.FC = () => {
             style={{ position: "absolute", top: 0, right: 0, bottom: 0, left: 0 }}
             locations={[0, 0.2, 0.4, 0.5, 1]}
           />
-          <View className="absolute inset-0 justify-center items-center mt-20">
+          <View className="absolute inset-0 justify-center items-center mt-14">
             <AnimatedTitle />
             <Animated.View entering={FadeInDown.delay(600).duration(1500).springify()}>
               <View>
@@ -122,22 +122,17 @@ const AppPage: React.FC = () => {
                   className="text-center"
                   style={{
                     fontSize: 80,
-                    textShadowRadius: 60,
-                    color: Colorizer("#F2EFE0", 1.0),
-                    textShadowOffset: { width: 24, height: 2 },
                     fontFamily: "Lobster_Regular",
+                    color: Colorizer("#F2EFE0", 1.0),
                     textShadowColor: Colorizer("#060403", 1.0)
                   }}
                 >
                   picWall
                 </Text>
-                <Text className="text-center absolute inset-x-0 top-0" style={{ fontFamily: "Lobster_Regular", color: Colorizer("#F2EFE0", 1.0), fontSize: 80 }}>
-                  picWall
-                </Text>
                 <Animated.View style={{ alignSelf: "center" }} entering={FadeInDown.delay(600).duration(1500).springify()}>
-                  <View style={{ backgroundColor: Colorizer("#060403", 0.9), borderRadius: 12, paddingHorizontal: 12, paddingVertical: 4, marginTop: 8 }}>
-                    <Text className="text-center" style={{ fontFamily: "Caveat_Bold", color: Colorizer("#F2EFE0", 1.0), fontSize: 16 }}>
-                      Crafted with <Text style={{ color: Colorizer("#C26F2D", 1.0) }}>♥</Text> in India
+                  <View style={{ backgroundColor: Colorizer("#060403", 0.6), borderRadius: 9999, paddingHorizontal: 12, paddingVertical: 4 }}>
+                    <Text style={{ fontFamily: "Caveat_Bold", color: Colorizer("#F2EFE0", 1.0), fontSize: 16, textAlign: "center" }}>
+                      Crafted with <AntDesign name="heart" size={10} color={Colorizer("#C26F2D", 1.0)} /> in India. All rights reserved
                     </Text>
                   </View>
                 </Animated.View>
@@ -156,7 +151,7 @@ const AppPage: React.FC = () => {
               </Link>
               <Animated.View entering={FadeIn.delay(1200).duration(1500)} style={{ marginTop: 10, paddingHorizontal: 20, alignItems: "center" }}>
                 <Text style={{ fontFamily: "Caveat_Bold", color: Colorizer("#F2EFE0", 0.8), fontSize: 20, textAlign: "center", marginBottom: 4 }}>Personalised AI Wallpapers</Text>
-                <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#F2EFE0", 0.6), fontSize: 10, textAlign: "center", maxWidth: 200 }}>
+                <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#F2EFE0", 0.6), fontSize: 10, textAlign: "center", maxWidth: 260 }}>
                   Create stunning collections, share your moments, and discover amazing photographs from around the world. Join our community of passionate photographers today!
                 </Text>
               </Animated.View>

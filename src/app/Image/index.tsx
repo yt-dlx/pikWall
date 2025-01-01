@@ -12,6 +12,7 @@ const { width: screenWidth } = Dimensions.get("window");
 import { setWallpaper, TYPE_SCREEN } from "rn-wallpapers";
 import { FontAwesome5, MaterialIcons, Ionicons, FontAwesome6 } from "@expo/vector-icons";
 import { View, Text, Dimensions, StatusBar, ActivityIndicator, TouchableOpacity, Alert, Modal, Animated, Easing, ScrollView } from "react-native";
+import Footer from "@/utils/Footer";
 // ============================================================================================
 // ============================================================================================
 const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () => void }> = ({ visible, message, onClose }) => {
@@ -509,7 +510,7 @@ const ImagePage = () => {
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
       <ScrollView className="flex-1">
         <PreviewImage selectedImage={selectedImage} screenWidth={screenWidth} onViewFullScreen={() => setIsFullScreen(true)} />
-        <View className="p-4 border-4 rounded-3xl" style={{ borderColor: Colorizer(selectedImage.primary, 1.0), backgroundColor: Colorizer("#111111", 1.0) }}>
+        <View className="p-4 border-2 rounded-3xl" style={{ borderColor: Colorizer(selectedImage.primary, 1.0), backgroundColor: Colorizer("#111111", 1.0) }}>
           <Text className="mb-2 text-5xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer(selectedImage.primary, 1.0) }}>
             {selectedImage.original_file_name.replace(".jpg", "")}
           </Text>
@@ -531,6 +532,7 @@ const ImagePage = () => {
           <DownloadButton onDownload={downloadAndSaveImage} colors={{ primary: selectedImage.primary, secondary: selectedImage.primary, tertiary: selectedImage.primary }} />
           <OtherImages otherImages={otherImages} setCurrentIndex={setCurrentIndex} primaryColor={selectedImage.primary} tertiaryColor={selectedImage.tertiary} />
         </View>
+        <Footer />
       </ScrollView>
       <FullScreenView
         isFullScreen={isFullScreen}
