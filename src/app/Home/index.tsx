@@ -22,7 +22,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import HeaderAnimate from "@/utils/HeaderAnimated";
 import { SubImagesProps, CardProps, CategoryButtonProps } from "@/types/components";
 import { View, Text, TouchableOpacity, FlatList, ScrollView, StatusBar } from "react-native";
-import Animated, { Easing, runOnJS, useSharedValue, useAnimatedStyle, withTiming, withRepeat } from "react-native-reanimated";
+import Animated, { Easing, runOnJS, useSharedValue, useAnimatedStyle, withTiming, withRepeat, withDelay } from "react-native-reanimated";
 // ============================================================================================
 // ============================================================================================
 interface Category {
@@ -37,25 +37,25 @@ interface CategoryButtonExtendedProps extends CategoryButtonProps {
 // ============================================================================================
 const AnimatedImage = Animated.createAnimatedComponent(Image);
 const categories: Category[] = [
-  { name: "Aerial View", database: AerialView },
-  { name: "Portrait Perfect", database: PortraitPerfect },
-  { name: "Hyper Closeups", database: HyperCloseups },
-  { name: "Nature Wonders", database: NatureWonders },
-  { name: "Anime Landscapes", database: AnimeLandscapes },
-  { name: "Natural Landscapes", database: NaturalLandscapes },
-  { name: "Minimalist Abstract", database: MinimalistAbstract },
+  { name: "Mountains-Beaches", database: MountainsAndBeaches },
   { name: "Antique Look Object", database: AntiqueLookObject },
-  { name: "Cosmic And Lightning", database: CosmicAndLightning },
-  { name: "Mountains And Beaches", database: MountainsAndBeaches }
+  { name: "Minimalist Abstract", database: MinimalistAbstract },
+  { name: "Natural Landscapes", database: NaturalLandscapes },
+  { name: "Cosmic-Lightning", database: CosmicAndLightning },
+  { name: "Anime Landscapes", database: AnimeLandscapes },
+  { name: "Nature Wonders", database: NatureWonders },
+  { name: "Hyper Closeups", database: HyperCloseups },
+  { name: "Portrait Perfect", database: PortraitPerfect },
+  { name: "Aerial View", database: AerialView }
 ];
 // ============================================================================================
 // ============================================================================================
 const SubImages: React.FC<SubImagesProps> = React.memo(({ images, onImagePress }) => (
-  <View style={{ flexDirection: "column", justifyContent: "flex-start" }}>
+  <View className="flex flex-col justify-start">
     {images.data.map((image, index) => (
       <Link key={index} href={{ pathname: "./Image", params: { data: JSON.stringify({ selectedIndex: index, data: images.data, environment_title: images.environment_title }) } }} asChild>
-        <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} style={{ padding: 0.2, flex: 1 }}>
-          <View style={{ position: "relative" }}>
+        <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="p-[0.2px] flex-1">
+          <View className="relative">
             <Image
               source={{ uri: image.previewLink }}
               style={{ height: 50, borderWidth: 1, width: "100%", borderRadius: 4, borderColor: Colorizer(image.primary, 0.5) }}
@@ -63,19 +63,8 @@ const SubImages: React.FC<SubImagesProps> = React.memo(({ images, onImagePress }
               contentFit="cover"
             />
             <Text
-              style={{
-                position: "absolute",
-                margin: 1,
-                bottom: 1,
-                right: 1,
-                paddingHorizontal: 8,
-                paddingVertical: 2,
-                fontFamily: "Kurale_Regular",
-                color: Colorizer("#000000", 1.0),
-                backgroundColor: Colorizer(image.primary, 1.0),
-                fontSize: 12,
-                borderRadius: 16
-              }}
+              className="absolute m-1 bottom-1 right-1 px-2 text-xs rounded-2xl"
+              style={{ fontFamily: "Kurale_Regular", color: Colorizer("#000000", 1.0), backgroundColor: Colorizer(image.primary, 1.0) }}
             >
               {image.primary.toUpperCase()}
             </Text>
@@ -145,27 +134,15 @@ const Card: React.FC<CardProps> = React.memo(({ data }) => {
   const imageStyle = useAnimatedStyle(() => ({ opacity: fadeValue.value }));
   const textStyle = useAnimatedStyle(() => ({ opacity: textOpacity.value, transform: [{ scale: textScale.value }] }));
   return (
-    <View style={{ borderRadius: 16, overflow: "hidden", borderWidth: 1, backgroundColor: Colorizer("#171717", 1.0), borderColor: Colorizer(data.images[currentIndex].primary, 0.4) }}>
+    <View className="rounded-b-lg rounded-t-2xl overflow-hidden border" style={{ backgroundColor: Colorizer("#171717", 1.0), borderColor: Colorizer(data.images[currentIndex].primary, 0.4) }}>
       <Link href={{ pathname: "./Image", params: { data: JSON.stringify({ data: data.images, selectedIndex: currentIndex, environment_title: data.environment_title }) } }} asChild>
         <TouchableOpacity>
-          <View style={{ position: "relative", aspectRatio: 9 / 16, width: "100%", overflow: "hidden" }}>
+          <View className="relative aspect-[9/16] w-full overflow-hidden">
             <AnimatedImage source={{ uri: currentImage }} style={[{ width: "100%", height: "100%", borderTopLeftRadius: 8, borderTopRightRadius: 8 }, imageStyle]} contentFit="cover" />
-            <View style={{ position: "absolute", bottom: 0, left: 0, right: 0, alignItems: "center", justifyContent: "flex-start" }}>
+            <View className="absolute bottom-0 left-0 right-0 items-center justify-start">
               <Animated.Text
-                style={[
-                  textStyle,
-                  {
-                    textAlign: "center",
-                    fontFamily: "Kurale_Regular",
-                    color: Colorizer("#000000", 0.8),
-                    backgroundColor: Colorizer(data.images[currentIndex].primary, 1.0),
-                    fontSize: 14,
-                    margin: 1,
-                    paddingHorizontal: 4,
-                    paddingVertical: 2,
-                    borderRadius: 12
-                  }
-                ]}
+                style={[textStyle, { textAlign: "center", fontFamily: "Kurale_Regular", color: Colorizer("#000000", 0.8), backgroundColor: Colorizer(data.images[currentIndex].primary, 1.0) }]}
+                className="text-sm m-1 px-1 rounded-xl"
               >
                 {data.images[currentIndex].original_file_name.replace(/_/g, " ").replace(".jpg", "")}
               </Animated.Text>
@@ -173,16 +150,16 @@ const Card: React.FC<CardProps> = React.memo(({ data }) => {
           </View>
         </TouchableOpacity>
       </Link>
-      <View style={{ flexDirection: "row", padding: 0.5 }}>
-        <View style={{ width: "50%" }}>
+      <View className="flex flex-row p-0.5">
+        <View className="w-1/2">
           <SubImages onImagePress={handleSubImagePress} images={{ data: data.images.slice(0, 2), selectedIndex: currentIndex, environment_title: data.environment_title }} />
         </View>
-        <View style={{ width: "50%" }}>
+        <View className="w-1/2">
           <SubImages onImagePress={handleSubImagePress} images={{ data: data.images.slice(2, 4), selectedIndex: currentIndex, environment_title: data.environment_title }} />
         </View>
       </View>
-      <View style={{ borderTopWidth: 1, alignItems: "center", justifyContent: "center", paddingVertical: 0.5, backgroundColor: Colorizer(data.images[currentIndex].primary, 1.0) }}>
-        <Text style={{ fontFamily: "Dm_Serif_Display_Regular", color: Colorizer("#000000", 1.0), fontSize: 12, lineHeight: 16 }}> Generated by picWall-AI </Text>
+      <View className="border-t items-center justify-center py-0.5" style={{ backgroundColor: Colorizer(data.images[currentIndex].primary, 1.0) }}>
+        <Text style={{ fontFamily: "Dm_Serif_Display_Regular", color: Colorizer("#000000", 1.0), fontSize: 12, lineHeight: 16 }}>Generated by picWall-AI</Text>
       </View>
     </View>
   );
@@ -191,7 +168,7 @@ Card.displayName = "Card";
 // ============================================================================================
 // ============================================================================================
 function getCategoryIcon(selected: boolean) {
-  const iconSize = selected ? 22 : 14;
+  const iconSize = selected ? 15 : 10;
   const iconName = selected ? "gripfire" : "swatchbook";
   const iconColor = selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0);
   return <FontAwesome5 name={iconName} size={iconSize} color={iconColor} />;
@@ -203,8 +180,6 @@ const CategoryButton: React.FC<CategoryButtonExtendedProps> = React.memo(({ cate
   React.useEffect(() => {
     translateX.value = withRepeat(withTiming(50, { duration: 1000 }), -1, true);
   }, [translateX]);
-  const animatedStyle1 = useAnimatedStyle(() => ({ transform: [{ translateX: -translateX.value }] }));
-  const animatedStyle2 = useAnimatedStyle(() => ({ transform: [{ translateX: translateX.value }] }));
   return (
     <TouchableOpacity
       style={{ borderRadius: 4, overflow: "hidden", padding: 2 }}
@@ -214,7 +189,9 @@ const CategoryButton: React.FC<CategoryButtonExtendedProps> = React.memo(({ cate
       onPress={onPress}
     >
       <View style={{ alignItems: "center", margin: 2 }}>
-        <Animated.View style={[{ width: 100, height: 1, backgroundColor: selected ? "#5f1314" : "#BABABB", borderRadius: 50 }, animatedStyle1]} />
+        <Animated.View
+          style={[{ width: 100, height: 1, backgroundColor: selected ? "#5f1314" : "#BABABB", borderRadius: 50 }, useAnimatedStyle(() => ({ transform: [{ translateX: -translateX.value }] }))]}
+        />
       </View>
       <LinearGradient
         colors={selected ? [Colorizer("#5f1314", 1.0), Colorizer("#981e20", 1.0), Colorizer("#BE2528", 1.0)] : [Colorizer("#E9E9EA", 1.0), Colorizer("#D2D2D3", 1.0), Colorizer("#BABABB", 1.0)]}
@@ -224,11 +201,15 @@ const CategoryButton: React.FC<CategoryButtonExtendedProps> = React.memo(({ cate
       >
         <View style={{ flexDirection: "row", alignItems: "center" }}>
           {getCategoryIcon(selected)}
-          <Text style={{ fontFamily: "Caveat_Bold", color: selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0), marginLeft: 4, padding: 4, fontSize: 20 }}> {category} </Text>
+          <Text style={{ fontFamily: "Caveat_Bold", color: selected ? Colorizer("#E9E9EA", 1.0) : Colorizer("#000000", 1.0) }} className="ml-1 p-1 text-lg">
+            {category}
+          </Text>
         </View>
       </LinearGradient>
       <View style={{ alignItems: "center", margin: 2 }}>
-        <Animated.View style={[{ width: 100, height: 1, backgroundColor: selected ? "#BE2528" : "#E9E9EA", borderRadius: 50 }, animatedStyle2]} />
+        <Animated.View
+          style={[{ width: 100, height: 1, backgroundColor: selected ? "#BE2528" : "#E9E9EA", borderRadius: 50 }, useAnimatedStyle(() => ({ transform: [{ translateX: translateX.value }] }))]}
+        />
       </View>
     </TouchableOpacity>
   );
@@ -237,26 +218,44 @@ CategoryButton.displayName = "CategoryButton";
 // ============================================================================================
 // ============================================================================================
 const HeaderComponent: React.FC<{ categories: Category[]; selectedCategory: string; onSelectCategory: (categoryName: string) => void }> = React.memo(
-  ({ categories, selectedCategory, onSelectCategory }) => (
-    <>
-      <HeaderAnimate />
-      <View style={{ paddingBottom: 4, paddingTop: 16, paddingHorizontal: 8 }}>
-        <Text style={{ fontFamily: "Lobster_Regular", fontSize: 40, color: Colorizer("#E9E9EA", 1.0) }}>Explore Our Collection</Text>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          {categories.map((category) => (
-            <CategoryButton key={category.name} category={category.name} selected={category.name === selectedCategory} onPress={() => onSelectCategory(category.name)} />
-          ))}
-        </ScrollView>
-      </View>
-    </>
-  )
+  ({ categories, selectedCategory, onSelectCategory }) => {
+    const leftIconTranslate = useSharedValue(0),
+      rightIconTranslate = useSharedValue(0);
+    const leftIconStyle = useAnimatedStyle(() => ({ transform: [{ translateX: leftIconTranslate.value }] })),
+      rightIconStyle = useAnimatedStyle(() => ({ transform: [{ translateX: rightIconTranslate.value }] }));
+    React.useEffect(() => {
+      leftIconTranslate.value = withRepeat(withTiming(-30, { duration: 1000, easing: Easing.ease }), -1, true);
+      rightIconTranslate.value = withRepeat(withTiming(30, { duration: 1000, easing: Easing.ease }), -1, true);
+    }, []);
+    return (
+      <>
+        <HeaderAnimate />
+        <View className="pb-1 pt-4 px-2">
+          <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
+            <Animated.View style={leftIconStyle}>
+              <FontAwesome5 name="caret-left" size={24} color="#E9E9EA" />
+            </Animated.View>
+            <Text style={{ fontFamily: "Lobster_Regular", fontSize: 40, color: "#E9E9EA", textAlign: "center", marginHorizontal: 10 }}>Our Collections</Text>
+            <Animated.View style={rightIconStyle}>
+              <FontAwesome5 name="caret-right" size={24} color="#E9E9EA" />
+            </Animated.View>
+          </View>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            {categories.map((category) => (
+              <CategoryButton key={category.name} category={category.name} selected={category.name === selectedCategory} onPress={() => onSelectCategory(category.name)} />
+            ))}
+          </ScrollView>
+        </View>
+      </>
+    );
+  }
 );
 HeaderComponent.displayName = "HeaderComponent";
 // ============================================================================================
 // ============================================================================================
 const HomePage = (): JSX.Element => {
   const [cardData, setCardData] = React.useState<EnvironmentEntry[]>([]);
-  const [selectedCategory, setSelectedCategory] = React.useState<string>("Hyper Closeups");
+  const [selectedCategory, setSelectedCategory] = React.useState<string>("Antique Look Object");
   React.useEffect(() => {
     const processImageUrls = (entry: EnvironmentEntry): EnvironmentEntry => ({
       ...entry,
@@ -278,7 +277,7 @@ const HomePage = (): JSX.Element => {
   }, [selectedCategory]);
   const renderCard = React.useCallback(
     ({ item }: { item: EnvironmentEntry }) => (
-      <View style={{ flex: 1, margin: 0.5 }}>
+      <View className="flex-1 m-0.5">
         <Card data={item} />
       </View>
     ),
@@ -286,7 +285,7 @@ const HomePage = (): JSX.Element => {
   );
   const keyExtractor = React.useCallback((item: EnvironmentEntry) => item.environment_title, []);
   return (
-    <View style={{ backgroundColor: Colorizer("#000000", 1.0), flex: 1, position: "relative" }}>
+    <View style={{ backgroundColor: Colorizer("#000000", 1.0), flex: 1 }} className="relative">
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
       <FlatList
         windowSize={3}
@@ -306,4 +305,5 @@ const HomePage = (): JSX.Element => {
     </View>
   );
 };
+
 export default HomePage;
