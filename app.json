@@ -1,6 +1,6 @@
 {
   "expo": {
-    "version": "1.0.0",
+    "version": "1.0.2",
     "owner": "shovit",
     "slug": "picWall",
     "name": "picWall",
@@ -8,7 +8,9 @@
     "orientation": "portrait",
     "newArchEnabled": true,
     "userInterfaceStyle": "automatic",
-    "experiments": { "typedRoutes": true },
+    "experiments": {
+      "typedRoutes": true
+    },
     "icon": "./src/assets/picWall/picWall.png",
     "ios": {
       "supportsTablet": true,
@@ -19,13 +21,31 @@
         "NSPhotoLibraryUsageDescription": "picWall: requires access to your photo library to save images."
       }
     },
-    "web": { "output": "static", "bundler": "metro", "favicon": "./src/assets/picWall/picWall.png" },
-    "extra": { "router": { "origin": false }, "eas": { "projectId": "8d28e42e-f194-40ac-b49e-442b27d0d6ef" } },
+    "web": {
+      "output": "static",
+      "bundler": "metro",
+      "favicon": "./src/assets/picWall/picWall.png"
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "8d28e42e-f194-40ac-b49e-442b27d0d6ef"
+      }
+    },
     "android": {
       "requiresFullScreen": true,
       "package": "com.shovit.picWall",
-      "adaptiveIcon": { "backgroundColor": "#171717", "foregroundImage": "./src/assets/picWall/picWall.png" },
-      "permissions": ["READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE", "SET_WALLPAPER "]
+      "adaptiveIcon": {
+        "backgroundColor": "#171717",
+        "foregroundImage": "./src/assets/picWall/picWall.png"
+      },
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "SET_WALLPAPER "
+      ]
     },
     "plugins": [
       "expo-router",
@@ -49,7 +69,15 @@
           ]
         }
       ],
-      ["expo-splash-screen", { "imageWidth": 200, "resizeMode": "contain", "backgroundColor": "#171717", "image": "./src/assets/picWall/picWall.png" }]
+      [
+        "expo-splash-screen",
+        {
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#171717",
+          "image": "./src/assets/picWall/picWall.png"
+        }
+      ]
     ]
   }
 }

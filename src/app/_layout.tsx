@@ -34,8 +34,8 @@ export default function RootLayout() {
         await SplashScreen.hideAsync();
         const { lastState, hasRedirected, setRedirected, clearState } = useAppState.getState();
         if (lastState && !hasRedirected) {
-          router.replace("/Home");
-          router.replace({
+          router.push("/Home");
+          router.push({
             pathname: "/Image",
             params: { data: JSON.stringify({ data: lastState.data, selectedIndex: lastState.selectedIndex, environment_title: lastState.environment_title || "Default Title" }) }
           });
