@@ -450,7 +450,10 @@ const ImagePage = () => {
   const [isDownloading, setIsDownloading] = useState(false);
   const [downloadRate, setDownloadRate] = useState<number>(0);
   const [alertIcon, setAlertIcon] = useState<"error" | "checkmark-done-circle">("checkmark-done-circle");
-  const [currentIndex, setCurrentIndex] = useState(parseInt(Sanitized.selectedIndex as unknown as string) || 0);
+  const [currentIndex, setCurrentIndex] = useState(() => {
+    const parsedIndex = parseInt(Sanitized.selectedIndex);
+    return !isNaN(parsedIndex) ? parsedIndex : 0;
+  });
   const selectedImage = Sanitized.data[currentIndex];
   const environmentTitle = Sanitized.environment_title;
   const showAlert = (title: string, message: string, iconName: "error" | "checkmark-done-circle") => {

@@ -6,7 +6,12 @@ type HEX = `#${string}`;
 type ColorValue = RGB | RGBA | HEX | string;
 
 interface SubImagesProps {
-  images: DownloadScreenProps;
+  images: {
+    selectedIndex: number;
+    data: ImageMetadata[];
+    environment_title: string;
+    allData: ImageMetadata[];
+  };
   onImagePress: (previewLink: string, index: number) => void;
 }
 
@@ -44,4 +49,19 @@ interface ScrollingSlotProps {
   delay: number;
 }
 
-export type { RGB, RGBA, HEX, ColorValue, ImageMetadata, EnvironmentEntry, SubImagesProps, CardTextProps, CardProps, ScrollingSlotProps, AlphabetGroupProps, CategoryButtonProps, DownloadScreenProps, GroupedData };
+export type {
+  RGB,
+  RGBA,
+  HEX,
+  ColorValue,
+  ImageMetadata,
+  EnvironmentEntry,
+  SubImagesProps,
+  CardTextProps,
+  CardProps,
+  ScrollingSlotProps,
+  AlphabetGroupProps,
+  CategoryButtonProps,
+  DownloadScreenProps,
+  GroupedData
+};

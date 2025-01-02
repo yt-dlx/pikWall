@@ -96,26 +96,54 @@ SearchBar.displayName = "SearchBar";
 // ============================================================================================
 const SubImages: FC<SubImagesProps> = memo(({ images, onImagePress }) => (
   <View className="flex flex-col justify-start">
-    {images.data.map((image, index) => (
-      <Link key={index} href={{ pathname: "./Image", params: { data: JSON.stringify({ selectedIndex: index, data: images.data, environment_title: images.environment_title }) } }} asChild>
-        <TouchableOpacity onPress={() => onImagePress(image.previewLink, index)} className="p-[0.2px] flex-1">
-          <View className="relative">
-            <Image
-              source={{ uri: image.previewLink }}
-              style={{ height: 50, borderWidth: 1, width: "100%", borderRadius: 4, borderColor: Colorizer(image.primary, 0.5) }}
-              cachePolicy="memory-disk"
-              contentFit="cover"
-            />
-            <Text
-              className="absolute m-1 bottom-1 right-1 px-2 text-xs rounded-2xl"
-              style={{ fontFamily: "Kurale_Regular", color: Colorizer("#F2EFE0", 1.0), backgroundColor: Colorizer(image.primary, 1.0) }}
-            >
-              {image.primary.toUpperCase()}
-            </Text>
-          </View>
-        </TouchableOpacity>
-      </Link>
-    ))}
+    {images.data.map((image, index) => {
+      // Calculate the actual index in the full dataset
+      const fullDataIndex = images.allData.findIndex((img) => img.original_file_name === image.original_file_name);
+
+      return (
+        <Link
+          key={index}
+          href={{
+            pathname: "./Image",
+            params: {
+              data: JSON.stringify({
+                selectedIndex: fullDataIndex, // Use the index from the full dataset
+                data: images.allData,
+                environment_title: images.environment_title
+              })
+            }
+          }}
+          asChild
+        >
+          <TouchableOpacity onPress={() => onImagePress(image.previewLink, fullDataIndex)} className="p-[0.2px] flex-1">
+            <View className="relative">
+              <Image
+                source={{ uri: image.previewLink }}
+                style={{
+                  height: 50,
+                  borderWidth: 1,
+                  width: "100%",
+                  borderRadius: 4,
+                  borderColor: Colorizer(image.primary, 0.5)
+                }}
+                cachePolicy="memory-disk"
+                contentFit="cover"
+              />
+              <Text
+                className="absolute m-1 bottom-1 right-1 px-2 text-xs rounded-2xl"
+                style={{
+                  fontFamily: "Kurale_Regular",
+                  color: Colorizer("#F2EFE0", 1.0),
+                  backgroundColor: Colorizer(image.primary, 1.0)
+                }}
+              >
+                {image.primary.toUpperCase()}
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </Link>
+      );
+    })}
   </View>
 ));
 SubImages.displayName = "SubImages";
@@ -202,10 +230,26 @@ const Card: FC<CardProps> = memo(({ data }) => {
         </Link>
         <View className="flex flex-row p-0.5">
           <View className="w-1/2">
-            <SubImages onImagePress={handleSubImagePress} images={{ data: data.images.slice(0, 2), selectedIndex: currentIndex, environment_title: data.environment_title }} />
+            <SubImages
+              onImagePress={handleSubImagePress}
+              images={{
+                data: data.images.slice(0, 2),
+                allData: data.images, // Pass all images
+                selectedIndex: currentIndex,
+                environment_title: data.environment_title
+              }}
+            />
           </View>
           <View className="w-1/2">
-            <SubImages onImagePress={handleSubImagePress} images={{ data: data.images.slice(2, 4), selectedIndex: currentIndex, environment_title: data.environment_title }} />
+            <SubImages
+              onImagePress={handleSubImagePress}
+              images={{
+                data: data.images.slice(2, 4),
+                allData: data.images, // Pass all images
+                selectedIndex: currentIndex,
+                environment_title: data.environment_title
+              }}
+            />
           </View>
         </View>
         <View className="border-t items-center justify-center py-0.5" style={{ backgroundColor: Colorizer(data.images[currentIndex].primary, 1.0) }}>
