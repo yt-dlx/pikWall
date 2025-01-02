@@ -40,28 +40,28 @@ const categories: Category[] = [
   {
     name: "All-Combined",
     database: {
-      ...MountainsAndBeaches,
-      ...CosmicAndLightning,
-      ...AntiqueLookObject,
-      ...MinimalistAbstract,
-      ...NaturalLandscapes,
-      ...AnimeLandscapes,
-      ...NatureWonders,
-      ...HyperCloseups,
+      ...AerialView,
       ...PortraitPerfect,
-      ...AerialView
+      ...HyperCloseups,
+      ...NatureWonders,
+      ...AnimeLandscapes,
+      ...NaturalLandscapes,
+      ...MinimalistAbstract,
+      ...AntiqueLookObject,
+      ...CosmicAndLightning,
+      ...MountainsAndBeaches
     }
   },
-  { name: "Mountains-Beaches", database: MountainsAndBeaches },
-  { name: "Minimalist Abstract", database: MinimalistAbstract },
-  { name: "Natural Landscapes", database: NaturalLandscapes },
-  { name: "Cosmic-Lightning", database: CosmicAndLightning },
-  { name: "Anime Landscapes", database: AnimeLandscapes },
-  { name: "Antique Looking", database: AntiqueLookObject },
-  { name: "Nature Wonders", database: NatureWonders },
-  { name: "Hyper Closeups", database: HyperCloseups },
+  { name: "Aerial View", database: AerialView },
   { name: "Portrait Perfect", database: PortraitPerfect },
-  { name: "Aerial View", database: AerialView }
+  { name: "Hyper Closeups", database: HyperCloseups },
+  { name: "Nature Wonders", database: NatureWonders },
+  { name: "Antique Looking", database: AntiqueLookObject },
+  { name: "Anime Landscapes", database: AnimeLandscapes },
+  { name: "Cosmic-Lightning", database: CosmicAndLightning },
+  { name: "Natural Landscapes", database: NaturalLandscapes },
+  { name: "Minimalist Abstract", database: MinimalistAbstract },
+  { name: "Mountains-Beaches", database: MountainsAndBeaches }
 ];
 // ============================================================================================
 // ============================================================================================
@@ -330,17 +330,14 @@ HeaderComponent.displayName = "HeaderComponent";
 // ============================================================================================
 // ============================================================================================
 const HomePage = (): JSX.Element => {
-  const [cardData, setCardData] = useState<EnvironmentEntry[]>([]);
+  const [searchQuery, setSearchQuery] = useState<string>("");
   const [filteredData, setFilteredData] = useState<EnvironmentEntry[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>("All-Combined");
-  const [searchQuery, setSearchQuery] = useState<string>("");
-
   const getAllCombinedData = useCallback(() => {
     const allCombinedCategory = categories.find((c) => c.name === "All-Combined");
     if (!allCombinedCategory) return [];
     return Object.values(allCombinedCategory.database);
   }, []);
-
   const processImageUrls = useCallback(
     (entry: EnvironmentEntry): EnvironmentEntry => ({
       ...entry,
@@ -359,7 +356,6 @@ const HomePage = (): JSX.Element => {
       const allEntries: EnvironmentEntry[] = Object.values(category.database);
       const processedEntries = allEntries.map(processImageUrls);
       const shuffledEntries = [...processedEntries].sort(() => Math.random() - 0.5);
-      setCardData(shuffledEntries);
       setFilteredData(shuffledEntries);
     };
     fetchData();
@@ -422,13 +418,12 @@ const HomePage = (): JSX.Element => {
       return (
         <View style={{ padding: 20, alignItems: "center" }}>
           <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#F2EFE0", 0.8), fontSize: 16, textAlign: "center" }}>No images found matching "{searchQuery}".</Text>
-          <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#F2EFE0", 0.8), fontSize: 16, textAlign: "center" }}>You may request more images from "Account" Section. </Text>
+          <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#F2EFE0", 0.8), fontSize: 16, textAlign: "center" }}>You may request images from "Account" Section. </Text>
         </View>
       );
     }
     return null;
   }, [searchQuery]);
-
   return (
     <View style={{ backgroundColor: Colorizer("#171717", 1.0), flex: 1 }} className="relative">
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
