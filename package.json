@@ -4,9 +4,9 @@
   "main": "expo-router/entry",
   "scripts": {
     "_placeholder": "==============================================",
-    "build:android:preview": "expo prebuild && cd android && ./gradlew assemblePreview",
     "build:android:production": "expo prebuild && cd android && ./gradlew assembleRelease",
     "build:android:development": "expo prebuild && cd android && ./gradlew assembleDebug",
+    "build:android:prodev": "expo prebuild && cd android && ./gradlew assembleRelease && ./gradlew assembleDebug",
     "__placeholder": "========================================================",
     "build:cloud:development:android": "eas build --profile development --platform android",
     "build:cloud:development:ios": "eas build --profile development --platform ios",

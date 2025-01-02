@@ -2,6 +2,7 @@
 import Colorizer from "./Colorizer";
 import React, { useEffect } from "react";
 import imageSets from "@/database/static";
+import { AntDesign } from "@expo/vector-icons";
 import { Text, View, Image } from "react-native";
 import { ScrollingSlotProps } from "@/types/components";
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, withRepeat, withSequence, withDelay, FadeInDown } from "react-native-reanimated";
@@ -37,7 +38,7 @@ const AnimatedTitle: React.FC = () => {
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
   return (
     <Animated.View style={animatedStyle} className="items-center mt-10">
-      <View style={{ backgroundColor: Colorizer("#060403", 0.6) }} className="rounded-full p-1">
+      <View style={{ backgroundColor: Colorizer("#171717", 0.6) }} className="rounded-full p-1">
         <Image source={require("@/assets/picWall/picWall.png")} alt="logo" className="w-24 h-24 rounded-full border-2" style={{ borderColor: Colorizer("#F2EFE0", 1.0) }} resizeMode="contain" />
       </View>
     </Animated.View>
@@ -56,18 +57,18 @@ const HeaderAnimated: React.FC = () => {
           className="absolute inset-0 items-center justify-center rounded-lg overflow-hidden"
           style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", borderRadius: 8 }}
         >
-          <View style={{ backgroundColor: Colorizer("#060403", 0.5) }} className="absolute inset-0" />
+          <View style={{ backgroundColor: Colorizer("#171717", 0.5) }} className="absolute inset-0" />
           <View style={{ position: "absolute", justifyContent: "center", alignItems: "center", margin: 8, padding: 4 }} className="absolute justify-center items-center">
             <View className="flex-row mb-1">
               <AnimatedTitle />
             </View>
-            <Text style={{ fontFamily: "Lobster_Regular", fontSize: 30, color: Colorizer("#F2EFE0", 1.0), lineHeight: 34 }} className="tracking-tight">
+            <Text style={{ fontFamily: "Lobster_Regular", fontSize: 30, marginTop: 15, color: Colorizer("#F2EFE0", 1.0), lineHeight: 34 }} className="tracking-tight">
               picWall
             </Text>
             <Animated.View style={{ alignSelf: "center" }} entering={FadeInDown.delay(600).duration(1500).springify()}>
-              <View style={{ backgroundColor: Colorizer("#060403", 0.9), borderRadius: 12, paddingHorizontal: 12, paddingVertical: 2, marginTop: 4 }}>
-                <Text className="text-center" style={{ fontFamily: "Caveat_Bold", color: Colorizer("#F2EFE0", 1.0), fontSize: 16 }}>
-                  Crafted with <Text style={{ color: Colorizer("#C26F2D", 1.0) }}>♥</Text> in India
+              <View style={{ backgroundColor: Colorizer("#171717", 0.6), borderRadius: 9999, paddingHorizontal: 12, paddingVertical: 4 }}>
+                <Text style={{ fontFamily: "Caveat_Bold", color: Colorizer("#F2EFE0", 1.0), fontSize: 12, textAlign: "center" }}>
+                  Crafted with <AntDesign name="heart" size={10} color={Colorizer("#C26F2D", 1.0)} /> in India. All rights reserved
                 </Text>
               </View>
             </Animated.View>

@@ -24,7 +24,7 @@
     "android": {
       "requiresFullScreen": true,
       "package": "com.shovit.picWall",
-      "adaptiveIcon": { "backgroundColor": "#060403", "foregroundImage": "./src/assets/picWall/picWall.png" },
+      "adaptiveIcon": { "backgroundColor": "#171717", "foregroundImage": "./src/assets/picWall/picWall.png" },
       "permissions": ["READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE", "SET_WALLPAPER "]
     },
     "plugins": [
@@ -49,7 +49,7 @@
           ]
         }
       ],
-      ["expo-splash-screen", { "imageWidth": 200, "resizeMode": "contain", "backgroundColor": "#060403", "image": "./src/assets/picWall/picWall.png" }]
+      ["expo-splash-screen", { "imageWidth": 200, "resizeMode": "contain", "backgroundColor": "#171717", "image": "./src/assets/picWall/picWall.png" }]
     ]
   }
 }
