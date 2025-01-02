@@ -11,7 +11,6 @@ import PortraitPerfect from "@/database/Portrait Perfect";
 import AerialView from "@/database/Aerial View";
 // ============================================================================================
 // ============================================================================================
-import * as React from "react";
 import { Link } from "expo-router";
 import { Image } from "expo-image";
 import Footer from "@/utils/Footer";
@@ -20,8 +19,9 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { EnvironmentEntry } from "@/types/database";
 import { LinearGradient } from "expo-linear-gradient";
 import HeaderAnimate from "@/utils/HeaderAnimated";
+import { useEffect, useCallback, useState, memo, FC } from "react";
 import { SubImagesProps, CardProps, CategoryButtonProps } from "@/types/components";
-import { View, Text, TouchableOpacity, FlatList, ScrollView, StatusBar } from "react-native";
+import { View, Text, TouchableOpacity, FlatList, ScrollView, StatusBar, TextInput } from "react-native";
 import Animated, { Easing, runOnJS, useSharedValue, useAnimatedStyle, withTiming, withRepeat } from "react-native-reanimated";
 // ============================================================================================
 // ============================================================================================
@@ -37,12 +37,27 @@ interface CategoryButtonExtendedProps extends CategoryButtonProps {
 // ============================================================================================
 const AnimatedImage = Animated.createAnimatedComponent(Image);
 const categories: Category[] = [
+  {
+    name: "All-Combined",
+    database: {
+      ...MountainsAndBeaches,
+      ...CosmicAndLightning,
+      ...AntiqueLookObject,
+      ...MinimalistAbstract,
+      ...NaturalLandscapes,
+      ...AnimeLandscapes,
+      ...NatureWonders,
+      ...HyperCloseups,
+      ...PortraitPerfect,
+      ...AerialView
+    }
+  },
   { name: "Mountains-Beaches", database: MountainsAndBeaches },
-  { name: "Antique Look Object", database: AntiqueLookObject },
   { name: "Minimalist Abstract", database: MinimalistAbstract },
   { name: "Natural Landscapes", database: NaturalLandscapes },
   { name: "Cosmic-Lightning", database: CosmicAndLightning },
   { name: "Anime Landscapes", database: AnimeLandscapes },
+  { name: "Antique Looking", database: AntiqueLookObject },
   { name: "Nature Wonders", database: NatureWonders },
   { name: "Hyper Closeups", database: HyperCloseups },
   { name: "Portrait Perfect", database: PortraitPerfect },
@@ -50,7 +65,52 @@ const categories: Category[] = [
 ];
 // ============================================================================================
 // ============================================================================================
-const SubImages: React.FC<SubImagesProps> = React.memo(({ images, onImagePress }) => (
+const SearchBar: FC<{ onSearch: (text: string) => void }> = memo(({ onSearch }) => {
+  const [searchText, setSearchText] = useState("");
+
+  const handleSearch = (text: string) => {
+    setSearchText(text);
+    onSearch(text);
+  };
+
+  return (
+    <View style={{ padding: 8, backgroundColor: Colorizer("#171717", 1.0) }}>
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          backgroundColor: Colorizer("#F2EFE0", 1.0),
+          borderRadius: 8,
+          paddingHorizontal: 12,
+          height: 40
+        }}
+      >
+        <FontAwesome5 name="search" size={16} color={Colorizer("#171717", 0.6)} />
+        <TextInput
+          value={searchText}
+          onChangeText={handleSearch}
+          placeholder="Search by image name..."
+          placeholderTextColor={Colorizer("#171717", 0.6)}
+          style={{
+            flex: 1,
+            marginLeft: 8,
+            fontFamily: "Kurale_Regular",
+            color: Colorizer("#171717", 1.0)
+          }}
+        />
+        {searchText.length > 0 && (
+          <TouchableOpacity onPress={() => handleSearch("")}>
+            <FontAwesome5 name="times" size={16} color={Colorizer("#171717", 0.6)} />
+          </TouchableOpacity>
+        )}
+      </View>
+    </View>
+  );
+});
+SearchBar.displayName = "SearchBar";
+// ============================================================================================
+// ============================================================================================
+const SubImages: FC<SubImagesProps> = memo(({ images, onImagePress }) => (
   <View className="flex flex-col justify-start">
     {images.data.map((image, index) => (
       <Link key={index} href={{ pathname: "./Image", params: { data: JSON.stringify({ selectedIndex: index, data: images.data, environment_title: images.environment_title }) } }} asChild>
@@ -77,21 +137,21 @@ const SubImages: React.FC<SubImagesProps> = React.memo(({ images, onImagePress }
 SubImages.displayName = "SubImages";
 // ============================================================================================
 // ============================================================================================
-const Card: React.FC<CardProps> = React.memo(({ data }) => {
+const Card: FC<CardProps> = memo(({ data }) => {
   const fadeInValue = useSharedValue(0);
-  const [currentIndex, setCurrentIndex] = React.useState<number>(0);
-  const [currentImage, setCurrentImage] = React.useState<string>(data.images[0]?.previewLink);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [currentImage, setCurrentImage] = useState<string>(data.images[0]?.previewLink);
   const fadeValue = useSharedValue(1);
   const textOpacity = useSharedValue(1);
   const textScale = useSharedValue(1);
-  const updateImageState = React.useCallback(
+  const updateImageState = useCallback(
     (nextIndex: number) => {
       setCurrentIndex(nextIndex);
       setCurrentImage(data.images[nextIndex]?.previewLink);
     },
     [data.images]
   );
-  const animateOut = React.useCallback(
+  const animateOut = useCallback(
     (cb: () => void) => {
       fadeValue.value = withTiming(0, { duration: 2000, easing: Easing.inOut(Easing.ease) }, () => {
         runOnJS(cb)();
@@ -100,13 +160,13 @@ const Card: React.FC<CardProps> = React.memo(({ data }) => {
     },
     [fadeValue, textOpacity]
   );
-  const animateIn = React.useCallback(() => {
+  const animateIn = useCallback(() => {
     textScale.value = 0.8;
     fadeValue.value = withTiming(1, { duration: 2000, easing: Easing.inOut(Easing.ease) });
     textOpacity.value = withTiming(1, { duration: 2000, easing: Easing.inOut(Easing.ease) });
     textScale.value = withTiming(1, { duration: 2000, easing: Easing.inOut(Easing.ease) });
   }, [fadeValue, textOpacity, textScale]);
-  const startTransition = React.useCallback(
+  const startTransition = useCallback(
     (nextIndex: number) => {
       animateOut(() => {
         updateImageState(nextIndex);
@@ -115,27 +175,27 @@ const Card: React.FC<CardProps> = React.memo(({ data }) => {
     },
     [animateOut, animateIn, updateImageState]
   );
-  const updateNextImage = React.useCallback(() => {
+  const updateNextImage = useCallback(() => {
     const nextIndex = (currentIndex + 1) % data.images.length;
     startTransition(nextIndex);
   }, [currentIndex, data.images.length, startTransition]);
-  const handleSubImagePress = React.useCallback(
+  const handleSubImagePress = useCallback(
     (previewLink: string, index: number) => {
       startTransition(index);
     },
     [startTransition]
   );
-  React.useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(updateNextImage, 4000);
     return () => clearInterval(interval);
   }, [updateNextImage]);
-  React.useEffect(() => {
+  useEffect(() => {
     updateImageState(0);
   }, [data, updateImageState]);
   const imageStyle = useAnimatedStyle(() => ({ opacity: fadeValue.value }));
   const fadeInStyle = useAnimatedStyle(() => ({ opacity: fadeInValue.value }));
   const textStyle = useAnimatedStyle(() => ({ opacity: textOpacity.value, transform: [{ scale: textScale.value }] }));
-  React.useEffect(() => {
+  useEffect(() => {
     fadeInValue.value = withTiming(2, { duration: 2000, easing: Easing.ease });
   }, []);
   return (
@@ -182,9 +242,9 @@ function getCategoryIcon(selected: boolean) {
 }
 // ============================================================================================
 // ============================================================================================
-const CategoryButton: React.FC<CategoryButtonExtendedProps> = React.memo(({ category, selected, onPress }) => {
+const CategoryButton: FC<CategoryButtonExtendedProps> = memo(({ category, selected, onPress }) => {
   const translateX = useSharedValue(0);
-  React.useEffect(() => {
+  useEffect(() => {
     translateX.value = withRepeat(withTiming(50, { duration: 1000 }), -1, true);
   }, [translateX]);
   return (
@@ -208,7 +268,7 @@ const CategoryButton: React.FC<CategoryButtonExtendedProps> = React.memo(({ cate
       >
         <View style={{ flexDirection: "row", alignItems: "center" }}>
           {getCategoryIcon(selected)}
-          <Text style={{ fontFamily: "Caveat_Bold", color: selected ? Colorizer("#F2EFE0", 1.0) : Colorizer("#171717", 1.0) }} className="ml-1 p-1 text-lg">
+          <Text style={{ fontFamily: "Caveat_Bold", color: selected ? Colorizer("#F2EFE0", 1.0) : Colorizer("#171717", 1.0) }} className="ml-1 text-lg">
             {category}
           </Text>
         </View>
@@ -224,15 +284,15 @@ const CategoryButton: React.FC<CategoryButtonExtendedProps> = React.memo(({ cate
 CategoryButton.displayName = "CategoryButton";
 // ============================================================================================
 // ============================================================================================
-const HeaderComponent: React.FC<{ categories: Category[]; selectedCategory: string; onSelectCategory: (categoryName: string) => void }> = React.memo(
-  ({ categories, selectedCategory, onSelectCategory }) => {
+const HeaderComponent: FC<{ categories: Category[]; selectedCategory: string; onSelectCategory: (categoryName: string) => void; onSearch: (text: string) => void }> = memo(
+  ({ categories, selectedCategory, onSelectCategory, onSearch }) => {
     const fadeInValue = useSharedValue(0);
     const leftIconTranslate = useSharedValue(0);
     const rightIconTranslate = useSharedValue(0);
     const fadeInStyle = useAnimatedStyle(() => ({ opacity: fadeInValue.value }));
     const leftIconStyle = useAnimatedStyle(() => ({ transform: [{ translateX: leftIconTranslate.value }] }));
     const rightIconStyle = useAnimatedStyle(() => ({ transform: [{ translateX: rightIconTranslate.value }] }));
-    React.useEffect(() => {
+    useEffect(() => {
       fadeInValue.value = withTiming(1, { duration: 2000, easing: Easing.ease });
       leftIconTranslate.value = withRepeat(withTiming(-30, { duration: 1000, easing: Easing.ease }), -1, true);
       rightIconTranslate.value = withRepeat(withTiming(30, { duration: 1000, easing: Easing.ease }), -1, true);
@@ -260,6 +320,7 @@ const HeaderComponent: React.FC<{ categories: Category[]; selectedCategory: stri
               <CategoryButton key={category.name} category={category.name} selected={category.name === selectedCategory} onPress={() => onSelectCategory(category.name)} />
             ))}
           </ScrollView>
+          <SearchBar onSearch={onSearch} />
         </LinearGradient>
       </Animated.View>
     );
@@ -269,17 +330,29 @@ HeaderComponent.displayName = "HeaderComponent";
 // ============================================================================================
 // ============================================================================================
 const HomePage = (): JSX.Element => {
-  const [cardData, setCardData] = React.useState<EnvironmentEntry[]>([]);
-  const [selectedCategory, setSelectedCategory] = React.useState<string>("Antique Look Object");
-  React.useEffect(() => {
-    const processImageUrls = (entry: EnvironmentEntry): EnvironmentEntry => ({
+  const [cardData, setCardData] = useState<EnvironmentEntry[]>([]);
+  const [filteredData, setFilteredData] = useState<EnvironmentEntry[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string>("All-Combined");
+  const [searchQuery, setSearchQuery] = useState<string>("");
+
+  const getAllCombinedData = useCallback(() => {
+    const allCombinedCategory = categories.find((c) => c.name === "All-Combined");
+    if (!allCombinedCategory) return [];
+    return Object.values(allCombinedCategory.database);
+  }, []);
+
+  const processImageUrls = useCallback(
+    (entry: EnvironmentEntry): EnvironmentEntry => ({
       ...entry,
       images: entry.images.map((image) => ({
         ...image,
         previewLink: `${image.previewLink}lowRes/${image.original_file_name}`,
         downloadLink: `${image.downloadLink}blob/highRes/${image.original_file_name}`
       }))
-    });
+    }),
+    []
+  );
+  useEffect(() => {
     const fetchData = () => {
       const category = categories.find((c) => c.name === selectedCategory);
       if (!category) return;
@@ -287,10 +360,55 @@ const HomePage = (): JSX.Element => {
       const processedEntries = allEntries.map(processImageUrls);
       const shuffledEntries = [...processedEntries].sort(() => Math.random() - 0.5);
       setCardData(shuffledEntries);
+      setFilteredData(shuffledEntries);
     };
     fetchData();
-  }, [selectedCategory]);
-  const renderCard = React.useCallback(
+  }, [selectedCategory, processImageUrls]);
+  const handleSearch = useCallback(
+    (text: string) => {
+      setSearchQuery(text);
+      const searchText = text.toLowerCase().trim();
+      if (!searchText) {
+        const category = categories.find((c) => c.name === selectedCategory);
+        if (!category) return;
+        const entries = Object.values(category.database).map(processImageUrls);
+        setFilteredData(entries);
+        return;
+      }
+      const matchesSearch = (imageName: string) => {
+        const normalizedName = imageName.toLowerCase().replace(/_/g, " ").replace(".jpg", "");
+        return normalizedName.includes(searchText);
+      };
+      const getMatchingImages = (entry: EnvironmentEntry) => {
+        return entry.images.filter((img) => matchesSearch(img.original_file_name));
+      };
+      const allEntries = getAllCombinedData().map(processImageUrls);
+      const matchingEntries = allEntries.reduce(
+        (acc, entry) => {
+          const matchingImages = getMatchingImages(entry);
+          if (matchingImages.length > 0) {
+            const matchEntry = { ...entry, images: matchingImages };
+            const hasExactMatch = matchingImages.some((img) => img.original_file_name.toLowerCase().replace(/_/g, " ").replace(".jpg", "").startsWith(searchText));
+            if (hasExactMatch) acc.exactMatches.push(matchEntry);
+            else acc.partialMatches.push(matchEntry);
+          }
+          return acc;
+        },
+        { exactMatches: [] as EnvironmentEntry[], partialMatches: [] as EnvironmentEntry[] }
+      );
+      const sortedResults = [...matchingEntries.exactMatches, ...matchingEntries.partialMatches];
+      const finalResults =
+        selectedCategory === "All-Combined"
+          ? sortedResults
+          : sortedResults.filter((entry) => {
+              const categoryData = categories.find((c) => c.name === selectedCategory)?.database || {};
+              return entry.environment_title in categoryData;
+            });
+      setFilteredData(finalResults);
+    },
+    [selectedCategory, processImageUrls, getAllCombinedData]
+  );
+  const renderCard = useCallback(
     ({ item }: { item: EnvironmentEntry }) => (
       <View className="flex-1 m-0.5">
         <Card data={item} />
@@ -298,13 +416,25 @@ const HomePage = (): JSX.Element => {
     ),
     []
   );
-  const keyExtractor = React.useCallback((item: EnvironmentEntry) => item.environment_title, []);
+  const keyExtractor = useCallback((item: EnvironmentEntry) => item.environment_title, []);
+  const renderEmptyList = useCallback(() => {
+    if (searchQuery) {
+      return (
+        <View style={{ padding: 20, alignItems: "center" }}>
+          <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#F2EFE0", 0.8), fontSize: 16, textAlign: "center" }}>No images found matching "{searchQuery}".</Text>
+          <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#F2EFE0", 0.8), fontSize: 16, textAlign: "center" }}>You may request more images from "Account" Section. </Text>
+        </View>
+      );
+    }
+    return null;
+  }, [searchQuery]);
+
   return (
     <View style={{ backgroundColor: Colorizer("#171717", 1.0), flex: 1 }} className="relative">
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
       <FlatList
         windowSize={3}
-        data={cardData}
+        data={filteredData}
         numColumns={2}
         initialNumToRender={4}
         renderItem={renderCard}
@@ -312,10 +442,11 @@ const HomePage = (): JSX.Element => {
         keyExtractor={keyExtractor}
         removeClippedSubviews={true}
         ListFooterComponent={Footer}
+        ListEmptyComponent={renderEmptyList}
         updateCellsBatchingPeriod={50}
         contentContainerStyle={{ padding: 1 }}
         columnWrapperStyle={{ justifyContent: "space-between" }}
-        ListHeaderComponent={<HeaderComponent categories={categories} selectedCategory={selectedCategory} onSelectCategory={setSelectedCategory} />}
+        ListHeaderComponent={<HeaderComponent categories={categories} selectedCategory={selectedCategory} onSelectCategory={setSelectedCategory} onSearch={handleSearch} />}
       />
     </View>
   );
