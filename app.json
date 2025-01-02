@@ -1,6 +1,6 @@
 {
   "expo": {
-    "version": "1.0.2",
+    "version": "1.0.4",
     "owner": "shovit",
     "slug": "picWall",
     "name": "picWall",
@@ -11,7 +11,7 @@
     "experiments": {
       "typedRoutes": true
     },
-    "icon": "./src/assets/picWall/picWall.png",
+    "icon": "./src/assets/picWall.png",
     "ios": {
       "supportsTablet": true,
       "requiresFullScreen": true,
@@ -24,7 +24,7 @@
     "web": {
       "output": "static",
       "bundler": "metro",
-      "favicon": "./src/assets/picWall/picWall.png"
+      "favicon": "./src/assets/picWall.png"
     },
     "extra": {
       "router": {
@@ -39,9 +39,13 @@
       "package": "com.shovit.picWall",
       "adaptiveIcon": {
         "backgroundColor": "#0D0907",
-        "foregroundImage": "./src/assets/picWall/picWall.png"
+        "foregroundImage": "./src/assets/picWall.png"
       },
-      "permissions": ["READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE", "SET_WALLPAPER "]
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "SET_WALLPAPER "
+      ]
     },
     "plugins": [
       "expo-router",
@@ -71,7 +75,7 @@
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#0D0907",
-          "image": "./src/assets/picWall/picWall.png"
+          "image": "./src/assets/picWall.png"
         }
       ]
     ]
