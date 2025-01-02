@@ -1,0 +1,68 @@
+### Cinematic
+1. Bokeh - Blurring the Boundaries
+2. Cinematic - Frame Your World
+3. Close-Up - Up Close and Personal
+4. Creative - Visual Storytelling Unleashed
+5. Fashion - Chic Through the Lens
+6. Film - Timeless Aesthetics
+7. Food - A Feast for the Eyes
+8. HDR - Dynamic Drama
+9. Long Exposure - Time in Motion
+10. Macro - The Tiny Universe
+11. Monochrome - Shades of Simplicity
+12. Moody - The Art of Atmosphere
+13. Neutral - Quiet Elegance
+14. Retro - Vintage Revival
+15. Portrait - Faces and Expressions
+16. Stock Photo - Versatile Visuals
+17. Unprocessed - Pure and Raw
+18. Vibrant - The Power of Color
+
+### Anime
+19. Background - Building Anime Worlds
+20. Flat Illustration - Flat Yet Impactful
+21. Monochrome - Minimalistic Anime Vibes
+22. Retro - Anime Nostalgia
+23. Screencap - Framing Anime Moments
+24. Semi-Realism - Anime Meets Realism
+25. Character Sheet - Blueprint of Personalities
+26. Character Sheet Painterly - Brushed Stories
+27. Manga - Panel Perfection
+
+### Portrait Perfect
+28. Bokeh - Focus on Faces
+29. Cinematic - Dramatic Portraiture
+30. Close-Up - Revealing Depth
+31. Fashion - Styled to Perfection
+32. Film - Portraits in Motion
+33. Moody - Emotive Captures
+34. Retro - Vintage Portraits
+
+### DSLR Photography
+35. Stock Photo - Picture Perfect Stock
+
+### Graphic Design
+36. 2D Design - Flat Creativity
+37. 3D Design - Adding Dimensions
+38. Art Deco Design - Golden Age Revival
+39. Pop Art Design - Bold and Bright
+40. Vector Design - Precision Meets Creativity
+
+### Hyper Realism
+41. 3D Render - Depth in Details
+42. Bokeh - Layered Realism
+43. Cinematic - Real-Life Drama
+44. Close-Up - Detailed Intimacy
+45. Creative - Reimagining Reality
+46. Fashion - Haute Realism
+47. Film - Hyper-Real Frames
+48. HDR - Bright and Bold Realism
+49. Illustration - Life-Like Strokes
+50. Long Exposure - Stretched Realities
+51. Macro - Hyper-Real Microcosms
+52. Minimalist - Focused Simplicity
+53. Monochrome - Realism in Black and White
+54. Moody - Darkly Detailed
+55. Ray Traced - Perfect Light, Perfect Shadows
+56. Retro - Hyper-Real Nostalgia
+57. Vibrant - Colorful Realities
