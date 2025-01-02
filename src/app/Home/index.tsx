@@ -38,7 +38,7 @@ interface CategoryButtonExtendedProps extends CategoryButtonProps {
 const AnimatedImage = Animated.createAnimatedComponent(Image);
 const categories: Category[] = [
   {
-    name: "All-Combined",
+    name: "All Shuffled",
     database: {
       ...AerialView,
       ...PortraitPerfect,
@@ -252,7 +252,7 @@ const CategoryButton: FC<CategoryButtonExtendedProps> = memo(({ category, select
       >
         <View style={{ flexDirection: "row", alignItems: "center" }}>
           {getCategoryIcon(selected)}
-          <Text style={{ fontFamily: "Caveat_Bold", color: selected ? Colorizer("#F2EFE0", 1.0) : Colorizer("#171717", 1.0) }} className="ml-1 text-lg">
+          <Text style={{ fontFamily: "Kurale_Regular", color: selected ? Colorizer("#F2EFE0", 1.0) : Colorizer("#171717", 1.0) }} className="ml-1 p-1 text-sm">
             {category}
           </Text>
         </View>
@@ -316,9 +316,9 @@ HeaderComponent.displayName = "HeaderComponent";
 const HomePage = (): JSX.Element => {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [filteredData, setFilteredData] = useState<EnvironmentEntry[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState<string>("All-Combined");
+  const [selectedCategory, setSelectedCategory] = useState<string>("All Shuffled");
   const getAllCombinedData = useCallback(() => {
-    const allCombinedCategory = categories.find((c) => c.name === "All-Combined");
+    const allCombinedCategory = categories.find((c) => c.name === "All Shuffled");
     if (!allCombinedCategory) return [];
     return Object.values(allCombinedCategory.database);
   }, []);
@@ -378,7 +378,7 @@ const HomePage = (): JSX.Element => {
       );
       const sortedResults = [...matchingEntries.exactMatches, ...matchingEntries.partialMatches];
       const finalResults =
-        selectedCategory === "All-Combined"
+        selectedCategory === "All Shuffled"
           ? sortedResults
           : sortedResults.filter((entry) => {
               const categoryData = categories.find((c) => c.name === selectedCategory)?.database || {};
