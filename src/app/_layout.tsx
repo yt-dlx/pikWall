@@ -44,7 +44,7 @@ export default function RootLayout() {
       }
     };
     initializeApp();
-  }, [loaded, error]);
+  }, [loaded, error, router]);
   if (!loaded && !error) return null;
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: Colorizer("#0D0907", 1.0) }}>

@@ -1,4 +1,3 @@
-// src/utils/Colorizer.ts
 const Colorizer = (hex: string, opacity: number): string => {
   const sanitizedHex = hex.replace(/^#/, "");
   const r = parseInt(sanitizedHex.substring(0, 2), 16);
@@ -7,5 +6,4 @@ const Colorizer = (hex: string, opacity: number): string => {
   const validOpacity = Math.max(0, Math.min(1, opacity));
   return `rgba(${r}, ${g}, ${b}, ${validOpacity})`;
 };
-
 export default Colorizer;

@@ -97,9 +97,7 @@ SearchBar.displayName = "SearchBar";
 const SubImages: FC<SubImagesProps> = memo(({ images, onImagePress }) => (
   <View className="flex flex-col justify-start">
     {images.data.map((image, index) => {
-      // Calculate the actual index in the full dataset
       const fullDataIndex = images.allData.findIndex((img) => img.original_file_name === image.original_file_name);
-
       return (
         <Link
           key={index}
@@ -107,7 +105,7 @@ const SubImages: FC<SubImagesProps> = memo(({ images, onImagePress }) => (
             pathname: "./Image",
             params: {
               data: JSON.stringify({
-                selectedIndex: fullDataIndex, // Use the index from the full dataset
+                selectedIndex: fullDataIndex,
                 data: images.allData,
                 environment_title: images.environment_title
               })
@@ -209,7 +207,7 @@ const Card: FC<CardProps> = memo(({ data }) => {
   const textStyle = useAnimatedStyle(() => ({ opacity: textOpacity.value, transform: [{ scale: textScale.value }] }));
   useEffect(() => {
     fadeInValue.value = withTiming(2, { duration: 2000, easing: Easing.ease });
-  }, []);
+  }, [fadeInValue]);
   return (
     <Animated.View style={fadeInStyle}>
       <View className="rounded-b-lg rounded-t-2xl overflow-hidden border" style={{ backgroundColor: Colorizer("#0D0907", 1.0), borderColor: Colorizer(data.images[currentIndex].primary, 0.4) }}>
@@ -324,7 +322,7 @@ const HeaderComponent: FC<{ categories: Category[]; selectedCategory: string; on
       fadeInValue.value = withTiming(1, { duration: 2000, easing: Easing.ease });
       leftIconTranslate.value = withRepeat(withTiming(-30, { duration: 1000, easing: Easing.ease }), -1, true);
       rightIconTranslate.value = withRepeat(withTiming(30, { duration: 1000, easing: Easing.ease }), -1, true);
-    }, []);
+    }, [fadeInValue, leftIconTranslate, rightIconTranslate]);
     return (
       <Animated.View style={fadeInStyle}>
         <HeaderAnimate />

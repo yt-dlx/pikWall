@@ -311,7 +311,7 @@ const WallModal: React.FC<WallModalProps> = ({ visible, onComplete, onCancel, wa
     return () => {
       clearInterval(countdownRef.current);
     };
-  }, [visible, modalAnim]);
+  }, [visible, modalAnim, onComplete]);
   const backdropStyle = { opacity: modalAnim };
   const scale = modalAnim.interpolate({ inputRange: [0, 1], outputRange: [0.8, 1] });
   const modalStyle = { opacity: modalAnim, transform: [{ scale }] };
@@ -501,7 +501,7 @@ const ImagePage = () => {
       showAlert("Success", "The image has been saved to your gallery.", "checkmark-done-circle");
     } catch (error) {
       setIsDownloading(false);
-      showAlert("Error", "An error occurred while downloading or saving the image.", "error");
+      showAlert("Error", "An error occurred while downloading or saving the image." + error, "error");
     }
   };
 

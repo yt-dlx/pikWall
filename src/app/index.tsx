@@ -22,7 +22,7 @@ const ScrollingSlot: React.FC<ScrollingSlotProps> = ({ images, reverse, delay })
     opacity.value = withDelay(delay, withTiming(1, { duration: 1500, easing: Easing.bezier(0.4, 0, 0.2, 1) }));
     scale.value = withDelay(delay, withSpring(1, { damping: 15, stiffness: 90 }));
     scrollValue.value = withDelay(delay, withRepeat(withTiming(totalHeight, { duration: 30000, easing: Easing.linear }), -1, reverse));
-  }, []);
+  }, [delay, opacity, reverse, scale, scrollValue, totalHeight]);
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ translateY: -scrollValue.value % totalHeight }, { scale: scale.value }], opacity: opacity.value }));
   return (
     <View style={{ flex: 1, overflow: "hidden", padding: 2 }}>
@@ -56,7 +56,7 @@ const AnimatedTitle: React.FC = () => {
       -1,
       true
     );
-  }, []);
+  }, [scale]);
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
   return (
     <Animated.View
@@ -88,7 +88,7 @@ const AppPage: React.FC = () => {
       -1,
       true
     );
-  }, []);
+  }, [buttonGlow]);
   const buttonAnimatedStyle = useAnimatedStyle(() => ({
     transform: [{ scale: buttonScale.value }, { rotate: `${buttonRotate.value}deg` }],
     shadowOpacity: 0.3 + buttonGlow.value * 0.3,
