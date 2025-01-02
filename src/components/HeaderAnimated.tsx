@@ -1,6 +1,6 @@
 // src/utils/HeaderAnimated.tsx
-import Colorizer from "./Colorizer";
 import React, { useEffect } from "react";
+import Colorizer from "@/utils/Colorizer";
 import imageSets from "@/database/static";
 import { AntDesign } from "@expo/vector-icons";
 import { Text, View, Image } from "react-native";

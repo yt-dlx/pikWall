@@ -1,5 +1,5 @@
 // src/utils/Footer.tsx
-import Colorizer from "./Colorizer";
+import Colorizer from "@/utils/Colorizer";
 import { Text, View } from "react-native";
 import { AntDesign, FontAwesome } from "@expo/vector-icons";
 // ============================================================================================

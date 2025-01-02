@@ -13,12 +13,12 @@ import AerialView from "@/database/Aerial View";
 // ============================================================================================
 import { Link } from "expo-router";
 import { Image } from "expo-image";
-import Footer from "@/utils/Footer";
 import Colorizer from "@/utils/Colorizer";
+import Footer from "@/components/Footer";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { EnvironmentEntry } from "@/types/database";
 import { LinearGradient } from "expo-linear-gradient";
-import HeaderAnimate from "@/utils/HeaderAnimated";
+import HeaderAnimate from "@/components/HeaderAnimated";
 import { useEffect, useCallback, useState, memo, FC } from "react";
 import { SubImagesProps, CardProps, CategoryButtonProps } from "@/types/components";
 import { View, Text, TouchableOpacity, FlatList, ScrollView, StatusBar, TextInput } from "react-native";
@@ -67,40 +67,24 @@ const categories: Category[] = [
 // ============================================================================================
 const SearchBar: FC<{ onSearch: (text: string) => void }> = memo(({ onSearch }) => {
   const [searchText, setSearchText] = useState("");
-
   const handleSearch = (text: string) => {
     setSearchText(text);
     onSearch(text);
   };
-
   return (
-    <View style={{ padding: 8, backgroundColor: Colorizer("#171717", 1.0) }}>
-      <View
-        style={{
-          flexDirection: "row",
-          alignItems: "center",
-          backgroundColor: Colorizer("#F2EFE0", 1.0),
-          borderRadius: 8,
-          paddingHorizontal: 12,
-          height: 40
-        }}
-      >
-        <FontAwesome5 name="search" size={16} color={Colorizer("#171717", 0.6)} />
+    <View style={{ padding: 2 }}>
+      <View style={{ flexDirection: "row", alignItems: "center", backgroundColor: Colorizer("#643425", 1.0), borderRadius: 8, paddingHorizontal: 12, height: 30 }}>
+        <FontAwesome5 name="search" size={16} color={Colorizer("#f2dfce", 0.6)} />
         <TextInput
           value={searchText}
           onChangeText={handleSearch}
           placeholder="Search by image name..."
-          placeholderTextColor={Colorizer("#171717", 0.6)}
-          style={{
-            flex: 1,
-            marginLeft: 8,
-            fontFamily: "Kurale_Regular",
-            color: Colorizer("#171717", 1.0)
-          }}
+          placeholderTextColor={Colorizer("#f2dfce", 0.6)}
+          style={{ flex: 1, marginLeft: 8, fontFamily: "Kurale_Regular", color: Colorizer("#f2dfce", 1.0) }}
         />
         {searchText.length > 0 && (
           <TouchableOpacity onPress={() => handleSearch("")}>
-            <FontAwesome5 name="times" size={16} color={Colorizer("#171717", 0.6)} />
+            <FontAwesome5 name="times" size={16} color={Colorizer("#f2dfce", 0.6)} />
           </TouchableOpacity>
         )}
       </View>

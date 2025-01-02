@@ -2,6 +2,7 @@
 import { Image } from "expo-image";
 import useAppState from "@/utils/store";
 import Colorizer from "@/utils/Colorizer";
+import Footer from "@/components/Footer";
 import * as FileSystem from "expo-file-system";
 import { ImageMetadata } from "@/types/database";
 import { useLocalSearchParams } from "expo-router";
@@ -12,7 +13,6 @@ const { width: screenWidth } = Dimensions.get("window");
 import { setWallpaper, TYPE_SCREEN } from "rn-wallpapers";
 import { FontAwesome5, MaterialIcons, Ionicons, FontAwesome6 } from "@expo/vector-icons";
 import { View, Text, Dimensions, StatusBar, ActivityIndicator, TouchableOpacity, Alert, Modal, Animated, Easing, ScrollView } from "react-native";
-import Footer from "@/utils/Footer";
 // ============================================================================================
 // ============================================================================================
 const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () => void }> = ({ visible, message, onClose }) => {

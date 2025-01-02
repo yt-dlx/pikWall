@@ -1,10 +1,10 @@
 // src/app/index.tsx
 import { Link } from "expo-router";
 import { Image } from "expo-image";
-import Footer from "@/utils/Footer";
 import React, { useEffect } from "react";
 import Colorizer from "@/utils/Colorizer";
 import imageSets from "@/database/static";
+import Footer from "@/components/Footer";
 import { LinearGradient } from "expo-linear-gradient";
 import { ScrollingSlotProps } from "@/types/components";
 import { Text, View, TouchableOpacity } from "react-native";
