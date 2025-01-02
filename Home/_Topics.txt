@@ -1,4 +1,3 @@
-### Cinematic
 1. Bokeh - Blurring the Boundaries
 2. Cinematic - Frame Your World
 3. Close-Up - Up Close and Personal
@@ -17,8 +16,6 @@
 16. Stock Photo - Versatile Visuals
 17. Unprocessed - Pure and Raw
 18. Vibrant - The Power of Color
-
-### Anime
 19. Background - Building Anime Worlds
 20. Flat Illustration - Flat Yet Impactful
 21. Monochrome - Minimalistic Anime Vibes
@@ -28,8 +25,6 @@
 25. Character Sheet - Blueprint of Personalities
 26. Character Sheet Painterly - Brushed Stories
 27. Manga - Panel Perfection
-
-### Portrait Perfect
 28. Bokeh - Focus on Faces
 29. Cinematic - Dramatic Portraiture
 30. Close-Up - Revealing Depth
@@ -37,18 +32,12 @@
 32. Film - Portraits in Motion
 33. Moody - Emotive Captures
 34. Retro - Vintage Portraits
-
-### DSLR Photography
 35. Stock Photo - Picture Perfect Stock
-
-### Graphic Design
 36. 2D Design - Flat Creativity
 37. 3D Design - Adding Dimensions
 38. Art Deco Design - Golden Age Revival
 39. Pop Art Design - Bold and Bright
 40. Vector Design - Precision Meets Creativity
-
-### Hyper Realism
 41. 3D Render - Depth in Details
 42. Bokeh - Layered Realism
 43. Cinematic - Real-Life Drama
