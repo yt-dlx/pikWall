@@ -99,41 +99,18 @@ const SubImages: FC<SubImagesProps> = memo(({ images, onImagePress }) => (
     {images.data.map((image, index) => {
       const fullDataIndex = images.allData.findIndex((img) => img.original_file_name === image.original_file_name);
       return (
-        <Link
-          key={index}
-          href={{
-            pathname: "./Image",
-            params: {
-              data: JSON.stringify({
-                selectedIndex: fullDataIndex,
-                data: images.allData,
-                environment_title: images.environment_title
-              })
-            }
-          }}
-          asChild
-        >
+        <Link key={index} href={{ pathname: "./Image", params: { data: JSON.stringify({ selectedIndex: fullDataIndex, data: images.allData, environment_title: images.environment_title }) } }} asChild>
           <TouchableOpacity onPress={() => onImagePress(image.previewLink, fullDataIndex)} className="p-[0.2px] flex-1">
             <View className="relative">
               <Image
                 source={{ uri: image.previewLink }}
-                style={{
-                  height: 50,
-                  borderWidth: 1,
-                  width: "100%",
-                  borderRadius: 4,
-                  borderColor: Colorizer(image.primary, 0.5)
-                }}
+                style={{ height: 50, borderWidth: 1, width: "100%", borderRadius: 4, borderColor: Colorizer(image.primary, 0.5) }}
                 cachePolicy="memory-disk"
                 contentFit="cover"
               />
               <Text
                 className="absolute m-1 bottom-1 right-1 px-2 text-xs rounded-2xl"
-                style={{
-                  fontFamily: "Kurale_Regular",
-                  color: Colorizer("#F2EFE0", 1.0),
-                  backgroundColor: Colorizer(image.primary, 1.0)
-                }}
+                style={{ fontFamily: "Kurale_Regular", color: Colorizer("#F2EFE0", 1.0), backgroundColor: Colorizer(image.primary, 1.0) }}
               >
                 {image.primary.toUpperCase()}
               </Text>
