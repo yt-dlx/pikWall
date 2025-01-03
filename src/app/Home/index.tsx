@@ -72,8 +72,8 @@ const SearchBar: FC<{ onSearch: (text: string) => void }> = memo(({ onSearch }) 
     onSearch(text);
   };
   return (
-    <View style={{ padding: 2 }}>
-      <View style={{ flexDirection: "row", alignItems: "center", backgroundColor: Colorizer("#643425", 1.0), borderRadius: 8, paddingHorizontal: 12, height: 30 }}>
+    <View style={{ padding: 1 }}>
+      <View style={{ flexDirection: "row", alignItems: "center", backgroundColor: Colorizer("#643425", 1.0), borderRadius: 4, paddingHorizontal: 12, height: 30 }}>
         <FontAwesome5 name="search" size={16} color={Colorizer("#f2dfce", 0.6)} />
         <TextInput
           value={searchText}
@@ -140,18 +140,18 @@ const Card: FC<CardProps> = memo(({ data }) => {
   );
   const animateOut = useCallback(
     (cb: () => void) => {
-      fadeValue.value = withTiming(0, { duration: 2000, easing: Easing.inOut(Easing.ease) }, () => {
+      fadeValue.value = withTiming(0, { duration: 3000, easing: Easing.inOut(Easing.ease) }, () => {
         runOnJS(cb)();
       });
-      textOpacity.value = withTiming(0, { duration: 2000, easing: Easing.inOut(Easing.ease) });
+      textOpacity.value = withTiming(0, { duration: 3000, easing: Easing.inOut(Easing.ease) });
     },
     [fadeValue, textOpacity]
   );
   const animateIn = useCallback(() => {
-    textScale.value = 0.8;
-    fadeValue.value = withTiming(1, { duration: 2000, easing: Easing.inOut(Easing.ease) });
-    textOpacity.value = withTiming(1, { duration: 2000, easing: Easing.inOut(Easing.ease) });
-    textScale.value = withTiming(1, { duration: 2000, easing: Easing.inOut(Easing.ease) });
+    textScale.value = 0.9;
+    fadeValue.value = withTiming(1, { duration: 3000, easing: Easing.inOut(Easing.ease) });
+    textOpacity.value = withTiming(1, { duration: 3000, easing: Easing.inOut(Easing.ease) });
+    textScale.value = withTiming(1, { duration: 3000, easing: Easing.inOut(Easing.ease) });
   }, [fadeValue, textOpacity, textScale]);
   const startTransition = useCallback(
     (nextIndex: number) => {
@@ -173,7 +173,7 @@ const Card: FC<CardProps> = memo(({ data }) => {
     [startTransition]
   );
   useEffect(() => {
-    const interval = setInterval(updateNextImage, 4000);
+    const interval = setInterval(updateNextImage, 3000);
     return () => clearInterval(interval);
   }, [updateNextImage]);
   useEffect(() => {
@@ -183,7 +183,7 @@ const Card: FC<CardProps> = memo(({ data }) => {
   const fadeInStyle = useAnimatedStyle(() => ({ opacity: fadeInValue.value }));
   const textStyle = useAnimatedStyle(() => ({ opacity: textOpacity.value, transform: [{ scale: textScale.value }] }));
   useEffect(() => {
-    fadeInValue.value = withTiming(2, { duration: 2000, easing: Easing.ease });
+    fadeInValue.value = withTiming(2, { duration: 3000, easing: Easing.ease });
   }, [fadeInValue]);
   return (
     <Animated.View style={fadeInStyle}>
@@ -347,9 +347,9 @@ const FilterButton: FC<{ selectedCategory: string }> = memo(({ selectedCategory 
     <Animated.View style={[fadeInStyle, { paddingHorizontal: 2, marginBottom: 2 }]}>
       <TouchableOpacity
         onPress={() => setIsOpen(!isOpen)}
-        style={{ flexDirection: "row", alignItems: "center", backgroundColor: Colorizer("#643425", 1.0), paddingHorizontal: 12, paddingVertical: 8, borderRadius: 10 }}
+        style={{ flexDirection: "row", alignItems: "center", backgroundColor: Colorizer("#643425", 0.5), paddingHorizontal: 12, paddingVertical: 4, borderRadius: 10 }}
       >
-        <FontAwesome5 name="filter" size={18} color={Colorizer("#f2dfce", 1.0)} />
+        <FontAwesome5 name="filter" size={15} color={Colorizer("#f2dfce", 1.0)} />
         <Text style={{ marginLeft: 8, fontFamily: "Kurale_Regular", color: Colorizer("#f2dfce", 1.0), fontSize: 14 }}>Filter Images {selectedFilters.length > 0 && `(${selectedFilters.length})`}</Text>
       </TouchableOpacity>
       {isOpen && (
@@ -364,12 +364,12 @@ const FilterButton: FC<{ selectedCategory: string }> = memo(({ selectedCategory 
                 style={{
                   width: 20,
                   height: 20,
-                  borderRadius: 4,
                   borderWidth: 1,
-                  borderColor: Colorizer("#f2dfce", 0.6),
-                  backgroundColor: selectedFilters.includes(option.id) ? Colorizer("#f2dfce", 0.2) : "transparent",
+                  borderRadius: 4,
+                  alignItems: "center",
                   justifyContent: "center",
-                  alignItems: "center"
+                  borderColor: Colorizer("#f2dfce", 0.6),
+                  backgroundColor: selectedFilters.includes(option.id) ? Colorizer("#f2dfce", 0.2) : "transparent"
                 }}
               >
                 {selectedFilters.includes(option.id) && <FontAwesome5 name="check" size={14} color={Colorizer("#f2dfce", 1.0)} />}
@@ -399,16 +399,18 @@ const HeaderComponent: FC<{ categories: Category[]; selectedCategory: string; on
     const leftIconStyle = useAnimatedStyle(() => ({ transform: [{ translateX: leftIconTranslate.value }] }));
     const rightIconStyle = useAnimatedStyle(() => ({ transform: [{ translateX: rightIconTranslate.value }] }));
     useEffect(() => {
-      fadeInValue.value = withTiming(1, { duration: 2000, easing: Easing.ease });
+      fadeInValue.value = withTiming(1, { duration: 1500, easing: Easing.ease });
       leftIconTranslate.value = withRepeat(withTiming(-30, { duration: 1000, easing: Easing.ease }), -1, true);
       rightIconTranslate.value = withRepeat(withTiming(30, { duration: 1000, easing: Easing.ease }), -1, true);
     }, [fadeInValue, leftIconTranslate, rightIconTranslate]);
     return (
       <Animated.View style={fadeInStyle}>
-        <HeaderAnimate />
+        <View className="-m-2">
+          <HeaderAnimate />
+        </View>
         <LinearGradient
-          colors={[Colorizer("#1a1512", 1.0), Colorizer("#2e1c12", 0.8), Colorizer("#602311", 0.6), "transparent"]}
-          style={{ borderRadius: 4, margin: 4, paddingTop: 20, paddingRight: 3, paddingLeft: 1 }}
+          colors={["#1a1512", "#2e1c12", Colorizer("#602311", 0.6), "transparent"]}
+          style={{ marginTop: 10, paddingTop: 20, paddingRight: 3, paddingLeft: 1, paddingBottom: 10 }}
           start={{ x: 0.5, y: 0 }}
           end={{ x: 0.5, y: 1 }}
         >
@@ -421,12 +423,12 @@ const HeaderComponent: FC<{ categories: Category[]; selectedCategory: string; on
               <FontAwesome5 name="caret-right" size={24} color="#F2EFE0" />
             </Animated.View>
           </View>
+          <SearchBar onSearch={onSearch} />
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
             {categories.map((category) => (
               <CategoryButton key={category.name} category={category.name} selected={category.name === selectedCategory} onPress={() => onSelectCategory(category.name)} />
             ))}
           </ScrollView>
-          <SearchBar onSearch={onSearch} />
         </LinearGradient>
       </Animated.View>
     );
@@ -532,7 +534,7 @@ const HomePage = (): JSX.Element => {
     return null;
   }, [searchQuery]);
   return (
-    <View style={{ backgroundColor: Colorizer("#0D0907", 1.0), flex: 1 }} className="relative">
+    <View style={{ backgroundColor: Colorizer("#1a1512", 1.0), flex: 1 }} className="relative">
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
       <FlatList
         windowSize={3}
