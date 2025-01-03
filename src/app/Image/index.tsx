@@ -28,7 +28,7 @@ const SuccessModal: React.FC<{ visible: boolean; message: string; onClose: () =>
   return (
     <View className="absolute inset-0 justify-center items-center">
       <Animated.View className="absolute inset-0" style={[{ backgroundColor: Colorizer("#0C0C0C", 0.5) }, backdropStyle]} />
-      <Animated.View className="w-4/5 rounded-3xl p-5 border-4" style={[{ backgroundColor: Colorizer("#242424", 1.0), borderColor: Colorizer("#25BE8B", 1.0) }, modalStyle]}>
+      <Animated.View className="w-4/5 rounded-3xl p-5 border-4" style={[{ backgroundColor: Colorizer("#0C0C0C", 1.0), borderColor: Colorizer("#25BE8B", 1.0) }, modalStyle]}>
         <View className="items-center">
           <Ionicons name="checkmark-done-circle" size={50} color={Colorizer("#25BE8B", 1.0)} />
           <Text className="mt-2.5 text-5xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer("#25BE8B", 1.0) }}>
@@ -66,7 +66,7 @@ const ErrorModal: React.FC<{ visible: boolean; message: string; onClose: () => v
         className="w-4/5 rounded-3xl p-5 border-4"
         style={[
           {
-            backgroundColor: Colorizer("#242424", 1.0),
+            backgroundColor: Colorizer("#0C0C0C", 1.0),
             borderColor: Colorizer("#FFFFFF", 1.0)
           },
           modalStyle
@@ -117,7 +117,7 @@ const DownloadingModal: React.FC<{ visible: boolean; percentage: number; downloa
       <View
         className="w-4/5 rounded-3xl p-5 border-4"
         style={{
-          backgroundColor: Colorizer("#242424", 1.0),
+          backgroundColor: Colorizer("#0C0C0C", 1.0),
           borderColor: Colorizer(primaryColor, 1.0)
         }}
       >
@@ -163,17 +163,21 @@ const PreviewImage: React.FC<{ selectedImage: ImageMetadata; screenWidth: number
     <View className="relative">
       <View className="absolute inset-0 z-50 justify-center items-center">
         {!imageLoading && (
-          <View className="items-center">
-            <Animated.View className="justify-center items-center rounded-full">
-              <Image style={{ width: 64, height: 64, borderRadius: 32, backgroundColor: Colorizer("#0C0C0C", 0.8) }} source={require("@/assets/picWall.png")} contentFit="contain" />
-            </Animated.View>
+          <View className="rounded-full p-1 mb-28" style={{ backgroundColor: Colorizer("#0C0C0C", 0.8), justifyContent: "center", alignItems: "center" }}>
+            <Image
+              alt="logo"
+              contentFit="contain"
+              cachePolicy="memory-disk"
+              source={require("@/assets/picWall.png")}
+              style={{ width: 70, height: 70, borderWidth: 1, borderRadius: 9999, borderColor: Colorizer("#FFFFFF", 1.0) }}
+            />
           </View>
         )}
       </View>
       {imageLoading && (
         <View className="absolute inset-0 z-40 justify-center items-center" style={{ backgroundColor: Colorizer("#0C0C0C", 1.0) }}>
           <ActivityIndicator size="large" color={Colorizer(selectedImage.primary, 1.0)} />
-          <Text className="mt-2.5" style={{ fontFamily: "Linotte_Bold", color: Colorizer(selectedImage.primary, 1.0) }}>
+          <Text className="mt-2.5" style={{ fontFamily: "Kurale_Regular", color: Colorizer(selectedImage.primary, 1.0) }}>
             Loading HD Image Preview...
           </Text>
         </View>
@@ -319,7 +323,7 @@ const WallModal: React.FC<WallModalProps> = ({ visible, onComplete, onCancel, wa
   return (
     <View className="absolute inset-0 justify-center items-center">
       <Animated.View className="absolute inset-0" style={[{ backgroundColor: Colorizer("#0C0C0C", 0.5) }, backdropStyle]} />
-      <Animated.View className="w-4/5 rounded-3xl p-5 border-4" style={[{ backgroundColor: Colorizer("#242424", 1.0), borderColor: Colorizer(primaryColor, 1.0) }, modalStyle]}>
+      <Animated.View className="w-4/5 rounded-3xl p-5 border-4" style={[{ backgroundColor: Colorizer("#0C0C0C", 1.0), borderColor: Colorizer(primaryColor, 1.0) }, modalStyle]}>
         <View className="items-center">
           <MaterialIcons name="warning" size={50} color={Colorizer(primaryColor, 1.0)} />
           <Text className="mt-2.5 text-5xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer(primaryColor, 1.0) }}>
@@ -513,7 +517,7 @@ const ImagePage = () => {
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
       <ScrollView className="flex-1">
         <PreviewImage selectedImage={selectedImage} screenWidth={screenWidth} onViewFullScreen={() => setIsFullScreen(true)} />
-        <View className="p-4 border-2 rounded-3xl" style={{ borderColor: Colorizer(selectedImage.primary, 1.0), backgroundColor: Colorizer("#242424", 1.0) }}>
+        <View className="p-4 border-2 rounded-3xl" style={{ borderColor: Colorizer(selectedImage.primary, 1.0), backgroundColor: Colorizer("#0C0C0C", 1.0) }}>
           <Text className="mb-2 text-5xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer(selectedImage.primary, 1.0) }}>
             {selectedImage.original_file_name.replace(".jpg", "")}
           </Text>

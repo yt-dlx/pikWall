@@ -41,32 +41,14 @@
         "backgroundColor": "#0C0C0C",
         "foregroundImage": "./src/assets/picWall.png"
       },
-      "permissions": [
-        "READ_EXTERNAL_STORAGE",
-        "WRITE_EXTERNAL_STORAGE",
-        "SET_WALLPAPER "
-      ]
+      "permissions": ["READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE", "SET_WALLPAPER "]
     },
     "plugins": [
       "expo-router",
       [
         "expo-font",
         {
-          "fonts": [
-            "./src/assets/fonts/Caveat_Bold.ttf",
-            "./src/assets/fonts/Caveat_Medium.ttf",
-            "./src/assets/fonts/Caveat_Regular.ttf",
-            "./src/assets/fonts/Kurale_Regular.ttf",
-            "./src/assets/fonts/Caveat_SemiBold.ttf",
-            "./src/assets/fonts/Dm_Serif_Display_Italic.ttf",
-            "./src/assets/fonts/Dm_Serif_Display_Regular.ttf",
-            "./src/assets/fonts/Lobster_Regular.ttf",
-            "./src/assets/fonts/Linotte_Bold.otf",
-            "./src/assets/fonts/Linotte_Light.otf",
-            "./src/assets/fonts/Linotte_Heavy.otf",
-            "./src/assets/fonts/Linotte_Regular.otf",
-            "./src/assets/fonts/Linotte_Semi_Bold.otf"
-          ]
+          "fonts": ["./src/assets/fonts/Kurale_Regular.ttf", "./src/assets/fonts/Lobster_Regular.ttf", "./src/assets/fonts/Dm_Serif_Display_Regular.ttf"]
         }
       ],
       [

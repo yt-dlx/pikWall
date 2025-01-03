@@ -15,10 +15,10 @@ import { Link } from "expo-router";
 import { Image } from "expo-image";
 import Colorizer from "@/utils/Colorizer";
 import Footer from "@/components/Footer";
-import { FontAwesome5, FontAwesome6 } from "@expo/vector-icons";
-import { EnvironmentEntry } from "@/types/database";
 import { LinearGradient } from "expo-linear-gradient";
+import { EnvironmentEntry } from "@/types/database";
 import HeaderAnimate from "@/components/HeaderAnimated";
+import { FontAwesome5, FontAwesome6 } from "@expo/vector-icons";
 import React, { useEffect, useRef, useCallback, useState, memo, FC } from "react";
 import { SubImagesProps, CardProps, CategoryButtonProps } from "@/types/components";
 import { Animated, View, Text, TouchableOpacity, FlatList, StatusBar, TextInput, Modal } from "react-native";
@@ -37,7 +37,7 @@ interface CategoryButtonExtendedProps extends CategoryButtonProps {
 // ============================================================================================
 const categories: Category[] = [
   {
-    name: "Shuffled Images",
+    name: "Shuffle Wallpapers",
     database: {
       ...AerialView,
       ...PortraitPerfect,
@@ -109,7 +109,7 @@ const SubImages: FC<SubImagesProps> = memo(({ images, onImagePress }) => (
               />
               <Text
                 className="absolute m-1 bottom-1 right-1 px-2 text-xs rounded-2xl"
-                style={{ fontFamily: "Kurale_Regular", color: Colorizer("#FFFFFF", 1.0), backgroundColor: Colorizer(image.primary, 1.0) }}
+                style={{ fontFamily: "Kurale_Regular", color: Colorizer("#0C0C0C", 1.0), backgroundColor: Colorizer(image.primary, 1.0) }}
               >
                 {image.primary.toUpperCase()}
               </Text>
@@ -170,11 +170,11 @@ const Card: FC<CardProps> = memo(({ data }) => {
     updateImageState(0);
   }, [data, updateImageState]);
   return (
-    <View className="rounded-3xl overflow-hidden border mb-1" style={{ backgroundColor: Colorizer("#0C0C0C", 1.0), borderColor: Colorizer(data.images[currentIndex].primary, 0.2) }}>
+    <View className="rounded-xl overflow-hidden border mb-1" style={{ backgroundColor: Colorizer("#0C0C0C", 1.0), borderColor: Colorizer(data.images[currentIndex].primary, 0.2) }}>
       <Link href={{ pathname: "./Image", params: { data: JSON.stringify({ data: data.images, selectedIndex: currentIndex, environment_title: data.environment_title }) } }} asChild>
         <TouchableOpacity>
           <View className="relative aspect-[9/16] w-full overflow-hidden">
-            <Animated.Image source={{ uri: currentImage }} style={{ width: "100%", height: "100%", borderTopLeftRadius: 20, borderTopRightRadius: 20, opacity: imageFadeValue }} />
+            <Animated.Image source={{ uri: currentImage }} style={{ width: "100%", height: "100%", borderTopLeftRadius: 5, borderTopRightRadius: 5, opacity: imageFadeValue }} />
             <View className="absolute bottom-0 left-0 right-0 items-center justify-start">
               <Animated.Text
                 style={{
@@ -182,7 +182,7 @@ const Card: FC<CardProps> = memo(({ data }) => {
                   textAlign: "center",
                   fontFamily: "Kurale_Regular",
                   transform: [{ scale: textScale }],
-                  color: Colorizer("#FFFFFF", 1.0),
+                  color: Colorizer("#0C0C0C", 1.0),
                   backgroundColor: Colorizer(data.images[currentIndex].primary, 10.0)
                 }}
                 className="text-sm m-1 px-1 rounded-xl"
@@ -244,7 +244,7 @@ const CategoryModal: FC<{ isVisible: boolean; onClose: () => void; onSelectCateg
   return (
     <Modal visible={isVisible} transparent animationType="slide">
       <View className="flex-1 justify-end">
-        <View className="bg-[#0C0C0C] rounded-t-3xl p-4">
+        <View className="rounded-t-3xl p-4" style={{ backgroundColor: Colorizer("#0C0C0C", 1.0) }}>
           <View className="flex-row justify-between items-center mb-4">
             <Text className="text-white text-3xl" style={{ fontFamily: "Lobster_Regular" }}>
               All Categories
@@ -265,27 +265,17 @@ const CategoryModal: FC<{ isVisible: boolean; onClose: () => void; onSelectCateg
                   margin: 4,
                   width: "47%",
                   height: 100,
-                  borderRadius: 15,
+                  borderRadius: 10,
                   overflow: "hidden",
                   borderWidth: 1,
                   borderColor: selectedCategory === category ? Colorizer("#FFFFFF", 0.5) : "transparent"
                 }}
               >
                 <View style={{ borderRadius: 4, overflow: "hidden", width: "100%", height: "100%" }}>
-                  <Image source={{ uri: getCategoryFirstImage(category) }} style={{ width: "100%", height: "100%", borderRadius: 15 }} contentFit="cover" />
-                  <LinearGradient colors={["transparent", Colorizer("#0C0C0C", 0.5), Colorizer("#0C0C0C", 1.0)]} style={{ position: "absolute", width: "100%", height: "100%", borderRadius: 15 }} />
-                  <View style={{ position: "absolute", width: "100%", height: "100%", justifyContent: "center", alignItems: "center", borderRadius: 15 }}>
-                    <Text
-                      style={{
-                        fontSize: 18,
-                        textAlign: "center",
-                        paddingHorizontal: 4,
-                        fontFamily: "Kurale_Regular",
-                        color: Colorizer("#FFFFFF", 1.0)
-                      }}
-                    >
-                      {category}
-                    </Text>
+                  <Image source={{ uri: getCategoryFirstImage(category) }} style={{ width: "100%", height: "100%", borderRadius: 10 }} contentFit="cover" />
+                  <LinearGradient colors={["transparent", Colorizer("#0C0C0C", 0.5), Colorizer("#0C0C0C", 1.0)]} style={{ position: "absolute", width: "100%", height: "100%", borderRadius: 10 }} />
+                  <View style={{ position: "absolute", width: "100%", height: "100%", justifyContent: "center", alignItems: "center", borderRadius: 10 }}>
+                    <Text style={{ fontSize: 18, textAlign: "center", paddingHorizontal: 4, fontFamily: "Kurale_Regular", color: Colorizer("#FFFFFF", 1.0) }}> {category} </Text>
                   </View>
                 </View>
               </TouchableOpacity>
@@ -301,10 +291,11 @@ const CategoryModal: FC<{ isVisible: boolean; onClose: () => void; onSelectCateg
 const CategoryButton: FC<CategoryButtonExtendedProps> = memo(({ category, selected, onPress }) => {
   const [currentImage, setCurrentImage] = useState<string>("");
   const fadeAnim = useRef(new Animated.Value(1)).current;
+  const scaleAnim = useRef(new Animated.Value(1)).current;
   useEffect(() => {
     if (category === "All Categories") {
       const allImages = categories
-        .filter((c) => c.name !== "Shuffled Images")
+        .filter((c) => c.name !== "Shuffle Wallpapers")
         .flatMap((c) => Object.values(c.database).flatMap((entry) => entry.images))
         .map((img) => `${img.previewLink}lowRes/${img.original_file_name}`);
       if (allImages.length === 0) return;
@@ -320,20 +311,33 @@ const CategoryButton: FC<CategoryButtonExtendedProps> = memo(({ category, select
       return () => clearInterval(interval);
     }
   }, [category, fadeAnim]);
-  const getCategoryFirstImage = () => {
-    if (category === "All Categories") return currentImage;
-    const categoryData = categories.find((c) => c.name === category)?.database;
-    if (!categoryData) return "";
-    const firstEntry = Object.values(categoryData)[0];
-    if (!firstEntry?.images?.[0]) return "";
-    return `${firstEntry.images[0].previewLink}lowRes/${firstEntry.images[0].original_file_name}`;
-  };
+  useEffect(() => {
+    if (category === "Shuffle Wallpapers") {
+      Animated.loop(
+        Animated.sequence([Animated.timing(scaleAnim, { toValue: 1.3, duration: 2000, useNativeDriver: true }), Animated.timing(scaleAnim, { toValue: 1.0, duration: 2000, useNativeDriver: true })])
+      ).start();
+    }
+  }, [category, scaleAnim]);
+  const getCategoryFirstImage = () =>
+    category === "Shuffle Wallpapers"
+      ? require("@/assets/bg-shuffled.png")
+      : category === "All Categories"
+      ? currentImage
+      : (() => {
+          const categoryData = categories.find((c) => c.name === category)?.database;
+          if (!categoryData) return "";
+          const firstEntry = Object.values(categoryData)[0];
+          return firstEntry?.images?.[0] ? `${firstEntry.images[0].previewLink}lowRes/${firstEntry.images[0].original_file_name}` : "";
+        })();
   return (
-    <TouchableOpacity onPress={onPress} style={{ flex: 1, height: 60, width: "100%", borderWidth: 1, borderRadius: 15, margin: 1, overflow: "hidden" }}>
+    <TouchableOpacity onPress={onPress} style={{ flex: 1, height: 60, width: "100%", borderWidth: 1, borderRadius: 10, margin: 2, overflow: "hidden" }}>
       <View style={{ borderRadius: 4, overflow: "hidden", width: "100%", height: "100%" }}>
-        <Animated.Image source={{ uri: getCategoryFirstImage() }} style={{ width: "100%", height: "100%", borderRadius: 15, opacity: fadeAnim }} />
-        <LinearGradient colors={["transparent", Colorizer("#0C0C0C", 0.5), Colorizer("#0C0C0C", 1.0)]} style={{ position: "absolute", width: "100%", height: "100%", borderRadius: 15 }} />
-        <View style={{ position: "absolute", width: "100%", height: "100%", justifyContent: "center", alignItems: "center", flexDirection: "row", borderRadius: 15 }}>
+        <Animated.Image
+          source={category === "Shuffle Wallpapers" ? getCategoryFirstImage() : { uri: getCategoryFirstImage() }}
+          style={{ width: "100%", height: "100%", borderRadius: 10, opacity: fadeAnim, transform: category === "Shuffle Wallpapers" ? [{ scale: scaleAnim }] : [] }}
+        />
+        <LinearGradient colors={["transparent", Colorizer("#0C0C0C", 0.5), Colorizer("#0C0C0C", 1.0)]} style={{ position: "absolute", width: "100%", height: "100%", borderRadius: 10 }} />
+        <View style={{ position: "absolute", width: "100%", height: "100%", justifyContent: "center", alignItems: "center", flexDirection: "row", borderRadius: 10 }}>
           <FontAwesome6 name={category === "All Categories" ? "list" : "image"} size={16} color="#FFFFFF" style={{ marginRight: 8 }} />
           <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#FFFFFF", 1.0), fontSize: 14, textAlign: "center", paddingHorizontal: 4 }}>{category}</Text>
         </View>
@@ -342,7 +346,6 @@ const CategoryButton: FC<CategoryButtonExtendedProps> = memo(({ category, select
   );
 });
 CategoryButton.displayName = "CategoryButton";
-
 // ============================================================================================
 // ============================================================================================
 const HeaderComponent: FC<{ categories: Category[]; selectedCategory: string; onSelectCategory: (categoryName: string) => void; onSearch: (text: string) => void }> = memo(
@@ -369,14 +372,14 @@ const HeaderComponent: FC<{ categories: Category[]; selectedCategory: string; on
             <Animated.View style={leftIconStyle}>
               <FontAwesome5 name="caret-left" size={24} color="#FFFFFF" />
             </Animated.View>
-            <Text style={{ fontFamily: "Lobster_Regular", fontSize: 40, color: "#FFFFFF", textAlign: "center", marginHorizontal: 10 }}>Our Categories</Text>
+            <Text style={{ fontFamily: "Lobster_Regular", fontSize: 40, color: "#FFFFFF", textAlign: "center", marginHorizontal: 10 }}>Our Gallery</Text>
             <Animated.View style={rightIconStyle}>
               <FontAwesome5 name="caret-right" size={24} color="#FFFFFF" />
             </Animated.View>
           </View>
           <SearchBar onSearch={onSearch} />
           <View className="flex-row justify-center">
-            <CategoryButton category="Shuffled Images" selected={selectedCategory === "Shuffled Images"} onPress={() => onSelectCategory("Shuffled Images")} />
+            <CategoryButton category="Shuffle Wallpapers" selected={selectedCategory === "Shuffle Wallpapers"} onPress={() => onSelectCategory("Shuffle Wallpapers")} />
             <CategoryButton category="All Categories" selected={false} onPress={() => setModalVisible(true)} />
           </View>
           <CategoryModal isVisible={modalVisible} onClose={() => setModalVisible(false)} onSelectCategory={onSelectCategory} selectedCategory={selectedCategory} />
@@ -391,9 +394,9 @@ HeaderComponent.displayName = "HeaderComponent";
 const HomePage = (): JSX.Element => {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [filteredData, setFilteredData] = useState<EnvironmentEntry[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState<string>("Shuffled Images");
+  const [selectedCategory, setSelectedCategory] = useState<string>("Shuffle Wallpapers");
   const getAllCombinedData = useCallback(() => {
-    const allCombinedCategory = categories.find((c) => c.name === "Shuffled Images");
+    const allCombinedCategory = categories.find((c) => c.name === "Shuffle Wallpapers");
     if (!allCombinedCategory) return [];
     return Object.values(allCombinedCategory.database);
   }, []);
@@ -453,7 +456,7 @@ const HomePage = (): JSX.Element => {
       );
       const sortedResults = [...matchingEntries.exactMatches, ...matchingEntries.partialMatches];
       const finalResults =
-        selectedCategory === "Shuffled Images"
+        selectedCategory === "Shuffle Wallpapers"
           ? sortedResults
           : sortedResults.filter((entry) => {
               const categoryData = categories.find((c) => c.name === selectedCategory)?.database || {};
