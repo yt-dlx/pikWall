@@ -290,56 +290,7 @@ CategoryButton.displayName = "CategoryButton";
 const FilterButton: FC<{ selectedCategory: string }> = memo(({ selectedCategory }) => {
   const fadeInValue = useSharedValue(0);
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
   const fadeInStyle = useAnimatedStyle(() => ({ opacity: fadeInValue.value }));
-  const filterOptionsByCategory = {
-    "All Shuffled": [
-      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" },
-      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" }
-    ],
-    "Aerial View": [
-      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" },
-      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" }
-    ],
-    "Portrait Perfect": [
-      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" },
-      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" }
-    ],
-    "Hyper Closeups": [
-      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" },
-      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" }
-    ],
-    "Nature Wonders": [
-      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" },
-      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" }
-    ],
-    "Antique Looking": [
-      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" },
-      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" }
-    ],
-    "Anime Landscapes": [
-      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" },
-      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" }
-    ],
-    "Cosmic-Lightning": [
-      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" },
-      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" }
-    ],
-    "Natural Landscapes": [
-      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" },
-      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" }
-    ],
-    "Minimalist Abstract": [
-      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" },
-      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" }
-    ],
-    "Mountains-Beaches": [
-      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" },
-      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" }
-    ]
-  };
-  const filterOptions = filterOptionsByCategory[selectedCategory as keyof typeof filterOptionsByCategory] || [];
-  const toggleFilter = (filterId: string) => setSelectedFilters((prev) => (prev.includes(filterId) ? prev.filter((id) => id !== filterId) : [...prev, filterId]));
   useEffect(() => {
     fadeInValue.value = withTiming(1, { duration: 1000, easing: Easing.ease });
   }, [fadeInValue]);
@@ -350,40 +301,8 @@ const FilterButton: FC<{ selectedCategory: string }> = memo(({ selectedCategory 
         style={{ flexDirection: "row", alignItems: "center", backgroundColor: Colorizer("#643425", 0.5), paddingHorizontal: 12, paddingVertical: 4, borderRadius: 10 }}
       >
         <FontAwesome5 name="filter" size={15} color={Colorizer("#f2dfce", 1.0)} />
-        <Text style={{ marginLeft: 8, fontFamily: "Kurale_Regular", color: Colorizer("#f2dfce", 1.0), fontSize: 14 }}>Filter Images {selectedFilters.length > 0 && `(${selectedFilters.length})`}</Text>
+        <Text style={{ marginLeft: 8, fontFamily: "Kurale_Regular", color: Colorizer("#f2dfce", 1.0), fontSize: 14 }}>Filter Styles</Text>
       </TouchableOpacity>
-      {isOpen && (
-        <View style={{ position: "absolute", top: "100%", left: 0, width: "100%", backgroundColor: Colorizer("#643425", 0.95), borderRadius: 8, padding: 12, marginTop: 4, zIndex: 1000 }}>
-          {filterOptions.map((option) => (
-            <TouchableOpacity
-              key={option.id}
-              onPress={() => toggleFilter(option.id)}
-              style={{ flexDirection: "row", alignItems: "center", paddingVertical: 8, paddingHorizontal: 4, borderBottomWidth: 1, borderBottomColor: Colorizer("#f2dfce", 0.1) }}
-            >
-              <View
-                style={{
-                  width: 20,
-                  height: 20,
-                  borderWidth: 1,
-                  borderRadius: 4,
-                  alignItems: "center",
-                  justifyContent: "center",
-                  borderColor: Colorizer("#f2dfce", 0.6),
-                  backgroundColor: selectedFilters.includes(option.id) ? Colorizer("#f2dfce", 0.2) : "transparent"
-                }}
-              >
-                {selectedFilters.includes(option.id) && <FontAwesome5 name="check" size={14} color={Colorizer("#f2dfce", 1.0)} />}
-              </View>
-              <Text style={{ marginLeft: 12, fontFamily: "Kurale_Regular", color: Colorizer("#f2dfce", 1.0), fontSize: 14 }}>{option.label}</Text>
-            </TouchableOpacity>
-          ))}
-          {selectedFilters.length > 0 && (
-            <TouchableOpacity onPress={() => setSelectedFilters([])} style={{ marginTop: 12, padding: 8, backgroundColor: Colorizer("#f2dfce", 0.1), borderRadius: 4, alignItems: "center" }}>
-              <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#f2dfce", 1.0), fontSize: 12 }}>Clear All Filters</Text>
-            </TouchableOpacity>
-          )}
-        </View>
-      )}
     </Animated.View>
   );
 });
