@@ -38,14 +38,10 @@
       "requiresFullScreen": true,
       "package": "com.shovit.picWall",
       "adaptiveIcon": {
-        "backgroundColor": "#0D0907",
+        "backgroundColor": "#0C0C0C",
         "foregroundImage": "./src/assets/picWall.png"
       },
-      "permissions": [
-        "READ_EXTERNAL_STORAGE",
-        "WRITE_EXTERNAL_STORAGE",
-        "SET_WALLPAPER "
-      ]
+      "permissions": ["READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE", "SET_WALLPAPER "]
     },
     "plugins": [
       "expo-router",
@@ -74,7 +70,7 @@
         {
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#0D0907",
+          "backgroundColor": "#0C0C0C",
           "image": "./src/assets/picWall.png"
         }
       ]

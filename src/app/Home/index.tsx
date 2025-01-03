@@ -19,10 +19,10 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { EnvironmentEntry } from "@/types/database";
 import { LinearGradient } from "expo-linear-gradient";
 import HeaderAnimate from "@/components/HeaderAnimated";
-import React, { useEffect, useCallback, useState, memo, FC } from "react";
+import React, { useEffect, useRef, useCallback, useState, memo, FC } from "react";
 import { SubImagesProps, CardProps, CategoryButtonProps } from "@/types/components";
-import { View, Text, TouchableOpacity, FlatList, ScrollView, StatusBar, TextInput } from "react-native";
-import Animated, { Easing, runOnJS, useSharedValue, useAnimatedStyle, withTiming, withRepeat } from "react-native-reanimated";
+import { Easing, useSharedValue, useAnimatedStyle, withTiming, withRepeat } from "react-native-reanimated";
+import { Animated, View, Text, TouchableOpacity, FlatList, ScrollView, StatusBar, TextInput } from "react-native";
 // ============================================================================================
 // ============================================================================================
 interface Category {
@@ -35,7 +35,6 @@ interface CategoryButtonExtendedProps extends CategoryButtonProps {
 }
 // ============================================================================================
 // ============================================================================================
-const AnimatedImage = Animated.createAnimatedComponent(Image);
 const categories: Category[] = [
   {
     name: "All Shuffled",
@@ -72,19 +71,19 @@ const SearchBar: FC<{ onSearch: (text: string) => void }> = memo(({ onSearch }) 
     onSearch(text);
   };
   return (
-    <View style={{ padding: 2 }}>
-      <View style={{ flexDirection: "row", alignItems: "center", backgroundColor: Colorizer("#643425", 1.0), borderRadius: 9999, paddingHorizontal: 12, height: 30 }}>
-        <FontAwesome5 name="search" size={16} color={Colorizer("#f2dfce", 0.6)} />
+    <View style={{ padding: 10 }}>
+      <View style={{ flexDirection: "row", alignItems: "center", backgroundColor: Colorizer("#242424", 1.0), borderRadius: 9999, paddingHorizontal: 12, height: 30 }}>
+        <FontAwesome5 name="search" size={16} color={Colorizer("#FFFFFF", 0.6)} />
         <TextInput
           value={searchText}
           onChangeText={handleSearch}
           placeholder="Search by image name..."
-          placeholderTextColor={Colorizer("#f2dfce", 0.6)}
-          style={{ flex: 1, marginLeft: 8, fontFamily: "Kurale_Regular", color: Colorizer("#f2dfce", 1.0) }}
+          placeholderTextColor={Colorizer("#FFFFFF", 0.6)}
+          style={{ flex: 1, marginLeft: 8, fontFamily: "Kurale_Regular", color: Colorizer("#FFFFFF", 1.0) }}
         />
         {searchText.length > 0 && (
           <TouchableOpacity onPress={() => handleSearch("")}>
-            <FontAwesome5 name="times" size={16} color={Colorizer("#f2dfce", 0.6)} />
+            <FontAwesome5 name="times" size={16} color={Colorizer("#FFFFFF", 0.6)} />
           </TouchableOpacity>
         )}
       </View>
@@ -110,7 +109,7 @@ const SubImages: FC<SubImagesProps> = memo(({ images, onImagePress }) => (
               />
               <Text
                 className="absolute m-1 bottom-1 right-1 px-2 text-xs rounded-2xl"
-                style={{ fontFamily: "Kurale_Regular", color: Colorizer("#F2EFE0", 1.0), backgroundColor: Colorizer(image.primary, 1.0) }}
+                style={{ fontFamily: "Kurale_Regular", color: Colorizer("#FFFFFF", 1.0), backgroundColor: Colorizer(image.primary, 1.0) }}
               >
                 {image.primary.toUpperCase()}
               </Text>
@@ -125,12 +124,11 @@ SubImages.displayName = "SubImages";
 // ============================================================================================
 // ============================================================================================
 const Card: FC<CardProps> = memo(({ data }) => {
-  const fadeInValue = useSharedValue(0);
+  const textScale = useRef(new Animated.Value(1)).current;
+  const textOpacity = useRef(new Animated.Value(1)).current;
   const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const imageFadeValue = useRef(new Animated.Value(1)).current;
   const [currentImage, setCurrentImage] = useState<string>(data.images[0]?.previewLink);
-  const fadeValue = useSharedValue(1);
-  const textOpacity = useSharedValue(1);
-  const textScale = useSharedValue(1);
   const updateImageState = useCallback(
     (nextIndex: number) => {
       setCurrentIndex(nextIndex);
@@ -138,100 +136,81 @@ const Card: FC<CardProps> = memo(({ data }) => {
     },
     [data.images]
   );
-  const animateOut = useCallback(
+  const animateImageOut = useCallback(
     (cb: () => void) => {
-      fadeValue.value = withTiming(0, { duration: 3000, easing: Easing.inOut(Easing.ease) }, () => {
-        runOnJS(cb)();
-      });
-      textOpacity.value = withTiming(0, { duration: 3000, easing: Easing.inOut(Easing.ease) });
+      Animated.timing(imageFadeValue, { toValue: 0, duration: 2000, easing: Easing.inOut(Easing.ease), useNativeDriver: true }).start(() => cb());
     },
-    [fadeValue, textOpacity]
+    [imageFadeValue]
   );
-  const animateIn = useCallback(() => {
-    textScale.value = 0.9;
-    fadeValue.value = withTiming(1, { duration: 3000, easing: Easing.inOut(Easing.ease) });
-    textOpacity.value = withTiming(1, { duration: 3000, easing: Easing.inOut(Easing.ease) });
-    textScale.value = withTiming(1, { duration: 3000, easing: Easing.inOut(Easing.ease) });
-  }, [fadeValue, textOpacity, textScale]);
+  const animateImageIn = useCallback(() => {
+    Animated.timing(imageFadeValue, { toValue: 1, duration: 3000, easing: Easing.inOut(Easing.ease), useNativeDriver: true }).start();
+  }, [imageFadeValue]);
+  const animateText = useCallback(() => {
+    Animated.timing(textOpacity, { toValue: 1, duration: 2000, easing: Easing.inOut(Easing.ease), useNativeDriver: true }).start();
+    Animated.timing(textScale, { toValue: 1, duration: 2000, easing: Easing.inOut(Easing.ease), useNativeDriver: true }).start();
+  }, [textOpacity, textScale]);
   const startTransition = useCallback(
     (nextIndex: number) => {
-      animateOut(() => {
+      animateImageOut(() => {
         updateImageState(nextIndex);
-        animateIn();
+        animateImageIn();
+        animateText();
       });
     },
-    [animateOut, animateIn, updateImageState]
-  );
-  const updateNextImage = useCallback(() => {
-    const nextIndex = (currentIndex + 1) % data.images.length;
-    startTransition(nextIndex);
-  }, [currentIndex, data.images.length, startTransition]);
-  const handleSubImagePress = useCallback(
-    (previewLink: string, index: number) => {
-      startTransition(index);
-    },
-    [startTransition]
+    [animateImageOut, animateImageIn, animateText, updateImageState]
   );
   useEffect(() => {
-    const interval = setInterval(updateNextImage, 3000);
+    const interval = setInterval(() => {
+      const nextIndex = (currentIndex + 1) % data.images.length;
+      startTransition(nextIndex);
+    }, 4000);
     return () => clearInterval(interval);
-  }, [updateNextImage]);
+  }, [currentIndex, data.images.length, startTransition]);
   useEffect(() => {
     updateImageState(0);
   }, [data, updateImageState]);
-  const imageStyle = useAnimatedStyle(() => ({ opacity: fadeValue.value }));
-  const fadeInStyle = useAnimatedStyle(() => ({ opacity: fadeInValue.value }));
-  const textStyle = useAnimatedStyle(() => ({ opacity: textOpacity.value, transform: [{ scale: textScale.value }] }));
-  useEffect(() => {
-    fadeInValue.value = withTiming(2, { duration: 3000, easing: Easing.ease });
-  }, [fadeInValue]);
   return (
-    <Animated.View style={fadeInStyle}>
-      <View className="rounded-b-lg rounded-t-2xl overflow-hidden border" style={{ backgroundColor: Colorizer("#0D0907", 1.0), borderColor: Colorizer(data.images[currentIndex].primary, 0.4) }}>
-        <Link href={{ pathname: "./Image", params: { data: JSON.stringify({ data: data.images, selectedIndex: currentIndex, environment_title: data.environment_title }) } }} asChild>
-          <TouchableOpacity>
-            <View className="relative aspect-[9/16] w-full overflow-hidden">
-              <AnimatedImage source={{ uri: currentImage }} style={[{ width: "100%", height: "100%", borderTopLeftRadius: 8, borderTopRightRadius: 8 }, imageStyle]} contentFit="cover" />
-              <View className="absolute bottom-0 left-0 right-0 items-center justify-start">
-                <Animated.Text
-                  style={[textStyle, { textAlign: "center", fontFamily: "Kurale_Regular", color: Colorizer("#F2EFE0", 1.0), backgroundColor: Colorizer(data.images[currentIndex].primary, 1.0) }]}
-                  className="text-sm m-1 px-1 rounded-xl"
-                >
-                  {data.images[currentIndex].original_file_name.replace(/_/g, " ").replace(".jpg", "")}
-                </Animated.Text>
-              </View>
+    <View className="rounded-3xl overflow-hidden border mb-1" style={{ backgroundColor: Colorizer("#0C0C0C", 1.0), borderColor: Colorizer(data.images[currentIndex].primary, 0.2) }}>
+      <Link href={{ pathname: "./Image", params: { data: JSON.stringify({ data: data.images, selectedIndex: currentIndex, environment_title: data.environment_title }) } }} asChild>
+        <TouchableOpacity>
+          <View className="relative aspect-[9/16] w-full overflow-hidden">
+            <Animated.Image source={{ uri: currentImage }} style={{ width: "100%", height: "100%", borderTopLeftRadius: 20, borderTopRightRadius: 20, opacity: imageFadeValue }} />
+            <View className="absolute bottom-0 left-0 right-0 items-center justify-start">
+              <Animated.Text
+                style={{
+                  opacity: textOpacity,
+                  textAlign: "center",
+                  fontFamily: "Kurale_Regular",
+                  transform: [{ scale: textScale }],
+                  color: Colorizer("#FFFFFF", 1.0),
+                  backgroundColor: Colorizer(data.images[currentIndex].primary, 10.0)
+                }}
+                className="text-sm m-1 px-1 rounded-xl"
+              >
+                {data.images[currentIndex].original_file_name.replace(/_/g, " ").replace(".jpg", "")}
+              </Animated.Text>
             </View>
-          </TouchableOpacity>
-        </Link>
-        <View className="flex flex-row p-0.5">
-          <View className="w-1/2">
-            <SubImages
-              onImagePress={handleSubImagePress}
-              images={{
-                allData: data.images,
-                data: data.images.slice(0, 2),
-                selectedIndex: currentIndex,
-                environment_title: data.environment_title
-              }}
-            />
           </View>
-          <View className="w-1/2">
-            <SubImages
-              onImagePress={handleSubImagePress}
-              images={{
-                allData: data.images,
-                data: data.images.slice(2, 4),
-                selectedIndex: currentIndex,
-                environment_title: data.environment_title
-              }}
-            />
-          </View>
+        </TouchableOpacity>
+      </Link>
+      <View className="flex flex-row p-0.5">
+        <View className="w-1/2">
+          <SubImages
+            onImagePress={(previewLink, index) => startTransition(index)}
+            images={{ allData: data.images, data: data.images.slice(0, 2), selectedIndex: currentIndex, environment_title: data.environment_title }}
+          />
         </View>
-        <View className="border-t items-center justify-center py-0.5" style={{ backgroundColor: Colorizer(data.images[currentIndex].primary, 1.0) }}>
-          <Text style={{ fontFamily: "Dm_Serif_Display_Regular", color: Colorizer("#0D0907", 1.0), fontSize: 10, lineHeight: 16 }}>Generated by picWall AI</Text>
+        <View className="w-1/2">
+          <SubImages
+            onImagePress={(previewLink, index) => startTransition(index)}
+            images={{ allData: data.images, data: data.images.slice(2, 4), selectedIndex: currentIndex, environment_title: data.environment_title }}
+          />
         </View>
       </View>
-    </Animated.View>
+      <View className="border-t items-center justify-center py-0.5" style={{ backgroundColor: Colorizer(data.images[currentIndex].primary, 1.0) }}>
+        <Text style={{ fontFamily: "Dm_Serif_Display_Regular", color: Colorizer("#0C0C0C", 1.0), fontSize: 10 }}>picWall AI</Text>
+      </View>
+    </View>
   );
 });
 Card.displayName = "Card";
@@ -248,13 +227,13 @@ const CategoryButton: FC<CategoryButtonExtendedProps> = memo(({ category, select
   return (
     <TouchableOpacity
       onPress={onPress}
-      style={{ margin: 1, width: 110, height: 60, borderRadius: 6, overflow: "hidden", borderWidth: 1, borderColor: selected ? Colorizer("#C26F2D", 1.0) : "transparent" }}
+      style={{ margin: 1, width: 110, height: 60, borderRadius: 15, overflow: "hidden", borderWidth: 1, borderColor: selected ? Colorizer("#FFFFFF", 0.5) : "transparent" }}
     >
       <View style={{ borderRadius: 4, overflow: "hidden", width: "100%", height: "100%" }}>
-        <Image source={{ uri: getCategoryFirstImage() }} style={{ width: "100%", height: "100%", borderRadius: 6 }} contentFit="cover" />
-        <LinearGradient colors={["transparent", Colorizer("#0D0907", 0.5), Colorizer("#0D0907", 1.0)]} style={{ position: "absolute", width: "100%", height: "100%", borderRadius: 6 }} />
-        <View style={{ position: "absolute", width: "100%", height: "100%", justifyContent: "center", alignItems: "center", borderRadius: 6 }}>
-          <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#F2EFE0", 1.0), fontSize: 12, textAlign: "center", paddingHorizontal: 4 }}> {category} </Text>
+        <Image source={{ uri: getCategoryFirstImage() }} style={{ width: "100%", height: "100%", borderRadius: 15 }} contentFit="cover" />
+        <LinearGradient colors={["transparent", Colorizer("#0C0C0C", 0.5), Colorizer("#0C0C0C", 1.0)]} style={{ position: "absolute", width: "100%", height: "100%", borderRadius: 15 }} />
+        <View style={{ position: "absolute", width: "100%", height: "100%", justifyContent: "center", alignItems: "center", borderRadius: 15 }}>
+          <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#FFFFFF", 1.0), fontSize: 12, textAlign: "center", paddingHorizontal: 4 }}> {category} </Text>
         </View>
       </View>
     </TouchableOpacity>
@@ -281,19 +260,14 @@ const HeaderComponent: FC<{ categories: Category[]; selectedCategory: string; on
         <View className="-m-2">
           <HeaderAnimate />
         </View>
-        <LinearGradient
-          colors={["#0D0907", "#1a1512", Colorizer("#2e1c12", 0.6), "transparent"]}
-          style={{ marginTop: 10, paddingTop: 20, paddingRight: 3, paddingLeft: 1, paddingBottom: 10 }}
-          start={{ x: 0.5, y: 0 }}
-          end={{ x: 0.5, y: 1 }}
-        >
+        <View style={{ marginTop: 10, paddingTop: 20, paddingRight: 3, paddingLeft: 1, paddingBottom: 10 }}>
           <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
             <Animated.View style={leftIconStyle}>
-              <FontAwesome5 name="caret-left" size={24} color="#F2EFE0" />
+              <FontAwesome5 name="caret-left" size={24} color="#FFFFFF" />
             </Animated.View>
-            <Text style={{ fontFamily: "Lobster_Regular", fontSize: 40, color: "#F2EFE0", textAlign: "center", marginHorizontal: 10 }}>Our Categories</Text>
+            <Text style={{ fontFamily: "Lobster_Regular", fontSize: 40, color: "#FFFFFF", textAlign: "center", marginHorizontal: 10 }}>Our Categories</Text>
             <Animated.View style={rightIconStyle}>
-              <FontAwesome5 name="caret-right" size={24} color="#F2EFE0" />
+              <FontAwesome5 name="caret-right" size={24} color="#FFFFFF" />
             </Animated.View>
           </View>
           <SearchBar onSearch={onSearch} />
@@ -302,7 +276,7 @@ const HeaderComponent: FC<{ categories: Category[]; selectedCategory: string; on
               <CategoryButton key={category.name} category={category.name} selected={category.name === selectedCategory} onPress={() => onSelectCategory(category.name)} />
             ))}
           </ScrollView>
-        </LinearGradient>
+        </View>
       </Animated.View>
     );
   }
@@ -398,15 +372,15 @@ const HomePage = (): JSX.Element => {
     if (searchQuery) {
       return (
         <View style={{ padding: 20, alignItems: "center" }}>
-          <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#F2EFE0", 0.8), fontSize: 16, textAlign: "center" }}>No images found matching "{searchQuery}".</Text>
-          <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#F2EFE0", 0.8), fontSize: 16, textAlign: "center" }}>You may request images from "Account" Section.</Text>
+          <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#FFFFFF", 0.8), fontSize: 16, textAlign: "center" }}>No images found matching "{searchQuery}".</Text>
+          <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#FFFFFF", 0.8), fontSize: 16, textAlign: "center" }}>You may request images from "Account" Section.</Text>
         </View>
       );
     }
     return null;
   }, [searchQuery]);
   return (
-    <View style={{ backgroundColor: Colorizer("#1a1512", 1.0), flex: 1 }} className="relative">
+    <View style={{ backgroundColor: Colorizer("#0C0C0C", 1.0), flex: 1 }} className="relative">
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
       <FlatList
         windowSize={3}
