@@ -294,48 +294,48 @@ const FilterButton: FC<{ selectedCategory: string }> = memo(({ selectedCategory 
   const fadeInStyle = useAnimatedStyle(() => ({ opacity: fadeInValue.value }));
   const filterOptionsByCategory = {
     "All Shuffled": [
-      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" },
-      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" }
+      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" },
+      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" }
     ],
     "Aerial View": [
-      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" },
-      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" }
+      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" },
+      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" }
     ],
     "Portrait Perfect": [
-      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" },
-      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" }
+      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" },
+      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" }
     ],
     "Hyper Closeups": [
-      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" },
-      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" }
+      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" },
+      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" }
     ],
     "Nature Wonders": [
-      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" },
-      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" }
+      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" },
+      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" }
     ],
     "Antique Looking": [
-      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" },
-      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" }
+      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" },
+      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" }
     ],
     "Anime Landscapes": [
-      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" },
-      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" }
+      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" },
+      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" }
     ],
     "Cosmic-Lightning": [
-      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" },
-      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" }
+      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" },
+      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" }
     ],
     "Natural Landscapes": [
-      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" },
-      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" }
+      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" },
+      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" }
     ],
     "Minimalist Abstract": [
-      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" },
-      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" }
+      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" },
+      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" }
     ],
     "Mountains-Beaches": [
-      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" },
-      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" }
+      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" },
+      { id: "cs", label: "picWall in beta Stage. Feature Coming Soon" }
     ]
   };
   const filterOptions = filterOptionsByCategory[selectedCategory as keyof typeof filterOptionsByCategory] || [];
