@@ -21,8 +21,8 @@ import { LinearGradient } from "expo-linear-gradient";
 import HeaderAnimate from "@/components/HeaderAnimated";
 import React, { useEffect, useRef, useCallback, useState, memo, FC } from "react";
 import { SubImagesProps, CardProps, CategoryButtonProps } from "@/types/components";
+import { Animated, View, Text, TouchableOpacity, FlatList, StatusBar, TextInput, Modal } from "react-native";
 import { Easing, useSharedValue, useAnimatedStyle, withTiming, withRepeat } from "react-native-reanimated";
-import { Animated, View, Text, TouchableOpacity, FlatList, ScrollView, StatusBar, TextInput } from "react-native";
 // ============================================================================================
 // ============================================================================================
 interface Category {
@@ -216,6 +216,77 @@ const Card: FC<CardProps> = memo(({ data }) => {
 Card.displayName = "Card";
 // ============================================================================================
 // ============================================================================================
+const CategoryModal: FC<{ isVisible: boolean; onClose: () => void; onSelectCategory: (category: string) => void; selectedCategory: string }> = ({
+  isVisible,
+  onClose,
+  onSelectCategory,
+  selectedCategory
+}) => {
+  const categories = [
+    { name: "Aerial View", icon: "plane" },
+    { name: "Portrait Perfect", icon: "portrait" },
+    { name: "Hyper Closeups", icon: "search-plus" },
+    { name: "Nature Wonders", icon: "leaf" },
+    { name: "Antique Looking", icon: "history" },
+    { name: "Anime Landscapes", icon: "mountain" },
+    { name: "Cosmic-Lightning", icon: "bolt" },
+    { name: "Natural Landscapes", icon: "tree" },
+    { name: "Minimalist Abstract", icon: "paint-brush" },
+    { name: "Mountains-Beaches", icon: "umbrella-beach" }
+  ];
+
+  return (
+    <Modal visible={isVisible} transparent animationType="slide">
+      <View className="flex-1 bg-black/50 justify-end">
+        <View className="bg-[#0C0C0C] rounded-t-3xl p-4">
+          <View className="flex-row justify-between items-center mb-4">
+            <Text className="text-white font-bold text-xl" style={{ fontFamily: "Lobster_Regular" }}>
+              All Categories
+            </Text>
+            <TouchableOpacity onPress={onClose}>
+              <FontAwesome5 name="times" size={24} color="#FFFFFF" />
+            </TouchableOpacity>
+          </View>
+          <View className="flex-row flex-wrap justify-between">
+            {categories.map((category) => (
+              <TouchableOpacity
+                key={category.name}
+                onPress={() => {
+                  onSelectCategory(category.name);
+                  onClose();
+                }}
+                className="w-[48%] mb-4"
+              >
+                <View
+                  className="p-4 rounded-xl items-center justify-center h-24"
+                  style={{
+                    backgroundColor: Colorizer("#242424", 1.0),
+                    borderWidth: 1,
+                    borderColor: selectedCategory === category.name ? Colorizer("#FFFFFF", 0.5) : "transparent"
+                  }}
+                >
+                  <FontAwesome5 name={category.icon} size={24} color="#FFFFFF" />
+                  <Text
+                    className="mt-2 text-center"
+                    style={{
+                      fontFamily: "Kurale_Regular",
+                      color: Colorizer("#FFFFFF", 1.0),
+                      fontSize: 12
+                    }}
+                  >
+                    {category.name}
+                  </Text>
+                </View>
+              </TouchableOpacity>
+            ))}
+          </View>
+        </View>
+      </View>
+    </Modal>
+  );
+};
+// ============================================================================================
+// ============================================================================================
 const CategoryButton: FC<CategoryButtonExtendedProps> = memo(({ category, selected, onPress }) => {
   const getCategoryFirstImage = () => {
     const categoryData = categories.find((c) => c.name === category)?.database;
@@ -227,13 +298,31 @@ const CategoryButton: FC<CategoryButtonExtendedProps> = memo(({ category, select
   return (
     <TouchableOpacity
       onPress={onPress}
-      style={{ margin: 1, width: 110, height: 60, borderRadius: 15, overflow: "hidden", borderWidth: 1, borderColor: selected ? Colorizer("#FFFFFF", 0.5) : "transparent" }}
+      style={{
+        margin: 1,
+        width: 150,
+        height: 60,
+        borderRadius: 15,
+        overflow: "hidden",
+        borderWidth: 1,
+        borderColor: selected ? Colorizer("#FFFFFF", 0.5) : "transparent"
+      }}
     >
       <View style={{ borderRadius: 4, overflow: "hidden", width: "100%", height: "100%" }}>
         <Image source={{ uri: getCategoryFirstImage() }} style={{ width: "100%", height: "100%", borderRadius: 15 }} contentFit="cover" />
         <LinearGradient colors={["transparent", Colorizer("#0C0C0C", 0.5), Colorizer("#0C0C0C", 1.0)]} style={{ position: "absolute", width: "100%", height: "100%", borderRadius: 15 }} />
         <View style={{ position: "absolute", width: "100%", height: "100%", justifyContent: "center", alignItems: "center", borderRadius: 15 }}>
-          <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#FFFFFF", 1.0), fontSize: 12, textAlign: "center", paddingHorizontal: 4 }}> {category} </Text>
+          <Text
+            style={{
+              fontFamily: "Kurale_Regular",
+              color: Colorizer("#FFFFFF", 1.0),
+              fontSize: 14,
+              textAlign: "center",
+              paddingHorizontal: 4
+            }}
+          >
+            {category}
+          </Text>
         </View>
       </View>
     </TouchableOpacity>
@@ -247,6 +336,7 @@ const HeaderComponent: FC<{ categories: Category[]; selectedCategory: string; on
     const fadeInValue = useSharedValue(0);
     const leftIconTranslate = useSharedValue(0);
     const rightIconTranslate = useSharedValue(0);
+    const [modalVisible, setModalVisible] = useState(false);
     const fadeInStyle = useAnimatedStyle(() => ({ opacity: fadeInValue.value }));
     const leftIconStyle = useAnimatedStyle(() => ({ transform: [{ translateX: leftIconTranslate.value }] }));
     const rightIconStyle = useAnimatedStyle(() => ({ transform: [{ translateX: rightIconTranslate.value }] }));
@@ -257,10 +347,10 @@ const HeaderComponent: FC<{ categories: Category[]; selectedCategory: string; on
     }, [fadeInValue, leftIconTranslate, rightIconTranslate]);
     return (
       <Animated.View style={fadeInStyle}>
-        <View className="-m-2">
+        <View className="-m-4">
           <HeaderAnimate />
         </View>
-        <View style={{ marginTop: 10, paddingTop: 20, paddingRight: 3, paddingLeft: 1, paddingBottom: 10 }}>
+        <View style={{ marginTop: 10, paddingTop: 20, paddingRight: 4, paddingLeft: 4, paddingBottom: 10 }}>
           <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
             <Animated.View style={leftIconStyle}>
               <FontAwesome5 name="caret-left" size={24} color="#FFFFFF" />
@@ -271,11 +361,11 @@ const HeaderComponent: FC<{ categories: Category[]; selectedCategory: string; on
             </Animated.View>
           </View>
           <SearchBar onSearch={onSearch} />
-          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            {categories.map((category) => (
-              <CategoryButton key={category.name} category={category.name} selected={category.name === selectedCategory} onPress={() => onSelectCategory(category.name)} />
-            ))}
-          </ScrollView>
+          <View className="flex-row justify-center space-x-2">
+            <CategoryButton category="All Shuffled" selected={selectedCategory === "All Shuffled"} onPress={() => onSelectCategory("All Shuffled")} />
+            <CategoryButton category="All Categories" selected={false} onPress={() => setModalVisible(true)} />
+          </View>
+          <CategoryModal isVisible={modalVisible} onClose={() => setModalVisible(false)} onSelectCategory={onSelectCategory} selectedCategory={selectedCategory} />
         </View>
       </Animated.View>
     );

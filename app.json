@@ -1,6 +1,6 @@
 {
   "expo": {
-    "version": "1.0.7",
+    "version": "1.0.8",
     "owner": "shovit",
     "slug": "picWall",
     "name": "picWall",
@@ -41,7 +41,11 @@
         "backgroundColor": "#0C0C0C",
         "foregroundImage": "./src/assets/picWall.png"
       },
-      "permissions": ["READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE", "SET_WALLPAPER "]
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "SET_WALLPAPER "
+      ]
     },
     "plugins": [
       "expo-router",

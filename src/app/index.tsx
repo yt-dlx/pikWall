@@ -131,7 +131,7 @@ const AppPage: React.FC = () => {
                 </Text>
                 <Animated.View style={{ alignSelf: "center" }} entering={FadeInDown.delay(600).duration(1500).springify()}>
                   <View style={{ backgroundColor: Colorizer("#0C0C0C", 0.6), borderRadius: 9999, paddingHorizontal: 12, paddingVertical: 4 }}>
-                    <Text style={{ fontFamily: "Caveat_Bold", color: Colorizer("#FFFFFF", 1.0), fontSize: 16, textAlign: "center" }}>
+                    <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#FFFFFF", 1.0), fontSize: 10, textAlign: "center" }}>
                       Crafted with <AntDesign name="heart" size={10} color={Colorizer("#FFFFFF", 1.0)} /> in India. All rights reserved
                     </Text>
                   </View>
@@ -140,7 +140,7 @@ const AppPage: React.FC = () => {
               <Link href="./Home" asChild>
                 <TouchableOpacity onPressIn={onPressIn} onPressOut={onPressOut} className="mt-44 rounded-full overflow-hidden">
                   <Animated.View style={[buttonAnimatedStyle, { shadowColor: Colorizer("#0C0C0C", 1.0), shadowOffset: { width: 0, height: 4 } }]}>
-                    <View style={{ backgroundColor: Colorizer("#FFFFFF", 1.0) }} className="flex-row items-center justify-center px-8 py-4">
+                    <View style={{ backgroundColor: Colorizer("#FFFFFF", 1.0) }} className="flex-row items-center justify-center py-4">
                       <FontAwesome5 name="camera-retro" size={32} color={Colorizer("#0C0C0C", 1.0)} style={{ marginRight: 12 }} />
                       <Text className="text-2xl" style={{ fontFamily: "Lobster_Regular", color: Colorizer("#0C0C0C", 1.0) }}>
                         Let's Explore Wallpapers
@@ -150,8 +150,8 @@ const AppPage: React.FC = () => {
                 </TouchableOpacity>
               </Link>
               <Animated.View entering={FadeIn.delay(1200).duration(1500)} style={{ marginTop: 10, paddingHorizontal: 20, alignItems: "center" }}>
-                <Text style={{ fontFamily: "Caveat_Bold", color: Colorizer("#FFFFFF", 0.8), fontSize: 20, textAlign: "center", marginBottom: 4 }}>Personalised AI Wallpapers</Text>
-                <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#FFFFFF", 0.6), fontSize: 10, textAlign: "center", maxWidth: 260 }}>
+                <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#FFFFFF", 0.8), fontSize: 15, textAlign: "center", marginBottom: 4 }}>Personalised AI Wallpapers</Text>
+                <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#FFFFFF", 0.6), fontSize: 10, textAlign: "center", maxWidth: 300 }}>
                   Create stunning collections, share your moments, and discover amazing photographs from around the world. Join our community of passionate photographers today!
                 </Text>
               </Animated.View>
