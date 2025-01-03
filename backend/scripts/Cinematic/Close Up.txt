@@ -1,7 +1,7 @@
 1. Raindrop Beauty: A single raindrop clinging to a blade of grass, with a blurred natural background.
-2. Cat's Eye: A close-up of a cat’s eye, showing intricate reflections and textures.
+2. Cat's Eye: A close-up of a glass orb with intricate reflections and textures.
 3. Butterfly Wing: Detailed view of a butterfly wing, revealing vibrant patterns and textures.
-4. Human Iris: A macro shot of a human eye, showcasing its intricate structure.
+4. Human Iris: A close-up of a flower petal showcasing its intricate structure.
 5. Dewy Petal: A single flower petal covered in tiny dew droplets.
 6. Insect Marvel: A close-up of a bee collecting nectar from a flower.
 7. Rusty Texture: A weathered piece of metal with rust patterns up close.
@@ -37,7 +37,7 @@
 37. Electric Circuit: The intricate wiring of a circuit board.
 38. Beaded Jewelry: A bracelet made of shimmering beads up close.
 39. Colored Pencil Tips: A group of colored pencils showing their sharp tips.
-40. Fingerprint Whorls: A human fingerprint in extreme detail.
+40. Fingerprint Whorls: A magnified view of a fingerprint.
 41. Tire Tread: A rugged tire tread pattern viewed closely.
 42. Honey Drop: A droplet of honey suspended on a wooden spoon.
 43. Keyboard Key: A single key from a keyboard showing its wear.
@@ -50,7 +50,7 @@
 50. Shiny Pebble: A polished pebble reflecting ambient light.
 51. Wood Grain: A close-up of wooden surface showing its natural grain.
 52. Wine Glass Edge: The sharp edge of a wine glass with liquid beads.
-53. Hummingbird Beak: A close-up of a hummingbird feeding on nectar.
+53. Hummingbird Beak: A close-up of a beak feeding on nectar.
 54. Rice Grains: Individual rice grains piled together in fine detail.
 55. Lens Reflection: The surface of a camera lens reflecting light.
 56. Coin Engravings: Intricate details of an old coin with historical markings.
@@ -74,7 +74,7 @@
 74. Granulated Sugar: Tiny granules of sugar sparkling in light.
 75. Thread Bundle: A spool of thread with fibers visible up close.
 76. Gold Flake: A single gold flake reflecting warm light.
-77. Eyeglasses Edge: A scratch on the edge of an eyeglass lens.
+77. Eyeglasses Edge: A scratch on the edge of a lens.
 78. Textured Sand: Fine grains of sand in a rippling pattern.
 79. Porcupine Quill: The tip of a porcupine quill in sharp focus.
 80. Moss Detail: A patch of moss showing individual tiny leaves.
@@ -92,7 +92,7 @@
 92. Snail Antenna: The soft, extended antenna of a snail.
 93. Diamond Facets: The sharp facets of a cut diamond reflecting light.
 94. Salt Crystals: Tiny salt crystals glistening under a light source.
-95. Dog Nose: A dog’s wet nose with its unique texture.
+95. Dog Nose: A dog's wet nose with its unique texture.
 96. Kaleidoscope Patterns: Colorful reflections through a kaleidoscope.
 97. Wooden Bead: A handcrafted wooden bead with intricate carvings.
 98. Velvet Antler: The velvety surface of a deer’s antler.

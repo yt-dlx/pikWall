@@ -57,3 +57,6 @@ titles = [
     "Hyper Realism, Retro - Hyper-Real Nostalgia",
     "Hyper Realism, Vibrant - Colorful Realities"
 ]
+
+
+negative = "deformed, distorted, mutated, extra limbs, unnatural proportions, anatomical errors, bad anatomy, no distorted limbs, no extra arms, no deformed faces, no disproportionate body parts, bad eyes, blurry eyes, mismatched eyes, extra eyes, missing eyes, incorrect eye placement, bad hands, blurry hands, extra fingers, missing fingers, incorrect finger placement, malformed hands, bad posture, unnatural body poses, warped features, bad facial features, no extra digits, no warped anatomy, incorrect limb angles, malformed limbs, twisted neck, asymmetrical body, overlapping body parts, unclear facial expressions"

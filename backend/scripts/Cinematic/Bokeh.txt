@@ -1,9 +1,9 @@
-1. Golden Hour Glow: A silhouette of a person standing in a field at sunset, surrounded by golden bokeh.
+1. Golden Hour Glow: A silhouette of a tree standing in a field at sunset, surrounded by golden bokeh.
 2. Rainy Day Reflection: A puddle reflecting city lights with colorful bokeh in the background.
 3. Candlelight Serenity: A single candle in a dim room, with soft bokeh from distant fairy lights.
 4. Festive Cheer: A Christmas ornament hanging on a tree with twinkling bokeh lights.
 5. Lone Flower: A macro shot of a blooming flower with creamy bokeh behind it.
-6. Romantic Evening: A couple holding hands under a streetlamp with warm bokeh lights around.
+6. Romantic Evening: A glowing lantern under a streetlamp with warm bokeh lights around.
 7. Starry Celebration: Sparklers glowing in the night with dazzling bokeh effects.
 8. Autumn Vibes: Fallen leaves in focus with blurred golden bokeh in the background.
 9. Morning Dew: A close-up of a spiderweb with dew drops catching sunlight and bokeh.
@@ -14,23 +14,23 @@
 14. Fairytale Lanterns: Lanterns floating in a river at night with a glowing bokeh effect.
 15. Night Market: A bustling market scene with neon signs and bokeh.
 16. Rustic Romance: A wooden bench in a park surrounded by bokeh from fairy lights.
-17. Childhood Memories: A carousel with horses in focus and bokeh lights behind.
+17. Childhood Memories: A carousel with lights and glowing bokeh behind.
 18. Winter Wonderland: Snowflakes falling gently with soft bokeh from distant streetlights.
 19. Magic Potion: A glass vial glowing with a colorful liquid and bokeh highlights.
 20. Cherry Blossom Bliss: Pink cherry blossoms in focus with soft pastel bokeh.
-21. Evening Walk: A silhouette of a dog walking in a park at sunset with golden bokeh.
+21. Evening Walk: A dog’s paw print on a path at sunset with golden bokeh.
 22. Artistic Ink Drop: An ink drop suspended in water with sparkling bokeh.
 23. Dreamy Bookshelf: A stack of books with bokeh lights shaped like stars.
 24. Festival Fireworks: Bright fireworks exploding with blurred crowds and bokeh below.
 25. Rustic Candlelight Dinner: A dining setup in the woods with warm bokeh lights.
-26. Morning Yoga: A person meditating at sunrise with glowing bokeh behind.
+26. Morning Yoga: A tranquil yoga mat with glowing bokeh behind.
 27. City Rain: Raindrops on a windowpane with blurred city lights.
 28. Ethereal Butterfly: A butterfly perched on a leaf with a radiant bokeh backdrop.
 29. Guitar Melody: A close-up of guitar strings with glowing stage bokeh.
 30. Desert Mirage: A cactus in focus under a setting sun with warm bokeh.
 31. Lake Reflection: A serene lake at dawn with bokeh reflections of the sky.
 32. Neon Dreams: A neon-lit street with colorful bokeh effects.
-33. Cultural Festival: A dancer in traditional attire with festive bokeh around.
+33. Cultural Festival: Traditional lanterns with festive bokeh around.
 34. Vintage Bicycle: A bicycle leaning against a wall with pastel bokeh.
 35. Garden Whimsy: A bee hovering over flowers with sparkling bokeh behind.
 36. Firefly Night: A dark forest illuminated by fireflies and bokeh.
@@ -44,8 +44,8 @@
 44. Night Drive: Car headlights and tail lights creating a vibrant bokeh trail.
 45. Fairground Magic: A Ferris wheel glowing against the night sky with bokeh.
 46. Golden Bridge: A suspension bridge at dusk with glittering bokeh lights.
-47. Dreamy Eyes: A close-up portrait with catchlight bokeh in the eyes.
-48. Winter Stroll: A person walking in a snowy park with golden bokeh lanterns.
+47. Dreamy Eyes: A close-up of dew drops on a leaf with bokeh in the background.
+48. Winter Stroll: A snowy park with golden bokeh lanterns.
 49. Vintage Camera: An old camera on a rustic table with artistic bokeh.
 50. Glittering Crown: A tiara resting on velvet with sparkling bokeh lights.
 51. Rainbow Prism: A glass prism splitting sunlight into rainbow bokeh.
@@ -58,7 +58,7 @@
 58. Serene Waterfall: A waterfall in focus with sparkling water bokeh.
 59. Abstract Reflections: Oil droplets on water with rainbow bokeh patterns.
 60. Vintage Letters: Old letters on a desk with warm bokeh candlelight.
-61. Rainy Romance: A couple under an umbrella with colorful streetlight bokeh.
+61. Rainy Romance: A street with colorful streetlight bokeh.
 62. Sunlit Meadow: Wildflowers glowing with sunlight and golden bokeh.
 63. Rustic Charm: An antique lantern hanging from a tree with bokeh behind.
 64. Abstract Lights: Twisting light trails creating unique bokeh shapes.
@@ -74,7 +74,7 @@
 74. Vintage Street: A cobblestone street with streetlights and bokeh.
 75. Lighthouse Light: A lighthouse beam with soft bokeh reflections.
 76. Waves of Light: Long-exposure of ocean waves with glowing bokeh.
-77. Playful Puppy: A puppy playing in a park with vibrant bokeh.
+77. Playful Puppy: A toy rolling in the grass with vibrant bokeh.
 78. Wine Glass Glow: A wine glass catching candlelight and bokeh.
 79. Floating Feathers: A white feather drifting with glowing bokeh behind.
 80. Golden Harvest: A wheat field glowing in sunset bokeh.
@@ -91,10 +91,10 @@
 91. Orchid Beauty: A close-up of orchids with soft pink bokeh.
 92. Rusted Charm: An old gate with glowing background bokeh.
 93. Butterfly Glow: A butterfly glowing under a spotlight with bokeh.
-94. Wedding Bliss: A couple’s hands with rings under soft bokeh light.
+94. Wedding Bliss: A ring under soft bokeh light.
 95. Hot Air Balloons: Balloons in the sky with colorful bokeh.
 96. Dreamy Meadow: Grass swaying in the wind with sunlight bokeh.
 97. Peaceful Lantern: A lantern glowing in the night surrounded by bokeh.
 98. Cherry Blossom Rain: Falling petals with warm pastel bokeh.
 99. Abstract Droplets: Rain droplets catching light with glittering bokeh.
-100. Twinkling Stars: Stars glowing against a dreamy night bokeh background.
+100. Twinkling Stars: Stars glowing against a dreamy night bokeh background. 
