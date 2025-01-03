@@ -5,7 +5,7 @@ def add_watermark_to_image(input_path, output_path, text, font_path, orientation
     image = Image.open(input_path).convert("RGBA")
     watermark = Image.new("RGBA", image.size, (255, 255, 255, 0))
     draw = ImageDraw.Draw(watermark)
-    font_size = int(image.size[0] / 30)
+    font_size = int(image.size[0] / 50)
     font = ImageFont.truetype(font_path, font_size)
     if orientation == "portrait" or (orientation == "auto" and image.size[1] > image.size[0]):
         text_bbox = draw.textbbox((0, 0), text, font=font)
@@ -47,7 +47,7 @@ output_folders = [os.path.join(output_base_dir, folder, "highRes") for folder in
 for output_folder in output_folders:
     os.makedirs(output_folder, exist_ok=True)
 text = "picWall™ AI"
-font_path = os.path.join("include", "Kurale.ttf")
+font_path = os.path.join("include", "picWall.ttf")
 orientation = input("Enter orientation (portrait, landscape, or auto): ").strip().lower()
 if orientation not in {"portrait", "landscape", "auto"}:
     orientation = "auto"
