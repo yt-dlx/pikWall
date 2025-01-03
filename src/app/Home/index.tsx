@@ -287,17 +287,58 @@ const CategoryButton: FC<CategoryButtonExtendedProps> = memo(({ category, select
 CategoryButton.displayName = "CategoryButton";
 // ============================================================================================
 // ============================================================================================
-const FilterButton: FC = memo(() => {
+const FilterButton: FC<{ selectedCategory: string }> = memo(({ selectedCategory }) => {
   const fadeInValue = useSharedValue(0);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
   const fadeInStyle = useAnimatedStyle(() => ({ opacity: fadeInValue.value }));
-  const filterOptions = [
-    { id: "latest", label: "Latest First" },
-    { id: "popular", label: "Most Popular" },
-    { id: "landscape", label: "Landscape Only" },
-    { id: "portrait", label: "Portrait Only" }
-  ];
+  const filterOptionsByCategory = {
+    "All Shuffled": [
+      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" },
+      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" }
+    ],
+    "Aerial View": [
+      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" },
+      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" }
+    ],
+    "Portrait Perfect": [
+      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" },
+      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" }
+    ],
+    "Hyper Closeups": [
+      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" },
+      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" }
+    ],
+    "Nature Wonders": [
+      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" },
+      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" }
+    ],
+    "Antique Looking": [
+      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" },
+      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" }
+    ],
+    "Anime Landscapes": [
+      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" },
+      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" }
+    ],
+    "Cosmic-Lightning": [
+      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" },
+      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" }
+    ],
+    "Natural Landscapes": [
+      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" },
+      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" }
+    ],
+    "Minimalist Abstract": [
+      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" },
+      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" }
+    ],
+    "Mountains-Beaches": [
+      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" },
+      { id: "coming soon", label: "picWall in beta Stage. Feature Coming Soon" }
+    ]
+  };
+  const filterOptions = filterOptionsByCategory[selectedCategory as keyof typeof filterOptionsByCategory] || [];
   const toggleFilter = (filterId: string) => setSelectedFilters((prev) => (prev.includes(filterId) ? prev.filter((id) => id !== filterId) : [...prev, filterId]));
   useEffect(() => {
     fadeInValue.value = withTiming(1, { duration: 1000, easing: Easing.ease });
@@ -472,11 +513,11 @@ const HomePage = (): JSX.Element => {
   const renderItem = useCallback(
     ({ item, index }: { item: EnvironmentEntry; index: number }) => (
       <View style={{ flex: 1, margin: 1, marginTop: index % 2 !== 0 && index !== 1 ? -38 : 0 }}>
-        {index === 0 && <FilterButton />}
+        {index === 0 && <FilterButton selectedCategory={selectedCategory} />}
         <Card data={item} />
       </View>
     ),
-    []
+    [selectedCategory]
   );
   const keyExtractor = useCallback((item: EnvironmentEntry) => item.environment_title, []);
   const renderEmptyList = useCallback(() => {
