@@ -4,7 +4,7 @@
 4. Ocean Waves: A rocky coastline with blurred waves creating a misty effect.
 5. Fireworks Extravaganza: Streaks of colorful fireworks exploding in the night sky.
 6. Milky Way Glow: A glowing Milky Way stretched across a clear night sky.
-7. Neon Street: A vibrant city street with blurred pedestrians and glowing neon signs.
+7. Neon Street: A vibrant city street with glowing neon signs casting bright reflections.
 8. Train in Motion: A moving train captured as a streak of light through a station.
 9. Flowing River: A calm river turned into a silky path with long exposure.
 10. Lantern Festival: Floating lanterns leaving glowing trails as they ascend.
@@ -19,7 +19,7 @@
 19. Shooting Stars: Meteors streaking through the night sky during a meteor shower.
 20. Windy Grass: A field of tall grass blurred by the motion of wind.
 21. Spinning Carousel: A glowing carousel captured in motion at night.
-22. Fire Dancing: A fire dancer creating mesmerizing light trails in the dark.
+22. Fire Dancing: Fire trails swirling through the dark night sky.
 23. Silky Stream: A small forest stream smoothed out with long exposure.
 24. Bicycle Trails: Blurred light trails from bicycles moving through a park.
 25. Candlelit Movement: Trails of glowing candles being carried during a procession.
@@ -35,7 +35,7 @@
 35. Hot Air Balloons: Multiple balloons lifting off, leaving streaks in a morning sky.
 36. Rain on Glass: Raindrops on a window with blurred city lights in the background.
 37. Carnival Lights: Spinning rides creating colorful trails of motion in the dark.
-38. Spinning Sparklers: A child spinning sparklers, leaving glowing trails in the night.
+38. Spinning Sparklers: Glowing trails left by sparklers in the night.
 39. Vortex Clouds: Clouds spiraling around a mountain peak captured in long exposure.
 40. Floating Candles: Candles on water creating soft light trails as they drift.
 41. Boat Streaks: A harbor with moving boats leaving light trails in the water.

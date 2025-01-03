@@ -6,7 +6,7 @@
 6. Rainy Window: Raindrops on a windowpane with blurred city lights in the background.
 7. Solitary Tree: A single tree standing alone in an open field, stark against a cloudy sky.
 8. Rustic Barn: An old barn surrounded by tall grass, captured in grayscale.
-9. Dramatic Portrait: A close-up of a face with intense shadows emphasizing emotion.
+9. Dramatic Portrait: A close-up of an object with intense shadows emphasizing texture.
 10. Shadow Play: Abstract shadows of leaves on a textured wall.
 11. Historic Bridge: A monochrome shot of an old stone bridge over a calm river.
 12. Desert Dunes: Soft gradients of light and shadow across desert dunes.
@@ -17,7 +17,7 @@
 17. Autumn Path: A pathway covered in fallen leaves, rendered in soft grayscale.
 18. Silent Cathedral: The grand interior of an old cathedral with dramatic light filtering in.
 19. Rusty Fence: A close-up of a rusted iron fence, with intricate details in black and white.
-20. Urban Silhouettes: People walking through a misty street, their figures blurred in motion.
+20. Urban Silhouettes: Objects passing through a misty street, their figures blurred in motion.
 21. Bird on a Wire: A single bird perched on a wire against a gradient sky.
 22. Architectural Angles: A monochrome shot emphasizing the sharp lines of a modern building.
 23. Stormy Sea: Churning waves under a dramatic, cloud-filled sky.
