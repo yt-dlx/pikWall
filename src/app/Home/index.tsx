@@ -72,8 +72,8 @@ const SearchBar: FC<{ onSearch: (text: string) => void }> = memo(({ onSearch }) 
     onSearch(text);
   };
   return (
-    <View style={{ padding: 1 }}>
-      <View style={{ flexDirection: "row", alignItems: "center", backgroundColor: Colorizer("#643425", 1.0), borderRadius: 4, paddingHorizontal: 12, height: 30 }}>
+    <View style={{ padding: 2 }}>
+      <View style={{ flexDirection: "row", alignItems: "center", backgroundColor: Colorizer("#643425", 1.0), borderRadius: 9999, paddingHorizontal: 12, height: 30 }}>
         <FontAwesome5 name="search" size={16} color={Colorizer("#f2dfce", 0.6)} />
         <TextInput
           value={searchText}
@@ -237,76 +237,30 @@ const Card: FC<CardProps> = memo(({ data }) => {
 Card.displayName = "Card";
 // ============================================================================================
 // ============================================================================================
-function getCategoryIcon(selected: boolean) {
-  const iconSize = selected ? 15 : 10;
-  const iconName = selected ? "gripfire" : "swatchbook";
-  const iconColor = selected ? Colorizer("#F2EFE0", 1.0) : Colorizer("#0D0907", 1.0);
-  return <FontAwesome5 name={iconName} size={iconSize} color={iconColor} />;
-}
-// ============================================================================================
-// ============================================================================================
 const CategoryButton: FC<CategoryButtonExtendedProps> = memo(({ category, selected, onPress }) => {
-  const translateX = useSharedValue(0);
-  useEffect(() => {
-    translateX.value = withRepeat(withTiming(50, { duration: 1000 }), -1, true);
-  }, [translateX]);
+  const getCategoryFirstImage = () => {
+    const categoryData = categories.find((c) => c.name === category)?.database;
+    if (!categoryData) return "";
+    const firstEntry = Object.values(categoryData)[0];
+    if (!firstEntry?.images?.[0]) return "";
+    return `${firstEntry.images[0].previewLink}lowRes/${firstEntry.images[0].original_file_name}`;
+  };
   return (
     <TouchableOpacity
-      style={{ borderRadius: 4, overflow: "hidden", padding: 2 }}
-      accessibilityLabel={`${category} category button`}
-      accessibilityState={{ selected }}
-      activeOpacity={0.7}
       onPress={onPress}
+      style={{ margin: 1, width: 110, height: 60, borderRadius: 6, overflow: "hidden", borderWidth: 1, borderColor: selected ? Colorizer("#C26F2D", 1.0) : "transparent" }}
     >
-      <View style={{ alignItems: "center", margin: 2 }}>
-        <Animated.View
-          style={[{ width: 100, height: 1, backgroundColor: selected ? "#803A21" : "#F5E5CE", borderRadius: 50 }, useAnimatedStyle(() => ({ transform: [{ translateX: -translateX.value }] }))]}
-        />
-      </View>
-      <LinearGradient
-        colors={selected ? [Colorizer("#803A21", 1.0), Colorizer("#BA652D", 1.0), Colorizer("#C26F2D", 1.0)] : [Colorizer("#F2EFE0", 1.0), Colorizer("#F5EBDF", 1.0), Colorizer("#F5E5CE", 1.0)]}
-        style={{ paddingHorizontal: 10, paddingVertical: 4, borderRadius: 4 }}
-        start={{ x: 0, y: 0 }}
-        end={{ x: 1, y: 1 }}
-      >
-        <View style={{ flexDirection: "row", alignItems: "center" }}>
-          {getCategoryIcon(selected)}
-          <Text style={{ fontFamily: "Kurale_Regular", color: selected ? Colorizer("#F2EFE0", 1.0) : Colorizer("#0D0907", 1.0) }} className="ml-1 p-1 text-sm">
-            {category}
-          </Text>
+      <View style={{ borderRadius: 4, overflow: "hidden", width: "100%", height: "100%" }}>
+        <Image source={{ uri: getCategoryFirstImage() }} style={{ width: "100%", height: "100%", borderRadius: 6 }} contentFit="cover" />
+        <LinearGradient colors={["transparent", Colorizer("#0D0907", 0.5), Colorizer("#0D0907", 1.0)]} style={{ position: "absolute", width: "100%", height: "100%", borderRadius: 6 }} />
+        <View style={{ position: "absolute", width: "100%", height: "100%", justifyContent: "center", alignItems: "center", borderRadius: 6 }}>
+          <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#F2EFE0", 1.0), fontSize: 12, textAlign: "center", paddingHorizontal: 4 }}> {category} </Text>
         </View>
-      </LinearGradient>
-      <View style={{ alignItems: "center", margin: 2 }}>
-        <Animated.View
-          style={[{ width: 100, height: 1, backgroundColor: selected ? "#C26F2D" : "#F2EFE0", borderRadius: 50 }, useAnimatedStyle(() => ({ transform: [{ translateX: translateX.value }] }))]}
-        />
       </View>
     </TouchableOpacity>
   );
 });
 CategoryButton.displayName = "CategoryButton";
-// ============================================================================================
-// ============================================================================================
-const FilterButton: FC<{ selectedCategory: string }> = memo(({ selectedCategory }) => {
-  const fadeInValue = useSharedValue(0);
-  const [isOpen, setIsOpen] = useState(false);
-  const fadeInStyle = useAnimatedStyle(() => ({ opacity: fadeInValue.value }));
-  useEffect(() => {
-    fadeInValue.value = withTiming(1, { duration: 1000, easing: Easing.ease });
-  }, [fadeInValue]);
-  return (
-    <Animated.View style={[fadeInStyle, { paddingHorizontal: 2, marginBottom: 2 }]}>
-      <TouchableOpacity
-        onPress={() => setIsOpen(!isOpen)}
-        style={{ flexDirection: "row", alignItems: "center", backgroundColor: Colorizer("#643425", 0.5), paddingHorizontal: 12, paddingVertical: 4, borderRadius: 10 }}
-      >
-        <FontAwesome5 name="filter" size={15} color={Colorizer("#f2dfce", 1.0)} />
-        <Text style={{ marginLeft: 8, fontFamily: "Kurale_Regular", color: Colorizer("#f2dfce", 1.0), fontSize: 14 }}>Filter Styles</Text>
-      </TouchableOpacity>
-    </Animated.View>
-  );
-});
-FilterButton.displayName = "FilterButton";
 // ============================================================================================
 // ============================================================================================
 const HeaderComponent: FC<{ categories: Category[]; selectedCategory: string; onSelectCategory: (categoryName: string) => void; onSearch: (text: string) => void }> = memo(
@@ -328,7 +282,7 @@ const HeaderComponent: FC<{ categories: Category[]; selectedCategory: string; on
           <HeaderAnimate />
         </View>
         <LinearGradient
-          colors={["#1a1512", "#2e1c12", Colorizer("#602311", 0.6), "transparent"]}
+          colors={["#0D0907", "#1a1512", Colorizer("#2e1c12", 0.6), "transparent"]}
           style={{ marginTop: 10, paddingTop: 20, paddingRight: 3, paddingLeft: 1, paddingBottom: 10 }}
           start={{ x: 0.5, y: 0 }}
           end={{ x: 0.5, y: 1 }}
@@ -432,13 +386,12 @@ const HomePage = (): JSX.Element => {
     [selectedCategory, processImageUrls, getAllCombinedData]
   );
   const renderItem = useCallback(
-    ({ item, index }: { item: EnvironmentEntry; index: number }) => (
-      <View style={{ flex: 1, margin: 1, marginTop: index % 2 !== 0 && index !== 1 ? -38 : 0 }}>
-        {index === 0 && <FilterButton selectedCategory={selectedCategory} />}
+    ({ item }: { item: EnvironmentEntry; index: number }) => (
+      <View style={{ flex: 1, margin: 1 }}>
         <Card data={item} />
       </View>
     ),
-    [selectedCategory]
+    []
   );
   const keyExtractor = useCallback((item: EnvironmentEntry) => item.environment_title, []);
   const renderEmptyList = useCallback(() => {
