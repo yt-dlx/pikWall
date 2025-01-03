@@ -19,7 +19,7 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { EnvironmentEntry } from "@/types/database";
 import { LinearGradient } from "expo-linear-gradient";
 import HeaderAnimate from "@/components/HeaderAnimated";
-import { useEffect, useCallback, useState, memo, FC } from "react";
+import React, { useEffect, useCallback, useState, memo, FC } from "react";
 import { SubImagesProps, CardProps, CategoryButtonProps } from "@/types/components";
 import { View, Text, TouchableOpacity, FlatList, ScrollView, StatusBar, TextInput } from "react-native";
 import Animated, { Easing, runOnJS, useSharedValue, useAnimatedStyle, withTiming, withRepeat } from "react-native-reanimated";
@@ -231,8 +231,8 @@ const Card: FC<CardProps> = memo(({ data }) => {
             <SubImages
               onImagePress={handleSubImagePress}
               images={{
+                allData: data.images,
                 data: data.images.slice(0, 2),
-                allData: data.images, // Pass all images
                 selectedIndex: currentIndex,
                 environment_title: data.environment_title
               }}
@@ -242,8 +242,8 @@ const Card: FC<CardProps> = memo(({ data }) => {
             <SubImages
               onImagePress={handleSubImagePress}
               images={{
+                allData: data.images,
                 data: data.images.slice(2, 4),
-                allData: data.images, // Pass all images
                 selectedIndex: currentIndex,
                 environment_title: data.environment_title
               }}
@@ -308,6 +308,68 @@ const CategoryButton: FC<CategoryButtonExtendedProps> = memo(({ category, select
   );
 });
 CategoryButton.displayName = "CategoryButton";
+// ============================================================================================
+// ============================================================================================
+const FilterButton: FC = memo(() => {
+  const fadeInValue = useSharedValue(0);
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
+  const fadeInStyle = useAnimatedStyle(() => ({ opacity: fadeInValue.value }));
+  const filterOptions = [
+    { id: "latest", label: "Latest First" },
+    { id: "popular", label: "Most Popular" },
+    { id: "landscape", label: "Landscape Only" },
+    { id: "portrait", label: "Portrait Only" }
+  ];
+  const toggleFilter = (filterId: string) => setSelectedFilters((prev) => (prev.includes(filterId) ? prev.filter((id) => id !== filterId) : [...prev, filterId]));
+  useEffect(() => {
+    fadeInValue.value = withTiming(1, { duration: 1000, easing: Easing.ease });
+  }, [fadeInValue]);
+  return (
+    <Animated.View style={[fadeInStyle, { paddingHorizontal: 2, marginBottom: 2 }]}>
+      <TouchableOpacity
+        onPress={() => setIsOpen(!isOpen)}
+        style={{ flexDirection: "row", alignItems: "center", backgroundColor: Colorizer("#643425", 1.0), paddingHorizontal: 12, paddingVertical: 8, borderRadius: 10 }}
+      >
+        <FontAwesome5 name="filter" size={18} color={Colorizer("#f2dfce", 1.0)} />
+        <Text style={{ marginLeft: 8, fontFamily: "Kurale_Regular", color: Colorizer("#f2dfce", 1.0), fontSize: 14 }}>Filter Images {selectedFilters.length > 0 && `(${selectedFilters.length})`}</Text>
+      </TouchableOpacity>
+      {isOpen && (
+        <View style={{ position: "absolute", top: "100%", left: 0, width: "100%", backgroundColor: Colorizer("#643425", 0.95), borderRadius: 8, padding: 12, marginTop: 4, zIndex: 1000 }}>
+          {filterOptions.map((option) => (
+            <TouchableOpacity
+              key={option.id}
+              onPress={() => toggleFilter(option.id)}
+              style={{ flexDirection: "row", alignItems: "center", paddingVertical: 8, paddingHorizontal: 4, borderBottomWidth: 1, borderBottomColor: Colorizer("#f2dfce", 0.1) }}
+            >
+              <View
+                style={{
+                  width: 20,
+                  height: 20,
+                  borderRadius: 4,
+                  borderWidth: 1,
+                  borderColor: Colorizer("#f2dfce", 0.6),
+                  backgroundColor: selectedFilters.includes(option.id) ? Colorizer("#f2dfce", 0.2) : "transparent",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              >
+                {selectedFilters.includes(option.id) && <FontAwesome5 name="check" size={14} color={Colorizer("#f2dfce", 1.0)} />}
+              </View>
+              <Text style={{ marginLeft: 12, fontFamily: "Kurale_Regular", color: Colorizer("#f2dfce", 1.0), fontSize: 14 }}>{option.label}</Text>
+            </TouchableOpacity>
+          ))}
+          {selectedFilters.length > 0 && (
+            <TouchableOpacity onPress={() => setSelectedFilters([])} style={{ marginTop: 12, padding: 8, backgroundColor: Colorizer("#f2dfce", 0.1), borderRadius: 4, alignItems: "center" }}>
+              <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#f2dfce", 1.0), fontSize: 12 }}>Clear All Filters</Text>
+            </TouchableOpacity>
+          )}
+        </View>
+      )}
+    </Animated.View>
+  );
+});
+FilterButton.displayName = "FilterButton";
 // ============================================================================================
 // ============================================================================================
 const HeaderComponent: FC<{ categories: Category[]; selectedCategory: string; onSelectCategory: (categoryName: string) => void; onSearch: (text: string) => void }> = memo(
@@ -430,9 +492,10 @@ const HomePage = (): JSX.Element => {
     },
     [selectedCategory, processImageUrls, getAllCombinedData]
   );
-  const renderCard = useCallback(
-    ({ item }: { item: EnvironmentEntry }) => (
-      <View className="flex-1 m-0.5">
+  const renderItem = useCallback(
+    ({ item, index }: { item: EnvironmentEntry; index: number }) => (
+      <View style={{ flex: 1, margin: 1, marginTop: index % 2 !== 0 && index !== 1 ? -38 : 0 }}>
+        {index === 0 && <FilterButton />}
         <Card data={item} />
       </View>
     ),
@@ -444,7 +507,7 @@ const HomePage = (): JSX.Element => {
       return (
         <View style={{ padding: 20, alignItems: "center" }}>
           <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#F2EFE0", 0.8), fontSize: 16, textAlign: "center" }}>No images found matching "{searchQuery}".</Text>
-          <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#F2EFE0", 0.8), fontSize: 16, textAlign: "center" }}>You may request images from "Account" Section. </Text>
+          <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#F2EFE0", 0.8), fontSize: 16, textAlign: "center" }}>You may request images from "Account" Section.</Text>
         </View>
       );
     }
@@ -458,7 +521,7 @@ const HomePage = (): JSX.Element => {
         data={filteredData}
         numColumns={2}
         initialNumToRender={4}
-        renderItem={renderCard}
+        renderItem={renderItem}
         maxToRenderPerBatch={4}
         keyExtractor={keyExtractor}
         removeClippedSubviews={true}
@@ -472,5 +535,4 @@ const HomePage = (): JSX.Element => {
     </View>
   );
 };
-
 export default HomePage;
