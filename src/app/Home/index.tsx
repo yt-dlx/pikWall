@@ -292,6 +292,7 @@ const CategoryButton: FC<CategoryButtonExtendedProps> = memo(({ category, select
   const [currentImage, setCurrentImage] = useState<string>("");
   const fadeAnim = useRef(new Animated.Value(1)).current;
   const scaleAnim = useRef(new Animated.Value(1)).current;
+
   useEffect(() => {
     if (category === "All Categories") {
       const allImages = categories
@@ -311,6 +312,7 @@ const CategoryButton: FC<CategoryButtonExtendedProps> = memo(({ category, select
       return () => clearInterval(interval);
     }
   }, [category, fadeAnim]);
+
   useEffect(() => {
     if (category === "Shuffle Wallpapers") {
       Animated.loop(
@@ -318,28 +320,63 @@ const CategoryButton: FC<CategoryButtonExtendedProps> = memo(({ category, select
       ).start();
     }
   }, [category, scaleAnim]);
-  const getCategoryFirstImage = () =>
-    category === "Shuffle Wallpapers"
-      ? require("@/assets/bg-shuffled.png")
-      : category === "All Categories"
-      ? currentImage
-      : (() => {
-          const categoryData = categories.find((c) => c.name === category)?.database;
-          if (!categoryData) return "";
-          const firstEntry = Object.values(categoryData)[0];
-          return firstEntry?.images?.[0] ? `${firstEntry.images[0].previewLink}lowRes/${firstEntry.images[0].original_file_name}` : "";
-        })();
+
+  const getCategoryFirstImage = () => {
+    if (category === "Shuffle Wallpapers") {
+      return {
+        uri: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Feskipaper.com%2Fimages%2Fdark-wallpaper-8.jpg&f=1&nofb=1&ipt=d8cf75d3d7ba1a6298aa199d9cf0f0f9a86fbbbf0cb16e69167009b47dac0076&ipo=images"
+      };
+    } else if (category === "All Categories") {
+      return { uri: currentImage };
+    } else {
+      const categoryData = categories.find((c) => c.name === category)?.database;
+      if (!categoryData) return undefined;
+      const firstEntry = Object.values(categoryData)[0];
+      return firstEntry?.images?.[0] ? { uri: `${firstEntry.images[0].previewLink}lowRes/${firstEntry.images[0].original_file_name}` } : undefined;
+    }
+  };
+
+  const imageSource = getCategoryFirstImage();
+
   return (
     <TouchableOpacity onPress={onPress} style={{ flex: 1, height: 60, width: "100%", borderWidth: 1, borderRadius: 10, margin: 2, overflow: "hidden" }}>
       <View style={{ borderRadius: 4, overflow: "hidden", width: "100%", height: "100%" }}>
-        <Animated.Image
-          source={category === "Shuffle Wallpapers" ? getCategoryFirstImage() : { uri: getCategoryFirstImage() }}
-          style={{ width: "100%", height: "100%", borderRadius: 10, opacity: fadeAnim, transform: category === "Shuffle Wallpapers" ? [{ scale: scaleAnim }] : [] }}
-        />
+        {imageSource && (
+          <Animated.Image
+            source={imageSource}
+            style={{
+              width: "100%",
+              height: "100%",
+              borderRadius: 10,
+              opacity: fadeAnim,
+              transform: category === "Shuffle Wallpapers" ? [{ scale: scaleAnim }] : []
+            }}
+          />
+        )}
         <LinearGradient colors={["transparent", Colorizer("#0C0C0C", 0.5), Colorizer("#0C0C0C", 1.0)]} style={{ position: "absolute", width: "100%", height: "100%", borderRadius: 10 }} />
-        <View style={{ position: "absolute", width: "100%", height: "100%", justifyContent: "center", alignItems: "center", flexDirection: "row", borderRadius: 10 }}>
+        <View
+          style={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "row",
+            borderRadius: 10
+          }}
+        >
           <FontAwesome6 name={category === "All Categories" ? "list" : "image"} size={16} color="#FFFFFF" style={{ marginRight: 8 }} />
-          <Text style={{ fontFamily: "Kurale_Regular", color: Colorizer("#FFFFFF", 1.0), fontSize: 14, textAlign: "center", paddingHorizontal: 4 }}>{category}</Text>
+          <Text
+            style={{
+              fontFamily: "Kurale_Regular",
+              color: Colorizer("#FFFFFF", 1.0),
+              fontSize: 14,
+              textAlign: "center",
+              paddingHorizontal: 4
+            }}
+          >
+            {category}
+          </Text>
         </View>
       </View>
     </TouchableOpacity>
