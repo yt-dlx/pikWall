@@ -1,7 +1,7 @@
 import os
 from collections import defaultdict
 input_directory = os.path.join("download")
-output_directory = os.path.join("download", "output")
+output_directory = os.path.join("sources", "input")
 prefixes_to_remove = [
     "Leonardo Lightning XL", 
     "Leonardo Anime XL", 
