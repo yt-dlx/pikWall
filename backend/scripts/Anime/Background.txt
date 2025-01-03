@@ -1,6 +1,6 @@
 1. Sunlit Hilltop: A grassy hilltop with a single cherry blossom tree, petals falling gently in the breeze.
 2. Quiet Classroom: An empty classroom with wooden desks, sunlight streaming through the windows.
-3. Bustling City Street: A lively urban street with colorful shop signs, food stalls, and people walking.
+3. Bustling City Street: A lively urban street with colorful shop signs, food stalls, and vehicles.
 4. Forest Clearing: A serene forest clearing with rays of sunlight filtering through tall trees.
 5. Rooftop Hangout: A rooftop with a fence, potted plants, and a clear view of the city skyline.
 6. Peaceful Shrine: A traditional Japanese shrine surrounded by tall trees and stone lanterns.
@@ -23,14 +23,14 @@
 23. Cherry Blossom Park: A park filled with blooming cherry trees, pink petals covering the ground.
 24. Majestic Mountain Range: Snow-capped peaks towering over a serene valley.
 25. Festive Lantern Festival: A river filled with glowing lanterns and reflections of the night sky.
-26. School Courtyard: A courtyard with benches, a large tree, and students walking by.
+26. School Courtyard: A courtyard with benches, a large tree, and empty paths.
 27. Ocean Cliffs: A dramatic view of waves crashing against rocky cliffs under a bright blue sky.
 28. Ancient Temple: A traditional temple surrounded by stone statues and flowering plants.
 29. Abandoned Library: A dusty library with overgrown vines and stacks of forgotten books.
-30. Bustling Train Station: A busy station with passengers, vending machines, and glowing signs.
+30. Bustling Train Station: A busy station with vending machines, and glowing signs.
 31. Cozy Café: A warm, inviting café with wooden furniture, soft lighting, and steaming cups on tables.
 32. Foggy Forest Path: A narrow path winding through a dense, mist-filled forest.
-33. Village Festival: A small village with vibrant decorations and people enjoying traditional games.
+33. Village Festival: A small village with vibrant decorations and a parade of colorful floats.
 34. Seaside Cliff Shrine: A small shrine perched on a cliff overlooking the ocean.
 35. Open Meadow: A wide meadow with colorful wildflowers and a clear, sunny sky.
 36. Stormy Harbor: A small harbor with fishing boats rocking under a dramatic, stormy sky.
@@ -56,7 +56,7 @@
 56. Misty Mountain Lake: A lake surrounded by mist-covered mountains and dense trees.
 57. Golden Temple: A traditional temple glowing in the warm light of sunset.
 58. Forest Glade: A small clearing in a dense forest with vibrant green grass and sunlight filtering through.
-59. Festive Parade Street: A lively street filled with colorful banners and people enjoying a parade.
+59. Festive Parade Street: A lively street filled with colorful banners and floats.
 60. Lonely Lighthouse: A lighthouse standing tall on a rocky coastline under a dramatic sky.
 61. Sunrise Over Fields: A golden sunrise illuminating rolling fields and distant mountains.
 62. Serene River Dock: A small wooden dock extending into a calm river surrounded by reeds.
