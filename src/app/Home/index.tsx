@@ -21,12 +21,13 @@ import HeaderAnimate from "@/components/HeaderAnimated";
 import { FontAwesome5, FontAwesome6 } from "@expo/vector-icons";
 import React, { useEffect, useRef, useCallback, useState, memo, FC } from "react";
 import { SubImagesProps, CardProps, CategoryButtonProps } from "@/types/components";
-import { Animated, View, Text, TouchableOpacity, FlatList, StatusBar, TextInput, Modal } from "react-native";
 import { Easing, useSharedValue, useAnimatedStyle, withTiming, withRepeat } from "react-native-reanimated";
+import { Animated, View, Text, TouchableOpacity, FlatList, StatusBar, ScrollView, TextInput, Modal } from "react-native";
 // ============================================================================================
 // ============================================================================================
 interface Category {
   name: string;
+  subcategories: string[];
   database: Record<string, EnvironmentEntry>;
 }
 interface CategoryButtonExtendedProps extends CategoryButtonProps {
@@ -35,33 +36,34 @@ interface CategoryButtonExtendedProps extends CategoryButtonProps {
 }
 // ============================================================================================
 // ============================================================================================
-const categories: Category[] = [
-  {
-    name: "Shuffle Wallpapers",
-    database: {
-      ...AerialView,
-      ...PortraitPerfect,
-      ...HyperCloseups,
-      ...NatureWonders,
-      ...AnimeLandscapes,
-      ...NaturalLandscapes,
-      ...MinimalistAbstract,
-      ...AntiqueLookObject,
-      ...CosmicAndLightning,
-      ...MountainsAndBeaches
-    }
-  },
-  { name: "Aerial View", database: AerialView },
-  { name: "Portrait Perfect", database: PortraitPerfect },
-  { name: "Hyper Closeups", database: HyperCloseups },
-  { name: "Nature Wonders", database: NatureWonders },
-  { name: "Antique Looking", database: AntiqueLookObject },
-  { name: "Anime Landscapes", database: AnimeLandscapes },
-  { name: "Cosmic-Lightning", database: CosmicAndLightning },
-  { name: "Natural Landscapes", database: NaturalLandscapes },
-  { name: "Minimalist Abstract", database: MinimalistAbstract },
-  { name: "Mountains-Beaches", database: MountainsAndBeaches }
-];
+const databases = {
+  AerialView,
+  PortraitPerfect,
+  HyperCloseups,
+  NatureWonders,
+  AnimeLandscapes,
+  NaturalLandscapes,
+  MinimalistAbstract,
+  AntiqueLookObject,
+  CosmicAndLightning,
+  MountainsAndBeaches
+};
+function generateCategories(db: Record<string, any>): Category[] {
+  const allDatabases = Object.values(db).reduce((acc, curr) => ({ ...acc, ...curr }), {});
+  return [
+    {
+      name: "Shuffle Wallpapers",
+      database: allDatabases,
+      subcategories: []
+    },
+    ...Object.keys(db).map((key) => ({
+      name: key.replace(/([A-Z])/g, " $1").trim(),
+      database: db[key],
+      subcategories: ["Randomized", "more..."]
+    }))
+  ];
+}
+const categories = generateCategories(databases);
 // ============================================================================================
 // ============================================================================================
 const SearchBar: FC<{ onSearch: (text: string) => void }> = memo(({ onSearch }) => {
@@ -216,70 +218,105 @@ const Card: FC<CardProps> = memo(({ data }) => {
 Card.displayName = "Card";
 // ============================================================================================
 // ============================================================================================
-const CategoryModal: FC<{ isVisible: boolean; onClose: () => void; onSelectCategory: (category: string) => void; selectedCategory: string }> = ({
-  isVisible,
-  onClose,
-  onSelectCategory,
-  selectedCategory
-}) => {
-  const getCategoryFirstImage = (categoryName: string) => {
+interface CategoryModalProps {
+  isVisible: boolean;
+  onClose: () => void;
+  onSelectCategory: (category: string) => void;
+  selectedCategory: string;
+}
+const CategoryModal: React.FC<CategoryModalProps> = ({ isVisible, onClose, onSelectCategory }) => {
+  const [activeParent, setActiveParent] = useState<string>(categories.find((cat) => cat.name !== "Shuffle Wallpapers")?.name || "");
+  const getCategoryFirstImage = (categoryName: string, index: number): string => {
     const categoryData = categories.find((c) => c.name === categoryName)?.database;
     if (!categoryData) return "";
-    const firstEntry = Object.values(categoryData)[0];
-    if (!firstEntry?.images?.[0]) return "";
-    return `${firstEntry.images[0].previewLink}lowRes/${firstEntry.images[0].original_file_name}`;
+    const firstEntry = Object.values(categoryData)[index];
+    if (!firstEntry?.images?.[index]) return "";
+    return `${firstEntry.images[0].previewLink}lowRes/${firstEntry.images[index].original_file_name}`;
   };
-  const modalCategories = [
-    "Aerial View",
-    "Portrait Perfect",
-    "Hyper Closeups",
-    "Nature Wonders",
-    "Antique Looking",
-    "Anime Landscapes",
-    "Cosmic-Lightning",
-    "Natural Landscapes",
-    "Minimalist Abstract",
-    "Mountains-Beaches"
-  ];
+  if (!isVisible) return null;
   return (
     <Modal visible={isVisible} transparent animationType="slide">
       <View className="flex-1 justify-end">
-        <View className="rounded-t-3xl p-4" style={{ backgroundColor: Colorizer("#0C0C0C", 1.0) }}>
-          <View className="flex-row justify-between items-center mb-4">
+        <View className="overflow-hidden" style={{ backgroundColor: Colorizer("#0C0C0C", 1.0), height: "80%" }}>
+          <View className="flex-row justify-between items-center p-4 border-b border-white/50">
             <Text className="text-white text-3xl" style={{ fontFamily: "Lobster_Regular" }}>
-              All Categories
+              Categories and their Styles
             </Text>
             <TouchableOpacity onPress={onClose}>
               <FontAwesome5 name="times" size={24} color="#FFFFFF" />
             </TouchableOpacity>
           </View>
-          <View className="flex-row flex-wrap justify-between">
-            {modalCategories.map((category) => (
-              <TouchableOpacity
-                key={category}
-                onPress={() => {
-                  onSelectCategory(category);
-                  onClose();
-                }}
-                style={{
-                  margin: 4,
-                  width: "47%",
-                  height: 100,
-                  borderRadius: 10,
-                  overflow: "hidden",
-                  borderWidth: 1,
-                  borderColor: selectedCategory === category ? Colorizer("#FFFFFF", 0.5) : "transparent"
-                }}
-              >
-                <View style={{ borderRadius: 4, overflow: "hidden", width: "100%", height: "100%" }}>
-                  <Image source={{ uri: getCategoryFirstImage(category) }} style={{ width: "100%", height: "100%", borderRadius: 10 }} contentFit="cover" />
-                  <LinearGradient colors={["transparent", Colorizer("#0C0C0C", 0.5), Colorizer("#0C0C0C", 1.0)]} style={{ position: "absolute", width: "100%", height: "100%", borderRadius: 10 }} />
-                  <View style={{ position: "absolute", width: "100%", height: "100%", justifyContent: "center", alignItems: "center", borderRadius: 10 }}>
-                    <Text style={{ fontSize: 18, textAlign: "center", paddingHorizontal: 4, fontFamily: "Kurale_Regular", color: Colorizer("#FFFFFF", 1.0) }}> {category} </Text>
-                  </View>
+          <View className="flex-row flex-1">
+            <View className="w-1/3 border-r border-white/50">
+              <ScrollView className="h-full">
+                {categories
+                  .filter((cat) => cat.name !== "Shuffle Wallpapers")
+                  .map((category) => (
+                    <TouchableOpacity
+                      key={category.name}
+                      onPress={() => setActiveParent(category.name)}
+                      className={`relative py-6 border-l-4 ${activeParent === category.name ? "border-white" : "border-transparent"}`}
+                    >
+                      <Image source={{ uri: getCategoryFirstImage(category.name, 1) }} style={{ position: "absolute", width: "100%", height: "100%" }} contentFit="cover" />
+                      <LinearGradient colors={["transparent", Colorizer("#0C0C0C", 0.8)]} style={{ position: "absolute", width: "100%", height: "100%" }} />
+                      <Text style={{ fontFamily: "Kurale_Regular", fontSize: 14 }} className={`${activeParent === category.name ? "text-white text-lg" : "text-white/50 text-sm"} relative ml-1 z-10`}>
+                        {category.name}
+                      </Text>
+                    </TouchableOpacity>
+                  ))}
+              </ScrollView>
+            </View>
+            <View className="flex-1 p-2">
+              <Text className="text-white text-center text-2xl m-4" style={{ fontFamily: "Kurale_Regular" }}>
+                {activeParent}
+              </Text>
+              <ScrollView className="h-full">
+                <View className="flex-row flex-wrap">
+                  {categories
+                    .find((c) => c.name === activeParent)
+                    ?.subcategories.map((subCategory) => (
+                      <TouchableOpacity
+                        key={subCategory}
+                        onPress={
+                          subCategory === "more..."
+                            ? undefined
+                            : () => {
+                                onSelectCategory(subCategory === "Randomized" ? activeParent : `${activeParent} - ${subCategory}`);
+                                onClose();
+                              }
+                        }
+                        className={`w-1/2 p-1 ${subCategory === "more..." ? "opacity-80" : "opacity-100"}`}
+                        disabled={subCategory === "more..."}
+                      >
+                        <View className="rounded-lg overflow-hidden border border-gray-800 aspect-square">
+                          <Image
+                            source={{
+                              uri:
+                                subCategory === "more..."
+                                  ? "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvectorified.com%2Fimage%2Fcoming-soon-vector-17.jpg&f=1&nofb=1&ipt=fd47d03a253fad59c35504a7d236c749aeadde9b51f82a7eed4abff381b13266&ipo=images"
+                                  : getCategoryFirstImage(activeParent, 3)
+                            }}
+                            style={{ width: "110%", height: "110%" }} // Increase the dimensions
+                            contentFit="cover"
+                          />
+
+                          <LinearGradient colors={["transparent", Colorizer("#0C0C0C", 0.7)]} className="absolute inset-0" />
+                          <View className="absolute inset-0 justify-end p-2">
+                            <Text
+                              className="text-white text-center"
+                              style={{
+                                fontFamily: "Kurale_Regular"
+                              }}
+                            >
+                              {subCategory}
+                            </Text>
+                          </View>
+                        </View>
+                      </TouchableOpacity>
+                    ))}
                 </View>
-              </TouchableOpacity>
-            ))}
+              </ScrollView>
+            </View>
           </View>
         </View>
       </View>
@@ -353,8 +390,8 @@ const CategoryButton: FC<CategoryButtonExtendedProps> = memo(({ category, select
 CategoryButton.displayName = "CategoryButton";
 // ============================================================================================
 // ============================================================================================
-const HeaderComponent: FC<{ categories: Category[]; selectedCategory: string; onSelectCategory: (categoryName: string) => void; onSearch: (text: string) => void }> = memo(
-  ({ categories, selectedCategory, onSelectCategory, onSearch }) => {
+const HeaderComponent: FC<{ selectedCategory: string; onSelectCategory: (categoryName: string) => void; onSearch: (text: string) => void }> = memo(
+  ({ selectedCategory, onSelectCategory, onSearch }) => {
     const fadeInValue = useSharedValue(0);
     const leftIconTranslate = useSharedValue(0);
     const rightIconTranslate = useSharedValue(0);
@@ -508,7 +545,7 @@ const HomePage = (): JSX.Element => {
         updateCellsBatchingPeriod={50}
         contentContainerStyle={{ padding: 1 }}
         columnWrapperStyle={{ justifyContent: "space-between" }}
-        ListHeaderComponent={<HeaderComponent categories={categories} selectedCategory={selectedCategory} onSelectCategory={setSelectedCategory} onSearch={handleSearch} />}
+        ListHeaderComponent={<HeaderComponent selectedCategory={selectedCategory} onSelectCategory={setSelectedCategory} onSearch={handleSearch} />}
       />
     </View>
   );
